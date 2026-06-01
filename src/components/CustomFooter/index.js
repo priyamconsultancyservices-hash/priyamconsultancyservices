@@ -49,15 +49,13 @@ export default function CustomFooter() {
           <div className={styles.brandCol}>
             <a href="/" className={styles.logo}>
               <img
-                src="/img/priyam-consultancy-logo.png"
+                src="/img/footer-logo.png"
                 alt="Priyam Consultancy Services"
                 className={styles.logoImg}
               />
             </a>
             <p className={styles.brandDesc}>
-              We are one of the fastest-growing full-service business solutions companies,
-              delivering cutting-edge, result-driven strategies across digital marketing,
-              technology, branding, and consulting to create the perfect blend of innovation and impact.
+             We are one of the fastest-growing full-service business solutions companies, delivering cutting-edge, result-driven strategies across digital marketing, technology, branding, and consulting to create the perfect blend of innovation and impact.
             </p>
           </div>
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-const logovideo = "/img/partner.mp4";
+const logovideo = "/img/partner-dt.mp4";
 import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
@@ -174,14 +174,18 @@ const PAGE_CSS = `
   .dt-flip-dsc { font-size:.82rem; color:rgba(255,255,255,0.98); line-height:1.7; font-family:'Poppins',sans-serif; }
 
   /* VIDEO */
-  .dt-video-section { background:#004168; padding:90px 5%; text-align:center; margin-top:60px; }
   .dt-video-eyebrow { justify-content:center; margin-bottom:1rem; }
   .dt-video-title { font-family:'Poppins',sans-serif; font-size:clamp(1.9rem,3.5vw,2.7rem); font-weight:700; color:#fff; margin-bottom:1rem; line-height:1.2; }
   .dt-video-title span { color:#ed8337; font-style:italic; }
   .dt-video-desc { font-size:.97rem; color:#fff;  margin:0 auto 2.5rem; line-height:1.85; }
-  .dt-video-wrap { position:relative; max-width:900px; margin:0 auto; }
-  .dt-video-wrap video { display:block; width:100%; height:auto; border:none; outline:none; }
-
+  .dt-video-wrap { position:relative; max-width:1100px; margin:0 auto; background:#004673; border-radius:16px; overflow:hidden; }
+  .dt-video-wrap video { display:block; width:100%; height:auto; border:none; outline:none; mix-blend-mode:lighten; }
+.dt-video-section {
+    background-color: #004673 !important;
+    padding: 90px 5%;
+    text-align: center;
+    margin-top: 60px;
+}
   
   /* FAQ */
   .faq-section { background:#fff; padding:80px 5%; }

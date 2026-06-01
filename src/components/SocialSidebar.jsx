@@ -260,70 +260,21 @@ export default function SocialSidebar() {
         .sb-submit:disabled { opacity: 0.7; cursor: not-allowed; }
 
         /* ════════════════════════════════════
-           MOBILE — bottom horizontal bar
+           MOBILE — same right-side sidebar as desktop
         ════════════════════════════════════ */
         @media (max-width: 768px) {
-          .sb-wrap {
-            right: unset;
-            top: unset;
-            transform: none;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            gap: 0;
-            padding: 10px 20px;
-            padding-bottom: calc(10px + env(safe-area-inset-bottom));
-            background: rgba(255,255,255,0.97);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            box-shadow: 0 -2px 20px rgba(0,0,0,0.10);
-            border-top: 1px solid rgba(0,0,0,0.06);
-          }
-
-          /* Hide desktop tooltips */
           .sb-tip { display: none; }
-
-          /* Circle icons bigger tap target */
-          .sb-icon {
-            width: 48px;
-            height: 48px;
-          }
-          .sb-icon:hover { transform: none; }
           .sb-icon:active { transform: scale(0.92); }
-
-          /* Quote pill — horizontal on mobile */
-          .sb-quote {
-            width: auto;
-            flex-direction: row;
-            padding: 12px 18px;
-            gap: 7px;
-            border-radius: 50px;
-          }
-          .sb-quote:hover { transform: none; }
           .sb-quote:active { transform: scale(0.95); }
-          .sb-quote-label {
-            writing-mode: horizontal-tb;
-            transform: none;
-            margin-top: 0;
-            font-size: 10px;
-            letter-spacing: 0.08em;
-          }
 
-          /* Hover form → tap form: fixed above bottom bar */
+          /* Form opens left of quote button, clamped to viewport */
           .sb-hover-form {
-            position: fixed;
-            bottom: 80px;
-            right: unset;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 92vw;
-            max-width: 380px;
-            border-radius: 16px;
-            padding: 22px 18px 18px;
-            animation: sbSlideUp 0.22s ease;
+            right: 58px;
+            left: unset;
+            bottom: -100px;
+            transform: none;
+            width: 88vw;
+            max-width: 320px;
           }
         }
       `}</style>

@@ -90,6 +90,14 @@ const IcoRecruitment = "/img/icon/recruitment-services.webp";
 const IcoHRStrategy = "/img/icon/hr-strategy.webp";
 
 
+// implementation Partners logo image
+
+const PartnerMicrosoft  = "/img/partner-microsoft.webp";
+const PartnerOdoo       = "/img/partner-odoo.webp";
+const PartnerSterloBuild = "/img/partner-sterlo-build.webp";
+const PartnerSterloCare  = "/img/partner-sterlo-care.webp";
+const PartnerSterlo         = "/img/partner-sterlo.webp";
+
 // ════════════════════════════════════════════
 //  SECTION 1: PCS BANNER
 // ════════════════════════════════════════════
@@ -362,6 +370,26 @@ function PCSBanner() {
   const canvasRef = useRef(null);
   const angleRef = useRef(0);
   const timerRef = useRef(null);
+  const [screenW, setScreenW] = useState(typeof window !== "undefined" ? window.innerWidth : 1200);
+
+  useEffect(() => {
+    const check = () => setScreenW(window.innerWidth);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  // Breakpoint flags
+  const isMobile    = screenW < 768;
+  const isTabSm     = screenW >= 768 && screenW <= 860;
+  const isTabMid    = screenW >= 861 && screenW <= 1100;    // 861–1100: mobile pill list style
+  const isDesktop   = screenW > 1100;                       // > 1100: full orbit
+
+  const hideOrbit     = !isDesktop;
+  const showPillList  = isMobile || isTabSm || isTabMid;    // all non-desktop → pill list
+  const showPillGrid  = false;
+
+  const orbitOffset = 58;
 
   const startTimer = () => {
     clearInterval(timerRef.current);
@@ -373,11 +401,15 @@ function PCSBanner() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const phone = phoneRef.current;
-    if (!canvas || !phone) return;
+    if (!canvas || !phone || hideOrbit) {
+      if (canvas) { canvas.width = 0; canvas.height = 0; }
+      setPillPos([]);
+      return;
+    }
     let raf;
     function draw() {
       const cx = phone.offsetWidth / 2, cy = phone.offsetHeight / 2;
-      const R = Math.sqrt(cx * cx + cy * cy) + 58;
+      const R = Math.sqrt(cx * cx + cy * cy) + orbitOffset;
       const sz = R * 2 + 40;
       canvas.width = canvas.height = sz;
       canvas.style.cssText = `position:absolute;pointer-events:none;z-index:1;width:${sz}px;height:${sz}px;left:${cx - sz / 2}px;top:${cy - sz / 2}px;`;
@@ -398,7 +430,7 @@ function PCSBanner() {
     }
     draw();
     return () => cancelAnimationFrame(raf);
-  }, []);
+  }, [hideOrbit, orbitOffset]);
 
   const goTo = (n) => { setCurrent(n); startTimer(); };
 
@@ -419,10 +451,16 @@ function PCSBanner() {
             <a href="#" className="btn-fill">Explore Services</a>
           </div>
         </div>
-        <div className="hero-right">
+
+        <div className="hero-right" style={showPillGrid ? { display: "flex", alignItems: "center", gap: "32px", justifyContent: "center" } : {}}>
           <div className="glow-ring glow-ring-2" />
           <div className="glow-ring" />
-          <div className="phone-wrap" ref={phoneRef}>
+
+          {/* Phone wrapper */}
+          <div
+            className="phone-wrap"
+            ref={phoneRef}
+          >
             <div className="phone phone-white">
               <div className="phone-notch phone-notch-white" />
               <div className="phone-status phone-status-orange">
@@ -449,18 +487,96 @@ function PCSBanner() {
                 </div>
               </div>
             </div>
+
             <canvas ref={canvasRef} className="orbit-canvas" />
-            {pillPos.map((p, i) => (
+
+            {/* Orbit pills — desktop (>1140) only */}
+            {!hideOrbit && pillPos.map((p, i) => (
               <div key={i} className={`svc-pill${i === current ? " active" : ""}`}
-                style={{ left: p.x - 64, top: p.y - 13, minWidth: 128 }} onClick={() => goTo(i)}>
+                style={{ left: p.x - 64, top: p.y - 13, minWidth: 128 }}
+                onClick={() => goTo(i)}>
                 <span className="pill-icon">{SERVICES[i].icon}</span>
                 <span className="pill-name">{SERVICES[i].name}</span>
               </div>
             ))}
-            {pillPos.map((p, i) => (
+            {!hideOrbit && pillPos.map((p, i) => (
               <div key={`d${i}`} className="orbit-dot" style={{ left: p.x - 3.5, top: p.y - 3.5 }} />
             ))}
           </div>
+
+          {/* 861–1140: pill grid to the RIGHT of the phone (image style) */}
+          {showPillGrid && (
+            <div style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "12px",
+              flexShrink: 0,
+            }}>
+              {SERVICES.map((s, i) => (
+                <div
+                  key={i}
+                  onClick={() => goTo(i)}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "8px",
+                    padding: "10px 18px",
+                    borderRadius: "28px",
+                    fontSize: "13px",
+                    fontWeight: i === current ? 700 : 500,
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    background: i === current ? "#ed8337" : "rgba(255,255,255,0.08)",
+                    color: i === current ? "#fff" : "#fff",
+                    border: i === current ? "none" : "1.5px solid rgba(255,255,255,0.2)",
+                    boxShadow: i === current ? "0 4px 16px rgba(237,131,55,0.4)" : "none",
+                    backdropFilter: "blur(4px)",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  <span style={{ fontSize: "16px", lineHeight: 1 }}>{s.icon}</span>
+                  <span>{s.name}</span>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Mobile & small tablet (< 768, 768–860): pill list BELOW phone */}
+          {showPillList && (
+            <div style={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              gap: "8px",
+              marginTop: "20px",
+              padding: "0 8px",
+            }}>
+              {SERVICES.map((s, i) => (
+                <div
+                  key={i}
+                  onClick={() => goTo(i)}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "6px",
+                    padding: "6px 14px",
+                    borderRadius: "20px",
+                    fontSize: "12px",
+                    fontWeight: i === current ? 700 : 500,
+                    cursor: "pointer",
+                    transition: "all 0.3s ease",
+                    background: i === current ? "#ed8337" : "rgba(237,131,55,0.1)",
+                    color: i === current ? "#fff" : "#ed8337",
+                    border: i === current ? "none" : "1px solid rgba(237,131,55,0.35)",
+                    boxShadow: i === current ? "0 4px 12px rgba(237,131,55,0.35)" : "none",
+                  }}
+                >
+                  <span style={{ fontSize: "14px" }}>{s.icon}</span>
+                  <span>{s.name}</span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
     </div>
@@ -528,7 +644,7 @@ function WhoWeAre() {
       <span className="small-dot"></span>
       <div className="left">
         <div className="why-eyebrow">Who We Are</div>
-        <h2>The One Team You Need for <em><i>Your Business Growth.</i></em></h2>
+        <h2> One Team Powering Every Stage of <em><i>Your Business Growth.</i></em></h2>
         <p>Priyam Consultancy Services is your all-in-one business partner, guiding you from business registration and compliances, then through digital transformation, digital marketing for brand reach and lead generation, and human resource management. With PCS, businesses gain a single, trusted partner to manage every step of their growth journey, making complex processes seamless, efficient, and tailored for lasting success.</p>
       </div>
       <div className="right">
@@ -545,7 +661,7 @@ function WhoWeAre() {
 const serviceTabs = [
   {
     emoji: TabRegistration,
-    label: " Registration & Compliance ",
+    label: " Business Registration and Compliance  ",
     tagline: "Scalable, fast & modern web solutions built for growth",
     iconBg: "rgba(59,130,246,0.12)",
     iconBorder: "1.5px solid rgba(59,130,246,0.25)",
@@ -657,7 +773,7 @@ function HomeServiceSection() {
                   : <DummyIcon size={32} />}
               </div>
               <div>
-                <div className="panel-name">{active.label}</div>
+                <h2 className="panel-name">{active.label}</h2>
                 <div className="panel-tagline">{active.tagline}</div>
               </div>
             </div>
@@ -672,7 +788,7 @@ function HomeServiceSection() {
                     : <DummyIcon size={26} color="#ed8337" />
                   }
                 </div>
-                <div className="card-title">{card.title}</div>
+                <h3 className="card-title">{card.title}</h3>
                 <div className="card-desc">{card.desc}</div>
                 <div className="card-arrow">
                   <a href={card.link} className="card-arrow">Explore Service <span>→</span></a>
@@ -752,7 +868,7 @@ const WhyNodeCard = ({ n }) => (
     <span className="wn-icon">
       <img src={n.icon} alt={n.title} width={32} height={32} style={{ objectFit: "contain" }} />
     </span>
-    <div className="wn-title">{n.title}</div>
+    <h3 className="wn-title">{n.title}</h3>
     <div className="wn-desc">{n.desc}</div>
   </div>
 );
@@ -886,38 +1002,56 @@ const IMPL_PARTNERS = [
     name: "ODOO",
     desc: "Comprehensive end-to-end ERP solutions for efficient enterprise management.",
     bg: "rgba(255,153,0,0.1)",
-    logo: odoo,
+    logo: PartnerOdoo,
     link: "/odoo-partners",
   },
   {
     name: "STERLO",
     desc: "Low-code and no-code platform solutions for faster digital solution deployment.",
     bg: "rgba(0,120,212,0.1)",
-    logo: Sterlo,
+    logo: PartnerSterlo,
     link: "/sterlo-partners",
   },
   {
     name: "STERLO CARE",
     desc: "Digitizing healthcare operations to improve patient satisfaction and compliance.",
     bg: "rgba(66,133,244,0.12)",
-    logo: sterloCare,
+    logo: PartnerSterloCare,
     link: "/sterlo-care-partners",
   },
   {
     name: "STERLO BUILD",
     desc: "Digital Construction Management Platform for Quality, Safety, and Operational Excellence.",
     bg: "rgba(0,176,116,0.1)",
-    logo: sterloBuild,
+    logo: PartnerSterloBuild,
     link: "/sterlo-build-partners",
   },
   {
     name: "MICROSOFT",
     desc: "Customized mobile and web applications to streamline your business operations.",
     bg: "rgba(237,131,55,0.1)",
-    logo: microsoft,
+    logo: PartnerMicrosoft,
     link: "/microsoft-apps-partners",
   },
 ];
+
+// PartnerCard — layout fully handled by CSS grid / nth-child rules
+function PartnerCard({ p }) {
+  return (
+    <div className="partner-card" style={{ background: p.bg }}>
+      <div
+        className="partner-logo-zone"
+        style={{ width: "75%", height: "80px", display: "flex", alignItems: "center", margin: "0 auto 12px auto" }}
+      >
+        <img src={p.logo} alt={p.name} style={{ width: "90%", height: "90%", objectFit: "contain" }} />
+      </div>
+      <div className="partner-desc">{p.desc}</div>
+      <a href={p.link} className="partner-btn" style={{ textDecoration: "none", display: "inline-block" }}>
+        Learn More <span>→</span>
+      </a>
+    </div>
+  );
+}
 
 function ImplementationSection() {
   return (
@@ -925,20 +1059,125 @@ function ImplementationSection() {
       <div className="partners-divider" />
       <div className="partners-title-wrap">
         <div className="partners-eyebrow">Implementation Partners</div>
-        <h2 className="partners-title" style={{color:"white"}}>
-          Collaborating with <span className="hl" style={{fontWeight:'700'}}>trusted partners</span> to deliver complete business solutions.
+        <h2 className="partners-title" style={{ color: "white" }}>
+          Collaborating with <span className="hl" style={{ fontWeight: "700" }}>trusted partners</span> to deliver complete business solutions.
         </h2>
       </div>
+
+      {/*
+        Responsive grid — pure CSS, no JS breakpoint juggling:
+          ≤640 px  (mobile)      → 1 col
+          641–768 px (tab-sm)    → 2 cols, last card centred via col-span trick
+          769–1024 px (tab-lg)   → 3 cols, last 2 cards centred via col-span trick
+          >1024 px (desktop)     → 5 cols (original design — partners-stack)
+
+        The CSS custom property --impl-last-col is set per breakpoint
+        in the inline <style> below so the PartnerCard can pick it up.
+      */}
+      <style>{`
+        /* ── Base: mobile-first, ≤640px → 1 column ── */
+        .impl-grid {
+          display: grid;
+          gap: 16px;
+          padding: 0 16px 32px;
+          max-width: 480px;
+          margin: 0 auto;
+          box-sizing: border-box;
+          grid-template-columns: 1fr;
+        }
+
+        /* Reset any rotation/3D or fixed sizing from global .partner-card */
+        .impl-grid .partner-card {
+          transform: none !important;
+          rotate: none !important;
+          box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+          border-radius: 16px;
+          width: 100% !important;
+          max-width: 100% !important;
+          min-width: 0 !important;
+          flex: unset !important;
+          box-sizing: border-box !important;
+          margin: 0 !important;
+          position: static !important;
+          left: auto !important;
+          right: auto !important;
+        }
+
+        /* ── Mobile wide (481–640px): still 1 col but wider container ── */
+        @media (min-width: 481px) and (max-width: 640px) {
+          .impl-grid {
+            max-width: 560px;
+            padding: 0 20px 32px;
+          }
+        }
+
+        /* ── Tablet-sm (641–780px): 2 cols, last card centred at 50% ── */
+        @media (min-width: 641px) and (max-width: 780px) {
+          .impl-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            max-width: 700px;
+            padding: 0 20px 32px;
+          }
+          .impl-grid .partner-card:last-child {
+            grid-column: 1 / -1;
+            max-width: calc(50% - 7px);
+            margin-inline: auto;
+          }
+        }
+
+        /* ── Tablet-lg (769–1024px): row1 = 3 equal cols, row2 = 2 equal centred cols ── */
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .impl-grid {
+            grid-template-columns: repeat(6, 1fr);
+            gap: 18px;
+            max-width: 1000px;
+            padding: 0 24px 32px;
+          }
+          /* cards 1-3: each takes 2 of 6 cols → 3 equal columns */
+          .impl-grid .partner-card:nth-child(1),
+          .impl-grid .partner-card:nth-child(2),
+          .impl-grid .partner-card:nth-child(3) {
+            grid-column: span 2;
+          }
+          /* cards 4-5: each takes 3 of 6 cols → 2 equal columns, fills full row */
+          .impl-grid .partner-card:nth-child(4),
+          .impl-grid .partner-card:nth-child(5) {
+            grid-column: span 2 !important;
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+          }
+        }
+
+        /* ── Desktop (>1024px): hide grid, show original partners-stack ── */
+        @media (min-width: 1025px) {
+          .impl-grid {
+            display: none;
+          }
+        }
+        @media (max-width: 1024px) {
+          .partners-stack { display: none !important; }
+        }
+      `}</style>
+
+      {/* Desktop (>1024): original flex row */}
       <div className="partners-stack">
         {IMPL_PARTNERS.map((p, i) => (
-          <div className="partner-card" key={i}>
+          <div className="partner-card" key={i} style={{ background: p.bg }}>
             <div className="partner-logo-zone" style={{ width: "75%", height: "80px", display: "flex", alignItems: "center", margin: "0 auto 12px auto" }}>
-              <img src={p.logo} alt={p.name} style={{ width: "110%", height: "100%", objectFit: "contain" }} />
+              <img src={p.logo} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
             </div>
-            {/* <div className="partner-name">{p.name}</div> */}
             <div className="partner-desc">{p.desc}</div>
             <a href={p.link} className="partner-btn" style={{ textDecoration: "none", display: "inline-block" }}>Learn More <span>→</span></a>
           </div>
+        ))}
+      </div>
+
+      {/* Mobile / Tablet: CSS-grid layout */}
+      <div className="impl-grid">
+        {IMPL_PARTNERS.map((p, i) => (
+          <PartnerCard key={i} p={p} />
         ))}
       </div>
     </section>
@@ -1162,12 +1401,12 @@ function TestimonialSlider() {
 // ════════════════════════════════════════════
 
 const faqData = [
-  { q: "What are the benefits of digital transformation?", a: "Digital transformation improves operational efficiency, enhances customer experience, and enables data-driven decision-making. It drives innovation, scalability, and long-term business growth." },
-  { q: "What are the challenges of digital transformation?", a: "Challenges include resistance to change, technology integration issues, skill gaps, data security concerns, and the need for clear strategic planning." },
-  { q: "What Types Of Digital Marketing Services Do You Provide?", a: "We offer SEO, PPC, social media marketing, content marketing, email campaigns, and analytics-driven strategies to boost online visibility and engagement." },
-  { q: "How Are Your HR Services Different From Other Agencies?", a: "We provide tailored HR solutions, combining strategy, compliance, payroll, recruitment, and employee engagement, with a focus on seamless integration into your business operations." },
-  { q: "What is a company registration?", a: "Company registration is the legal process of forming a business entity, obtaining licenses, and ensuring compliance with government regulations to operate officially." },
-  { q: "How Long To See Results Through Digital Marketing?", a: "Results vary by strategy; paid campaigns may show immediate impact, while SEO and organic efforts typically take 3–6 months for measurable outcomes." },
+  { q: "What services does Priyam Consultancy Services (PCS) provide?", a: " Priyam Consultancy Services (PCS) provides digital marketing, website development, HR services, payroll management, business registration, statutory compliance, Virtual CFO services, accounting, branding, ecommerce solutions, and business consulting services designed to support operational efficiency and long-term business growth." },
+  { q: "What types of digital marketing services do you provide?", a: " Our digital marketing services include SEO, performance marketing, social media marketing, content marketing, ecommerce marketing, branding, Google Ads, Meta Ads, local SEO, marketplace marketing, and strategic digital campaigns focused on improving visibility, lead generation, customer engagement, and business growth." },
+  { q: "What is company registration and what types do you offer?", a: "Company registration is the legal process of establishing a business entity under government regulations. We support registrations including Sole Proprietorship, Partnership Firm, LLP, One Person Company (OPC), Private Limited Company, and other business structures based on operational and compliance requirements." },
+  { q: "How are your HR services different from other agencies?", a: " Our HR services combine recruitment expertise, payroll management, compliance support, workforce planning, and scalable hiring solutions under one structured system. We focus on operational efficiency, faster closures, compliance accuracy, and long-term workforce support tailored to each business requirement and industry need." },
+  { q: "What is a Virtual CFO and how can it help my business?", a: "A Virtual CFO provides strategic financial guidance including budgeting, cash flow management, financial planning, reporting, compliance monitoring, and profitability analysis. These services help businesses improve financial decision-making, operational efficiency, investor readiness, and sustainable growth without hiring a full-time CFO." },
+  { q: "What website development services do you provide?", a: " We provide website development services including corporate websites, ecommerce platforms, Shopify development, WordPress websites, custom web applications, landing pages, booking systems, and SEO-friendly business websites designed for performance, scalability, user experience, and long-term digital growth." },
 ];
 
 // ════════════════════════════════════════════
@@ -1188,8 +1427,8 @@ const WhomCard = ({ c }) => (
     <div className="whom-card-icon">
       <img src={c.icon} alt={c.titleHl} width={36} height={36} style={{ objectFit: "contain" }} />
     </div>
-    <div className="whom-card-label">{c.label}</div>
-    <div className="whom-card-title"><span className="hl">{c.titleHl}</span></div>
+    <span className="whom-card-label">{c.label}</span>
+    <h4 className="whom-card-title"><span className="hl">{c.titleHl}</span></h4>
     <p className="whom-card-desc">{c.desc}</p>
   </div>
 );
@@ -1203,7 +1442,214 @@ function Home() {
   const toggle = (index) => { setActive(active === index ? null : index); };
 
   return (
-    <Layout title="Home" description="Priyam Consultancy Services">  {/* ✅ ADDED Layout wrapper */}
+    <Layout
+      title="Website Development & Digital Marketing Agency in India | HR Solutions"
+      description="We are the No.1 website development and digital marketing agency in India, offering SEO, social media marketing, and HR solutions to help businesses grow faster."
+    >
+      {/* ✅ Meta Keywords & JSON-LD Schemas */}
+      <head>
+        <meta name="keywords" content="Digital Marketing, Digital Marketing Agency, Digital Marketing Services, Digital Transformation, Digital Transformation Consulting, Digital Transformation Company, HR Services, HR Slutions, HR Consultant, HR Consultancy Services, HR Service Provider, Business Registration, HRMS Solutions, Corporate Compliance, CFO Services" />
+
+        {/* 1. WebSite Schema */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org/",
+            "@type": "WebSite",
+            "name": "Priyam Consultancy Services",
+            "url": "https://www.priyamconsultancy.com/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "{search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        `}</script>
+
+        {/* 2. Organization Schema */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Priyam Consultancy Services",
+            "url": "https://www.priyamconsultancy.com/",
+            "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+            "contactPoint": [{
+              "@type": "ContactPoint",
+              "telephone": "+91 96774 44048",
+              "contactType": "Website Development & Digital Marketing Agency in India | HR Solutions"
+            }],
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=61577125709962",
+              "https://www.linkedin.com/company/priyam-consultancy-services/",
+              "https://www.instagram.com/priyam_consultancy_services/",
+              "https://x.com/PCSconsultant_",
+              "https://g.co/kgs/rdTYdi6"
+            ]
+          }
+        `}</script>
+
+        {/* 3. Product Schema */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Website Development & Digital Marketing Agency in India | HR Solutions",
+            "image": ["https://www.priyamconsultancy.com/wp-content/uploads/2025/10/who-we-are.webp"],
+            "description": "Leading digital transformation and marketing agency in India offering SEO, PPC, SMM, web & app development, and automation solutions to accelerate business growth.",
+            "mpn": "priyamconsultancy.com",
+            "brand": {
+              "@type": "Brand",
+              "name": "Priyam Consultancy Services"
+            },
+            "review": {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Admin"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "4521"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.priyamconsultancy.com/",
+              "priceCurrency": "USD",
+              "price": "00.00",
+              "priceValidUntil": "2026-12-31",
+              "itemCondition": "https://schema.org/UsedCondition",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@type": "Organization",
+                "name": "priyamconsultancy.com"
+              }
+            }
+          }
+        `}</script>
+
+        {/* 4. BreadcrumbList Schema */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "http://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@id": "https://www.priyamconsultancy.com/",
+                "Name": "Priyam Consultancy Services"
+              }
+            }]
+          }
+        `}</script>
+
+        {/* 5. LocalBusiness Schema */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Website Development & Digital Marketing Agency in India | HR Solutions",
+            "image": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+            "@id": "Priyam Consultancy Services",
+            "url": "https://www.priyamconsultancy.com/",
+            "telephone": "+91 96774 44048",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1st Floor, SF.11/4, Pooja Garden, Kalapatti Road, Civil Aerodrame Post",
+              "addressLocality": "Coimbatore",
+              "addressRegion": "Tamil Nadu",
+              "postalCode": "641014",
+              "addressCountry": "India"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 11.043918,
+              "longitude": 77.038417
+            },
+            "openingHoursSpecification": [
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday",    "opens": "09:00", "closes": "18:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday",   "opens": "09:00", "closes": "18:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "09:00", "closes": "18:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday",  "opens": "09:00", "closes": "18:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday",    "opens": "09:00", "closes": "18:00" },
+              { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday",  "opens": "09:00", "closes": "18:00" }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=61577125709962",
+              "https://www.linkedin.com/company/priyam-consultancy-services/",
+              "https://www.instagram.com/priyam_consultancy_services/",
+              "https://x.com/PCSconsultant_",
+              "https://g.co/kgs/rdTYdi6"
+            ]
+          }
+        `}</script>
+
+        {/* 6. FAQPage Schema */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What services does Priyam Consultancy Services (PCS) provide?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Priyam Consultancy Services (PCS) provides digital marketing, website development, HR services, payroll management, business registration, statutory compliance, Virtual CFO services, accounting, branding, ecommerce solutions, and business consulting services designed to support operational efficiency and long-term business growth."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What types of digital marketing services do you provide?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our digital marketing services include SEO, performance marketing, social media marketing, content marketing, ecommerce marketing, branding, Google Ads, Meta Ads, local SEO, marketplace marketing, and strategic digital campaigns focused on improving visibility, lead generation, customer engagement, and business growth."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is company registration and what types do you offer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Company registration is the legal process of establishing a business entity under government regulations. We support registrations including Sole Proprietorship, Partnership Firm, LLP, One Person Company (OPC), Private Limited Company, and other business structures based on operational and compliance requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How are your HR services different from other agencies?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our HR services combine recruitment expertise, payroll management, compliance support, workforce planning, and scalable hiring solutions under one structured system. We focus on operational efficiency, faster closures, compliance accuracy, and long-term workforce support tailored to each business requirement and industry need."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is a Virtual CFO and how can it help my business?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A Virtual CFO provides strategic financial guidance including budgeting, cash flow management, financial planning, reporting, compliance monitoring, and profitability analysis. These services help businesses improve financial decision-making, operational efficiency, investor readiness, and sustainable growth without hiring a full-time CFO."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How Long To See Results Through Digital Marketing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We provide website development services including corporate websites, ecommerce platforms, Shopify development, WordPress websites, custom web applications, landing pages, booking systems, and SEO-friendly business websites designed for performance, scalability, user experience, and long-term digital growth."
+                }
+              }
+            ]
+          }
+        `}</script>
+      </head>
       {/* 1. Banner */}
       <PCSBanner />
       {/* 2. Partners Logo Scroll */}

@@ -9,6 +9,9 @@ const abb = "/img/abb-site.webp";
 const riya = "/img/riya-site.webp";
 const sterlocareportfiolo = "/img/sterlocare-portfiolo.webp";
 const TalentTribe = "/img/talent-tribe-portfiolo.webp";
+const Sterlo = "/img/sterlo-portfiolo.webp";
+const sterlobuildportfiolo = "/img/sterlobuild-portfiolo.webp";
+
 
 /* ─────────────────────────────────────────
    Portfolio data
@@ -20,9 +23,9 @@ const PROJECTS = [
   { id: 4, url: "https://abbmc.in/",               domain: "abbmc.in",             image: abb },
   { id: 5, url: "https://riyaconsultancy.com",     domain: "riyaconsultancy.com",  image: riya },
   { id: 6, url: "https://talenttribe.in/",         domain: "talenttribe.in",       image: TalentTribe },
-  { id: 7, url: "https://www.sterlo.io/",     domain: "sterlo.io",   image: sterlocareportfiolo },
+  { id: 7, url: "https://www.sterlo.io/",     domain: "sterlo.io",   image: Sterlo },
   { id: 8, url: "https://www.sterlocare.com/",     domain: "sterlocare.com",   image: sterlocareportfiolo },
-  { id: 9, url: "https://www.sterlobuild.com/",     domain: "sterlobuild.com",   image: sterlocareportfiolo },
+  { id: 9, url: "https://www.sterlobuild.com/",     domain: "sterlobuild.com",   image: sterlobuildportfiolo },
 
 
 ];

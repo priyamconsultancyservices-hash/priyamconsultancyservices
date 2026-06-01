@@ -470,10 +470,10 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .navLinks  { display: none; }
-  .ctaButton { display: none; }
-  .hamburger { display: flex; }
-  .topBarLeft { display: none; }
+  .navLinks    { display: none; }
+  .ctaButton   { display: none; }
+  .hamburger   { display: flex; }
+  .topBar      { display: none; }
 }
 
 @media (max-width: 1024px) {

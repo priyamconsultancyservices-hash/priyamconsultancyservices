@@ -292,7 +292,7 @@ export default function CustomHeader() {
         {/* Drawer Header */}
         <div className={styles.drawerHeader}>
           <a href="/" className={styles.logo} onClick={() => setMobileOpen(false)}>
-            <img src="/img/priyamconsultancylogo.webp" alt="Priyam Consultancy Services" className={styles.logoImg} />
+            <img src="/img/priyam-consultancy-logo.png" alt="Priyam Consultancy Services" className={styles.logoImg} />
           </a>
           <button className={styles.drawerClose} onClick={() => setMobileOpen(false)} aria-label="Close menu">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
