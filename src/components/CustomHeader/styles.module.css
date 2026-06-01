@@ -64,7 +64,7 @@
 .navInner {
   max-width: 1350px;
   margin: 0 auto;
-  padding: 16px auto;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -330,10 +330,19 @@
 .drawerHeader {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 18px 20px;
   border-bottom: 1px solid #f1f5f9;
   flex-shrink: 0;
+}
+
+.drawerLogoBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .drawerClose {
@@ -474,6 +483,36 @@
   .ctaButton   { display: none; }
   .hamburger   { display: flex; }
   .topBar      { display: none; }
+
+  .navInner {
+    justify-content: space-between;
+    padding: 0 16px;
+    gap: 0;
+  }
+
+  .mobileCta {
+    display: flex;
+    align-items: center;
+    background: #ed8337;
+    color: #ffffff !important;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s;
+    margin: 0 auto;
+  }
+
+  .mobileCta:hover {
+    background: #d4722e;
+  }
+}
+
+/* Hide mobileCta on desktop */
+@media (min-width: 901px) {
+  .mobileCta { display: none; }
 }
 
 @media (max-width: 1024px) {

@@ -452,7 +452,7 @@ function PCSBanner() {
           </div>
         </div>
 
-        <div className="hero-right" style={showPillGrid ? { display: "flex", alignItems: "center", gap: "32px", justifyContent: "center" } : {}}>
+        <div className="hero-right" style={showPillGrid ? { display: "flex", alignItems: "center", gap: "32px", justifyContent: "start" } : {}}>
           <div className="glow-ring glow-ring-2" />
           <div className="glow-ring" />
 

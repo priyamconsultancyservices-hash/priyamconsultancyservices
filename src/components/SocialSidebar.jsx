@@ -76,7 +76,7 @@ export default function SocialSidebar() {
         .sb-wrap {
           position: fixed;
           right: 16px;
-          top: 50%;
+          top: 80%;
           transform: translateY(-50%);
           display: flex;
           flex-direction: column;

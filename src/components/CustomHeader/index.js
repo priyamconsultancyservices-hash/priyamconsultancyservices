@@ -272,7 +272,11 @@ export default function CustomHeader() {
             })}
           </nav>
 
+          {/* Desktop CTA */}
           <a href="/contact" className={styles.ctaButton}>Get Started</a>
+
+          {/* Mobile Center CTA */}
+          <a href="/contact" className={styles.mobileCta}>Get Started →</a>
 
           <button className={styles.hamburger} onClick={() => setMobileOpen(true)} aria-label="Open menu">
             <span /><span /><span />
@@ -291,13 +295,12 @@ export default function CustomHeader() {
 
         {/* Drawer Header */}
         <div className={styles.drawerHeader}>
-          <a href="/" className={styles.logo} onClick={() => setMobileOpen(false)}>
+          <button
+            className={styles.drawerLogoBtn}
+            onClick={() => setMobileOpen(false)}
+            aria-label="Close menu"
+          >
             <img src="/img/priyam-consultancy-logo.png" alt="Priyam Consultancy Services" className={styles.logoImg} />
-          </a>
-          <button className={styles.drawerClose} onClick={() => setMobileOpen(false)} aria-label="Close menu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-              <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-            </svg>
           </button>
         </div>
 
@@ -378,11 +381,11 @@ export default function CustomHeader() {
         </nav>
 
         {/* Drawer Footer CTA */}
-        <div className={styles.drawerFooter}>
+        {/* <div className={styles.drawerFooter}>
           <a href="/contact" className={styles.drawerCta} onClick={() => setMobileOpen(false)}>
             Get Started →
           </a>
-        </div>
+        </div> */}
       </div>
 
     </header>
