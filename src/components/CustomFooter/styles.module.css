@@ -1,0 +1,252 @@
+/* ===== FOOTER ===== */
+.footer {
+  width: 100%;
+  font-family: inherit;
+}
+
+.footerTop {
+  background-color: #0c4a6e;
+  padding: 60px 0 48px;
+}
+
+.footerInner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1.3fr 2.4fr 0.9fr 1.3fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ===== BRAND COLUMN ===== */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.logo {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.logoImg {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.brandDesc {
+  font-size: 13.5px;
+  color: #fff;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ===== LINK COLUMNS ===== */
+.linkCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.colTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 8px;
+  letter-spacing: 0.2px;
+}
+
+.footerLink {
+  font-size: 13.5px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+  line-height: 1.5;
+}
+
+.footerLink:hover {
+  color: #ed8337;
+}
+
+/* Services 2-column grid */
+.serviceGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
+}
+
+.serviceSubCol {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== CONTACT INFO ===== */
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13.5px;
+  color: #fff;
+  line-height: 1.55;
+}
+
+.contactIconWrap {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.contactLink {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contactLink:hover {
+  color: #ed8337;
+}
+
+/* ===== SOCIAL ICONS ===== */
+.socialRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  transition: opacity 0.2s, transform 0.2s;
+  flex-shrink: 0;
+}
+
+.socialIcon:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+.socialLi { background: #0077b5; }
+.socialFb { background: #1877f2; }
+.socialIg { background: #e1306c; }
+.socialX  { background: #000000; }
+
+/* ===== FOOTER BOTTOM ===== */
+.footerBottom {
+  background-color: #fff;
+  padding: 14px 0;
+}
+
+.footerBottomInner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #000;
+}
+
+.bottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bottomLink {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bottomLink:hover {
+  color: #ed8337;
+}
+
+.divider {
+  color: #ed8337;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Large tablet */
+@media (max-width: 1100px) {
+  .footerInner {
+    grid-template-columns: 1.2fr 2fr 0.9fr 1.2fr;
+    gap: 36px;
+  }
+}
+
+/* Tablet — 2 column */
+@media (max-width: 900px) {
+  .footerInner {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 32px;
+  }
+  /* Brand spans full width on tablet */
+  .brandCol {
+    grid-column: 1 / -1;
+  }
+  .logoImg {
+    height: 64px;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 640px) {
+  .footerTop {
+    padding: 44px 0 36px;
+  }
+  .footerInner {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 24px;
+    padding: 0 20px;
+  }
+  .brandCol {
+    grid-column: 1 / -1;
+  }
+  .serviceGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 16px;
+  }
+}
+
+/* Mobile — single column */
+@media (max-width: 480px) {
+  .footerInner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 0 16px;
+  }
+  .brandCol {
+    grid-column: auto;
+  }
+  .serviceGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0 12px;
+  }
+  .logoImg {
+    height: 56px;
+  }
+  .footerBottomInner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 0 16px;
+  }
+}
