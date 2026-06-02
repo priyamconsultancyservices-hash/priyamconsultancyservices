@@ -1,13 +1,7 @@
-import { useState, useEffect, useRef } from "react";
-import emailjs from "@emailjs/browser";
-import CTASection from "../components/HomePage/CTA";
-import BlogSection from "../components/BlogSection";
-import Layout from '@theme/Layout';
-import Head from '@docusaurus/Head';
-const banner = "/img/content-marketing.png";
-
-// ─── CSS-in-JS via a single <style> block injected once ───────────────────────
-const STYLES = `
+"use strict";(self.webpackChunknew_docs_pcs_website_design=self.webpackChunknew_docs_pcs_website_design||[]).push([["2627"],{3177(e,t,n){n.d(t,{A:()=>i});var s=n(4848),a=n(6540);let r=`https://corsproxy.io/?${encodeURIComponent("https://www.priyamconsultancy.com/blog/feed/")}`;function i(){let[e,t]=(0,a.useState)([]),[n,i]=(0,a.useState)(!0),[o,m]=(0,a.useState)(null);return(0,a.useEffect)(()=>{fetch(r).then(e=>{if(!e.ok)throw Error(`HTTP ${e.status}`);return e.text()}).then(e=>{t(Array.from(new DOMParser().parseFromString(e,"text/xml").querySelectorAll("item")).slice(0,3).map(e=>{let t=e.querySelector("enclosure"),n=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","content")[0],s=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","thumbnail")[0],a=e.getElementsByTagNameNS("http://purl.org/rss/1.0/modules/content/","encoded")[0],r=a?.textContent||"",i=r.match(/<img[^>]+src=["']([^"']+)["']/i),o=e.querySelector("description")?.textContent||"",m=o.match(/<img[^>]+src=["']([^"']+)["']/i),l=t?.getAttribute("url")||n?.getAttribute("url")||s?.getAttribute("url")||i?.[1]||m?.[1]||null,c=(r||o).replace(/<[^>]*>/g,"").replace(/&[^;]+;/g," ").trim(),d=c.length>340?c.slice(0,340)+"...":c,p=e.getElementsByTagName("link")[0],h=p?.textContent?.trim()||e.querySelector("guid")?.textContent||"#";return{guid:e.querySelector("guid")?.textContent||Math.random().toString(),title:e.querySelector("title")?.textContent?.trim()||"Untitled",link:h,thumbnail:l,excerpt:d}})),i(!1)}).catch(e=>{m(e.message),i(!1)})},[]),(0,s.jsxs)("section",{style:{width:"100%",padding:"4rem 1rem",boxSizing:"border-box",background:"#fff"},children:[(0,s.jsxs)("div",{style:{maxWidth:"1200px",margin:"0 auto"},children:[(0,s.jsxs)("div",{style:{textAlign:"center",marginBottom:"2.5rem"},children:[(0,s.jsx)("h2",{style:{fontSize:"2rem",fontWeight:700,margin:"0 0 0.5rem",color:"#111"},children:"Blogs"}),(0,s.jsx)("p",{style:{color:"#666",margin:0,fontSize:"1rem"},children:"Stay updated with the latest in digital marketing, growth strategies, and industry trends."})]}),n&&(0,s.jsx)("p",{style:{textAlign:"center",color:"#888"},children:"Loading..."}),o&&(0,s.jsxs)("p",{style:{textAlign:"center",color:"red"},children:["Error: ",o]}),(0,s.jsx)("div",{style:{display:"grid",gridTemplateColumns:"repeat(3, 1fr)",gap:"1.5rem"},className:"blog-grid",children:e.map(e=>(0,s.jsxs)("a",{href:e.link,target:"_blank",rel:"noreferrer",style:{border:"1px solid #e5e7eb",borderRadius:"12px",overflow:"hidden",background:"#fff",display:"flex",flexDirection:"column",textDecoration:"none",color:"inherit",transition:"box-shadow 0.2s, transform 0.2s",cursor:"pointer"},onMouseEnter:e=>{e.currentTarget.style.boxShadow="0 8px 24px rgba(0,0,0,0.12)",e.currentTarget.style.transform="translateY(-3px)"},onMouseLeave:e=>{e.currentTarget.style.boxShadow="none",e.currentTarget.style.transform="translateY(0)"},children:[(0,s.jsx)("div",{style:{width:"100%",aspectRatio:"16/9",overflow:"hidden",background:"#1a2744"},children:e.thumbnail?(0,s.jsx)("img",{src:e.thumbnail,alt:e.title,loading:"lazy",style:{width:"100%",height:"100%",objectFit:"cover",display:"block"}}):(0,s.jsx)("div",{style:{width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",opacity:.4,fontSize:"0.8rem"},children:"No image"})}),(0,s.jsxs)("div",{style:{padding:"1.25rem",display:"flex",flexDirection:"column",gap:"0.75rem"},children:[(0,s.jsx)("p",{style:{fontWeight:600,fontSize:"1.1rem",lineHeight:1.6,margin:0,color:"#111"},children:e.title}),(0,s.jsx)("p",{style:{color:"#444",fontSize:"0.875rem",lineHeight:1.6,flex:1,margin:0},children:e.excerpt}),(0,s.jsx)("span",{style:{display:"inline-block",background:"#E87C30",color:"#fff",padding:"0.6rem 1.5rem",borderRadius:"999px",fontWeight:500,alignSelf:"flex-start",marginTop:"0.5rem",fontSize:"0.875rem"},children:"Read More"})]})]},e.guid))})]}),(0,s.jsx)("style",{dangerouslySetInnerHTML:{__html:`
+        @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 600px)  { .blog-grid { grid-template-columns: 1fr !important; } }
+      `}})]})}},9393(e,t,n){n.d(t,{A:()=>r});var s=n(4848),a=n(6540);let r=function(){let e=(0,a.useRef)(null);return(0,a.useEffect)(()=>{let t=e.current;if(!t)return;let n=t.getContext("2d"),s="#ed8337",a,r,i=[],o;function m(){a=t.width=t.parentElement.offsetWidth,r=t.height=t.parentElement.offsetHeight}function l(){this.reset()}l.prototype.reset=function(){this.x=Math.random()*a,this.y=Math.random()*r,this.r=2.2*Math.random()+.6,this.type=.55>Math.random()?"dot":.5>Math.random()?"ring":"plus",this.speed=.35*Math.random()+.08,this.dir=Math.random()*Math.PI*2,this.alpha=.45*Math.random()+.1,this.pulse=Math.random()*Math.PI*2,this.pulseSpeed=.018*Math.random()+.008,this.size=4*Math.random()+2},l.prototype.update=function(){this.x+=Math.cos(this.dir)*this.speed,this.y+=Math.sin(this.dir)*this.speed,this.pulse+=this.pulseSpeed,this.dir+=(Math.random()-.5)*.015,this.x<-20&&(this.x=a+20),this.x>a+20&&(this.x=-20),this.y<-20&&(this.y=r+20),this.y>r+20&&(this.y=-20)},l.prototype.draw=function(){let e=this.alpha*(.7+.3*Math.sin(this.pulse));if(n.save(),n.globalAlpha=e,n.strokeStyle=n.fillStyle=s,n.lineWidth=1,"dot"===this.type)n.beginPath(),n.arc(this.x,this.y,this.r+.4*Math.sin(this.pulse),0,2*Math.PI),n.fill();else if("ring"===this.type){let e=this.size*(.9+.15*Math.sin(this.pulse));n.beginPath(),n.arc(this.x,this.y,e,0,2*Math.PI),n.stroke()}else{let e=this.size*(.9+.1*Math.sin(this.pulse));n.beginPath(),n.moveTo(this.x-e,this.y),n.lineTo(this.x+e,this.y),n.moveTo(this.x,this.y-e),n.lineTo(this.x,this.y+e),n.stroke()}n.restore()},window.addEventListener("resize",m),m(),i=[];let c=Math.floor(a*r/9e3);for(let e=0;e<Math.max(c,28);e++)i.push(new l);return!function e(){n.clearRect(0,0,a,r),function(){let e=i.filter(e=>"dot"===e.type);for(let t=0;t<e.length;t++)for(let a=t+1;a<e.length;a++){let r=e[t].x-e[a].x,i=e[t].y-e[a].y,o=Math.sqrt(r*r+i*i);o<110&&(n.save(),n.globalAlpha=(1-o/110)*.12,n.strokeStyle=s,n.lineWidth=.7,n.beginPath(),n.moveTo(e[t].x,e[t].y),n.lineTo(e[a].x,e[a].y),n.stroke(),n.restore())}}(),i.forEach(e=>{e.update(),e.draw()}),o=requestAnimationFrame(e)}(),()=>{cancelAnimationFrame(o),window.removeEventListener("resize",m)}},[]),(0,s.jsx)("section",{id:"cta-final",children:(0,s.jsxs)("div",{className:"cta-banner",style:{"--glow-x":"50%","--glow-y":"50%"},children:[(0,s.jsx)("canvas",{id:"ctaCanvas",ref:e}),(0,s.jsxs)("div",{className:"cta-banner-left",children:[(0,s.jsx)("div",{className:"partners-header",children:(0,s.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Ready to Start?"})}),(0,s.jsxs)("h2",{className:"cta-banner-heading",children:["Let's Talk About Your",(0,s.jsx)("br",{}),"Next Big ",(0,s.jsx)("span",{className:"hl-italic",children:"Growth Move"})]}),(0,s.jsx)("p",{className:"cta-banner-sub",children:"No pressure. Just a quick conversation to understand where you are-and how we can help you move forward."})]}),(0,s.jsxs)("div",{className:"cta-banner-right",children:[(0,s.jsxs)("a",{href:"#",className:"cta-bprimary",children:["Book a Free Consultation",(0,s.jsx)("svg",{viewBox:"0 0 16 16",fill:"none",children:(0,s.jsx)("path",{d:"M3 8h10M9 4l4 4-4 4",stroke:"currentColor",strokeWidth:"1.8",strokeLinecap:"round",strokeLinejoin:"round"})})]}),(0,s.jsx)("a",{href:"#",className:"cta-bghost",children:"View All Services"})]})]})})}},1844(e,t,n){n.r(t),n.d(t,{default:()=>z});var s=n(4848),a=n(6540),r=n(8128),i=n(9393),o=n(3177),m=n(1085),l=n(3572);let c=`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
 
   :root {
@@ -23,7 +17,7 @@ const STYLES = `
   html { scroll-behavior: smooth; }
   body { overflow-x: hidden; }
 
-  /* ── HERO ── */
+  /* \u{2500}\u{2500} HERO \u{2500}\u{2500} */
   .smm-hero {
     min-height: 100vh;
     display: grid; grid-template-columns: 1fr 1fr;
@@ -65,11 +59,11 @@ const STYLES = `
 
   }
 
-  /* ── HERO IMAGE ── */
+  /* \u{2500}\u{2500} HERO IMAGE \u{2500}\u{2500} */
   .smm-hero-right { position:relative; z-index:2; display:flex; align-items:flex-start; justify-content:center;  }
   .smm-hero-img { height:470px; object-fit:contain; border-radius:16px; display:block; }
 
-  /* ── SERVICES ── */
+  /* \u{2500}\u{2500} SERVICES \u{2500}\u{2500} */
   .smm-svc { position:relative; background:#004168; padding:4rem 0 0; overflow:hidden; }
   .smm-svc-dots { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:radial-gradient(rgba(237,131,55,0.18) 1px,transparent 1px); background-size:38px 38px; animation:smm-dots-drift 30s linear infinite; opacity:0.35; }
   @keyframes smm-dots-drift { to { background-position: 38px 38px; } }
@@ -149,7 +143,7 @@ const STYLES = `
   @media(max-width:900px){ .smm-svc-panels { grid-template-columns:1fr 1fr; } }
   @media(max-width:580px){ .smm-svc-panels { grid-template-columns:1fr; } .smm-svc-panel { border-right:none !important; min-height:220px; } }
 
-  /* ── PROCESS ── */
+  /* \u{2500}\u{2500} PROCESS \u{2500}\u{2500} */
   .smm-tp-section { position:relative; background:#ffffff; padding:4rem 0 4rem; overflow:hidden; }
   .smm-tp-cross { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:linear-gradient(45deg,rgba(2,43,68,0.015) 25%,transparent 25%),linear-gradient(-45deg,rgba(2,43,68,0.015) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,rgba(2,43,68,0.015) 75%),linear-gradient(-45deg,transparent 75%,rgba(2,43,68,0.015) 75%); background-size:20px 20px; background-position:0 0,0 10px,10px -10px,-10px 0px; }
   .smm-tp-header { position:relative; z-index:2; text-align:center; padding:0 6% 5rem; }
@@ -190,7 +184,7 @@ const STYLES = `
     .smm-tp-num-side,.smm-tp-text-side { padding:2rem 5%; }
   }
 
-  /* ── HOW WE WORK ── */
+  /* \u{2500}\u{2500} HOW WE WORK \u{2500}\u{2500} */
   .smm-hww { position:relative; background:#004168; padding:4rem 0 4rem; overflow:hidden; }
   .smm-hww-dot-grid { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:radial-gradient(rgba(237,131,55,0.13) 1px,transparent 1px); background-size:36px 36px; opacity:0.3; animation:smm-dots-drift 28s linear infinite; }
   .smm-hww-glow { position:absolute; border-radius:50%; pointer-events:none; z-index:0; filter:blur(100px); }
@@ -214,7 +208,7 @@ const STYLES = `
   @media(max-width:760px){ .smm-hww-arrow-track { grid-template-columns:1fr; gap:20px; } }
 
  
-  /* ── HERO MOBILE ORDER: content first, image second ── */
+  /* \u{2500}\u{2500} HERO MOBILE ORDER: content first, image second \u{2500}\u{2500} */
   @media(max-width:900px){
     .pcs-hero-left { order:1 !important; }
     .pcs-hero-right { order:2 !important; }
@@ -237,7 +231,7 @@ const STYLES = `
     .smm-scene { width:220px !important; height:200px !important; }
   }
 
-  /* ── APPROACH SECTION MOBILE ── */
+  /* \u{2500}\u{2500} APPROACH SECTION MOBILE \u{2500}\u{2500} */
   @media(max-width:900px){
     .ap-inner { grid-template-columns:1fr !important; gap:2.5rem !important; }
     .ap-form-wrap { max-width:100% !important; width:100% !important; }
@@ -253,7 +247,7 @@ const STYLES = `
     .ap-intro { font-size:.92rem !important; }
   }
 
-  /* ── FAQ MOBILE ── */
+  /* \u{2500}\u{2500} FAQ MOBILE \u{2500}\u{2500} */
   .container {width:100%;}
   .faq-section { padding:4rem 6%; overflow:hidden; }
   .faq-wrapper { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
@@ -275,7 +269,7 @@ const STYLES = `
     .faq-answer { font-size:.82rem !important; padding:0 1rem .85rem !important; }
   }
 
-  /* ── HOW WE WORK MOBILE ── */
+  /* \u{2500}\u{2500} HOW WE WORK MOBILE \u{2500}\u{2500} */
   @media(max-width:768px){
     .pcs-hww-arrow-track,
     .ppc-hww-arrow-track,
@@ -289,7 +283,7 @@ const STYLES = `
     .pcs-hww-card-desc, .ppc-hww-card-desc, .smm-hww-card-desc { font-size:.82rem !important; }
   }
 
-  /* ── PROCESS SECTION MOBILE ── */
+  /* \u{2500}\u{2500} PROCESS SECTION MOBILE \u{2500}\u{2500} */
   @media(max-width:580px){
     .pcs-tp-step, .pcs-tp-step:nth-child(even),
     .ppc-tp-step, .ppc-tp-step:nth-child(even),
@@ -314,11 +308,11 @@ const STYLES = `
     .smm-tp-num-side,.smm-tp-text-side { padding:1.2rem 4% !important; }
   }
 
-  /* ── GLOBAL OVERFLOW FIX ── */
+  /* \u{2500}\u{2500} GLOBAL OVERFLOW FIX \u{2500}\u{2500} */
   img { max-width:100%; height:auto; }
   * { box-sizing:border-box; }
 
-  /* ── SMM HERO ORDER FIX (mobile: content top, image bottom) ── */
+  /* \u{2500}\u{2500} SMM HERO ORDER FIX (mobile: content top, image bottom) \u{2500}\u{2500} */
   @media(max-width:900px){
     .smm-hero { display:flex !important; flex-direction:column !important; align-items:stretch !important; }
     .smm-hero-left { order:1 !important; text-align:start; align-items:flex-start; display:flex; flex-direction:column; }
@@ -329,7 +323,7 @@ const STYLES = `
     .smm-hero-heading { text-align:start; }
   }
 
-  /* ── SMM HERO IMAGE MOBILE FIX ── */
+  /* \u{2500}\u{2500} SMM HERO IMAGE MOBILE FIX \u{2500}\u{2500} */
   @media(max-width:900px){
     .smm-hero-right img { max-width:300px !important; height:auto !important; display:block; margin:0 auto; }
   }
@@ -341,62 +335,7 @@ const STYLES = `
   }
   .smm-hero-img { height:auto !important; max-width:100%; }
 
-`;
-
-// ─── useInView hook ───────────────────────────────────────────────────────────
-function useInView(threshold = 0.1) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold });
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return [ref, visible];
-}
-
-// ─── Data ─────────────────────────────────────────────────────────────────────
-const SERVICES = [
-  { num: "01", icon: <img src="/img/icon/svc-content-strategy.webp" alt="Content Strategy and Planning" width="28" height="28" />, subtitle: "Brand Presence", title: "Content Strategy & Planning", desc: "A strong content marketing strategy forms the backbone of success. We create structured calendars, keyword clusters, and topic funnels aligned with your business goals.", },
-  { num: "02", icon: <img src="/img/icon/svc-content-audits.webp" alt="Content Audits and Optimization" width="28" height="28" />, subtitle: "Visual Identity", title: "Content Audits & Optimization", desc: "We enhance your existing content assets by auditing, updating, and optimizing them for better rankings and engagement.", },
-  { num: "03", icon: <img src="/img/icon/svc-seo-content.webp" alt="SEO Content Writing" width="28" height="28" />, subtitle: "Paid Campaigns", title: "SEO Content Writing", desc: "Our content marketing services ensure your content ranks and resonates. We balance SEO with readability to improve performance.", },
-  { num: "04", icon: <img src="/img/icon/svc-website-copy.webp" alt="Website and Landing Page Copy" width="28" height="28" />, subtitle: "Community Building", title: "Website & Landing Page Copy", desc: "High-converting content is essential for success. Our content marketing approach ensures every page drives action and improves conversions.", },
-  { num: "05", icon: <img src="/img/icon/svc-thought-leadership.webp" alt="Thought Leadership and Blogs" width="28" height="28" />, subtitle: "Partnerships", title: "Thought Leadership & Blogs", desc: "Build authority with impactful content marketing. We create research-driven blogs that position your brand as an industry leader.", },
-  { num: "06", icon: <img src="/img/icon/svc-social-email-content.webp" alt="Content for Social and Email" width="28" height="28" />, subtitle: "Insights & ROI", title: "Content for Social & Email", desc: "Extend your content marketing reach across channels. From social media to email campaigns, we keep your audience engaged.", },
-];
-
-const PROCESS_STEPS = [
-  { step: "01", title: "Discover", phase: "Brand Audit", desc: "We begin by understanding your brand, business goals, audience segments, market positioning, and competitive landscape in detail. This phase helps us define your unique value proposition and align your content marketing direction with measurable business objectives and long-term brand communication goals. Every successful content marketing strategy starts with complete clarity and strategic understanding.", bullets: [] },
-  { step: "02", title: "Research & Analyze", phase: "Custom Roadmap", desc: "Our team conducts in-depth research including keyword analysis, search intent mapping, competitor benchmarking, audience behavior study, and content gap identification. We also evaluate industry trends, and content performance opportunities to create a stronger strategic direction. This ensures your content marketing efforts are not only relevant and engaging but also strategically positioned to outperform competitors and long-term digital authority. ", bullets: [] },
-  { step: "03", title: "Plan & Strategize", phase: "Content Production", desc: "Based on gathered insights, we develop a structured roadmap for your content marketing services aligned with business priorities and audience intent. This includes content calendars, topic clusters, SEO frameworks, funnel-based content planning, campaign structures, and strategic distribution methods designed to maximize reach, engagement, and conversion opportunities consistently across platforms.", bullets: [] },
-  { step: "04", title: "Create & Refine", phase: "Full Execution", desc: "Our writers, editors, designers, and strategists collaborate closely to produce high-quality content marketing assets tailored to your brand voice. Each content piece is carefully crafted to maintain consistency while being optimized for SEO, readability, engagement, and user experience. Multiple review stages ensure accuracy, clarity, messaging quality, and stronger conversion effectiveness throughout every campaign.", bullets: [] },
-  { step: "05", title: "Publish & Optimize", phase: "Continuous Growth", desc: "Publishing content is only the beginning of our continuous optimization process. We consistently monitor performance metrics such as keyword rankings, website traffic, engagement rates, user behavior, and conversions to measure effectiveness accurately. As a proactive content marketing agency, we regularly refine and optimize your content marketing assets to improve visibility, sustain growth, and deliver long-term business impact.", bullets: [] },
-];
-
-const HOW_WE_WORK = [
-  { icon: <img src="/img/icon/hww-strategic-planning.webp" alt="Strategic Planning" width="28" height="28" />, title: "Strategic Planning", desc: "Every piece of content is backed by a well-thought-out strategy. We ensure everything we create is tied to a clear goal—ranking, converting, or educating." },
-  { icon: <img src="/img/icon/hww-defined-roles.webp" alt="Defined Roles and Collaboration" width="28" height="28" />, title: "Defined Roles & Collaboration", desc: "From content strategists and writers to editors and SEO analysts—each expert owns their role. With clear responsibilities, we ensure seamless execution and timely delivery." },
-  { icon: <img src="/img/icon/review-quality-control.webp" alt="Thorough Review and Quality Control" width="28" height="28" />, title: "Thorough Review & Quality Control", desc: "Before anything goes live, it passes through multiple layers of quality checks. From fact-checking to formatting, we deliver nothing but polished, high-impact content." },
-];
-
-const faqData = [
-  { q: "What does content marketing do for my business?", a: "Content marketing helps businesses build brand awareness, improve audience engagement, increase website traffic, and generate qualified leads through valuable and strategic content. It strengthens credibility, supports SEO performance, and helps businesses communicate their expertise effectively across digital platforms." },
-  { q: "Do you write content for specific industries?", a: "We create industry-specific content for sectors including healthcare, technology, ecommerce, consulting, construction, finance, retail, and professional services. Our content strategies are tailored to match industry trends, audience behavior, business goals, and brand communication requirements for maximum relevance and impact." },
-  { q: "Can you optimize existing content?", a: "Yes, we optimize existing content by improving structure, readability, SEO performance, keyword relevance, and audience engagement. Our optimization process helps strengthen search visibility, enhance user experience, update outdated information, and improve overall content effectiveness across digital platforms and search engines." },
-  { q: "Do you provide blog writing services?", a: "We provide professional blog writing services focused on SEO, audience engagement, and brand positioning. Our blogs are strategically created to improve website traffic, establish industry authority, support digital marketing goals, and provide valuable information that connects with your target audience." },
-  { q: "Can content marketing improve SEO?", a: " Yes, content marketing plays a major role in improving SEO by targeting relevant keywords, increasing website engagement, strengthening internal linking, and generating valuable search-focused content. High-quality content helps improve search rankings, organic traffic, visibility, and long-term digital authority across search engines." },
-  { q: "How do you decide what content to create?", a: " We decide content strategies based on your business goals, target audience, industry trends, competitor analysis, keyword research, and platform performance. Our approach focuses on creating relevant, audience-focused content that improves engagement, search visibility, lead generation, and overall digital marketing performance." },
-];
-
-
-
-// ─── Hero ─────────────────────────────────────────────────────────────────────
-function Hero() {
-  return (
-    <section className="hero" id="hero">
-      <style>{`
+`;function d(e=.1){let t=(0,a.useRef)(null),[n,s]=(0,a.useState)(!1);return(0,a.useEffect)(()=>{let n=t.current;if(!n)return;let a=new IntersectionObserver(([e])=>{e.isIntersecting&&(s(!0),a.disconnect())},{threshold:e});return a.observe(n),()=>a.disconnect()},[e]),[t,n]}let p=[{num:"01",icon:(0,s.jsx)("img",{src:"/img/icon/svc-content-strategy.webp",alt:"Content Strategy and Planning",width:"28",height:"28"}),subtitle:"Brand Presence",title:"Content Strategy & Planning",desc:"A strong content marketing strategy forms the backbone of success. We create structured calendars, keyword clusters, and topic funnels aligned with your business goals."},{num:"02",icon:(0,s.jsx)("img",{src:"/img/icon/svc-content-audits.webp",alt:"Content Audits and Optimization",width:"28",height:"28"}),subtitle:"Visual Identity",title:"Content Audits & Optimization",desc:"We enhance your existing content assets by auditing, updating, and optimizing them for better rankings and engagement."},{num:"03",icon:(0,s.jsx)("img",{src:"/img/icon/svc-seo-content.webp",alt:"SEO Content Writing",width:"28",height:"28"}),subtitle:"Paid Campaigns",title:"SEO Content Writing",desc:"Our content marketing services ensure your content ranks and resonates. We balance SEO with readability to improve performance."},{num:"04",icon:(0,s.jsx)("img",{src:"/img/icon/svc-website-copy.webp",alt:"Website and Landing Page Copy",width:"28",height:"28"}),subtitle:"Community Building",title:"Website & Landing Page Copy",desc:"High-converting content is essential for success. Our content marketing approach ensures every page drives action and improves conversions."},{num:"05",icon:(0,s.jsx)("img",{src:"/img/icon/svc-thought-leadership.webp",alt:"Thought Leadership and Blogs",width:"28",height:"28"}),subtitle:"Partnerships",title:"Thought Leadership & Blogs",desc:"Build authority with impactful content marketing. We create research-driven blogs that position your brand as an industry leader."},{num:"06",icon:(0,s.jsx)("img",{src:"/img/icon/svc-social-email-content.webp",alt:"Content for Social and Email",width:"28",height:"28"}),subtitle:"Insights & ROI",title:"Content for Social & Email",desc:"Extend your content marketing reach across channels. From social media to email campaigns, we keep your audience engaged."}],h=[{step:"01",title:"Discover",phase:"Brand Audit",desc:"We begin by understanding your brand, business goals, audience segments, market positioning, and competitive landscape in detail. This phase helps us define your unique value proposition and align your content marketing direction with measurable business objectives and long-term brand communication goals. Every successful content marketing strategy starts with complete clarity and strategic understanding.",bullets:[]},{step:"02",title:"Research & Analyze",phase:"Custom Roadmap",desc:"Our team conducts in-depth research including keyword analysis, search intent mapping, competitor benchmarking, audience behavior study, and content gap identification. We also evaluate industry trends, and content performance opportunities to create a stronger strategic direction. This ensures your content marketing efforts are not only relevant and engaging but also strategically positioned to outperform competitors and long-term digital authority. ",bullets:[]},{step:"03",title:"Plan & Strategize",phase:"Content Production",desc:"Based on gathered insights, we develop a structured roadmap for your content marketing services aligned with business priorities and audience intent. This includes content calendars, topic clusters, SEO frameworks, funnel-based content planning, campaign structures, and strategic distribution methods designed to maximize reach, engagement, and conversion opportunities consistently across platforms.",bullets:[]},{step:"04",title:"Create & Refine",phase:"Full Execution",desc:"Our writers, editors, designers, and strategists collaborate closely to produce high-quality content marketing assets tailored to your brand voice. Each content piece is carefully crafted to maintain consistency while being optimized for SEO, readability, engagement, and user experience. Multiple review stages ensure accuracy, clarity, messaging quality, and stronger conversion effectiveness throughout every campaign.",bullets:[]},{step:"05",title:"Publish & Optimize",phase:"Continuous Growth",desc:"Publishing content is only the beginning of our continuous optimization process. We consistently monitor performance metrics such as keyword rankings, website traffic, engagement rates, user behavior, and conversions to measure effectiveness accurately. As a proactive content marketing agency, we regularly refine and optimize your content marketing assets to improve visibility, sustain growth, and deliver long-term business impact.",bullets:[]}],g=[{icon:(0,s.jsx)("img",{src:"/img/icon/hww-strategic-planning.webp",alt:"Strategic Planning",width:"28",height:"28"}),title:"Strategic Planning",desc:"Every piece of content is backed by a well-thought-out strategy. We ensure everything we create is tied to a clear goal\u2014ranking, converting, or educating."},{icon:(0,s.jsx)("img",{src:"/img/icon/hww-defined-roles.webp",alt:"Defined Roles and Collaboration",width:"28",height:"28"}),title:"Defined Roles & Collaboration",desc:"From content strategists and writers to editors and SEO analysts\u2014each expert owns their role. With clear responsibilities, we ensure seamless execution and timely delivery."},{icon:(0,s.jsx)("img",{src:"/img/icon/review-quality-control.webp",alt:"Thorough Review and Quality Control",width:"28",height:"28"}),title:"Thorough Review & Quality Control",desc:"Before anything goes live, it passes through multiple layers of quality checks. From fact-checking to formatting, we deliver nothing but polished, high-impact content."}],f=[{q:"What does content marketing do for my business?",a:"Content marketing helps businesses build brand awareness, improve audience engagement, increase website traffic, and generate qualified leads through valuable and strategic content. It strengthens credibility, supports SEO performance, and helps businesses communicate their expertise effectively across digital platforms."},{q:"Do you write content for specific industries?",a:"We create industry-specific content for sectors including healthcare, technology, ecommerce, consulting, construction, finance, retail, and professional services. Our content strategies are tailored to match industry trends, audience behavior, business goals, and brand communication requirements for maximum relevance and impact."},{q:"Can you optimize existing content?",a:"Yes, we optimize existing content by improving structure, readability, SEO performance, keyword relevance, and audience engagement. Our optimization process helps strengthen search visibility, enhance user experience, update outdated information, and improve overall content effectiveness across digital platforms and search engines."},{q:"Do you provide blog writing services?",a:"We provide professional blog writing services focused on SEO, audience engagement, and brand positioning. Our blogs are strategically created to improve website traffic, establish industry authority, support digital marketing goals, and provide valuable information that connects with your target audience."},{q:"Can content marketing improve SEO?",a:" Yes, content marketing plays a major role in improving SEO by targeting relevant keywords, increasing website engagement, strengthening internal linking, and generating valuable search-focused content. High-quality content helps improve search rankings, organic traffic, visibility, and long-term digital authority across search engines."},{q:"How do you decide what content to create?",a:" We decide content strategies based on your business goals, target audience, industry trends, competitor analysis, keyword research, and platform performance. Our approach focuses on creating relevant, audience-focused content that improves engagement, search visibility, lead generation, and overall digital marketing performance."}];function u(){return(0,s.jsxs)("section",{className:"hero",id:"hero",children:[(0,s.jsx)("style",{children:`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
         :root {
@@ -519,55 +458,7 @@ function Hero() {
           .h-badge { font-size: 0.65rem; }
         }
         .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
-      `}</style>
-
-      {/* LEFT CONTENT */}
-      <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot" />Authority Building </div>
-        <h1 className="hero-heading">
-          Turn Content into
-          <span className="hl lined">Conversions</span> with the
-          Content Marketing
-        </h1>
-        <p className="hero-sub">
-          At PCS, content marketing isn’t just about writing — it’s about creating value that drives results. As a performance-focused content marketing agency, we deliver content marketing services that attract, engage, and convert your ideal audience.        </p>
-        <div className="hero-actions">
-          <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
-        </div>
-      </div>
-
-      {/* RIGHT IMAGE */}
-      <div className="hero-right">
-        <img
-          src={banner}
-          alt="Content Marketing Illustration"
-          className="hero-img"
-        />
-      </div>
-    </section>
-  );
-}
-
-// ─── Approach + Form ──────────────────────────────────────────────────────────
-function ApproachSection() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
-
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    const templateParams = {
-      name: form.name, email: form.email, phone: form.phone,
-      company: form.company, message: form.msg, url: window.location.href,
-    };
-    emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
-      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name: "", email: "", phone: "", company: "", msg: "" }); })
-      .catch((error) => { console.log(error); alert("Failed to send ❌"); });
-  };
-
-  return (
-    <section className="approach" id="approach">
-      <style>{`
+      `}),(0,s.jsxs)("div",{className:"hero-left",children:[(0,s.jsxs)("div",{className:"h-badge",children:[(0,s.jsx)("div",{className:"badge-dot"}),"Authority Building "]}),(0,s.jsxs)("h1",{className:"hero-heading",children:["Turn Content into",(0,s.jsx)("span",{className:"hl lined",children:"Conversions"})," with the Content Marketing"]}),(0,s.jsx)("p",{className:"hero-sub",children:"At PCS, content marketing isn\u2019t just about writing \u2014 it\u2019s about creating value that drives results. As a performance-focused content marketing agency, we deliver content marketing services that attract, engage, and convert your ideal audience.        "}),(0,s.jsx)("div",{className:"hero-actions",children:(0,s.jsxs)("a",{className:"btn-fill",href:"#",children:["Explore More ",(0,s.jsx)("span",{className:"btn-arrow",children:"\u203A"})]})})]}),(0,s.jsx)("div",{className:"hero-right",children:(0,s.jsx)("img",{src:"/img/content-marketing.png",alt:"Content Marketing Illustration",className:"hero-img"})})]})}function x(){let[e,t]=(0,a.useState)({name:"",email:"",phone:"",company:"",msg:""}),n=n=>t({...e,[n.target.name]:n.target.value});return(0,s.jsxs)("section",{className:"approach",id:"approach",children:[(0,s.jsx)("style",{children:`
         .approach { position:relative; padding:4rem 6%; overflow:hidden; }
         .ap-inner { position:relative; z-index:2; margin:0 auto; display:grid; grid-template-columns:1fr 0.7fr; gap:4rem; align-items:center; }
         .ap-heading { font-family:'Poppins',sans-serif; font-size:clamp(2rem,3vw,2.6rem); line-height:1.12; color:#000; margin-bottom:1.2rem; font-weight:600; }
@@ -598,489 +489,4 @@ function ApproachSection() {
         .ap-submit:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(237,131,55,0.5); }
         .ap-submit-arrow { display:inline-flex; align-items:flex-start; justify-content:center; width:24px; height:24px; border-radius:50%; background:rgba(2,43,68,0.25); font-size:0.9rem; }
         @media(max-width:900px){ .ap-inner { grid-template-columns:1fr; } }
-      `}</style>
-      <div className="ap-inner">
-        <div className="ap-left">
-          <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
-          </div>
-          <h2 className="ap-heading"><span>Strategic Content </span> That Drives Search, Shares & Sales</h2>
-          <p className="ap-intro">
-            Great content marketing starts with understanding your brand identity, business positioning, and long-term communication goals. We ensure every message reflects your voice, values, audience expectations, and overall brand direction consistently.
-
-          </p>
-          <p className="ap-intro">
-            Our content marketing services are driven by detailed research, audience insights, competitor analysis, and market trends. This helps us create performance-focused campaigns that deliver relevance, engagement, visibility, and measurable business impact.
-
-          </p>
-          <p className="ap-intro">
-            Whether your goal is SEO growth, lead generation, or audience engagement, our content marketing approach combines storytelling with strategic optimization. Every content asset is crafted to maximize reach, conversions, and brand authority.
-          </p>
-        </div>
-        <div className="ap-form-wrap">
-          <div className="ap-form-card">
-            <div className="form-card-eyebrow">
-              <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
-            </div>
-            <div className="form-card-title">Get Your <span>Free</span> Quote</div>
-            <form onSubmit={sendEmail}>
-              <div className="fl-row">
-                <div className="fl-group">
-                  <label className="fl-label">Your Name</label>
-                  <div style={{ position: "relative" }}>
-                    <span className="fl-icon">👤</span>
-                    <input className="fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
-                  </div>
-                </div>
-                <div className="fl-group">
-                  <label className="fl-label">Company</label>
-                  <div style={{ position: "relative" }}>
-                    <span className="fl-icon">🏢</span>
-                    <input className="fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
-                  </div>
-                </div>
-              </div>
-              <div className="fl-group">
-                <label className="fl-label">Email Address</label>
-                <div style={{ position: "relative" }}>
-                  <span className="fl-icon">✉️</span>
-                  <input className="fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
-                </div>
-              </div>
-              <div className="fl-group">
-                <label className="fl-label">Mobile Number</label>
-                <div className="phone-row">
-                  <div className="phone-flag"><span>📞</span></div>
-                  <input className="fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
-                </div>
-              </div>
-              <div className="fl-group textarea-group">
-                <label className="fl-label">Message</label>
-                <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
-                  <textarea className="fl-textarea" name="msg" placeholder="Tell us about your social media goals..." value={form.msg} onChange={handleChange} />
-                </div>
-              </div>
-              <button type="submit" className="ap-submit">
-                Get Free Consultation <span className="ap-submit-arrow">›</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── Services ─────────────────────────────────────────────────────────────────
-function ServicePanel({ svc, index }) {
-  const [ref, visible] = useInView(0.1);
-  return (
-    <div ref={ref} className={`smm-svc-panel${visible ? " vis" : ""}`} style={{ transitionDelay: `${0.05 + index * 0.07}s` }}>
-      <div className="smm-sp-slash" />
-      <div className="smm-sp-ghost">{svc.num}</div>
-      <div className="smm-sp-bottom-line" />
-      <div className="smm-sp-icon-row">
-        <span className="smm-sp-icon-dash" />
-        <span className="smm-sp-icon">{svc.icon}</span>
-      </div>
-      <div className="smm-sp-content">
-        <div className="smm-sp-subtitle">{svc.subtitle}</div>
-        <h4 className="smm-sp-title">{svc.title}</h4>
-        <div className="smm-sp-desc">{svc.desc}</div>
-        {/* <a className="smm-sp-link" href="#">LEARN MORE <span className="smm-sp-link-arr">↗</span></a> */}
-      </div>
-    </div>
-  );
-}
-
-function Services() {
-  return (
-    <section className="smm-svc">
-      <div className="smm-svc-dots" />
-      <div className="smm-svc-glow smm-ssvg1" />
-      <div className="smm-svc-glow smm-ssvg2" />
-      <div className="smm-svc-hdr">
-        <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Content Marketing Services</h2>
-        </div>
-        <h3 className="smm-svc-h2">Not Just Content. <span> <i>Content That Works.</i></span></h3>
-        <p className="smm-svc-sub">
-          As a results-driven content marketing agency, we go beyond generic writing. Our content marketing services are tailored to your brand, industry, and audience journey.
-
-
-        </p>
-      </div>
-      <div className="smm-svc-panels">
-        {SERVICES.map((svc, i) => <ServicePanel key={svc.num} svc={svc} index={i} />)}
-      </div>
-    </section>
-  );
-}
-
-// ─── Process ──────────────────────────────────────────────────────────────────
-function ProcessStep({ step, index }) {
-  const [ref, visible] = useInView(0.1);
-  const isEven = index % 2 === 1;
-  return (
-    <div ref={ref} className={`smm-tp-step${visible ? " tp-vis" : ""}`}>
-      {isEven ? (
-        <>
-          <div className="smm-tp-text-side">
-            <p className="smm-tp-desc">{step.desc}</p>
-            <div className="smm-tp-bullets">{step.bullets.map(b => <span key={b} className="smm-tp-bullet">{b}</span>)}</div>
-          </div>
-          <div className="smm-tp-num-side">
-            <div className="smm-tp-bg-num">{step.step}</div>
-            <div className="smm-tp-step-index">Step — {step.step}</div>
-            <h4 className="smm-tp-step-title">{step.title}</h4>
-            <div className="smm-tp-phase">{step.phase}</div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="smm-tp-num-side">
-            <div className="smm-tp-bg-num">{step.step}</div>
-            <div className="smm-tp-step-index">Step — {step.step}</div>
-            <h4 className="smm-tp-step-title">{step.title}</h4>
-            <div className="smm-tp-phase">{step.phase}</div>
-          </div>
-          <div className="smm-tp-text-side">
-            <p className="smm-tp-desc">{step.desc}</p>
-            <div className="smm-tp-bullets">{step.bullets.map(b => <span key={b} className="smm-tp-bullet">{b}</span>)}</div>
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
-function Process() {
-  return (
-    <section className="smm-tp-section">
-      <div className="smm-tp-cross" />
-      <div className="smm-tp-header">
-        <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Content Marketing Process</h2>
-        </div>
-        <h3 className="smm-tp-h2">Built on Strategy. <em> <i>Refined by Insight. </i></em> Measured by Impact.</h3>
-        <p className="smm-tp-sub">
-          Our content marketing process that will make your brand unique, and value proposition end for each stage for your customer. Let's see how PCS  thought process can be a game changer for your business
-        </p>
-      </div>
-      <div className="smm-tp-body">
-        {PROCESS_STEPS.map((step, i) => <ProcessStep key={step.step} step={step} index={i} />)}
-      </div>
-    </section>
-  );
-}
-
-// ─── How We Work ──────────────────────────────────────────────────────────────
-function HowWeWorkItem({ item }) {
-  const [ref, visible] = useInView(0.12);
-  return (
-    <div ref={ref} className={`smm-hww-arrow-item${visible ? " hww-vis" : ""}`}>
-      <div className="smm-hww-card">
-        <div className="smm-hww-icon-wrap">{item.icon}</div>
-        <h4 className="smm-hww-card-title">{item.title}</h4>
-        <div className="smm-hww-card-desc">{item.desc}</div>
-      </div>
-    </div>
-  );
-}
-
-function HowWeWork() {
-  return (
-    <section className="smm-hww">
-      <div className="smm-hww-dot-grid" />
-      <div className="smm-hww-glow smm-hww-glow-1" />
-      <div className="smm-hww-glow smm-hww-glow-2" />
-      <div className="smm-hww-header">
-        <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Focus on Your Results in Content Marketing</h2>
-        </div>
-        <h3 className="smm-hww-h2">Plan Smart.  <span><i>Write Better.</i></span> Deliver Results.</h3>
-      </div>
-      <div className="smm-hww-arrows-wrap">
-        <div className="smm-hww-arrow-track">
-          {HOW_WE_WORK.map(item => <HowWeWorkItem key={item.title} item={item} />)}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── FAQ ──────────────────────────────────────────────────────────────────────
-function FAQSection() {
-  const [active, setActive] = useState(null);
-
-  const toggle = (index) => {
-    setActive(active === index ? null : index);
-  };
-  return (
-    <section className="faq-section">
-      <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <h4 className="partners-eyebrow" >Frequently Asked Questions</h4>
-      </div>
-      <div className="container">
-        {/* TITLE */}
-        <div className="faq-head">
-          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
-        </div>
-        {/* FAQ GRID */}
-        <div className="faq-wrapper">
-
-          {/* LEFT COLUMN */}
-          <div className="faq-col">
-            {faqData.slice(0, 3).map((item, i) => (
-              <div className="faq-item" key={i}>
-                <div className="faq-question" onClick={() => toggle(i)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i ? "−" : "+"}</span>
-                </div>
-                {active === i && (
-                  <div className="faq-answer">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* RIGHT COLUMN */}
-          <div className="faq-col">
-            {faqData.slice(3, 6).map((item, i) => (
-              <div className="faq-item" key={i + 3}>
-                <div className="faq-question" onClick={() => toggle(i + 3)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i + 3 ? "−" : "+"}</span>
-                </div>
-                {active === i + 3 && (
-                  <div className="faq-answer">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-
-// ─── Root Component ───────────────────────────────────────────────────────────
-export default function PcsSmmPage() {
-  useEffect(() => {
-    const id = "pcs-smm-styles";
-    if (!document.getElementById(id)) {
-      const el = document.createElement("style");
-      el.id = id;
-      el.textContent = STYLES;
-      document.head.appendChild(el);
-    }
-    return () => { };
-  }, []);
-
-
-  const schemaData = [
-    // Breadcrumb List Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@id": "https://www.priyamconsultancy.com/",
-            "name": "Home"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@id": "https://www.priyamconsultancy.com/content-marketing/",
-            "name": "content-marketing"
-          }
-        }
-      ]
-    },
-
-    // Organization Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Priyam Consultancy Services",
-      "url": "https://www.priyamconsultancy.com/",
-      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+91 96774 44048",
-          "contactType": "customer support"
-        }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61577125709962",
-        "https://www.linkedin.com/company/priyam-consultancy-services/",
-        "https://www.instagram.com/priyam_consultancy_services/",
-        "https://x.com/services91032",
-        "https://g.co/kgs/rdTYdi6"
-      ]
-    },
-
-    // -- SERVICE PAGE SCHEMA --
-
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://www.priyamconsultancy.com/content-marketing/#service",
-      "name": "Content Marketing",
-      "serviceType": "Content Marketing Services",
-      "url": "https://www.priyamconsultancy.com/content-marketing/",
-      "description": "Priyam Consultancy provides professional content marketing services including website content writing, SEO content, blog writing, social media content, brand storytelling and content strategy services across India.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Priyam Consultancy Services",
-        "url": "https://www.priyamconsultancy.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
-        }
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "India"
-      }
-    },
-
-    // Product Schema
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "content-marketing",
-      "image": ["https://www.priyamconsultancy.com/img/content-marketing.png"],
-      "description": "Best content marketing services in Coimbatore offering blog writing, SEO content creation, website content development, content optimization, brand storytelling and audience engagement strategies for business growth.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Priyam Consultancy Services"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Admin"
-        }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "4861"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.priyamconsultancy.com/content-marketing/",
-        "priceCurrency": "USD",
-        "price": "00.00",
-        "priceValidUntil": "2026-12-31",
-        "itemCondition": "https://schema.org/UsedCondition",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "priyamconsultancy.com"
-        }
-      }
-    },
-
-    //  FAQ Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What does content marketing do for my business?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Content marketing helps businesses build brand awareness, improve audience engagement, increase website traffic, and generate qualified leads through valuable and strategic content. It strengthens credibility, supports SEO performance, and helps businesses communicate their expertise effectively across digital platforms."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Do you write content for specific industries?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We create industry-specific content for sectors including healthcare, technology, ecommerce, consulting, construction, finance, retail, and professional services. Our content strategies are tailored to match industry trends, audience behavior, business goals, and brand communication requirements for maximum relevance and impact."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Can you optimize existing content?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we optimize existing content by improving structure, readability, SEO performance, keyword relevance, and audience engagement. Our optimization process helps strengthen search visibility, enhance user experience, update outdated information, and improve overall content effectiveness across digital platforms and search engines."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Do you provide blog writing services?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We provide professional blog writing services focused on SEO, audience engagement, and brand positioning. Our blogs are strategically created to improve website traffic, establish industry authority, support digital marketing goals, and provide valuable information that connects with your target audience."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Can content marketing improve SEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, content marketing plays a major role in improving SEO by targeting relevant keywords, increasing website engagement, strengthening internal linking, and generating valuable search-focused content. High-quality content helps improve search rankings, organic traffic, visibility, and long-term digital authority across search engines."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How do you decide what content to create?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We decide content strategies based on your business goals, target audience, industry trends, competitor analysis, keyword research, and platform performance. Our approach focuses on creating relevant, audience-focused content that improves engagement, search visibility, lead generation, and overall digital marketing performance."
-        }
-      }]
-    }
-  ]
-
-  return (
-    <Layout>
-      <Head>
-        <title>Content Marketing Agency in India | Content Marketing Services
-        </title>
-        <meta name="description" content="PCS is a leading content marketing agency in India. Our content strategy and creation help drive traffic, generate leads, & boost brand visibility on search engines." />
-        <meta name="keywords" content="Content Marketing, Content Marketing Agency, Content Marketing Service, Content Marketing Strategy, Content Marketing Company, Social Media Content Agency, Content Creation Companies" />
-        <link rel="canonical" href="https://www.priyamconsultancy.com/content-marketing" />
-        {/* Open Graph */}
-        <meta property="og:title" content="Content Marketing Agency in India | Content Marketing Services" />
-        <meta property="og:description" content="PCS is a leading content marketing agency in India. Our content strategy and creation help drive traffic, generate leads, & boost brand visibility on search engines." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/content-marketing" />
-        <meta property="og:image" content="https://www.priyamconsultancy.com/img/content-marketing.png" />
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Content Marketing Agency in India | Content Marketing Services" />
-        <meta name="twitter:description" content="PCS is a leading content marketing agency in India. Our content strategy and creation help drive traffic, generate leads, & boost brand visibility on search engines." />
-        <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/content-marketing.png" />
-        {/* Schema */}
-        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
-      </Head>
-      <Hero />
-      <ApproachSection />
-      <Services />
-      <Process />
-      <HowWeWork />
-      <FAQSection />
-      <BlogSection />
-      <CTASection />
-    </Layout>
-  );
-}
+      `}),(0,s.jsxs)("div",{className:"ap-inner",children:[(0,s.jsxs)("div",{className:"ap-left",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Approach in"})}),(0,s.jsxs)("h2",{className:"ap-heading",children:[(0,s.jsx)("span",{children:"Strategic Content "})," That Drives Search, Shares & Sales"]}),(0,s.jsx)("p",{className:"ap-intro",children:"Great content marketing starts with understanding your brand identity, business positioning, and long-term communication goals. We ensure every message reflects your voice, values, audience expectations, and overall brand direction consistently."}),(0,s.jsx)("p",{className:"ap-intro",children:"Our content marketing services are driven by detailed research, audience insights, competitor analysis, and market trends. This helps us create performance-focused campaigns that deliver relevance, engagement, visibility, and measurable business impact."}),(0,s.jsx)("p",{className:"ap-intro",children:"Whether your goal is SEO growth, lead generation, or audience engagement, our content marketing approach combines storytelling with strategic optimization. Every content asset is crafted to maximize reach, conversions, and brand authority."})]}),(0,s.jsx)("div",{className:"ap-form-wrap",children:(0,s.jsxs)("div",{className:"ap-form-card",children:[(0,s.jsxs)("div",{className:"form-card-eyebrow",children:[(0,s.jsx)("span",{className:"form-card-eyebrow-line"}),"Your Growth, Our Mission",(0,s.jsx)("span",{className:"form-card-eyebrow-line"})]}),(0,s.jsxs)("div",{className:"form-card-title",children:["Get Your ",(0,s.jsx)("span",{children:"Free"})," Quote"]}),(0,s.jsxs)("form",{onSubmit:n=>{n.preventDefault();let s={name:e.name,email:e.email,phone:e.phone,company:e.company,message:e.msg,url:window.location.href};r.Ay.send("service_8xw6k3r","template_jarui36",s,"XWRnXi4hK2SvmRG3q").then(()=>{alert("Message Sent Successfully \u2705"),t({name:"",email:"",phone:"",company:"",msg:""})}).catch(e=>{console.log(e),alert("Failed to send \u274C")})},children:[(0,s.jsxs)("div",{className:"fl-row",children:[(0,s.jsxs)("div",{className:"fl-group",children:[(0,s.jsx)("label",{className:"fl-label",children:"Your Name"}),(0,s.jsxs)("div",{style:{position:"relative"},children:[(0,s.jsx)("span",{className:"fl-icon",children:"\u{1F464}"}),(0,s.jsx)("input",{className:"fl-input",type:"text",name:"name",placeholder:"Full name",value:e.name,onChange:n,required:!0})]})]}),(0,s.jsxs)("div",{className:"fl-group",children:[(0,s.jsx)("label",{className:"fl-label",children:"Company"}),(0,s.jsxs)("div",{style:{position:"relative"},children:[(0,s.jsx)("span",{className:"fl-icon",children:"\u{1F3E2}"}),(0,s.jsx)("input",{className:"fl-input",type:"text",name:"company",placeholder:"Company name",value:e.company,onChange:n})]})]})]}),(0,s.jsxs)("div",{className:"fl-group",children:[(0,s.jsx)("label",{className:"fl-label",children:"Email Address"}),(0,s.jsxs)("div",{style:{position:"relative"},children:[(0,s.jsx)("span",{className:"fl-icon",children:"\u2709\uFE0F"}),(0,s.jsx)("input",{className:"fl-input",type:"email",name:"email",placeholder:"your@email.com",value:e.email,onChange:n,required:!0})]})]}),(0,s.jsxs)("div",{className:"fl-group",children:[(0,s.jsx)("label",{className:"fl-label",children:"Mobile Number"}),(0,s.jsxs)("div",{className:"phone-row",children:[(0,s.jsx)("div",{className:"phone-flag",children:(0,s.jsx)("span",{children:"\u{1F4DE}"})}),(0,s.jsx)("input",{className:"fl-input",type:"tel",name:"phone",placeholder:"Mobile number",value:e.phone,onChange:n,maxLength:"10",pattern:"[0-9]{10}",required:!0})]})]}),(0,s.jsxs)("div",{className:"fl-group textarea-group",children:[(0,s.jsx)("label",{className:"fl-label",children:"Message"}),(0,s.jsxs)("div",{style:{position:"relative"},children:[(0,s.jsx)("span",{className:"fl-icon",style:{top:"0.9rem",transform:"none"},children:"\u{1F4AC}"}),(0,s.jsx)("textarea",{className:"fl-textarea",name:"msg",placeholder:"Tell us about your social media goals...",value:e.msg,onChange:n})]})]}),(0,s.jsxs)("button",{type:"submit",className:"ap-submit",children:["Get Free Consultation ",(0,s.jsx)("span",{className:"ap-submit-arrow",children:"\u203A"})]})]})]})})]})]})}function b({svc:e,index:t}){let[n,a]=d(.1);return(0,s.jsxs)("div",{ref:n,className:`smm-svc-panel${a?" vis":""}`,style:{transitionDelay:`${.05+.07*t}s`},children:[(0,s.jsx)("div",{className:"smm-sp-slash"}),(0,s.jsx)("div",{className:"smm-sp-ghost",children:e.num}),(0,s.jsx)("div",{className:"smm-sp-bottom-line"}),(0,s.jsxs)("div",{className:"smm-sp-icon-row",children:[(0,s.jsx)("span",{className:"smm-sp-icon-dash"}),(0,s.jsx)("span",{className:"smm-sp-icon",children:e.icon})]}),(0,s.jsxs)("div",{className:"smm-sp-content",children:[(0,s.jsx)("div",{className:"smm-sp-subtitle",children:e.subtitle}),(0,s.jsx)("h4",{className:"smm-sp-title",children:e.title}),(0,s.jsx)("div",{className:"smm-sp-desc",children:e.desc})]})]})}function w(){return(0,s.jsxs)("section",{className:"smm-svc",children:[(0,s.jsx)("div",{className:"smm-svc-dots"}),(0,s.jsx)("div",{className:"smm-svc-glow smm-ssvg1"}),(0,s.jsx)("div",{className:"smm-svc-glow smm-ssvg2"}),(0,s.jsxs)("div",{className:"smm-svc-hdr",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Specialized Content Marketing Services"})}),(0,s.jsxs)("h3",{className:"smm-svc-h2",children:["Not Just Content. ",(0,s.jsxs)("span",{children:[" ",(0,s.jsx)("i",{children:"Content That Works."})]})]}),(0,s.jsx)("p",{className:"smm-svc-sub",children:"As a results-driven content marketing agency, we go beyond generic writing. Our content marketing services are tailored to your brand, industry, and audience journey."})]}),(0,s.jsx)("div",{className:"smm-svc-panels",children:p.map((e,t)=>(0,s.jsx)(b,{svc:e,index:t},e.num))})]})}function y({step:e,index:t}){let[n,a]=d(.1);return(0,s.jsx)("div",{ref:n,className:`smm-tp-step${a?" tp-vis":""}`,children:t%2==1?(0,s.jsxs)(s.Fragment,{children:[(0,s.jsxs)("div",{className:"smm-tp-text-side",children:[(0,s.jsx)("p",{className:"smm-tp-desc",children:e.desc}),(0,s.jsx)("div",{className:"smm-tp-bullets",children:e.bullets.map(e=>(0,s.jsx)("span",{className:"smm-tp-bullet",children:e},e))})]}),(0,s.jsxs)("div",{className:"smm-tp-num-side",children:[(0,s.jsx)("div",{className:"smm-tp-bg-num",children:e.step}),(0,s.jsxs)("div",{className:"smm-tp-step-index",children:["Step \u2014 ",e.step]}),(0,s.jsx)("h4",{className:"smm-tp-step-title",children:e.title}),(0,s.jsx)("div",{className:"smm-tp-phase",children:e.phase})]})]}):(0,s.jsxs)(s.Fragment,{children:[(0,s.jsxs)("div",{className:"smm-tp-num-side",children:[(0,s.jsx)("div",{className:"smm-tp-bg-num",children:e.step}),(0,s.jsxs)("div",{className:"smm-tp-step-index",children:["Step \u2014 ",e.step]}),(0,s.jsx)("h4",{className:"smm-tp-step-title",children:e.title}),(0,s.jsx)("div",{className:"smm-tp-phase",children:e.phase})]}),(0,s.jsxs)("div",{className:"smm-tp-text-side",children:[(0,s.jsx)("p",{className:"smm-tp-desc",children:e.desc}),(0,s.jsx)("div",{className:"smm-tp-bullets",children:e.bullets.map(e=>(0,s.jsx)("span",{className:"smm-tp-bullet",children:e},e))})]})]})})}function v(){return(0,s.jsxs)("section",{className:"smm-tp-section",children:[(0,s.jsx)("div",{className:"smm-tp-cross"}),(0,s.jsxs)("div",{className:"smm-tp-header",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Proven Content Marketing Process"})}),(0,s.jsxs)("h3",{className:"smm-tp-h2",children:["Built on Strategy. ",(0,s.jsxs)("em",{children:[" ",(0,s.jsx)("i",{children:"Refined by Insight. "})]})," Measured by Impact."]}),(0,s.jsx)("p",{className:"smm-tp-sub",children:"Our content marketing process that will make your brand unique, and value proposition end for each stage for your customer. Let's see how PCS  thought process can be a game changer for your business"})]}),(0,s.jsx)("div",{className:"smm-tp-body",children:h.map((e,t)=>(0,s.jsx)(y,{step:e,index:t},e.step))})]})}function k({item:e}){let[t,n]=d(.12);return(0,s.jsx)("div",{ref:t,className:`smm-hww-arrow-item${n?" hww-vis":""}`,children:(0,s.jsxs)("div",{className:"smm-hww-card",children:[(0,s.jsx)("div",{className:"smm-hww-icon-wrap",children:e.icon}),(0,s.jsx)("h4",{className:"smm-hww-card-title",children:e.title}),(0,s.jsx)("div",{className:"smm-hww-card-desc",children:e.desc})]})})}function j(){return(0,s.jsxs)("section",{className:"smm-hww",children:[(0,s.jsx)("div",{className:"smm-hww-dot-grid"}),(0,s.jsx)("div",{className:"smm-hww-glow smm-hww-glow-1"}),(0,s.jsx)("div",{className:"smm-hww-glow smm-hww-glow-2"}),(0,s.jsxs)("div",{className:"smm-hww-header",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Focus on Your Results in Content Marketing"})}),(0,s.jsxs)("h3",{className:"smm-hww-h2",children:["Plan Smart.  ",(0,s.jsx)("span",{children:(0,s.jsx)("i",{children:"Write Better."})})," Deliver Results."]})]}),(0,s.jsx)("div",{className:"smm-hww-arrows-wrap",children:(0,s.jsx)("div",{className:"smm-hww-arrow-track",children:g.map(e=>(0,s.jsx)(k,{item:e},e.title))})})]})}function N(){let[e,t]=(0,a.useState)(null),n=n=>{t(e===n?null:n)};return(0,s.jsxs)("section",{className:"faq-section",children:[(0,s.jsx)("div",{className:"partners-header2",style:{textAlign:"center",marginTop:"20px"},children:(0,s.jsx)("h4",{className:"partners-eyebrow",children:"Frequently Asked Questions"})}),(0,s.jsxs)("div",{className:"container",children:[(0,s.jsx)("div",{className:"faq-head",children:(0,s.jsxs)("h3",{className:"faq-h3",children:["Queries That Could ",(0,s.jsx)("span",{children:"Hold You Back"})]})}),(0,s.jsxs)("div",{className:"faq-wrapper",children:[(0,s.jsx)("div",{className:"faq-col",children:f.slice(0,3).map((t,a)=>(0,s.jsxs)("div",{className:"faq-item",children:[(0,s.jsxs)("div",{className:"faq-question",onClick:()=>n(a),children:[(0,s.jsx)("span",{children:t.q}),(0,s.jsx)("span",{className:"icon",children:e===a?"\u2212":"+"})]}),e===a&&(0,s.jsx)("div",{className:"faq-answer",children:t.a})]},a))}),(0,s.jsx)("div",{className:"faq-col",children:f.slice(3,6).map((t,a)=>(0,s.jsxs)("div",{className:"faq-item",children:[(0,s.jsxs)("div",{className:"faq-question",onClick:()=>n(a+3),children:[(0,s.jsx)("span",{children:t.q}),(0,s.jsx)("span",{className:"icon",children:e===a+3?"\u2212":"+"})]}),e===a+3&&(0,s.jsx)("div",{className:"faq-answer",children:t.a})]},a+3))})]})]})]})}function z(){return(0,a.useEffect)(()=>{let e="pcs-smm-styles";if(!document.getElementById(e)){let t=document.createElement("style");t.id=e,t.textContent=c,document.head.appendChild(t)}return()=>{}},[]),(0,s.jsxs)(m.A,{children:[(0,s.jsxs)(l.A,{children:[(0,s.jsx)("title",{children:"Content Marketing Agency in India | Content Marketing Services"}),(0,s.jsx)("meta",{name:"description",content:"PCS is a leading content marketing agency in India. Our content strategy and creation help drive traffic, generate leads, & boost brand visibility on search engines."}),(0,s.jsx)("meta",{name:"keywords",content:"Content Marketing, Content Marketing Agency, Content Marketing Service, Content Marketing Strategy, Content Marketing Company, Social Media Content Agency, Content Creation Companies"}),(0,s.jsx)("link",{rel:"canonical",href:"https://www.priyamconsultancy.com/content-marketing"}),(0,s.jsx)("meta",{property:"og:title",content:"Content Marketing Agency in India | Content Marketing Services"}),(0,s.jsx)("meta",{property:"og:description",content:"PCS is a leading content marketing agency in India. Our content strategy and creation help drive traffic, generate leads, & boost brand visibility on search engines."}),(0,s.jsx)("meta",{property:"og:type",content:"website"}),(0,s.jsx)("meta",{property:"og:url",content:"https://www.priyamconsultancy.com/content-marketing"}),(0,s.jsx)("meta",{property:"og:image",content:"https://www.priyamconsultancy.com/img/content-marketing.png"}),(0,s.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),(0,s.jsx)("meta",{name:"twitter:title",content:"Content Marketing Agency in India | Content Marketing Services"}),(0,s.jsx)("meta",{name:"twitter:description",content:"PCS is a leading content marketing agency in India. Our content strategy and creation help drive traffic, generate leads, & boost brand visibility on search engines."}),(0,s.jsx)("meta",{name:"twitter:image",content:"https://www.priyamconsultancy.com/img/content-marketing.png"}),(0,s.jsx)("script",{type:"application/ld+json",children:JSON.stringify([{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,item:{"@id":"https://www.priyamconsultancy.com/",name:"Home"}},{"@type":"ListItem",position:2,item:{"@id":"https://www.priyamconsultancy.com/content-marketing/",name:"content-marketing"}}]},{"@context":"https://schema.org","@type":"Organization",name:"Priyam Consultancy Services",url:"https://www.priyamconsultancy.com/",logo:"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",contactPoint:[{"@type":"ContactPoint",telephone:"+91 96774 44048",contactType:"customer support"}],sameAs:["https://www.facebook.com/profile.php?id=61577125709962","https://www.linkedin.com/company/priyam-consultancy-services/","https://www.instagram.com/priyam_consultancy_services/","https://x.com/services91032","https://g.co/kgs/rdTYdi6"]},{"@context":"https://schema.org","@type":"Service","@id":"https://www.priyamconsultancy.com/content-marketing/#service",name:"Content Marketing",serviceType:"Content Marketing Services",url:"https://www.priyamconsultancy.com/content-marketing/",description:"Priyam Consultancy provides professional content marketing services including website content writing, SEO content, blog writing, social media content, brand storytelling and content strategy services across India.",provider:{"@type":"Organization",name:"Priyam Consultancy Services",url:"https://www.priyamconsultancy.com/",logo:{"@type":"ImageObject",url:"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"}},areaServed:{"@type":"Country",name:"India"}},{"@context":"https://schema.org/","@type":"Product",name:"content-marketing",image:["https://www.priyamconsultancy.com/img/content-marketing.png"],description:"Best content marketing services in Coimbatore offering blog writing, SEO content creation, website content development, content optimization, brand storytelling and audience engagement strategies for business growth.",brand:{"@type":"Brand",name:"Priyam Consultancy Services"},review:{"@type":"Review",reviewRating:{"@type":"Rating",ratingValue:"4.9",bestRating:"5",worstRating:"1"},author:{"@type":"Person",name:"Admin"}},aggregateRating:{"@type":"AggregateRating",ratingValue:"4.9",reviewCount:"4861"},offers:{"@type":"Offer",url:"https://www.priyamconsultancy.com/content-marketing/",priceCurrency:"USD",price:"00.00",priceValidUntil:"2026-12-31",itemCondition:"https://schema.org/UsedCondition",availability:"https://schema.org/InStock",seller:{"@type":"Organization",name:"priyamconsultancy.com"}}},{"@context":"https://schema.org","@type":"FAQPage",mainEntity:[{"@type":"Question",name:"What does content marketing do for my business?",acceptedAnswer:{"@type":"Answer",text:"Content marketing helps businesses build brand awareness, improve audience engagement, increase website traffic, and generate qualified leads through valuable and strategic content. It strengthens credibility, supports SEO performance, and helps businesses communicate their expertise effectively across digital platforms."}},{"@type":"Question",name:"Do you write content for specific industries?",acceptedAnswer:{"@type":"Answer",text:"We create industry-specific content for sectors including healthcare, technology, ecommerce, consulting, construction, finance, retail, and professional services. Our content strategies are tailored to match industry trends, audience behavior, business goals, and brand communication requirements for maximum relevance and impact."}},{"@type":"Question",name:"Can you optimize existing content?",acceptedAnswer:{"@type":"Answer",text:"Yes, we optimize existing content by improving structure, readability, SEO performance, keyword relevance, and audience engagement. Our optimization process helps strengthen search visibility, enhance user experience, update outdated information, and improve overall content effectiveness across digital platforms and search engines."}},{"@type":"Question",name:"Do you provide blog writing services?",acceptedAnswer:{"@type":"Answer",text:"We provide professional blog writing services focused on SEO, audience engagement, and brand positioning. Our blogs are strategically created to improve website traffic, establish industry authority, support digital marketing goals, and provide valuable information that connects with your target audience."}},{"@type":"Question",name:"Can content marketing improve SEO?",acceptedAnswer:{"@type":"Answer",text:"Yes, content marketing plays a major role in improving SEO by targeting relevant keywords, increasing website engagement, strengthening internal linking, and generating valuable search-focused content. High-quality content helps improve search rankings, organic traffic, visibility, and long-term digital authority across search engines."}},{"@type":"Question",name:"How do you decide what content to create?",acceptedAnswer:{"@type":"Answer",text:"We decide content strategies based on your business goals, target audience, industry trends, competitor analysis, keyword research, and platform performance. Our approach focuses on creating relevant, audience-focused content that improves engagement, search visibility, lead generation, and overall digital marketing performance."}}]}])})]}),(0,s.jsx)(u,{}),(0,s.jsx)(x,{}),(0,s.jsx)(w,{}),(0,s.jsx)(v,{}),(0,s.jsx)(j,{}),(0,s.jsx)(N,{}),(0,s.jsx)(o.A,{}),(0,s.jsx)(i.A,{})]})}}}]);

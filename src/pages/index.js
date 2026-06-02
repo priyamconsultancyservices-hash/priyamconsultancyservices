@@ -6,36 +6,36 @@ import "../css/home.css";                                   // ✅ CHANGED (Home
 // ════════════════════════════════════════════
 //  IMAGES → static/img/ folder-ல் வையுங்கள்
 // ════════════════════════════════════════════
-const logo            = "/img/priyam-consultancy-logo.png";
-const who             = "/img/who-we-are.webp";
-const Analytix        = "/img/Analytix-Hub.webp";
-const Baltimore       = "/img/baltimore.webp";
-const Sterlo          = "/img/sterlo.webp";
-const sterloBuild     = "/img/sterlobuild-partner.webp";
-const sterloCare      = "/img/sterlocare-partner.webp";
-const odoo            = "/img/odoo-partner.webp";
+const logo = "/img/priyam-consultancy-logo.png";
+const who = "/img/who-we-are.webp";
+const Analytix = "/img/Analytix-Hub.webp";
+const Baltimore = "/img/baltimore.webp";
+const Sterlo = "/img/sterlo.webp";
+const sterloBuild = "/img/sterlobuild-partner.webp";
+const sterloCare = "/img/sterlocare-partner.webp";
+const odoo = "/img/odoo-partner.webp";
 const RiyaConsultancy = "/img/riyaconsultancy.webp";
-const Tactive         = "/img/tactive.webp";
-const URCTC           = "/img/urctc.webp";
-const ZKY             = "/img/zky.webp";
-const microsoft       = "/img/microsoft-app-partner.jpeg";
-const OreOps          = "/img/oreopps.webp";
+const Tactive = "/img/tactive.webp";
+const URCTC = "/img/urctc.webp";
+const ZKY = "/img/zky.webp";
+const microsoft = "/img/microsoft-app-partner.jpeg";
+const OreOps = "/img/oreopps.webp";
 
 // ════════════════════════════════════════════
 //  SVG ICONS → static/img/icons/services/ folder-ல் வையுங்கள்
 // ════════════════════════════════════════════
-const TabRegistration     = "/img/icon/business-registration-compliance.webp";
+const TabRegistration = "/img/icon/business-registration-compliance.webp";
 const TabDigitalTransform = "/img/icon/digital-transformation.webp";
 const TabDigitalMarketing = "/img/icon/digital-marketing.webp";
-const TabWebDevelopment   = "/img/icon/website-development.webp";
-const TabHumanResource    = "/img/icon/hr-services.webp";
+const TabWebDevelopment = "/img/icon/website-development.webp";
+const TabHumanResource = "/img/icon/hr-services.webp";
 
 const IcoBusinessReg = "/img/icon/business-registration.webp";
-const IcoStatutory   = "/img/icon/statutory-compliance.webp";
-const IcoVirtualCFO  = "/img/icon/virtual-cfo.webp";
-const IcoInvestment  = "/img/icon/investment.webp";
-const IcoAccounting  = "/img/icon/accounting.webp";
-const IcoFinace  = "/img/icon/finance.webp";
+const IcoStatutory = "/img/icon/statutory-compliance.webp";
+const IcoVirtualCFO = "/img/icon/virtual-cfo.webp";
+const IcoInvestment = "/img/icon/investment.webp";
+const IcoAccounting = "/img/icon/accounting.webp";
+const IcoFinace = "/img/icon/finance.webp";
 
 
 // Dummy placeholder — icon file ready ஆனதும் actual path மாத்தினா போதும்
@@ -49,7 +49,7 @@ const DummyIcon = ({ size = 26 }) => (
 // import IcoAutomation         from "../assets/icons/services/digital-transformation/business-process-automation.svg";
 // import IcoWebMobileApps      from "../assets/icons/services/digital-transformation/custom-web-mobile-apps.svg";
 // import IcoDataAnalytics      from "../assets/icons/services/digital-transformation/data-analytics.svg";
-const IcoAutomation    = "/img/icon/business-process-automation.webp";
+const IcoAutomation = "/img/icon/business-process-automation.webp";
 const IcoWebMobileApps = "/img/icon/custom-web-mobile-applications.webp";
 const IcoDataAnalytics = "/img/icon/data-analytics.webp";
 
@@ -60,12 +60,12 @@ const IcoDataAnalytics = "/img/icon/data-analytics.webp";
 // import IcoContent            from "../assets/icons/services/digital-marketing/content-marketing.svg";
 // import IcoEmail              from "../assets/icons/services/digital-marketing/email-whatsapp-marketing.svg";
 // import IcoGraphic            from "../assets/icons/services/digital-marketing/graphic-designing.svg";
-const IcoSEO       = "/img/icon/seo.webp";
-const IcoPPC       = "/img/icon/ppc-marketing.webp";
+const IcoSEO = "/img/icon/seo.webp";
+const IcoPPC = "/img/icon/ppc-marketing.webp";
 const IcoSocialMedia = "/img/icon/smm.webp";
-const IcoContent   = "/img/icon/content-marketing.webp";
-const IcoEmail     = "/img/icon/email-marketing.webp";
-const IcoGraphic   = "/img/icon/graphic-design.webp";
+const IcoContent = "/img/icon/content-marketing.webp";
+const IcoEmail = "/img/icon/email-marketing.webp";
+const IcoGraphic = "/img/icon/graphic-design.webp";
 
 // ── Website Development card icons  (src/assets/icons/services/website-development/)
 // import IcoWebDesign          from "../assets/icons/services/website-development/website-design.svg";
@@ -74,29 +74,29 @@ const IcoGraphic   = "/img/icon/graphic-design.webp";
 // import IcoWooCommerce        from "../assets/icons/services/website-development/woocommerce.svg";
 // import IcoECommerce          from "../assets/icons/services/website-development/ecommerce.svg";
 // import IcoShopify            from "../assets/icons/services/website-development/shopify.svg";
-const IcoWebDesign  = "/img/icon/website-design.webp";
-const IcoStaticWeb  = "/img/icon/static-website-development.webp";
-const IcoCustomWeb  = "/img/icon/custom-website-development.webp";
+const IcoWebDesign = "/img/icon/website-design.webp";
+const IcoStaticWeb = "/img/icon/static-website-development.webp";
+const IcoCustomWeb = "/img/icon/custom-website-development.webp";
 const IcoWooCommerce = "/img/icon/woocommerce-website-development.webp";
-const IcoECommerce  = "/img/icon/ecommerce-website-development.webp";
-const IcoShopify    = "/img/icon/shopify-website-development.webp";
+const IcoECommerce = "/img/icon/ecommerce-website-development.webp";
+const IcoShopify = "/img/icon/shopify-website-development.webp";
 
 // ── HR card icons  (src/assets/icons/services/hr/)
 // import IcoPayroll            from "../assets/icons/services/hr/payroll-management.svg";
 // import IcoRecruitment        from "../assets/icons/services/hr/recruitment-services.svg";
 // import IcoHRStrategy         from "../assets/icons/services/hr/hr-strategy.svg";
-const IcoPayroll    = "/img/icon/payroll-management.webp";
+const IcoPayroll = "/img/icon/payroll-management.webp";
 const IcoRecruitment = "/img/icon/recruitment-services.webp";
 const IcoHRStrategy = "/img/icon/hr-strategy.webp";
 
 
 // implementation Partners logo image
 
-const PartnerMicrosoft  = "/img/partner-microsoft.webp";
-const PartnerOdoo       = "/img/partner-odoo.webp";
+const PartnerMicrosoft = "/img/partner-microsoft.webp";
+const PartnerOdoo = "/img/partner-odoo.webp";
 const PartnerSterloBuild = "/img/partner-sterlo-build.webp";
-const PartnerSterloCare  = "/img/partner-sterlo-care.webp";
-const PartnerSterlo         = "/img/partner-sterlo.webp";
+const PartnerSterloCare = "/img/partner-sterlo-care.webp";
+const PartnerSterlo = "/img/partner-sterlo.webp";
 
 // ════════════════════════════════════════════
 //  SECTION 1: PCS BANNER
@@ -380,14 +380,14 @@ function PCSBanner() {
   }, []);
 
   // Breakpoint flags
-  const isMobile    = screenW < 768;
-  const isTabSm     = screenW >= 768 && screenW <= 860;
-  const isTabMid    = screenW >= 861 && screenW <= 1100;    // 861–1100: mobile pill list style
-  const isDesktop   = screenW > 1100;                       // > 1100: full orbit
+  const isMobile = screenW < 768;
+  const isTabSm = screenW >= 768 && screenW <= 860;
+  const isTabMid = screenW >= 861 && screenW <= 1100;    // 861–1100: mobile pill list style
+  const isDesktop = screenW > 1100;                       // > 1100: full orbit
 
-  const hideOrbit     = !isDesktop;
-  const showPillList  = isMobile || isTabSm || isTabMid;    // all non-desktop → pill list
-  const showPillGrid  = false;
+  const hideOrbit = !isDesktop;
+  const showPillList = isMobile || isTabSm || isTabMid;    // all non-desktop → pill list
+  const showPillGrid = false;
 
   const orbitOffset = 58;
 
@@ -590,18 +590,18 @@ function PCSBanner() {
 // Replace these with your actual image imports:
 // import Analytix from "../../images/Analytix-Hub.webp"; ... etc.
 const PARTNERS = [
-  { id: 1,  name: "Analytix-Hub",     logo: Analytix },
-  { id: 2,  name: "Baltimore",        logo: Baltimore },
-  { id: 3,  name: "Sterlo",           logo: Sterlo },
-  { id: 4,  name: "Sterlo Build",     logo: sterloBuild },
-  { id: 5,  name: "Sterlo Care",      logo: sterloCare },
-  { id: 6,  name: "Microsoft",        logo: microsoft },
-  { id: 7,  name: "Odoo",             logo: odoo },
-  { id: 8,  name: "OreOps",           logo: OreOps },
-  { id: 9,  name: "Riya Consultancy", logo: RiyaConsultancy },
-  { id: 10, name: "Tactive",          logo: Tactive },
-  { id: 11, name: "URCTS",            logo: URCTC },
-  { id: 12, name: "ZKY",              logo: ZKY },
+  { id: 1, name: "Analytix-Hub", logo: Analytix },
+  { id: 2, name: "Baltimore", logo: Baltimore },
+  { id: 3, name: "Sterlo", logo: Sterlo },
+  { id: 4, name: "Sterlo Build", logo: sterloBuild },
+  { id: 5, name: "Sterlo Care", logo: sterloCare },
+  { id: 6, name: "Microsoft", logo: microsoft },
+  { id: 7, name: "Odoo", logo: odoo },
+  { id: 8, name: "OreOps", logo: OreOps },
+  { id: 9, name: "Riya Consultancy", logo: RiyaConsultancy },
+  { id: 10, name: "Tactive", logo: Tactive },
+  { id: 11, name: "URCTS", logo: URCTC },
+  { id: 12, name: "ZKY", logo: ZKY },
 ];
 
 function Partners() {
@@ -633,13 +633,13 @@ function WhoWeAre() {
 
   return (
     <div className="page">
-      <span className="dot" style={{width:'10px',height:'10px',background:'#ed8337',top:'170px',left:'410px',animationDuration:'5s',animationDelay:'0s'}}></span>
-      <span className="dot" style={{width:'7px',height:'7px',background:'#ed8337',top:'215px',left:'545px',animationDuration:'6.5s',animationDelay:'0.3s'}}></span>
-      <span className="dot" style={{width:'14px',height:'14px',background:'#ed8337',top:'408px',left:'265px',animationDuration:'7s',animationDelay:'0.5s'}}></span>
-      <span className="dot" style={{width:'10px',height:'10px',background:'#ed8337',top:'458px',left:'465px',animationDuration:'5.8s',animationDelay:'0.2s'}}></span>
-      <span className="dot" style={{width:'8px',height:'8px',background:'#ed8337',top:'498px',left:'585px',animationDuration:'6.2s',animationDelay:'0.4s'}}></span>
-      <span className="dot" style={{width:'11px',height:'11px',background:'#ed8337',top:'510px',left:'65px',animationDuration:'7.2s',animationDelay:'0.1s'}}></span>
-      <span className="dot" style={{width:'7px',height:'7px',background:'#ed8337',top:'210px',left:'82px',animationDuration:'5.5s',animationDelay:'0.6s'}}></span>
+      <span className="dot" style={{ width: '10px', height: '10px', background: '#ed8337', top: '170px', left: '410px', animationDuration: '5s', animationDelay: '0s' }}></span>
+      <span className="dot" style={{ width: '7px', height: '7px', background: '#ed8337', top: '215px', left: '545px', animationDuration: '6.5s', animationDelay: '0.3s' }}></span>
+      <span className="dot" style={{ width: '14px', height: '14px', background: '#ed8337', top: '408px', left: '265px', animationDuration: '7s', animationDelay: '0.5s' }}></span>
+      <span className="dot" style={{ width: '10px', height: '10px', background: '#ed8337', top: '458px', left: '465px', animationDuration: '5.8s', animationDelay: '0.2s' }}></span>
+      <span className="dot" style={{ width: '8px', height: '8px', background: '#ed8337', top: '498px', left: '585px', animationDuration: '6.2s', animationDelay: '0.4s' }}></span>
+      <span className="dot" style={{ width: '11px', height: '11px', background: '#ed8337', top: '510px', left: '65px', animationDuration: '7.2s', animationDelay: '0.1s' }}></span>
+      <span className="dot" style={{ width: '7px', height: '7px', background: '#ed8337', top: '210px', left: '82px', animationDuration: '5.5s', animationDelay: '0.6s' }}></span>
       <span className="red-ring"></span>
       <span className="small-dot"></span>
       <div className="left">
@@ -666,12 +666,12 @@ const serviceTabs = [
     iconBg: "rgba(59,130,246,0.12)",
     iconBorder: "1.5px solid rgba(59,130,246,0.25)",
     cards: [
-      { num: "01", icon: IcoBusinessReg,   iconBg: "rgba(59,130,246,0.1)",  title: "Business Registration",           desc: "Public Limited, Private Limited, LLP, OPC, Partnership, Sole Proprietorship services.",                                          link: "/business-registrations", glow: "#ed8337" },
-      { num: "02", icon: IcoStatutory,     iconBg: "rgba(237,131,55,0.1)",  title: "Statutory Compliance",            desc: "Ensuring timely filings, audits, and adherence to all regulatory requirements.",                                                link: "/statutory-compliance", glow: "#ed8337" },
-      { num: "03", icon: IcoVirtualCFO,    iconBg: "rgba(99,179,237,0.1)",  title: "Virtual CFO Services",            desc: "Strategic financial guidance, budgeting, and reporting to drive informed business decisions.",                                    link: "/virtual-cfo-services", glow: "#ed8337" },
-      { num: "04", icon: IcoInvestment,    iconBg: "rgba(72,187,120,0.1)",  title: "Investment Support",              desc: "Providing accurate valuations and insights to secure funding and drive growth.",                                                link: "/company-valuations-and-investment-support", glow: "#ed8337" },
-      { num: "05", icon: IcoAccounting,    iconBg: "rgba(237,131,55,0.1)",  title: "Accounting",                      desc: "Complete accounting, GST, TDS, MIS reports, payroll, and back-office support.",                                                link: "/accounting", glow: "#ed8337" },
-      { num: "06", icon: IcoFinace,        iconBg: "rgba(246,173,85,0.1)",  title: "Finances",                        desc: "Banking, loans, CMA reports, audits, approvals, and complete financial support services.",                                      link: "/finances", glow: "#ed8337" },
+      { num: "01", icon: IcoBusinessReg, iconBg: "rgba(59,130,246,0.1)", title: "Business Registration", desc: "Public Limited, Private Limited, LLP, OPC, Partnership, Sole Proprietorship services.", link: "/business-registrations", glow: "#ed8337" },
+      { num: "02", icon: IcoStatutory, iconBg: "rgba(237,131,55,0.1)", title: "Statutory Compliance", desc: "Ensuring timely filings, audits, and adherence to all regulatory requirements.", link: "/statutory-compliance", glow: "#ed8337" },
+      { num: "03", icon: IcoVirtualCFO, iconBg: "rgba(99,179,237,0.1)", title: "Virtual CFO Services", desc: "Strategic financial guidance, budgeting, and reporting to drive informed business decisions.", link: "/virtual-cfo-services", glow: "#ed8337" },
+      { num: "04", icon: IcoInvestment, iconBg: "rgba(72,187,120,0.1)", title: "Investment Support", desc: "Providing accurate valuations and insights to secure funding and drive growth.", link: "/company-valuations-and-investment-support", glow: "#ed8337" },
+      { num: "05", icon: IcoAccounting, iconBg: "rgba(237,131,55,0.1)", title: "Accounting", desc: "Complete accounting, GST, TDS, MIS reports, payroll, and back-office support.", link: "/accounting", glow: "#ed8337" },
+      { num: "06", icon: IcoFinace, iconBg: "rgba(246,173,85,0.1)", title: "Finances", desc: "Banking, loans, CMA reports, audits, approvals, and complete financial support services.", link: "/finances", glow: "#ed8337" },
     ],
   },
 
@@ -682,12 +682,12 @@ const serviceTabs = [
     iconBg: "rgba(52,211,153,0.1)",
     iconBorder: "1.5px solid rgba(52,211,153,0.25)",
     cards: [
-      { num: "01", icon: IcoSEO,           iconBg: "rgba(52,211,153,0.1)",  title: "Search Engine Optimization",      desc: "Advanced SEO from technical optimization to content and link building for higher rankings.",        link: "/search-engine-optimization",                                 glow: "#ed8337" },
-      { num: "02", icon: IcoPPC,           iconBg: "rgba(72,187,120,0.1)",  title: "Performance Marketing",                   desc: "Run targeted ads on Google, Meta, LinkedIn, YouTube & display to generate leads.",                    link: "/performance-marketing",                           glow: "#ed8337" },
-      { num: "03", icon: IcoSocialMedia,   iconBg: "rgba(56,189,248,0.1)",  title: "Social Media Marketing",          desc: "Data-driven social media and content management strategies to grow your online brand.",                link: "/social-media-marketing",                            glow: "#ed8337" },
-      { num: "04", icon: IcoContent,       iconBg: "rgba(99,179,237,0.1)",  title: "Content Marketing",               desc: "Strategic content, blogs, and website copy to engage and convert your target audience.",               link: "/content-marketing",                           glow: "#ed8337" },
-      { num: "05", icon: IcoEmail,         iconBg: "rgba(237,131,55,0.1)",  title: "Marketplace Ecommerce Marketing",      desc: "Engage customers directly with targeted email and WhatsApp marketing campaigns.",                        link: "/marketplace-ecommerce-marketing",                        glow: "#ed8337" },
-      { num: "06", icon: IcoGraphic,       iconBg: "rgba(246,173,85,0.1)",  title: "Graphic Designing",               desc: "Creative designs for logos, print, digital, and social media to elevate your brand identity.",          link: "/graphic-design",                          glow: "#ed8337" },
+      { num: "01", icon: IcoSEO, iconBg: "rgba(52,211,153,0.1)", title: "Search Engine Optimization", desc: "Advanced SEO from technical optimization to content and link building for higher rankings.", link: "/search-engine-optimization", glow: "#ed8337" },
+      { num: "02", icon: IcoPPC, iconBg: "rgba(72,187,120,0.1)", title: "Performance Marketing", desc: "Run targeted ads on Google, Meta, LinkedIn, YouTube & display to generate leads.", link: "/performance-marketing", glow: "#ed8337" },
+      { num: "03", icon: IcoSocialMedia, iconBg: "rgba(56,189,248,0.1)", title: "Social Media Marketing", desc: "Data-driven social media and content management strategies to grow your online brand.", link: "/social-media-marketing", glow: "#ed8337" },
+      { num: "04", icon: IcoContent, iconBg: "rgba(99,179,237,0.1)", title: "Content Marketing", desc: "Strategic content, blogs, and website copy to engage and convert your target audience.", link: "/content-marketing", glow: "#ed8337" },
+      { num: "05", icon: IcoEmail, iconBg: "rgba(237,131,55,0.1)", title: "Marketplace Ecommerce Marketing", desc: "Engage customers directly with targeted email and WhatsApp marketing campaigns.", link: "/marketplace-ecommerce-marketing", glow: "#ed8337" },
+      { num: "06", icon: IcoGraphic, iconBg: "rgba(246,173,85,0.1)", title: "Graphic Designing", desc: "Creative designs for logos, print, digital, and social media to elevate your brand identity.", link: "/graphic-design", glow: "#ed8337" },
     ],
   },
   {
@@ -697,12 +697,12 @@ const serviceTabs = [
     iconBg: "rgba(168,85,247,0.1)",
     iconBorder: "1.5px solid rgba(168,85,247,0.25)",
     cards: [
-      { num: "01", icon: IcoWebDesign,     iconBg: "rgba(168,85,247,0.1)",  title: "Website Design",                  desc: "Create visually compelling, user-focused website designs that strengthen brand presence.",            link: "/website-design",                             glow: "#ed8337" },
-      { num: "02", icon: IcoStaticWeb,     iconBg: "rgba(237,131,55,0.1)",  title: "Static Website Development",      desc: "Develop fast, secure static websites ideal for professional business presence.",                        link: "/static-website-development",                         glow: "#ed8337" },
-      { num: "03", icon: IcoCustomWeb,     iconBg: "rgba(99,179,237,0.1)",  title: "Custom Website Development",      desc: "Build fully customized websites tailored to unique business requirements and goals.",                      link: "/custom-website-development",                       glow: "#ed8337" },
-      { num: "04", icon: IcoWooCommerce,   iconBg: "rgba(168,85,247,0.1)",  title: "WooCommerce Website Development", desc: "Develop scalable WooCommerce stores with secure payments and flexible features.",                           link: "/woocommerce-website-development",                     glow: "#ed8337" },
-      { num: "05", icon: IcoECommerce,     iconBg: "rgba(236,72,153,0.1)",  title: "E-Commerce Website Development",  desc: "Create conversion-focused ecommerce websites optimized for performance and scalability.",                       link: "/shopify-website-development",                 glow: "#ed8337" },
-      { num: "06", icon: IcoShopify,       iconBg: "rgba(246,173,85,0.1)",  title: "Shopify Website Development",     desc: "Design high-performing Shopify stores built for growth and seamless selling.",                                     link: "/e-commerce-website-development",             glow: "#ed8337" },
+      { num: "01", icon: IcoWebDesign, iconBg: "rgba(168,85,247,0.1)", title: "Website Design", desc: "Create visually compelling, user-focused website designs that strengthen brand presence.", link: "/website-design", glow: "#ed8337" },
+      { num: "02", icon: IcoStaticWeb, iconBg: "rgba(237,131,55,0.1)", title: "Static Website Development", desc: "Develop fast, secure static websites ideal for professional business presence.", link: "/static-website-development", glow: "#ed8337" },
+      { num: "03", icon: IcoCustomWeb, iconBg: "rgba(99,179,237,0.1)", title: "Custom Website Development", desc: "Build fully customized websites tailored to unique business requirements and goals.", link: "/custom-website-development", glow: "#ed8337" },
+      { num: "04", icon: IcoWooCommerce, iconBg: "rgba(168,85,247,0.1)", title: "WooCommerce Website Development", desc: "Develop scalable WooCommerce stores with secure payments and flexible features.", link: "/woocommerce-website-development", glow: "#ed8337" },
+      { num: "05", icon: IcoECommerce, iconBg: "rgba(236,72,153,0.1)", title: "E-Commerce Website Development", desc: "Create conversion-focused ecommerce websites optimized for performance and scalability.", link: "/shopify-website-development", glow: "#ed8337" },
+      { num: "06", icon: IcoShopify, iconBg: "rgba(246,173,85,0.1)", title: "Shopify Website Development", desc: "Design high-performing Shopify stores built for growth and seamless selling.", link: "/e-commerce-website-development", glow: "#ed8337" },
     ],
   },
   {
@@ -712,21 +712,21 @@ const serviceTabs = [
     iconBg: "rgba(56,189,248,0.1)",
     iconBorder: "1.5px solid rgba(56,189,248,0.25)",
     cards: [
-      { num: "01", icon: IcoPayroll,       iconBg: "rgba(56,189,248,0.1)",  title: "Payroll Management",              desc: "Comprehensive payroll management, outsourcing, and expert consulting services to streamline processes.",       link: "/recruitment-services",                     glow: "#ed8337" },
-      { num: "02", icon: IcoRecruitment,   iconBg: "rgba(99,179,237,0.1)",  title: "Recruitment Services",            desc: "Comprehensive end-to-end hiring solutions, expert consultancy, and seamless process outsourcing tailored to your needs.",  link: "/payroll-management",        glow: "#ed8337" },
-      { num: "03", icon: IcoHRStrategy,    iconBg: "rgba(237,131,55,0.1)",  title: "HR Strategy & Policy Development",desc: "Expert HR policy development, strategic planning, audits, and advisory services for businesses.",       link: "/hr-strategy-and-policy-development",                          glow: "#ed8337" },
+      { num: "01", icon: IcoPayroll, iconBg: "rgba(56,189,248,0.1)", title: "Payroll Management", desc: "Comprehensive payroll management, outsourcing, and expert consulting services to streamline processes.", link: "/recruitment-services", glow: "#ed8337" },
+      { num: "02", icon: IcoRecruitment, iconBg: "rgba(99,179,237,0.1)", title: "Recruitment Services", desc: "Comprehensive end-to-end hiring solutions, expert consultancy, and seamless process outsourcing tailored to your needs.", link: "/payroll-management", glow: "#ed8337" },
+      { num: "03", icon: IcoHRStrategy, iconBg: "rgba(237,131,55,0.1)", title: "HR Strategy & Policy Development", desc: "Expert HR policy development, strategic planning, audits, and advisory services for businesses.", link: "/hr-strategy-and-policy-development", glow: "#ed8337" },
     ],
   },
-    {
+  {
     emoji: TabDigitalTransform,
     label: "Digital Transformation",
     tagline: "Data-driven campaigns that grow your brand & maximize ROI",
     iconBg: "rgba(237,131,55,0.12)",
     iconBorder: "1.5px solid rgba(237,131,55,0.3)",
     cards: [
-      { num: "01", icon: IcoAutomation,    iconBg: "rgba(237,131,55,0.1)",  title: "Business Process Automation",     desc: "Technical SEO, keyword strategy, and on-page optimization to rank higher on Google and drive organic traffic.",       link: "/business-process-automation",              glow: "#ed8337" },
-      { num: "02", icon: IcoWebMobileApps, iconBg: "rgba(236,72,153,0.1)",  title: "Custom Web & Mobile Applications",desc: "Engaging campaigns across Instagram, Facebook, LinkedIn & Twitter that build community and brand awareness.",       link: "/web-and-mobile-application",               glow: "#ed8337" },
-      { num: "03", icon: IcoDataAnalytics, iconBg: "rgba(59,130,246,0.1)",  title: "Data Analytics",                  desc: "Precisely targeted PPC campaigns on Google Search, Display, YouTube, and Meta platforms that convert clicks into customers.",  link: "/data-analytics",   glow: "#ed8337" },
+      { num: "01", icon: IcoAutomation, iconBg: "rgba(237,131,55,0.1)", title: "Business Process Automation", desc: "Technical SEO, keyword strategy, and on-page optimization to rank higher on Google and drive organic traffic.", link: "/business-process-automation", glow: "#ed8337" },
+      { num: "02", icon: IcoWebMobileApps, iconBg: "rgba(236,72,153,0.1)", title: "Custom Web & Mobile Applications", desc: "Engaging campaigns across Instagram, Facebook, LinkedIn & Twitter that build community and brand awareness.", link: "/web-and-mobile-application", glow: "#ed8337" },
+      { num: "03", icon: IcoDataAnalytics, iconBg: "rgba(59,130,246,0.1)", title: "Data Analytics", desc: "Precisely targeted PPC campaigns on Google Search, Display, YouTube, and Meta platforms that convert clicks into customers.", link: "/data-analytics", glow: "#ed8337" },
     ],
   },
 ];
@@ -741,7 +741,7 @@ function HomeServiceSection() {
       <div className="svc-header">
         <div className="svc-eyebrow">Our Services</div>
         <h2 className="svc-title">
-          Your Complete <span className="hl" style={{fontWeight:'700'}}><i>Business Growth</i></span> Partner
+          Your Complete <span className="hl" style={{ fontWeight: '700' }}><i>Business Growth</i></span> Partner
         </h2>
         <p className="svc-subtitle">
           We provide end-to-end services – from setting up your business and compliances to driving growth through digital innovation, digital marketing, and strong HR solutions.
@@ -808,12 +808,12 @@ function HomeServiceSection() {
 // ════════════════════════════════════════════
 
 const whyNodes = [
-  { num:"01", icon:"/img/icon/one-point-access.webp",        title:"One Point Access",        desc:"Complete expertise integrated under one roof for sustainable growth, digital innovation, and long-term business success." },
-  { num:"02", icon:"/img/icon/customized-strategies.webp",   title:"Customized Strategies",   desc:"We don't rely on templates - we deliver tailor-made solutions designed around your unique requirements." },
-  { num:"03", icon:"/img/icon/expert-team.webp",             title:"Expert Team",             desc:"Skilled professionals offering multi-domain and technical expertise and solutions to drive your business forward." },
-  { num:"04", icon:"/img/icon/result-oriented.webp",         title:"Result-Oriented",         desc:"Driven by ROI, performance, and sustainable business growth through innovative strategies and expert solutions." },
-  { num:"05", icon:"/img/icon/customer-success.webp",        title:"Customer Success First",  desc:"Our goal isn't just sales, we grow by helping you succeed, innovate, and achieve long-term business excellence." },
-  { num:"06", icon:"/img/icon/scalable-solutions.webp",      title:"Scalable Solutions",      desc:"Flexible and tailored offerings designed to support businesses of all sizes, from startups to large enterprises." },
+  { num: "01", icon: "/img/icon/one-point-access.webp", title: "One Point Access", desc: "Complete expertise integrated under one roof for sustainable growth, digital innovation, and long-term business success." },
+  { num: "02", icon: "/img/icon/customized-strategies.webp", title: "Customized Strategies", desc: "We don't rely on templates - we deliver tailor-made solutions designed around your unique requirements." },
+  { num: "03", icon: "/img/icon/expert-team.webp", title: "Expert Team", desc: "Skilled professionals offering multi-domain and technical expertise and solutions to drive your business forward." },
+  { num: "04", icon: "/img/icon/result-oriented.webp", title: "Result-Oriented", desc: "Driven by ROI, performance, and sustainable business growth through innovative strategies and expert solutions." },
+  { num: "05", icon: "/img/icon/customer-success.webp", title: "Customer Success First", desc: "Our goal isn't just sales, we grow by helping you succeed, innovate, and achieve long-term business excellence." },
+  { num: "06", icon: "/img/icon/scalable-solutions.webp", title: "Scalable Solutions", desc: "Flexible and tailored offerings designed to support businesses of all sizes, from startups to large enterprises." },
 ];
 
 function buildRadial(wrap, svg, nodeEls) {
@@ -827,37 +827,37 @@ function buildRadial(wrap, svg, nodeEls) {
   const defs = document.createElementNS(ns, "defs");
   svg.appendChild(defs);
   const ring = document.createElementNS(ns, "circle");
-  Object.entries({ cx, cy, r:R, fill:"none", stroke:"rgba(237,131,55,0.08)", "stroke-width":"1", "stroke-dasharray":"3 6" }).forEach(([k,v]) => ring.setAttribute(k,v));
+  Object.entries({ cx, cy, r: R, fill: "none", stroke: "rgba(237,131,55,0.08)", "stroke-width": "1", "stroke-dasharray": "3 6" }).forEach(([k, v]) => ring.setAttribute(k, v));
   svg.appendChild(ring);
   nodeEls.forEach((node, i) => {
     if (!node) return;
     const angle = start + (i / 6) * Math.PI * 2;
     const nx = cx + R * Math.cos(angle), ny = cy + R * Math.sin(angle);
     node.style.left = nx + "px"; node.style.top = ny + "px";
-    const dx = nx - cx, dy = ny - cy, dist = Math.sqrt(dx*dx + dy*dy);
-    const sx = cx + (dx/dist)*65, sy = cy + (dy/dist)*65;
+    const dx = nx - cx, dy = ny - cy, dist = Math.sqrt(dx * dx + dy * dy);
+    const sx = cx + (dx / dist) * 65, sy = cy + (dy / dist) * 65;
     const g = document.createElementNS(ns, "linearGradient");
-    g.setAttribute("id", `spk${i}`); g.setAttribute("gradientUnits","userSpaceOnUse");
-    ["x1","y1","x2","y2"].forEach((a,j) => g.setAttribute(a,[sx,sy,nx,ny][j]));
+    g.setAttribute("id", `spk${i}`); g.setAttribute("gradientUnits", "userSpaceOnUse");
+    ["x1", "y1", "x2", "y2"].forEach((a, j) => g.setAttribute(a, [sx, sy, nx, ny][j]));
     g.innerHTML = `<stop offset="0%" stop-color="#ed8337" stop-opacity="0.7"/><stop offset="100%" stop-color="#ed8337" stop-opacity="0.15"/>`;
     defs.appendChild(g);
     const line = document.createElementNS(ns, "line");
-    Object.entries({ x1:sx, y1:sy, x2:nx, y2:ny, stroke:`url(#spk${i})`, "stroke-width":"1.5", "stroke-dasharray":"5 4" }).forEach(([k,v]) => line.setAttribute(k,v));
+    Object.entries({ x1: sx, y1: sy, x2: nx, y2: ny, stroke: `url(#spk${i})`, "stroke-width": "1.5", "stroke-dasharray": "5 4" }).forEach(([k, v]) => line.setAttribute(k, v));
     svg.appendChild(line);
     const mp = document.createElementNS(ns, "path");
-    mp.setAttribute("id", `mp${i}`); mp.setAttribute("d", `M${sx},${sy} L${nx},${ny}`); mp.setAttribute("fill","none");
+    mp.setAttribute("id", `mp${i}`); mp.setAttribute("d", `M${sx},${sy} L${nx},${ny}`); mp.setAttribute("fill", "none");
     svg.appendChild(mp);
     const dot = document.createElementNS(ns, "circle");
-    dot.setAttribute("r","3"); dot.setAttribute("fill","#ed8337"); dot.setAttribute("opacity","0.85");
+    dot.setAttribute("r", "3"); dot.setAttribute("fill", "#ed8337"); dot.setAttribute("opacity", "0.85");
     const anim = document.createElementNS(ns, "animateMotion");
-    anim.setAttribute("dur", (2.2 + i * 0.35) + "s"); anim.setAttribute("repeatCount","indefinite"); anim.setAttribute("calcMode","linear");
+    anim.setAttribute("dur", (2.2 + i * 0.35) + "s"); anim.setAttribute("repeatCount", "indefinite"); anim.setAttribute("calcMode", "linear");
     const mpath = document.createElementNS(ns, "mpath");
-    mpath.setAttributeNS("http://www.w3.org/1999/xlink","href","#mp"+i);
+    mpath.setAttributeNS("http://www.w3.org/1999/xlink", "href", "#mp" + i);
     anim.appendChild(mpath); dot.appendChild(anim); svg.appendChild(dot);
     const arcR = R + 28, span = (Math.PI * 2 / 6) * 0.5;
     const arc = document.createElementNS(ns, "path");
-    arc.setAttribute("d", `M${cx+arcR*Math.cos(angle-span/2)},${cy+arcR*Math.sin(angle-span/2)} A${arcR},${arcR} 0 0,1 ${cx+arcR*Math.cos(angle+span/2)},${cy+arcR*Math.sin(angle+span/2)}`);
-    Object.entries({ fill:"none", stroke:"rgba(237,131,55,0.18)", "stroke-width":"1.5", "stroke-linecap":"round" }).forEach(([k,v]) => arc.setAttribute(k,v));
+    arc.setAttribute("d", `M${cx + arcR * Math.cos(angle - span / 2)},${cy + arcR * Math.sin(angle - span / 2)} A${arcR},${arcR} 0 0,1 ${cx + arcR * Math.cos(angle + span / 2)},${cy + arcR * Math.sin(angle + span / 2)}`);
+    Object.entries({ fill: "none", stroke: "rgba(237,131,55,0.18)", "stroke-width": "1.5", "stroke-linecap": "round" }).forEach(([k, v]) => arc.setAttribute(k, v));
     svg.appendChild(arc);
   });
 }
@@ -874,8 +874,8 @@ const WhyNodeCard = ({ n }) => (
 );
 
 function WhyChooseUs() {
-  const wrapRef  = useRef(null);
-  const svgRef   = useRef(null);
+  const wrapRef = useRef(null);
+  const svgRef = useRef(null);
   const nodeRefs = useRef([]);
 
   useEffect(() => {
@@ -900,7 +900,7 @@ function WhyChooseUs() {
         <svg className="why-spoke-svg" ref={svgRef} />
         <div className="why-hub">
           <div className="why-hub-logo">
-            <img src={logo} style={{width:'85px', display:'block', margin:'0 auto'}} alt="PCS Logo" />
+            <img src={logo} style={{ width: '85px', display: 'block', margin: '0 auto' }} alt="PCS Logo" />
           </div>
         </div>
         {whyNodes.map((n, i) => (
@@ -958,7 +958,7 @@ function useReveal(ref) {
 
 function HomeInsight() {
   const headerRef = useRef(null);
-  const cardsRef  = useRef(null);
+  const cardsRef = useRef(null);
   useReveal(headerRef);
   useReveal(cardsRef);
 
@@ -1217,15 +1217,15 @@ function getTestimonialPos(cardIndex, activeIndex, total, isMobile) {
 }
 
 function getTestimonialPosStyles(isMobile, isTablet) {
-  const leftX    = isTablet ? -220 : -300;
-  const rightX   = isTablet ?  220 :  300;
-  const farLeftX  = isTablet ? -380 : -490;
-  const farRightX = isTablet ?  380 :  490;
+  const leftX = isTablet ? -220 : -300;
+  const rightX = isTablet ? 220 : 300;
+  const farLeftX = isTablet ? -380 : -490;
+  const farRightX = isTablet ? 380 : 490;
   return {
     center: { transform: "translateX(0) scale(1) rotateY(0deg)", opacity: 1, filter: "none", zIndex: 10, boxShadow: "0 24px 64px rgba(13,31,60,0.14)", pointerEvents: "auto" },
-    left:   { transform: `translateX(${leftX}px) scale(0.85) rotateY(18deg)`, opacity: 0.55, filter: "blur(2px)", zIndex: 5, boxShadow: "none", pointerEvents: "auto" },
-    right:  { transform: `translateX(${rightX}px) scale(0.85) rotateY(-18deg)`, opacity: 0.55, filter: "blur(2px)", zIndex: 5, boxShadow: "none", pointerEvents: "auto" },
-    farLeft:  { transform: `translateX(${farLeftX}px) scale(0.7) rotateY(28deg)`, opacity: 0, filter: "blur(4px)", zIndex: 1, boxShadow: "none", pointerEvents: "none" },
+    left: { transform: `translateX(${leftX}px) scale(0.85) rotateY(18deg)`, opacity: 0.55, filter: "blur(2px)", zIndex: 5, boxShadow: "none", pointerEvents: "auto" },
+    right: { transform: `translateX(${rightX}px) scale(0.85) rotateY(-18deg)`, opacity: 0.55, filter: "blur(2px)", zIndex: 5, boxShadow: "none", pointerEvents: "auto" },
+    farLeft: { transform: `translateX(${farLeftX}px) scale(0.7) rotateY(28deg)`, opacity: 0, filter: "blur(4px)", zIndex: 1, boxShadow: "none", pointerEvents: "none" },
     farRight: { transform: `translateX(${farRightX}px) scale(0.7) rotateY(-28deg)`, opacity: 0, filter: "blur(4px)", zIndex: 1, boxShadow: "none", pointerEvents: "none" },
   };
 }
@@ -1233,7 +1233,7 @@ function getTestimonialPosStyles(isMobile, isTablet) {
 function StarIcon() {
   return (
     <svg width={14} height={14} viewBox="0 0 24 24" fill="#f47920" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
     </svg>
   );
 }
@@ -1284,12 +1284,12 @@ function TestimonialCard({ data, pos, onClick, isMobile, isTablet, isActive }) {
 
 function TestimonialSlider() {
   const [current, setCurrent] = useState(2);
-  const timerRef  = useRef(null);
-  const touchX    = useRef(null);
-  const stageRef  = useRef(null);
+  const timerRef = useRef(null);
+  const touchX = useRef(null);
+  const stageRef = useRef(null);
   const [stageHeight, setStageHeight] = useState(380);
-  const total    = testimonials.length;
-  const width    = useWindowWidth();
+  const total = testimonials.length;
+  const width = useWindowWidth();
   const isMobile = width < 640;
   const isTablet = width >= 640 && width < 1024;
 
@@ -1313,13 +1313,13 @@ function TestimonialSlider() {
 
   /* ── Touch swipe handlers ── */
   const onTouchStart = (e) => { touchX.current = e.touches[0].clientX; };
-  const onTouchEnd   = (e) => {
+  const onTouchEnd = (e) => {
     if (touchX.current === null) return;
     const dx = e.changedTouches[0].clientX - touchX.current;
     touchX.current = null;
     if (Math.abs(dx) < 40) return;          /* ignore tiny taps */
     if (dx < 0) goTo((current + 1) % total);
-    else        goTo((current - 1 + total) % total);
+    else goTo((current - 1 + total) % total);
   };
 
   return (
@@ -1442,12 +1442,15 @@ function Home() {
   const toggle = (index) => { setActive(active === index ? null : index); };
 
   return (
-    <Layout
-      title="Website Development & Digital Marketing Agency in India | HR Solutions"
-      description="We are the No.1 website development and digital marketing agency in India, offering SEO, social media marketing, and HR solutions to help businesses grow faster."
-    >
+    <Layout>
+
       {/* ✅ Meta Keywords & JSON-LD Schemas */}
       <head>
+        <title> Website Development & Digital Marketing Agency in India | HR Solutions</title>
+        <meta name="description" content="We are the No.1 website development and digital marketing agency in India, offering SEO, social media marketing, and HR solutions to help businesses grow faster." />
+
+        <link rel="canonical" href="https://www.priyamconsultancy.com/" />
+
         <meta name="keywords" content="Digital Marketing, Digital Marketing Agency, Digital Marketing Services, Digital Transformation, Digital Transformation Consulting, Digital Transformation Company, HR Services, HR Slutions, HR Consultant, HR Consultancy Services, HR Service Provider, Business Registration, HRMS Solutions, Corporate Compliance, CFO Services" />
 
         {/* 1. WebSite Schema */}
@@ -1701,9 +1704,9 @@ function Home() {
                     <span>{item.q}</span>
                     <span className="icon">
                       {active === i ? (
-                        <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth={2.5} strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth={2.5} strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12" /></svg>
                       ) : (
-                        <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth={2.5} strokeLinecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth={2.5} strokeLinecap="round"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
                       )}
                     </span>
                   </div>
@@ -1718,9 +1721,9 @@ function Home() {
                     <span>{item.q}</span>
                     <span className="icon">
                       {active === i + 3 ? (
-                        <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth={2.5} strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth={2.5} strokeLinecap="round"><line x1="5" y1="12" x2="19" y2="12" /></svg>
                       ) : (
-                        <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth={2.5} strokeLinecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        <svg width={18} height={18} viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth={2.5} strokeLinecap="round"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
                       )}
                     </span>
                   </div>

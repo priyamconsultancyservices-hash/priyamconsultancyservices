@@ -1015,12 +1015,12 @@ export default function PcsSmmPage() {
         <title>Ecommerce & Marketplace Marketing Agency in India | PCS</title>
         <meta name="description" content="Increase ecommerce sales with our marketplace and ecommerce marketing services. From ecommerce SEO to listing optimization, PCS drives scalable growth. " />
         <meta name="keywords" content="Social Media Marketing, SMM Services, Social Media Marketing Agency, Social Media Advertising, Social Media Marketing Services, Social Media Marketing Company, Social Media Management Agency, Social Media Management Services, Social Media Marketing Companies" />
-        <link rel="canonical" href="https://www.priyamconsultancy.com/services/marketplace-ecommerce-marketing" />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/marketplace-ecommerce-marketing" />
         {/* Open Graph */}
         <meta property="og:title" content="Ecommerce & Marketplace Marketing Agency in India | PCS" />
         <meta property="og:description" content="Increase ecommerce sales with our marketplace and ecommerce marketing services. From ecommerce SEO to listing optimization, PCS drives scalable growth. " />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/services/marketplace-ecommerce-marketing" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/marketplace-ecommerce-marketing" />
         <meta property="og:image" content="https://www.priyamconsultancy.com/img/marketplace-ecommerce-marketing.png" />
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />

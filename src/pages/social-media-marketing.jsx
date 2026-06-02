@@ -964,7 +964,7 @@ export default function PcsSmmPage() {
         />
         <link
           rel="canonical"
-          href="https://www.priyamconsultancy.com/services/social-media-marketing"
+          href="https://www.priyamconsultancy.com/social-media-marketing"
         />
  
         {/* Open Graph */}
@@ -974,7 +974,7 @@ export default function PcsSmmPage() {
           content="Boost your brand with India's leading social media marketing company. We produce content across all social platforms that drives growth and visibility for your brand."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/services/social-media-marketing" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/social-media-marketing" />
         <meta property="og:image" content="https://www.priyamconsultancy.com/img/social-media-marketing.png" />
  
         {/* Twitter Card */}
