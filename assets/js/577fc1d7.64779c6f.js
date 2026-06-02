@@ -1,13 +1,7 @@
-import { useState, useEffect, useRef } from "react";
-import emailjs from "@emailjs/browser";
-import BlogSection from "../components/BlogSection";
-import CTASection from "../components/HomePage/CTA";
-import Layout from '@theme/Layout';
-import Head from '@docusaurus/Head';
-const banner = "/img/seo.png";
-
-// ─── CSS-in-JS via a single <style> block injected once ───────────────────────
-const STYLES = `
+"use strict";(self.webpackChunknew_docs_pcs_website_design=self.webpackChunknew_docs_pcs_website_design||[]).push([["8392"],{3177(e,t,i){i.d(t,{A:()=>a});var s=i(4848),r=i(6540);let n=`https://corsproxy.io/?${encodeURIComponent("https://www.priyamconsultancy.com/blog/feed/")}`;function a(){let[e,t]=(0,r.useState)([]),[i,a]=(0,r.useState)(!0),[o,p]=(0,r.useState)(null);return(0,r.useEffect)(()=>{fetch(n).then(e=>{if(!e.ok)throw Error(`HTTP ${e.status}`);return e.text()}).then(e=>{t(Array.from(new DOMParser().parseFromString(e,"text/xml").querySelectorAll("item")).slice(0,3).map(e=>{let t=e.querySelector("enclosure"),i=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","content")[0],s=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","thumbnail")[0],r=e.getElementsByTagNameNS("http://purl.org/rss/1.0/modules/content/","encoded")[0],n=r?.textContent||"",a=n.match(/<img[^>]+src=["']([^"']+)["']/i),o=e.querySelector("description")?.textContent||"",p=o.match(/<img[^>]+src=["']([^"']+)["']/i),c=t?.getAttribute("url")||i?.getAttribute("url")||s?.getAttribute("url")||a?.[1]||p?.[1]||null,l=(n||o).replace(/<[^>]*>/g,"").replace(/&[^;]+;/g," ").trim(),d=l.length>340?l.slice(0,340)+"...":l,m=e.getElementsByTagName("link")[0],h=m?.textContent?.trim()||e.querySelector("guid")?.textContent||"#";return{guid:e.querySelector("guid")?.textContent||Math.random().toString(),title:e.querySelector("title")?.textContent?.trim()||"Untitled",link:h,thumbnail:c,excerpt:d}})),a(!1)}).catch(e=>{p(e.message),a(!1)})},[]),(0,s.jsxs)("section",{style:{width:"100%",padding:"4rem 1rem",boxSizing:"border-box",background:"#fff"},children:[(0,s.jsxs)("div",{style:{maxWidth:"1200px",margin:"0 auto"},children:[(0,s.jsxs)("div",{style:{textAlign:"center",marginBottom:"2.5rem"},children:[(0,s.jsx)("h2",{style:{fontSize:"2rem",fontWeight:700,margin:"0 0 0.5rem",color:"#111"},children:"Blogs"}),(0,s.jsx)("p",{style:{color:"#666",margin:0,fontSize:"1rem"},children:"Stay updated with the latest in digital marketing, growth strategies, and industry trends."})]}),i&&(0,s.jsx)("p",{style:{textAlign:"center",color:"#888"},children:"Loading..."}),o&&(0,s.jsxs)("p",{style:{textAlign:"center",color:"red"},children:["Error: ",o]}),(0,s.jsx)("div",{style:{display:"grid",gridTemplateColumns:"repeat(3, 1fr)",gap:"1.5rem"},className:"blog-grid",children:e.map(e=>(0,s.jsxs)("a",{href:e.link,target:"_blank",rel:"noreferrer",style:{border:"1px solid #e5e7eb",borderRadius:"12px",overflow:"hidden",background:"#fff",display:"flex",flexDirection:"column",textDecoration:"none",color:"inherit",transition:"box-shadow 0.2s, transform 0.2s",cursor:"pointer"},onMouseEnter:e=>{e.currentTarget.style.boxShadow="0 8px 24px rgba(0,0,0,0.12)",e.currentTarget.style.transform="translateY(-3px)"},onMouseLeave:e=>{e.currentTarget.style.boxShadow="none",e.currentTarget.style.transform="translateY(0)"},children:[(0,s.jsx)("div",{style:{width:"100%",aspectRatio:"16/9",overflow:"hidden",background:"#1a2744"},children:e.thumbnail?(0,s.jsx)("img",{src:e.thumbnail,alt:e.title,loading:"lazy",style:{width:"100%",height:"100%",objectFit:"cover",display:"block"}}):(0,s.jsx)("div",{style:{width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",opacity:.4,fontSize:"0.8rem"},children:"No image"})}),(0,s.jsxs)("div",{style:{padding:"1.25rem",display:"flex",flexDirection:"column",gap:"0.75rem"},children:[(0,s.jsx)("p",{style:{fontWeight:600,fontSize:"1.1rem",lineHeight:1.6,margin:0,color:"#111"},children:e.title}),(0,s.jsx)("p",{style:{color:"#444",fontSize:"0.875rem",lineHeight:1.6,flex:1,margin:0},children:e.excerpt}),(0,s.jsx)("span",{style:{display:"inline-block",background:"#E87C30",color:"#fff",padding:"0.6rem 1.5rem",borderRadius:"999px",fontWeight:500,alignSelf:"flex-start",marginTop:"0.5rem",fontSize:"0.875rem"},children:"Read More"})]})]},e.guid))})]}),(0,s.jsx)("style",{dangerouslySetInnerHTML:{__html:`
+        @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 600px)  { .blog-grid { grid-template-columns: 1fr !important; } }
+      `}})]})}},9393(e,t,i){i.d(t,{A:()=>n});var s=i(4848),r=i(6540);let n=function(){let e=(0,r.useRef)(null);return(0,r.useEffect)(()=>{let t=e.current;if(!t)return;let i=t.getContext("2d"),s="#ed8337",r,n,a=[],o;function p(){r=t.width=t.parentElement.offsetWidth,n=t.height=t.parentElement.offsetHeight}function c(){this.reset()}c.prototype.reset=function(){this.x=Math.random()*r,this.y=Math.random()*n,this.r=2.2*Math.random()+.6,this.type=.55>Math.random()?"dot":.5>Math.random()?"ring":"plus",this.speed=.35*Math.random()+.08,this.dir=Math.random()*Math.PI*2,this.alpha=.45*Math.random()+.1,this.pulse=Math.random()*Math.PI*2,this.pulseSpeed=.018*Math.random()+.008,this.size=4*Math.random()+2},c.prototype.update=function(){this.x+=Math.cos(this.dir)*this.speed,this.y+=Math.sin(this.dir)*this.speed,this.pulse+=this.pulseSpeed,this.dir+=(Math.random()-.5)*.015,this.x<-20&&(this.x=r+20),this.x>r+20&&(this.x=-20),this.y<-20&&(this.y=n+20),this.y>n+20&&(this.y=-20)},c.prototype.draw=function(){let e=this.alpha*(.7+.3*Math.sin(this.pulse));if(i.save(),i.globalAlpha=e,i.strokeStyle=i.fillStyle=s,i.lineWidth=1,"dot"===this.type)i.beginPath(),i.arc(this.x,this.y,this.r+.4*Math.sin(this.pulse),0,2*Math.PI),i.fill();else if("ring"===this.type){let e=this.size*(.9+.15*Math.sin(this.pulse));i.beginPath(),i.arc(this.x,this.y,e,0,2*Math.PI),i.stroke()}else{let e=this.size*(.9+.1*Math.sin(this.pulse));i.beginPath(),i.moveTo(this.x-e,this.y),i.lineTo(this.x+e,this.y),i.moveTo(this.x,this.y-e),i.lineTo(this.x,this.y+e),i.stroke()}i.restore()},window.addEventListener("resize",p),p(),a=[];let l=Math.floor(r*n/9e3);for(let e=0;e<Math.max(l,28);e++)a.push(new c);return!function e(){i.clearRect(0,0,r,n),function(){let e=a.filter(e=>"dot"===e.type);for(let t=0;t<e.length;t++)for(let r=t+1;r<e.length;r++){let n=e[t].x-e[r].x,a=e[t].y-e[r].y,o=Math.sqrt(n*n+a*a);o<110&&(i.save(),i.globalAlpha=(1-o/110)*.12,i.strokeStyle=s,i.lineWidth=.7,i.beginPath(),i.moveTo(e[t].x,e[t].y),i.lineTo(e[r].x,e[r].y),i.stroke(),i.restore())}}(),a.forEach(e=>{e.update(),e.draw()}),o=requestAnimationFrame(e)}(),()=>{cancelAnimationFrame(o),window.removeEventListener("resize",p)}},[]),(0,s.jsx)("section",{id:"cta-final",children:(0,s.jsxs)("div",{className:"cta-banner",style:{"--glow-x":"50%","--glow-y":"50%"},children:[(0,s.jsx)("canvas",{id:"ctaCanvas",ref:e}),(0,s.jsxs)("div",{className:"cta-banner-left",children:[(0,s.jsx)("div",{className:"partners-header",children:(0,s.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Ready to Start?"})}),(0,s.jsxs)("h2",{className:"cta-banner-heading",children:["Let's Talk About Your",(0,s.jsx)("br",{}),"Next Big ",(0,s.jsx)("span",{className:"hl-italic",children:"Growth Move"})]}),(0,s.jsx)("p",{className:"cta-banner-sub",children:"No pressure. Just a quick conversation to understand where you are-and how we can help you move forward."})]}),(0,s.jsxs)("div",{className:"cta-banner-right",children:[(0,s.jsxs)("a",{href:"#",className:"cta-bprimary",children:["Book a Free Consultation",(0,s.jsx)("svg",{viewBox:"0 0 16 16",fill:"none",children:(0,s.jsx)("path",{d:"M3 8h10M9 4l4 4-4 4",stroke:"currentColor",strokeWidth:"1.8",strokeLinecap:"round",strokeLinejoin:"round"})})]}),(0,s.jsx)("a",{href:"#",className:"cta-bghost",children:"View All Services"})]})]})})}},3917(e,t,i){i.r(t),i.d(t,{default:()=>z});var s=i(4848),r=i(6540),n=i(8128),a=i(3177),o=i(9393),p=i(1085),c=i(3572);let l=`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
 
   :root {
@@ -23,7 +17,7 @@ const STYLES = `
   html { scroll-behavior: smooth; }
   body { overflow-x: hidden; }
 
-  /* ── HERO ── */
+  /* \u{2500}\u{2500} HERO \u{2500}\u{2500} */
   .pcs-hero {
     min-height: 100vh;
     display: grid; grid-template-columns: 1fr 1fr;
@@ -71,12 +65,12 @@ const STYLES = `
     .pcs-hero-sub { font-size: 0.92rem; }
   }
 
-  /* ── SEO HERO RIGHT ── */
+  /* \u{2500}\u{2500} SEO HERO RIGHT \u{2500}\u{2500} */
   .pcs-hero-right { position:relative; z-index:2; display:flex; align-items:flex-start; justify-content:center; animation:pcs-fadeUp .9s .15s ease both; }
   .pcs-seo-scene { position:relative; height:470px; display:flex; align-items:flex-start; justify-content:center; margin:0 auto; }
   .pcs-hero-img { width:100%; height:100%; object-fit:contain; display:block; }
 
-  /* ── SERVICES ── */
+  /* \u{2500}\u{2500} SERVICES \u{2500}\u{2500} */
   .pcs-svc { position:relative; background:#004168; padding:4rem 0 0; overflow:hidden; }
   .pcs-svc-dots { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:radial-gradient(rgba(237,131,55,0.18) 1px,transparent 1px); background-size:38px 38px; animation:pcs-dots-drift 30s linear infinite; opacity:0.35; }
   @keyframes pcs-dots-drift { to { background-position: 38px 38px; } }
@@ -156,7 +150,7 @@ const STYLES = `
   @media(max-width:900px){ .pcs-svc-panels { grid-template-columns:1fr 1fr; } }
   @media(max-width:580px){ .pcs-svc-panels { grid-template-columns:1fr; } .pcs-svc-panel { border-right:none !important; min-height:220px; } }
 
-  /* ── PROCESS ── */
+  /* \u{2500}\u{2500} PROCESS \u{2500}\u{2500} */
   .pcs-tp-section { position:relative; background:#ffffff; padding:4rem 0 4rem; overflow:hidden; }
   .pcs-tp-cross { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:linear-gradient(45deg,rgba(2,43,68,0.015) 25%,transparent 25%),linear-gradient(-45deg,rgba(2,43,68,0.015) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,rgba(2,43,68,0.015) 75%),linear-gradient(-45deg,transparent 75%,rgba(2,43,68,0.015) 75%); background-size:20px 20px; background-position:0 0,0 10px,10px -10px,-10px 0px; }
   .pcs-tp-header { position:relative; z-index:2; text-align:center; padding:0 6% 5rem; }
@@ -199,7 +193,7 @@ const STYLES = `
     .pcs-tp-num-side,.pcs-tp-text-side { padding:2rem 5%; }
   }
 
-  /* ── HOW WE WORK ── */
+  /* \u{2500}\u{2500} HOW WE WORK \u{2500}\u{2500} */
   .pcs-hww { position:relative; background:#004168; padding:4rem 0 4rem; overflow:hidden; }
   .pcs-hww-dot-grid { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:radial-gradient(rgba(237,131,55,0.13) 1px,transparent 1px); background-size:36px 36px; opacity:0.3; animation:pcs-dots-drift 28s linear infinite; }
   .pcs-hww-glow { position:absolute; border-radius:50%; pointer-events:none; z-index:0; filter:blur(100px); }
@@ -238,7 +232,7 @@ const STYLES = `
   @media(max-width:860px){ .pcs-hww-arrow-track { grid-template-columns:1fr; gap:2rem; } }
   .faq-answer {font-size: .92rem;}
 
-  /* ── GLOBAL RESPONSIVE ── */
+  /* \u{2500}\u{2500} GLOBAL RESPONSIVE \u{2500}\u{2500} */
   @media(max-width:900px){
     .pcs-svc-hdr { padding:0 5% 3.5rem; }
     .pcs-tp-header { padding:0 5% 3rem; }
@@ -281,7 +275,7 @@ const STYLES = `
   }
 
   
-  /* ── HERO MOBILE ORDER: content first, image second ── */
+  /* \u{2500}\u{2500} HERO MOBILE ORDER: content first, image second \u{2500}\u{2500} */
   @media(max-width:900px){
     .pcs-hero-left { order:1 !important; }
     .pcs-hero-right { order:2 !important; }
@@ -292,7 +286,7 @@ const STYLES = `
   }
 
 
-  /* ── APPROACH SECTION MOBILE ── */
+  /* \u{2500}\u{2500} APPROACH SECTION MOBILE \u{2500}\u{2500} */
   @media(max-width:900px){
     .ap-inner { grid-template-columns:1fr !important; gap:2.5rem !important; }
     .ap-form-wrap { max-width:100% !important; width:100% !important; }
@@ -313,7 +307,7 @@ h3.faq-h3 {
     font-weight: 600;
 }
 
-  /* ── FAQ MOBILE ── */
+  /* \u{2500}\u{2500} FAQ MOBILE \u{2500}\u{2500} */
   .container {width:100%; }
   .faq-section { padding:4rem 6%; overflow:hidden; }
   .faq-wrapper { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
@@ -335,7 +329,7 @@ h3.faq-h3 {
     .faq-answer { font-size:.82rem !important; padding:0 1rem .85rem !important; }
   }
 
-  /* ── HOW WE WORK MOBILE ── */
+  /* \u{2500}\u{2500} HOW WE WORK MOBILE \u{2500}\u{2500} */
   @media(max-width:768px){
     .pcs-hww-arrow-track,
     .ppc-hww-arrow-track,
@@ -349,7 +343,7 @@ h3.faq-h3 {
     .pcs-hww-card-desc, .ppc-hww-card-desc, .smm-hww-card-desc { font-size:.82rem !important; }
   }
 
-  /* ── PROCESS SECTION MOBILE ── */
+  /* \u{2500}\u{2500} PROCESS SECTION MOBILE \u{2500}\u{2500} */
   @media(max-width:580px){
     .pcs-tp-step, .pcs-tp-step:nth-child(even),
     .ppc-tp-step, .ppc-tp-step:nth-child(even),
@@ -374,74 +368,10 @@ h3.faq-h3 {
     .smm-tp-num-side,.smm-tp-text-side { padding:1.2rem 4% !important; }
   }
 
-  /* ── GLOBAL OVERFLOW FIX ── */
+  /* \u{2500}\u{2500} GLOBAL OVERFLOW FIX \u{2500}\u{2500} */
   img { max-width:100%; height:auto; }
   * { box-sizing:border-box; }
-`;
-
-// ─── Intersection observer hook ──────────────────────────────────────────────
-function useInView(threshold = 0.1) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.unobserve(el); } },
-      { threshold }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return [ref, visible];
-}
-
-// ─── Data ────────────────────────────────────────────────────────────────────
-const SERVICES = [
-  { num: "01", icon: <img src="/img/icon/svc-technical-seo.webp" alt="Technical SEO" width="28" height="28" />, subtitle: "Fix What's Holding You Back", title: "SEO Audit & Strategy", desc: "We begin with a comprehensive audit and strategy roadmap tailored to your business. As one of the best search engine optimization companies, we identify gaps, opportunities, and high-impact actions to strengthen your website SEO optimization and long-term visibility." },
-  { num: "02", icon: <img src="/img/icon/svc-technical-seo.webp" alt="Technical SEO" width="28" height="28" />, subtitle: "Fix What's Holding You Back", title: "Technical SEO Audit & Fixes", desc: "We conduct in-depth technical audits to resolve issues affecting performance—crawl errors, site speed, indexing, and mobile usability. Our approach ensures your website SEO optimization meets modern search engine optimization standards for better rankings." },
-  { num: "03", icon: <img src="/img/icon/svc-on-page-seo.webp" alt="On-Page SEO" width="28" height="28" />, subtitle: "Optimize What You Already Have", title: "On-Page SEO Optimization", desc: "Our on page SEO service enhances your existing content with keyword placement, metadata optimization, internal linking, and UX improvements. As a trusted SEO optimization agency, we ensure every page drives better engagement and conversions." },
-  { num: "04", icon: <img src="/img/icon/svc-content-management.webp" alt="Content Management" width="28" height="28" />, subtitle: "Content That Attracts and Converts", title: "Content & Keyword Strategy", desc: "We create data-driven content aligned with search engine optimization digital marketing goals. From keyword research to execution, we help businesses—including SEO companies for small business—build authority and attract high-quality traffic." },
-  { num: "05", icon: <img src="/img/icon/svc-link-building.webp" alt="Link Building" width="28" height="28" />, subtitle: "Earn Authority, Not Just Backlinks", title: "Off-Page SEO & Authority Building", desc: "As a leading SEO company, we build high-quality backlinks through ethical outreach strategies. This strengthens your domain authority and helps you compete with the best search engine optimization companies in your industry." },
-  { num: "06", icon: <img src="/img/icon/svc-local-seo.webp" alt="Local SEO" width="28" height="28" />, subtitle: "Win Local Searches, Win Local Customers", title: "Local SEO & Google Maps Ranking", desc: "Our local search engine optimization and geo SEO strategies improve your presence in local search and Google Maps. We optimize your Google Business Profile, citations, and reviews to drive real customer actions." },
-  { num: "07", icon: <img src="/img/icon/svc-seo-strategy-reporting.webp" alt="SEO Strategy and Reporting" width="28" height="28" />, subtitle: "Know What's Working. And What's Next.", title: "SEO Analytics & ROI Tracking", desc: "We combine search engine marketing data with advanced analytics to track rankings, traffic, and conversions. Our transparent reporting ensures your search engine optimization efforts translate into measurable ROI." },
-  { num: "08", icon: <img src="/img/icon/svc-technical-seo.webp" alt="Technical SEO" width="28" height="28" />, subtitle: "Fix What's Holding You Back", title: "Answer Engine Optimization (AEO)", desc: "Our answer engine optimization (AEO) strategies help your content rank for featured snippets, voice search, and direct answers. We position your brand as the most relevant solution in evolving search experiences." },
-  { num: "09", icon: <img src="/img/icon/svc-technical-seo.webp" alt="Technical SEO" width="28" height="28" />, subtitle: "Fix What's Holding You Back", title: "Generative Engine Optimization (GEO)", desc: "Our AI Search Optimization approach, powered by Generative Engine Optimization (GEO), ensures your content is discoverable across AI platforms. We structure content for machine understanding, helping you stay ahead in the future of search engine optimization digital marketing." },
-
-
-];
-
-const PROCESS_STEPS = [
-  { step: "01", title: "Understand", phase: "Discovery Phase", desc: "Before we optimize anything, we dive deep into your business operations and market positioning. We connect with your core team to understand your industry, target customers, revenue goals, and long-term growth vision. This phase helps us identify key performance indicators (KPIs), customer intent, market challenges, and scalable growth opportunities unique to your business.", bullets: [] },
-  { step: "02", title: "Diagnose", phase: "Technical Audit", desc: "Our team conducts a detailed audit covering technical SEO, competitor benchmarking, keyword gaps, analytics review, website structure, and overall content health. We identify everything that’s helping or hurting your visibility and search performance. Think of this as your complete SEO health check before we create the right optimization roadmap and growth strategy.", bullets: [] },
-  { step: "03", title: "Strategize", phase: "Blueprint Creation", desc: "Based on our findings, we create a tailored SEO blueprint aligned with your business objectives and audience behavior. This includes your most critical fixes, highest-opportunity keywords, content themes, competitor insights, and channel mix. Every action is carefully mapped to achieve measurable business outcomes like traffic growth, better rankings, stronger engagement, and higher conversions.", bullets: [] },
-  { step: "04", title: "Deploy", phase: "Full Execution", desc: "Once the strategy is finalized, our execution phase begins with structured implementation across every important SEO layer. From technical fixes and keyword-rich content updates to on-page optimization and website performance improvements, we optimize everything strategically. We also focus on local listings, mobile responsiveness, user experience, and conversion-focused journey.", bullets: [] },
-  { step: "05", title: "Track", phase: "Live Monitoring", desc: "We don’t wait for monthly reviews alone to understand what’s working and what needs improvement. Our team continuously tracks real-time metrics including organic traffic, ranking shifts, user behavior, engagement patterns, and conversion signals using advanced analytics dashboards set up from day one. Every insight collected helps us refine strategies, make smarter SEO decisions consistently.", bullets: [] },
-];
-
-const HOW_WE_WORK = [
-  { icon: <img src="/img/icon/hww-seo-strategy-planning.webp" alt="SEO Strategy and Planning" width="30" height="30" />, title: "SEO Strategy & Planning", desc: "We design custom search engine optimization strategies that align closely with your business objectives, industry landscape, and growth targets. As a trusted SEO optimization agency, we go beyond basic keyword planning by integrating search engine marketing insights, competitor analysis, and user intent mapping. ", label: "A", arrowIcon: "✅" },
-  { icon: <img src="/img/icon/hww-expert-accountability.webp" alt="Expert Roles and Clear Accountability" width="30" height="30" />, title: "Expert Roles & Clear Accountability", desc: "Our team is built with specialized professionals including technical SEO experts, content strategists, link-building specialists, and analytics professionals. This structured approach allows us to deliver end-to-end search engine optimization digital marketing solutions with precision. As a full-scale SEO company, every aspect of your project is handled with clear ownership", label: "B", arrowIcon: "🔧" },
-  { icon: <img src="/img/icon/hww-review-refine-deliver.webp" alt="Review Refine and Deliver" width="30" height="30" />, title: "Review, Refine & Deliver", desc: "Before any implementation goes live, we conduct rigorous quality checks to ensure alignment with SEO best practices, search engine guidelines, and your brand voice. Our process includes continuous testing, performance tracking, and refinement based on real-time data. Whether it’s on page SEO service, technical fixes, or e-commerce SEO services.", label: "C", arrowIcon: "🎯" },
-];
-
-// ─── SEO Hero Image ───────────────────────────────────────────────────────────
-function SeoScene() {
-  return (
-      <div className="pcs-seo-scene">
-      <img
-        src={banner}
-        alt="SEO Illustration"
-        className="pcs-hero-img"
-      />
-    </div>
-  );
-}
-
-function Hero() {
-  return (
-    <section className="hero" id="hero">
-      <style>{`
+`;function d(e=.1){let t=(0,r.useRef)(null),[i,s]=(0,r.useState)(!1);return(0,r.useEffect)(()=>{let i=t.current;if(!i)return;let r=new IntersectionObserver(([e])=>{e.isIntersecting&&(s(!0),r.unobserve(i))},{threshold:e});return r.observe(i),()=>r.disconnect()},[e]),[t,i]}let m=[{num:"01",icon:(0,s.jsx)("img",{src:"/img/icon/svc-technical-seo.webp",alt:"Technical SEO",width:"28",height:"28"}),subtitle:"Fix What's Holding You Back",title:"SEO Audit & Strategy",desc:"We begin with a comprehensive audit and strategy roadmap tailored to your business. As one of the best search engine optimization companies, we identify gaps, opportunities, and high-impact actions to strengthen your website SEO optimization and long-term visibility."},{num:"02",icon:(0,s.jsx)("img",{src:"/img/icon/svc-technical-seo.webp",alt:"Technical SEO",width:"28",height:"28"}),subtitle:"Fix What's Holding You Back",title:"Technical SEO Audit & Fixes",desc:"We conduct in-depth technical audits to resolve issues affecting performance\u2014crawl errors, site speed, indexing, and mobile usability. Our approach ensures your website SEO optimization meets modern search engine optimization standards for better rankings."},{num:"03",icon:(0,s.jsx)("img",{src:"/img/icon/svc-on-page-seo.webp",alt:"On-Page SEO",width:"28",height:"28"}),subtitle:"Optimize What You Already Have",title:"On-Page SEO Optimization",desc:"Our on page SEO service enhances your existing content with keyword placement, metadata optimization, internal linking, and UX improvements. As a trusted SEO optimization agency, we ensure every page drives better engagement and conversions."},{num:"04",icon:(0,s.jsx)("img",{src:"/img/icon/svc-content-management.webp",alt:"Content Management",width:"28",height:"28"}),subtitle:"Content That Attracts and Converts",title:"Content & Keyword Strategy",desc:"We create data-driven content aligned with search engine optimization digital marketing goals. From keyword research to execution, we help businesses\u2014including SEO companies for small business\u2014build authority and attract high-quality traffic."},{num:"05",icon:(0,s.jsx)("img",{src:"/img/icon/svc-link-building.webp",alt:"Link Building",width:"28",height:"28"}),subtitle:"Earn Authority, Not Just Backlinks",title:"Off-Page SEO & Authority Building",desc:"As a leading SEO company, we build high-quality backlinks through ethical outreach strategies. This strengthens your domain authority and helps you compete with the best search engine optimization companies in your industry."},{num:"06",icon:(0,s.jsx)("img",{src:"/img/icon/svc-local-seo.webp",alt:"Local SEO",width:"28",height:"28"}),subtitle:"Win Local Searches, Win Local Customers",title:"Local SEO & Google Maps Ranking",desc:"Our local search engine optimization and geo SEO strategies improve your presence in local search and Google Maps. We optimize your Google Business Profile, citations, and reviews to drive real customer actions."},{num:"07",icon:(0,s.jsx)("img",{src:"/img/icon/svc-seo-strategy-reporting.webp",alt:"SEO Strategy and Reporting",width:"28",height:"28"}),subtitle:"Know What's Working. And What's Next.",title:"SEO Analytics & ROI Tracking",desc:"We combine search engine marketing data with advanced analytics to track rankings, traffic, and conversions. Our transparent reporting ensures your search engine optimization efforts translate into measurable ROI."},{num:"08",icon:(0,s.jsx)("img",{src:"/img/icon/svc-technical-seo.webp",alt:"Technical SEO",width:"28",height:"28"}),subtitle:"Fix What's Holding You Back",title:"Answer Engine Optimization (AEO)",desc:"Our answer engine optimization (AEO) strategies help your content rank for featured snippets, voice search, and direct answers. We position your brand as the most relevant solution in evolving search experiences."},{num:"09",icon:(0,s.jsx)("img",{src:"/img/icon/svc-technical-seo.webp",alt:"Technical SEO",width:"28",height:"28"}),subtitle:"Fix What's Holding You Back",title:"Generative Engine Optimization (GEO)",desc:"Our AI Search Optimization approach, powered by Generative Engine Optimization (GEO), ensures your content is discoverable across AI platforms. We structure content for machine understanding, helping you stay ahead in the future of search engine optimization digital marketing."}],h=[{step:"01",title:"Understand",phase:"Discovery Phase",desc:"Before we optimize anything, we dive deep into your business operations and market positioning. We connect with your core team to understand your industry, target customers, revenue goals, and long-term growth vision. This phase helps us identify key performance indicators (KPIs), customer intent, market challenges, and scalable growth opportunities unique to your business.",bullets:[]},{step:"02",title:"Diagnose",phase:"Technical Audit",desc:"Our team conducts a detailed audit covering technical SEO, competitor benchmarking, keyword gaps, analytics review, website structure, and overall content health. We identify everything that\u2019s helping or hurting your visibility and search performance. Think of this as your complete SEO health check before we create the right optimization roadmap and growth strategy.",bullets:[]},{step:"03",title:"Strategize",phase:"Blueprint Creation",desc:"Based on our findings, we create a tailored SEO blueprint aligned with your business objectives and audience behavior. This includes your most critical fixes, highest-opportunity keywords, content themes, competitor insights, and channel mix. Every action is carefully mapped to achieve measurable business outcomes like traffic growth, better rankings, stronger engagement, and higher conversions.",bullets:[]},{step:"04",title:"Deploy",phase:"Full Execution",desc:"Once the strategy is finalized, our execution phase begins with structured implementation across every important SEO layer. From technical fixes and keyword-rich content updates to on-page optimization and website performance improvements, we optimize everything strategically. We also focus on local listings, mobile responsiveness, user experience, and conversion-focused journey.",bullets:[]},{step:"05",title:"Track",phase:"Live Monitoring",desc:"We don\u2019t wait for monthly reviews alone to understand what\u2019s working and what needs improvement. Our team continuously tracks real-time metrics including organic traffic, ranking shifts, user behavior, engagement patterns, and conversion signals using advanced analytics dashboards set up from day one. Every insight collected helps us refine strategies, make smarter SEO decisions consistently.",bullets:[]}],g=[{icon:(0,s.jsx)("img",{src:"/img/icon/hww-seo-strategy-planning.webp",alt:"SEO Strategy and Planning",width:"30",height:"30"}),title:"SEO Strategy & Planning",desc:"We design custom search engine optimization strategies that align closely with your business objectives, industry landscape, and growth targets. As a trusted SEO optimization agency, we go beyond basic keyword planning by integrating search engine marketing insights, competitor analysis, and user intent mapping. ",label:"A",arrowIcon:"\u2705"},{icon:(0,s.jsx)("img",{src:"/img/icon/hww-expert-accountability.webp",alt:"Expert Roles and Clear Accountability",width:"30",height:"30"}),title:"Expert Roles & Clear Accountability",desc:"Our team is built with specialized professionals including technical SEO experts, content strategists, link-building specialists, and analytics professionals. This structured approach allows us to deliver end-to-end search engine optimization digital marketing solutions with precision. As a full-scale SEO company, every aspect of your project is handled with clear ownership",label:"B",arrowIcon:"\u{1F527}"},{icon:(0,s.jsx)("img",{src:"/img/icon/hww-review-refine-deliver.webp",alt:"Review Refine and Deliver",width:"30",height:"30"}),title:"Review, Refine & Deliver",desc:"Before any implementation goes live, we conduct rigorous quality checks to ensure alignment with SEO best practices, search engine guidelines, and your brand voice. Our process includes continuous testing, performance tracking, and refinement based on real-time data. Whether it\u2019s on page SEO service, technical fixes, or e-commerce SEO services.",label:"C",arrowIcon:"\u{1F3AF}"}];function f(){return(0,s.jsxs)("section",{className:"hero",id:"hero",children:[(0,s.jsx)("style",{children:`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
         :root {
@@ -559,116 +489,7 @@ function Hero() {
           .h-badge { font-size: 0.65rem; }
         }
         .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
-      `}</style>
-
-      {/* LEFT CONTENT */}
-      <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot" /> SEO Growth</div>
-        <h1 className="hero-heading">
-          A Leading SEO Growth
-          for Growth<span className="hl lined">Traffic, Leads</span>
-          &amp; Growth 
-        </h1>
-        <p className="hero-sub">
-Whether your traffic is stagnant, leads are drying up, or you’re overspending on paid campaigns, our search engine optimization services deliver sustainable, organic growth. As a performance-driven SEO company, we combine search engine marketing insights with data-backed execution to attract the right audience and turn visibility into measurable business results.         </p>
-        <div className="hero-actions">
-          <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
-        </div>
-      </div>
-
-      {/* RIGHT IMAGE */}
-      <div className="hero-right">
-        <img
-          src={banner}
-          alt="SEO Illustration"
-          className="hero-img"
-        />
-      </div>
-    </section>
-  );
-}
-
-function ServicePanel({ svc, index }) {
-  const [ref, visible] = useInView(0.1);
-  return (
-    <div ref={ref} className={`pcs-svc-panel${visible ? " vis" : ""}`} style={{transitionDelay:`${0.05 + index * 0.07}s`}}>
-      {/* <div className="pcs-sp-slash" /> */}
-      <div className="pcs-sp-ghost">{svc.num}</div>
-      <div className="pcs-sp-bottom-line" />
-      <div className="pcs-sp-icon-row">
-        <span className="pcs-sp-icon-dash" />
-        <span className="pcs-sp-icon">{svc.icon}</span>
-      </div>
-      <div className="pcs-sp-content">
-        <div className="pcs-sp-subtitle">{svc.subtitle}</div>
-        <h4 className="pcs-sp-title">{svc.title}</h4>
-        <div className="pcs-sp-desc">{svc.desc}</div>
-        {/* <a className="pcs-sp-link" href="#">LEARN MORE <span className="pcs-sp-link-arr">↗</span></a> */}
-      </div>
-    </div>
-  );
-}
-
-
-
-/* ═══════════════════════════════════════════
-   SECTION 2 — OUR APPROACH + FORM
-═══════════════════════════════════════════ */
-
-function ApproachSection() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    msg: ""
-  });
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  // ✅ EMAIL SEND FUNCTION
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    const templateParams = {
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      company: form.company,
-      message: form.msg,
-
-      url: window.location.href,
-    };
-
-    emailjs
-      .send(
-        "service_8xw6k3r",   // 🔴 replace
-        "template_jarui36",  // 🔴 replace
-        templateParams,
-        "XWRnXi4hK2SvmRG3q"    // 🔴 replace
-      )
-      .then(() => {
-        alert("Message Sent Successfully ✅");
-
-        setForm({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          msg: ""
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-        alert("Failed to send ❌");
-      });
-  };
-
-  return (
-    <section className="approach" id="approach">
-      <style>{`
+      `}),(0,s.jsxs)("div",{className:"hero-left",children:[(0,s.jsxs)("div",{className:"h-badge",children:[(0,s.jsx)("div",{className:"badge-dot"})," SEO Growth"]}),(0,s.jsxs)("h1",{className:"hero-heading",children:["A Leading SEO Growth for Growth",(0,s.jsx)("span",{className:"hl lined",children:"Traffic, Leads"}),"& Growth"]}),(0,s.jsx)("p",{className:"hero-sub",children:"Whether your traffic is stagnant, leads are drying up, or you\u2019re overspending on paid campaigns, our search engine optimization services deliver sustainable, organic growth. As a performance-driven SEO company, we combine search engine marketing insights with data-backed execution to attract the right audience and turn visibility into measurable business results.         "}),(0,s.jsx)("div",{className:"hero-actions",children:(0,s.jsxs)("a",{className:"btn-fill",href:"#",children:["Explore More ",(0,s.jsx)("span",{className:"btn-arrow",children:"\u203A"})]})})]}),(0,s.jsx)("div",{className:"hero-right",children:(0,s.jsx)("img",{src:"/img/seo.png",alt:"SEO Illustration",className:"hero-img"})})]})}function u({svc:e,index:t}){let[i,r]=d(.1);return(0,s.jsxs)("div",{ref:i,className:`pcs-svc-panel${r?" vis":""}`,style:{transitionDelay:`${.05+.07*t}s`},children:[(0,s.jsx)("div",{className:"pcs-sp-ghost",children:e.num}),(0,s.jsx)("div",{className:"pcs-sp-bottom-line"}),(0,s.jsxs)("div",{className:"pcs-sp-icon-row",children:[(0,s.jsx)("span",{className:"pcs-sp-icon-dash"}),(0,s.jsx)("span",{className:"pcs-sp-icon",children:e.icon})]}),(0,s.jsxs)("div",{className:"pcs-sp-content",children:[(0,s.jsx)("div",{className:"pcs-sp-subtitle",children:e.subtitle}),(0,s.jsx)("h4",{className:"pcs-sp-title",children:e.title}),(0,s.jsx)("div",{className:"pcs-sp-desc",children:e.desc})]})]})}function x(){let[e,t]=(0,r.useState)({name:"",email:"",phone:"",company:"",msg:""}),i=i=>{t({...e,[i.target.name]:i.target.value})};return(0,s.jsxs)("section",{className:"approach",id:"approach",children:[(0,s.jsx)("style",{children:`
         .approach { position:relative; padding:4rem 6%; overflow:hidden; }
         .ap-inner { position:relative; z-index:2; margin:0 auto; display:grid; grid-template-columns:1fr 0.7fr; gap:4rem; align-items:center; }
         .ap-heading { font-family:'Poppins',sans-serif; font-size:clamp(2rem,3vw,2.6rem); line-height:1.12; color:#000; margin-bottom:1.2rem;font-weight:600; }
@@ -709,520 +530,4 @@ function ApproachSection() {
           .ap-form-card { padding:2rem 1.4rem; }
           .form-card-title { font-size:1.4rem; }
         }
-      `}</style>
-
-      <div className="ap-inner">
-
-        {/* LEFT CONTENT */}
-        <div className="ap-left">
-          <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
-          </div>
-          <h2 className="ap-heading">End-to-End <span>SEO Services</span> Your Business Deserves</h2>
-          <p className="ap-intro">
-We create customized website SEO optimization strategies tailored to each business instead of following generic SEO methods. Every strategy is aligned with business objectives, audience intent, and the competitive market landscape.
-          </p>
-          <p className="ap-intro">
-As a trusted search engine optimization digital marketing partner, PCS studies your complete business ecosystem, including website performance, customer behavior, sales funnel, and competitor positioning to identify meaningful growth opportunities.
-          </p>
-          <p className="ap-intro">
-            Whether working with startups or established businesses, We focus on building scalable SEO solutions that improve online visibility, strengthen brand positioning, and help businesses compete among the best search engine optimization companies.
-          </p>
-        </div>
-
-        {/* RIGHT FORM */}
-        <div className="ap-form-wrap">
-          <div className="ap-form-card">
-            <div className="form-card-eyebrow">
-              <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
-            </div>
-            <div className="form-card-title">
-              Get Your <span>Free</span> Quote
-            </div>
-
-            {/* ✅ FORM START */}
-            <form onSubmit={sendEmail}>
-
-              <div className="fl-row">
-
-                <div className="fl-group">
-                  <label className="fl-label">Your Name</label>
-                  <div style={{ position: "relative" }}>
-                    <span className="fl-icon">👤</span>
-                    <input
-                      className="fl-input"
-                      type="text"
-                      name="name"
-                      placeholder="Full name"
-                      value={form.name}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="fl-group">
-                  <label className="fl-label">Company</label>
-                  <div style={{ position: "relative" }}>
-                    <span className="fl-icon">🏢</span>
-                    <input
-                      className="fl-input"
-                      type="text"
-                      name="company"
-                      placeholder="Company name"
-                      value={form.company}
-                      onChange={handleChange}
-                    />
-                  </div>
-                </div>
-
-              </div>
-
-              <div className="fl-group">
-                <label className="fl-label">Email Address</label>
-                <div style={{ position: "relative" }}>
-                  <span className="fl-icon">✉️</span>
-                  <input
-                    className="fl-input"
-                    type="email"
-                    name="email"
-                    placeholder="your@email.com"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="fl-group">
-                <label className="fl-label">Mobile Number</label>
-                <div className="phone-row">
-                  <div className="phone-flag">
-                    <span className="phone-flag-icon">📞</span>
-
-                  </div>
-                  <input
-                    className="fl-input"
-                    type="tel"
-                    name="phone"
-                    placeholder="Mobile number"
-                    value={form.phone}
-                    onChange={handleChange}
-                    maxLength="10"
-                    pattern="[0-9]{10}"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="fl-group textarea-group">
-                <label className="fl-label">Message</label>
-                <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
-                  <textarea
-                    className="fl-textarea"
-                    name="msg"
-                    placeholder="Tell us about your business needs..."
-                    value={form.msg}
-                    onChange={handleChange}
-
-                  />
-                </div>
-              </div>
-
-              {/* ✅ SUBMIT BUTTON */}
-              <button type="submit" className="ap-submit">
-                Get Free Consultation
-                <span className="ap-submit-arrow">›</span>
-              </button>
-
-            </form>
-            {/* ✅ FORM END */}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-
-
-
-function Services() {
-  return (
-    <section className="pcs-svc">
-      <div className="pcs-svc-dots" />
-      <div className="pcs-svc-glow pcs-ssvg1" />
-      <div className="pcs-svc-glow pcs-ssvg2" />
-      <div className="pcs-svc-hdr">
-           <div className="partners-header1">
-                <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized SEO Marketing Services</h2>
-          </div>
-        <h3 className="pcs-svc-h2">Every Keyword a Strategy.<span> Every Click a Step Forward.</span></h3>
-        <p className="pcs-svc-sub">As a results-driven SEO agency, Priyam Consultancy Services crafts tailored strategies customized to your brand's goals, market, and growth stage.</p>
-      </div>
-      <div className="pcs-svc-panels">
-        {SERVICES.map((svc, i) => <ServicePanel key={svc.num} svc={svc} index={i} />)}
-      </div>
-    </section>
-  );
-}
-
-function ProcessStep({ step, index }) {
-  const [ref, visible] = useInView(0.1);
-  const isEven = index % 2 === 1;
-  return (
-    <div ref={ref} className={`pcs-tp-step${visible ? " tp-vis" : ""}`}>
-      {isEven ? (
-        <>
-          <div className="pcs-tp-text-side">
-            <p className="pcs-tp-desc">{step.desc}</p>
-            <div className="pcs-tp-bullets">{step.bullets.map(b => <span key={b} className="pcs-tp-bullet">{b}</span>)}</div>
-          </div>
-          <div className="pcs-tp-num-side">
-            <div className="pcs-tp-bg-num">{step.step}</div>
-            <div className="pcs-tp-step-index">Step — {step.step}</div>
-            <h4 className="pcs-tp-step-title">{step.title}</h4>
-            <div className="pcs-tp-phase">{step.phase}</div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="pcs-tp-num-side">
-            <div className="pcs-tp-bg-num">{step.step}</div>
-            <div className="pcs-tp-step-index">Step — {step.step}</div>
-            <h4 className="pcs-tp-step-title">{step.title}</h4>
-            <div className="pcs-tp-phase">{step.phase}</div>
-          </div>
-          <div className="pcs-tp-text-side">
-            <p className="pcs-tp-desc">{step.desc}</p>
-            <div className="pcs-tp-bullets">{step.bullets.map(b => <span key={b} className="pcs-tp-bullet">{b}</span>)}</div>
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
-function Process() {
-  return (
-    <section className="pcs-tp-section">
-      <div className="pcs-tp-cross" />
-      <div className="pcs-tp-header">
-           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our SEO Execution Process</div>
-          </div>
-
-        <h2 className="pcs-tp-h2">Precise SEO Execution,<em> Backed by Data and Strategy</em></h2>
-        <p className="pcs-tp-sub">Our SEO process at Priyam Consultancy Services is structured to meet the unique objectives of your business, step-by-step. From audits to content, everything we do is strategic, measurable, and customized.</p>
-      </div>
-      <div className="pcs-tp-body">
-        {PROCESS_STEPS.map((step, i) => <ProcessStep key={step.step} step={step} index={i} />)}
-      </div>
-    </section>
-  );
-}
-
-function HowWeWorkItem({ item }) {
-  const [ref, visible] = useInView(0.12);
-  return (
-    <div ref={ref} className={`pcs-hww-arrow-item${visible ? " hww-vis" : ""}`}>
-      <div className="pcs-hww-card">
-        <div className="pcs-hww-icon-wrap">{item.icon}</div>
-        <h4 className="pcs-hww-card-title">{item.title}</h4>
-        <div className="pcs-hww-card-desc">{item.desc}</div>
-      </div>
-      
-    </div>
-  );
-}
-
-function HowWeWork() {
-  return (
-    <section className="pcs-hww">
-      <div className="pcs-hww-dot-grid" />
-      <div className="pcs-hww-glow pcs-hww-glow-1" />
-      <div className="pcs-hww-glow pcs-hww-glow-2" />
-      <div className="pcs-hww-header">
-           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>How We Work</div>
-          </div>
-        <h2 className="pcs-hww-h2">Plan With <span>Purpose.</span> Execute With <span>Precision.</span></h2>
-      </div>
-      <div className="pcs-hww-arrows-wrap">
-        <div className="pcs-hww-arrow-track">
-          {HOW_WE_WORK.map(item => <HowWeWorkItem key={item.label} item={item} />)}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// faq section
-const faqData = [
-  { q: "What is SEO?", a: " SEO (Search Engine Optimization) is the process of improving a website’s visibility on search engines like Google. It helps businesses attract organic traffic, improve rankings, increase credibility, and generate long-term online growth through optimized content, technical improvements, and strategic keyword targeting." },
-  { q: "What is the difference between SEO and SEM?", a: "SEO focuses on improving organic search rankings through long-term optimization strategies, while SEM (Search Engine Marketing) includes paid advertising campaigns like Google Ads for immediate visibility. SEO builds sustainable traffic over time, whereas SEM generates faster short-term results through paid promotions." },
-  { q: "How long does SEO take to show results?", a: "SEO is a long-term strategy, and results typically begin appearing within 3 to 6 months depending on competition, industry, website condition, and keyword difficulty. Consistent optimization, quality content, and technical improvements contribute to stronger and more sustainable ranking growth over time." },
-  { q: "What do your SEO services include?", a: " Our SEO services include keyword research, technical SEO, on-page optimization, content strategy, link building, local SEO, performance tracking, competitor analysis, and regular reporting. We focus on improving search visibility, website traffic, user engagement, and long-term business growth through data-driven optimization strategies." },
-  { q: "Do you work with specific industries?", a: "We work with businesses across multiple industries including healthcare, technology, ecommerce, construction, consulting, retail, manufacturing, and professional services. Our SEO strategies are customized based on industry trends, audience behavior, competition levels, and business goals to deliver measurable digital growth outcomes." },
-  { q: "What do e-commerce SEO services include?", a: " E-commerce SEO services include product page optimization, category structure improvements, technical SEO, keyword targeting, content optimization, image optimization, schema implementation, and conversion-focused strategies. The goal is to improve product visibility, increase organic traffic, and drive higher online sales performance" },
-];
-function FAQSection() {
-  const [active, setActive] = useState(null);
-
-  const toggle = (index) => {
-    setActive(active === index ? null : index);
-  };
-  return (
-    <section className="faq-section">
-      <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <h4 className="partners-eyebrow" >Frequently Asked Questions</h4>
-      </div>
-      <div className="container">
-        {/* TITLE */}
-        <div className="faq-head">
-          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
-        </div>
-        {/* FAQ GRID */}
-        <div className="faq-wrapper">
-
-          {/* LEFT COLUMN */}
-          <div className="faq-col">
-            {faqData.slice(0, 3).map((item, i) => (
-              <div className="faq-item" key={i}>
-                <div className="faq-question" onClick={() => toggle(i)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i ? "−" : "+"}</span>
-                </div>
-                {active === i && (
-                  <div className="faq-answer">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* RIGHT COLUMN */}
-          <div className="faq-col">
-            {faqData.slice(3, 6).map((item, i) => (
-              <div className="faq-item" key={i + 3}>
-                <div className="faq-question" onClick={() => toggle(i + 3)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i + 3 ? "−" : "+"}</span>
-                </div>
-                {active === i + 3 && (
-                  <div className="faq-answer">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-// ─── Root Component ───────────────────────────────────────────────────────────
-export default function PcsSeoPage() {
-  useEffect(() => {
-    const id = "pcs-seo-styles";
-    if (!document.getElementById(id)) {
-      const el = document.createElement("style");
-      el.id = id;
-      el.textContent = STYLES;
-      document.head.appendChild(el);
-    }
-    return () => {};
-  }, []);
-
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "item": {
-        "@id": "https://www.priyamconsultancy.com/",
-        "name": "Home"
-      }
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "item": {
-        "@id": "https://www.priyamconsultancy.com/search-engine-optimization/",
-        "name": "Search Engine Optimization"
-      }
-    }
-  ]
-};
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Priyam Consultancy Services",
-  "url": "https://www.priyamconsultancy.com/",
-  "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
-  "contactPoint": [
-    {
-      "@type": "ContactPoint",
-      "telephone": "+91 96774 44048",
-      "contactType": "customer support"
-    }
-  ],
-  "sameAs": [
-    "https://www.facebook.com/profile.php?id=61577125709962",
-    "https://www.linkedin.com/company/priyam-consultancy-services/",
-    "https://www.instagram.com/priyam_consultancy_services/",
-    "https://x.com/services91032",
-    "https://g.co/kgs/rdTYdi6"
-  ]
-};
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "@id": "https://www.priyamconsultancy.com/search-engine-optimization/#service",
-  "name": "Search Engine Optimization",
-  "serviceType": "SEO Services",
-  "url": "https://www.priyamconsultancy.com/search-engine-optimization/",
-  "description": "PCS is an award-winning SEO company in India. Search engine visibility for your website is improved with our expert Search Engine Optimization services.",
-  "provider": {
-    "@type": "Organization",
-    "name": "Priyam Consultancy Services",
-    "url": "https://www.priyamconsultancy.com/",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
-    }
-  },
-  "areaServed": {
-    "@type": "Country",
-    "name": "India"
-  }
-};
-
-const productSchema = {
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "Search Engine Optimization",
-  "image": [
-    "https://www.priyamconsultancy.com/img/seo.png"
-  ],
-  "description": "Best SEO services in Coimbatore offering keyword research, technical SEO, on-page optimization, content strategy, link building, local SEO, ecommerce SEO and search engine ranking improvement solutions.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Priyam Consultancy Services"
-  },
-  "review": {
-    "@type": "Review",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "4.9",
-      "bestRating": "5",
-      "worstRating": "1"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Admin"
-    }
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "4587"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://www.priyamconsultancy.com/search-engine-optimization/",
-    "priceCurrency": "USD",
-    "price": "0.00",
-    "priceValidUntil": "2026-12-31",
-    "itemCondition": "https://schema.org/NewCondition",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "Priyam Consultancy Services"
-    }
-  }
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is SEO?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "SEO (Search Engine Optimization) is the process of improving a website's visibility on search engines like Google."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the difference between SEO and SEM?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "SEO focuses on organic rankings while SEM includes paid advertising such as Google Ads."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How long does SEO take to show results?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "SEO results typically begin appearing within 3 to 6 months depending on competition and website condition."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What do your SEO services include?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Our SEO services include keyword research, technical SEO, on-page optimization, content strategy, link building, local SEO and reporting."
-      }
-    }
-  ]
-};
-  return (
-    <Layout>
-      <Head>
-        <title>Best SEO Company in India | Search Engine Optimization</title>
-        <meta name="description" content="PCS is an award-winning SEO company in India. Search engine visibility for your website is improved with our export Search Engine Optimization services." />
-        <meta name="keywords" content="SEO Agency, Search Engine Optimization, SEO Services, SEO Company, Search Engine Optimization Agency, SEO Services Providers" />
-        <link rel="canonical" href="https://www.priyamconsultancy.com/search-engine-optimization" />
-        {/* Open Graph */}
-        <meta property="og:title" content="Best SEO Company in India | Search Engine Optimization" />
-        <meta property="og:description" content="PCS is an award-winning SEO company in India. Search engine visibility for your website is improved with our export Search Engine Optimization services." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/search-engine-optimization" />
-        <meta property="og:image" content="https://www.priyamconsultancy.com/img/seo.png" />
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Best SEO Company in India | Search Engine Optimization" />
-        <meta name="twitter:description" content="PCS is an award-winning SEO company in India. Search engine visibility for your website is improved with our export Search Engine Optimization services." />
-        <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/seo.png" />
-        {/* Schema */}
-         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-
-      </Head>
-      <Hero />
-      <ApproachSection />
-      <Services />
-      <Process />
-      <HowWeWork />
-      <FAQSection/>
-      <BlogSection />
-      <CTASection />
-
-    </Layout>
-  );
-}
+      `}),(0,s.jsxs)("div",{className:"ap-inner",children:[(0,s.jsxs)("div",{className:"ap-left",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Approach in"})}),(0,s.jsxs)("h2",{className:"ap-heading",children:["End-to-End ",(0,s.jsx)("span",{children:"SEO Services"})," Your Business Deserves"]}),(0,s.jsx)("p",{className:"ap-intro",children:"We create customized website SEO optimization strategies tailored to each business instead of following generic SEO methods. Every strategy is aligned with business objectives, audience intent, and the competitive market landscape."}),(0,s.jsx)("p",{className:"ap-intro",children:"As a trusted search engine optimization digital marketing partner, PCS studies your complete business ecosystem, including website performance, customer behavior, sales funnel, and competitor positioning to identify meaningful growth opportunities."}),(0,s.jsx)("p",{className:"ap-intro",children:"Whether working with startups or established businesses, We focus on building scalable SEO solutions that improve online visibility, strengthen brand positioning, and help businesses compete among the best search engine optimization companies."})]}),(0,s.jsx)("div",{className:"ap-form-wrap",children:(0,s.jsxs)("div",{className:"ap-form-card",children:[(0,s.jsxs)("div",{className:"form-card-eyebrow",children:[(0,s.jsx)("span",{className:"form-card-eyebrow-line"}),"Your Growth, Our Mission",(0,s.jsx)("span",{className:"form-card-eyebrow-line"})]}),(0,s.jsxs)("div",{className:"form-card-title",children:["Get Your ",(0,s.jsx)("span",{children:"Free"})," Quote"]}),(0,s.jsxs)("form",{onSubmit:i=>{i.preventDefault();let s={name:e.name,email:e.email,phone:e.phone,company:e.company,message:e.msg,url:window.location.href};n.Ay.send("service_8xw6k3r","template_jarui36",s,"XWRnXi4hK2SvmRG3q").then(()=>{alert("Message Sent Successfully \u2705"),t({name:"",email:"",phone:"",company:"",msg:""})}).catch(e=>{console.log(e),alert("Failed to send \u274C")})},children:[(0,s.jsxs)("div",{className:"fl-row",children:[(0,s.jsxs)("div",{className:"fl-group",children:[(0,s.jsx)("label",{className:"fl-label",children:"Your Name"}),(0,s.jsxs)("div",{style:{position:"relative"},children:[(0,s.jsx)("span",{className:"fl-icon",children:"\u{1F464}"}),(0,s.jsx)("input",{className:"fl-input",type:"text",name:"name",placeholder:"Full name",value:e.name,onChange:i,required:!0})]})]}),(0,s.jsxs)("div",{className:"fl-group",children:[(0,s.jsx)("label",{className:"fl-label",children:"Company"}),(0,s.jsxs)("div",{style:{position:"relative"},children:[(0,s.jsx)("span",{className:"fl-icon",children:"\u{1F3E2}"}),(0,s.jsx)("input",{className:"fl-input",type:"text",name:"company",placeholder:"Company name",value:e.company,onChange:i})]})]})]}),(0,s.jsxs)("div",{className:"fl-group",children:[(0,s.jsx)("label",{className:"fl-label",children:"Email Address"}),(0,s.jsxs)("div",{style:{position:"relative"},children:[(0,s.jsx)("span",{className:"fl-icon",children:"\u2709\uFE0F"}),(0,s.jsx)("input",{className:"fl-input",type:"email",name:"email",placeholder:"your@email.com",value:e.email,onChange:i,required:!0})]})]}),(0,s.jsxs)("div",{className:"fl-group",children:[(0,s.jsx)("label",{className:"fl-label",children:"Mobile Number"}),(0,s.jsxs)("div",{className:"phone-row",children:[(0,s.jsx)("div",{className:"phone-flag",children:(0,s.jsx)("span",{className:"phone-flag-icon",children:"\u{1F4DE}"})}),(0,s.jsx)("input",{className:"fl-input",type:"tel",name:"phone",placeholder:"Mobile number",value:e.phone,onChange:i,maxLength:"10",pattern:"[0-9]{10}",required:!0})]})]}),(0,s.jsxs)("div",{className:"fl-group textarea-group",children:[(0,s.jsx)("label",{className:"fl-label",children:"Message"}),(0,s.jsxs)("div",{style:{position:"relative"},children:[(0,s.jsx)("span",{className:"fl-icon",style:{top:"0.9rem",transform:"none"},children:"\u{1F4AC}"}),(0,s.jsx)("textarea",{className:"fl-textarea",name:"msg",placeholder:"Tell us about your business needs...",value:e.msg,onChange:i})]})]}),(0,s.jsxs)("button",{type:"submit",className:"ap-submit",children:["Get Free Consultation",(0,s.jsx)("span",{className:"ap-submit-arrow",children:"\u203A"})]})]})]})})]})]})}function w(){return(0,s.jsxs)("section",{className:"pcs-svc",children:[(0,s.jsx)("div",{className:"pcs-svc-dots"}),(0,s.jsx)("div",{className:"pcs-svc-glow pcs-ssvg1"}),(0,s.jsx)("div",{className:"pcs-svc-glow pcs-ssvg2"}),(0,s.jsxs)("div",{className:"pcs-svc-hdr",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Our Specialized SEO Marketing Services"})}),(0,s.jsxs)("h3",{className:"pcs-svc-h2",children:["Every Keyword a Strategy.",(0,s.jsx)("span",{children:" Every Click a Step Forward."})]}),(0,s.jsx)("p",{className:"pcs-svc-sub",children:"As a results-driven SEO agency, Priyam Consultancy Services crafts tailored strategies customized to your brand's goals, market, and growth stage."})]}),(0,s.jsx)("div",{className:"pcs-svc-panels",children:m.map((e,t)=>(0,s.jsx)(u,{svc:e,index:t},e.num))})]})}function b({step:e,index:t}){let[i,r]=d(.1);return(0,s.jsx)("div",{ref:i,className:`pcs-tp-step${r?" tp-vis":""}`,children:t%2==1?(0,s.jsxs)(s.Fragment,{children:[(0,s.jsxs)("div",{className:"pcs-tp-text-side",children:[(0,s.jsx)("p",{className:"pcs-tp-desc",children:e.desc}),(0,s.jsx)("div",{className:"pcs-tp-bullets",children:e.bullets.map(e=>(0,s.jsx)("span",{className:"pcs-tp-bullet",children:e},e))})]}),(0,s.jsxs)("div",{className:"pcs-tp-num-side",children:[(0,s.jsx)("div",{className:"pcs-tp-bg-num",children:e.step}),(0,s.jsxs)("div",{className:"pcs-tp-step-index",children:["Step \u2014 ",e.step]}),(0,s.jsx)("h4",{className:"pcs-tp-step-title",children:e.title}),(0,s.jsx)("div",{className:"pcs-tp-phase",children:e.phase})]})]}):(0,s.jsxs)(s.Fragment,{children:[(0,s.jsxs)("div",{className:"pcs-tp-num-side",children:[(0,s.jsx)("div",{className:"pcs-tp-bg-num",children:e.step}),(0,s.jsxs)("div",{className:"pcs-tp-step-index",children:["Step \u2014 ",e.step]}),(0,s.jsx)("h4",{className:"pcs-tp-step-title",children:e.title}),(0,s.jsx)("div",{className:"pcs-tp-phase",children:e.phase})]}),(0,s.jsxs)("div",{className:"pcs-tp-text-side",children:[(0,s.jsx)("p",{className:"pcs-tp-desc",children:e.desc}),(0,s.jsx)("div",{className:"pcs-tp-bullets",children:e.bullets.map(e=>(0,s.jsx)("span",{className:"pcs-tp-bullet",children:e},e))})]})]})})}function v(){return(0,s.jsxs)("section",{className:"pcs-tp-section",children:[(0,s.jsx)("div",{className:"pcs-tp-cross"}),(0,s.jsxs)("div",{className:"pcs-tp-header",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Our SEO Execution Process"})}),(0,s.jsxs)("h2",{className:"pcs-tp-h2",children:["Precise SEO Execution,",(0,s.jsx)("em",{children:" Backed by Data and Strategy"})]}),(0,s.jsx)("p",{className:"pcs-tp-sub",children:"Our SEO process at Priyam Consultancy Services is structured to meet the unique objectives of your business, step-by-step. From audits to content, everything we do is strategic, measurable, and customized."})]}),(0,s.jsx)("div",{className:"pcs-tp-body",children:h.map((e,t)=>(0,s.jsx)(b,{step:e,index:t},e.step))})]})}function y({item:e}){let[t,i]=d(.12);return(0,s.jsx)("div",{ref:t,className:`pcs-hww-arrow-item${i?" hww-vis":""}`,children:(0,s.jsxs)("div",{className:"pcs-hww-card",children:[(0,s.jsx)("div",{className:"pcs-hww-icon-wrap",children:e.icon}),(0,s.jsx)("h4",{className:"pcs-hww-card-title",children:e.title}),(0,s.jsx)("div",{className:"pcs-hww-card-desc",children:e.desc})]})})}function j(){return(0,s.jsxs)("section",{className:"pcs-hww",children:[(0,s.jsx)("div",{className:"pcs-hww-dot-grid"}),(0,s.jsx)("div",{className:"pcs-hww-glow pcs-hww-glow-1"}),(0,s.jsx)("div",{className:"pcs-hww-glow pcs-hww-glow-2"}),(0,s.jsxs)("div",{className:"pcs-hww-header",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"How We Work"})}),(0,s.jsxs)("h2",{className:"pcs-hww-h2",children:["Plan With ",(0,s.jsx)("span",{children:"Purpose."})," Execute With ",(0,s.jsx)("span",{children:"Precision."})]})]}),(0,s.jsx)("div",{className:"pcs-hww-arrows-wrap",children:(0,s.jsx)("div",{className:"pcs-hww-arrow-track",children:g.map(e=>(0,s.jsx)(y,{item:e},e.label))})})]})}let k=[{q:"What is SEO?",a:" SEO (Search Engine Optimization) is the process of improving a website\u2019s visibility on search engines like Google. It helps businesses attract organic traffic, improve rankings, increase credibility, and generate long-term online growth through optimized content, technical improvements, and strategic keyword targeting."},{q:"What is the difference between SEO and SEM?",a:"SEO focuses on improving organic search rankings through long-term optimization strategies, while SEM (Search Engine Marketing) includes paid advertising campaigns like Google Ads for immediate visibility. SEO builds sustainable traffic over time, whereas SEM generates faster short-term results through paid promotions."},{q:"How long does SEO take to show results?",a:"SEO is a long-term strategy, and results typically begin appearing within 3 to 6 months depending on competition, industry, website condition, and keyword difficulty. Consistent optimization, quality content, and technical improvements contribute to stronger and more sustainable ranking growth over time."},{q:"What do your SEO services include?",a:" Our SEO services include keyword research, technical SEO, on-page optimization, content strategy, link building, local SEO, performance tracking, competitor analysis, and regular reporting. We focus on improving search visibility, website traffic, user engagement, and long-term business growth through data-driven optimization strategies."},{q:"Do you work with specific industries?",a:"We work with businesses across multiple industries including healthcare, technology, ecommerce, construction, consulting, retail, manufacturing, and professional services. Our SEO strategies are customized based on industry trends, audience behavior, competition levels, and business goals to deliver measurable digital growth outcomes."},{q:"What do e-commerce SEO services include?",a:" E-commerce SEO services include product page optimization, category structure improvements, technical SEO, keyword targeting, content optimization, image optimization, schema implementation, and conversion-focused strategies. The goal is to improve product visibility, increase organic traffic, and drive higher online sales performance"}];function S(){let[e,t]=(0,r.useState)(null),i=i=>{t(e===i?null:i)};return(0,s.jsxs)("section",{className:"faq-section",children:[(0,s.jsx)("div",{className:"partners-header2",style:{textAlign:"center",marginTop:"20px"},children:(0,s.jsx)("h4",{className:"partners-eyebrow",children:"Frequently Asked Questions"})}),(0,s.jsxs)("div",{className:"container",children:[(0,s.jsx)("div",{className:"faq-head",children:(0,s.jsxs)("h3",{className:"faq-h3",children:["Queries That Could ",(0,s.jsx)("span",{children:"Hold You Back"})]})}),(0,s.jsxs)("div",{className:"faq-wrapper",children:[(0,s.jsx)("div",{className:"faq-col",children:k.slice(0,3).map((t,r)=>(0,s.jsxs)("div",{className:"faq-item",children:[(0,s.jsxs)("div",{className:"faq-question",onClick:()=>i(r),children:[(0,s.jsx)("span",{children:t.q}),(0,s.jsx)("span",{className:"icon",children:e===r?"\u2212":"+"})]}),e===r&&(0,s.jsx)("div",{className:"faq-answer",children:t.a})]},r))}),(0,s.jsx)("div",{className:"faq-col",children:k.slice(3,6).map((t,r)=>(0,s.jsxs)("div",{className:"faq-item",children:[(0,s.jsxs)("div",{className:"faq-question",onClick:()=>i(r+3),children:[(0,s.jsx)("span",{children:t.q}),(0,s.jsx)("span",{className:"icon",children:e===r+3?"\u2212":"+"})]}),e===r+3&&(0,s.jsx)("div",{className:"faq-answer",children:t.a})]},r+3))})]})]})]})}function z(){return(0,r.useEffect)(()=>{let e="pcs-seo-styles";if(!document.getElementById(e)){let t=document.createElement("style");t.id=e,t.textContent=l,document.head.appendChild(t)}return()=>{}},[]),(0,s.jsxs)(p.A,{children:[(0,s.jsxs)(c.A,{children:[(0,s.jsx)("title",{children:"Best SEO Company in India | Search Engine Optimization"}),(0,s.jsx)("meta",{name:"description",content:"PCS is an award-winning SEO company in India. Search engine visibility for your website is improved with our export Search Engine Optimization services."}),(0,s.jsx)("meta",{name:"keywords",content:"SEO Agency, Search Engine Optimization, SEO Services, SEO Company, Search Engine Optimization Agency, SEO Services Providers"}),(0,s.jsx)("link",{rel:"canonical",href:"https://www.priyamconsultancy.com/search-engine-optimization"}),(0,s.jsx)("meta",{property:"og:title",content:"Best SEO Company in India | Search Engine Optimization"}),(0,s.jsx)("meta",{property:"og:description",content:"PCS is an award-winning SEO company in India. Search engine visibility for your website is improved with our export Search Engine Optimization services."}),(0,s.jsx)("meta",{property:"og:type",content:"website"}),(0,s.jsx)("meta",{property:"og:url",content:"https://www.priyamconsultancy.com/search-engine-optimization"}),(0,s.jsx)("meta",{property:"og:image",content:"https://www.priyamconsultancy.com/img/seo.png"}),(0,s.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),(0,s.jsx)("meta",{name:"twitter:title",content:"Best SEO Company in India | Search Engine Optimization"}),(0,s.jsx)("meta",{name:"twitter:description",content:"PCS is an award-winning SEO company in India. Search engine visibility for your website is improved with our export Search Engine Optimization services."}),(0,s.jsx)("meta",{name:"twitter:image",content:"https://www.priyamconsultancy.com/img/seo.png"}),(0,s.jsx)("script",{type:"application/ld+json",children:JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,item:{"@id":"https://www.priyamconsultancy.com/",name:"Home"}},{"@type":"ListItem",position:2,item:{"@id":"https://www.priyamconsultancy.com/search-engine-optimization/",name:"Search Engine Optimization"}}]})}),(0,s.jsx)("script",{type:"application/ld+json",children:JSON.stringify({"@context":"https://schema.org","@type":"Organization",name:"Priyam Consultancy Services",url:"https://www.priyamconsultancy.com/",logo:"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",contactPoint:[{"@type":"ContactPoint",telephone:"+91 96774 44048",contactType:"customer support"}],sameAs:["https://www.facebook.com/profile.php?id=61577125709962","https://www.linkedin.com/company/priyam-consultancy-services/","https://www.instagram.com/priyam_consultancy_services/","https://x.com/services91032","https://g.co/kgs/rdTYdi6"]})}),(0,s.jsx)("script",{type:"application/ld+json",children:JSON.stringify({"@context":"https://schema.org","@type":"Service","@id":"https://www.priyamconsultancy.com/search-engine-optimization/#service",name:"Search Engine Optimization",serviceType:"SEO Services",url:"https://www.priyamconsultancy.com/search-engine-optimization/",description:"PCS is an award-winning SEO company in India. Search engine visibility for your website is improved with our expert Search Engine Optimization services.",provider:{"@type":"Organization",name:"Priyam Consultancy Services",url:"https://www.priyamconsultancy.com/",logo:{"@type":"ImageObject",url:"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"}},areaServed:{"@type":"Country",name:"India"}})}),(0,s.jsx)("script",{type:"application/ld+json",children:JSON.stringify({"@context":"https://schema.org/","@type":"Product",name:"Search Engine Optimization",image:["https://www.priyamconsultancy.com/img/seo.png"],description:"Best SEO services in Coimbatore offering keyword research, technical SEO, on-page optimization, content strategy, link building, local SEO, ecommerce SEO and search engine ranking improvement solutions.",brand:{"@type":"Brand",name:"Priyam Consultancy Services"},review:{"@type":"Review",reviewRating:{"@type":"Rating",ratingValue:"4.9",bestRating:"5",worstRating:"1"},author:{"@type":"Person",name:"Admin"}},aggregateRating:{"@type":"AggregateRating",ratingValue:"4.9",reviewCount:"4587"},offers:{"@type":"Offer",url:"https://www.priyamconsultancy.com/search-engine-optimization/",priceCurrency:"USD",price:"0.00",priceValidUntil:"2026-12-31",itemCondition:"https://schema.org/NewCondition",availability:"https://schema.org/InStock",seller:{"@type":"Organization",name:"Priyam Consultancy Services"}}})}),(0,s.jsx)("script",{type:"application/ld+json",children:JSON.stringify({"@context":"https://schema.org","@type":"FAQPage",mainEntity:[{"@type":"Question",name:"What is SEO?",acceptedAnswer:{"@type":"Answer",text:"SEO (Search Engine Optimization) is the process of improving a website's visibility on search engines like Google."}},{"@type":"Question",name:"What is the difference between SEO and SEM?",acceptedAnswer:{"@type":"Answer",text:"SEO focuses on organic rankings while SEM includes paid advertising such as Google Ads."}},{"@type":"Question",name:"How long does SEO take to show results?",acceptedAnswer:{"@type":"Answer",text:"SEO results typically begin appearing within 3 to 6 months depending on competition and website condition."}},{"@type":"Question",name:"What do your SEO services include?",acceptedAnswer:{"@type":"Answer",text:"Our SEO services include keyword research, technical SEO, on-page optimization, content strategy, link building, local SEO and reporting."}}]})})]}),(0,s.jsx)(f,{}),(0,s.jsx)(x,{}),(0,s.jsx)(w,{}),(0,s.jsx)(v,{}),(0,s.jsx)(j,{}),(0,s.jsx)(S,{}),(0,s.jsx)(a.A,{}),(0,s.jsx)(o.A,{})]})}}}]);
