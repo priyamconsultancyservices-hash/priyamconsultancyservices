@@ -916,8 +916,7 @@ export default function PcsPpcPage() {
     return () => { };
   }, []);
 
-  const schemaData = [
-    // Breadcrumb List Schema
+const breadcrumbSchema =  
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
@@ -939,10 +938,10 @@ export default function PcsPpcPage() {
           }
         }
       ]
-    },
+    };
 
     // Organization Schema
-    {
+   const organizationSchema =  {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Priyam Consultancy Services",
@@ -962,10 +961,10 @@ export default function PcsPpcPage() {
         "https://x.com/services91032",
         "https://g.co/kgs/rdTYdi6"
       ]
-    },
+    };
 
     // Service Page Schema
-    {
+   const serviceSchema = {
       "@context": "https://schema.org",
       "@type": "Service",
       "@id": "https://www.priyamconsultancy.com/performance-marketing/#service",
@@ -986,10 +985,10 @@ export default function PcsPpcPage() {
         "@type": "Country",
         "name": "India"
       }
-    },
+    };
 
     // Product Schema
-    {
+  const productSchema =  {
       "@context": "https://schema.org/",
       "@type": "Product",
       "name": "performance-marketing",
@@ -1030,10 +1029,10 @@ export default function PcsPpcPage() {
           "name": "priyamconsultancy.com"
         }
       }
-    },
+    };
 
     // FAQ Schema
-    {
+   const faqSchema = {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       "mainEntity": [
@@ -1086,9 +1085,8 @@ export default function PcsPpcPage() {
           }
         }
       ]
-    }
-  ];
-
+    };
+  
   return (
     <Layout>
       <Head>
@@ -1111,13 +1109,13 @@ export default function PcsPpcPage() {
         <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/performance-marketing.png" />
 
         {/* ✅ All Schemas - Array-ஐ loop போட்டு render பண்றோம் */}
-        {schemaData.map((schema, index) => (
-          <script
-            key={index}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          />
-        ))}
+      {/* Schema */}
+         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+
       </Head>
 
       <Hero />

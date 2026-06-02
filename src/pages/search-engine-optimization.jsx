@@ -1187,7 +1187,7 @@ const faqSchema = {
       }
     }
   ]
-};
+}; 
   return (
     <Layout>
       <Head>
