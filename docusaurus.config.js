@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+url: 'https://www.priyamconsultancy.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'priyamconsultancy', // Usually your GitHub org/user name.
+  projectName: 'website', // Usually your repo name.
 
 onBrokenLinks: 'ignore',
 
@@ -40,39 +40,21 @@ onBrokenLinks: 'ignore',
     locales: ['en'],
   },
 
-  presets: [
-    [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      }),
-    ],
+presets: [
+  [
+    'classic',
+    ({
+      docs: {
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+      blog: false,
+      theme: {
+        customCss: require.resolve('./src/css/custom.css'),
+      },
+    }),
   ],
+],
+
 headTags: [
     { tagName: 'meta', attributes: { name: 'google-site-verification', content: 'IO1HxUgZHVz1o7825OKmXZQ_8thaMc5cf0rPfMeFApE' } },
     { tagName: 'meta', attributes: { name: 'msvalidate.01', content: '749C3853DFE8CA5697D84B7714BA8D5D' } },

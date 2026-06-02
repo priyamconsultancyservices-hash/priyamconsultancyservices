@@ -85,16 +85,15 @@ export default function CaseStudy() {
       <Head>
         <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
         <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
+        <link rel="canonical" href="https://priyamconsultancy.com/case-studies/tactive" />
         <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
         <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://priyamconsultancy.com/case-studies/tactive" />
       </Head>
       <style>{styles}</style>
 
       <div className="detail-wrap">
-
         {/* ── BANNER ── */}
         <section className="detail-banner">
           <div className="detail-banner-inner">
@@ -106,33 +105,28 @@ export default function CaseStudy() {
 
         {/* ── BODY ── */}
         <div className="detail-page-body">
-
           {/* LEFT */}
           <div className="detail-left">
-
             <div className="detail-hero-img">
-              <img src="https://picsum.photos/seed/18/900/400" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
+              <img src="/img/case-study-tactive-about.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
             </div>
-
-
             <div className="detail-section">
               <h2>About Tactive</h2>
               <p>
                 Tactive Software Systems is a technology-driven company delivering dedicated construction ERP solutions . Backed by over 17 years of research and development and supported by the industry expertise of URC Constructions, Tactive helps construction businesses streamline operations and make data-driven decisions.
-
               </p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
               <p>
-                Tactive partnered with us to build a structured B2B performance marketing ecosystem focused on generating qualified leads across Indian and international markets for its construction ERP solutions. 
-</p>
+                Tactive partnered with us to build a structured B2B performance marketing ecosystem focused on generating qualified leads across Indian and international markets for its construction ERP solutions.
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>The brand had a minimal inbound lead pipeline and lacked a performance-driven digital strategy. Website experience, market positioning, and conversion pathways required optimization to support scalable domestic and international growth. 
-</p>
+              <p>The brand had a minimal inbound lead pipeline and lacked a performance-driven digital strategy. Website experience, market positioning, and conversion pathways required optimization to support scalable domestic and international growth.
+              </p>
             </div>
 
             <div className="detail-section">
@@ -149,8 +143,8 @@ export default function CaseStudy() {
 
             <div className="detail-section">
               <h2>The Result</h2>
-              <p>Our strategy generated a ₹35 Cr+ qualified sales pipeline through strategic content and performance marketing. The campaigns improved Tactive’s visibility across India, GCC, Africa, and Oceania while enabling scalable international lead generation growth. 
-</p>
+              <p>Our strategy generated a ₹35 Cr+ qualified sales pipeline through strategic content and performance marketing. The campaigns improved Tactive’s visibility across India, GCC, Africa, and Oceania while enabling scalable international lead generation growth.
+              </p>
             </div>
 
             {/* CTA */}
@@ -159,21 +153,18 @@ export default function CaseStudy() {
               <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
-
           </div>
 
           {/* SIDEBAR */}
           <div className="detail-sidebar">
-
             {/* About */}
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>Tactive</strong></p>
-             <p>Service: </p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">SEO</span>
                 <span className="sidebar-tag">Performance Marketing</span>
-
               </div>
             </div>
 
@@ -232,9 +223,7 @@ export default function CaseStudy() {
                 <div className="recent-arrow">→</div>
               </a>
             </div>
-
           </div>
-
         </div>
       </div>
     </Layout>

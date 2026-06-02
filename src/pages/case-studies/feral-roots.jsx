@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="Feral Roots Case Study | Sustainable E-Commerce Growth | PCS" description="See how PCS helped Feral Roots establish a strong digital presence and drive e-commerce growth for their sustainable products brand.">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>Feral Roots Case Study | Sustainable E-Commerce Growth | PCS</title>
+        <meta name="description" content="See how PCS helped Feral Roots establish a strong digital presence and drive e-commerce growth for their sustainable products brand." />
+        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/feral-roots" />
+        <meta property="og:title" content="Feral Roots Case Study | Sustainable E-Commerce Growth | PCS" />
+        <meta property="og:description" content="See how PCS helped Feral Roots establish a strong digital presence and drive e-commerce growth for their sustainable products brand." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/feral-roots" />
       </Head>
       <style>{styles}</style>
 
@@ -110,7 +110,7 @@ export default function CaseStudy() {
           <div className="detail-left">
 
             <div className="detail-hero-img">
-              <img src="https://picsum.photos/seed/18/900/400" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
+              <img src="/img/case-study-feral-roots-about.webp" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
             </div>
 
      
