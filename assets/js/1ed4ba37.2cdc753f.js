@@ -1,14 +1,7 @@
-import { useState, useEffect, useRef } from "react";
-import emailjs from "@emailjs/browser";
-import BlogSection from "../components/BlogSection";
-import CTASection from "../components/HomePage/CTA";
-const banner = "/img/performance-marketing.png";
-import Layout from '@theme/Layout';
-import Head from '@docusaurus/Head';
-
-
-// ─── CSS-in-JS via a single <style> block injected once ───────────────────────
-const STYLES = `
+"use strict";(self.webpackChunknew_docs_pcs_website_design=self.webpackChunknew_docs_pcs_website_design||[]).push([["6329"],{3177(e,t,a){a.d(t,{A:()=>s});var r=a(4848),n=a(6540);let i=`https://corsproxy.io/?${encodeURIComponent("https://www.priyamconsultancy.com/blog/feed/")}`;function s(){let[e,t]=(0,n.useState)([]),[a,s]=(0,n.useState)(!0),[o,p]=(0,n.useState)(null);return(0,n.useEffect)(()=>{fetch(i).then(e=>{if(!e.ok)throw Error(`HTTP ${e.status}`);return e.text()}).then(e=>{t(Array.from(new DOMParser().parseFromString(e,"text/xml").querySelectorAll("item")).slice(0,3).map(e=>{let t=e.querySelector("enclosure"),a=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","content")[0],r=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","thumbnail")[0],n=e.getElementsByTagNameNS("http://purl.org/rss/1.0/modules/content/","encoded")[0],i=n?.textContent||"",s=i.match(/<img[^>]+src=["']([^"']+)["']/i),o=e.querySelector("description")?.textContent||"",p=o.match(/<img[^>]+src=["']([^"']+)["']/i),c=t?.getAttribute("url")||a?.getAttribute("url")||r?.getAttribute("url")||s?.[1]||p?.[1]||null,l=(i||o).replace(/<[^>]*>/g,"").replace(/&[^;]+;/g," ").trim(),d=l.length>340?l.slice(0,340)+"...":l,m=e.getElementsByTagName("link")[0],g=m?.textContent?.trim()||e.querySelector("guid")?.textContent||"#";return{guid:e.querySelector("guid")?.textContent||Math.random().toString(),title:e.querySelector("title")?.textContent?.trim()||"Untitled",link:g,thumbnail:c,excerpt:d}})),s(!1)}).catch(e=>{p(e.message),s(!1)})},[]),(0,r.jsxs)("section",{style:{width:"100%",padding:"4rem 1rem",boxSizing:"border-box",background:"#fff"},children:[(0,r.jsxs)("div",{style:{maxWidth:"1200px",margin:"0 auto"},children:[(0,r.jsxs)("div",{style:{textAlign:"center",marginBottom:"2.5rem"},children:[(0,r.jsx)("h2",{style:{fontSize:"2rem",fontWeight:700,margin:"0 0 0.5rem",color:"#111"},children:"Blogs"}),(0,r.jsx)("p",{style:{color:"#666",margin:0,fontSize:"1rem"},children:"Stay updated with the latest in digital marketing, growth strategies, and industry trends."})]}),a&&(0,r.jsx)("p",{style:{textAlign:"center",color:"#888"},children:"Loading..."}),o&&(0,r.jsxs)("p",{style:{textAlign:"center",color:"red"},children:["Error: ",o]}),(0,r.jsx)("div",{style:{display:"grid",gridTemplateColumns:"repeat(3, 1fr)",gap:"1.5rem"},className:"blog-grid",children:e.map(e=>(0,r.jsxs)("a",{href:e.link,target:"_blank",rel:"noreferrer",style:{border:"1px solid #e5e7eb",borderRadius:"12px",overflow:"hidden",background:"#fff",display:"flex",flexDirection:"column",textDecoration:"none",color:"inherit",transition:"box-shadow 0.2s, transform 0.2s",cursor:"pointer"},onMouseEnter:e=>{e.currentTarget.style.boxShadow="0 8px 24px rgba(0,0,0,0.12)",e.currentTarget.style.transform="translateY(-3px)"},onMouseLeave:e=>{e.currentTarget.style.boxShadow="none",e.currentTarget.style.transform="translateY(0)"},children:[(0,r.jsx)("div",{style:{width:"100%",aspectRatio:"16/9",overflow:"hidden",background:"#1a2744"},children:e.thumbnail?(0,r.jsx)("img",{src:e.thumbnail,alt:e.title,loading:"lazy",style:{width:"100%",height:"100%",objectFit:"cover",display:"block"}}):(0,r.jsx)("div",{style:{width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",opacity:.4,fontSize:"0.8rem"},children:"No image"})}),(0,r.jsxs)("div",{style:{padding:"1.25rem",display:"flex",flexDirection:"column",gap:"0.75rem"},children:[(0,r.jsx)("p",{style:{fontWeight:600,fontSize:"1.1rem",lineHeight:1.6,margin:0,color:"#111"},children:e.title}),(0,r.jsx)("p",{style:{color:"#444",fontSize:"0.875rem",lineHeight:1.6,flex:1,margin:0},children:e.excerpt}),(0,r.jsx)("span",{style:{display:"inline-block",background:"#E87C30",color:"#fff",padding:"0.6rem 1.5rem",borderRadius:"999px",fontWeight:500,alignSelf:"flex-start",marginTop:"0.5rem",fontSize:"0.875rem"},children:"Read More"})]})]},e.guid))})]}),(0,r.jsx)("style",{dangerouslySetInnerHTML:{__html:`
+        @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 600px)  { .blog-grid { grid-template-columns: 1fr !important; } }
+      `}})]})}},9393(e,t,a){a.d(t,{A:()=>i});var r=a(4848),n=a(6540);let i=function(){let e=(0,n.useRef)(null);return(0,n.useEffect)(()=>{let t=e.current;if(!t)return;let a=t.getContext("2d"),r="#ed8337",n,i,s=[],o;function p(){n=t.width=t.parentElement.offsetWidth,i=t.height=t.parentElement.offsetHeight}function c(){this.reset()}c.prototype.reset=function(){this.x=Math.random()*n,this.y=Math.random()*i,this.r=2.2*Math.random()+.6,this.type=.55>Math.random()?"dot":.5>Math.random()?"ring":"plus",this.speed=.35*Math.random()+.08,this.dir=Math.random()*Math.PI*2,this.alpha=.45*Math.random()+.1,this.pulse=Math.random()*Math.PI*2,this.pulseSpeed=.018*Math.random()+.008,this.size=4*Math.random()+2},c.prototype.update=function(){this.x+=Math.cos(this.dir)*this.speed,this.y+=Math.sin(this.dir)*this.speed,this.pulse+=this.pulseSpeed,this.dir+=(Math.random()-.5)*.015,this.x<-20&&(this.x=n+20),this.x>n+20&&(this.x=-20),this.y<-20&&(this.y=i+20),this.y>i+20&&(this.y=-20)},c.prototype.draw=function(){let e=this.alpha*(.7+.3*Math.sin(this.pulse));if(a.save(),a.globalAlpha=e,a.strokeStyle=a.fillStyle=r,a.lineWidth=1,"dot"===this.type)a.beginPath(),a.arc(this.x,this.y,this.r+.4*Math.sin(this.pulse),0,2*Math.PI),a.fill();else if("ring"===this.type){let e=this.size*(.9+.15*Math.sin(this.pulse));a.beginPath(),a.arc(this.x,this.y,e,0,2*Math.PI),a.stroke()}else{let e=this.size*(.9+.1*Math.sin(this.pulse));a.beginPath(),a.moveTo(this.x-e,this.y),a.lineTo(this.x+e,this.y),a.moveTo(this.x,this.y-e),a.lineTo(this.x,this.y+e),a.stroke()}a.restore()},window.addEventListener("resize",p),p(),s=[];let l=Math.floor(n*i/9e3);for(let e=0;e<Math.max(l,28);e++)s.push(new c);return!function e(){a.clearRect(0,0,n,i),function(){let e=s.filter(e=>"dot"===e.type);for(let t=0;t<e.length;t++)for(let n=t+1;n<e.length;n++){let i=e[t].x-e[n].x,s=e[t].y-e[n].y,o=Math.sqrt(i*i+s*s);o<110&&(a.save(),a.globalAlpha=(1-o/110)*.12,a.strokeStyle=r,a.lineWidth=.7,a.beginPath(),a.moveTo(e[t].x,e[t].y),a.lineTo(e[n].x,e[n].y),a.stroke(),a.restore())}}(),s.forEach(e=>{e.update(),e.draw()}),o=requestAnimationFrame(e)}(),()=>{cancelAnimationFrame(o),window.removeEventListener("resize",p)}},[]),(0,r.jsx)("section",{id:"cta-final",children:(0,r.jsxs)("div",{className:"cta-banner",style:{"--glow-x":"50%","--glow-y":"50%"},children:[(0,r.jsx)("canvas",{id:"ctaCanvas",ref:e}),(0,r.jsxs)("div",{className:"cta-banner-left",children:[(0,r.jsx)("div",{className:"partners-header",children:(0,r.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Ready to Start?"})}),(0,r.jsxs)("h2",{className:"cta-banner-heading",children:["Let's Talk About Your",(0,r.jsx)("br",{}),"Next Big ",(0,r.jsx)("span",{className:"hl-italic",children:"Growth Move"})]}),(0,r.jsx)("p",{className:"cta-banner-sub",children:"No pressure. Just a quick conversation to understand where you are-and how we can help you move forward."})]}),(0,r.jsxs)("div",{className:"cta-banner-right",children:[(0,r.jsxs)("a",{href:"#",className:"cta-bprimary",children:["Book a Free Consultation",(0,r.jsx)("svg",{viewBox:"0 0 16 16",fill:"none",children:(0,r.jsx)("path",{d:"M3 8h10M9 4l4 4-4 4",stroke:"currentColor",strokeWidth:"1.8",strokeLinecap:"round",strokeLinejoin:"round"})})]}),(0,r.jsx)("a",{href:"#",className:"cta-bghost",children:"View All Services"})]})]})})}},8653(e,t,a){a.r(t),a.d(t,{default:()=>z});var r=a(4848),n=a(6540),i=a(8128),s=a(3177),o=a(9393),p=a(1085),c=a(3572);let l=`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
 
   :root {
@@ -26,7 +19,7 @@ width:100%;
   html { scroll-behavior: smooth; }
   body { overflow-x: hidden; }
 
-  /* ── HERO ── */
+  /* \u{2500}\u{2500} HERO \u{2500}\u{2500} */
   .ppc-hero {
     min-height: 100vh;
     display: grid; grid-template-columns: 1fr 1fr;
@@ -74,12 +67,12 @@ width:100%;
     .ppc-hero-sub { font-size:0.92rem; }
   }
 
-  /* ── PPC HERO RIGHT ── */
+  /* \u{2500}\u{2500} PPC HERO RIGHT \u{2500}\u{2500} */
   .ppc-scene { position:relative; height:470px; display:flex; align-items:flex-start; justify-content:center; margin:0 auto; }
   .ppc-hero-img { width:100%; height:100%; object-fit:contain; display:block; }
   @keyframes ppc-float1 { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-14px);} }
 
-  /* ── SERVICES ── */
+  /* \u{2500}\u{2500} SERVICES \u{2500}\u{2500} */
   .ppc-svc { position:relative; background:#004168; padding:4rem 0 0; overflow:hidden; }
   .ppc-svc-dots { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:radial-gradient(rgba(237,131,55,0.18) 1px,transparent 1px); background-size:38px 38px; animation:ppc-dots-drift 30s linear infinite; opacity:0.35; }
   @keyframes ppc-dots-drift { to { background-position: 38px 38px; } }
@@ -159,7 +152,7 @@ width:100%;
   @media(max-width:900px){ .ppc-svc-panels { grid-template-columns:1fr 1fr; } }
   @media(max-width:580px){ .ppc-svc-panels { grid-template-columns:1fr; } .ppc-svc-panel { border-right:none !important; min-height:220px; } }
 
-  /* ── PROCESS ── */
+  /* \u{2500}\u{2500} PROCESS \u{2500}\u{2500} */
   .ppc-tp-section { position:relative; background:#ffffff; padding:4rem 0 4rem; overflow:hidden; }
   .ppc-tp-cross { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:linear-gradient(45deg,rgba(2,43,68,0.015) 25%,transparent 25%),linear-gradient(-45deg,rgba(2,43,68,0.015) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,rgba(2,43,68,0.015) 75%),linear-gradient(-45deg,transparent 75%,rgba(2,43,68,0.015) 75%); background-size:20px 20px; background-position:0 0,0 10px,10px -10px,-10px 0px; }
   .ppc-tp-header { position:relative; z-index:2; text-align:center; padding:0 6% 5rem; }
@@ -200,7 +193,7 @@ width:100%;
     .ppc-tp-num-side,.ppc-tp-text-side { padding:2rem 5%; }
   }
 
-  /* ── HOW WE WORK ── */
+  /* \u{2500}\u{2500} HOW WE WORK \u{2500}\u{2500} */
   .ppc-hww { position:relative; background:#004168; padding:4rem 0 4rem; overflow:hidden; }
   .ppc-hww-dot-grid { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:radial-gradient(rgba(237,131,55,0.13) 1px,transparent 1px); background-size:36px 36px; opacity:0.3; animation:ppc-dots-drift 28s linear infinite; }
   .ppc-hww-glow { position:absolute; border-radius:50%; pointer-events:none; z-index:0; filter:blur(100px); }
@@ -223,10 +216,10 @@ width:100%;
   .ppc-hww-card-desc { font-family:'Poppins'; font-size:.88rem; line-height:1.74; color:rgb(255,255,255); letter-spacing:0.1px; }
   @media(max-width:860px){ .ppc-hww-arrow-track { grid-template-columns:1fr; gap:2rem; } }
 
-  /* ── FAQ ── */
+  /* \u{2500}\u{2500} FAQ \u{2500}\u{2500} */
   .ppc-faq-answer { font-size:.92rem; }
 
-  /* ── GLOBAL RESPONSIVE ── */
+  /* \u{2500}\u{2500} GLOBAL RESPONSIVE \u{2500}\u{2500} */
   @media(max-width:900px){
     .ppc-svc-hdr { padding:0 5% 3.5rem; }
     .ppc-tp-header { padding:0 5% 3rem; }
@@ -259,7 +252,7 @@ width:100%;
     .ppc-hww-card-desc { font-size:.82rem; }
     .ppc-sp-title { font-size:1.1rem; }
   }
-  /* ── HERO MOBILE ORDER: content first, image second ── */
+  /* \u{2500}\u{2500} HERO MOBILE ORDER: content first, image second \u{2500}\u{2500} */
   @media(max-width:900px){
     .pcs-hero-left { order:1 !important; }
     .pcs-hero-right { order:2 !important; }
@@ -270,7 +263,7 @@ width:100%;
   }
 
 
-  /* ── APPROACH SECTION MOBILE ── */
+  /* \u{2500}\u{2500} APPROACH SECTION MOBILE \u{2500}\u{2500} */
   @media(max-width:900px){
     .ap-inner { grid-template-columns:1fr !important; gap:2.5rem !important; }
     .ap-form-wrap { max-width:100% !important; width:100% !important; }
@@ -286,7 +279,7 @@ width:100%;
     .ap-intro { font-size:.92rem !important; }
   }
 
-  /* ── FAQ MOBILE ── */
+  /* \u{2500}\u{2500} FAQ MOBILE \u{2500}\u{2500} */
   .faq-section { padding:4rem 6%; overflow:hidden; }
   .faq-wrapper { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
   .faq-item {  border-radius:12px; overflow:hidden; margin-bottom:1rem; background:#fff; }
@@ -312,7 +305,7 @@ h3.faq-h3 {
     font-weight: 600;
 }
 
-  /* ── HOW WE WORK MOBILE ── */
+  /* \u{2500}\u{2500} HOW WE WORK MOBILE \u{2500}\u{2500} */
   @media(max-width:768px){
     .pcs-hww-arrow-track,
     .ppc-hww-arrow-track,
@@ -326,7 +319,7 @@ h3.faq-h3 {
     .pcs-hww-card-desc, .ppc-hww-card-desc, .smm-hww-card-desc { font-size:.82rem !important; }
   }
 
-  /* ── PROCESS SECTION MOBILE ── */
+  /* \u{2500}\u{2500} PROCESS SECTION MOBILE \u{2500}\u{2500} */
   @media(max-width:580px){
     .pcs-tp-step, .pcs-tp-step:nth-child(even),
     .ppc-tp-step, .ppc-tp-step:nth-child(even),
@@ -351,78 +344,11 @@ h3.faq-h3 {
     .smm-tp-num-side,.smm-tp-text-side { padding:1.2rem 4% !important; }
   }
 
-  /* ── GLOBAL OVERFLOW FIX ── */
+  /* \u{2500}\u{2500} GLOBAL OVERFLOW FIX \u{2500}\u{2500} */
   img { max-width:100%; height:auto; }
   * { box-sizing:border-box; }
 
-`;
-
-// ─── Intersection observer hook ──────────────────────────────────────────────
-function useInView(threshold = 0.1) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(([entry]) => { if (entry.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold });
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return [ref, visible];
-}
-
-// ─── DATA ────────────────────────────────────────────────────────────────────
-const PPC_SERVICES = [
-  { num: "01", icon: <img src="/img/icon/svc-google-search-ads.webp" alt="Google Search Ads" width="28" height="28" />, subtitle: "Google Search Ads ", title: "Google Search Ads", desc: "Be present when your customers are searching. Our Search Engine Marketing specialists run high-converting Google Search Ads that target the right keywords, ensuring your business shows up exactly where and when it matters. Whether it's PPC for local leads or national reach, we make every search count." },
-  { num: "02", icon: <img src="/img/icon/svc-display-advertising.webp" alt="Display Advertising" width="28" height="28" />, subtitle: "Display Advertising ", title: "Display Advertising ", desc: "Get noticed beyond search. Our visually engaging display ads reach users across millions of websites, boosting brand awareness and driving traffic — a core part of any strong performance marketing strategy." },
-  { num: "03", icon: <img src="/img/icon/svc-youtube-video-ads.webp" alt="YouTube Video Ads" width="28" height="28" />, subtitle: "YouTube Video Ads ", title: "YouTube Video Ads ", desc: "Tell your brand story through video. We create and manage YouTube ads that capture attention, build trust, and drive action — perfect for both branding and conversions within your broader pay per click in digital marketing strategy." },
-  { num: "04", icon: <img src="/img/icon/svc-meta-ads.webp" alt="Meta Ads Facebook and Instagram" width="28" height="28" />, subtitle: "Social Advertising", title: "Meta Ads (Facebook & Instagram) ", desc: "Connect with your audience on the platforms they love. Our Meta ads management, Facebook ads management, and Instagram ads management services drive traffic, leads, and sales through targeted creatives and optimized campaign strategies. As a specialist social media advertising service, we make every rupee of your social budget work harder." },
-  { num: "05", icon: <img src="/img/icon/svc-linkedin-ads.webp" alt="LinkedIn Ads Management" width="28" height="28" />, subtitle: "LinkedIn Ads ", title: "LinkedIn Ads Management ", desc: "Reach decision-makers in any industry. Our LinkedIn Ads management campaigns are tailored for B2B growth, generating high-quality leads through precise targeting and impactful messaging — ideal for companies selling to professionals and enterprises." },
-  { num: "06", icon: <img src="/img/icon/svc-whatsapp-marketing.webp" alt="WhatsApp Marketing" width="28" height="28" />, subtitle: "WhatsApp Marketing ", title: "WhatsApp Marketing ", desc: "As a dedicated WhatsApp Marketing agency, we run structured, scalable WhatsApp marketing campaigns — from strategy and API setup to bulk outreach and re-engagement. Verified, compliant, and built to deliver real business results. " },
-];
-
-const PROCESS_STEPS = [
-  { step: "01", title: "Discover", phase: "Phase 1 — Discover", desc: "Before we launch any ads, we take time to deeply understand your business model, target audience, market positioning, and revenue goals. Our performance marketing team connects with key stakeholders to identify your customer journey, core services, unique selling points, and campaign objectives — ensuring every campaign is aligned with real business needs, customer expectations, and measurable growth outcomes.", bullets: [] },
-  { step: "02", title: "Research & Analyze", phase: "Phase 2 — Research & Analyze ", desc: "We conduct thorough competitor research, analyze your industry landscape, review historical ad performance where available, and identify high-intent keywords and audience segments. From ideal customer profiles and buying behavior to seasonality trends and platform opportunities, we gather every critical insight needed to maximize ROI from day one — a fundamental part of any serious and scalable PPC strategy.", bullets: [] },
-  { step: "03", title: "Strategize", phase: "Phase 3 — Strategize ", desc: "With insights in hand, we craft a custom performance marketing strategy tailored to your business goals and audience behavior. We carefully choose the right platforms across Search Engine Marketing, Meta ads management, LinkedIn Ads management, and more. From campaign structuring and compelling ad creatives to conversion-optimized landing pages, every element is designed to ensure your pay per click ads generate meaningful engagement, qualified leads, and real business results.", bullets: [] },
-  { step: "04", title: "Launch & Optimize", phase: "Phase 4 — Launch & Optimize ", desc: "Once campaigns are live, we continuously monitor performance metrics and optimize campaigns in real time for maximum efficiency. We A/B test ad variations, adjust bidding strategies, refine audience targeting, and pause underperforming segments to improve results consistently. Our goal across every pay per click campaign is simple: reduce unnecessary ad spend, increase conversion efficiency, improve lead quality, and scale strategies that deliver measurable performance.", bullets: [] },
-  { step: "05", title: "Report & Evolve", phase: "Phase 5 — Report & Evolve ", desc: "We provide clear, transparent, and easy-to-understand reports highlighting what’s performing well, what requires improvement, and how campaigns are progressing over time. Alongside detailed monthly reviews, our team proactively updates strategies based on new market trends, platform algorithm changes, audience behavior, and evolving business priorities — ensuring your performance marketing services remain competitive, scalable, and consistently effective as your business continues to grow.", bullets: [] },
-];
-
-const HOW_WE_WORK = [
-  { icon: <img src="/img/icon/hww-strategic-plannings.webp" alt="Strategic Planning" width="30" height="30" />, title: "Strategic Planning ", desc: "Every successful pay per click in digital marketing campaign starts with a clear strategy. We take time to understand your goals, audience, and market — crafting a data-driven roadmap tailored to your business needs." },
-  { icon: <img src="/img/icon/hww-defined-roles.webp" alt="Defined Roles and Collaboration" width="30" height="30" />, title: "Defined Roles & Collaboration ", desc: "We believe great outcomes come from clear responsibilities and strong collaboration. Each team member is aligned with specific roles, ensuring smooth execution and full accountability across every performance marketing engagement." },
-  { icon: <img src="/img/icon/hww-testing-delivery.webp" alt="Thorough Testing and On-Time Delivery" width="30" height="30" />, title: "Thorough Testing & On-Time Delivery ", desc: "Before any campaign goes live, it goes through rigorous quality checks — reviewing every detail for functionality, accuracy, and performance. As a results-driven performance marketing company, we deliver only when everything is right." },
-];
-
-const faqData = [
-  { q: "What is performance marketing and how does it help my business?", a: " Performance marketing is a results-driven digital marketing approach where campaigns are optimized based on measurable actions like leads, clicks, sales, or conversions. It helps businesses improve visibility, attract targeted audiences, generate qualified leads, and maximize return on advertising investment effectively." },
-  { q: "How much budget do I need to start a PPC campaign?", a: " PPC campaign budgets depend on your industry, competition, business goals, and target audience. We create customized strategies suitable for both small and large businesses, ensuring your budget is allocated efficiently to maximize reach, lead generation, and overall campaign performance." },
-  { q: "Which platforms do you run PPC ads on?", a: " We run PPC campaigns across multiple platforms including Google Ads, Meta Ads (Facebook and Instagram), LinkedIn Ads, YouTube Ads, and other relevant advertising networks. Platform selection depends on your business objectives, audience behavior, and the type of conversions you want to achieve." },
-  { q: "Is performance marketing suitable for small businesses?", a: "Yes, performance marketing is highly suitable for small businesses because it focuses on measurable outcomes and controlled spending. It allows businesses to target specific audiences, track campaign performance in real time, optimize budgets efficiently, and generate qualified leads without unnecessary advertising expenses." },
-  { q: "How is performance marketing different from regular digital marketing?", a: " Regular digital marketing focuses broadly on brand visibility and online presence, while performance marketing is centered around measurable actions like leads, conversions, and sales. Every campaign is continuously optimized using data and analytics to improve ROI and deliver trackable business outcomes." },
-  { q: "Do you create the ad content and landing pages too?", a: "Yes, we provide complete campaign support including ad creatives, copywriting, landing page development, audience targeting, and conversion optimization. Our approach ensures that both the advertisements and landing pages work together effectively to improve engagement, lead quality, and campaign performance." },
-
-];
-
-// ─── PPC Hero Image ──────────────────────────────────────────────────────────
-function PpcScene() {
-  return (
-    <div className="ppc-scene">
-      <img
-        src={banner}
-        alt="PPC Marketing Illustration"
-        className="ppc-hero-img"
-      />
-    </div>
-  );
-}
-
-// ─── Hero ────────────────────────────────────────────────────────────────────
-function Hero() {
-  return (
-    <section className="hero" id="hero">
-      <style>{`
+`;function d(e=.1){let t=(0,n.useRef)(null),[a,r]=(0,n.useState)(!1);return(0,n.useEffect)(()=>{let a=t.current;if(!a)return;let n=new IntersectionObserver(([e])=>{e.isIntersecting&&(r(!0),n.disconnect())},{threshold:e});return n.observe(a),()=>n.disconnect()},[e]),[t,a]}let m=[{num:"01",icon:(0,r.jsx)("img",{src:"/img/icon/svc-google-search-ads.webp",alt:"Google Search Ads",width:"28",height:"28"}),subtitle:"Google Search Ads ",title:"Google Search Ads",desc:"Be present when your customers are searching. Our Search Engine Marketing specialists run high-converting Google Search Ads that target the right keywords, ensuring your business shows up exactly where and when it matters. Whether it's PPC for local leads or national reach, we make every search count."},{num:"02",icon:(0,r.jsx)("img",{src:"/img/icon/svc-display-advertising.webp",alt:"Display Advertising",width:"28",height:"28"}),subtitle:"Display Advertising ",title:"Display Advertising ",desc:"Get noticed beyond search. Our visually engaging display ads reach users across millions of websites, boosting brand awareness and driving traffic \u2014 a core part of any strong performance marketing strategy."},{num:"03",icon:(0,r.jsx)("img",{src:"/img/icon/svc-youtube-video-ads.webp",alt:"YouTube Video Ads",width:"28",height:"28"}),subtitle:"YouTube Video Ads ",title:"YouTube Video Ads ",desc:"Tell your brand story through video. We create and manage YouTube ads that capture attention, build trust, and drive action \u2014 perfect for both branding and conversions within your broader pay per click in digital marketing strategy."},{num:"04",icon:(0,r.jsx)("img",{src:"/img/icon/svc-meta-ads.webp",alt:"Meta Ads Facebook and Instagram",width:"28",height:"28"}),subtitle:"Social Advertising",title:"Meta Ads (Facebook & Instagram) ",desc:"Connect with your audience on the platforms they love. Our Meta ads management, Facebook ads management, and Instagram ads management services drive traffic, leads, and sales through targeted creatives and optimized campaign strategies. As a specialist social media advertising service, we make every rupee of your social budget work harder."},{num:"05",icon:(0,r.jsx)("img",{src:"/img/icon/svc-linkedin-ads.webp",alt:"LinkedIn Ads Management",width:"28",height:"28"}),subtitle:"LinkedIn Ads ",title:"LinkedIn Ads Management ",desc:"Reach decision-makers in any industry. Our LinkedIn Ads management campaigns are tailored for B2B growth, generating high-quality leads through precise targeting and impactful messaging \u2014 ideal for companies selling to professionals and enterprises."},{num:"06",icon:(0,r.jsx)("img",{src:"/img/icon/svc-whatsapp-marketing.webp",alt:"WhatsApp Marketing",width:"28",height:"28"}),subtitle:"WhatsApp Marketing ",title:"WhatsApp Marketing ",desc:"As a dedicated WhatsApp Marketing agency, we run structured, scalable WhatsApp marketing campaigns \u2014 from strategy and API setup to bulk outreach and re-engagement. Verified, compliant, and built to deliver real business results. "}],g=[{step:"01",title:"Discover",phase:"Phase 1 \u2014 Discover",desc:"Before we launch any ads, we take time to deeply understand your business model, target audience, market positioning, and revenue goals. Our performance marketing team connects with key stakeholders to identify your customer journey, core services, unique selling points, and campaign objectives \u2014 ensuring every campaign is aligned with real business needs, customer expectations, and measurable growth outcomes.",bullets:[]},{step:"02",title:"Research & Analyze",phase:"Phase 2 \u2014 Research & Analyze ",desc:"We conduct thorough competitor research, analyze your industry landscape, review historical ad performance where available, and identify high-intent keywords and audience segments. From ideal customer profiles and buying behavior to seasonality trends and platform opportunities, we gather every critical insight needed to maximize ROI from day one \u2014 a fundamental part of any serious and scalable PPC strategy.",bullets:[]},{step:"03",title:"Strategize",phase:"Phase 3 \u2014 Strategize ",desc:"With insights in hand, we craft a custom performance marketing strategy tailored to your business goals and audience behavior. We carefully choose the right platforms across Search Engine Marketing, Meta ads management, LinkedIn Ads management, and more. From campaign structuring and compelling ad creatives to conversion-optimized landing pages, every element is designed to ensure your pay per click ads generate meaningful engagement, qualified leads, and real business results.",bullets:[]},{step:"04",title:"Launch & Optimize",phase:"Phase 4 \u2014 Launch & Optimize ",desc:"Once campaigns are live, we continuously monitor performance metrics and optimize campaigns in real time for maximum efficiency. We A/B test ad variations, adjust bidding strategies, refine audience targeting, and pause underperforming segments to improve results consistently. Our goal across every pay per click campaign is simple: reduce unnecessary ad spend, increase conversion efficiency, improve lead quality, and scale strategies that deliver measurable performance.",bullets:[]},{step:"05",title:"Report & Evolve",phase:"Phase 5 \u2014 Report & Evolve ",desc:"We provide clear, transparent, and easy-to-understand reports highlighting what\u2019s performing well, what requires improvement, and how campaigns are progressing over time. Alongside detailed monthly reviews, our team proactively updates strategies based on new market trends, platform algorithm changes, audience behavior, and evolving business priorities \u2014 ensuring your performance marketing services remain competitive, scalable, and consistently effective as your business continues to grow.",bullets:[]}],h=[{icon:(0,r.jsx)("img",{src:"/img/icon/hww-strategic-plannings.webp",alt:"Strategic Planning",width:"30",height:"30"}),title:"Strategic Planning ",desc:"Every successful pay per click in digital marketing campaign starts with a clear strategy. We take time to understand your goals, audience, and market \u2014 crafting a data-driven roadmap tailored to your business needs."},{icon:(0,r.jsx)("img",{src:"/img/icon/hww-defined-roles.webp",alt:"Defined Roles and Collaboration",width:"30",height:"30"}),title:"Defined Roles & Collaboration ",desc:"We believe great outcomes come from clear responsibilities and strong collaboration. Each team member is aligned with specific roles, ensuring smooth execution and full accountability across every performance marketing engagement."},{icon:(0,r.jsx)("img",{src:"/img/icon/hww-testing-delivery.webp",alt:"Thorough Testing and On-Time Delivery",width:"30",height:"30"}),title:"Thorough Testing & On-Time Delivery ",desc:"Before any campaign goes live, it goes through rigorous quality checks \u2014 reviewing every detail for functionality, accuracy, and performance. As a results-driven performance marketing company, we deliver only when everything is right."}],f=[{q:"What is performance marketing and how does it help my business?",a:" Performance marketing is a results-driven digital marketing approach where campaigns are optimized based on measurable actions like leads, clicks, sales, or conversions. It helps businesses improve visibility, attract targeted audiences, generate qualified leads, and maximize return on advertising investment effectively."},{q:"How much budget do I need to start a PPC campaign?",a:" PPC campaign budgets depend on your industry, competition, business goals, and target audience. We create customized strategies suitable for both small and large businesses, ensuring your budget is allocated efficiently to maximize reach, lead generation, and overall campaign performance."},{q:"Which platforms do you run PPC ads on?",a:" We run PPC campaigns across multiple platforms including Google Ads, Meta Ads (Facebook and Instagram), LinkedIn Ads, YouTube Ads, and other relevant advertising networks. Platform selection depends on your business objectives, audience behavior, and the type of conversions you want to achieve."},{q:"Is performance marketing suitable for small businesses?",a:"Yes, performance marketing is highly suitable for small businesses because it focuses on measurable outcomes and controlled spending. It allows businesses to target specific audiences, track campaign performance in real time, optimize budgets efficiently, and generate qualified leads without unnecessary advertising expenses."},{q:"How is performance marketing different from regular digital marketing?",a:" Regular digital marketing focuses broadly on brand visibility and online presence, while performance marketing is centered around measurable actions like leads, conversions, and sales. Every campaign is continuously optimized using data and analytics to improve ROI and deliver trackable business outcomes."},{q:"Do you create the ad content and landing pages too?",a:"Yes, we provide complete campaign support including ad creatives, copywriting, landing page development, audience targeting, and conversion optimization. Our approach ensures that both the advertisements and landing pages work together effectively to improve engagement, lead quality, and campaign performance."}];function u(){return(0,r.jsxs)("section",{className:"hero",id:"hero",children:[(0,r.jsx)("style",{children:`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
         :root {
@@ -540,68 +466,7 @@ function Hero() {
           .h-badge { font-size: 0.65rem; }
         }
         .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
-      `}</style>
-
-      {/* LEFT CONTENT */}
-      <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot" />Performance Driven </div>
-        <h1 className="hero-heading">
-          Turn Your Clicks into with
-          <span className="hl lined" style={{ marginLeft: '12px' }}> Our Performance  </span> Marketing
-
-        </h1>
-        <p className="hero-sub">
-          At PCS, our performance marketing services are built around one thing: results. Whether it's Google Ads, Meta, LinkedIn, or display networks, we drive high-intent traffic that converts into leads, sales, and real business outcomes. As a trusted performance marketing agency, we combine data, strategy, and creativity to deliver campaigns that don't just spend your budget — they grow your business.
-        </p>
-        <div className="hero-actions">
-          <a className="btn-fill" href="#">Get Free Audit <span className="btn-arrow">›</span></a>
-        </div>
-      </div>
-
-      {/* RIGHT IMAGE */}
-      <div className="hero-right">
-        <img
-          src={banner}
-          alt="PPC Marketing Illustration"
-          className="hero-img"
-        />
-      </div>
-    </section>
-  );
-}
-
-// ─── Approach + Form ─────────────────────────────────────────────────────────
-function ApproachSection() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
-  const formRef = useRef(null);
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setStatus("sending");
-    emailjs
-      .sendForm(
-        "service_priyam",      // ← உங்கள் EmailJS Service ID
-        "template_priyam",     // ← உங்கள் EmailJS Template ID
-        formRef.current,
-        "YOUR_PUBLIC_KEY"      // ← உங்கள் EmailJS Public Key
-      )
-      .then(() => {
-        setStatus("success");
-        setForm({ name: "", email: "", phone: "", company: "", msg: "" });
-        setTimeout(() => setStatus("idle"), 4000);
-      })
-      .catch((err) => {
-        console.error("EmailJS error:", err);
-        setStatus("error");
-        setTimeout(() => setStatus("idle"), 4000);
-      });
-  };
-
-  return (
-    <section className="approach" id="approach">
-      <style>{`
+      `}),(0,r.jsxs)("div",{className:"hero-left",children:[(0,r.jsxs)("div",{className:"h-badge",children:[(0,r.jsx)("div",{className:"badge-dot"}),"Performance Driven "]}),(0,r.jsxs)("h1",{className:"hero-heading",children:["Turn Your Clicks into with",(0,r.jsx)("span",{className:"hl lined",style:{marginLeft:"12px"},children:" Our Performance  "})," Marketing"]}),(0,r.jsx)("p",{className:"hero-sub",children:"At PCS, our performance marketing services are built around one thing: results. Whether it's Google Ads, Meta, LinkedIn, or display networks, we drive high-intent traffic that converts into leads, sales, and real business outcomes. As a trusted performance marketing agency, we combine data, strategy, and creativity to deliver campaigns that don't just spend your budget \u2014 they grow your business."}),(0,r.jsx)("div",{className:"hero-actions",children:(0,r.jsxs)("a",{className:"btn-fill",href:"#",children:["Get Free Audit ",(0,r.jsx)("span",{className:"btn-arrow",children:"\u203A"})]})})]}),(0,r.jsx)("div",{className:"hero-right",children:(0,r.jsx)("img",{src:"/img/performance-marketing.png",alt:"PPC Marketing Illustration",className:"hero-img"})})]})}function x(){let[e,t]=(0,n.useState)({name:"",email:"",phone:"",company:"",msg:""}),[a,s]=(0,n.useState)("idle"),o=(0,n.useRef)(null),p=a=>t({...e,[a.target.name]:a.target.value});return(0,r.jsxs)("section",{className:"approach",id:"approach",children:[(0,r.jsx)("style",{children:`
         .approach { position:relative; padding:4rem 6%; overflow:hidden; }
         .ap-inner { position:relative; z-index:2; margin:0 auto; display:grid; grid-template-columns:1fr 0.7fr; gap:4rem; align-items:center; }
         .ap-heading { font-family:'Poppins',sans-serif; font-size:clamp(2rem,3vw,2.6rem); line-height:1.12; color:#000; margin-bottom:1.2rem; font-weight:600; }
@@ -643,491 +508,4 @@ function ApproachSection() {
           .form-card-title { font-size:1.4rem; }
           .ap-heading { font-size:clamp(1.6rem,5vw,2rem); }
         }
-      `}</style>
-      <div className="ap-inner">
-        <div className="ap-left">
-          <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
-          </div>
-          <h2 className="ap-heading">Strategic <span>Performance Marketing Campaigns </span> Built to Perform</h2>
-          <p className="ap-intro">
-            Whether your goal is lead generation, eCommerce sales, or improving local visibility, our performance marketing experts create data-driven campaigns tailored to your specific business objectives and target audience behavior.
-          </p>
-          <p className="ap-intro">
-            Using strategic audience targeting, keyword planning, and compelling ad creatives, we build campaigns designed to maximize brand visibility, customer engagement, and measurable marketing outcomes across multiple digital platforms.
-          </p>
-          <p className="ap-intro">
-            From smart bidding strategies to continuous monitoring and optimization, every campaign is managed with precision. We focus on improving conversions, reducing costs, and driving scalable long-term business growth consistently.
-          </p>
-        </div>
-        <div className="ap-form-wrap">
-          <div className="ap-form-card">
-            <div className="form-card-eyebrow">
-              <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
-            </div>
-            <div className="form-card-title">Get Your <span>Free</span> PPC Audit</div>
-            <form ref={formRef} onSubmit={handleSubmit}>
-              <div className="fl-row">
-                <div className="fl-group">
-                  <label className="fl-label">Your Name</label>
-                  <div style={{ position: "relative" }}>
-                    <span className="fl-icon">👤</span>
-                    <input className="fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
-                  </div>
-                </div>
-                <div className="fl-group">
-                  <label className="fl-label">Company</label>
-                  <div style={{ position: "relative" }}>
-                    <span className="fl-icon">🏢</span>
-                    <input className="fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
-                  </div>
-                </div>
-              </div>
-              <div className="fl-group">
-                <label className="fl-label">Email Address</label>
-                <div style={{ position: "relative" }}>
-                  <span className="fl-icon">✉️</span>
-                  <input className="fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
-                </div>
-              </div>
-              <div className="fl-group">
-                <label className="fl-label">Mobile Number</label>
-                <div className="phone-row">
-                  <div className="phone-flag"><span>📞</span></div>
-                  <input className="fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
-                </div>
-              </div>
-              <div className="fl-group textarea-group">
-                <label className="fl-label">Message</label>
-                <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
-                  <textarea className="fl-textarea" name="msg" placeholder="Tell us about your ad goals and budget..." value={form.msg} onChange={handleChange} />
-                </div>
-              </div>
-              {status === "success" && (
-                <div style={{ background: "rgba(52,211,153,0.12)", border: "1px solid rgba(52,211,153,0.4)", color: "#34d399", borderRadius: "10px", padding: "0.75rem 1rem", marginBottom: "1rem", fontSize: "0.88rem", textAlign: "center" }}>
-                  ✅ Message sent successfully! We'll get back to you soon.
-                </div>
-              )}
-              {status === "error" && (
-                <div style={{ background: "rgba(248,113,113,0.12)", border: "1px solid rgba(248,113,113,0.4)", color: "#f87171", borderRadius: "10px", padding: "0.75rem 1rem", marginBottom: "1rem", fontSize: "0.88rem", textAlign: "center" }}>
-                  ❌ Something went wrong. Please try again.
-                </div>
-              )}
-              <button type="submit" className="ap-submit" disabled={status === "sending"}>
-                {status === "sending" ? "Sending…" : <>Get Free PPC Audit <span className="ap-submit-arrow">›</span></>}
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── Services ─────────────────────────────────────────────────────────────────
-function ServicePanel({ svc, index }) {
-  const [ref, visible] = useInView(0.1);
-  return (
-    <div ref={ref} className={`ppc-svc-panel${visible ? " vis" : ""}`} style={{ transitionDelay: `${0.05 + index * 0.07}s` }}>
-      <div className="ppc-sp-slash" />
-      <div className="ppc-sp-ghost">{svc.num}</div>
-      <div className="ppc-sp-bottom-line" />
-      <div className="ppc-sp-icon-row">
-        <span className="ppc-sp-icon-dash" />
-        <span className="ppc-sp-icon">{svc.icon}</span>
-      </div>
-      <div className="ppc-sp-content">
-        <div className="ppc-sp-subtitle">{svc.subtitle}</div>
-        <h4 className="ppc-sp-title">{svc.title}</h4>
-        <div className="ppc-sp-desc">{svc.desc}</div>
-        {/* <a className="ppc-sp-link" href="#">LEARN MORE <span className="ppc-sp-link-arr">↗</span></a> */}
-      </div>
-    </div>
-  );
-}
-
-function Services() {
-  return (
-    <section className="ppc-svc">
-      <div className="ppc-svc-dots" />
-      <div className="ppc-svc-glow ppc-ssvg1" />
-      <div className="ppc-svc-glow ppc-ssvg2" />
-      <div className="ppc-svc-hdr">
-        <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized PPC Marketing Services</h2>
-        </div>
-        <h3 className="ppc-svc-h2">Smart Ads. <span><i>Real Reach.</i> </span>Measurable Results.</h3>
-        <p className="ppc-svc-sub">
-          At PCS we believe in delivering results that grow your business. With years of experience managing high-performing PPC campaigns across Google, Meta, and LinkedIn.
-        </p>
-      </div>
-      <div className="ppc-svc-panels">
-        {PPC_SERVICES.map((svc, i) => <ServicePanel key={svc.num} svc={svc} index={i} />)}
-      </div>
-    </section>
-  );
-}
-
-// ─── Process ─────────────────────────────────────────────────────────────────
-function ProcessStep({ step, index }) {
-  const [ref, visible] = useInView(0.1);
-  const isEven = index % 2 === 1;
-  return (
-    <div ref={ref} className={`ppc-tp-step${visible ? " tp-vis" : ""}`}>
-      {isEven ? (
-        <>
-          <div className="ppc-tp-text-side">
-            <p className="ppc-tp-desc">{step.desc}</p>
-            <div className="ppc-tp-bullets">{step.bullets.map(b => <span key={b} className="ppc-tp-bullet">{b}</span>)}</div>
-          </div>
-          <div className="ppc-tp-num-side">
-            <div className="ppc-tp-bg-num">{step.step}</div>
-            <div className="ppc-tp-step-index">Step — {step.step}</div>
-            <div className="ppc-tp-step-title">{step.title}</div>
-            <div className="ppc-tp-phase">{step.phase}</div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="ppc-tp-num-side">
-            <div className="ppc-tp-bg-num">{step.step}</div>
-            <div className="ppc-tp-step-index">Step — {step.step}</div>
-            <h4 className="ppc-tp-step-title">{step.title}</h4>
-            <div className="ppc-tp-phase">{step.phase}</div>
-          </div>
-          <div className="ppc-tp-text-side">
-            <p className="ppc-tp-desc">{step.desc}</p>
-            <div className="ppc-tp-bullets">{step.bullets.map(b => <span key={b} className="ppc-tp-bullet">{b}</span>)}</div>
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
-function Process() {
-  return (
-    <section className="ppc-tp-section">
-      <div className="ppc-tp-cross" />
-      <div className="ppc-tp-header">
-        <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Proven PPC Execution Process</h2>
-        </div>
-        <h3 className="ppc-tp-h2">Built for Clarity,<em> Tuned for Results</em></h3>
-        <p className="ppc-tp-sub">
-          Every pay per click ads campaign starts with strategy and ends with measurable impact. Our process ensures your ad spend works harder, smarter, and faster.
-        </p>
-      </div>
-      <div className="ppc-tp-body">
-        {PROCESS_STEPS.map((step, i) => <ProcessStep key={step.step} step={step} index={i} />)}
-      </div>
-    </section>
-  );
-}
-
-// ─── How We Work ─────────────────────────────────────────────────────────────
-function HowWeWorkItem({ item }) {
-  const [ref, visible] = useInView(0.12);
-  return (
-    <div ref={ref} className={`ppc-hww-arrow-item${visible ? " hww-vis" : ""}`}>
-      <div className="ppc-hww-card">
-        <div className="ppc-hww-icon-wrap">{item.icon}</div>
-        <h4 className="ppc-hww-card-title">{item.title}</h4>
-        <div className="ppc-hww-card-desc">{item.desc}</div>
-      </div>
-    </div>
-  );
-}
-
-function HowWeWork() {
-  return (
-    <section className="ppc-hww">
-      <div className="ppc-hww-dot-grid" />
-      <div className="ppc-hww-glow ppc-hww-glow-1" />
-      <div className="ppc-hww-glow ppc-hww-glow-2" />
-      <div className="ppc-hww-header">
-        <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Focus on Your Results in PPC Management</h2>
-        </div>
-        <h3 className="ppc-hww-h2">Plan Smart. <span><i>Execute Sharper. </i></span> Deliver Right.</h3>
-      </div>
-      <div className="ppc-hww-arrows-wrap">
-        <div className="ppc-hww-arrow-track">
-          {HOW_WE_WORK.map(item => <HowWeWorkItem key={item.title} item={item} />)}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── FAQ ─────────────────────────────────────────────────────────────────────
-function FAQSection() {
-  const [active, setActive] = useState(null);
-  const toggle = (index) => setActive(active === index ? null : index);
-  return (
-    <section className="faq-section">
-      <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <h4 className="partners-eyebrow">Frequently Asked Questions</h4>
-      </div>
-      <div className="container">
-        <div className="faq-head">
-          <h3 className="faq-h3">Questions That Could <span>Hold You Back</span></h3>
-        </div>
-        <div className="faq-wrapper">
-          <div className="faq-col">
-            {faqData.slice(0, 3).map((item, i) => (
-              <div className="faq-item" key={i}>
-                <div className="faq-question" onClick={() => toggle(i)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i ? "−" : "+"}</span>
-                </div>
-                {active === i && <div className="faq-answer ppc-faq-answer">{item.a}</div>}
-              </div>
-            ))}
-          </div>
-          <div className="faq-col">
-            {faqData.slice(3, 6).map((item, i) => (
-              <div className="faq-item" key={i + 3}>
-                <div className="faq-question" onClick={() => toggle(i + 3)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i + 3 ? "−" : "+"}</span>
-                </div>
-                {active === i + 3 && <div className="faq-answer ppc-faq-answer">{item.a}</div>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── Root Component ───────────────────────────────────────────────────────────
-export default function PcsPpcPage() {
-  useEffect(() => {
-    const id = "pcs-ppc-styles";
-    if (!document.getElementById(id)) {
-      const el = document.createElement("style");
-      el.id = id;
-      el.textContent = STYLES;
-      document.head.appendChild(el);
-    }
-    return () => { };
-  }, []);
-
-  const schemaData = [
-    // Breadcrumb List Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@id": "https://www.priyamconsultancy.com/",
-            "name": "Home"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@id": "https://www.priyamconsultancy.com/performance-marketing/",
-            "name": "performance-marketing"
-          }
-        }
-      ]
-    },
-
-    // Organization Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Priyam Consultancy Services",
-      "url": "https://www.priyamconsultancy.com/",
-      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+91 96774 44048",
-          "contactType": "customer support"
-        }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61577125709962",
-        "https://www.linkedin.com/company/priyam-consultancy-services/",
-        "https://www.instagram.com/priyam_consultancy_services/",
-        "https://x.com/services91032",
-        "https://g.co/kgs/rdTYdi6"
-      ]
-    },
-
-    // Service Page Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://www.priyamconsultancy.com/performance-marketing/#service",
-      "name": "Performance Marketing",
-      "serviceType": "Performance Marketing Services",
-      "url": "https://www.priyamconsultancy.com/performance-marketing/",
-      "description": "Looking for top performance marketing companies? We offer result-driven performance marketing services including PPC, social media ads, and lead generation.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Priyam Consultancy Services",
-        "url": "https://www.priyamconsultancy.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
-        }
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "India"
-      }
-    },
-
-    // Product Schema
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "performance-marketing",
-      "image": ["https://www.priyamconsultancy.com/img/performance-marketing.png"],
-      "description": "Best performance marketing services in Coimbatore offering Google Ads, Meta Ads, PPC campaign management, lead generation, conversion optimization, audience targeting and ROI-focused advertising solutions.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Priyam Consultancy Services"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Admin"
-        }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "4732"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.priyamconsultancy.com/performance-marketing/",
-        "priceCurrency": "USD",
-        "price": "00.00",
-        "priceValidUntil": "2026-12-31",
-        "itemCondition": "https://schema.org/UsedCondition",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "priyamconsultancy.com"
-        }
-      }
-    },
-
-    // FAQ Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is performance marketing and how does it help my business?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Performance marketing is a results-driven digital marketing approach where campaigns are optimized based on measurable actions like leads, clicks, sales, or conversions. It helps businesses improve visibility, attract targeted audiences, generate qualified leads, and maximize return on advertising investment effectively."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How much budget do I need to start a PPC campaign?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PPC campaign budgets depend on your industry, competition, business goals, and target audience. We create customized strategies suitable for both small and large businesses, ensuring your budget is allocated efficiently to maximize reach, lead generation, and overall campaign performance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which platforms do you run PPC ads on?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "We run PPC campaigns across multiple platforms including Google Ads, Meta Ads (Facebook and Instagram), LinkedIn Ads, YouTube Ads, and other relevant advertising networks. Platform selection depends on your business objectives, audience behavior, and the type of conversions you want to achieve."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is performance marketing suitable for small businesses?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, performance marketing is highly suitable for small businesses because it focuses on measurable outcomes and controlled spending. It allows businesses to target specific audiences, track campaign performance in real time, optimize budgets efficiently, and generate qualified leads without unnecessary advertising expenses."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How is performance marketing different from regular digital marketing?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Regular digital marketing focuses broadly on brand visibility and online presence, while performance marketing is centered around measurable actions like leads, conversions, and sales. Every campaign is continuously optimized using data and analytics to improve ROI and deliver trackable business outcomes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you create the ad content and landing pages too?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, we provide complete campaign support including ad creatives, copywriting, landing page development, audience targeting, and conversion optimization. Our approach ensures that both the advertisements and landing pages work together effectively to improve engagement, lead quality, and campaign performance."
-          }
-        }
-      ]
-    }
-  ];
-
-  return (
-    <Layout>
-      <Head>
-        <title>Performance Marketing Companies | Performance Marketing Services</title>
-        <meta name="description" content="Looking for top performance marketing companies? We offer result-driven performance marketing services including PPC, social media ads, and lead generation." />
-        <meta name="keywords" content="PPC Marketing, PPC Advertising Company, Pay-Per-Click, pay per click advertising, PPC Management, PPC Advertising Agency, PPC services, PPC campaign" />
-        <link rel="canonical" href="https://www.priyamconsultancy.com/services/performance-marketing" />
-
-        {/* Open Graph */}
-        <meta property="og:title" content="Performance Marketing Companies | Performance Marketing Services" />
-        <meta property="og:description" content="Looking for top performance marketing companies? We offer result-driven performance marketing services including PPC, social media ads, and lead generation." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/services/performance-marketing" />
-        <meta property="og:image" content="https://www.priyamconsultancy.com/img/performance-marketing.png" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Performance Marketing Companies | Performance Marketing Services" />
-        <meta name="twitter:description" content="Looking for top performance marketing companies? We offer result-driven performance marketing services including PPC, social media ads, and lead generation." />
-        <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/performance-marketing.png" />
-
-        {/* ✅ All Schemas - Array-ஐ loop போட்டு render பண்றோம் */}
-        {schemaData.map((schema, index) => (
-          <script
-            key={index}
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          />
-        ))}
-      </Head>
-
-      <Hero />
-      <ApproachSection />
-      <Services />
-      <Process />
-      <HowWeWork />
-      <FAQSection />
-      <BlogSection />
-      <CTASection />
-    </Layout>
-  );
-}
+      `}),(0,r.jsxs)("div",{className:"ap-inner",children:[(0,r.jsxs)("div",{className:"ap-left",children:[(0,r.jsx)("div",{className:"partners-header1",children:(0,r.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Approach in"})}),(0,r.jsxs)("h2",{className:"ap-heading",children:["Strategic ",(0,r.jsx)("span",{children:"Performance Marketing Campaigns "})," Built to Perform"]}),(0,r.jsx)("p",{className:"ap-intro",children:"Whether your goal is lead generation, eCommerce sales, or improving local visibility, our performance marketing experts create data-driven campaigns tailored to your specific business objectives and target audience behavior."}),(0,r.jsx)("p",{className:"ap-intro",children:"Using strategic audience targeting, keyword planning, and compelling ad creatives, we build campaigns designed to maximize brand visibility, customer engagement, and measurable marketing outcomes across multiple digital platforms."}),(0,r.jsx)("p",{className:"ap-intro",children:"From smart bidding strategies to continuous monitoring and optimization, every campaign is managed with precision. We focus on improving conversions, reducing costs, and driving scalable long-term business growth consistently."})]}),(0,r.jsx)("div",{className:"ap-form-wrap",children:(0,r.jsxs)("div",{className:"ap-form-card",children:[(0,r.jsxs)("div",{className:"form-card-eyebrow",children:[(0,r.jsx)("span",{className:"form-card-eyebrow-line"}),"Your Growth, Our Mission",(0,r.jsx)("span",{className:"form-card-eyebrow-line"})]}),(0,r.jsxs)("div",{className:"form-card-title",children:["Get Your ",(0,r.jsx)("span",{children:"Free"})," PPC Audit"]}),(0,r.jsxs)("form",{ref:o,onSubmit:e=>{e.preventDefault(),s("sending"),i.Ay.sendForm("service_priyam","template_priyam",o.current,"YOUR_PUBLIC_KEY").then(()=>{s("success"),t({name:"",email:"",phone:"",company:"",msg:""}),setTimeout(()=>s("idle"),4e3)}).catch(e=>{console.error("EmailJS error:",e),s("error"),setTimeout(()=>s("idle"),4e3)})},children:[(0,r.jsxs)("div",{className:"fl-row",children:[(0,r.jsxs)("div",{className:"fl-group",children:[(0,r.jsx)("label",{className:"fl-label",children:"Your Name"}),(0,r.jsxs)("div",{style:{position:"relative"},children:[(0,r.jsx)("span",{className:"fl-icon",children:"\u{1F464}"}),(0,r.jsx)("input",{className:"fl-input",type:"text",name:"name",placeholder:"Full name",value:e.name,onChange:p,required:!0})]})]}),(0,r.jsxs)("div",{className:"fl-group",children:[(0,r.jsx)("label",{className:"fl-label",children:"Company"}),(0,r.jsxs)("div",{style:{position:"relative"},children:[(0,r.jsx)("span",{className:"fl-icon",children:"\u{1F3E2}"}),(0,r.jsx)("input",{className:"fl-input",type:"text",name:"company",placeholder:"Company name",value:e.company,onChange:p})]})]})]}),(0,r.jsxs)("div",{className:"fl-group",children:[(0,r.jsx)("label",{className:"fl-label",children:"Email Address"}),(0,r.jsxs)("div",{style:{position:"relative"},children:[(0,r.jsx)("span",{className:"fl-icon",children:"\u2709\uFE0F"}),(0,r.jsx)("input",{className:"fl-input",type:"email",name:"email",placeholder:"your@email.com",value:e.email,onChange:p,required:!0})]})]}),(0,r.jsxs)("div",{className:"fl-group",children:[(0,r.jsx)("label",{className:"fl-label",children:"Mobile Number"}),(0,r.jsxs)("div",{className:"phone-row",children:[(0,r.jsx)("div",{className:"phone-flag",children:(0,r.jsx)("span",{children:"\u{1F4DE}"})}),(0,r.jsx)("input",{className:"fl-input",type:"tel",name:"phone",placeholder:"Mobile number",value:e.phone,onChange:p,maxLength:"10",pattern:"[0-9]{10}",required:!0})]})]}),(0,r.jsxs)("div",{className:"fl-group textarea-group",children:[(0,r.jsx)("label",{className:"fl-label",children:"Message"}),(0,r.jsxs)("div",{style:{position:"relative"},children:[(0,r.jsx)("span",{className:"fl-icon",style:{top:"0.9rem",transform:"none"},children:"\u{1F4AC}"}),(0,r.jsx)("textarea",{className:"fl-textarea",name:"msg",placeholder:"Tell us about your ad goals and budget...",value:e.msg,onChange:p})]})]}),"success"===a&&(0,r.jsx)("div",{style:{background:"rgba(52,211,153,0.12)",border:"1px solid rgba(52,211,153,0.4)",color:"#34d399",borderRadius:"10px",padding:"0.75rem 1rem",marginBottom:"1rem",fontSize:"0.88rem",textAlign:"center"},children:"\u2705 Message sent successfully! We'll get back to you soon."}),"error"===a&&(0,r.jsx)("div",{style:{background:"rgba(248,113,113,0.12)",border:"1px solid rgba(248,113,113,0.4)",color:"#f87171",borderRadius:"10px",padding:"0.75rem 1rem",marginBottom:"1rem",fontSize:"0.88rem",textAlign:"center"},children:"\u274C Something went wrong. Please try again."}),(0,r.jsx)("button",{type:"submit",className:"ap-submit",disabled:"sending"===a,children:"sending"===a?"Sending\u2026":(0,r.jsxs)(r.Fragment,{children:["Get Free PPC Audit ",(0,r.jsx)("span",{className:"ap-submit-arrow",children:"\u203A"})]})})]})]})})]})]})}function b({svc:e,index:t}){let[a,n]=d(.1);return(0,r.jsxs)("div",{ref:a,className:`ppc-svc-panel${n?" vis":""}`,style:{transitionDelay:`${.05+.07*t}s`},children:[(0,r.jsx)("div",{className:"ppc-sp-slash"}),(0,r.jsx)("div",{className:"ppc-sp-ghost",children:e.num}),(0,r.jsx)("div",{className:"ppc-sp-bottom-line"}),(0,r.jsxs)("div",{className:"ppc-sp-icon-row",children:[(0,r.jsx)("span",{className:"ppc-sp-icon-dash"}),(0,r.jsx)("span",{className:"ppc-sp-icon",children:e.icon})]}),(0,r.jsxs)("div",{className:"ppc-sp-content",children:[(0,r.jsx)("div",{className:"ppc-sp-subtitle",children:e.subtitle}),(0,r.jsx)("h4",{className:"ppc-sp-title",children:e.title}),(0,r.jsx)("div",{className:"ppc-sp-desc",children:e.desc})]})]})}function w(){return(0,r.jsxs)("section",{className:"ppc-svc",children:[(0,r.jsx)("div",{className:"ppc-svc-dots"}),(0,r.jsx)("div",{className:"ppc-svc-glow ppc-ssvg1"}),(0,r.jsx)("div",{className:"ppc-svc-glow ppc-ssvg2"}),(0,r.jsxs)("div",{className:"ppc-svc-hdr",children:[(0,r.jsx)("div",{className:"partners-header1",children:(0,r.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Our Specialized PPC Marketing Services"})}),(0,r.jsxs)("h3",{className:"ppc-svc-h2",children:["Smart Ads. ",(0,r.jsxs)("span",{children:[(0,r.jsx)("i",{children:"Real Reach."})," "]}),"Measurable Results."]}),(0,r.jsx)("p",{className:"ppc-svc-sub",children:"At PCS we believe in delivering results that grow your business. With years of experience managing high-performing PPC campaigns across Google, Meta, and LinkedIn."})]}),(0,r.jsx)("div",{className:"ppc-svc-panels",children:m.map((e,t)=>(0,r.jsx)(b,{svc:e,index:t},e.num))})]})}function v({step:e,index:t}){let[a,n]=d(.1);return(0,r.jsx)("div",{ref:a,className:`ppc-tp-step${n?" tp-vis":""}`,children:t%2==1?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsxs)("div",{className:"ppc-tp-text-side",children:[(0,r.jsx)("p",{className:"ppc-tp-desc",children:e.desc}),(0,r.jsx)("div",{className:"ppc-tp-bullets",children:e.bullets.map(e=>(0,r.jsx)("span",{className:"ppc-tp-bullet",children:e},e))})]}),(0,r.jsxs)("div",{className:"ppc-tp-num-side",children:[(0,r.jsx)("div",{className:"ppc-tp-bg-num",children:e.step}),(0,r.jsxs)("div",{className:"ppc-tp-step-index",children:["Step \u2014 ",e.step]}),(0,r.jsx)("div",{className:"ppc-tp-step-title",children:e.title}),(0,r.jsx)("div",{className:"ppc-tp-phase",children:e.phase})]})]}):(0,r.jsxs)(r.Fragment,{children:[(0,r.jsxs)("div",{className:"ppc-tp-num-side",children:[(0,r.jsx)("div",{className:"ppc-tp-bg-num",children:e.step}),(0,r.jsxs)("div",{className:"ppc-tp-step-index",children:["Step \u2014 ",e.step]}),(0,r.jsx)("h4",{className:"ppc-tp-step-title",children:e.title}),(0,r.jsx)("div",{className:"ppc-tp-phase",children:e.phase})]}),(0,r.jsxs)("div",{className:"ppc-tp-text-side",children:[(0,r.jsx)("p",{className:"ppc-tp-desc",children:e.desc}),(0,r.jsx)("div",{className:"ppc-tp-bullets",children:e.bullets.map(e=>(0,r.jsx)("span",{className:"ppc-tp-bullet",children:e},e))})]})]})})}function y(){return(0,r.jsxs)("section",{className:"ppc-tp-section",children:[(0,r.jsx)("div",{className:"ppc-tp-cross"}),(0,r.jsxs)("div",{className:"ppc-tp-header",children:[(0,r.jsx)("div",{className:"partners-header1",children:(0,r.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Our Proven PPC Execution Process"})}),(0,r.jsxs)("h3",{className:"ppc-tp-h2",children:["Built for Clarity,",(0,r.jsx)("em",{children:" Tuned for Results"})]}),(0,r.jsx)("p",{className:"ppc-tp-sub",children:"Every pay per click ads campaign starts with strategy and ends with measurable impact. Our process ensures your ad spend works harder, smarter, and faster."})]}),(0,r.jsx)("div",{className:"ppc-tp-body",children:g.map((e,t)=>(0,r.jsx)(v,{step:e,index:t},e.step))})]})}function k({item:e}){let[t,a]=d(.12);return(0,r.jsx)("div",{ref:t,className:`ppc-hww-arrow-item${a?" hww-vis":""}`,children:(0,r.jsxs)("div",{className:"ppc-hww-card",children:[(0,r.jsx)("div",{className:"ppc-hww-icon-wrap",children:e.icon}),(0,r.jsx)("h4",{className:"ppc-hww-card-title",children:e.title}),(0,r.jsx)("div",{className:"ppc-hww-card-desc",children:e.desc})]})})}function j(){return(0,r.jsxs)("section",{className:"ppc-hww",children:[(0,r.jsx)("div",{className:"ppc-hww-dot-grid"}),(0,r.jsx)("div",{className:"ppc-hww-glow ppc-hww-glow-1"}),(0,r.jsx)("div",{className:"ppc-hww-glow ppc-hww-glow-2"}),(0,r.jsxs)("div",{className:"ppc-hww-header",children:[(0,r.jsx)("div",{className:"partners-header1",children:(0,r.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Our Focus on Your Results in PPC Management"})}),(0,r.jsxs)("h3",{className:"ppc-hww-h2",children:["Plan Smart. ",(0,r.jsx)("span",{children:(0,r.jsx)("i",{children:"Execute Sharper. "})})," Deliver Right."]})]}),(0,r.jsx)("div",{className:"ppc-hww-arrows-wrap",children:(0,r.jsx)("div",{className:"ppc-hww-arrow-track",children:h.map(e=>(0,r.jsx)(k,{item:e},e.title))})})]})}function N(){let[e,t]=(0,n.useState)(null),a=a=>t(e===a?null:a);return(0,r.jsxs)("section",{className:"faq-section",children:[(0,r.jsx)("div",{className:"partners-header2",style:{textAlign:"center",marginTop:"20px"},children:(0,r.jsx)("h4",{className:"partners-eyebrow",children:"Frequently Asked Questions"})}),(0,r.jsxs)("div",{className:"container",children:[(0,r.jsx)("div",{className:"faq-head",children:(0,r.jsxs)("h3",{className:"faq-h3",children:["Questions That Could ",(0,r.jsx)("span",{children:"Hold You Back"})]})}),(0,r.jsxs)("div",{className:"faq-wrapper",children:[(0,r.jsx)("div",{className:"faq-col",children:f.slice(0,3).map((t,n)=>(0,r.jsxs)("div",{className:"faq-item",children:[(0,r.jsxs)("div",{className:"faq-question",onClick:()=>a(n),children:[(0,r.jsx)("span",{children:t.q}),(0,r.jsx)("span",{className:"icon",children:e===n?"\u2212":"+"})]}),e===n&&(0,r.jsx)("div",{className:"faq-answer ppc-faq-answer",children:t.a})]},n))}),(0,r.jsx)("div",{className:"faq-col",children:f.slice(3,6).map((t,n)=>(0,r.jsxs)("div",{className:"faq-item",children:[(0,r.jsxs)("div",{className:"faq-question",onClick:()=>a(n+3),children:[(0,r.jsx)("span",{children:t.q}),(0,r.jsx)("span",{className:"icon",children:e===n+3?"\u2212":"+"})]}),e===n+3&&(0,r.jsx)("div",{className:"faq-answer ppc-faq-answer",children:t.a})]},n+3))})]})]})]})}function z(){return(0,n.useEffect)(()=>{let e="pcs-ppc-styles";if(!document.getElementById(e)){let t=document.createElement("style");t.id=e,t.textContent=l,document.head.appendChild(t)}return()=>{}},[]),(0,r.jsxs)(p.A,{children:[(0,r.jsxs)(c.A,{children:[(0,r.jsx)("title",{children:"Performance Marketing Companies | Performance Marketing Services"}),(0,r.jsx)("meta",{name:"description",content:"Looking for top performance marketing companies? We offer result-driven performance marketing services including PPC, social media ads, and lead generation."}),(0,r.jsx)("meta",{name:"keywords",content:"PPC Marketing, PPC Advertising Company, Pay-Per-Click, pay per click advertising, PPC Management, PPC Advertising Agency, PPC services, PPC campaign"}),(0,r.jsx)("link",{rel:"canonical",href:"https://www.priyamconsultancy.com/services/performance-marketing"}),(0,r.jsx)("meta",{property:"og:title",content:"Performance Marketing Companies | Performance Marketing Services"}),(0,r.jsx)("meta",{property:"og:description",content:"Looking for top performance marketing companies? We offer result-driven performance marketing services including PPC, social media ads, and lead generation."}),(0,r.jsx)("meta",{property:"og:type",content:"website"}),(0,r.jsx)("meta",{property:"og:url",content:"https://www.priyamconsultancy.com/services/performance-marketing"}),(0,r.jsx)("meta",{property:"og:image",content:"https://www.priyamconsultancy.com/img/performance-marketing.png"}),(0,r.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),(0,r.jsx)("meta",{name:"twitter:title",content:"Performance Marketing Companies | Performance Marketing Services"}),(0,r.jsx)("meta",{name:"twitter:description",content:"Looking for top performance marketing companies? We offer result-driven performance marketing services including PPC, social media ads, and lead generation."}),(0,r.jsx)("meta",{name:"twitter:image",content:"https://www.priyamconsultancy.com/img/performance-marketing.png"}),[{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,item:{"@id":"https://www.priyamconsultancy.com/",name:"Home"}},{"@type":"ListItem",position:2,item:{"@id":"https://www.priyamconsultancy.com/performance-marketing/",name:"performance-marketing"}}]},{"@context":"https://schema.org","@type":"Organization",name:"Priyam Consultancy Services",url:"https://www.priyamconsultancy.com/",logo:"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",contactPoint:[{"@type":"ContactPoint",telephone:"+91 96774 44048",contactType:"customer support"}],sameAs:["https://www.facebook.com/profile.php?id=61577125709962","https://www.linkedin.com/company/priyam-consultancy-services/","https://www.instagram.com/priyam_consultancy_services/","https://x.com/services91032","https://g.co/kgs/rdTYdi6"]},{"@context":"https://schema.org","@type":"Service","@id":"https://www.priyamconsultancy.com/performance-marketing/#service",name:"Performance Marketing",serviceType:"Performance Marketing Services",url:"https://www.priyamconsultancy.com/performance-marketing/",description:"Looking for top performance marketing companies? We offer result-driven performance marketing services including PPC, social media ads, and lead generation.",provider:{"@type":"Organization",name:"Priyam Consultancy Services",url:"https://www.priyamconsultancy.com/",logo:{"@type":"ImageObject",url:"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"}},areaServed:{"@type":"Country",name:"India"}},{"@context":"https://schema.org/","@type":"Product",name:"performance-marketing",image:["https://www.priyamconsultancy.com/img/performance-marketing.png"],description:"Best performance marketing services in Coimbatore offering Google Ads, Meta Ads, PPC campaign management, lead generation, conversion optimization, audience targeting and ROI-focused advertising solutions.",brand:{"@type":"Brand",name:"Priyam Consultancy Services"},review:{"@type":"Review",reviewRating:{"@type":"Rating",ratingValue:"4.9",bestRating:"5",worstRating:"1"},author:{"@type":"Person",name:"Admin"}},aggregateRating:{"@type":"AggregateRating",ratingValue:"4.9",reviewCount:"4732"},offers:{"@type":"Offer",url:"https://www.priyamconsultancy.com/performance-marketing/",priceCurrency:"USD",price:"00.00",priceValidUntil:"2026-12-31",itemCondition:"https://schema.org/UsedCondition",availability:"https://schema.org/InStock",seller:{"@type":"Organization",name:"priyamconsultancy.com"}}},{"@context":"https://schema.org","@type":"FAQPage",mainEntity:[{"@type":"Question",name:"What is performance marketing and how does it help my business?",acceptedAnswer:{"@type":"Answer",text:"Performance marketing is a results-driven digital marketing approach where campaigns are optimized based on measurable actions like leads, clicks, sales, or conversions. It helps businesses improve visibility, attract targeted audiences, generate qualified leads, and maximize return on advertising investment effectively."}},{"@type":"Question",name:"How much budget do I need to start a PPC campaign?",acceptedAnswer:{"@type":"Answer",text:"PPC campaign budgets depend on your industry, competition, business goals, and target audience. We create customized strategies suitable for both small and large businesses, ensuring your budget is allocated efficiently to maximize reach, lead generation, and overall campaign performance."}},{"@type":"Question",name:"Which platforms do you run PPC ads on?",acceptedAnswer:{"@type":"Answer",text:"We run PPC campaigns across multiple platforms including Google Ads, Meta Ads (Facebook and Instagram), LinkedIn Ads, YouTube Ads, and other relevant advertising networks. Platform selection depends on your business objectives, audience behavior, and the type of conversions you want to achieve."}},{"@type":"Question",name:"Is performance marketing suitable for small businesses?",acceptedAnswer:{"@type":"Answer",text:"Yes, performance marketing is highly suitable for small businesses because it focuses on measurable outcomes and controlled spending. It allows businesses to target specific audiences, track campaign performance in real time, optimize budgets efficiently, and generate qualified leads without unnecessary advertising expenses."}},{"@type":"Question",name:"How is performance marketing different from regular digital marketing?",acceptedAnswer:{"@type":"Answer",text:"Regular digital marketing focuses broadly on brand visibility and online presence, while performance marketing is centered around measurable actions like leads, conversions, and sales. Every campaign is continuously optimized using data and analytics to improve ROI and deliver trackable business outcomes."}},{"@type":"Question",name:"Do you create the ad content and landing pages too?",acceptedAnswer:{"@type":"Answer",text:"Yes, we provide complete campaign support including ad creatives, copywriting, landing page development, audience targeting, and conversion optimization. Our approach ensures that both the advertisements and landing pages work together effectively to improve engagement, lead quality, and campaign performance."}}]}].map((e,t)=>(0,r.jsx)("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:JSON.stringify(e)}},t))]}),(0,r.jsx)(u,{}),(0,r.jsx)(x,{}),(0,r.jsx)(w,{}),(0,r.jsx)(y,{}),(0,r.jsx)(j,{}),(0,r.jsx)(N,{}),(0,r.jsx)(s.A,{}),(0,r.jsx)(o.A,{})]})}}}]);

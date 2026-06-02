@@ -1,26 +1,4 @@
-import { useEffect, useRef, useState } from "react";
-import Layout from '@theme/Layout';
-const banner = "/img/approach.png";
-const bannerImg = "/img/about-us.png";
-const vision = "/img/vision.png";
-const mission = "/img/mission.png";
-
-const microsoft = "/img/microsoft-app-partner.jpeg";
-const sterlo = "/img/sterlo-partner.webp";
-const sterloBuild = "/img/sterlobuild-partner.webp";
-const sterloCare = "/img/sterlocare-partner.webp";
-const odoo = "/img/odoo-partner.webp";
-
-const Analytix = "/img/Analytix-Hub.webp";
-const Baltimore = "/img/baltimore.webp";
-const Sterlo = "/img/sterlo.webp";
-const OreOps = "/img/oreopps.webp";
-const RiyaConsultancy = "/img/riyaconsultancy.webp";
-const Tactive = "/img/tactive.webp";  
-const URCTC = "/img/urctc.webp";
-const ZKY = "/img/zky.webp";
-
-const css = `
+"use strict";(self.webpackChunknew_docs_pcs_website_design=self.webpackChunknew_docs_pcs_website_design||[]).push([["9636"],{9546(e,t,r){r.r(t),r.d(t,{default:()=>g});var s=r(4848),a=r(6540);let i="/img/microsoft-app-partner.jpeg",n="/img/sterlobuild-partner.webp",o="/img/sterlocare-partner.webp",c="/img/odoo-partner.webp",p=`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
 
   :root {
@@ -60,7 +38,7 @@ const css = `
   .pcs-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);animation:pcs-pulse-dot 1.6s infinite;}
   @keyframes pcs-pulse-dot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.4;transform:scale(1.5);}}
 
-  /* Hero heading — 3.3rem fixed, fw 600, orange word with underline */
+  /* Hero heading \u{2014} 3.3rem fixed, fw 600, orange word with underline */
   .pcs-hero-heading{font-family:'Poppins',sans-serif;font-size:3.3rem;font-weight:600;line-height:1.12;letter-spacing:-.02em;color:#fff;margin-bottom:1.4rem;animation:pcs-fadeUp .7s .08s ease both;}
   .pcs-hero-heading .orange{color:var(--orange);position:relative;display:inline-block;}
   .pcs-hero-heading .orange::after{content:'';position:absolute;left:0;bottom:-5px;width:100%;height:3px;background:linear-gradient(90deg,var(--orange),var(--orange-light));border-radius:2px;transform:scaleX(0);transform-origin:left;animation:pcs-ul-in .55s 1s ease forwards;}
@@ -69,12 +47,12 @@ const css = `
   .pcs-hero-sub{font-size:1rem;line-height:1.82;color:rgb(255, 255, 255);margin-bottom:2rem;animation:pcs-fadeUp .7s .16s ease both;}
   .pcs-btn-row{display:flex;gap:1rem;flex-wrap:wrap;animation:pcs-fadeUp .7s .26s ease both;}
 
-  /* Button — white text (not navy) */
+  /* Button \u{2014} white text (not navy) */
   .pcs-btn-fill{display:inline-flex;align-items:center;gap:.5rem;background:var(--orange);color:#fff;padding:.85rem 2rem;border-radius:50px;font-family:'Poppins',sans-serif;font-size:.92rem;font-weight:600;text-decoration:none;transition:all .22s;box-shadow:0 4px 22px rgba(237,131,55,.32);}
   .pcs-btn-fill:hover{background:var(--orange-light);color:#fff;transform:translateY(-2px);box-shadow:0 8px 30px rgba(237,131,55,.45);}
   @keyframes pcs-fadeUp{from{opacity:0;transform:translateY(26px);}to{opacity:1;transform:translateY(0);}}
 
-  /* Hero right — image always centered */
+  /* Hero right \u{2014} image always centered */
   .pcs-hero-right{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;animation:pcs-fadeUp .9s .15s ease both;}
   .pcs-about-scene{position:relative;width:480px;height:480px;}
   .pcs-orbit{position:absolute;top:50%;left:50%;width:380px;height:380px;margin:-190px 0 0 -190px;border-radius:50%;border:1px dashed rgba(237,131,55,0.12);animation:pcs-ring-spin 25s linear infinite;}
@@ -106,7 +84,7 @@ const css = `
   .pcs-np2{bottom:22px;left:50%;transform:translateX(-50%);background:rgba(237,131,55,0.1);border:1px solid rgba(237,131,55,0.4);color:var(--orange-light);animation:pcs-notif-pop 5s 2.5s ease-in-out infinite;}
   @keyframes pcs-notif-pop{0%,100%{opacity:0;transform:translateX(-50%) translateY(8px) scale(.9);}18%,80%{opacity:1;transform:translateX(-50%) translateY(0) scale(1);}}
 
-  /* SCROLL REVEAL — only active after CSS loads via .pcs-loaded */
+  /* SCROLL REVEAL \u{2014} only active after CSS loads via .pcs-loaded */
   .pcs-loaded .pcs-reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease;}
   .pcs-loaded .pcs-reveal.visible{opacity:1;transform:translateY(0);}
   .pcs-loaded .pcs-reveal-left{opacity:0;transform:translateX(-50px);transition:opacity .7s ease,transform .7s ease;}
@@ -190,7 +168,7 @@ const css = `
   .pcs-btn-outline-w{display:inline-flex;align-items:center;gap:.5rem;border:1.5px solid rgba(237,131,55,0.45);color:var(--orange);padding:.85rem 2rem;border-radius:50px;font-family:'Poppins',sans-serif;font-size:.92rem;font-weight:700;text-decoration:none;transition:all .22s;}
   .pcs-btn-outline-w:hover{background:rgba(237,131,55,0.1);transform:translateY(-2px);}
 
-  /* PARTNERS & CLIENTS — MARQUEE SLIDER */
+  /* PARTNERS & CLIENTS \u{2014} MARQUEE SLIDER */
   .pcs-pc-section{padding:0 0 6rem 0;background:#fff;}
   .pcs-pc-inner{display:flex;flex-direction:column;gap:3rem;}
   .pcs-pc-block{display:flex;flex-direction:column;gap:1.6rem;}
@@ -254,12 +232,12 @@ const css = `
 
   /* RESPONSIVE */
 
-  /* Tablet — 900px */
+  /* Tablet \u{2014} 900px */
   @media(max-width:900px){
     /* Layout stacks */
     .pcs-hero,.pcs-about-inner,.pcs-story-inner{grid-template-columns:1fr;gap:2.5rem;}
 
-    /* Hero — left-align text on tablet, image center */
+    /* Hero \u{2014} left-align text on tablet, image center */
     .pcs-hero{text-align:left;padding:4rem 5% 2rem;min-height:auto;}
     .pcs-hero-sub{max-width:100%;}
     .pcs-btn-row{justify-content:flex-start;}
@@ -291,13 +269,13 @@ const css = `
     .pcs-client-card{width:140px;height:68px;}
   }
 
-  /* Mobile — 600px */
+  /* Mobile \u{2014} 600px */
   @media(max-width:600px){
     /* Nav */
     .pcs-nav-links,.pcs-nav-btn{display:none;}
     .pcs-nav{padding:.9rem 5%;}
 
-    /* Hero — always left/start aligned on mobile */
+    /* Hero \u{2014} always left/start aligned on mobile */
     .pcs-hero{padding:6rem 5% 3rem;text-align:left;}
     .pcs-hero-heading{font-size:clamp(1.9rem,8vw,2.6rem);}
     .pcs-hero-sub{font-size:.92rem;text-align:left;}
@@ -343,7 +321,7 @@ const css = `
     .pcs-foot-links{justify-content:center;flex-wrap:wrap;gap:1rem;}
   }
 
-  /* Small mobile — 400px */
+  /* Small mobile \u{2014} 400px */
   @media(max-width:400px){
     .pcs-hero{padding:5.5rem 4% 3rem;}
     .pcs-hero-heading{font-size:1.65rem;}
@@ -352,412 +330,4 @@ const css = `
     .pcs-client-card{width:105px;height:56px;}
     .pcs-story-stat-num{font-size:1.4rem;}
   }
-`;
-
-const ALL_CLIENTS = [
-   { name: "Analytix-Hub",     logo: Analytix },
-  { name: "Baltimore",        logo: Baltimore},
-  { name: "Sterlo",           logo: Sterlo },
-  { name: "Sterlo Build",     logo: sterloBuild },
-  { name: "Sterlo Care",      logo: sterloCare },
-  { name: "Microsoft",        logo: microsoft },
-  { name: "Odoo",             logo: odoo },
-  { name: "OreOps",           logo: OreOps },
-  { name: "Riya Consultancy", logo: RiyaConsultancy },
-  { name: "Tactive",          logo: Tactive },
-  { name: "URCTC",            logo: URCTC },
-  { name: "ZKY",              logo: ZKY },
-];
-
-// Build slides: 6 clients per slide → row of 3 + row of 3
-function buildSlides(clients) {
-  const slides = [];
-  for (let i = 0; i < clients.length; i += 6) {
-    const chunk = clients.slice(i, i + 6);
-    if (chunk.length < 1) break;
-    slides.push({ row1: chunk.slice(0, 4), row2: chunk.slice(3, 6) });
-  }
-  return slides;
-}
-
-function LogoImg({ src, name }) {
-  const [failed, setFailed] = useState(false);
-  if (failed) {
-    return <span className="pcs-mq-fallback">{name}</span>;
-  }
-  return (
-    <img
-      src={src}
-      alt={name}
-      onError={() => setFailed(true)}
-      style={{ maxWidth: "100%", maxHeight: "38px", objectFit: "contain", display: "block" }}
-    />
-  );
-}
-
-function ClientCarousel() {
-  const slides = buildSlides(ALL_CLIENTS);
-  const [current, setCurrent] = useState(0);
-  const [animating, setAnimating] = useState(false);
-  const [direction, setDirection] = useState("next");
-  const timerRef = useRef(null);
-
-  const goTo = (idx, dir = "next") => {
-    if (animating) return;
-    setDirection(dir);
-    setAnimating(true);
-    setTimeout(() => {
-      setCurrent(idx);
-      setAnimating(false);
-    }, 380);
-  };
-
-  useEffect(() => {
-    timerRef.current = setInterval(() => {
-      goTo((current + 1) % slides.length, "next");
-    }, 3500);
-    return () => clearInterval(timerRef.current);
-  }, [current, animating]);
-
-  const slide = slides[current];
-
-  return (
-    <div className="pcs-carousel-wrap">
-      <div className={`pcs-carousel-slide ${animating ? (direction === "next" ? "pcs-slide-exit-left" : "pcs-slide-exit-right") : "pcs-slide-enter"}`}>
-        {/* Row 1 — 3 logos */}
-        <div className="pcs-clients-row">
-          {slide.row1.map((c, i) => (
-            <div key={c.name + i} className="pcs-client-card">
-              <LogoImg src={c.logo} name={c.name} />
-            </div>
-          ))}
-        </div>
-        {/* Row 2 — 3 logos centered */}
-        <div className="pcs-clients-row pcs-clients-row-center">
-          {slide.row2.map((c, i) => (
-            <div key={c.name + i} className="pcs-client-card">
-              <LogoImg src={c.logo} name={c.name} />
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* Dot indicators */}
-      <div className="pcs-carousel-dots">
-        {slides.map((_, i) => (
-          <button key={i} className={`pcs-carousel-dot${i === current ? " active" : ""}`} onClick={() => goTo(i, i > current ? "next" : "prev")} />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-export default function PCSAboutUs() {
-  const storyCanvasRef = useRef(null);
-
-  useEffect(() => {
-    // Inject CSS
-    const style = document.createElement("style");
-    style.textContent = css;
-    document.head.appendChild(style);
-    // Add loaded class AFTER css is injected so reveal opacity:0 applies safely
-    const wrapper = document.getElementById("pcs-about-wrapper");
-    if (wrapper) wrapper.classList.add("pcs-loaded");
-    return () => {
-      document.head.removeChild(style);
-      if (wrapper) wrapper.classList.remove("pcs-loaded");
-    };
-  }, []);
-
-  useEffect(() => {
-    // Scroll reveal — rootMargin ensures above-fold elements fire immediately
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("visible");
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
-    );
-    const revealEls = document.querySelectorAll(".pcs-reveal,.pcs-reveal-left,.pcs-reveal-right");
-    revealEls.forEach((el) => {
-      // If element is already in viewport on load, mark visible immediately
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        el.classList.add("visible");
-      } else {
-        io.observe(el);
-      }
-    });
-
-    // Trust items reveal
-    const trustIO = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            const delay = parseInt(e.target.dataset.delay || 0);
-            setTimeout(() => e.target.classList.add("visible"), delay);
-            trustIO.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
-    );
-    document
-      .querySelectorAll(".pcs-trust-item")
-      .forEach((c) => {
-        const rect = c.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          c.classList.add("visible");
-        } else {
-          trustIO.observe(c);
-        }
-      });
-
-    return () => {
-      io.disconnect();
-      trustIO.disconnect();
-    };
-  }, []);
-
-  useEffect(() => {
-    // Bouncing balls canvas
-    const canvas = storyCanvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    const section = canvas.parentElement;
-    let W, H, balls, animId;
-
-    const COLORS = [
-      "rgba(237,131,55,VAL)",
-      "rgba(59,158,201,VAL)",
-      "rgba(91,184,232,VAL)",
-      "rgba(245,166,107,VAL)",
-      "rgba(255,255,255,VAL)",
-    ];
-
-    function makeBall() {
-      const r = 3 + Math.random() * 9;
-      return {
-        x: Math.random() * W,
-        y: Math.random() * H,
-        r,
-        vx: (Math.random() - 0.5) * 1.1,
-        vy: (Math.random() - 0.5) * 1.1,
-        color: COLORS[Math.floor(Math.random() * COLORS.length)].replace(
-          "VAL",
-          (0.12 + Math.random() * 0.22).toFixed(2)
-        ),
-      };
-    }
-
-    function resize() {
-      W = canvas.width = section.offsetWidth;
-      H = canvas.height = section.offsetHeight;
-      balls = Array.from({ length: 28 }, makeBall);
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, W, H);
-      balls.forEach((b) => {
-        b.x += b.vx;
-        b.y += b.vy;
-        if (b.x - b.r < 0) { b.x = b.r; b.vx *= -1; }
-        if (b.x + b.r > W) { b.x = W - b.r; b.vx *= -1; }
-        if (b.y - b.r < 0) { b.y = b.r; b.vy *= -1; }
-        if (b.y + b.r > H) { b.y = H - b.r; b.vy *= -1; }
-        ctx.beginPath();
-        ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
-        ctx.fillStyle = b.color;
-        ctx.fill();
-      });
-      animId = requestAnimationFrame(draw);
-    }
-
-    resize();
-    window.addEventListener("resize", resize);
-    draw();
-    return () => {
-      cancelAnimationFrame(animId);
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
-
-  return (
-    <div id="pcs-about-wrapper" style={{ fontFamily: "'Poppins', sans-serif" }}>
-
-      {/* HERO */}
-      <section className="pcs-hero">
-        <div className="pcs-hero-left">
-          <div className="pcs-badge">
-            <span className="pcs-badge-dot"></span>About Priyam Consultancy Services
-          </div>
-          <h1 className="pcs-hero-heading">
-            Transforming with Businesses for<br />
-            <span className="orange">Beyond the Usual.</span>
-          </h1>
-          <p className="pcs-hero-sub">
-            Empowering progress with end-to-end transformation services combining innovation, compliance, and people strategies to redefine business success.
-          </p>
-          <div className="pcs-btn-row">
-            <a href="#" className="pcs-btn-fill">View Portfolio →</a>
-          </div>
-        </div>
-        <div className="pcs-hero-right">
-          <div className="pcs-hero-img-wrap">
-            <img
-              src={bannerImg}
-              alt="Priyam Consultancy Services"
-              className="pcs-hero-img"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* ABOUT SECTION */}
-      <section className="pcs-about-section">
-        <div className="pcs-about-inner">
-          <div className="pcs-about-illo pcs-reveal-left">
-            {/* REPLACE: Add your image below — remove this SVG block */}
-            <img
-              src={banner}
-              alt="Growth Engine"
-              className="pcs-about-section-img"
-            />
-          </div>
-          <div className="pcs-reveal-right">
-            <div className="partners-header1">
-              <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>About Us</div>
-            </div>
-            <h2 className="pcs-about-heading">We Don’t Just Offer Services. We Solve Your Business Challenges.</h2>
-            <p className="pcs-about-para"> A leading digital transformation and Growth Partner that turns your ideas into action.</p>
-            <p className="pcs-about-para">We turn ideas into plans, blending innovation to deliver results across Business Registration & Compliance, Digital Transformation, Digital Marketing, and HR Services.</p>
-            <p className="pcs-about-para">Our expertise helps businesses grow brands, streamline operations, optimize talent, and remain compliant with tailored solutions.</p>
-            <p className="pcs-about-para">From startups to enterprises, we provide scalable, flexible services that adapt to evolving objectives and market demands.</p>
-            <p className="pcs-about-para">We prioritize trust, transparency, and measurable outcomes, ensuring long-term success and sustainable impact for every client.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* STORY SECTION */}
-      <section className="pcs-story-section">
-        <canvas id="pcs-story-canvas" ref={storyCanvasRef}></canvas>
-        <div className="pcs-story-inner">
-          <div className="pcs-reveal-left">
-      <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Story</div>
-          </div>            <h2 className="pcs-story-heading">The Minds <span className="orange">Behind</span> the Magic </h2>
-            <div className="pcs-story-divider"></div>
-            <p className="pcs-story-text">We’re more than a team – we’re a dynamic, collaborative mix of strategists, marketers, HR thinkers, tech innovators, and creative minds. Each member brings unique expertise, diverse experiences, and a shared passion for solving complex business challenges. Together, we’re united by one unwavering belief.</p>
-            <blockquote className="pcs-story-quote">
-              “Great businesses are built from the inside out”
-            </blockquote>
-          </div>
-          <div className="pcs-story-cards pcs-reveal-right">
-            {/* Vision Card */}
-            <div className="pcs-vm-card">
-              <div className="pcs-vm-illo">
-                <img
-                  src={vision}
-                  alt="Our Vision"
-                  style={{ width: "100%", height: "170px", objectFit: "cover", display: "block" }}
-                />
-              </div>
-              <div className="pcs-vm-body">
-                <div className="pcs-vm-label pcs-vm-label-vision">⬡ Our Vision</div>
-                <div className="pcs-vm-text">To be the most trusted partner in business growth by delivering innovative solutions across business registration, technology, marketing, and HR, helping clients exceed goals and achieve lasting success.</div>
-              </div>
-            </div>
-            {/* Mission Card */}
-            <div className="pcs-vm-card">
-              <div className="pcs-vm-illo">
-                <img
-                  src={mission}
-                  alt="Our Mission"
-                  style={{ width: "100%", height: "170px", objectFit: "cover", display: "block" }}
-                />
-              </div>
-              <div className="pcs-vm-body">
-                <div className="pcs-vm-label pcs-vm-label-mission">⬡ Our Mission</div>
-                <div className="pcs-vm-text">We drive visibility, efficiency, and performance with data-led marketing, people-first HR strategies, seamless business registration, and digital transformation solutions all built for real business impact.</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* TRUST SECTION */}
-      <section className="pcs-trust-section">
-        <div className="pcs-trust-inner">
-          <div className="pcs-trust-head pcs-reveal">
-      <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why Businesses Trust Us</div>
-          </div>            <h2 className="pcs-trust-title">We Don't Just Deliver Services.<span><i> We Deliver Results.</i></span></h2>
-            <p className="pcs-trust-sub">At PCS, every partnership is built on trust and performance. Our holistic approach ensures measurable results across compliance, HR, finance, and digital transformation.</p>
-          </div>
-          <div className="pcs-trust-list">
-            {[
-              { num: "01", icon: "/img/icon/one-point-access.webp", bg: "rgba(237,131,55,0.12)",  title: "One Point Access",       text: "Complete expertise — compliance, HR, digital, and marketing — integrated under one roof. No juggling vendors.", delay: 0 },
-              { num: "02", icon: "/img/icon/customized-strategies.webp",    bg: "rgba(59,158,201,0.12)",  title: "Scalable Solutions",     text: "Flexible, modular offerings that grow with your business — from early-stage startups to established enterprises.", delay: 100 },
-              { num: "03", icon:"/img/icon/expert-team.webp", bg: "rgba(34,197,94,0.12)",   title: "Result-Oriented",        text: "Every strategy we deploy is tied to measurable ROI, performance benchmarks, and tangible business growth.", delay: 200 },
-              { num: "04", icon:"/img/icon/result-oriented.webp", bg: "rgba(168,85,247,0.12)",  title: "Customized Strategies",  text: "No templates. No copy-paste. Every solution is designed specifically around your business reality and goals.", delay: 300 },
-              { num: "05", icon:"/img/icon/customer-success.webp", bg: "rgba(245,166,107,0.12)", title: "Customer Success First", text: "We don't close deals — we open possibilities. Our growth is directly tied to the success of every client we serve.", delay: 400 },
-              { num: "06", icon:"/img/icon/scalable-solutions.webp", bg: "rgba(91,184,232,0.12)",  title: "Expert Team",            text: "Skilled professionals with deep multi-domain expertise — strategists, technologists, HR specialists, and marketers working as one.", delay: 500 },
-            ].map((item) => (
-              <div key={item.num} className="pcs-trust-item" data-delay={item.delay}>
-                <div className="pcs-ti-num">{item.num}</div>
-                <div className="pcs-ti-icon" style={{ background: item.bg }}>
-                  <img src={item.icon} alt={item.title} width={22} height={22} style={{ objectFit: "contain" }} />
-                </div>
-                <div>
-                  <div className="pcs-ti-title">{item.title}</div>
-                  <div className="pcs-ti-text">{item.text}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* PARTNERS & CLIENTS — COMBINED */}
-      <section className="pcs-pc-section pcs-reveal">
-        <div className="pcs-pc-inner">
-          {/* Partners — 5 static cards */}
-          <div className="pcs-pc-block">
-            <div className="pcs-pc-head">
-              <h2 className="pcs-pc-title">Our <span><i>Partners</i></span></h2>
-            </div>
-            <div className="pcs-pc-partners-static">
-              {[
-                { name: "Microsoft", src: microsoft },
-                { name: "Sterlo",    src: sterlo },
-                { name: "SterloBuild",      src: sterloBuild },
-                { name: "SterloCare",     src: sterloCare },
-                { name: "Odoo",       src: odoo },
-              ].map((p) => (
-                <div key={p.name} className="pcs-mq-item">
-                  <LogoImg src={p.src} name={p.name} />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="pcs-pc-divider"></div>
-
-          {/* Clients — auto-sliding 4x3 carousel */}
-          <div className="pcs-pc-block">
-            <div className="pcs-pc-head">
-              <h2 className="pcs-pc-title">Our <span><i>Clients</i></span></h2>
-            </div>
-            <ClientCarousel />
-          </div>
-
-        </div>
-      </section>
-
-
-    </div>
-  );
-}
+`,l=[{name:"Analytix-Hub",logo:"/img/Analytix-Hub.webp"},{name:"Baltimore",logo:"/img/baltimore.webp"},{name:"Sterlo",logo:"/img/sterlo.webp"},{name:"Sterlo Build",logo:n},{name:"Sterlo Care",logo:o},{name:"Microsoft",logo:i},{name:"Odoo",logo:c},{name:"OreOps",logo:"/img/oreopps.webp"},{name:"Riya Consultancy",logo:"/img/riyaconsultancy.webp"},{name:"Tactive",logo:"/img/tactive.webp"},{name:"URCTC",logo:"/img/urctc.webp"},{name:"ZKY",logo:"/img/zky.webp"}];function d({src:e,name:t}){let[r,i]=(0,a.useState)(!1);return r?(0,s.jsx)("span",{className:"pcs-mq-fallback",children:t}):(0,s.jsx)("img",{src:e,alt:t,onError:()=>i(!0),style:{maxWidth:"100%",maxHeight:"38px",objectFit:"contain",display:"block"}})}function m(){let e=function(e){let t=[];for(let r=0;r<e.length;r+=6){let s=e.slice(r,r+6);if(s.length<1)break;t.push({row1:s.slice(0,4),row2:s.slice(3,6)})}return t}(l),[t,r]=(0,a.useState)(0),[i,n]=(0,a.useState)(!1),[o,c]=(0,a.useState)("next"),p=(0,a.useRef)(null),m=(e,t="next")=>{i||(c(t),n(!0),setTimeout(()=>{r(e),n(!1)},380))};(0,a.useEffect)(()=>(p.current=setInterval(()=>{m((t+1)%e.length,"next")},3500),()=>clearInterval(p.current)),[t,i]);let g=e[t];return(0,s.jsxs)("div",{className:"pcs-carousel-wrap",children:[(0,s.jsxs)("div",{className:`pcs-carousel-slide ${i?"next"===o?"pcs-slide-exit-left":"pcs-slide-exit-right":"pcs-slide-enter"}`,children:[(0,s.jsx)("div",{className:"pcs-clients-row",children:g.row1.map((e,t)=>(0,s.jsx)("div",{className:"pcs-client-card",children:(0,s.jsx)(d,{src:e.logo,name:e.name})},e.name+t))}),(0,s.jsx)("div",{className:"pcs-clients-row pcs-clients-row-center",children:g.row2.map((e,t)=>(0,s.jsx)("div",{className:"pcs-client-card",children:(0,s.jsx)(d,{src:e.logo,name:e.name})},e.name+t))})]}),(0,s.jsx)("div",{className:"pcs-carousel-dots",children:e.map((e,r)=>(0,s.jsx)("button",{className:`pcs-carousel-dot${r===t?" active":""}`,onClick:()=>m(r,r>t?"next":"prev")},r))})]})}function g(){let e=(0,a.useRef)(null);return(0,a.useEffect)(()=>{let e=document.createElement("style");e.textContent=p,document.head.appendChild(e);let t=document.getElementById("pcs-about-wrapper");return t&&t.classList.add("pcs-loaded"),()=>{document.head.removeChild(e),t&&t.classList.remove("pcs-loaded")}},[]),(0,a.useEffect)(()=>{let e=new IntersectionObserver(t=>{t.forEach(t=>{t.isIntersecting&&(t.target.classList.add("visible"),e.unobserve(t.target))})},{threshold:.08,rootMargin:"0px 0px -40px 0px"});document.querySelectorAll(".pcs-reveal,.pcs-reveal-left,.pcs-reveal-right").forEach(t=>{let r=t.getBoundingClientRect();r.top<window.innerHeight&&r.bottom>0?t.classList.add("visible"):e.observe(t)});let t=new IntersectionObserver(e=>{e.forEach(e=>{e.isIntersecting&&(setTimeout(()=>e.target.classList.add("visible"),parseInt(e.target.dataset.delay||0)),t.unobserve(e.target))})},{threshold:.08,rootMargin:"0px 0px -40px 0px"});return document.querySelectorAll(".pcs-trust-item").forEach(e=>{let r=e.getBoundingClientRect();r.top<window.innerHeight&&r.bottom>0?e.classList.add("visible"):t.observe(e)}),()=>{e.disconnect(),t.disconnect()}},[]),(0,a.useEffect)(()=>{let t,r,s,a,i=e.current;if(!i)return;let n=i.getContext("2d"),o=i.parentElement,c=["rgba(237,131,55,VAL)","rgba(59,158,201,VAL)","rgba(91,184,232,VAL)","rgba(245,166,107,VAL)","rgba(255,255,255,VAL)"];function p(){return{x:Math.random()*t,y:Math.random()*r,r:3+9*Math.random(),vx:(Math.random()-.5)*1.1,vy:(Math.random()-.5)*1.1,color:c[Math.floor(Math.random()*c.length)].replace("VAL",(.12+.22*Math.random()).toFixed(2))}}function l(){t=i.width=o.offsetWidth,r=i.height=o.offsetHeight,s=Array.from({length:28},p)}return l(),window.addEventListener("resize",l),!function e(){n.clearRect(0,0,t,r),s.forEach(e=>{e.x+=e.vx,e.y+=e.vy,e.x-e.r<0&&(e.x=e.r,e.vx*=-1),e.x+e.r>t&&(e.x=t-e.r,e.vx*=-1),e.y-e.r<0&&(e.y=e.r,e.vy*=-1),e.y+e.r>r&&(e.y=r-e.r,e.vy*=-1),n.beginPath(),n.arc(e.x,e.y,e.r,0,2*Math.PI),n.fillStyle=e.color,n.fill()}),a=requestAnimationFrame(e)}(),()=>{cancelAnimationFrame(a),window.removeEventListener("resize",l)}},[]),(0,s.jsxs)("div",{id:"pcs-about-wrapper",style:{fontFamily:"'Poppins', sans-serif"},children:[(0,s.jsxs)("section",{className:"pcs-hero",children:[(0,s.jsxs)("div",{className:"pcs-hero-left",children:[(0,s.jsxs)("div",{className:"pcs-badge",children:[(0,s.jsx)("span",{className:"pcs-badge-dot"}),"About Priyam Consultancy Services"]}),(0,s.jsxs)("h1",{className:"pcs-hero-heading",children:["Transforming with Businesses for",(0,s.jsx)("br",{}),(0,s.jsx)("span",{className:"orange",children:"Beyond the Usual."})]}),(0,s.jsx)("p",{className:"pcs-hero-sub",children:"Empowering progress with end-to-end transformation services combining innovation, compliance, and people strategies to redefine business success."}),(0,s.jsx)("div",{className:"pcs-btn-row",children:(0,s.jsx)("a",{href:"#",className:"pcs-btn-fill",children:"View Portfolio \u2192"})})]}),(0,s.jsx)("div",{className:"pcs-hero-right",children:(0,s.jsx)("div",{className:"pcs-hero-img-wrap",children:(0,s.jsx)("img",{src:"/img/about-us.png",alt:"Priyam Consultancy Services",className:"pcs-hero-img"})})})]}),(0,s.jsx)("section",{className:"pcs-about-section",children:(0,s.jsxs)("div",{className:"pcs-about-inner",children:[(0,s.jsx)("div",{className:"pcs-about-illo pcs-reveal-left",children:(0,s.jsx)("img",{src:"/img/approach.png",alt:"Growth Engine",className:"pcs-about-section-img"})}),(0,s.jsxs)("div",{className:"pcs-reveal-right",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"About Us"})}),(0,s.jsx)("h2",{className:"pcs-about-heading",children:"We Don\u2019t Just Offer Services. We Solve Your Business Challenges."}),(0,s.jsx)("p",{className:"pcs-about-para",children:" A leading digital transformation and Growth Partner that turns your ideas into action."}),(0,s.jsx)("p",{className:"pcs-about-para",children:"We turn ideas into plans, blending innovation to deliver results across Business Registration & Compliance, Digital Transformation, Digital Marketing, and HR Services."}),(0,s.jsx)("p",{className:"pcs-about-para",children:"Our expertise helps businesses grow brands, streamline operations, optimize talent, and remain compliant with tailored solutions."}),(0,s.jsx)("p",{className:"pcs-about-para",children:"From startups to enterprises, we provide scalable, flexible services that adapt to evolving objectives and market demands."}),(0,s.jsx)("p",{className:"pcs-about-para",children:"We prioritize trust, transparency, and measurable outcomes, ensuring long-term success and sustainable impact for every client."})]})]})}),(0,s.jsxs)("section",{className:"pcs-story-section",children:[(0,s.jsx)("canvas",{id:"pcs-story-canvas",ref:e}),(0,s.jsxs)("div",{className:"pcs-story-inner",children:[(0,s.jsxs)("div",{className:"pcs-reveal-left",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Story"})}),"            ",(0,s.jsxs)("h2",{className:"pcs-story-heading",children:["The Minds ",(0,s.jsx)("span",{className:"orange",children:"Behind"})," the Magic "]}),(0,s.jsx)("div",{className:"pcs-story-divider"}),(0,s.jsx)("p",{className:"pcs-story-text",children:"We\u2019re more than a team \u2013 we\u2019re a dynamic, collaborative mix of strategists, marketers, HR thinkers, tech innovators, and creative minds. Each member brings unique expertise, diverse experiences, and a shared passion for solving complex business challenges. Together, we\u2019re united by one unwavering belief."}),(0,s.jsx)("blockquote",{className:"pcs-story-quote",children:"\u201CGreat businesses are built from the inside out\u201D"})]}),(0,s.jsxs)("div",{className:"pcs-story-cards pcs-reveal-right",children:[(0,s.jsxs)("div",{className:"pcs-vm-card",children:[(0,s.jsx)("div",{className:"pcs-vm-illo",children:(0,s.jsx)("img",{src:"/img/vision.png",alt:"Our Vision",style:{width:"100%",height:"170px",objectFit:"cover",display:"block"}})}),(0,s.jsxs)("div",{className:"pcs-vm-body",children:[(0,s.jsx)("div",{className:"pcs-vm-label pcs-vm-label-vision",children:"\u2B21 Our Vision"}),(0,s.jsx)("div",{className:"pcs-vm-text",children:"To be the most trusted partner in business growth by delivering innovative solutions across business registration, technology, marketing, and HR, helping clients exceed goals and achieve lasting success."})]})]}),(0,s.jsxs)("div",{className:"pcs-vm-card",children:[(0,s.jsx)("div",{className:"pcs-vm-illo",children:(0,s.jsx)("img",{src:"/img/mission.png",alt:"Our Mission",style:{width:"100%",height:"170px",objectFit:"cover",display:"block"}})}),(0,s.jsxs)("div",{className:"pcs-vm-body",children:[(0,s.jsx)("div",{className:"pcs-vm-label pcs-vm-label-mission",children:"\u2B21 Our Mission"}),(0,s.jsx)("div",{className:"pcs-vm-text",children:"We drive visibility, efficiency, and performance with data-led marketing, people-first HR strategies, seamless business registration, and digital transformation solutions all built for real business impact."})]})]})]})]})]}),(0,s.jsx)("section",{className:"pcs-trust-section",children:(0,s.jsxs)("div",{className:"pcs-trust-inner",children:[(0,s.jsxs)("div",{className:"pcs-trust-head pcs-reveal",children:[(0,s.jsx)("div",{className:"partners-header1",children:(0,s.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Why Businesses Trust Us"})}),"            ",(0,s.jsxs)("h2",{className:"pcs-trust-title",children:["We Don't Just Deliver Services.",(0,s.jsx)("span",{children:(0,s.jsx)("i",{children:" We Deliver Results."})})]}),(0,s.jsx)("p",{className:"pcs-trust-sub",children:"At PCS, every partnership is built on trust and performance. Our holistic approach ensures measurable results across compliance, HR, finance, and digital transformation."})]}),(0,s.jsx)("div",{className:"pcs-trust-list",children:[{num:"01",icon:"/img/icon/one-point-access.webp",bg:"rgba(237,131,55,0.12)",title:"One Point Access",text:"Complete expertise \u2014 compliance, HR, digital, and marketing \u2014 integrated under one roof. No juggling vendors.",delay:0},{num:"02",icon:"/img/icon/customized-strategies.webp",bg:"rgba(59,158,201,0.12)",title:"Scalable Solutions",text:"Flexible, modular offerings that grow with your business \u2014 from early-stage startups to established enterprises.",delay:100},{num:"03",icon:"/img/icon/expert-team.webp",bg:"rgba(34,197,94,0.12)",title:"Result-Oriented",text:"Every strategy we deploy is tied to measurable ROI, performance benchmarks, and tangible business growth.",delay:200},{num:"04",icon:"/img/icon/result-oriented.webp",bg:"rgba(168,85,247,0.12)",title:"Customized Strategies",text:"No templates. No copy-paste. Every solution is designed specifically around your business reality and goals.",delay:300},{num:"05",icon:"/img/icon/customer-success.webp",bg:"rgba(245,166,107,0.12)",title:"Customer Success First",text:"We don't close deals \u2014 we open possibilities. Our growth is directly tied to the success of every client we serve.",delay:400},{num:"06",icon:"/img/icon/scalable-solutions.webp",bg:"rgba(91,184,232,0.12)",title:"Expert Team",text:"Skilled professionals with deep multi-domain expertise \u2014 strategists, technologists, HR specialists, and marketers working as one.",delay:500}].map(e=>(0,s.jsxs)("div",{className:"pcs-trust-item","data-delay":e.delay,children:[(0,s.jsx)("div",{className:"pcs-ti-num",children:e.num}),(0,s.jsx)("div",{className:"pcs-ti-icon",style:{background:e.bg},children:(0,s.jsx)("img",{src:e.icon,alt:e.title,width:22,height:22,style:{objectFit:"contain"}})}),(0,s.jsxs)("div",{children:[(0,s.jsx)("div",{className:"pcs-ti-title",children:e.title}),(0,s.jsx)("div",{className:"pcs-ti-text",children:e.text})]})]},e.num))})]})}),(0,s.jsx)("section",{className:"pcs-pc-section pcs-reveal",children:(0,s.jsxs)("div",{className:"pcs-pc-inner",children:[(0,s.jsxs)("div",{className:"pcs-pc-block",children:[(0,s.jsx)("div",{className:"pcs-pc-head",children:(0,s.jsxs)("h2",{className:"pcs-pc-title",children:["Our ",(0,s.jsx)("span",{children:(0,s.jsx)("i",{children:"Partners"})})]})}),(0,s.jsx)("div",{className:"pcs-pc-partners-static",children:[{name:"Microsoft",src:i},{name:"Sterlo",src:"/img/sterlo-partner.webp"},{name:"SterloBuild",src:n},{name:"SterloCare",src:o},{name:"Odoo",src:c}].map(e=>(0,s.jsx)("div",{className:"pcs-mq-item",children:(0,s.jsx)(d,{src:e.src,name:e.name})},e.name))})]}),(0,s.jsx)("div",{className:"pcs-pc-divider"}),(0,s.jsxs)("div",{className:"pcs-pc-block",children:[(0,s.jsx)("div",{className:"pcs-pc-head",children:(0,s.jsxs)("h2",{className:"pcs-pc-title",children:["Our ",(0,s.jsx)("span",{children:(0,s.jsx)("i",{children:"Clients"})})]})}),(0,s.jsx)(m,{})]})]})})]})}}}]);

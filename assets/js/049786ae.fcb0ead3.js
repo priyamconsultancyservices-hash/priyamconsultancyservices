@@ -1,13 +1,7 @@
-import { useState, useEffect, useRef } from "react";
-import emailjs from "@emailjs/browser";
-import BlogSection from "../components/BlogSection";
-import CTASection from "../components/HomePage/CTA";
-const banner = "/img/graphic-design.png";
-import Layout from '@theme/Layout';
-import Head from '@docusaurus/Head';
-
-// ─── CSS-in-JS via a single <style> block injected once ───────────────────────
-const STYLES = `
+"use strict";(self.webpackChunknew_docs_pcs_website_design=self.webpackChunknew_docs_pcs_website_design||[]).push([["4096"],{3177(e,t,s){s.d(t,{A:()=>r});var i=s(4848),a=s(6540);let n=`https://corsproxy.io/?${encodeURIComponent("https://www.priyamconsultancy.com/blog/feed/")}`;function r(){let[e,t]=(0,a.useState)([]),[s,r]=(0,a.useState)(!0),[o,m]=(0,a.useState)(null);return(0,a.useEffect)(()=>{fetch(n).then(e=>{if(!e.ok)throw Error(`HTTP ${e.status}`);return e.text()}).then(e=>{t(Array.from(new DOMParser().parseFromString(e,"text/xml").querySelectorAll("item")).slice(0,3).map(e=>{let t=e.querySelector("enclosure"),s=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","content")[0],i=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","thumbnail")[0],a=e.getElementsByTagNameNS("http://purl.org/rss/1.0/modules/content/","encoded")[0],n=a?.textContent||"",r=n.match(/<img[^>]+src=["']([^"']+)["']/i),o=e.querySelector("description")?.textContent||"",m=o.match(/<img[^>]+src=["']([^"']+)["']/i),l=t?.getAttribute("url")||s?.getAttribute("url")||i?.getAttribute("url")||r?.[1]||m?.[1]||null,d=(n||o).replace(/<[^>]*>/g,"").replace(/&[^;]+;/g," ").trim(),p=d.length>340?d.slice(0,340)+"...":d,c=e.getElementsByTagName("link")[0],h=c?.textContent?.trim()||e.querySelector("guid")?.textContent||"#";return{guid:e.querySelector("guid")?.textContent||Math.random().toString(),title:e.querySelector("title")?.textContent?.trim()||"Untitled",link:h,thumbnail:l,excerpt:p}})),r(!1)}).catch(e=>{m(e.message),r(!1)})},[]),(0,i.jsxs)("section",{style:{width:"100%",padding:"4rem 1rem",boxSizing:"border-box",background:"#fff"},children:[(0,i.jsxs)("div",{style:{maxWidth:"1200px",margin:"0 auto"},children:[(0,i.jsxs)("div",{style:{textAlign:"center",marginBottom:"2.5rem"},children:[(0,i.jsx)("h2",{style:{fontSize:"2rem",fontWeight:700,margin:"0 0 0.5rem",color:"#111"},children:"Blogs"}),(0,i.jsx)("p",{style:{color:"#666",margin:0,fontSize:"1rem"},children:"Stay updated with the latest in digital marketing, growth strategies, and industry trends."})]}),s&&(0,i.jsx)("p",{style:{textAlign:"center",color:"#888"},children:"Loading..."}),o&&(0,i.jsxs)("p",{style:{textAlign:"center",color:"red"},children:["Error: ",o]}),(0,i.jsx)("div",{style:{display:"grid",gridTemplateColumns:"repeat(3, 1fr)",gap:"1.5rem"},className:"blog-grid",children:e.map(e=>(0,i.jsxs)("a",{href:e.link,target:"_blank",rel:"noreferrer",style:{border:"1px solid #e5e7eb",borderRadius:"12px",overflow:"hidden",background:"#fff",display:"flex",flexDirection:"column",textDecoration:"none",color:"inherit",transition:"box-shadow 0.2s, transform 0.2s",cursor:"pointer"},onMouseEnter:e=>{e.currentTarget.style.boxShadow="0 8px 24px rgba(0,0,0,0.12)",e.currentTarget.style.transform="translateY(-3px)"},onMouseLeave:e=>{e.currentTarget.style.boxShadow="none",e.currentTarget.style.transform="translateY(0)"},children:[(0,i.jsx)("div",{style:{width:"100%",aspectRatio:"16/9",overflow:"hidden",background:"#1a2744"},children:e.thumbnail?(0,i.jsx)("img",{src:e.thumbnail,alt:e.title,loading:"lazy",style:{width:"100%",height:"100%",objectFit:"cover",display:"block"}}):(0,i.jsx)("div",{style:{width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",opacity:.4,fontSize:"0.8rem"},children:"No image"})}),(0,i.jsxs)("div",{style:{padding:"1.25rem",display:"flex",flexDirection:"column",gap:"0.75rem"},children:[(0,i.jsx)("p",{style:{fontWeight:600,fontSize:"1.1rem",lineHeight:1.6,margin:0,color:"#111"},children:e.title}),(0,i.jsx)("p",{style:{color:"#444",fontSize:"0.875rem",lineHeight:1.6,flex:1,margin:0},children:e.excerpt}),(0,i.jsx)("span",{style:{display:"inline-block",background:"#E87C30",color:"#fff",padding:"0.6rem 1.5rem",borderRadius:"999px",fontWeight:500,alignSelf:"flex-start",marginTop:"0.5rem",fontSize:"0.875rem"},children:"Read More"})]})]},e.guid))})]}),(0,i.jsx)("style",{dangerouslySetInnerHTML:{__html:`
+        @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 600px)  { .blog-grid { grid-template-columns: 1fr !important; } }
+      `}})]})}},9393(e,t,s){s.d(t,{A:()=>n});var i=s(4848),a=s(6540);let n=function(){let e=(0,a.useRef)(null);return(0,a.useEffect)(()=>{let t=e.current;if(!t)return;let s=t.getContext("2d"),i="#ed8337",a,n,r=[],o;function m(){a=t.width=t.parentElement.offsetWidth,n=t.height=t.parentElement.offsetHeight}function l(){this.reset()}l.prototype.reset=function(){this.x=Math.random()*a,this.y=Math.random()*n,this.r=2.2*Math.random()+.6,this.type=.55>Math.random()?"dot":.5>Math.random()?"ring":"plus",this.speed=.35*Math.random()+.08,this.dir=Math.random()*Math.PI*2,this.alpha=.45*Math.random()+.1,this.pulse=Math.random()*Math.PI*2,this.pulseSpeed=.018*Math.random()+.008,this.size=4*Math.random()+2},l.prototype.update=function(){this.x+=Math.cos(this.dir)*this.speed,this.y+=Math.sin(this.dir)*this.speed,this.pulse+=this.pulseSpeed,this.dir+=(Math.random()-.5)*.015,this.x<-20&&(this.x=a+20),this.x>a+20&&(this.x=-20),this.y<-20&&(this.y=n+20),this.y>n+20&&(this.y=-20)},l.prototype.draw=function(){let e=this.alpha*(.7+.3*Math.sin(this.pulse));if(s.save(),s.globalAlpha=e,s.strokeStyle=s.fillStyle=i,s.lineWidth=1,"dot"===this.type)s.beginPath(),s.arc(this.x,this.y,this.r+.4*Math.sin(this.pulse),0,2*Math.PI),s.fill();else if("ring"===this.type){let e=this.size*(.9+.15*Math.sin(this.pulse));s.beginPath(),s.arc(this.x,this.y,e,0,2*Math.PI),s.stroke()}else{let e=this.size*(.9+.1*Math.sin(this.pulse));s.beginPath(),s.moveTo(this.x-e,this.y),s.lineTo(this.x+e,this.y),s.moveTo(this.x,this.y-e),s.lineTo(this.x,this.y+e),s.stroke()}s.restore()},window.addEventListener("resize",m),m(),r=[];let d=Math.floor(a*n/9e3);for(let e=0;e<Math.max(d,28);e++)r.push(new l);return!function e(){s.clearRect(0,0,a,n),function(){let e=r.filter(e=>"dot"===e.type);for(let t=0;t<e.length;t++)for(let a=t+1;a<e.length;a++){let n=e[t].x-e[a].x,r=e[t].y-e[a].y,o=Math.sqrt(n*n+r*r);o<110&&(s.save(),s.globalAlpha=(1-o/110)*.12,s.strokeStyle=i,s.lineWidth=.7,s.beginPath(),s.moveTo(e[t].x,e[t].y),s.lineTo(e[a].x,e[a].y),s.stroke(),s.restore())}}(),r.forEach(e=>{e.update(),e.draw()}),o=requestAnimationFrame(e)}(),()=>{cancelAnimationFrame(o),window.removeEventListener("resize",m)}},[]),(0,i.jsx)("section",{id:"cta-final",children:(0,i.jsxs)("div",{className:"cta-banner",style:{"--glow-x":"50%","--glow-y":"50%"},children:[(0,i.jsx)("canvas",{id:"ctaCanvas",ref:e}),(0,i.jsxs)("div",{className:"cta-banner-left",children:[(0,i.jsx)("div",{className:"partners-header",children:(0,i.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Ready to Start?"})}),(0,i.jsxs)("h2",{className:"cta-banner-heading",children:["Let's Talk About Your",(0,i.jsx)("br",{}),"Next Big ",(0,i.jsx)("span",{className:"hl-italic",children:"Growth Move"})]}),(0,i.jsx)("p",{className:"cta-banner-sub",children:"No pressure. Just a quick conversation to understand where you are-and how we can help you move forward."})]}),(0,i.jsxs)("div",{className:"cta-banner-right",children:[(0,i.jsxs)("a",{href:"#",className:"cta-bprimary",children:["Book a Free Consultation",(0,i.jsx)("svg",{viewBox:"0 0 16 16",fill:"none",children:(0,i.jsx)("path",{d:"M3 8h10M9 4l4 4-4 4",stroke:"currentColor",strokeWidth:"1.8",strokeLinecap:"round",strokeLinejoin:"round"})})]}),(0,i.jsx)("a",{href:"#",className:"cta-bghost",children:"View All Services"})]})]})})}},1425(e,t,s){s.r(t),s.d(t,{default:()=>z});var i=s(4848),a=s(6540),n=s(8128),r=s(3177),o=s(9393),m=s(1085),l=s(3572);let d=`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
 
   :root {
@@ -23,7 +17,7 @@ const STYLES = `
   html { scroll-behavior: smooth; }
   body { overflow-x: hidden; }
 
-  /* ── HERO ── */
+  /* \u{2500}\u{2500} HERO \u{2500}\u{2500} */
   .smm-hero {
     min-height: 100vh;
     display: grid; grid-template-columns: 1fr 1fr;
@@ -64,11 +58,11 @@ const STYLES = `
     .smm-hero-sub { width:100%; max-width:90%; }
   }
 
-  /* ── HERO RIGHT IMAGE ── */
+  /* \u{2500}\u{2500} HERO RIGHT IMAGE \u{2500}\u{2500} */
   .smm-hero-right { position:relative; z-index:2; display:flex; align-items:flex-start; justify-content:center; animation:smm-fadeUp .9s .15s ease both; }
   .smm-hero-img { height:470px; object-fit:contain; border-radius:16px; }
 
-  /* ── SERVICES ── */
+  /* \u{2500}\u{2500} SERVICES \u{2500}\u{2500} */
   .smm-svc { position:relative; background:#004168; padding:4rem 0 0; overflow:hidden; }
   .smm-svc-dots { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:radial-gradient(rgba(237,131,55,0.18) 1px,transparent 1px); background-size:38px 38px; animation:smm-dots-drift 30s linear infinite; opacity:0.35; }
   @keyframes smm-dots-drift { to { background-position: 38px 38px; } }
@@ -148,7 +142,7 @@ const STYLES = `
   @media(max-width:900px){ .smm-svc-panels { grid-template-columns:1fr 1fr; } }
   @media(max-width:580px){ .smm-svc-panels { grid-template-columns:1fr; } .smm-svc-panel { border-right:none !important; min-height:220px; } }
 
-  /* ── PROCESS ── */
+  /* \u{2500}\u{2500} PROCESS \u{2500}\u{2500} */
   .smm-tp-section { position:relative; background:#ffffff; padding:4rem 0 4rem; overflow:hidden; }
   .smm-tp-cross { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:linear-gradient(45deg,rgba(2,43,68,0.015) 25%,transparent 25%),linear-gradient(-45deg,rgba(2,43,68,0.015) 25%,transparent 25%),linear-gradient(45deg,transparent 75%,rgba(2,43,68,0.015) 75%),linear-gradient(-45deg,transparent 75%,rgba(2,43,68,0.015) 75%); background-size:20px 20px; background-position:0 0,0 10px,10px -10px,-10px 0px; }
   .smm-tp-header { position:relative; z-index:2; text-align:center; padding:0 6% 5rem; }
@@ -189,7 +183,7 @@ const STYLES = `
     .smm-tp-num-side,.smm-tp-text-side { padding:2rem 5%; }
   }
 
-  /* ── HOW WE WORK ── */
+  /* \u{2500}\u{2500} HOW WE WORK \u{2500}\u{2500} */
   .smm-hww { position:relative; background:#004168; padding:4rem 0 4rem; overflow:hidden; }
   .smm-hww-dot-grid { position:absolute; inset:0; pointer-events:none; z-index:0; background-image:radial-gradient(rgba(237,131,55,0.13) 1px,transparent 1px); background-size:36px 36px; opacity:0.3; animation:smm-dots-drift 28s linear infinite; }
   .smm-hww-glow { position:absolute; border-radius:50%; pointer-events:none; z-index:0; filter:blur(100px); }
@@ -213,7 +207,7 @@ const STYLES = `
   @media(max-width:760px){ .smm-hww-arrow-track { grid-template-columns:1fr; gap:20px; } }
 
 
-  /* ── HERO MOBILE ORDER: content first, image second ── */
+  /* \u{2500}\u{2500} HERO MOBILE ORDER: content first, image second \u{2500}\u{2500} */
   @media(max-width:900px){
     .pcs-hero-left { order:1 !important; }
     .pcs-hero-right { order:2 !important; }
@@ -236,7 +230,7 @@ const STYLES = `
     .smm-scene { width:220px !important; height:200px !important; }
   }
 
-  /* ── APPROACH SECTION MOBILE ── */
+  /* \u{2500}\u{2500} APPROACH SECTION MOBILE \u{2500}\u{2500} */
   @media(max-width:900px){
     .ap-inner { grid-template-columns:1fr !important; gap:2.5rem !important; }
     .ap-form-wrap { max-width:100% !important; width:100% !important; }
@@ -252,7 +246,7 @@ const STYLES = `
     .ap-intro { font-size:.92rem !important; }
   }
 
-  /* ── FAQ MOBILE ── */
+  /* \u{2500}\u{2500} FAQ MOBILE \u{2500}\u{2500} */
   .container {width:100%; }
   .faq-section { padding:4rem 6%; overflow:hidden; }
   .faq-wrapper { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
@@ -274,7 +268,7 @@ const STYLES = `
     .faq-answer { font-size:.82rem !important; padding:0 1rem .85rem !important; }
   }
 
-  /* ── HOW WE WORK MOBILE ── */
+  /* \u{2500}\u{2500} HOW WE WORK MOBILE \u{2500}\u{2500} */
   @media(max-width:768px){
     .pcs-hww-arrow-track,
     .ppc-hww-arrow-track,
@@ -288,7 +282,7 @@ const STYLES = `
     .pcs-hww-card-desc, .ppc-hww-card-desc, .smm-hww-card-desc { font-size:.82rem !important; }
   }
 
-  /* ── PROCESS SECTION MOBILE ── */
+  /* \u{2500}\u{2500} PROCESS SECTION MOBILE \u{2500}\u{2500} */
   @media(max-width:580px){
     .pcs-tp-step, .pcs-tp-step:nth-child(even),
     .ppc-tp-step, .ppc-tp-step:nth-child(even),
@@ -313,11 +307,11 @@ const STYLES = `
     .smm-tp-num-side,.smm-tp-text-side { padding:1.2rem 4% !important; }
   }
 
-  /* ── GLOBAL OVERFLOW FIX ── */
+  /* \u{2500}\u{2500} GLOBAL OVERFLOW FIX \u{2500}\u{2500} */
   img { max-width:100%; height:auto; }
   * { box-sizing:border-box; }
 
-  /* ── SMM HERO ORDER FIX (mobile: content top, image bottom) ── */
+  /* \u{2500}\u{2500} SMM HERO ORDER FIX (mobile: content top, image bottom) \u{2500}\u{2500} */
   @media(max-width:900px){
     .smm-hero { display:flex !important; flex-direction:column !important; align-items:stretch !important; }
     .smm-hero-left { order:1 !important; text-align:start; align-items:flex-start; display:flex; flex-direction:column; }
@@ -328,7 +322,7 @@ const STYLES = `
     .smm-hero-heading { text-align:start; }
   }
 
-  /* ── SMM HERO IMAGE MOBILE FIX ── */
+  /* \u{2500}\u{2500} SMM HERO IMAGE MOBILE FIX \u{2500}\u{2500} */
   @media(max-width:900px){
     .smm-hero-right img { max-width:300px !important; height:auto !important; display:block; margin:0 auto; }
   }
@@ -339,60 +333,7 @@ const STYLES = `
     .smm-hero-sub { font-size:.9rem !important; }
   }
 
-`;
-
-// ─── useInView hook ───────────────────────────────────────────────────────────
-function useInView(threshold = 0.1) {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold });
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return [ref, visible];
-}
-
-// ─── Data ─────────────────────────────────────────────────────────────────────
-const SERVICES = [
-  { num: "01", icon: <img src="/img/icon/svc-logo-design.webp" alt="Logo Design" width="34" height="34" />, subtitle: "Brand Presence", title: "Logo Design", desc: "Build a powerful identity with our expert logo design agency services. We create distinctive logos that reflect your brand values, enhance recognition, and establish a strong visual foundation for your business.", },
-  { num: "02", icon: <img src="/img/icon/svc-business-cards-brochure.webp" alt="Business Cards and Brochure Design" width="34" height="34" />, subtitle: "Visual Identity", title: "Business Cards & Brochure Design", desc: "Strengthen your brand presence with professionally crafted graphic design assets. Our business cards and brochures are designed to communicate credibility, leaving a lasting impression in every interaction.", },
-  { num: "03", icon: <img src="/img/icon/svc-social-media-graphics.webp" alt="Social Media Graphic Design" width="34" height="34" />, subtitle: "Paid Campaigns", title: "Social Media Graphic Design", desc: "Capture attention instantly with high-performing social media graphic design. From posts to ads, we create engaging visuals that boost visibility, drive engagement, and strengthen your digital brand presence.", },
-  { num: "04", icon: <img src="/img/icon/svc-website-app-graphics.webp" alt="Website and App Graphics" width="34" height="34" />, subtitle: "Community Building", title: "Website & App Graphics", desc: "Enhance user experience with custom graphic design elements including UI visuals, icons, and banners. Our graphic design company ensures consistency and usability across your website and mobile applications.", },
-  { num: "05", icon: <img src="/img/icon/svc-poster-banner.webp" alt="Poster and Banner Design" width="34" height="34" />, subtitle: "Partnerships", title: "Poster & Banner Design", desc: "Stand out with bold and impactful graphic design for marketing and promotions. We design posters and banners that grab attention and communicate your message effectively across both digital and print platforms.", },
-  { num: "06", icon: <img src="/img/icon/svc-presentation-design.webp" alt="Presentation Design" width="34" height="34" />, subtitle: "Insights & ROI", title: "Presentation Design", desc: "Deliver impactful presentations with professionally designed slides. Our graphic design services transform your ideas into visually compelling presentations that engage, persuade, and communicate your message clearly.", },
-];
-
-const PROCESS_STEPS = [
-  { step: "01", title: "Discover", phase: "Brand Audit", desc: "Before any designs take shape, we dive deep into your brand identity and business vision. We explore your business goals, target audience, industry landscape, competitor positioning, and brand personality thoroughly. This discovery phase ensures our creative design services are built on insights, strategy, and audience understanding — so every visual element aligns perfectly with your message, values, and market expectations.", bullets: [] },
-  { step: "02", title: "Research & Analyze", phase: "Custom Roadmap", desc: "We study competitors, audit existing brand assets, and analyze current market and design trends to identify opportunities for visual differentiation. From typography and colour psychology to layout preferences, user behavior, and platform-specific creative expectations, we gather the insights needed to create visuals that stand out, communicate effectively, and resonate strongly with your target audience. This research-driven approach helps ensure every design element aligns with your brand identity across digital and marketing platforms.", bullets: [] },
-  { step: "03", title: "Strategize", phase: "Content Production", desc: "With clear insights and research in hand, we craft a custom design strategy tailored to your business objectives and branding goals. Whether it’s logo design, marketing collateral, presentation materials, or social media creatives, we define the visual style, layout direction, messaging tone, and creative framework. Every design decision is made strategically to strengthen brand identity, improve recognition, increase engagement, and build long-term trust.", bullets: [] },
-  { step: "04", title: "Create & Refine", phase: "Full Execution", desc: "Our graphic design company brings the strategy to life by transforming concepts into compelling and impactful visual experiences. Through collaborative discussions and iterative refinements, we explore multiple design directions, gather your feedback carefully, and fine-tune every detail until the final output feels perfect. We balance creativity, usability, consistency, and functionality to ensure every asset performs effectively across both digital and print platforms.", bullets: [] },
-  { step: "05", title: "Deliver & Evolve", phase: "Continuous Growth", desc: "Once finalized, we deliver print-ready and web-optimized design assets in all required formats for seamless business usage. But our support doesn’t stop there — we continue assisting with ongoing design updates, campaign creatives, seasonal refreshes, and brand adaptations as your business grows and evolves. This ensures your visual identity remains modern, consistent, relevant, and impactful across every customer touchpoint.", bullets: [] },
-];
-
-const HOW_WE_WORK = [
-  { icon: <img src="/img/icon/hww-brand-design-strategy.webp" alt="Brand-Specific Design Strategy" width="28" height="28" />, title: "Brand-Specific Design Strategy", desc: "As a strategic graphic design company, we create tailored graphic design solutions aligned with your brand identity, audience insights, and business goals to maximize impact." },
-  { icon: <img src="/img/icon/hww-creative-team.webp" alt="Cross-Functional Creative Team" width="28" height="28" />, title: "Cross-Functional Creative Team", desc: "Our graphic design services are powered by designers, branding experts, and strategists collaborating to deliver cohesive, high-quality visual communication that strengthens your brand presence." },
-  { icon: <img src="/img/icon/hww-result-focused.webp" alt="Result Focused Creativity" width="28" height="28" />, title: "Result Focused Creativity", desc: "We combine creativity with performance, ensuring every graphic design enhances engagement, and drives measurable growth through visually compelling and strategically crafted designs." },
-];
-
-const faqData = [
-  { q: "What graphic design services do you offer?", a: "We offer graphic design services including brand identity design, social media creatives, brochures, presentations, website graphics, marketing materials, packaging design, banners, advertisements, and corporate communication assets. Our designs focus on visual consistency, audience engagement, and strengthening overall brand presentation across digital and print platforms." },
-  { q: "How does graphic design help my business?", a: " Graphic design improves brand visibility, communication, and customer perception through professional visual presentation. Strong design helps businesses build credibility, attract attention, improve engagement, and communicate messages more effectively across websites, social media, advertisements, presentations, and marketing campaigns." },
-  { q: "Can you create a new brand identity for my business?", a: " Yes, we create complete brand identity systems including logo design, color palettes, typography, visual guidelines, and brand communication assets. Our approach focuses on building a consistent and professional identity that reflects your business values, positioning, and long-term growth objectives." },
-  { q: "Do you offer brochure and presentation design?", a: "Yes, we design professional brochures, company profiles, pitch decks, corporate presentations, and marketing collaterals customized to your business goals. Our designs focus on clarity, visual appeal, structured communication, and creating strong impressions for clients, investors, and business stakeholders." },
-  { q: "Do you redesign existing graphics or brand materials?", a: "Yes, we redesign existing graphics, presentations, brochures, social media creatives, and brand materials to improve visual consistency, modernize communication, and strengthen brand perception. Our redesign approach focuses on enhancing usability, professionalism, engagement, and alignment with your current business positioning." },
-  { q: "How many revisions do you provide?", a: " The number of revisions depends on the project scope and requirements. We work collaboratively with clients throughout the design process to ensure the final output aligns with brand expectations, business objectives, and communication goals while maintaining quality and creative consistency." },
-];
-
-// ─── Hero ─────────────────────────────────────────────────────────────────────
-function Hero() {
-  return (
-    <section className="hero" id="hero">
-      <style>{`
+`;function p(e=.1){let t=(0,a.useRef)(null),[s,i]=(0,a.useState)(!1);return(0,a.useEffect)(()=>{let s=t.current;if(!s)return;let a=new IntersectionObserver(([e])=>{e.isIntersecting&&(i(!0),a.disconnect())},{threshold:e});return a.observe(s),()=>a.disconnect()},[e]),[t,s]}let c=[{num:"01",icon:(0,i.jsx)("img",{src:"/img/icon/svc-logo-design.webp",alt:"Logo Design",width:"34",height:"34"}),subtitle:"Brand Presence",title:"Logo Design",desc:"Build a powerful identity with our expert logo design agency services. We create distinctive logos that reflect your brand values, enhance recognition, and establish a strong visual foundation for your business."},{num:"02",icon:(0,i.jsx)("img",{src:"/img/icon/svc-business-cards-brochure.webp",alt:"Business Cards and Brochure Design",width:"34",height:"34"}),subtitle:"Visual Identity",title:"Business Cards & Brochure Design",desc:"Strengthen your brand presence with professionally crafted graphic design assets. Our business cards and brochures are designed to communicate credibility, leaving a lasting impression in every interaction."},{num:"03",icon:(0,i.jsx)("img",{src:"/img/icon/svc-social-media-graphics.webp",alt:"Social Media Graphic Design",width:"34",height:"34"}),subtitle:"Paid Campaigns",title:"Social Media Graphic Design",desc:"Capture attention instantly with high-performing social media graphic design. From posts to ads, we create engaging visuals that boost visibility, drive engagement, and strengthen your digital brand presence."},{num:"04",icon:(0,i.jsx)("img",{src:"/img/icon/svc-website-app-graphics.webp",alt:"Website and App Graphics",width:"34",height:"34"}),subtitle:"Community Building",title:"Website & App Graphics",desc:"Enhance user experience with custom graphic design elements including UI visuals, icons, and banners. Our graphic design company ensures consistency and usability across your website and mobile applications."},{num:"05",icon:(0,i.jsx)("img",{src:"/img/icon/svc-poster-banner.webp",alt:"Poster and Banner Design",width:"34",height:"34"}),subtitle:"Partnerships",title:"Poster & Banner Design",desc:"Stand out with bold and impactful graphic design for marketing and promotions. We design posters and banners that grab attention and communicate your message effectively across both digital and print platforms."},{num:"06",icon:(0,i.jsx)("img",{src:"/img/icon/svc-presentation-design.webp",alt:"Presentation Design",width:"34",height:"34"}),subtitle:"Insights & ROI",title:"Presentation Design",desc:"Deliver impactful presentations with professionally designed slides. Our graphic design services transform your ideas into visually compelling presentations that engage, persuade, and communicate your message clearly."}],h=[{step:"01",title:"Discover",phase:"Brand Audit",desc:"Before any designs take shape, we dive deep into your brand identity and business vision. We explore your business goals, target audience, industry landscape, competitor positioning, and brand personality thoroughly. This discovery phase ensures our creative design services are built on insights, strategy, and audience understanding \u2014 so every visual element aligns perfectly with your message, values, and market expectations.",bullets:[]},{step:"02",title:"Research & Analyze",phase:"Custom Roadmap",desc:"We study competitors, audit existing brand assets, and analyze current market and design trends to identify opportunities for visual differentiation. From typography and colour psychology to layout preferences, user behavior, and platform-specific creative expectations, we gather the insights needed to create visuals that stand out, communicate effectively, and resonate strongly with your target audience. This research-driven approach helps ensure every design element aligns with your brand identity across digital and marketing platforms.",bullets:[]},{step:"03",title:"Strategize",phase:"Content Production",desc:"With clear insights and research in hand, we craft a custom design strategy tailored to your business objectives and branding goals. Whether it\u2019s logo design, marketing collateral, presentation materials, or social media creatives, we define the visual style, layout direction, messaging tone, and creative framework. Every design decision is made strategically to strengthen brand identity, improve recognition, increase engagement, and build long-term trust.",bullets:[]},{step:"04",title:"Create & Refine",phase:"Full Execution",desc:"Our graphic design company brings the strategy to life by transforming concepts into compelling and impactful visual experiences. Through collaborative discussions and iterative refinements, we explore multiple design directions, gather your feedback carefully, and fine-tune every detail until the final output feels perfect. We balance creativity, usability, consistency, and functionality to ensure every asset performs effectively across both digital and print platforms.",bullets:[]},{step:"05",title:"Deliver & Evolve",phase:"Continuous Growth",desc:"Once finalized, we deliver print-ready and web-optimized design assets in all required formats for seamless business usage. But our support doesn\u2019t stop there \u2014 we continue assisting with ongoing design updates, campaign creatives, seasonal refreshes, and brand adaptations as your business grows and evolves. This ensures your visual identity remains modern, consistent, relevant, and impactful across every customer touchpoint.",bullets:[]}],g=[{icon:(0,i.jsx)("img",{src:"/img/icon/hww-brand-design-strategy.webp",alt:"Brand-Specific Design Strategy",width:"28",height:"28"}),title:"Brand-Specific Design Strategy",desc:"As a strategic graphic design company, we create tailored graphic design solutions aligned with your brand identity, audience insights, and business goals to maximize impact."},{icon:(0,i.jsx)("img",{src:"/img/icon/hww-creative-team.webp",alt:"Cross-Functional Creative Team",width:"28",height:"28"}),title:"Cross-Functional Creative Team",desc:"Our graphic design services are powered by designers, branding experts, and strategists collaborating to deliver cohesive, high-quality visual communication that strengthens your brand presence."},{icon:(0,i.jsx)("img",{src:"/img/icon/hww-result-focused.webp",alt:"Result Focused Creativity",width:"28",height:"28"}),title:"Result Focused Creativity",desc:"We combine creativity with performance, ensuring every graphic design enhances engagement, and drives measurable growth through visually compelling and strategically crafted designs."}],f=[{q:"What graphic design services do you offer?",a:"We offer graphic design services including brand identity design, social media creatives, brochures, presentations, website graphics, marketing materials, packaging design, banners, advertisements, and corporate communication assets. Our designs focus on visual consistency, audience engagement, and strengthening overall brand presentation across digital and print platforms."},{q:"How does graphic design help my business?",a:" Graphic design improves brand visibility, communication, and customer perception through professional visual presentation. Strong design helps businesses build credibility, attract attention, improve engagement, and communicate messages more effectively across websites, social media, advertisements, presentations, and marketing campaigns."},{q:"Can you create a new brand identity for my business?",a:" Yes, we create complete brand identity systems including logo design, color palettes, typography, visual guidelines, and brand communication assets. Our approach focuses on building a consistent and professional identity that reflects your business values, positioning, and long-term growth objectives."},{q:"Do you offer brochure and presentation design?",a:"Yes, we design professional brochures, company profiles, pitch decks, corporate presentations, and marketing collaterals customized to your business goals. Our designs focus on clarity, visual appeal, structured communication, and creating strong impressions for clients, investors, and business stakeholders."},{q:"Do you redesign existing graphics or brand materials?",a:"Yes, we redesign existing graphics, presentations, brochures, social media creatives, and brand materials to improve visual consistency, modernize communication, and strengthen brand perception. Our redesign approach focuses on enhancing usability, professionalism, engagement, and alignment with your current business positioning."},{q:"How many revisions do you provide?",a:" The number of revisions depends on the project scope and requirements. We work collaboratively with clients throughout the design process to ensure the final output aligns with brand expectations, business objectives, and communication goals while maintaining quality and creative consistency."}];function u(){return(0,i.jsxs)("section",{className:"hero",id:"hero",children:[(0,i.jsx)("style",{children:`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
         :root {
@@ -510,55 +451,7 @@ function Hero() {
           .h-badge { font-size: 0.65rem; }
         }
         .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
-      `}</style>
-
-      {/* LEFT CONTENT */}
-      <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot" />Creative Design</div>
-        <h1 className="hero-heading">
-          From Concept to Design
-          <span className="hl lined">Elevate Your Brand</span>
-          Creatively
-        </h1>
-        <p className="hero-sub">
-          As a leading Graphic Design Company, PCS transforms ideas into impactful visuals that define your brand identity. Our graphic design approach blends creativity with strategy to craft logos, social media creatives, and brand assets that capture attention.We go beyond aesthetics — our graphic design services ensure consistency, recognition, and strong brand recall.         </p>
-        <div className="hero-actions">
-          <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
-        </div>
-      </div>
-
-      {/* RIGHT IMAGE */}
-      <div className="hero-right">
-        <img
-          src={banner}
-          alt="Graphic Design Illustration"
-          className="hero-img"
-        />
-      </div>
-    </section>
-  );
-}
-
-// ─── Approach + Form ──────────────────────────────────────────────────────────
-function ApproachSection() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
-
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    const templateParams = {
-      name: form.name, email: form.email, phone: form.phone,
-      company: form.company, message: form.msg, url: window.location.href,
-    };
-    emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
-      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name: "", email: "", phone: "", company: "", msg: "" }); })
-      .catch((error) => { console.log(error); alert("Failed to send ❌"); });
-  };
-
-  return (
-    <section className="approach" id="approach">
-      <style>{`
+      `}),(0,i.jsxs)("div",{className:"hero-left",children:[(0,i.jsxs)("div",{className:"h-badge",children:[(0,i.jsx)("div",{className:"badge-dot"}),"Creative Design"]}),(0,i.jsxs)("h1",{className:"hero-heading",children:["From Concept to Design",(0,i.jsx)("span",{className:"hl lined",children:"Elevate Your Brand"}),"Creatively"]}),(0,i.jsx)("p",{className:"hero-sub",children:"As a leading Graphic Design Company, PCS transforms ideas into impactful visuals that define your brand identity. Our graphic design approach blends creativity with strategy to craft logos, social media creatives, and brand assets that capture attention.We go beyond aesthetics \u2014 our graphic design services ensure consistency, recognition, and strong brand recall.         "}),(0,i.jsx)("div",{className:"hero-actions",children:(0,i.jsxs)("a",{className:"btn-fill",href:"#",children:["Explore More ",(0,i.jsx)("span",{className:"btn-arrow",children:"\u203A"})]})})]}),(0,i.jsx)("div",{className:"hero-right",children:(0,i.jsx)("img",{src:"/img/graphic-design.png",alt:"Graphic Design Illustration",className:"hero-img"})})]})}function x(){let[e,t]=(0,a.useState)({name:"",email:"",phone:"",company:"",msg:""}),s=s=>t({...e,[s.target.name]:s.target.value});return(0,i.jsxs)("section",{className:"approach",id:"approach",children:[(0,i.jsx)("style",{children:`
         .approach { position:relative; padding:4rem 6%; overflow:hidden; }
         .ap-inner { position:relative; z-index:2; margin:0 auto; display:grid; grid-template-columns:1fr 0.7fr; gap:4rem; align-items:center; }
         .ap-heading { font-family:'Poppins',sans-serif; font-size:clamp(2rem,3vw,2.6rem); line-height:1.12; color:#000; margin-bottom:1.2rem; font-weight:600; }
@@ -589,491 +482,4 @@ function ApproachSection() {
         .ap-submit:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(237,131,55,0.5); }
         .ap-submit-arrow { display:inline-flex; align-items:flex-start; justify-content:center; width:24px; height:24px; border-radius:50%; background:rgba(2,43,68,0.25); font-size:0.9rem; }
         @media(max-width:900px){ .ap-inner { grid-template-columns:1fr; } }
-      `}</style>
-      <div className="ap-inner">
-        <div className="ap-left">
-          <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</h2>
-          </div>
-          <h3 className="ap-heading">Creative Designs that <span>Speak Your Brand</span> </h3>
-          <p className="ap-intro">
-            Looking to elevate your visual identity and strengthen brand perception across digital platforms? PCS delivers purpose-driven graphic design solutions focused on clear communication, strong branding, and meaningful audience engagement.
-
-          </p>
-          <p className="ap-intro">
-            Every design we create reflects your brand personality, business positioning, and audience expectations accurately. As a trusted graphic design company, we ensure visuals align strategically with your marketing and business goals.
-
-          </p>
-          <p className="ap-intro">
-            From brand identity creation to social media graphic design, we deliver cohesive visuals across platforms. Our graphic design services focus on creativity, clarity, consistency, and building a memorable market presence.
-
-          </p>
-        </div>
-        <div className="ap-form-wrap">
-          <div className="ap-form-card">
-            <div className="form-card-eyebrow">
-              <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
-            </div>
-            <div className="form-card-title">Get Your <span>Free</span> Quote</div>
-            <form onSubmit={sendEmail}>
-              <div className="fl-row">
-                <div className="fl-group">
-                  <label className="fl-label">Your Name</label>
-                  <div style={{ position: "relative" }}>
-                    <span className="fl-icon">👤</span>
-                    <input className="fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
-                  </div>
-                </div>
-                <div className="fl-group">
-                  <label className="fl-label">Company</label>
-                  <div style={{ position: "relative" }}>
-                    <span className="fl-icon">🏢</span>
-                    <input className="fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
-                  </div>
-                </div>
-              </div>
-              <div className="fl-group">
-                <label className="fl-label">Email Address</label>
-                <div style={{ position: "relative" }}>
-                  <span className="fl-icon">✉️</span>
-                  <input className="fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
-                </div>
-              </div>
-              <div className="fl-group">
-                <label className="fl-label">Mobile Number</label>
-                <div className="phone-row">
-                  <div className="phone-flag"><span>📞</span></div>
-                  <input className="fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
-                </div>
-              </div>
-              <div className="fl-group textarea-group">
-                <label className="fl-label">Message</label>
-                <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
-                  <textarea className="fl-textarea" name="msg" placeholder="Tell us about your social media goals..." value={form.msg} onChange={handleChange} />
-                </div>
-              </div>
-              <button type="submit" className="ap-submit">
-                Get Free Consultation <span className="ap-submit-arrow">›</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── Services ─────────────────────────────────────────────────────────────────
-function ServicePanel({ svc, index }) {
-  const [ref, visible] = useInView(0.1);
-  return (
-    <div ref={ref} className={`smm-svc-panel${visible ? " vis" : ""}`} style={{ transitionDelay: `${0.05 + index * 0.07}s` }}>
-      <div className="smm-sp-slash" />
-      <div className="smm-sp-ghost">{svc.num}</div>
-      <div className="smm-sp-bottom-line" />
-      <div className="smm-sp-icon-row">
-        <span className="smm-sp-icon-dash" />
-        <span className="smm-sp-icon">{svc.icon}</span>
-      </div>
-      <div className="smm-sp-content">
-        <div className="smm-sp-subtitle">{svc.subtitle}</div>
-        <div className="smm-sp-title">{svc.title}</div>
-        <div className="smm-sp-desc">{svc.desc}</div>
-        {/* <a className="smm-sp-link" href="#">LEARN MORE <span className="smm-sp-link-arr">↗</span></a> */}
-      </div>
-    </div>
-  );
-}
-
-function Services() {
-  return (
-    <section className="smm-svc">
-      <div className="smm-svc-dots" />
-      <div className="smm-svc-glow smm-ssvg1" />
-      <div className="smm-svc-glow smm-ssvg2" />
-      <div className="smm-svc-hdr">
-        <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Graphic Design Services</h2>
-        </div>
-        <h3 className="smm-svc-h2">Pixel Perfect. <span> <i>Purpose Driven. </i></span>Brand Defining</h3>
-        <p className="smm-svc-sub">
-          As a professional graphic design company, PCS delivers high-impact graphic design services tailored to your brand identity and business goals.
-
-
-        </p>
-      </div>
-      <div className="smm-svc-panels">
-        {SERVICES.map((svc, i) => <ServicePanel key={svc.num} svc={svc} index={i} />)}
-      </div>
-    </section>
-  );
-}
-
-// ─── Process ──────────────────────────────────────────────────────────────────
-function ProcessStep({ step, index }) {
-  const [ref, visible] = useInView(0.1);
-  const isEven = index % 2 === 1;
-  return (
-    <div ref={ref} className={`smm-tp-step${visible ? " tp-vis" : ""}`}>
-      {isEven ? (
-        <>
-          <div className="smm-tp-text-side">
-            <p className="smm-tp-desc">{step.desc}</p>
-            <div className="smm-tp-bullets">{step.bullets.map(b => <span key={b} className="smm-tp-bullet">{b}</span>)}</div>
-          </div>
-          <div className="smm-tp-num-side">
-            <div className="smm-tp-bg-num">{step.step}</div>
-            <div className="smm-tp-step-index">Step — {step.step}</div>
-            <div className="smm-tp-step-title">{step.title}</div>
-            <div className="smm-tp-phase">{step.phase}</div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="smm-tp-num-side">
-            <div className="smm-tp-bg-num">{step.step}</div>
-            <div className="smm-tp-step-index">Step — {step.step}</div>
-            <div className="smm-tp-step-title">{step.title}</div>
-            <div className="smm-tp-phase">{step.phase}</div>
-          </div>
-          <div className="smm-tp-text-side">
-            <p className="smm-tp-desc">{step.desc}</p>
-            <div className="smm-tp-bullets">{step.bullets.map(b => <span key={b} className="smm-tp-bullet">{b}</span>)}</div>
-          </div>
-        </>
-      )}
-    </div>
-  );
-}
-
-function Process() {
-  return (
-    <section className="smm-tp-section">
-      <div className="smm-tp-cross" />
-      <div className="smm-tp-header">
-        <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Creative Design Process</h2>
-        </div>
-        <h3 className="smm-tp-h2">Crafted for Impact, <em> <i>Aligned with Vision</i> </em></h3>
-        <p className="smm-tp-sub">
-          Every graphic design project begins with strategy and ends with measurable impact. As a trusted graphic design company, our process ensures every visual communicates effectively and strengthens your brand identity.
-
-
-
-        </p>
-      </div>
-      <div className="smm-tp-body">
-        {PROCESS_STEPS.map((step, i) => <ProcessStep key={step.step} step={step} index={i} />)}
-      </div>
-    </section>
-  );
-}
-
-// ─── How We Work ──────────────────────────────────────────────────────────────
-function HowWeWorkItem({ item }) {
-  const [ref, visible] = useInView(0.12);
-  return (
-    <div ref={ref} className={`smm-hww-arrow-item${visible ? " hww-vis" : ""}`}>
-      <div className="smm-hww-card">
-        <div className="smm-hww-icon-wrap">{item.icon}</div>
-        <div className="smm-hww-card-title">{item.title}</div>
-        <div className="smm-hww-card-desc">{item.desc}</div>
-      </div>
-    </div>
-  );
-}
-
-function HowWeWork() {
-  return (
-    <section className="smm-hww">
-      <div className="smm-hww-dot-grid" />
-      <div className="smm-hww-glow smm-hww-glow-1" />
-      <div className="smm-hww-glow smm-hww-glow-2" />
-      <div className="smm-hww-header">
-        <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Focus on Your Brand Through Creative Design</h2>
-        </div>
-        <h3 className="smm-hww-h2">Visualize Ideas. <span><i>Elevate Identity.  </i></span> Inspire Action.</h3>
-      </div>
-      <div className="smm-hww-arrows-wrap">
-        <div className="smm-hww-arrow-track">
-          {HOW_WE_WORK.map(item => <HowWeWorkItem key={item.title} item={item} />)}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── FAQ ──────────────────────────────────────────────────────────────────────
-function FAQSection() {
-  const [active, setActive] = useState(null);
-
-  const toggle = (index) => {
-    setActive(active === index ? null : index);
-  };
-  return (
-    <section className="faq-section">
-      <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
-      </div>
-      <div className="container">
-        {/* TITLE */}
-        <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
-        </div>
-        {/* FAQ GRID */}
-        <div className="faq-wrapper">
-
-          {/* LEFT COLUMN */}
-          <div className="faq-col">
-            {faqData.slice(0, 3).map((item, i) => (
-              <div className="faq-item" key={i}>
-                <div className="faq-question" onClick={() => toggle(i)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i ? "−" : "+"}</span>
-                </div>
-                {active === i && (
-                  <div className="faq-answer">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* RIGHT COLUMN */}
-          <div className="faq-col">
-            {faqData.slice(3, 6).map((item, i) => (
-              <div className="faq-item" key={i + 3}>
-                <div className="faq-question" onClick={() => toggle(i + 3)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i + 3 ? "−" : "+"}</span>
-                </div>
-                {active === i + 3 && (
-                  <div className="faq-answer">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ─── Root Component ───────────────────────────────────────────────────────────
-export default function PcsSmmPage() {
-  useEffect(() => {
-    const id = "pcs-smm-styles";
-    if (!document.getElementById(id)) {
-      const el = document.createElement("style");
-      el.id = id;
-      el.textContent = STYLES;
-      document.head.appendChild(el);
-    }
-    return () => { };
-  }, []);
-
-  const schemaData = [
-
-    // Breadcrumb List Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "item": {
-            "@id": "https://www.priyamconsultancy.com/",
-            "name": "Home"
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@id": "https://www.priyamconsultancy.com/graphic-design/",
-            "name": "graphic-design"
-          }
-        }
-      ]
-    },
-
-    // Organization Schema
-
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Priyam Consultancy Services",
-      "url": "https://www.priyamconsultancy.com/",
-      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+91 96774 44048",
-          "contactType": "customer support"
-        }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61577125709962",
-        "https://www.linkedin.com/company/priyam-consultancy-services/",
-        "https://www.instagram.com/priyam_consultancy_services/",
-        "https://x.com/services91032",
-        "https://g.co/kgs/rdTYdi6"
-      ]
-    },
-
-    // SERVICE PAGE SCHEMA
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "@id": "https://www.priyamconsultancy.com/graphic-design/#service",
-      "name": "Graphic Design Services",
-      "serviceType": "Graphic Design Services",
-      "url": "https://www.priyamconsultancy.com/graphic-design/",
-      "description": "Priyam Consultancy provides professional graphic design services including logo design, social media creatives, branding materials, marketing designs, business brochures and visual branding solutions across India.",
-      "provider": {
-        "@type": "Organization",
-        "name": "Priyam Consultancy Services",
-        "url": "https://www.priyamconsultancy.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
-        }
-      },
-      "areaServed": {
-        "@type": "Country",
-        "name": "India"
-      }
-    },
-
-    // Product Schema
-    {
-      "@context": "https://schema.org/",
-      "@type": "Product",
-      "name": "graphic-design",
-      "image": ["https://www.priyamconsultancy.com/img/graphic-design.png"],
-      "description": "Best graphic design services in Coimbatore offering logo design, brand identity design, social media creatives, brochure design, presentation design, marketing materials and visual branding solutions.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Priyam Consultancy Services"
-      },
-      "review": {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "4.9",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Admin"
-        }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "4916"
-      },
-      "offers": {
-        "@type": "Offer",
-        "url": "https://www.priyamconsultancy.com/graphic-design/",
-        "priceCurrency": "USD",
-        "price": "00.00",
-        "priceValidUntil": "2026-12-31",
-        "itemCondition": "https://schema.org/UsedCondition",
-        "availability": "https://schema.org/InStock",
-        "seller": {
-          "@type": "Organization",
-          "name": "priyamconsultancy.com"
-        }
-      }
-    },
-
-    // FAQ Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "What graphic design services do you offer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We offer graphic design services including brand identity design, social media creatives, brochures, presentations, website graphics, marketing materials, packaging design, banners, advertisements, and corporate communication assets. Our designs focus on visual consistency, audience engagement, and strengthening overall brand presentation across digital and print platforms."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How does graphic design help my business?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Graphic design improves brand visibility, communication, and customer perception through professional visual presentation. Strong design helps businesses build credibility, attract attention, improve engagement, and communicate messages more effectively across websites, social media, advertisements, presentations, and marketing campaigns."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Can you create a new brand identity for my business?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we create complete brand identity systems including logo design, color palettes, typography, visual guidelines, and brand communication assets. Our approach focuses on building a consistent and professional identity that reflects your business values, positioning, and long-term growth objectives."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Do you offer brochure and presentation design?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we design professional brochures, company profiles, pitch decks, corporate presentations, and marketing collaterals customized to your business goals. Our designs focus on clarity, visual appeal, structured communication, and creating strong impressions for clients, investors, and business stakeholders."
-        }
-      }, {
-        "@type": "Question",
-        "name": "Do you redesign existing graphics or brand materials?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, we redesign existing graphics, presentations, brochures, social media creatives, and brand materials to improve visual consistency, modernize communication, and strengthen brand perception. Our redesign approach focuses on enhancing usability, professionalism, engagement, and alignment with your current business positioning."
-        }
-      }, {
-        "@type": "Question",
-        "name": "How many revisions do you provide?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The number of revisions depends on the project scope and requirements. We work collaboratively with clients throughout the design process to ensure the final output aligns with brand expectations, business objectives, and communication goals while maintaining quality and creative consistency."
-        }
-      }]
-    }
-
-  ]
-  return (
-    <Layout>
-      <Head>
-        <title>Creative Graphic And Logo Design Company In Coimbatore </title>
-        <meta name="description" content="Creative graphic and logo design company in Coimbatore offering modern, professional branding solutions. Boost your business identity with expert design services. " />
-        <meta name="keywords" content="Graphic Design, Graphic Design Company, Graphic Design Services, Logo Design, Branding Agency, Graphic Design Agency, Logo Design Agency, Logo Design Services, Graphic Design in Coimbatore, Graphic Design Company in Coimbatore, Graphic Design Services in Coimbatore, Logo Design in Coimbatore, Branding Agency in Coimbatore, Graphic Design Agency in Coimbatore, Logo Design Agency in Coimbatore " />
-        <link rel="canonical" href="https://www.priyamconsultancy.com/services/graphic-design" />
-        {/* Open Graph */}
-        <meta property="og:title" content="Creative Graphic And Logo Design Company In Coimbatore " />
-        <meta property="og:description" content="Creative graphic and logo design company in Coimbatore offering modern, professional branding solutions. Boost your business identity with expert design services. " />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/services/graphic-design" />
-        <meta property="og:image" content="https://www.priyamconsultancy.com/img/graphic-design.png" />
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Creative Graphic And Logo Design Company In Coimbatore " />
-        <meta name="twitter:description" content="Creative graphic and logo design company in Coimbatore offering modern, professional branding solutions. Boost your business identity with expert design services. " />
-        <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/graphic-design.png" />
-        {/* Schema */}
-        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
-      </Head>
-      <Hero />
-      <ApproachSection />
-      <Services />
-      <Process />
-      <HowWeWork />
-      <FAQSection />
-      <BlogSection />
-      <CTASection />
-    </Layout>
-  );
-}
+      `}),(0,i.jsxs)("div",{className:"ap-inner",children:[(0,i.jsxs)("div",{className:"ap-left",children:[(0,i.jsx)("div",{className:"partners-header1",children:(0,i.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Approach in"})}),(0,i.jsxs)("h3",{className:"ap-heading",children:["Creative Designs that ",(0,i.jsx)("span",{children:"Speak Your Brand"})," "]}),(0,i.jsx)("p",{className:"ap-intro",children:"Looking to elevate your visual identity and strengthen brand perception across digital platforms? PCS delivers purpose-driven graphic design solutions focused on clear communication, strong branding, and meaningful audience engagement."}),(0,i.jsx)("p",{className:"ap-intro",children:"Every design we create reflects your brand personality, business positioning, and audience expectations accurately. As a trusted graphic design company, we ensure visuals align strategically with your marketing and business goals."}),(0,i.jsx)("p",{className:"ap-intro",children:"From brand identity creation to social media graphic design, we deliver cohesive visuals across platforms. Our graphic design services focus on creativity, clarity, consistency, and building a memorable market presence."})]}),(0,i.jsx)("div",{className:"ap-form-wrap",children:(0,i.jsxs)("div",{className:"ap-form-card",children:[(0,i.jsxs)("div",{className:"form-card-eyebrow",children:[(0,i.jsx)("span",{className:"form-card-eyebrow-line"}),"Your Growth, Our Mission",(0,i.jsx)("span",{className:"form-card-eyebrow-line"})]}),(0,i.jsxs)("div",{className:"form-card-title",children:["Get Your ",(0,i.jsx)("span",{children:"Free"})," Quote"]}),(0,i.jsxs)("form",{onSubmit:s=>{s.preventDefault();let i={name:e.name,email:e.email,phone:e.phone,company:e.company,message:e.msg,url:window.location.href};n.Ay.send("service_8xw6k3r","template_jarui36",i,"XWRnXi4hK2SvmRG3q").then(()=>{alert("Message Sent Successfully \u2705"),t({name:"",email:"",phone:"",company:"",msg:""})}).catch(e=>{console.log(e),alert("Failed to send \u274C")})},children:[(0,i.jsxs)("div",{className:"fl-row",children:[(0,i.jsxs)("div",{className:"fl-group",children:[(0,i.jsx)("label",{className:"fl-label",children:"Your Name"}),(0,i.jsxs)("div",{style:{position:"relative"},children:[(0,i.jsx)("span",{className:"fl-icon",children:"\u{1F464}"}),(0,i.jsx)("input",{className:"fl-input",type:"text",name:"name",placeholder:"Full name",value:e.name,onChange:s,required:!0})]})]}),(0,i.jsxs)("div",{className:"fl-group",children:[(0,i.jsx)("label",{className:"fl-label",children:"Company"}),(0,i.jsxs)("div",{style:{position:"relative"},children:[(0,i.jsx)("span",{className:"fl-icon",children:"\u{1F3E2}"}),(0,i.jsx)("input",{className:"fl-input",type:"text",name:"company",placeholder:"Company name",value:e.company,onChange:s})]})]})]}),(0,i.jsxs)("div",{className:"fl-group",children:[(0,i.jsx)("label",{className:"fl-label",children:"Email Address"}),(0,i.jsxs)("div",{style:{position:"relative"},children:[(0,i.jsx)("span",{className:"fl-icon",children:"\u2709\uFE0F"}),(0,i.jsx)("input",{className:"fl-input",type:"email",name:"email",placeholder:"your@email.com",value:e.email,onChange:s,required:!0})]})]}),(0,i.jsxs)("div",{className:"fl-group",children:[(0,i.jsx)("label",{className:"fl-label",children:"Mobile Number"}),(0,i.jsxs)("div",{className:"phone-row",children:[(0,i.jsx)("div",{className:"phone-flag",children:(0,i.jsx)("span",{children:"\u{1F4DE}"})}),(0,i.jsx)("input",{className:"fl-input",type:"tel",name:"phone",placeholder:"Mobile number",value:e.phone,onChange:s,maxLength:"10",pattern:"[0-9]{10}",required:!0})]})]}),(0,i.jsxs)("div",{className:"fl-group textarea-group",children:[(0,i.jsx)("label",{className:"fl-label",children:"Message"}),(0,i.jsxs)("div",{style:{position:"relative"},children:[(0,i.jsx)("span",{className:"fl-icon",style:{top:"0.9rem",transform:"none"},children:"\u{1F4AC}"}),(0,i.jsx)("textarea",{className:"fl-textarea",name:"msg",placeholder:"Tell us about your social media goals...",value:e.msg,onChange:s})]})]}),(0,i.jsxs)("button",{type:"submit",className:"ap-submit",children:["Get Free Consultation ",(0,i.jsx)("span",{className:"ap-submit-arrow",children:"\u203A"})]})]})]})})]})]})}function b({svc:e,index:t}){let[s,a]=p(.1);return(0,i.jsxs)("div",{ref:s,className:`smm-svc-panel${a?" vis":""}`,style:{transitionDelay:`${.05+.07*t}s`},children:[(0,i.jsx)("div",{className:"smm-sp-slash"}),(0,i.jsx)("div",{className:"smm-sp-ghost",children:e.num}),(0,i.jsx)("div",{className:"smm-sp-bottom-line"}),(0,i.jsxs)("div",{className:"smm-sp-icon-row",children:[(0,i.jsx)("span",{className:"smm-sp-icon-dash"}),(0,i.jsx)("span",{className:"smm-sp-icon",children:e.icon})]}),(0,i.jsxs)("div",{className:"smm-sp-content",children:[(0,i.jsx)("div",{className:"smm-sp-subtitle",children:e.subtitle}),(0,i.jsx)("div",{className:"smm-sp-title",children:e.title}),(0,i.jsx)("div",{className:"smm-sp-desc",children:e.desc})]})]})}function w(){return(0,i.jsxs)("section",{className:"smm-svc",children:[(0,i.jsx)("div",{className:"smm-svc-dots"}),(0,i.jsx)("div",{className:"smm-svc-glow smm-ssvg1"}),(0,i.jsx)("div",{className:"smm-svc-glow smm-ssvg2"}),(0,i.jsxs)("div",{className:"smm-svc-hdr",children:[(0,i.jsx)("div",{className:"partners-header1",children:(0,i.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Specialized Graphic Design Services"})}),(0,i.jsxs)("h3",{className:"smm-svc-h2",children:["Pixel Perfect. ",(0,i.jsxs)("span",{children:[" ",(0,i.jsx)("i",{children:"Purpose Driven. "})]}),"Brand Defining"]}),(0,i.jsx)("p",{className:"smm-svc-sub",children:"As a professional graphic design company, PCS delivers high-impact graphic design services tailored to your brand identity and business goals."})]}),(0,i.jsx)("div",{className:"smm-svc-panels",children:c.map((e,t)=>(0,i.jsx)(b,{svc:e,index:t},e.num))})]})}function y({step:e,index:t}){let[s,a]=p(.1);return(0,i.jsx)("div",{ref:s,className:`smm-tp-step${a?" tp-vis":""}`,children:t%2==1?(0,i.jsxs)(i.Fragment,{children:[(0,i.jsxs)("div",{className:"smm-tp-text-side",children:[(0,i.jsx)("p",{className:"smm-tp-desc",children:e.desc}),(0,i.jsx)("div",{className:"smm-tp-bullets",children:e.bullets.map(e=>(0,i.jsx)("span",{className:"smm-tp-bullet",children:e},e))})]}),(0,i.jsxs)("div",{className:"smm-tp-num-side",children:[(0,i.jsx)("div",{className:"smm-tp-bg-num",children:e.step}),(0,i.jsxs)("div",{className:"smm-tp-step-index",children:["Step \u2014 ",e.step]}),(0,i.jsx)("div",{className:"smm-tp-step-title",children:e.title}),(0,i.jsx)("div",{className:"smm-tp-phase",children:e.phase})]})]}):(0,i.jsxs)(i.Fragment,{children:[(0,i.jsxs)("div",{className:"smm-tp-num-side",children:[(0,i.jsx)("div",{className:"smm-tp-bg-num",children:e.step}),(0,i.jsxs)("div",{className:"smm-tp-step-index",children:["Step \u2014 ",e.step]}),(0,i.jsx)("div",{className:"smm-tp-step-title",children:e.title}),(0,i.jsx)("div",{className:"smm-tp-phase",children:e.phase})]}),(0,i.jsxs)("div",{className:"smm-tp-text-side",children:[(0,i.jsx)("p",{className:"smm-tp-desc",children:e.desc}),(0,i.jsx)("div",{className:"smm-tp-bullets",children:e.bullets.map(e=>(0,i.jsx)("span",{className:"smm-tp-bullet",children:e},e))})]})]})})}function v(){return(0,i.jsxs)("section",{className:"smm-tp-section",children:[(0,i.jsx)("div",{className:"smm-tp-cross"}),(0,i.jsxs)("div",{className:"smm-tp-header",children:[(0,i.jsx)("div",{className:"partners-header1",children:(0,i.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Proven Creative Design Process"})}),(0,i.jsxs)("h3",{className:"smm-tp-h2",children:["Crafted for Impact, ",(0,i.jsxs)("em",{children:[" ",(0,i.jsx)("i",{children:"Aligned with Vision"})," "]})]}),(0,i.jsx)("p",{className:"smm-tp-sub",children:"Every graphic design project begins with strategy and ends with measurable impact. As a trusted graphic design company, our process ensures every visual communicates effectively and strengthens your brand identity."})]}),(0,i.jsx)("div",{className:"smm-tp-body",children:h.map((e,t)=>(0,i.jsx)(y,{step:e,index:t},e.step))})]})}function j({item:e}){let[t,s]=p(.12);return(0,i.jsx)("div",{ref:t,className:`smm-hww-arrow-item${s?" hww-vis":""}`,children:(0,i.jsxs)("div",{className:"smm-hww-card",children:[(0,i.jsx)("div",{className:"smm-hww-icon-wrap",children:e.icon}),(0,i.jsx)("div",{className:"smm-hww-card-title",children:e.title}),(0,i.jsx)("div",{className:"smm-hww-card-desc",children:e.desc})]})})}function k(){return(0,i.jsxs)("section",{className:"smm-hww",children:[(0,i.jsx)("div",{className:"smm-hww-dot-grid"}),(0,i.jsx)("div",{className:"smm-hww-glow smm-hww-glow-1"}),(0,i.jsx)("div",{className:"smm-hww-glow smm-hww-glow-2"}),(0,i.jsxs)("div",{className:"smm-hww-header",children:[(0,i.jsx)("div",{className:"partners-header1",children:(0,i.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Focus on Your Brand Through Creative Design"})}),(0,i.jsxs)("h3",{className:"smm-hww-h2",children:["Visualize Ideas. ",(0,i.jsx)("span",{children:(0,i.jsx)("i",{children:"Elevate Identity.  "})})," Inspire Action."]})]}),(0,i.jsx)("div",{className:"smm-hww-arrows-wrap",children:(0,i.jsx)("div",{className:"smm-hww-arrow-track",children:g.map(e=>(0,i.jsx)(j,{item:e},e.title))})})]})}function N(){let[e,t]=(0,a.useState)(null),s=s=>{t(e===s?null:s)};return(0,i.jsxs)("section",{className:"faq-section",children:[(0,i.jsx)("div",{className:"partners-header2",style:{textAlign:"center",marginTop:"20px"},children:(0,i.jsx)("div",{className:"partners-eyebrow",children:"Frequently Asked Questions"})}),(0,i.jsxs)("div",{className:"container",children:[(0,i.jsx)("div",{className:"faq-head",children:(0,i.jsxs)("h2",{children:["Queries That Could ",(0,i.jsx)("span",{children:"Hold You Back"})]})}),(0,i.jsxs)("div",{className:"faq-wrapper",children:[(0,i.jsx)("div",{className:"faq-col",children:f.slice(0,3).map((t,a)=>(0,i.jsxs)("div",{className:"faq-item",children:[(0,i.jsxs)("div",{className:"faq-question",onClick:()=>s(a),children:[(0,i.jsx)("span",{children:t.q}),(0,i.jsx)("span",{className:"icon",children:e===a?"\u2212":"+"})]}),e===a&&(0,i.jsx)("div",{className:"faq-answer",children:t.a})]},a))}),(0,i.jsx)("div",{className:"faq-col",children:f.slice(3,6).map((t,a)=>(0,i.jsxs)("div",{className:"faq-item",children:[(0,i.jsxs)("div",{className:"faq-question",onClick:()=>s(a+3),children:[(0,i.jsx)("span",{children:t.q}),(0,i.jsx)("span",{className:"icon",children:e===a+3?"\u2212":"+"})]}),e===a+3&&(0,i.jsx)("div",{className:"faq-answer",children:t.a})]},a+3))})]})]})]})}function z(){return(0,a.useEffect)(()=>{let e="pcs-smm-styles";if(!document.getElementById(e)){let t=document.createElement("style");t.id=e,t.textContent=d,document.head.appendChild(t)}return()=>{}},[]),(0,i.jsxs)(m.A,{children:[(0,i.jsxs)(l.A,{children:[(0,i.jsx)("title",{children:"Creative Graphic And Logo Design Company In Coimbatore "}),(0,i.jsx)("meta",{name:"description",content:"Creative graphic and logo design company in Coimbatore offering modern, professional branding solutions. Boost your business identity with expert design services. "}),(0,i.jsx)("meta",{name:"keywords",content:"Graphic Design, Graphic Design Company, Graphic Design Services, Logo Design, Branding Agency, Graphic Design Agency, Logo Design Agency, Logo Design Services, Graphic Design in Coimbatore, Graphic Design Company in Coimbatore, Graphic Design Services in Coimbatore, Logo Design in Coimbatore, Branding Agency in Coimbatore, Graphic Design Agency in Coimbatore, Logo Design Agency in Coimbatore "}),(0,i.jsx)("link",{rel:"canonical",href:"https://www.priyamconsultancy.com/services/graphic-design"}),(0,i.jsx)("meta",{property:"og:title",content:"Creative Graphic And Logo Design Company In Coimbatore "}),(0,i.jsx)("meta",{property:"og:description",content:"Creative graphic and logo design company in Coimbatore offering modern, professional branding solutions. Boost your business identity with expert design services. "}),(0,i.jsx)("meta",{property:"og:type",content:"website"}),(0,i.jsx)("meta",{property:"og:url",content:"https://www.priyamconsultancy.com/services/graphic-design"}),(0,i.jsx)("meta",{property:"og:image",content:"https://www.priyamconsultancy.com/img/graphic-design.png"}),(0,i.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),(0,i.jsx)("meta",{name:"twitter:title",content:"Creative Graphic And Logo Design Company In Coimbatore "}),(0,i.jsx)("meta",{name:"twitter:description",content:"Creative graphic and logo design company in Coimbatore offering modern, professional branding solutions. Boost your business identity with expert design services. "}),(0,i.jsx)("meta",{name:"twitter:image",content:"https://www.priyamconsultancy.com/img/graphic-design.png"}),(0,i.jsx)("script",{type:"application/ld+json",children:JSON.stringify([{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,item:{"@id":"https://www.priyamconsultancy.com/",name:"Home"}},{"@type":"ListItem",position:2,item:{"@id":"https://www.priyamconsultancy.com/graphic-design/",name:"graphic-design"}}]},{"@context":"https://schema.org","@type":"Organization",name:"Priyam Consultancy Services",url:"https://www.priyamconsultancy.com/",logo:"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",contactPoint:[{"@type":"ContactPoint",telephone:"+91 96774 44048",contactType:"customer support"}],sameAs:["https://www.facebook.com/profile.php?id=61577125709962","https://www.linkedin.com/company/priyam-consultancy-services/","https://www.instagram.com/priyam_consultancy_services/","https://x.com/services91032","https://g.co/kgs/rdTYdi6"]},{"@context":"https://schema.org","@type":"Service","@id":"https://www.priyamconsultancy.com/graphic-design/#service",name:"Graphic Design Services",serviceType:"Graphic Design Services",url:"https://www.priyamconsultancy.com/graphic-design/",description:"Priyam Consultancy provides professional graphic design services including logo design, social media creatives, branding materials, marketing designs, business brochures and visual branding solutions across India.",provider:{"@type":"Organization",name:"Priyam Consultancy Services",url:"https://www.priyamconsultancy.com/",logo:{"@type":"ImageObject",url:"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"}},areaServed:{"@type":"Country",name:"India"}},{"@context":"https://schema.org/","@type":"Product",name:"graphic-design",image:["https://www.priyamconsultancy.com/img/graphic-design.png"],description:"Best graphic design services in Coimbatore offering logo design, brand identity design, social media creatives, brochure design, presentation design, marketing materials and visual branding solutions.",brand:{"@type":"Brand",name:"Priyam Consultancy Services"},review:{"@type":"Review",reviewRating:{"@type":"Rating",ratingValue:"4.9",bestRating:"5",worstRating:"1"},author:{"@type":"Person",name:"Admin"}},aggregateRating:{"@type":"AggregateRating",ratingValue:"4.9",reviewCount:"4916"},offers:{"@type":"Offer",url:"https://www.priyamconsultancy.com/graphic-design/",priceCurrency:"USD",price:"00.00",priceValidUntil:"2026-12-31",itemCondition:"https://schema.org/UsedCondition",availability:"https://schema.org/InStock",seller:{"@type":"Organization",name:"priyamconsultancy.com"}}},{"@context":"https://schema.org","@type":"FAQPage",mainEntity:[{"@type":"Question",name:"What graphic design services do you offer?",acceptedAnswer:{"@type":"Answer",text:"We offer graphic design services including brand identity design, social media creatives, brochures, presentations, website graphics, marketing materials, packaging design, banners, advertisements, and corporate communication assets. Our designs focus on visual consistency, audience engagement, and strengthening overall brand presentation across digital and print platforms."}},{"@type":"Question",name:"How does graphic design help my business?",acceptedAnswer:{"@type":"Answer",text:"Graphic design improves brand visibility, communication, and customer perception through professional visual presentation. Strong design helps businesses build credibility, attract attention, improve engagement, and communicate messages more effectively across websites, social media, advertisements, presentations, and marketing campaigns."}},{"@type":"Question",name:"Can you create a new brand identity for my business?",acceptedAnswer:{"@type":"Answer",text:"Yes, we create complete brand identity systems including logo design, color palettes, typography, visual guidelines, and brand communication assets. Our approach focuses on building a consistent and professional identity that reflects your business values, positioning, and long-term growth objectives."}},{"@type":"Question",name:"Do you offer brochure and presentation design?",acceptedAnswer:{"@type":"Answer",text:"Yes, we design professional brochures, company profiles, pitch decks, corporate presentations, and marketing collaterals customized to your business goals. Our designs focus on clarity, visual appeal, structured communication, and creating strong impressions for clients, investors, and business stakeholders."}},{"@type":"Question",name:"Do you redesign existing graphics or brand materials?",acceptedAnswer:{"@type":"Answer",text:"Yes, we redesign existing graphics, presentations, brochures, social media creatives, and brand materials to improve visual consistency, modernize communication, and strengthen brand perception. Our redesign approach focuses on enhancing usability, professionalism, engagement, and alignment with your current business positioning."}},{"@type":"Question",name:"How many revisions do you provide?",acceptedAnswer:{"@type":"Answer",text:"The number of revisions depends on the project scope and requirements. We work collaboratively with clients throughout the design process to ensure the final output aligns with brand expectations, business objectives, and communication goals while maintaining quality and creative consistency."}}]}])})]}),(0,i.jsx)(u,{}),(0,i.jsx)(x,{}),(0,i.jsx)(w,{}),(0,i.jsx)(v,{}),(0,i.jsx)(k,{}),(0,i.jsx)(N,{}),(0,i.jsx)(r.A,{}),(0,i.jsx)(o.A,{})]})}}}]);

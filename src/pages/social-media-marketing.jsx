@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import BlogSection from "../components/BlogSection";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 const banner = "/img/smm.png";
 
 // ─── CSS-in-JS via a single <style> block injected once ───────────────────────
@@ -61,6 +63,11 @@ const STYLES = `
     .smm-hero-left { align-items:flex-start; }
     .smm-hero-sub { width:100%; max-width:90%; text-align:start; }
   }
+h3.faq-h3 {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
 
   /* ── SMM HERO RIGHT ── */
   .smm-hero-right { position:relative; z-index:2; display:flex; align-items:center; justify-content:center; animation:smm-fadeUp .9s .15s ease both; }
@@ -121,8 +128,11 @@ const STYLES = `
   .smm-svc-panel:nth-child(6):hover .smm-sp-icon { transform:translateY(-6px) scale(1.2); filter:drop-shadow(0 0 8px rgba(248,113,113,0.5)); }
   .smm-sp-content { position:relative; z-index:2; }
   .smm-sp-subtitle {display: none; font-family:'Space Mono',monospace; font-size:.6rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-bottom:.55rem; transition:color .35s; }
- 
-  .smm-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.5rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
+ p.smm-hww-sub {
+    color: white;
+    margin-top: 30px;
+}
+  .smm-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.24rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
   .smm-svc-panel:hover .smm-sp-title { letter-spacing:.01em; }
   .smm-sp-desc { font-size:.86rem; line-height:1.76; color:rgba(255,255,255,0.93); max-height:0; overflow:hidden; transition:max-height .5s ease,color .5s ease,margin .5s ease; margin-bottom:0; }
   .smm-svc-panel:hover .smm-sp-desc { max-height:250px; color:rgb(255,255,255); margin-bottom:.9rem; font-family:'Poppins'; }
@@ -351,15 +361,15 @@ const SERVICES = [
   { num: "03", icon: <img src="/img/icon/svc-linkedin-b2b.webp" alt="LinkedIn B2B Campaigns" width="28" height="28" />, subtitle: "Paid Campaigns", title: "LinkedIn B2B Campaigns", desc: "LinkedIn isn't just for hiring; it's where enduring trust is truly built in the B2B world. We help you effectively generate leads, position your team as influential thought leaders, and build an authoritative voice in your niche. From executive ghostwriting to sponsored content strategies, we ensure your business is consistently seen and respected by the right audience. Elevate your brand's presence and unlock new opportunities on this essential platform, driving real business growth.", },
   { num: "04", icon: <img src="/img/icon/svc-social-content.webp" alt="Social Content Creation" width="28" height="28" />, subtitle: "Community Building", title: "Social Content Creation", desc: "We handle the entire content production process: ideation, scripting, designing, and editing. Whether you need product showcases, brand stories, memes, or testimonials, we ensure your social feed reflects your brand personality and speaks directly to your audience’s interests, challenges, and aspirations.", },
   { num: "05", icon: <img src="/img/icon/svc-community-management.webp" alt="Community Management" width="28" height="28" />, subtitle: "Partnerships", title: "Community Management", desc: "Engagement doesn’t end with publishing. We help you stay connected with your audience by responding to DMs, comments, and tags in a timely, friendly, and brand-consistent manner. We also monitor sentiment and escalate critical feedback or opportunities, keeping your community positive and active.", },
-  { num: "06", icon: <img src="/img/icon/svc-paid-social-ads.webp" alt="Paid Social Ads" width="28" height="28" />, subtitle: "Insights & ROI", title: "Paid Social Ads", desc: "To scale your efforts, we run targeted ad campaigns that are optimized for awareness, engagement, lead generation, or conversions. From creative testing to audience segmentation and analytics, we handle every aspect of paid performance helping you get the most ROI from every rupee spent.", },
+  { num: "06", icon: <img src="/img/icon/svc-paid-social-ads.webp" alt="Paid Social Ads" width="28" height="28" />, subtitle: "Insights & ROI", title: "Paid Social & Media Advertising", desc: "We scale your growth with performance-driven social media marketing and media advertising campaigns, optimized for ROI.", },
 ];
 
 const PROCESS_STEPS = [
   { step: "01", title: "Discover", phase: "Brand Audit", desc: "Every engagement begins with discovery and understanding your unique business journey. We listen carefully to your goals, review past performance, analyze competitors, and define the audience personas that matter most. This phase sets the tone for everything we build together — from brand voice and communication style to campaign KPIs, engagement objectives, and long-term growth direction.", bullets: [] },
   { step: "02", title: "Research & Audit", phase: "Custom Roadmap", desc: "Before we post a single piece of content, we analyze what’s working and what needs improvement across your digital presence. We evaluate platform analytics, competitor strategies, hashtag effectiveness, audience behavior, content gaps, and engagement trends to ensure we build your social presence from a position of strength, opportunity, and market relevance.", bullets: [] },
   { step: "03", title: "Plan & Strategize", phase: "Content Production", desc: "With insights in hand, we build a smart and scalable social media roadmap tailored to your business goals. We define your core content pillars, plan campaigns around seasonal opportunities, create visually distinct templates, and align everything with your broader marketing strategy. Every content plan includes posting schedules, caption hooks, engagement tactics, and CTA goals.", bullets: [] },
-  { step: "04", title: "Create & Publish", phase: "Full Execution", desc: "Once approved, we move into seamless execution with a collaborative creative workflow. Our team of designers, writers, strategists, and video editors work together to deliver consistent, high-quality content designed to stop scrolling and spark conversations. We schedule posts at optimal times, use relevant hashtags strategically, and optimize captions to improve engagement, reach, clicks, and audience interaction.", bullets: [] },
-  { step: "05", title: "Monitor & Optimize", phase: "Continuous Growth", desc: "After publishing, the real optimization process begins through continuous monitoring and performance analysis. We track metrics across reach, engagement, saves, shares, profile visits, link clicks, and conversions to understand audience behavior more effectively. Based on these insights, we refine future content strategies, test new formats, and continuously enhance overall social media performance over time.", bullets: [] },
+  { step: "04", title: "Create & Publish", phase: "Full Execution", desc: "Once approved, we move into seamless execution with a collaborative creative workflow. Our team of designers, writers, strategists, and video editors work together to deliver consistency. We schedule posts at optimal times, use relevant hashtags strategically, and optimize captions to improve engagement, reach, clicks, and audience interaction.", bullets: [] },
+  { step: "05", title: "Monitor & Optimize", phase: "Continuous Growth", desc: "After publishing, the real optimization process begins through continuous monitoring and performance analysis. We track metrics across reach, engagement, saves, shares, profile visits, link clicks, and conversions to understand audience behavior. Based on these insights, we refine content strategies,continuously enhance overall social media performance over time.", bullets: [] },
 ];
 
 const HOW_WE_WORK = [
@@ -369,12 +379,12 @@ const HOW_WE_WORK = [
 ];
 
 const faqData = [
-  { q: "What Social Media Networks Do You Work With?", a: "We work with Instagram, Facebook, LinkedIn, Twitter, YouTube, and Pinterest. While they might all be social networks, strategies for each of these platforms vary and we craft content and campaigns based on the platform." },
-  { q: "Can You Run Ads For My Brand?", a: "We build and manage full-funnel ad campaigns, from strategy and creative, targeting, A/B testing, and most importantly, performance optimization – ultimately ensuring you’re getting the most out of your ad spend." },
-  { q: "Do You Create All Content Or Do I Have To Provide It?", a: "We create all the content for you, from ideation to captions, it’s all included and we will take care of your visual, video, and captions once we’ve gathered your input during onboarding." },
-  { q: "Will I Get A Content Calendar To Review?", a: "For sure. We create a monthly content calendar that lists the proposed content, scheduled publishing dates, campaign highlights, etc. and send a copy for your review before the content goes live." },
-  { q: "How Often Will I Get Reports?", a: "We share reports monthly on performance, key KPIs, top posts, engagement trends, and what to optimize as we aim to constantly improve your results." },
-  { q: "Can You Handle My Brand’s Replies and Community Comments?", a: "Yes. We can do community management for you, which enables your brand to consistently sound like your brand as we respond to DMs, comments/reviews, mentions, etc." },
+  { q: "What social media platforms do you manage?", a: " We manage social media platforms including Instagram, Facebook, LinkedIn, YouTube, X (Twitter), and other relevant channels based on your business goals, audience behavior, and industry requirements. Our strategies are customized to improve visibility, engagement, and overall brand communication across digital platforms." },
+  { q: "Do you create content for social media accounts?", a: "Yes, we create strategic social media content including creatives, captions, reels, carousels, promotional campaigns, and branded communication. Our content approach focuses on audience engagement, brand consistency, visibility, and creating meaningful interactions that support your overall marketing objectives and business growth." },
+  { q: "Do you run paid social media ads?", a: "Yes, we manage paid social media advertising campaigns across platforms like Facebook, Instagram, LinkedIn, and YouTube. Our campaigns focus on audience targeting, lead generation, brand awareness, engagement growth, and conversion optimization to maximize advertising performance and return on investment." },
+  { q: "Which social media platform is best for my business?", a: " The ideal platform depends on your industry, target audience, business goals, and content strategy. We analyze customer behavior and market trends to recommend the most effective social media platforms for improving engagement, visibility, lead generation, and long-term digital growth." },
+  { q: "Can social media marketing help generate leads?", a: "Yes, social media marketing can effectively generate qualified leads through targeted campaigns, engaging content, optimized landing pages, and audience-focused advertising strategies. It helps businesses improve visibility, attract potential customers, build trust, and increase conversions across digital platforms consistently." },
+  { q: "How do you increase followers and engagement?", a: "We increase followers and engagement through strategic content creation, audience targeting, consistent posting, performance-driven campaigns, trend analysis, community interaction, and platform optimization. Our approach focuses on attracting relevant audiences while improving meaningful engagement, reach, and long-term brand visibility organically and through paid strategies." },
 ];
 
 // ─── SMM Hero Image ───────────────────────────────────────────────────────────
@@ -395,7 +405,7 @@ function Hero() {
   return (
     <section className="smm-hero">
       <div className="smm-hero-left">
-        <div className="smm-badge"><div className="smm-badge-dot" />Priyam Consultancy Services</div>
+        <div className="smm-badge"><div className="smm-badge-dot" />Brand Engagement </div>
         <h1 className="smm-hero-heading">
           Turn Followers into <br />
           <span className="orange lined">Customers </span> with Social Media Marketing
@@ -553,7 +563,7 @@ function ServicePanel({ svc, index }) {
       </div>
       <div className="smm-sp-content">
         <div className="smm-sp-subtitle">{svc.subtitle}</div>
-        <div className="smm-sp-title">{svc.title}</div>
+        <h4 className="smm-sp-title">{svc.title}</h4>
         <div className="smm-sp-desc">{svc.desc}</div>
         {/* <a className="smm-sp-link" href="#">LEARN MORE <span className="smm-sp-link-arr">↗</span></a> */}
       </div>
@@ -569,9 +579,9 @@ function Services() {
       <div className="smm-svc-glow smm-ssvg2" />
       <div className="smm-svc-hdr">
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Social Media Marketing Services</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Social Media Marketing Services</h2>
         </div>
-        <h2 className="smm-svc-h2">Not Just Posts. <span> <i>Conversations </i></span>That Convert.</h2>
+        <h3 className="smm-svc-h2">Not Just Posts. <span> <i>Conversations </i></span>That Convert.</h3>
         <p className="smm-svc-sub">
         We don’t treat social as a side channel, it’s a core growth lever. Our services are designed to help you dominate each platform with purpose and precision.
           </p>
@@ -598,7 +608,7 @@ function ProcessStep({ step, index }) {
           <div className="smm-tp-num-side">
             <div className="smm-tp-bg-num">{step.step}</div>
             <div className="smm-tp-step-index">Step — {step.step}</div>
-            <div className="smm-tp-step-title">{step.title}</div>
+            <h4 className="smm-tp-step-title">{step.title}</h4>
             <div className="smm-tp-phase">{step.phase}</div>
           </div>
         </>
@@ -607,7 +617,7 @@ function ProcessStep({ step, index }) {
           <div className="smm-tp-num-side">
             <div className="smm-tp-bg-num">{step.step}</div>
             <div className="smm-tp-step-index">Step — {step.step}</div>
-            <div className="smm-tp-step-title">{step.title}</div>
+            <h4 className="smm-tp-step-title">{step.title}</h4>
             <div className="smm-tp-phase">{step.phase}</div>
           </div>
           <div className="smm-tp-text-side">
@@ -626,9 +636,9 @@ function Process() {
       <div className="smm-tp-cross" />
       <div className="smm-tp-header">
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Social Media Marketing Process</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Social Media Marketing Process</h2>
         </div>
-        <h2 className="smm-tp-h2">Strategy Driven. <em><i> Audience First.</i></em> ROI Focused.</h2>
+        <h3 className="smm-tp-h2">Strategy Driven. <em><i> Audience First.</i></em> ROI Focused.</h3>
         <p className="smm-tp-sub">
         We combine deep research with creative execution and agile iteration to ensure your social media consistently delivers measurable impact.
         </p>
@@ -647,7 +657,7 @@ function HowWeWorkItem({ item }) {
     <div ref={ref} className={`smm-hww-arrow-item${visible ? " hww-vis" : ""}`}>
       <div className="smm-hww-card">
         <div className="smm-hww-icon-wrap">{item.icon}</div>
-        <div className="smm-hww-card-title">{item.title}</div>
+        <h4 className="smm-hww-card-title">{item.title}</h4>
         <div className="smm-hww-card-desc">{item.desc}</div>
       </div>
     </div>
@@ -662,9 +672,11 @@ function HowWeWork() {
       <div className="smm-hww-glow smm-hww-glow-2" />
       <div className="smm-hww-header">
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Focus on Your Results in Social Media Marketing</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Focus on Your Results in Social Media Marketing</h2>
         </div>
-        <h2 className="smm-hww-h2">Create Content. <span><i>Build Community. </i></span> Drive Results.</h2>
+        <h3 className="smm-hww-h2">Create Content. <span><i>Build Community. </i></span> Drive Results.</h3>
+        <p className="smm-hww-sub">
+We don’t believe in posting for the sake of it. Every action is backed by strategy and aimed at results.        </p>
       </div>
       <div className="smm-hww-arrows-wrap">
         <div className="smm-hww-arrow-track">
@@ -685,12 +697,12 @@ function FAQSection() {
   return (
     <section className="faq-section">
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -747,14 +759,248 @@ export default function PcsSmmPage() {
     return () => {};
   }, []);
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://www.priyamconsultancy.com/",
+          "name": "Home"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://www.priyamconsultancy.com/social-media-marketing/",
+          "name": "social-media-marketing"
+        }
+      }
+    ]
+  };
+ 
+  // =============================================
+  // 2. ORGANIZATION SCHEMA
+  // =============================================
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Priyam Consultancy Services",
+    "url": "https://www.priyamconsultancy.com/",
+    "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91 96774 44048",
+        "contactType": "customer support"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61577125709962",
+      "https://www.linkedin.com/company/priyam-consultancy-services/",
+      "https://www.instagram.com/priyam_consultancy_services/",
+      "https://x.com/services91032",
+      "https://g.co/kgs/rdTYdi6"
+    ]
+  };
+ 
+  // =============================================
+  // 3. SERVICE PAGE SCHEMA (உங்கள் existing schema + hasOfferCatalog சேர்க்கப்பட்டது)
+  // =============================================
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.priyamconsultancy.com/social-media-marketing/#service",
+    "name": "Social Media Marketing Services",
+    "serviceType": "Social Media Marketing Services",
+    "url": "https://www.priyamconsultancy.com/social-media-marketing/",
+    "description": "Priyam Consultancy provides professional social media marketing services including content creation, social media management, paid advertising, audience engagement, lead generation, brand awareness campaigns and platform growth strategies across India.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Priyam Consultancy Services",
+      "url": "https://www.priyamconsultancy.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+      }
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    },
+    // hasOfferCatalog — new code-இல் இருந்து சேர்க்கப்பட்டது
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Social Media Marketing Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Strategy" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Paid Social Advertising" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Content Creation & Scheduling" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Community Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Influencer Marketing" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Social Media Analytics & Reporting" } }
+      ]
+    }
+  };
+ 
+  // =============================================
+  // 4. PRODUCT SCHEMA
+  // =============================================
+  const productSchema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "social-media-marketing",
+    "image": ["https://www.priyamconsultancy.com/img/smm.png"],
+    "description": "Best social media marketing services in Coimbatore offering content creation, social media management, Facebook marketing, Instagram marketing, LinkedIn marketing, paid social media advertising and lead generation solutions.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Priyam Consultancy Services"
+    },
+    "review": {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Admin"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "4674"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.priyamconsultancy.com/social-media-marketing/",
+      "priceCurrency": "USD",
+      "price": "00.00",
+      "priceValidUntil": "2026-12-31",
+      "itemCondition": "https://schema.org/UsedCondition",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "priyamconsultancy.com"
+      }
+    }
+  };
+ 
+  // =============================================
+  // 5. FAQ SCHEMA
+  // =============================================
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What social media platforms do you manage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We manage social media platforms including Instagram, Facebook, LinkedIn, YouTube, X (Twitter), and other relevant channels based on your business goals, audience behavior, and industry requirements. Our strategies are customized to improve visibility, engagement, and overall brand communication across digital platforms."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you create content for social media accounts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we create strategic social media content including creatives, captions, reels, carousels, promotional campaigns, and branded communication. Our content approach focuses on audience engagement, brand consistency, visibility, and creating meaningful interactions that support your overall marketing objectives and business growth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you run paid social media ads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we manage paid social media advertising campaigns across platforms like Facebook, Instagram, LinkedIn, and YouTube. Our campaigns focus on audience targeting, lead generation, brand awareness, engagement growth, and conversion optimization to maximize advertising performance and return on investment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which social media platform is best for my business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The ideal platform depends on your industry, target audience, business goals, and content strategy. We analyze customer behavior and market trends to recommend the most effective social media platforms for improving engagement, visibility, lead generation, and long-term digital growth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can social media marketing help generate leads?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, social media marketing can effectively generate qualified leads through targeted campaigns, engaging content, optimized landing pages, and audience-focused advertising strategies. It helps businesses improve visibility, attract potential customers, build trust, and increase conversions across digital platforms consistently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you increase followers and engagement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We increase followers and engagement through strategic content creation, audience targeting, consistent posting, performance-driven campaigns, trend analysis, community interaction, and platform optimization. Our approach focuses on attracting relevant audiences while improving meaningful engagement, reach, and long-term brand visibility organically and through paid strategies."
+        }
+      }
+    ]
+  };
+ 
   return (
     <Layout>
+      <Head>
+        <title>Social Media Marketing Company in India | SMM Services</title>
+        <meta
+          name="description"
+          content="Boost your brand with India's leading social media marketing company. We produce content across all social platforms that drives growth and visibility for your brand."
+        />
+        <meta
+          name="keywords"
+          content="Social Media Marketing, SMM Services, Social Media Marketing Agency, Social Media Advertising, Social Media Marketing Services, Social Media Marketing Company, Social Media Management Agency, Social Media Management Services, Social Media Marketing Companies"
+        />
+        <link
+          rel="canonical"
+          href="https://www.priyamconsultancy.com/services/social-media-marketing"
+        />
+ 
+        {/* Open Graph */}
+        <meta property="og:title" content="Social Media Marketing Company in India | SMM Services" />
+        <meta
+          property="og:description"
+          content="Boost your brand with India's leading social media marketing company. We produce content across all social platforms that drives growth and visibility for your brand."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/services/social-media-marketing" />
+        <meta property="og:image" content="https://www.priyamconsultancy.com/img/social-media-marketing.png" />
+ 
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Social Media Marketing Company in India | SMM Services" />
+        <meta
+          name="twitter:description"
+          content="Boost your brand with India's leading social media marketing company. We produce content across all social platforms that drives growth and visibility for your brand."
+        />
+        <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/social-media-marketing.png" />
+ 
+        {/* ✅ Schema Scripts — அனைத்தும் சேர்க்கப்பட்டன */}
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Head>
+ 
       <Hero />
       <ApproachSection />
       <Services />
       <Process />
       <HowWeWork />
       <FAQSection />
+      <BlogSection/>
       <CTASection />
     </Layout>
   );

@@ -19,7 +19,7 @@ function useInView(threshold = 0.1) {
 const TAB1_SERVICES = [
   { num: "01", img: "/img/icon/ecommerce-website-audit.webp",       subtitle: "E-commerce Website Audit",           title: "E-commerce Website Audit",           desc: "A detailed audit of your ecommerce store covering user experience, SEO, speed, and conversion gaps. Our ecommerce marketing agency identifies performance issues and opportunities, helping you improve visibility, enhance user journeys, and build a stronger foundation for scalable ecommerce marketing growth and better results." },
   { num: "02", img: "/img/icon/ecommerce-seo-growth-strategy.webp",         subtitle: "E-commerce SEO & Growth Strategy",   title: "E-commerce SEO & Growth Strategy",   desc: "We create data-driven ecommerce marketing strategies focused on improving search rankings, organic traffic, and long-term visibility. From keyword mapping to content optimization, our ecommerce marketing agency ensures your store is discoverable, competitive, and positioned for consistent growth across search engines and digital platforms." },
-  { num: "03", img: "/img/icon/performance-marketing.webp",         subtitle: "Performance Marketing (Paid Ads)",   title: "Performance Marketing (Paid Ads)",   desc: "As a results-focused ecommerce marketing agency, we run high-performing paid campaigns across Google, Meta and social platforms. Our ecommerce marketing approach focuses on ROI, audience targeting, creative optimization, and continuous scaling to maximize conversions and overall business performance." },
+  { num: "03", img: "/img/icon/performance-marketing.webp",         subtitle: "Performance Marketing (Paid Ads)",   title: "Performance Marketing (Paid Ads)",   desc: "As a results-focused ecommerce marketing agency , we run high-performing paid campaigns across Google, Meta and social platforms. Our ecommerce marketing approach focuses on ROI, audience targeting, creative optimization, and continuous scaling to maximize conversions and overall business performance." },
   { num: "04", img: "/img/icon/social-commerce-marketing.webp",      subtitle: "Social Commerce Marketing",          title: "Social Commerce Marketing",          desc: "We integrate ecommerce marketing with social platforms to drive direct conversions. From product-focused campaigns to engaging creatives, our strategies help you sell seamlessly across channels, turning social engagement into revenue while strengthening your brand presence and improving customer interaction across every marketplace touchpoint." },
   { num: "05", img: "/img/icon/customer-retention.webp",      subtitle: "Customer Retention & Retargeting",   title: "Customer Retention & Retargeting",   desc: "Our ecommerce marketing services focus on retaining customers and increasing lifetime value. Through advanced retargeting strategies, audience segmentation, and personalized campaigns, we help re-engage visitors, recover lost sales, and build long-term customer relationships that drive consistent revenue growth across ecommerce and marketplace platforms." },
   { num: "06", img: "/img/icon/analytics-conversion-reporting.webp",   subtitle: "Analytics & Conversion Reporting",   title: "Analytics & Conversion Reporting",   desc: "We track, measure, and analyze every aspect of your ecommerce marketing performance. From traffic and behavior to conversions and ROI, our reporting provides actionable insights that help refine strategies, optimize campaigns, and improve decision-making for better results across your ecommerce store and marketplace channels." },
@@ -111,7 +111,7 @@ function ServicePanel({ svc, index }) {
       </div>
       <div className="smm-sp-content">
         <div className="smm-sp-subtitle">{svc.subtitle}</div>
-        <div className="smm-sp-title">{svc.title}</div>
+        <h5 className="smm-sp-title">{svc.title}</h5>
         <div className="smm-sp-desc">{svc.desc}</div>
       </div>
     </div>
@@ -140,13 +140,13 @@ export default function ServicesWithTabs() {
       {/* 1. Eyebrow + Title + Description — static, never changes */}
       <div className="smm-svc-hdr">
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: "20px", textAlign: "start" }}>
+          <h2 className="partners-eyebrow" style={{ marginBottom: "20px", textAlign: "start" }}>
             Our Specialized Email Marketing Services
-          </div>
+          </h2>
         </div>
-        <h2 className="smm-svc-h2">
+        <h3 className="smm-svc-h2">
           Two Powerful Channels. <span><i>One Goal</i></span> - Customer Growth.
-        </h2>
+        </h3>
         <p className="smm-svc-sub">
           We deliver end-to-end ecommerce marketing and marketplace solutions to drive visibility, traffic, and conversions.
         </p>

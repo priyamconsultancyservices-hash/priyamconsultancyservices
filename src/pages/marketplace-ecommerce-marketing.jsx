@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
+import BlogSection from "../components/BlogSection";
 import CTASection from "../components/HomePage/CTA";
 const banner = "/img/marketplace-ecommerce-marketing.png";
 import ServiceSection from "../components/MarketplaceEcommerenceService/ServiceSection";
-
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 
 // ─── CSS-in-JS via a single <style> block injected once ───────────────────────
 const STYLES = `
@@ -126,7 +127,7 @@ const STYLES = `
   .smm-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.35rem); font-weight:800; color:#fff; line-height:1.5; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
   .smm-svc-panel:hover .smm-sp-title { letter-spacing:.01em; }
   .smm-sp-desc { font-size:.86rem; line-height:1.76; color:rgba(255,255,255,0.93); max-height:0; overflow:hidden; transition:max-height .5s ease,color .5s ease,margin .5s ease; margin-bottom:0; }
-  .smm-svc-panel:hover .smm-sp-desc { max-height:140px; color:rgb(255,255,255); margin-bottom:.9rem; font-family:'Poppins'; }
+  .smm-svc-panel:hover .smm-sp-desc { max-height:200px; color:rgb(255,255,255); margin-bottom:.9rem; font-family:'Poppins'; }
   .smm-sp-link { display:inline-flex; align-items:flex-start; gap:.4rem; font-family:'DM Sans',sans-serif; font-size:.68rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; opacity:0; transform:translateY(8px); transition:opacity .4s ease,transform .4s ease,gap .3s ease; position:relative; z-index:2; }
   .smm-svc-panel:hover .smm-sp-link { opacity:1; transform:translateY(0); }
   .smm-svc-panel:hover .smm-sp-link:hover { gap:.7rem; }
@@ -275,7 +276,11 @@ const STYLES = `
     .faq-question { font-size:.85rem !important; padding:.85rem 1rem !important; }
     .faq-answer { font-size:.82rem !important; padding:0 1rem .85rem !important; }
   }
-
+h3.faq-h3 {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
   /* ── HOW WE WORK MOBILE ── */
   @media(max-width:768px){
     .pcs-hww-arrow-track,
@@ -382,18 +387,18 @@ const HOW_WE_WORK = [
 ];
 
 const faqData = [
-  { q: "What does an ecommerce marketing agency do?", a: " An ecommerce marketing agency helps businesses grow online by managing SEO, paid ads, listings, and overall ecommerce marketing strategy to increase traffic and sales." },
-  { q: "Do you provide Amazon PPC Services?", a: "Yes, as an experienced amazon ppc agency, we manage complete Amazon PPC Services including campaign setup, optimization, and scaling." },
-  { q: "Can you optimize my marketplace listings?", a: "Absolutely. We provide a complete marketplace product listing service, including Flipkart Listing Optimization and Meesho product listing service." },
-  { q: "Do you handle multiple marketplaces?", a: "Yes, we manage and optimize your presence across all major marketplace platforms." },
-  { q: "How do you improve sales on ecommerce platforms?", a: "Through a combination of ecommerce marketing, SEO, paid ads, and listing optimization strategies tailored for each marketplace." },
-  { q: "Will I get performance reports?", a: "Yes, we provide detailed insights on traffic, conversions, ad performance, and overall ecommerce marketing results." },
+  { q: "What does an ecommerce marketing service include?", a: "Ecommerce marketing services include SEO, product listing optimization, performance marketing, marketplace management, social media promotion, email marketing, conversion optimization, and analytics tracking. The goal is to improve product visibility, increase traffic, generate sales, and strengthen overall online store performance effectively." },
+  { q: "How can ecommerce SEO improve my sales?", a: " Ecommerce SEO improves product visibility on search engines by optimizing product pages, keywords, technical structure, and user experience. Better search rankings attract high-intent customers, increase organic traffic, improve product discoverability, and contribute to higher conversions and long-term online sales growth." },
+  { q: "What is marketplace listing optimization?", a: " Marketplace listing optimization involves improving product titles, descriptions, keywords, images, attributes, and overall listing structure on platforms like Amazon and Flipkart. This helps products rank better in marketplace searches, attract more customers, improve click-through rates, and increase overall sales performance." },
+  { q: "Can you help increase sales on multiple marketplaces?", a: "Yes, we help businesses improve visibility and sales across multiple marketplaces including Amazon, Flipkart, Meesho, and other ecommerce platforms. Our strategies focus on listing optimization, advertising, pricing analysis, content improvement, and performance tracking to maximize marketplace growth and conversions." },
+  { q: "Do you provide Amazon PPC services?", a: " Yes, we manage Amazon PPC campaigns focused on improving product visibility, increasing conversions, and maximizing advertising efficiency. Our services include keyword targeting, campaign optimization, bid management, competitor analysis, and performance tracking to improve return on advertising spend and marketplace sales performance." },
+  { q: "How does PCS help ecommerce brands grow?", a: "PCS helps ecommerce brands grow through SEO, marketplace optimization, paid advertising, conversion-focused strategies, content marketing, and performance analytics. Our approach focuses on improving visibility, customer engagement, operational efficiency, and sales scalability to support sustainable long-term ecommerce business growth." },
 ];
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────
 function Hero() {
   return (
-      <section className="hero" id="hero">
+    <section className="hero" id="hero">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -516,13 +521,13 @@ function Hero() {
 
       {/* LEFT CONTENT */}
       <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot" />Email &amp;  E-commerce  Marketing</div>
+        <div className="h-badge"><div className="badge-dot" />Revenue Expansion </div>
         <h1 className="hero-heading">
           Scaling Brands Across
           <span className="hl lined">Marketplace </span> & E-commerce  Marketing
         </h1>
         <p className="hero-sub">
-At PCS, we help brands scale through result-driven ecommerce marketing and marketplace growth strategies. As a performance-focused ecommerce marketing agency and digital marketing agency for ecommerce, we combine data, creativity, and platform expertise to drive visibility, traffic, and conversions. </p>        <div className="hero-actions">
+          At PCS, we help brands scale through result-driven ecommerce marketing and marketplace growth strategies. As a performance-focused ecommerce marketing agency and digital marketing agency for ecommerce, we combine data, creativity, and platform expertise to drive visibility, traffic, and conversions. </p>        <div className="hero-actions">
           <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
@@ -552,7 +557,7 @@ function ApproachSection() {
       company: form.company, message: form.msg, url: window.location.href,
     };
     emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
-      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name:"", email:"", phone:"", company:"", msg:"" }); })
+      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name: "", email: "", phone: "", company: "", msg: "" }); })
       .catch((error) => { console.log(error); alert("Failed to send ❌"); });
   };
 
@@ -597,13 +602,13 @@ function ApproachSection() {
           </div>
           <h2 className="ap-heading">Strategic <span>Marketplace & E-commerce </span> Marketing Growth That Drives Sales</h2>
           <p className="ap-intro">
-In today’s competitive digital landscape, success depends on strong execution across both your website and every marketplace platform you sell on. We build structured ecommerce marketing strategies focused on scalable business growth.
+            In today’s competitive digital landscape, success depends on strong execution across both your website and every marketplace platform you sell on. We build structured ecommerce marketing strategies focused on scalable business growth.
           </p>
           <p className="ap-intro">
             As a trusted ecommerce marketing agency, we focus on performance-driven campaigns, product listing optimization, and data-backed decision-making. Our strategies are designed to improve visibility, engagement, and conversion performance consistently across channels.
           </p>
           <p className="ap-intro">
-We analyze customer behavior, competitor positioning, and platform algorithms to create high-impact marketplace strategies. Whether your goal is better rankings, higher conversions, or increased sales, we deliver measurable ecommerce marketing outcomes.
+            We analyze customer behavior, competitor positioning, and platform algorithms to create high-impact marketplace strategies. Whether your goal is better rankings, higher conversions, or increased sales, we deliver measurable ecommerce marketing outcomes.
           </p>
         </div>
         <div className="ap-form-wrap">
@@ -702,7 +707,7 @@ function ProcessStep({ step, index }) {
           <div className="smm-tp-num-side">
             <div className="smm-tp-bg-num">{step.step}</div>
             <div className="smm-tp-step-index">Step — {step.step}</div>
-            <div className="smm-tp-step-title">{step.title}</div>
+            <h4 className="smm-tp-step-title">{step.title}</h4>
             <div className="smm-tp-phase">{step.phase}</div>
           </div>
         </>
@@ -711,7 +716,7 @@ function ProcessStep({ step, index }) {
           <div className="smm-tp-num-side">
             <div className="smm-tp-bg-num">{step.step}</div>
             <div className="smm-tp-step-index">Step — {step.step}</div>
-            <div className="smm-tp-step-title">{step.title}</div>
+            <h4 className="smm-tp-step-title">{step.title}</h4>
             <div className="smm-tp-phase">{step.phase}</div>
           </div>
           <div className="smm-tp-text-side">
@@ -730,10 +735,10 @@ function Process() {
       <div className="smm-tp-cross" />
       <div className="smm-tp-header">
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Marketplace & E-commerce Marketing Process</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Marketplace & E-commerce Marketing Process</h2>
         </div>
-        <h2 className="smm-tp-h2">List Better. <em> <i>Rank Higher. </i></em>Sell More.</h2>
-\
+        <h3 className="smm-tp-h2">List Better. <em> <i>Rank Higher. </i></em>Sell More.</h3>
+
       </div>
       <div className="smm-tp-body">
         {PROCESS_STEPS.map((step, i) => <ProcessStep key={step.step} step={step} index={i} />)}
@@ -749,7 +754,7 @@ function HowWeWorkItem({ item }) {
     <div ref={ref} className={`smm-hww-arrow-item${visible ? " hww-vis" : ""}`}>
       <div className="smm-hww-card">
         <div className="smm-hww-icon-wrap">{item.icon}</div>
-        <div className="smm-hww-card-title">{item.title}</div>
+        <h4 className="smm-hww-card-title">{item.title}</h4>
         <div className="smm-hww-card-desc">{item.desc}</div>
       </div>
     </div>
@@ -764,9 +769,9 @@ function HowWeWork() {
       <div className="smm-hww-glow smm-hww-glow-2" />
       <div className="smm-hww-header">
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Focus on Your Results </div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Focus on Your Results </h2>
         </div>
-        <h2 className="smm-hww-h2">Optimize Listings. <span><i>Drive Traffic.</i></span> Increase Sales.</h2>
+        <h3 className="smm-hww-h2">Optimize Listings. <span><i>Drive Traffic.</i></span> Increase Sales.</h3>
       </div>
       <div className="smm-hww-arrows-wrap">
         <div className="smm-hww-arrow-track">
@@ -784,11 +789,11 @@ function FAQSection() {
   return (
     <section className="faq-section">
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow">Frequently Asked Questions</div>
+        <h4 className="partners-eyebrow">Frequently Asked Questions</h4>
       </div>
       <div className="container">
         <div className="faq-head">
-          <h2>Questions That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Questions That Could <span>Hold You Back</span></h3>
         </div>
         <div className="faq-wrapper">
           <div className="faq-col">
@@ -830,17 +835,208 @@ export default function PcsSmmPage() {
       el.textContent = STYLES;
       document.head.appendChild(el);
     }
-    return () => {};
+    return () => { };
   }, []);
+
+  const schemaData = [
+
+    //  Breadcrumb List Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/",
+            "name": "Home"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/marketplace-ecommerce-marketing/",
+            "name": "marketplace-ecommerce-marketing"
+          }
+        }
+      ]
+    },
+
+    // Organization Schema 
+
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Priyam Consultancy Services",
+      "url": "https://www.priyamconsultancy.com/",
+      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91 96774 44048",
+          "contactType": "customer support"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
+      ]
+    },
+
+    // SERVICE PAGE SCHEMA
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://www.priyamconsultancy.com/marketplace-ecommerce-marketing/#service",
+      "name": "Marketplace Ecommerce Marketing",
+      "serviceType": "Marketplace Ecommerce Marketing Services",
+      "url": "https://www.priyamconsultancy.com/marketplace-ecommerce-marketing/",
+      "description": "Priyam Consultancy provides professional marketplace ecommerce marketing services including Amazon marketing, Flipkart marketing, product listing optimization, ecommerce advertising, marketplace management and online sales growth services across India.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    },
+
+    //  Product Schema
+
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "marketplace-ecommerce-marketing",
+      "image": ["https://www.priyamconsultancy.com/img/marketplace-ecommerce-marketing.png"],
+      "description": "Best marketplace ecommerce marketing services in Coimbatore offering Amazon marketing, Flipkart marketing, marketplace listing optimization, ecommerce SEO, Amazon PPC management, conversion optimization and online sales growth solutions.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Priyam Consultancy Services"
+      },
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Admin"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "4428"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.priyamconsultancy.com/marketplace-ecommerce-marketing/",
+        "priceCurrency": "USD",
+        "price": "00.00",
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": "https://schema.org/UsedCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+          "@type": "Organization",
+          "name": "priyamconsultancy.com"
+        }
+      }
+    },
+
+    //  FAQ Schema
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What does an ecommerce marketing service include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ecommerce marketing services include SEO, product listing optimization, performance marketing, marketplace management, social media promotion, email marketing, conversion optimization, and analytics tracking. The goal is to improve product visibility, increase traffic, generate sales, and strengthen overall online store performance effectively."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can ecommerce SEO improve my sales?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ecommerce SEO improves product visibility on search engines by optimizing product pages, keywords, technical structure, and user experience. Better search rankings attract high-intent customers, increase organic traffic, improve product discoverability, and contribute to higher conversions and long-term online sales growth."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is marketplace listing optimization?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Marketplace listing optimization involves improving product titles, descriptions, keywords, images, attributes, and overall listing structure on platforms like Amazon and Flipkart. This helps products rank better in marketplace searches, attract more customers, improve click-through rates, and increase overall sales performance."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can you help increase sales on multiple marketplaces?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we help businesses improve visibility and sales across multiple marketplaces including Amazon, Flipkart, Meesho, and other ecommerce platforms. Our strategies focus on listing optimization, advertising, pricing analysis, content improvement, and performance tracking to maximize marketplace growth and conversions."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Do you provide Amazon PPC services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we manage Amazon PPC campaigns focused on improving product visibility, increasing conversions, and maximizing advertising efficiency. Our services include keyword targeting, campaign optimization, bid management, competitor analysis, and performance tracking to improve return on advertising spend and marketplace sales performance."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does PCS help ecommerce brands grow?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PCS helps ecommerce brands grow through SEO, marketplace optimization, paid advertising, conversion-focused strategies, content marketing, and performance analytics. Our approach focuses on improving visibility, customer engagement, operational efficiency, and sales scalability to support sustainable long-term ecommerce business growth."
+        }
+      }]
+    }
+
+  ]
+
 
   return (
     <Layout>
+      <Head>
+        <title>Ecommerce & Marketplace Marketing Agency in India | PCS</title>
+        <meta name="description" content="Increase ecommerce sales with our marketplace and ecommerce marketing services. From ecommerce SEO to listing optimization, PCS drives scalable growth. " />
+        <meta name="keywords" content="Social Media Marketing, SMM Services, Social Media Marketing Agency, Social Media Advertising, Social Media Marketing Services, Social Media Marketing Company, Social Media Management Agency, Social Media Management Services, Social Media Marketing Companies" />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/services/marketplace-ecommerce-marketing" />
+        {/* Open Graph */}
+        <meta property="og:title" content="Ecommerce & Marketplace Marketing Agency in India | PCS" />
+        <meta property="og:description" content="Increase ecommerce sales with our marketplace and ecommerce marketing services. From ecommerce SEO to listing optimization, PCS drives scalable growth. " />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/services/marketplace-ecommerce-marketing" />
+        <meta property="og:image" content="https://www.priyamconsultancy.com/img/marketplace-ecommerce-marketing.png" />
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ecommerce & Marketplace Marketing Agency in India | PCS" />
+        <meta name="twitter:description" content="Increase ecommerce sales with our marketplace and ecommerce marketing services. From ecommerce SEO to listing optimization, PCS drives scalable growth. " />
+        <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/marketplace-ecommerce-marketing.png" />
+        {/* Schema */}
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
+      </Head>
       <Hero />
       <ApproachSection />
       <ServiceSection />
       <Process />
       <HowWeWork />
       <FAQSection />
+      <BlogSection />
       <CTASection />
     </Layout>
   );
