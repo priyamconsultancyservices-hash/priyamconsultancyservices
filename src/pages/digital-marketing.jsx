@@ -14,7 +14,7 @@ function SEOHead() {
   const pageUrl = "https://www.pcsbusinesssolution.com/digital-marketing";
   const imageUrl = "https://www.pcsbusinesssolution.com/img/digital-marketing.png";
 
- 
+
 
   return (
     <Head>
@@ -31,10 +31,10 @@ function SEOHead() {
       <meta name="twitter:title" content="Digital Marketing Agency | Expert Digital Marketing Services" />
       <meta name="twitter:description" content="PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!" />
       <meta name="twitter:image" content={imageUrl} />
- 
-      
-        {/* ── Schema 1: Organization (with real phone + social links) ── */}
-        <script type="application/ld+json">{`
+
+
+      {/* ── Schema 1: Organization (with real phone + social links) ── */}
+      <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Organization",
@@ -78,9 +78,9 @@ function SEOHead() {
             }
           }
         `}</script>
- 
-        {/* ── Schema 2: WebSite ── */}
-        <script type="application/ld+json">{`
+
+      {/* ── Schema 2: WebSite ── */}
+      <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "WebSite",
@@ -96,9 +96,9 @@ function SEOHead() {
             }
           }
         `}</script>
- 
-        {/* ── Schema 3: LocalBusiness ── */}
-        <script type="application/ld+json">{`
+
+      {/* ── Schema 3: LocalBusiness ── */}
+      <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
@@ -128,9 +128,9 @@ function SEOHead() {
             ]
           }
         `}</script>
- 
-        {/* ── Schema 4: Service ── */}
-        <script type="application/ld+json">{`
+
+      {/* ── Schema 4: Service ── */}
+      <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Service",
@@ -157,9 +157,9 @@ function SEOHead() {
             }
           }
         `}</script>
- 
-        {/* ── Schema 5: Product (with AggregateRating) ── */}
-        <script type="application/ld+json">{`
+
+      {/* ── Schema 5: Product (with AggregateRating) ── */}
+      <script type="application/ld+json">{`
           {
             "@context": "https://schema.org/",
             "@type": "Product",
@@ -197,9 +197,9 @@ function SEOHead() {
             }
           }
         `}</script>
- 
-        {/* ── Schema 6: BreadcrumbList ── */}
-        <script type="application/ld+json">{`
+
+      {/* ── Schema 6: BreadcrumbList ── */}
+      <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
@@ -215,9 +215,9 @@ function SEOHead() {
             ]
           }
         `}</script>
- 
-        {/* ── Schema 7: ItemList (All Services) ── */}
-        <script type="application/ld+json">{`
+
+      {/* ── Schema 7: ItemList (All Services) ── */}
+      <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "ItemList",
@@ -237,9 +237,9 @@ function SEOHead() {
             ]
           }
         `}</script>
- 
-        {/* ── Schema 8: FAQPage ── */}
-        <script type="application/ld+json">{`
+
+      {/* ── Schema 8: FAQPage ── */}
+      <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "FAQPage",
@@ -311,7 +311,7 @@ function SEOHead() {
             ]
           }
         `}</script>
-        
+
     </Head>
   );
 }
@@ -341,7 +341,7 @@ const FontLoader = () => (
 ═══════════════════════════════ */
 function HeroSection() {
   return (
-      <section className="hero" id="hero">
+    <section className="hero" id="hero">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -491,12 +491,12 @@ img.hero-img { animation: none !important; }
       <div className="hero-left">
         <div className="h-badge"><div className="badge-dot" />Digital Marketing </div>
         <h1 className="hero-heading">
-          Best 
-           <span className="hl lined" style={{marginLeft: '12px'}}>Digital Marketing </span>
-           Who Puts the Clients First
+          Best
+          <span className="hl lined" style={{ marginLeft: '12px' }}>Digital Marketing </span>
+          Who Puts the Clients First
         </h1>
         <p className="hero-sub">
-As the best digital marketing agency, we believe great digital marketing starts with listening. We ask the right questions to understand what truly holds your business back—whether it's low leads, weak visibility, or underperforming campaigns. As a trusted digital marketing company, we go beyond surface-level strategies and uncover insights that drive real results.
+          As the best digital marketing agency, we believe great digital marketing starts with listening. We ask the right questions to understand what truly holds your business back—whether it's low leads, weak visibility, or underperforming campaigns. As a trusted digital marketing company, we go beyond surface-level strategies and uncover insights that drive real results.
         </p>
         <div className="hero-actions">
           <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
@@ -624,13 +624,13 @@ function ApproachSection() {
           </div>
           <h2 className="ap-heading">Result-Driven  <span>Digital Marketing</span> Services</h2>
           <p className="ap-intro">
-At our full-service digital marketing company, every digital marketing service we offer is aligned with measurable business outcomes. Whether it’s lead generation, conversions, or brand awareness, our digital marketing strategies are designed to deliver impact.
+            At our full-service digital marketing company, every digital marketing service we offer is aligned with measurable business outcomes. Whether it’s lead generation, conversions, or brand awareness, our digital marketing strategies are designed to deliver impact.
           </p>
           <p className="ap-intro">
-We don’t believe in guesswork. Our best digital marketing services are backed by data, tracking, and continuous optimization. As a best digital marketing company, we measure what matters and refine what doesn’t work.
+            We don’t believe in guesswork. Our best digital marketing services are backed by data, tracking, and continuous optimization. As a best digital marketing company, we measure what matters and refine what doesn’t work.
           </p>
           <p className="ap-intro">
-In the fast-changing world of digital marketing, we stay ahead by constantly testing, learning, and improving. That’s what makes us the best digital marketing agency businesses trust.          </p>
+            In the fast-changing world of digital marketing, we stay ahead by constantly testing, learning, and improving. That’s what makes us the best digital marketing agency businesses trust.          </p>
         </div>
 
         {/* RIGHT FORM */}
@@ -761,7 +761,7 @@ const SERVICES = [
   },
   {
     icon: <img src="/img/icon/paid-marketing.webp" alt="Paid Marketing" width="28" height="28" />,
-    title: "Paid Marketing",
+    title: "Performance Marketing",
     desc: "We create high-performing ad campaigns as part of our digital marketing services, targeting the right audience at the right time.",
     link: "/performance-marketing"
   },
@@ -792,7 +792,7 @@ const SERVICES = [
 ];
 function ServicesSection() {
   return (
-    <section className="svc-section" style={{position:"relative",background:"#004168",padding:"8rem 6% 7rem",overflow:"hidden"}}>
+    <section className="svc-section" style={{ position: "relative", background: "#004168", padding: "8rem 6% 7rem", overflow: "hidden" }}>
       <style>{`
         @media(max-width:768px){ .svc-section{ padding:4rem 5% 4rem !important; } }
         @media(max-width:480px){ .svc-section{ padding:3rem 4% 3rem !important; } }
@@ -835,23 +835,23 @@ function ServicesSection() {
       <div className="svc-bg-r" /><div className="svc-grid" />
       <div className="svc-orb svc-orb-1" /><div className="svc-orb svc-orb-2" />
       <div className="svc-header">
-           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Digital Marketing Services</h2>
-          </div>
+        <div className="partners-header1">
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Digital Marketing Services</h2>
+        </div>
         <h2 className="svc-h2">Smart Marketing. <span>Sharp Execution.</span> Stronger Results.</h2>
         <p className="svc-sub">
-       As a full-service digital marketing company, we cover every stage of your customer journey through powerful digital marketing services:</p>
+          As a full-service digital marketing company, we cover every stage of your customer journey through powerful digital marketing services:</p>
       </div>
       <div className="svc-cards">
-    {SERVICES.map((s, i) => (
-  <div key={i} className="svc-card" style={{ animationDelay: `${.05 + i * .07}s` }}>
-    <div className="svc-icon-wrap"><div className="svc-icon-ring">{s.icon}</div></div>
-    <h3 className="svc-card-title">{s.title}</h3>
-    <div className="svc-card-desc">{s.desc}</div>
-    <a className="svc-learn" href={s.link}>LEARN MORE <span className="svc-learn-arr">↗</span></a>  {/* ← இங்கே மட்டும் மாறும் */}
-    <div className="svc-card-line" />
-  </div>
-))}
+        {SERVICES.map((s, i) => (
+          <div key={i} className="svc-card" style={{ animationDelay: `${.05 + i * .07}s` }}>
+            <div className="svc-icon-wrap"><div className="svc-icon-ring">{s.icon}</div></div>
+            <h3 className="svc-card-title">{s.title}</h3>
+            <div className="svc-card-desc">{s.desc}</div>
+            <a className="svc-learn" href={s.link}>LEARN MORE <span className="svc-learn-arr">↗</span></a>  {/* ← இங்கே மட்டும் மாறும் */}
+            <div className="svc-card-line" />
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -861,11 +861,11 @@ function ServicesSection() {
    SECTION 4 — PROCESS
 ═══════════════════════════════════════════ */
 const PROCESS_STEPS = [
-  {num:"01",emoji:<img src="/img/icon/proc-discover.webp" alt="Discover and Understand" width="32" height="32" />,title:"Discover & Understand",desc:"Every brand is different, so we don’t start with assumptions—we start with you. Through in-depth discovery calls, competitor research, and audience analysis, we dig into your business goals, current challenges, and the ecosystem you operate in. This helps us understand the “why” behind the work and sets a strong foundation for everything that follows."},
-  {num:"02",emoji:<img src="/img/icon/proc-audit-strategize.webp" alt="Audit and Strategize" width="32" height="32" />,title:"Audit & Strategize",desc:"Next, we run a full diagnostic of your digital presence—website, content, SEO, paid ads, social media, and more. We identify gaps, missed opportunities, and underperforming channels. Based on this, we create a custom strategy aligned with your objectives—whether it’s brand awareness, lead generation, or revenue growth."},
-  {num:"03",emoji:<img src="/img/icon/proc-execute.webp" alt="Execute with Precision" width="32" height="32" />,title:"Execute with Precision",desc:"Our team then gets to work—designing creatives, writing copy, setting up campaigns, building funnels, and optimizing user journeys. Each piece of work is handled with care, clarity, and a focus on performance. We believe in clean execution with zero guesswork and complete visibility for you at every milestone."},
-  {num:"04",emoji:<img src="/img/icon/proc-track-optimize.webp" alt="Track Report and Optimize" width="32" height="32" />,title:"Track, Report & Optimize",desc:"We don’t just measure for the sake of it—we measure what matters. Every campaign is monitored in real time, KPIs are reviewed weekly, and reports are built to be easy to understand. What’s performing stays, what’s not gets fixed. This ongoing optimization is what helps us keep improving, without wasting time or budget."},
-  {num:"05",emoji:<img src="/img/icon/proc-scale-expand.webp" alt="Scale and Expand" width="32" height="32" />,title:"We Scale & Expand",desc:"Once we have a winning formula, we replicate and scale it across platforms or geographies. Whether it’s scaling ad budgets, expanding into new markets, or growing your content engine, we help you amplify what’s working without losing control of quality or ROI."},
+  { num: "01", emoji: <img src="/img/icon/proc-discover.webp" alt="Discover and Understand" width="32" height="32" />, title: "Discover & Understand", desc: "Every brand is different, so we don’t start with assumptions—we start with you. Through in-depth discovery calls, competitor research, and audience analysis, we dig into your business goals, current challenges, and the ecosystem you operate in. This helps us understand the “why” behind the work and sets a strong foundation for everything that follows." },
+  { num: "02", emoji: <img src="/img/icon/proc-audit-strategize.webp" alt="Audit and Strategize" width="32" height="32" />, title: "Audit & Strategize", desc: "Next, we run a full diagnostic of your digital presence—website, content, SEO, paid ads, social media, and more. We identify gaps, missed opportunities, and underperforming channels. Based on this, we create a custom strategy aligned with your objectives—whether it’s brand awareness, lead generation, or revenue growth." },
+  { num: "03", emoji: <img src="/img/icon/proc-execute.webp" alt="Execute with Precision" width="32" height="32" />, title: "Execute with Precision", desc: "Our team then gets to work—designing creatives, writing copy, setting up campaigns, building funnels, and optimizing user journeys. Each piece of work is handled with care, clarity, and a focus on performance. We believe in clean execution with zero guesswork and complete visibility for you at every milestone." },
+  { num: "04", emoji: <img src="/img/icon/proc-track-optimize.webp" alt="Track Report and Optimize" width="32" height="32" />, title: "Track, Report & Optimize", desc: "We don’t just measure for the sake of it—we measure what matters. Every campaign is monitored in real time, KPIs are reviewed weekly, and reports are built to be easy to understand. What’s performing stays, what’s not gets fixed. This ongoing optimization is what helps us keep improving, without wasting time or budget." },
+  { num: "05", emoji: <img src="/img/icon/proc-scale-expand.webp" alt="Scale and Expand" width="32" height="32" />, title: "We Scale & Expand", desc: "Once we have a winning formula, we replicate and scale it across platforms or geographies. Whether it’s scaling ad budgets, expanding into new markets, or growing your content engine, we help you amplify what’s working without losing control of quality or ROI." },
 ];
 
 function ProcessSection() {
@@ -889,7 +889,7 @@ function ProcessSection() {
   const R = 210; // orbit radius
 
   return (
-    <section ref={ref} className="prc3-section" style={{position:"relative",background:"#ffffff",padding:"6rem 4% 7rem",overflow:"hidden"}}>
+    <section ref={ref} className="prc3-section" style={{ position: "relative", background: "#ffffff", padding: "6rem 4% 7rem", overflow: "hidden" }}>
       <style>{`
         @media(max-width:768px){ .prc3-section{ padding:3.5rem 4% 4rem !important; } }
         @media(max-width:480px){ .prc3-section{ padding:2.5rem 4% 3rem !important; } }
@@ -1025,16 +1025,16 @@ h3.faq-h3 {
         }
       `}</style>
 
-      <div className="prc3-dotgrid"/>
+      <div className="prc3-dotgrid" />
 
       {/* Header */}
       <div className="prc3-header">
-           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Digital Marketing Process</h2>
-          </div>
+        <div className="partners-header1">
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Digital Marketing Process</h2>
+        </div>
         <h3 className="prc3-h2">Simple. Strategic. <em>Built Around Your Goals.</em></h3>
         <p className="prc3-sub">
-            We follow a clear, collaborative process that ensures every step is aligned with your business outcomes and not just marketing metrics.
+          We follow a clear, collaborative process that ensures every step is aligned with your business outcomes and not just marketing metrics.
         </p>
       </div>
 
@@ -1043,8 +1043,8 @@ h3.faq-h3 {
 
         {/* LEFT — Radial orbit */}
         <div className="prc3-orbit-area">
-          <div className="prc3-ring-outer"/>
-          <div className="prc3-ring-mid"/>
+          <div className="prc3-ring-outer" />
+          <div className="prc3-ring-mid" />
 
           {/* SVG spokes */}
           <svg className="prc3-spokes" viewBox="0 0 500 500" fill="none">
@@ -1059,7 +1059,7 @@ h3.faq-h3 {
                   stroke={isActive ? "rgba(237,131,55,0.55)" : "rgba(2,43,68,0.07)"}
                   strokeWidth={isActive ? "2" : "1"}
                   strokeDasharray={isActive ? "none" : "4 4"}
-                  style={{transition:"stroke .4s,stroke-width .4s"}}
+                  style={{ transition: "stroke .4s,stroke-width .4s" }}
                 />
               );
             })}
@@ -1068,9 +1068,9 @@ h3.faq-h3 {
               const a = (angles[i] * Math.PI) / 180;
               const r1 = 230; const r2 = 240;
               return <line key={`t${i}`}
-                x1={250+r1*Math.cos(a)} y1={250+r1*Math.sin(a)}
-                x2={250+r2*Math.cos(a)} y2={250+r2*Math.sin(a)}
-                stroke="rgba(237,131,55,0.35)" strokeWidth="2" strokeLinecap="round"/>;
+                x1={250 + r1 * Math.cos(a)} y1={250 + r1 * Math.sin(a)}
+                x2={250 + r2 * Math.cos(a)} y2={250 + r2 * Math.sin(a)}
+                stroke="rgba(237,131,55,0.35)" strokeWidth="2" strokeLinecap="round" />;
             })}
           </svg>
 
@@ -1088,7 +1088,7 @@ h3.faq-h3 {
             return (
               <div key={i}
                 className={`prc3-orb-node${activeStep === i ? " active" : ""}`}
-                style={{left: pct(x), top: pct(y)}}
+                style={{ left: pct(x), top: pct(y) }}
                 onClick={() => setActiveStep(i)}>
                 <div className="prc3-orb-ring">
                   <span className="prc3-orb-emoji">{s.emoji}</span>
@@ -1104,9 +1104,9 @@ h3.faq-h3 {
           {PROCESS_STEPS.map((s, i) => (
             <div key={i}
               className={`prc3-mag-card${visible ? " vis" : ""}${activeStep === i ? " active-card" : ""}`}
-              style={{transitionDelay: visible ? `${i * 0.1}s` : "0s"}}
+              style={{ transitionDelay: visible ? `${i * 0.1}s` : "0s" }}
               onClick={() => setActiveStep(i)}>
-              <div className="prc3-accent-bar"/>
+              <div className="prc3-accent-bar" />
               <div className="prc3-card-body">
                 <div className="prc3-card-top">
                   <div className="prc3-card-num">{s.num}</div>
@@ -1131,27 +1131,27 @@ h3.faq-h3 {
    SECTION 5 — WHY CHOOSE US
 ═══════════════════════════════════════════ */
 const WCU_POINTS = [
-  {num:"01",color:"#34d399",label:"We Collaborate, Not Dictate",title:"We Collaborate, Not Dictate",desc:"We work closely with your team to build practical, scalable digital marketing strategies aligned with your goals, ensuring clarity, flexibility, and effective execution."},
-  {num:"02",color:"#a78bfa",label:"We Build with Context",title:"We Build with Context",desc:"Our digital marketing services are tailored to your industry, audience, and growth stage, ensuring strategies are relevant, personalized, and designed to deliver meaningful results."},
-  {num:"03",color:"#ed8337",label:"We Own Outcomes",title:"We Own Outcomes",desc:"We take full responsibility for your digital marketing performance, ensuring transparency, accountability, and consistent results from execution to optimization and measurable business growth."},
+  { num: "01", color: "#34d399", label: "We Collaborate, Not Dictate", title: "We Collaborate, Not Dictate", desc: "We work closely with your team to build practical, scalable digital marketing strategies aligned with your goals, ensuring clarity, flexibility, and effective execution." },
+  { num: "02", color: "#a78bfa", label: "We Build with Context", title: "We Build with Context", desc: "Our digital marketing services are tailored to your industry, audience, and growth stage, ensuring strategies are relevant, personalized, and designed to deliver meaningful results." },
+  { num: "03", color: "#ed8337", label: "We Own Outcomes", title: "We Own Outcomes", desc: "We take full responsibility for your digital marketing performance, ensuring transparency, accountability, and consistent results from execution to optimization and measurable business growth." },
 ];
 
 function WhyChooseUsSection() {
-  const [visible, setVisible] = useState([false,false,false]);
-  const refs = [useRef(null),useRef(null),useRef(null)];
+  const [visible, setVisible] = useState([false, false, false]);
+  const refs = [useRef(null), useRef(null), useRef(null)];
 
-  useEffect(()=>{
-    refs.forEach((r,i)=>{
-      const obs = new IntersectionObserver(([e])=>{
-        if(e.isIntersecting) setVisible(v=>{const n=[...v];n[i]=true;return n;});
-      },{threshold:0.15});
-      if(r.current) obs.observe(r.current);
-      return ()=>obs.disconnect();
+  useEffect(() => {
+    refs.forEach((r, i) => {
+      const obs = new IntersectionObserver(([e]) => {
+        if (e.isIntersecting) setVisible(v => { const n = [...v]; n[i] = true; return n; });
+      }, { threshold: 0.15 });
+      if (r.current) obs.observe(r.current);
+      return () => obs.disconnect();
     });
-  },[]);
+  }, []);
 
   return (
-    <section className="wcu-section" style={{position:"relative",background:"#004168",padding:"4rem 6%",overflow:"hidden"}}>
+    <section className="wcu-section" style={{ position: "relative", background: "#004168", padding: "4rem 6%", overflow: "hidden" }}>
       <style>{`
         @media(max-width:768px){ .wcu-section{ padding:3rem 5% !important; } }
         @media(max-width:480px){ .wcu-section{ padding:2.5rem 4% !important; } }
@@ -1205,11 +1205,11 @@ function WhyChooseUsSection() {
       `}</style>
       <div className="wcu-grid-bg" />
       <div className="wcu-orb-el wcu-orb-1" /><div className="wcu-orb-el wcu-orb-2" />
-          <div className="prc3-header">
-           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>How We Work</h2>
-          </div>
-        <h2 className="prc3-h2" style={{color:'#fff'}}>Plan With Purpose. <em>Execute With Precision.</em></h2>
+      <div className="prc3-header">
+        <div className="partners-header1">
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>How We Work</h2>
+        </div>
+        <h2 className="prc3-h2" style={{ color: '#fff' }}>Plan With Purpose. <em>Execute With Precision.</em></h2>
 
       </div>
       <div className="wcu-inner">
@@ -1221,56 +1221,56 @@ function WhyChooseUsSection() {
           <div className="wcu-stat wcu-sc-4"><div className="sc-label">Conversions</div><div className="sc-val">+312% <span className="sc-up">↑</span></div></div>
           <div className="wcu-illus">
             <svg viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="190" cy="190" r="155" stroke="rgba(237,131,55,0.08)" strokeWidth="1" strokeDasharray="6 4"/>
-              <circle cx="190" cy="190" r="120" stroke="rgba(237,131,55,0.12)" strokeWidth="1" strokeDasharray="4 6"/>
-              <rect x="110" y="140" width="160" height="105" rx="10" fill="rgba(10,54,82,0.9)" stroke="rgba(237,131,55,0.4)" strokeWidth="1.5"/>
-              <rect x="118" y="148" width="144" height="88" rx="6" fill="#0a2535"/>
-              <rect x="176" y="245" width="28" height="12" rx="2" fill="rgba(10,54,82,0.9)" stroke="rgba(237,131,55,0.3)" strokeWidth="1"/>
-              <rect x="158" y="255" width="64" height="6" rx="3" fill="rgba(10,54,82,0.9)" stroke="rgba(237,131,55,0.25)" strokeWidth="1"/>
-              <rect x="126" y="210" width="12" height="22" rx="2" fill="rgba(237,131,55,0.7)"><animate attributeName="height" values="10;22;14;22" dur="2.5s" repeatCount="indefinite"/><animate attributeName="y" values="222;210;216;210" dur="2.5s" repeatCount="indefinite"/></rect>
-              <rect x="143" y="200" width="12" height="32" rx="2" fill="#38bdf8"><animate attributeName="height" values="18;32;24;32" dur="2.8s" repeatCount="indefinite"/><animate attributeName="y" values="214;200;208;200" dur="2.8s" repeatCount="indefinite"/></rect>
-              <rect x="160" y="206" width="12" height="26" rx="2" fill="rgba(237,131,55,0.5)"><animate attributeName="height" values="14;26;20;26" dur="2.2s" repeatCount="indefinite"/><animate attributeName="y" values="218;206;212;206" dur="2.2s" repeatCount="indefinite"/></rect>
-              <rect x="177" y="195" width="12" height="37" rx="2" fill="#34d399"><animate attributeName="height" values="22;37;28;37" dur="3s" repeatCount="indefinite"/><animate attributeName="y" values="210;195;204;195" dur="3s" repeatCount="indefinite"/></rect>
-              <rect x="194" y="203" width="12" height="29" rx="2" fill="rgba(237,131,55,0.8)"><animate attributeName="height" values="16;29;20;29" dur="2.6s" repeatCount="indefinite"/><animate attributeName="y" values="216;203;212;203" dur="2.6s" repeatCount="indefinite"/></rect>
-              <rect x="211" y="198" width="12" height="34" rx="2" fill="#38bdf8"><animate attributeName="height" values="20;34;26;34" dur="2.4s" repeatCount="indefinite"/><animate attributeName="y" values="212;198;206;198" dur="2.4s" repeatCount="indefinite"/></rect>
-              <rect x="228" y="193" width="12" height="39" rx="2" fill="#34d399"><animate attributeName="height" values="24;39;30;39" dur="2.7s" repeatCount="indefinite"/><animate attributeName="y" values="208;193;201;193" dur="2.7s" repeatCount="indefinite"/></rect>
-              <polyline points="126,208 143,198 160,204 177,190 194,196 211,184 228,178 250,170" stroke="#ed8337" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><animate attributeName="stroke-dasharray" values="0,300;300,0" dur="2s" fill="freeze"/></polyline>
-              <circle cx="250" cy="170" r="3" fill="#ed8337"><animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite"/></circle>
-              <rect x="126" y="153" width="60" height="6" rx="3" fill="rgba(237,131,55,0.3)"/>
-              <rect x="192" y="153" width="30" height="6" rx="3" fill="rgba(255,255,255,0.1)"/>
-              <rect x="228" y="153" width="26" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
-              <g transform="translate(68,110)"><circle cx="22" cy="22" r="22" fill="rgba(13,74,112,0.85)" stroke="rgba(237,131,55,0.35)" strokeWidth="1.5"/><text x="22" y="28" textAnchor="middle" fontSize="18">🔍</text><animate attributeName="transform" attributeType="XML" values="translate(68,110);translate(68,100);translate(68,110)" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.5;1"/></g>
-              <g transform="translate(268,108)"><circle cx="22" cy="22" r="22" fill="rgba(13,74,112,0.85)" stroke="rgba(237,131,55,0.35)" strokeWidth="1.5"/><text x="22" y="28" textAnchor="middle" fontSize="18">📣</text><animate attributeName="transform" attributeType="XML" values="translate(268,108);translate(268,98);translate(268,108)" dur="3s" repeatCount="indefinite" keyTimes="0;0.5;1"/></g>
-              <g transform="translate(62,232)"><circle cx="22" cy="22" r="22" fill="rgba(13,74,112,0.85)" stroke="rgba(56,189,248,0.35)" strokeWidth="1.5"/><text x="22" y="28" textAnchor="middle" fontSize="18">📧</text><animate attributeName="transform" attributeType="XML" values="translate(62,232);translate(62,222);translate(62,232)" dur="2.8s" repeatCount="indefinite" keyTimes="0;0.5;1"/></g>
-              <g transform="translate(270,238)"><circle cx="22" cy="22" r="22" fill="rgba(13,74,112,0.85)" stroke="rgba(52,211,153,0.35)" strokeWidth="1.5"/><text x="22" y="28" textAnchor="middle" fontSize="18">📊</text><animate attributeName="transform" attributeType="XML" values="translate(270,238);translate(270,228);translate(270,238)" dur="3.2s" repeatCount="indefinite" keyTimes="0;0.5;1"/></g>
-              <line x1="112" y1="132" x2="130" y2="148" stroke="rgba(237,131,55,0.2)" strokeWidth="1" strokeDasharray="4 3"><animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.5s" repeatCount="indefinite"/></line>
-              <line x1="268" y1="132" x2="254" y2="148" stroke="rgba(237,131,55,0.2)" strokeWidth="1" strokeDasharray="4 3"><animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.8s" repeatCount="indefinite"/></line>
-              <line x1="106" y1="252" x2="120" y2="248" stroke="rgba(56,189,248,0.2)" strokeWidth="1" strokeDasharray="4 3"><animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.6s" repeatCount="indefinite"/></line>
-              <line x1="270" y1="252" x2="262" y2="248" stroke="rgba(52,211,153,0.2)" strokeWidth="1" strokeDasharray="4 3"><animate attributeName="stroke-dashoffset" from="0" to="-14" dur="2s" repeatCount="indefinite"/></line>
-              <g transform="translate(168,60)"><circle cx="22" cy="22" r="20" fill="rgba(237,131,55,0.12)" stroke="rgba(237,131,55,0.45)" strokeWidth="1.5"/><text x="22" y="28" textAnchor="middle" fontSize="16">🎯</text></g>
-              <line x1="190" y1="102" x2="190" y2="140" stroke="rgba(237,131,55,0.2)" strokeWidth="1" strokeDasharray="4 3"><animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.2s" repeatCount="indefinite"/></line>
+              <circle cx="190" cy="190" r="155" stroke="rgba(237,131,55,0.08)" strokeWidth="1" strokeDasharray="6 4" />
+              <circle cx="190" cy="190" r="120" stroke="rgba(237,131,55,0.12)" strokeWidth="1" strokeDasharray="4 6" />
+              <rect x="110" y="140" width="160" height="105" rx="10" fill="rgba(10,54,82,0.9)" stroke="rgba(237,131,55,0.4)" strokeWidth="1.5" />
+              <rect x="118" y="148" width="144" height="88" rx="6" fill="#0a2535" />
+              <rect x="176" y="245" width="28" height="12" rx="2" fill="rgba(10,54,82,0.9)" stroke="rgba(237,131,55,0.3)" strokeWidth="1" />
+              <rect x="158" y="255" width="64" height="6" rx="3" fill="rgba(10,54,82,0.9)" stroke="rgba(237,131,55,0.25)" strokeWidth="1" />
+              <rect x="126" y="210" width="12" height="22" rx="2" fill="rgba(237,131,55,0.7)"><animate attributeName="height" values="10;22;14;22" dur="2.5s" repeatCount="indefinite" /><animate attributeName="y" values="222;210;216;210" dur="2.5s" repeatCount="indefinite" /></rect>
+              <rect x="143" y="200" width="12" height="32" rx="2" fill="#38bdf8"><animate attributeName="height" values="18;32;24;32" dur="2.8s" repeatCount="indefinite" /><animate attributeName="y" values="214;200;208;200" dur="2.8s" repeatCount="indefinite" /></rect>
+              <rect x="160" y="206" width="12" height="26" rx="2" fill="rgba(237,131,55,0.5)"><animate attributeName="height" values="14;26;20;26" dur="2.2s" repeatCount="indefinite" /><animate attributeName="y" values="218;206;212;206" dur="2.2s" repeatCount="indefinite" /></rect>
+              <rect x="177" y="195" width="12" height="37" rx="2" fill="#34d399"><animate attributeName="height" values="22;37;28;37" dur="3s" repeatCount="indefinite" /><animate attributeName="y" values="210;195;204;195" dur="3s" repeatCount="indefinite" /></rect>
+              <rect x="194" y="203" width="12" height="29" rx="2" fill="rgba(237,131,55,0.8)"><animate attributeName="height" values="16;29;20;29" dur="2.6s" repeatCount="indefinite" /><animate attributeName="y" values="216;203;212;203" dur="2.6s" repeatCount="indefinite" /></rect>
+              <rect x="211" y="198" width="12" height="34" rx="2" fill="#38bdf8"><animate attributeName="height" values="20;34;26;34" dur="2.4s" repeatCount="indefinite" /><animate attributeName="y" values="212;198;206;198" dur="2.4s" repeatCount="indefinite" /></rect>
+              <rect x="228" y="193" width="12" height="39" rx="2" fill="#34d399"><animate attributeName="height" values="24;39;30;39" dur="2.7s" repeatCount="indefinite" /><animate attributeName="y" values="208;193;201;193" dur="2.7s" repeatCount="indefinite" /></rect>
+              <polyline points="126,208 143,198 160,204 177,190 194,196 211,184 228,178 250,170" stroke="#ed8337" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><animate attributeName="stroke-dasharray" values="0,300;300,0" dur="2s" fill="freeze" /></polyline>
+              <circle cx="250" cy="170" r="3" fill="#ed8337"><animate attributeName="r" values="2;4;2" dur="1.5s" repeatCount="indefinite" /></circle>
+              <rect x="126" y="153" width="60" height="6" rx="3" fill="rgba(237,131,55,0.3)" />
+              <rect x="192" y="153" width="30" height="6" rx="3" fill="rgba(255,255,255,0.1)" />
+              <rect x="228" y="153" width="26" height="6" rx="3" fill="rgba(255,255,255,0.08)" />
+              <g transform="translate(68,110)"><circle cx="22" cy="22" r="22" fill="rgba(13,74,112,0.85)" stroke="rgba(237,131,55,0.35)" strokeWidth="1.5" /><text x="22" y="28" textAnchor="middle" fontSize="18">🔍</text><animate attributeName="transform" attributeType="XML" values="translate(68,110);translate(68,100);translate(68,110)" dur="2.5s" repeatCount="indefinite" keyTimes="0;0.5;1" /></g>
+              <g transform="translate(268,108)"><circle cx="22" cy="22" r="22" fill="rgba(13,74,112,0.85)" stroke="rgba(237,131,55,0.35)" strokeWidth="1.5" /><text x="22" y="28" textAnchor="middle" fontSize="18">📣</text><animate attributeName="transform" attributeType="XML" values="translate(268,108);translate(268,98);translate(268,108)" dur="3s" repeatCount="indefinite" keyTimes="0;0.5;1" /></g>
+              <g transform="translate(62,232)"><circle cx="22" cy="22" r="22" fill="rgba(13,74,112,0.85)" stroke="rgba(56,189,248,0.35)" strokeWidth="1.5" /><text x="22" y="28" textAnchor="middle" fontSize="18">📧</text><animate attributeName="transform" attributeType="XML" values="translate(62,232);translate(62,222);translate(62,232)" dur="2.8s" repeatCount="indefinite" keyTimes="0;0.5;1" /></g>
+              <g transform="translate(270,238)"><circle cx="22" cy="22" r="22" fill="rgba(13,74,112,0.85)" stroke="rgba(52,211,153,0.35)" strokeWidth="1.5" /><text x="22" y="28" textAnchor="middle" fontSize="18">📊</text><animate attributeName="transform" attributeType="XML" values="translate(270,238);translate(270,228);translate(270,238)" dur="3.2s" repeatCount="indefinite" keyTimes="0;0.5;1" /></g>
+              <line x1="112" y1="132" x2="130" y2="148" stroke="rgba(237,131,55,0.2)" strokeWidth="1" strokeDasharray="4 3"><animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.5s" repeatCount="indefinite" /></line>
+              <line x1="268" y1="132" x2="254" y2="148" stroke="rgba(237,131,55,0.2)" strokeWidth="1" strokeDasharray="4 3"><animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.8s" repeatCount="indefinite" /></line>
+              <line x1="106" y1="252" x2="120" y2="248" stroke="rgba(56,189,248,0.2)" strokeWidth="1" strokeDasharray="4 3"><animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.6s" repeatCount="indefinite" /></line>
+              <line x1="270" y1="252" x2="262" y2="248" stroke="rgba(52,211,153,0.2)" strokeWidth="1" strokeDasharray="4 3"><animate attributeName="stroke-dashoffset" from="0" to="-14" dur="2s" repeatCount="indefinite" /></line>
+              <g transform="translate(168,60)"><circle cx="22" cy="22" r="20" fill="rgba(237,131,55,0.12)" stroke="rgba(237,131,55,0.45)" strokeWidth="1.5" /><text x="22" y="28" textAnchor="middle" fontSize="16">🎯</text></g>
+              <line x1="190" y1="102" x2="190" y2="140" stroke="rgba(237,131,55,0.2)" strokeWidth="1" strokeDasharray="4 3"><animate attributeName="stroke-dashoffset" from="0" to="-14" dur="1.2s" repeatCount="indefinite" /></line>
             </svg>
           </div>
         </div>
 
         {/* RIGHT — 3 points */}
         <div className="wcu-right">
-          {WCU_POINTS.map((p,i)=>(
-            <div key={i} ref={refs[i]} className={`wcu-point${visible[i]?" vis":""}`}
-              style={{opacity:0,transform:"translateX(30px)",transitionDelay:`${.1+i*.15}s`}}>
+          {WCU_POINTS.map((p, i) => (
+            <div key={i} ref={refs[i]} className={`wcu-point${visible[i] ? " vis" : ""}`}
+              style={{ opacity: 0, transform: "translateX(30px)", transitionDelay: `${.1 + i * .15}s` }}>
               <div className="wcu-num-col">
-                <div className="wcu-num" style={{color:p.color}}>{p.num}</div>
-                {i<2&&<div className="wcu-vert-line" />}
+                <div className="wcu-num" style={{ color: p.color }}>{p.num}</div>
+                {i < 2 && <div className="wcu-vert-line" />}
               </div>
-              <div className="wcu-content" style={i===2?{paddingBottom:0}:{}}>
-                <div className="wcu-label" style={{color:p.color,borderColor:`${p.color}55`,background:`${p.color}14`}}>
+              <div className="wcu-content" style={i === 2 ? { paddingBottom: 0 } : {}}>
+                <div className="wcu-label" style={{ color: p.color, borderColor: `${p.color}55`, background: `${p.color}14` }}>
                   {p.label}
                   <span className="wcu-arrow-span" style={{
                     "--arrow-color": p.color,
                     "--arrowb-color": p.color,
                   }}>
-                    <span style={{position:"absolute",top:0,left:0,right:0,height:"2px",borderRadius:"2px",background:p.color}}/>
-                    <span style={{position:"absolute",right:"-1px",top:"-4px",width:0,height:0,borderTop:"5px solid transparent",borderBottom:"5px solid transparent",borderLeft:`8px solid ${p.color}`}}/>
+                    <span style={{ position: "absolute", top: 0, left: 0, right: 0, height: "2px", borderRadius: "2px", background: p.color }} />
+                    <span style={{ position: "absolute", right: "-1px", top: "-4px", width: 0, height: 0, borderTop: "5px solid transparent", borderBottom: "5px solid transparent", borderLeft: `8px solid ${p.color}` }} />
                   </span>
                 </div>
                 <h3 className="wcu-title">{p.title}</h3>

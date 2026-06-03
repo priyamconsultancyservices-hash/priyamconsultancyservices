@@ -922,23 +922,23 @@ function WhyChooseUs() {
 
 const INSIGHT_CARDS = [
   {
-    step: "01", title: "Understand Your Vision",
-    desc: "We start by diving deep into your business, industry, and goals. Every recommendation is built on insights, not assumptions.",
+    step: "01", title: "Discover Your Business Needs",
+    desc: "We analyze your business goals, industry landscape, and challenges to build solutions rooted in data and clarity.",
     icon: "/img/icon/understand-vision.webp",
   },
   {
-    step: "02", title: "Implement Strategically",
-    desc: "Our in-house experts execute solutions quickly and efficiently, ensuring every action aligns with your vision and delivers measurable results.",
+    step: "02", title: "Design the Right Roadmap",
+    desc: "Our holistic planning covers compliance, digital transformation, marketing, and HR—aligned to support long-term growth.",
     icon: "/img/icon/implement-strategically.webp",
   },
   {
-    step: "03", title: "Plan Holistically",
-    desc: "From registration and compliance to digital transformation, marketing, and HR, we design a roadmap that covers every aspect of your business growth.",
+    step: "03", title: "Execute with Precision",
+    desc: "Expert teams implement strategies efficiently, ensuring speed, accuracy, and business alignment.",
     icon: "/img/icon/plan-holistically.webp",
   },
   {
-    step: "04", title: "Monitor & Optimize",
-    desc: "We track performance across all services — from operations to marketing campaigns — continuously refining strategies for maximum impact.",
+    step: "04", title: "Track, Improve, Scale",
+    desc: "We continuously monitor performance and refine strategies to maximize outcomes across every function.",
     icon: "/img/icon/monitor-optimize.webp",
   },
 ];
@@ -970,7 +970,7 @@ function HomeInsight() {
             From Insights to Impact
           </div>
         </div>
-        <h2>Smart Strategy. Fast Execution. <em><i>Continuous Growth.</i></em></h2>
+        <h3 className="insights-h3">Smart Strategy. Fast Execution. <em style={{ color: "var(--orange)" }}><i>Continuous Growth.</i></em></h3>
       </div>
       <div className="ins-cards ins-reveal" ref={cardsRef} style={{ transitionDelay: "0.1s" }}>
         {INSIGHT_CARDS.map((c, i) => (
@@ -979,7 +979,7 @@ function HomeInsight() {
             <div className="ins-icon-box">
               <img src={c.icon} alt={c.title} width={30} height={30} style={{ objectFit: "contain" }} />
             </div>
-            <div className="ins-card-title">{c.title}</div>
+            <h4 className="ins-card-title">{c.title}</h4>
             <p className="ins-card-desc">{c.desc}</p>
             {i < INSIGHT_CARDS.length - 1 && (
               <div className="ins-conn">

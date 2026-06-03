@@ -99,7 +99,7 @@ export default function CaseStudy() {
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">Strengthening Digital Presence for a Digital Transformation Company
-</h1>
+            </h1>
           </div>
         </section>
 
@@ -110,42 +110,42 @@ export default function CaseStudy() {
           <div className="detail-left">
 
             <div className="detail-hero-img">
-              <img src="https://picsum.photos/seed/18/900/400" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
+              <img src="/img/case-study-abb-about.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
             </div>
 
-     
- <div className="detail-section">
+
+            <div className="detail-section">
               <h2>About ABB
-</h2>
+              </h2>
               <p>ABB Management Consulting helps MSMEs accelerate growth through Digital Transformation, Application Development, and Process Automation solutions. The company focuses on improving operational efficiency, streamlining business processes, and enabling sustainable growth through technology-driven strategies and innovation-focused consulting services.
-</p>
+              </p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
               <p>ABB aimed to establish a professional digital presence that accurately reflected its expertise in digital transformation and innovation-led IT solutions. The objective was to create a strong online identity aligned with its market positioning, service capabilities, and long-term business vision.
-</p>
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
               <p>Despite offering specialized technology and consulting services, the company required a more refined digital ecosystem to communicate its expertise effectively. Limited brand consistency, unclear positioning, and a lack of structured digital communication affected visibility and overall market perception within a competitive digital transformation industry.
-</p>
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Built a structured and professional digital presence aligned with business objectives
-</li>
-              <li>Refined messaging to emphasize innovation, expertise, and service capabilities
-</li>
-              <li>Improved visual consistency across website and digital communication channels
-</li>
-              <li>Focused on user experience, content clarity, and engagement optimization
-</li>
-              <li>Strengthened brand positioning through strategic digital presentation</li>
-              <li>Created a scalable online foundation supporting long-term visibility and growth
-</li>
+                <li>Built a structured and professional digital presence aligned with business objectives
+                </li>
+                <li>Refined messaging to emphasize innovation, expertise, and service capabilities
+                </li>
+                <li>Improved visual consistency across website and digital communication channels
+                </li>
+                <li>Focused on user experience, content clarity, and engagement optimization
+                </li>
+                <li>Strengthened brand positioning through strategic digital presentation</li>
+                <li>Created a scalable online foundation supporting long-term visibility and growth
+                </li>
               </ul>
             </div>
 
@@ -170,7 +170,7 @@ export default function CaseStudy() {
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>ABB</strong></p>
-                  <p>Service: </p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">Website</span>
                 <span className="sidebar-tag">SEO</span>
@@ -182,55 +182,55 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
+
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
             </div>
 
           </div>

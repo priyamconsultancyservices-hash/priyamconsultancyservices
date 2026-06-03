@@ -4,6 +4,7 @@ const banner = "/img/custom-web-and-mobile-app.png";
 import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 
 // ─── CSS-in-JSX styles injected once ───────────────────────────────────────
 const GLOBAL_CSS = `
@@ -142,7 +143,7 @@ li.dropdown.mega {
   .dm-svc-blob-1 { width: 500px; height: 500px; top: -100px; right: -100px; background: rgba(237,131,55,0.07); }
   .dm-svc-blob-2 { width: 400px; height: 400px; bottom: -80px; left: -80px; background: rgba(56,189,248,0.05); }
   .dm-svc-hdr {
-    text-align: center;margin-bottom: 6rem; position: relative; z-index: 2;
+    text-align: center;margin-bottom: 5rem; position: relative; z-index: 2;
   }
   .dm-svc-eyebrow {
     display: inline-flex; align-items: center; gap: 8px;
@@ -699,26 +700,42 @@ li.dropdown.mega {
     font-size: 34px;
     font-weight: 600;
 }
+ h2.partners-eyebrow {
+        font-size: 1rem;
+        font-weight: 900;
+    }
+    .partners-h3-title {
+    color: #fff!important;
+    font-size: 2.5rem;
+        }
 
+        .partners-h3-process{
+        color: #000!important;
+    font-size: 2.5rem;
+    }
+            h3.faq-h3 {
+    font-size: 2.5rem;
+    color: black;
+}
 `;
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 const SERVICES = [
-  { n:"01", img:"/img/icon/web-mobile-app-custom-web-dev.webp", title:"Custom Web Application Development",      pills:["On-Page SEO","Link Building","Blog Strategy"],        desc:"Design and develop secure, scalable, and high-performing web applications with intuitive UI/UX, optimized navigation, and seamless business process integration." },
-  { n:"02", img:"/img/icon/web-mobile-app-custom-mobile-dev.webp", title:"Custom Mobile Application Development",        pills:["Reels & Shorts","Community Mgmt","Influencer Tie-ups"], desc:"Create native and cross-platform mobile apps for Android and iOS that boost engagement, streamline workflows, and support business scalability." },
-  { n:"03", img:"/img/icon/web-mobile-app-maintenance-support.webp", title:"Maintenance & End-to-End Support",     pills:["Search Ads","Retargeting","A/B Testing"],          desc:"Provide continuous maintenance, updates, and optimization to ensure peak performance, security, and reliability throughout your application lifecycle." },
-  { n:"04", img:"/img/icon/web-mobile-app-cross-platform.webp", title:"Cross-Platform/Hybrid Web & Mobile Application Development",     pills:["Drip Campaigns","WhatsApp Broadcasts","Automation"],   desc:"Build hybrid applications using modern frameworks to deliver consistent performance, faster deployment, and cost-effective scalability across multiple platforms." },
-  { n:"05", img:"/img/icon/web-mobile-app-industry-specific.webp", title:"Industry-Specific Web & Mobile Application Development",   pills:["YouTube Ads","Influencer Match","UGC Content"],         desc:"Deliver tailored web and mobile applications designed to meet the unique operational, compliance, and performance needs of specific industries." },
-  { n:"06", img:"/img/icon/web-mobile-app-progressive.webp", title:"Progressive Web and Mobile Application Development",pills:["GA4 Tracking","Weekly Reports","ROI Dashboards"],       desc:"Develop responsive Progressive Web Apps (PWAs) that combine web accessibility with mobile app speed, reliability, and offline functionality." },
+  { n: "01", img: "/img/icon/web-mobile-app-custom-web-dev.webp", title: "Custom Web Application Development", pills: ["On-Page SEO", "Link Building", "Blog Strategy"], desc: "Design and develop secure, scalable, and high-performing web applications with intuitive UI/UX, optimized navigation, and seamless business process integration." },
+  { n: "02", img: "/img/icon/web-mobile-app-custom-mobile-dev.webp", title: "Custom Mobile Application Development", pills: ["Reels & Shorts", "Community Mgmt", "Influencer Tie-ups"], desc: "Create native and cross-platform mobile apps for Android and iOS that boost engagement, streamline workflows, and support business scalability." },
+  { n: "03", img: "/img/icon/web-mobile-app-maintenance-support.webp", title: "Maintenance & End-to-End Support", pills: ["Search Ads", "Retargeting", "A/B Testing"], desc: "Provide continuous maintenance, updates, and optimization to ensure peak performance, security, and reliability throughout your application lifecycle." },
+  { n: "04", img: "/img/icon/web-mobile-app-cross-platform.webp", title: "Cross-Platform/Hybrid Web & Mobile Application Development", pills: ["Drip Campaigns", "WhatsApp Broadcasts", "Automation"], desc: "Build hybrid applications using modern frameworks to deliver consistent performance, faster deployment, and cost-effective scalability across multiple platforms." },
+  { n: "05", img: "/img/icon/web-mobile-app-industry-specific.webp", title: "Industry-Specific Web & Mobile Application Development", pills: ["YouTube Ads", "Influencer Match", "UGC Content"], desc: "Deliver tailored web and mobile applications designed to meet the unique operational, compliance, and performance needs of specific industries." },
+  { n: "06", img: "/img/icon/web-mobile-app-progressive.webp", title: "Progressive Web and Mobile Application Development", pills: ["GA4 Tracking", "Weekly Reports", "ROI Dashboards"], desc: "Develop responsive Progressive Web Apps (PWAs) that combine web accessibility with mobile app speed, reliability, and offline functionality." },
 ];
 
 
 const PROCESS_STEPS = [
-  { n:"01", img:"/img/icon/web-mobile-app-process-discovery.webp", label:"Discovery",  title:"Discovery & Assessment",        desc:"We analyze business requirements, user needs, and technical constraints to design a Custom Web Application Development plan that aligns with your goals and ensures maximum impact.", items:["Analyze Requirements","Evaluate Constraints","Identify UserNeeds","Define Objectives"] },
-  { n:"02", img:"/img/icon/web-mobile-app-process-strategy.webp", label:"Strategy",  title:"Planning & Strategy",          desc:"Our team creates a detailed development roadmap, including design, technology stack selection, and integration planning. We ensure scalable Web and Mobile Application Development Services for both current and future needs.", items:["Create Roadmaps","Select Technologies","Plan Integrations","Ensure Scalability"] },
-  { n:"03", img:"/img/icon/web-mobile-app-process-design.webp", label:"Design",    title:"Design & Development",         desc:"We develop intuitive, high-performing applications using agile methodology. Every feature is tested for usability, security, and performance to deliver seamless Web and mobile App based on your requirements.", items:["Develop Applications","Enhance Usability","Ensure Security","Optimize Performance"] },
-  { n:"04", img:"/img/icon/web-mobile-app-process-testing.webp", label:"Testing",    title:"Testing & Quality Assurance",              desc:"We rigorously test every application for functionality, compatibility, performances and security. Continuous QA ensures the Application is reliable, efficient, smooth running without stoppage and ready for deployment.", items:["Test Functionality","Verify Compatibility","Maintain Reliability","Ensure Stability"] },
-  { n:"05", img:"/img/icon/web-mobile-app-process-deploy.webp", label:"Deployment",  title:"Deployment & Support",              desc:"We deploy applications on cloud or on-premises servers while providing continuous support, updates, and maintenance for the applications deployed if required. This ensures long-term performance, scalability, and adaptability.", items:["Deploy Applications","Provide Maintenance","Deliver Updates","Support Scalability"] },
+  { n: "01", img: "/img/icon/web-mobile-app-process-discovery.webp", label: "Discovery", title: "Discovery & Assessment", desc: "We analyze business requirements, user needs, and technical constraints to design a Custom Web Application Development plan that aligns with your goals and ensures maximum impact.", items: ["Analyze Requirements", "Evaluate Constraints", "Identify UserNeeds", "Define Objectives"] },
+  { n: "02", img: "/img/icon/web-mobile-app-process-strategy.webp", label: "Strategy", title: "Planning & Strategy", desc: "Our team creates a detailed development roadmap, including design, technology stack selection, and integration planning. We ensure scalable Web and Mobile Application Development Services for both current and future needs.", items: ["Create Roadmaps", "Select Technologies", "Plan Integrations", "Ensure Scalability"] },
+  { n: "03", img: "/img/icon/web-mobile-app-process-design.webp", label: "Design", title: "Design & Development", desc: "We develop intuitive, high-performing applications using agile methodology. Every feature is tested for usability, security, and performance to deliver seamless Web and mobile App based on your requirements.", items: ["Develop Applications", "Enhance Usability", "Ensure Security", "Optimize Performance"] },
+  { n: "04", img: "/img/icon/web-mobile-app-process-testing.webp", label: "Testing", title: "Testing & Quality Assurance", desc: "We rigorously test every application for functionality, compatibility, performances and security. Continuous QA ensures the Application is reliable, efficient, smooth running without stoppage and ready for deployment.", items: ["Test Functionality", "Verify Compatibility", "Maintain Reliability", "Ensure Stability"] },
+  { n: "05", img: "/img/icon/web-mobile-app-process-deploy.webp", label: "Deployment", title: "Deployment & Support", desc: "We deploy applications on cloud or on-premises servers while providing continuous support, updates, and maintenance for the applications deployed if required. This ensures long-term performance, scalability, and adaptability.", items: ["Deploy Applications", "Provide Maintenance", "Deliver Updates", "Support Scalability"] },
 ];
 
 const CARDS = [
@@ -783,14 +800,14 @@ const CARDS = [
     duration: "⏱ Ongoing",
   },
 ];
- 
+
 const faqData = [
-  { q: "What is Web Application Development?", a: "Web application development involves creating interactive, responsive, and scalable applications that run on web browsers, providing functionality beyond a traditional website to support business operations and user engagement." },
-  { q: "What is Custom Mobile App Development?", a: "Custom mobile app development builds native or cross-platform applications for Android and iOS, tailored to specific business requirements, enhancing user experience, engagement, and operational efficiency." },
-  { q: "How Is Custom Web Application Development Different from Websites?", a: "Unlike static websites, custom web applications are interactive, dynamic, and designed to perform specific business functions, automate workflows, and integrate with databases or third-party systems" },
-  { q: "What Can a Custom Web Application Do for Your Business?", a: "Custom web applications streamline workflows, improve efficiency, enable automation, and provide real-time data insights, helping businesses optimize processes, enhance customer experience, and scale effectively." },
-  { q: "How does a custom mobile application work?", a: "A custom mobile app runs on smartphones or tablets, interacting with servers, databases, and APIs to deliver tailored features, real-time updates, and seamless user experiences aligned with business needs." },
-  { q: "What industries benefit most from custom web and mobile applications?", a: "Industries like finance, healthcare, education, retail, logistics, and manufacturing gain significant advantages through tailored applications that improve operations, enhance user engagement, and provide scalable, efficient solutions." },
+  { q: "What is web application development?", a: "Web application development involves creating interactive, responsive, and scalable applications that run in a web browser. These applications help businesses go beyond a traditional website by supporting operations and user engagement." },
+  { q: "What is Custom Mobile App Development?", a: "Custom mobile app development involves building Android or iOS apps designed around your business needs. It helps improve user experience, engagement, and operational efficiency." },
+  { q: "How Is Custom Web Application Development Different from Websites?", a: "Unlike static websites, custom web applications are dynamic and interactive. They are built to perform specific business functions, automate workflows, and connect with databases or third-party systems." },
+  { q: "What Can a Custom Web Application Do for Your Business?", a: "A custom web application can streamline workflows, improve efficiency, automate tasks, and provide real-time data insights. It helps businesses improve customer experience and scale more effectively." },
+  { q: "How does a custom mobile application work?", a: "A custom mobile app runs on smartphones or tablets and connects with servers, databases, and APIs. This allows it to deliver personalized features, updates, and smooth user experiences." },
+  { q: "What industries benefit most from custom web and mobile applications?", a: "Industries such as finance, healthcare, education, retail, logistics, and manufacturing can benefit from custom applications that improve operations and user engagement." },
 ];
 // ─── Sub-components ──────────────────────────────────────────────────────────
 
@@ -810,7 +827,7 @@ function HeroSection() {
 
         </h1>
         <p className="dm-hero-sub">
-We provide end-to-end Custom Web and Mobile Application development solutions, designed to deliver seamless functionality, scalability, and an exceptional user experience. From initial design to development, testing, and integration, our expert team ensures every application aligns with your business goals, and drives operational efficiency.
+          We provide end-to-end Custom Web and Mobile Application development solutions, designed to deliver seamless functionality, scalability, and an exceptional user experience. From initial design to development, testing, and integration, our expert team ensures every application aligns with your business goals, and drives operational efficiency.
 
 
         </p>
@@ -826,7 +843,7 @@ We provide end-to-end Custom Web and Mobile Application development solutions, d
           <img
             src={banner}
             alt="Custom Web & Mobile App Development"
-            style={{ width: "100%",  height: "auto", objectFit: "contain" }}
+            style={{ width: "100%", height: "auto", objectFit: "contain" }}
           />
         </div>
       </div>
@@ -928,12 +945,12 @@ function ApproachSection() {
           </div>
           <h2 className="ap-heading">Custom   <span>Web & Mobile </span> Applications</h2>
           <p className="ap-intro">
-PCS delivers application development solutions focused on performance, scalability, and seamless collaboration throughout every stage of the development lifecycle.
+            PCS delivers application development solutions focused on performance, scalability, and seamless collaboration throughout every stage of the development lifecycle.
 
 
           </p>
           <p className="ap-intro">
-We analyze business requirements, user behavior, and market trends to design customized web and mobile applications aligned with operational goals and user expectations.
+            We analyze business requirements, user behavior, and market trends to design customized web and mobile applications aligned with operational goals and user expectations.
           </p>
           <p className="ap-intro">
             Our agile development approach ensures rapid delivery, seamless integration, optimized user experiences, and high-quality applications that support long-term business growth and efficiency
@@ -1062,20 +1079,20 @@ function ServicesSection() {
       <div className="dm-svc-blob dm-svc-blob-1"></div>
       <div className="dm-svc-blob dm-svc-blob-2"></div>
       <div className="dm-svc-hdr">
-          <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Custom Web & Mobile Application Services</div>
-          </div>
-        <h2>Every Application Tailored.  <em><i>Every Feature Optimized.</i></em></h2>
+        <div className="partners-header1">
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Custom Web & Mobile Application Services</h2>
+        </div>
+        <h3 className="partners-h3-title">Every Application Tailored.  <em style={{ color: '#ed8337' }}><i>Every Feature Optimized.</i></em></h3>
         <p>
           Priyam Consultancy Services provides Custom Web and Mobile Application Development Company expertise to build web and mobile applications that enhance productivity, usability, and performance across platforms.
 
-</p>
+        </p>
       </div>
       <div className="dm-svc-grid">
         {SERVICES.map(s => (
           <div className="dm-svc-card" key={s.n}>
             <div className="dm-svc-body">
-              <div className="dm-svc-title">{s.title}</div>
+              <h4 className="dm-svc-title">{s.title}</h4>
               <p className="dm-svc-desc">{s.desc}</p>
             </div>
             <div style={{ marginTop: "auto", display: "flex", alignItems: "flex-end", justifyContent: "space-between", paddingTop: "1.5rem" }}>
@@ -1096,14 +1113,14 @@ function ProcessSection() {
   return (
     <section className="dm-proc-section" id="process">
       <div className="dm-proc-hdr">
-          <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Application Development Process</div>
-          </div>
-        <h2>Structured, Scalable, and  <em><i>Reliable Application  </i></em> Development</h2>
+        <div className="partners-header1">
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start', color: '#ed8337' }}>Our Application Development Process</h2>
+        </div>
+        <h3 className="partners-h3-process">Structured, Scalable, and  <em style={{ color: '#ed8337' }}><i>Reliable Application  </i></em> Development</h3>
         <p>
-Our Custom Application Development approach ensures every application is tailored to your business objectives, emphasizing usability, performance, and scalability.
+          Our Custom Application Development approach ensures every application is tailored to your business objectives, emphasizing usability, performance, and scalability.
 
-</p>
+        </p>
       </div>
 
       <div className="dm-proc-track">
@@ -1124,7 +1141,7 @@ Our Custom Application Development approach ensures every application is tailore
               <div className="dm-proc-exp-num">{step.n}</div>
               <div className="dm-proc-exp-top">
                 <div className="dm-proc-exp-icon"><img src={step.img} alt={step.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
-                <div className="dm-proc-exp-title">{step.title}</div>
+                <h4 className="dm-proc-exp-title">{step.title}</h4>
                 <div className="dm-proc-exp-desc">{step.desc}</div>
                 <ul className="dm-proc-exp-list">
                   {step.items.map(item => <li key={item}>{item}</li>)}
@@ -1203,13 +1220,13 @@ function HowWeWorkSection() {
       <div style={{ position: "relative", zIndex: 2, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why PCS?
-</div>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why PCS?
+            </h2>
 
           </div>
-          <h2 className="hww-title">Plan Strategically. <span className="hww-accent">Build Confidently.</span></h2>
+          <h3 className="hww-title">Plan Strategically. <span className="hww-accent">Build Confidently.</span></h3>
           <p className="hww-sub">
-Ease your business with custom and mobile applications designed to simplify operations, enhance user experience, and accelerate digital transformation.
+            Ease your business with custom and mobile applications designed to simplify operations, enhance user experience, and accelerate digital transformation.
           </p>
         </div>
         <div className="hww-flow">
@@ -1225,7 +1242,7 @@ Ease your business with custom and mobile applications designed to simplify oper
                   </div>
                 )}
               </div>
-              <div className="hww-step-title">{s.title}</div>
+              <h4 className="hww-step-title">{s.title}</h4>
               <div className="hww-step-desc">{s.desc}</div>
             </div>
           ))}
@@ -1243,14 +1260,14 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section" style={{ background:'#fff'}}>
+    <section className="faq-section" style={{ background: '#fff' }}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -1312,17 +1329,208 @@ export default function DigitalMarketing() {
 
   return (
     <Layout>
-    <div style={{ background: "var(--navy)", minHeight: "100vh" }}>
- 
-      <HeroSection />
-      <ApproachSection />
-      <ServicesSection />
-      <ProcessSection />
-      <HowWeWorkSection />
-       <BlogSection />
-      <FAQSection />
-       <CTASection />
-    </div>
+      <Head>
+        <title>Business Process Automation | Improve Efficiency Fast </title>
+        <meta name="description" content="Streamline operations with Business Process Automation to boost efficiency, reduce costs, and improve accuracy with smart workflow solutions. " />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/web-and-mobile-application/" />
+        <meta name="keywords" content="Business Process Automation, Business Process Automation Services, Business Process Automation Software, Business Automation Software, Business Process Optimisation, Business Automation Solutions, Business Process Automation Solutions, Process Automation Service, BPA Solutions, Business Automation Services Provider" />
+        <meta property="og:title" content="Business Process Automation | Improve Efficiency Fast " />
+        <meta property="og:description" content="Streamline operations with Business Process Automation to boost efficiency, reduce costs, and improve accuracy with smart workflow solutions. " />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Business Process Automation | Improve Efficiency Fast " />
+        <meta name="twitter:description" content="Streamline operations with Business Process Automation to boost efficiency, reduce costs, and improve accuracy with smart workflow solutions. " />
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://www.priyamconsultancy.com/",
+                  "name": "Home"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "https://www.priyamconsultancy.com/web-and-mobile-application/",
+                  "name": "web-and-mobile-application"
+                }
+              }
+            ]
+          })
+        }} />
+
+        {/* Organization Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Priyam Consultancy Services",
+            "url": "https://www.priyamconsultancy.com/",
+            "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+91 96774 44048",
+                "contactType": "customer support"
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=61577125709962",
+              "https://www.linkedin.com/company/priyam-consultancy-services/",
+              "https://www.instagram.com/priyam_consultancy_services/",
+              "https://x.com/services91032",
+              "https://g.co/kgs/rdTYdi6"
+            ]
+          })
+        }} />
+
+        {/* Service Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Custom Web & Mobile Application Development",
+            "description": "Expert custom web application development company delivering scalable, secure, and user-friendly apps tailored to your business needs for digital growth. Contact us!",
+            "provider": {
+              "@type": "Organization",
+              "name": "Priyam Consultancy Services",
+              "url": "https://www.priyamconsultancy.com/"
+            },
+            "serviceType": "Web & Mobile Application Development",
+            "areaServed": "Worldwide",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Web & Mobile App Development Services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Web Application Development" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Development (iOS & Android)" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cross-Platform App Development" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full-Stack Development" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "App Deployment & Support" } }
+              ]
+            },
+            "mainEntityOfPage": {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is web application development?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Web application development involves creating interactive, responsive, and scalable applications that run in a web browser. These applications help businesses go beyond a traditional website by supporting operations and user engagement."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What is custom mobile app development?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Custom mobile app development involves building Android or iOS apps designed around your business needs. It helps improve user experience, engagement, and operational efficiency."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How is custom web application development different from websites?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unlike static websites, custom web applications are dynamic and interactive. They are built to perform specific business functions, automate workflows, and connect with databases or third-party systems."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What can a custom web application do for your business?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A custom web application can streamline workflows, improve efficiency, automate tasks, and provide real-time data insights. It helps businesses improve customer experience and scale more effectively."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How does a custom mobile application work?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A custom mobile app runs on smartphones or tablets and connects with servers, databases, and APIs. This allows it to deliver personalized features, updates, and smooth user experiences."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What industries benefit most from custom web and mobile applications?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Industries such as finance, healthcare, education, retail, logistics, and manufacturing can benefit from custom applications that improve operations and user engagement."
+                  }
+                }
+              ]
+            }
+          })
+        }} />
+
+        {/* Product Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "web-and-mobile-application",
+            "image": ["https://www.priyamconsultancy.com/img/custom-web-and-mobile-app.png"],
+            "description": "Best web and mobile application development services in Coimbatore offering custom web applications, mobile app development, cross-platform solutions, UI/UX design and scalable digital solutions for businesses.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Priyam Consultancy Services"
+            },
+            "review": {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Admin"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "5462"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.priyamconsultancy.com/web-and-mobile-application/",
+              "priceCurrency": "USD",
+              "price": "00.00",
+              "priceValidUntil": "2026-12-31",
+              "itemCondition": "https://schema.org/UsedCondition",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@type": "Organization",
+                "name": "priyamconsultancy.com"
+              }
+            }
+          })
+        }} />
+
+      </Head>
+      <div style={{ background: "var(--navy)", minHeight: "100vh" }}>
+        <HeroSection />
+        <ApproachSection />
+        <ServicesSection />
+        <ProcessSection />
+        <HowWeWorkSection />
+        <BlogSection />
+        <FAQSection />
+        <CTASection />
+      </div>
     </Layout>
   );
 }

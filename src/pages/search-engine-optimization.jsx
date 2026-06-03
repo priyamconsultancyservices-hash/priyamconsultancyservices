@@ -398,15 +398,15 @@ function useInView(threshold = 0.1) {
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 const SERVICES = [
-  { num: "01", icon: <img src="/img/icon/svc-technical-seo.webp" alt="Technical SEO" width="28" height="28" />, subtitle: "Fix What's Holding You Back", title: "SEO Audit & Strategy", desc: "We begin with a comprehensive audit and strategy roadmap tailored to your business. As one of the best search engine optimization companies, we identify gaps, opportunities, and high-impact actions to strengthen your website SEO optimization and long-term visibility." },
-  { num: "02", icon: <img src="/img/icon/svc-technical-seo.webp" alt="Technical SEO" width="28" height="28" />, subtitle: "Fix What's Holding You Back", title: "Technical SEO Audit & Fixes", desc: "We conduct in-depth technical audits to resolve issues affecting performance—crawl errors, site speed, indexing, and mobile usability. Our approach ensures your website SEO optimization meets modern search engine optimization standards for better rankings." },
-  { num: "03", icon: <img src="/img/icon/svc-on-page-seo.webp" alt="On-Page SEO" width="28" height="28" />, subtitle: "Optimize What You Already Have", title: "On-Page SEO Optimization", desc: "Our on page SEO service enhances your existing content with keyword placement, metadata optimization, internal linking, and UX improvements. As a trusted SEO optimization agency, we ensure every page drives better engagement and conversions." },
-  { num: "04", icon: <img src="/img/icon/svc-content-management.webp" alt="Content Management" width="28" height="28" />, subtitle: "Content That Attracts and Converts", title: "Content & Keyword Strategy", desc: "We create data-driven content aligned with search engine optimization digital marketing goals. From keyword research to execution, we help businesses—including SEO companies for small business—build authority and attract high-quality traffic." },
-  { num: "05", icon: <img src="/img/icon/svc-link-building.webp" alt="Link Building" width="28" height="28" />, subtitle: "Earn Authority, Not Just Backlinks", title: "Off-Page SEO & Authority Building", desc: "As a leading SEO company, we build high-quality backlinks through ethical outreach strategies. This strengthens your domain authority and helps you compete with the best search engine optimization companies in your industry." },
-  { num: "06", icon: <img src="/img/icon/svc-local-seo.webp" alt="Local SEO" width="28" height="28" />, subtitle: "Win Local Searches, Win Local Customers", title: "Local SEO & Google Maps Ranking", desc: "Our local search engine optimization and geo SEO strategies improve your presence in local search and Google Maps. We optimize your Google Business Profile, citations, and reviews to drive real customer actions." },
-  { num: "07", icon: <img src="/img/icon/svc-seo-strategy-reporting.webp" alt="SEO Strategy and Reporting" width="28" height="28" />, subtitle: "Know What's Working. And What's Next.", title: "SEO Analytics & ROI Tracking", desc: "We combine search engine marketing data with advanced analytics to track rankings, traffic, and conversions. Our transparent reporting ensures your search engine optimization efforts translate into measurable ROI." },
-  { num: "08", icon: <img src="/img/icon/svc-technical-seo.webp" alt="Technical SEO" width="28" height="28" />, subtitle: "Fix What's Holding You Back", title: "Answer Engine Optimization (AEO)", desc: "Our answer engine optimization (AEO) strategies help your content rank for featured snippets, voice search, and direct answers. We position your brand as the most relevant solution in evolving search experiences." },
-  { num: "09", icon: <img src="/img/icon/svc-technical-seo.webp" alt="Technical SEO" width="28" height="28" />, subtitle: "Fix What's Holding You Back", title: "Generative Engine Optimization (GEO)", desc: "Our AI Search Optimization approach, powered by Generative Engine Optimization (GEO), ensures your content is discoverable across AI platforms. We structure content for machine understanding, helping you stay ahead in the future of search engine optimization digital marketing." },
+  { num: "01", icon: <img src="/img/icon/svc-seo-audit-strategy.webp" alt="Technical SEO" width="33" height="33" />, subtitle: "Fix What's Holding You Back", title: "SEO Audit & Strategy", desc: "We begin with a comprehensive audit and strategy roadmap tailored to your business. As one of the best search engine optimization companies, we identify gaps, opportunities, and high-impact actions to strengthen your website SEO optimization and long-term visibility." },
+  { num: "02", icon: <img src="/img/icon/svc-technical-seo-audit-fixes.webp" alt="Technical SEO" width="33" height="33" />, subtitle: "Fix What's Holding You Back", title: "Technical SEO Audit & Fixes", desc: "We conduct in-depth technical audits to resolve issues affecting performance—crawl errors, site speed, indexing, and mobile usability. Our approach ensures your website SEO optimization meets modern search engine optimization standards for better rankings." },
+  { num: "03", icon: <img src="/img/icon/svc-seo-optimization.webp" alt="On-Page SEO" width="33" height="33" />, subtitle: "Optimize What You Already Have", title: "On-Page SEO Optimization", desc: "Our on page SEO service enhances your existing content with keyword placement, metadata optimization, internal linking, and UX improvements. As a trusted SEO optimization agency, we ensure every page drives better engagement and conversions." },
+  { num: "04", icon: <img src="/img/icon/svc-content-keyword-Strategy.webp" alt="Content Management" width="33" height="33" />, subtitle: "Content That Attracts and Converts", title: "Content & Keyword Strategy", desc: "We create data-driven content aligned with search engine optimization digital marketing goals. From keyword research to execution, we help businesses—including SEO companies for small business—build authority and attract high-quality traffic." },
+  { num: "05", icon: <img src="/img/icon/svc-seo-building.webp" alt="Link Building" width="33" height="33" />, subtitle: "Earn Authority, Not Just Backlinks", title: "Off-Page SEO & Authority Building", desc: "As a leading SEO company, we build high-quality backlinks through ethical outreach strategies. This strengthens your domain authority and helps you compete with the best search engine optimization companies in your industry." },
+  { num: "06", icon: <img src="/img/icon/svc-seo-map-ranking.webp" alt="Local SEO" width="33" height="33" />, subtitle: "Win Local Searches, Win Local Customers", title: "Local SEO & Google Maps Ranking", desc: "Our local search engine optimization and geo SEO strategies improve your presence in local search and Google Maps. We optimize your Google Business Profile, citations, and reviews to drive real customer actions." },
+  { num: "07", icon: <img src="/img/icon/svc-seo-roi-tracking.webp" alt="SEO Strategy and Reporting" width="33" height="33" />, subtitle: "Know What's Working. And What's Next.", title: "SEO Analytics & ROI Tracking", desc: "We combine search engine marketing data with advanced analytics to track rankings, traffic, and conversions. Our transparent reporting ensures your search engine optimization efforts translate into measurable ROI." },
+  { num: "08", icon: <img src="/img/icon/svc-answer-engine-optimization.webp" alt="Answer Engine Optimization" width="33" height="33" />, subtitle: "Fix What's Holding You Back", title: "Answer Engine Optimization (AEO)", desc: "Our answer engine optimization (AEO) strategies help your content rank for featured snippets, voice search, and direct answers. We position your brand as the most relevant solution in evolving search experiences." },
+  { num: "09", icon: <img src="/img/icon/svc-generative-engine-optimization.webp" alt="Generative Engine Optimization" width="33" height="33" />, subtitle: "Fix What's Holding You Back", title: "Generative Engine Optimization (GEO)", desc: "Our AI Search Optimization approach, powered by Generative Engine Optimization (GEO), ensures your content is discoverable across AI platforms. We structure content for machine understanding, helping you stay ahead in the future of search engine optimization digital marketing." },
 
 
 ];
@@ -608,8 +608,6 @@ function ServicePanel({ svc, index }) {
     </div>
   );
 }
-
-
 
 /* ═══════════════════════════════════════════
    SECTION 2 — OUR APPROACH + FORM
@@ -845,9 +843,6 @@ As a trusted search engine optimization digital marketing partner, PCS studies y
   );
 }
 
-
-
-
 function Services() {
   return (
     <section className="pcs-svc">
@@ -967,6 +962,7 @@ const faqData = [
   { q: "Do you work with specific industries?", a: "We work with businesses across multiple industries including healthcare, technology, ecommerce, construction, consulting, retail, manufacturing, and professional services. Our SEO strategies are customized based on industry trends, audience behavior, competition levels, and business goals to deliver measurable digital growth outcomes." },
   { q: "What do e-commerce SEO services include?", a: " E-commerce SEO services include product page optimization, category structure improvements, technical SEO, keyword targeting, content optimization, image optimization, schema implementation, and conversion-focused strategies. The goal is to improve product visibility, increase organic traffic, and drive higher online sales performance" },
 ];
+
 function FAQSection() {
   const [active, setActive] = useState(null);
 

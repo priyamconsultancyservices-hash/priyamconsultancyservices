@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 const banner = "/img/business-process-automation.png";
 
 // ─── CSS-in-JSX styles injected once ───────────────────────────────────────
@@ -692,27 +693,40 @@ li.dropdown.mega {
  color: #000!important;
     font-size: 34px;
     font-weight: 600;
-}
+   }
 
+    h2.partners-eyebrow {
+        font-size: 0.9rem;
+        font-weight: 900;
+    }
+    .partners-h3-title {
+    color: #fff!important;
+    font-size: 2.5rem;
+        }
+
+        .partners-h3-process{
+        color: #000!important;
+    font-size: 2.5rem;
+    }
 `;
 
 // ─── Data ───────────────────────────────────────────────────────────────────
 const SERVICES = [
-  { n:"01", img:"/img/icon/bpa-data-migration.webp", title:"Data Migration",      pills:["On-Page SEO","Link Building","Blog Strategy"],        desc:"We migrate your business data with precision and care, ensuring a smooth transition, complete security, and uninterrupted operations throughout every stage of the process" },
-  { n:"02", img:"/img/icon/bpa-workflow-automation.webp", title:"Workflow Automation",        pills:["Reels & Shorts","Community Mgmt","Influencer Tie-ups"], desc:"We transform manual, repetitive workflows into automated systems that simplify operations, improve collaboration, visibility across all your business functions." },
-  { n:"03", img:"/img/icon/bpa-system-integration.webp", title:"System Integration",        pills:["Search Ads","Retargeting","A/B Testing"],               desc:"We integrate our solutions with your existing systems to ensure uninterrupted operations and improved efficiency avoiding costly replacements or downtime" },
-  { n:"04", img:"/img/icon/bpa-process-assessment.webp", title:"Process Assessment & Automation",     pills:["Drip Campaigns","WhatsApp Broadcasts","Automation"],   desc:"We evaluate and streamline your business processes, address inefficiencies, and automate repetitive tasks to improve accuracy, efficiency, and overall performance." },
-  { n:"05", img:"/img/icon/bpa-document-management.webp", title:"Document Management Automation",   pills:["YouTube Ads","Influencer Match","UGC Content"],         desc:"We help you digitize and automate document workflows for faster storage, effortless retrieval, and streamlined approvals — ensuring compliance and accessibility." },
-  { n:"06", img:"/img/icon/bpa-dashboards-reporting.webp", title:"Dashboards and Reporting Solutions",pills:["GA4 Tracking","Weekly Reports","ROI Dashboards"],       desc:"We design and deliver interactive dashboards and reports tailored to your business needs, providing real-time insights for smarter decisions and better performance" },
+  { n: "01", img: "/img/icon/bpa-data-migration.webp", title: "Data Migration", pills: ["On-Page SEO", "Link Building", "Blog Strategy"], desc: "We migrate your business data with precision and care, ensuring a smooth transition, complete security, and uninterrupted operations throughout every stage of the process" },
+  { n: "02", img: "/img/icon/bpa-workflow-automation.webp", title: "Workflow Automation", pills: ["Reels & Shorts", "Community Mgmt", "Influencer Tie-ups"], desc: "We transform manual, repetitive workflows into automated systems that simplify operations, improve collaboration, visibility across all your business functions." },
+  { n: "03", img: "/img/icon/bpa-system-integration.webp", title: "System Integration", pills: ["Search Ads", "Retargeting", "A/B Testing"], desc: "We integrate our solutions with your existing systems to ensure uninterrupted operations and improved efficiency avoiding costly replacements or downtime" },
+  { n: "04", img: "/img/icon/bpa-process-assessment.webp", title: "Process Assessment & Automation", pills: ["Drip Campaigns", "WhatsApp Broadcasts", "Automation"], desc: "We evaluate and streamline your business processes, address inefficiencies, and automate repetitive tasks to improve accuracy, efficiency, and overall performance." },
+  { n: "05", img: "/img/icon/bpa-document-management.webp", title: "Document Management Automation", pills: ["YouTube Ads", "Influencer Match", "UGC Content"], desc: "We help you digitize and automate document workflows for faster storage, effortless retrieval, and streamlined approvals — ensuring compliance and accessibility." },
+  { n: "06", img: "/img/icon/bpa-dashboards-reporting.webp", title: "Dashboards and Reporting Solutions", pills: ["GA4 Tracking", "Weekly Reports", "ROI Dashboards"], desc: "We design and deliver interactive dashboards and reports tailored to your business needs, providing real-time insights for smarter decisions and better performance" },
 ];
 
 
 const PROCESS_STEPS = [
-  { n:"01", img:"/img/icon/bpa-process-discovery.webp", label:"Research",  title:"Discovery & Assessment",        desc:"We analyze workflows, repetitive tasks, and operational bottlenecks to design customized Business Automation Services. By understanding your business processes and objectives, we identify opportunities for automation that maximize efficiency, reduce errors, and deliver measurable improvements across all functions.", items:["Analyze Workflows","Identify Bottlenecks","Reduce Errors","Improve Efficiency"] },
-  { n:"02", img:"/img/icon/bpa-process-planning.webp", label:"Strategy",  title:"Planning & Strategy",          desc:"We create a detailed Business Process Automation Plan & Strategy, aligning workflows with your business goals. Our strategic planning ensures optimal resource allocation, streamlined processes, and scalable solutions that improve efficiency, reduce costs, and support long-term growth.", items:["Align BusinessGoals","Streamline Processes","Optimize Resources","Support Scalability"] },
-  { n:"03", img:"/img/icon/bpa-process-implement.webp", label:"Create",    title:"Implementation & Testing",         desc:"Our team deploys and rigorously tests the applications to ensure accuracy, reliability, and seamless operation. Each workflow and integration is validated for error-free execution, followed by comprehensive user training to ensure smooth adoption and effective utilization across departments.", items:["Deploy Applications","Validate Integrations","Ensure Reliability","Conduct UserTraining"] },
-  { n:"04", img:"/img/icon/bpa-process-monitoring.webp", label:"Launch",    title:"Monitoring & Optimization",              desc:"We continuously monitor system performance to identify opportunities for improvement and optimization. Our real-time process enhancements ensure greater efficiency, adaptability, and sustained productivity — maintaining seamless operations across your entire business operations.", items:["Track Performance","Enhance Processes","Improve Productivity","Maintain Operations"] },
-  { n:"05", img:"/img/icon/bpa-process-support.webp", label:"Optimise",  title:"Continuous Support & Updates",              desc:"We provide continuous maintenance, updates, and expert SLA-driven support to help your business scale faster and operate seamlessly. Our dedicated team ensures quick turnaround for issue fixes, enhancements, and new requirements — keeping your operations consistently smooth and highly efficient.", items:["Provide Maintenance","Deliver Updates","Resolve Issues","Ensure Scalability"] },
+  { n: "01", img: "/img/icon/bpa-process-discovery.webp", label: "Research", title: "Discovery & Assessment", desc: "We analyze workflows, repetitive tasks, and operational bottlenecks to design customized Business Automation Services. By understanding your business processes and objectives, we identify opportunities for automation that maximize efficiency, reduce errors, and deliver measurable improvements across all functions.", items: ["Analyze Workflows", "Identify Bottlenecks", "Reduce Errors", "Improve Efficiency"] },
+  { n: "02", img: "/img/icon/bpa-process-planning.webp", label: "Strategy", title: "Planning & Strategy", desc: "We create a detailed Business Process Automation Plan & Strategy, aligning workflows with your business goals. Our strategic planning ensures optimal resource allocation, streamlined processes, and scalable solutions that improve efficiency, reduce costs, and support long-term growth.", items: ["Align BusinessGoals", "Streamline Processes", "Optimize Resources", "Support Scalability"] },
+  { n: "03", img: "/img/icon/bpa-process-implement.webp", label: "Create", title: "Implementation & Testing", desc: "Our team deploys and rigorously tests the applications to ensure accuracy, reliability, and seamless operation. Each workflow and integration is validated for error-free execution, followed by comprehensive user training to ensure smooth adoption and effective utilization across departments.", items: ["Deploy Applications", "Validate Integrations", "Ensure Reliability", "Conduct UserTraining"] },
+  { n: "04", img: "/img/icon/bpa-process-monitoring.webp", label: "Launch", title: "Monitoring & Optimization", desc: "We continuously monitor system performance to identify opportunities for improvement and optimization. Our real-time process enhancements ensure greater efficiency, adaptability, and sustained productivity — maintaining seamless operations across your entire business operations.", items: ["Track Performance", "Enhance Processes", "Improve Productivity", "Maintain Operations"] },
+  { n: "05", img: "/img/icon/bpa-process-support.webp", label: "Optimise", title: "Continuous Support & Updates", desc: "We provide continuous maintenance, updates, and expert SLA-driven support to help your business scale faster and operate seamlessly. Our dedicated team ensures quick turnaround for issue fixes, enhancements, and new requirements — keeping your operations consistently smooth and highly efficient.", items: ["Provide Maintenance", "Deliver Updates", "Resolve Issues", "Ensure Scalability"] },
 ];
 
 const CARDS = [
@@ -777,14 +791,14 @@ const CARDS = [
     duration: "⏱ Ongoing",
   },
 ];
- 
+
 const faqData = [
-  { q: "What Is Business Process Automation?", a: "BPA uses technology to automate repetitive workflows, reduce manual effort, and enhance efficiency. It enables businesses to focus on strategic and high-value activities." },
-  { q: "What are the 4 types of business processes?", a: "The four types are operational, management, supporting, and development processes, covering core activities, strategy, support functions, and innovation." },
-  { q: "What are the Benefits of Customized Business Process Automation?", a: "Customized BPA improves efficiency, reduces errors, lowers costs, enhances compliance, and provides scalable, tailored solutions for your business." },
-  { q: "What Makes Up Business Process Automation?", a: "BPA consists of workflow automation, RPA, data management, system integration, and analytics to streamline operations and provide actionable insights." },
-  { q: "What are the 5 levels of automation?", a: "The levels are manual, assisted, partial, high, and full automation, ranging from human-driven tasks to fully autonomous workflows." },
-  { q: "How can Quixy be a valuable Business Process Automation tool?", a: "Quixy is a no-code platform that enables workflow automation, process optimization, and analytics-driven decision-making without coding expertise." },
+  { q: "What is Business Process Automation?", a: "Business Process Automation uses technology to automate repetitive workflows, reduce manual effort, and improve efficiency. It helps businesses focus more on strategic and high-value activities." },
+  { q: "What are the 4 types of business processes?", a: "The four types are operational, management, supporting, and development processes. Together, they cover core business activities, strategy, support functions, and innovation." },
+  { q: " What are the benefits of customized Business Process Automation?", a: "Customized BPA improves efficiency, reduces errors, lowers costs, enhances compliance, and provides scalable solutions tailored to your business needs." },
+  { q: "What makes up Business Process Automation?", a: "BPA includes workflow automation, RPA, data management, system integration, and analytics. These elements work together to streamline operations and provide useful insights" },
+  { q: "What are the 5 levels of automation?", a: "The five levels are manual, assisted, partial, high, and full automation. They range from fully human-driven tasks to completely autonomous workflows." },
+  { q: "How can Sterlo be a valuable Business Process Automation tool?", a: "Sterlo is a no-code platform that helps businesses automate workflows, optimize processes, and make data-driven decisions without needing coding expertise." },
 ];
 // ─── Sub-components ──────────────────────────────────────────────────────────
 
@@ -794,14 +808,14 @@ function HeroSection() {
       <div className="dm-hero-left">
         <div className="dm-badge">
           <div className="dm-badge-dot"></div>
-Improve Efficiency
+          Improve Efficiency
         </div>
         <h1 className="dm-hero-heading">
           Streamline Business
-          <span className="orange lined" style={{marginLeft: '10PX'}}>Operations </span>   with Automation
+          <span className="orange lined" style={{ marginLeft: '10PX' }}>Operations </span>   with Automation
         </h1>
         <p className="dm-hero-sub">
-        We provide comprehensive Business Process Automation Solutions that streamline workflows, eliminate manual tasks, and boost efficiency across your organization. From document management and approvals to reporting, we integrate every process for seamless operations, improved accuracy, and real-time visibility.
+          We provide comprehensive Business Process Automation Solutions that streamline workflows, eliminate manual tasks, and boost efficiency across your organization. From document management and approvals to reporting, we integrate every process for seamless operations, improved accuracy, and real-time visibility.
 
 
         </p>
@@ -919,7 +933,7 @@ function ApproachSection() {
           </div>
           <h2 className="ap-heading">Business  <span>Process Automation</span></h2>
           <p className="ap-intro">
-PCS follows a consultative and technology-driven approach to Business Process Automation focused on improving operational efficiency, scalability, and long-term business performance.
+            PCS follows a consultative and technology-driven approach to Business Process Automation focused on improving operational efficiency, scalability, and long-term business performance.
 
           </p>
           <p className="ap-intro">
@@ -1054,10 +1068,10 @@ function ServicesSection() {
       <div className="dm-svc-blob dm-svc-blob-1"></div>
       <div className="dm-svc-blob dm-svc-blob-2"></div>
       <div className="dm-svc-hdr">
-          <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Business Process Automation Services</div>
-          </div>
-        <h2>Every Task Automated.  <em><i>Every Process Optimized.</i></em></h2>
+        <div className="partners-header1">
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Business Process Automation Services</h2>
+        </div>
+        <h3 className="partners-h3-title">Every Task Automated.  <em style={{ color: '#ed8337' }}><i>Every Process Optimized.</i></em></h3>
         <p>
           Priyam Consultancy Services delivers Business Process Automation solutions that simplify operations, eliminate inefficiencies, and enhance productivity — helping businesses achieve accuracy, agility, and sustainable growth.</p>
       </div>
@@ -1065,7 +1079,7 @@ function ServicesSection() {
         {SERVICES.map(s => (
           <div className="dm-svc-card" key={s.n}>
             <div className="dm-svc-body">
-              <div className="dm-svc-title">{s.title}</div>
+              <h4 className="dm-svc-title">{s.title}</h4>
               <p className="dm-svc-desc">{s.desc}</p>
             </div>
             <div style={{ marginTop: "auto", display: "flex", alignItems: "flex-end", justifyContent: "space-between", paddingTop: "1.5rem" }}>
@@ -1086,13 +1100,13 @@ function ProcessSection() {
   return (
     <section className="dm-proc-section" id="process">
       <div className="dm-proc-hdr">
-          <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Automation Execution Process</div>
-          </div>
-        <h2>Structured,  <em><i>Intelligent, </i></em> and Reliable Automation</h2>
+        <div className="partners-header1">
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start', color: '#ed8337' }}>Our Automation Execution Process</h2>
+        </div>
+        <h3 className="partners-h3-process">Structured,  <em style={{ color: '#ed8337' }}><i>Intelligent, </i></em> and Reliable Automation</h3>
         <p>
           Our Process Automation Services are tailored to your unique business needs, focusing on efficiency, accuracy, and scalability to deliver measurable results. We streamline complex workflows, integrate intelligent tools, and enhance productivity, ensuring your operations run seamlessly and adapt effortlessly to growth and innovation.
-</p>
+        </p>
       </div>
 
       <div className="dm-proc-track">
@@ -1113,7 +1127,7 @@ function ProcessSection() {
               <div className="dm-proc-exp-num">{step.n}</div>
               <div className="dm-proc-exp-top">
                 <div className="dm-proc-exp-icon"><img src={step.img} alt={step.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
-                <div className="dm-proc-exp-title">{step.title}</div>
+                <h4 className="dm-proc-exp-title">{step.title}</h4>
                 <div className="dm-proc-exp-desc">{step.desc}</div>
                 <ul className="dm-proc-exp-list">
                   {step.items.map(item => <li key={item}>{item}</li>)}
@@ -1187,18 +1201,23 @@ function HowWeWorkSection() {
         .faq-head h2 {
           color: #000;
         }
+          h3.faq-h3 {
+    font-size: 2.5rem;
+    color: black;
+}
+
       `}</style>
       <div className="hww-bg" /><div className="hww-orb hww-orb-1" /><div className="hww-orb hww-orb-2" />
       <div style={{ position: "relative", zIndex: 2, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
           <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why PCS?
-</div>
+            </div>
 
           </div>
           <h2 className="hww-title">Plan Smart. <span className="hww-accent">Automate Confidently.</span></h2>
           <p className="hww-sub">
-           Transform your workflows, reduce errors, and boost efficiency with tailored Business Process Automation Solutions designed to drive growth and operational excellence.
+            Transform your workflows, reduce errors, and boost efficiency with tailored Business Process Automation Solutions designed to drive growth and operational excellence.
           </p>
         </div>
         <div className="hww-flow">
@@ -1214,7 +1233,7 @@ function HowWeWorkSection() {
                   </div>
                 )}
               </div>
-              <div className="hww-step-title">{s.title}</div>
+              <h3 className="hww-step-title">{s.title}</h3>
               <div className="hww-step-desc">{s.desc}</div>
             </div>
           ))}
@@ -1232,14 +1251,14 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section" style={{ background:'#fff'}}>
+    <section className="faq-section" style={{ background: '#fff' }}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -1301,17 +1320,206 @@ export default function DigitalMarketing() {
 
   return (
     <Layout>
-    <div style={{ background: "var(--navy)", minHeight: "100vh" }}>
- 
-      <HeroSection />
-      <ApproachSection />
-      <ServicesSection />
-      <ProcessSection />
-      <HowWeWorkSection />
-      <BlogSection />     
-      <FAQSection />
-      <CTASection />
-    </div>
+      <Head>
+        <title>Business Process Automation | Improve Efficiency Fast </title>
+        <meta name="description" content="Streamline operations with Business Process Automation to boost efficiency, reduce costs, and improve accuracy with smart workflow solutions. " />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/business-process-automation/" />
+        <meta name="keywords" content="Business Process Automation, Business Process Automation Services, Business Process Automation Software, Business Automation Software, Business Process Optimisation, Business Automation Solutions, Business Process Automation Solutions, Process Automation Service, BPA Solutions, Business Automation Services Provider" />
+        <meta property="og:title" content="Business Process Automation | Improve Efficiency Fast " />
+        <meta property="og:description" content="Streamline operations with Business Process Automation to boost efficiency, reduce costs, and improve accuracy with smart workflow solutions. " />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Business Process Automation | Improve Efficiency Fast " />
+        <meta name="twitter:description" content="Streamline operations with Business Process Automation to boost efficiency, reduce costs, and improve accuracy with smart workflow solutions. " />
+
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://www.priyamconsultancy.com/",
+                  "name": "Home"
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@id": "https://www.priyamconsultancy.com/business-process-automation/",
+                  "name": "business-process-automation"
+                }
+              }
+            ]
+          })
+        }} />
+
+        {/* Organization Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Priyam Consultancy Services",
+            "url": "https://www.priyamconsultancy.com/",
+            "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+91 96774 44048",
+                "contactType": "customer support"
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=61577125709962",
+              "https://www.linkedin.com/company/priyam-consultancy-services/",
+              "https://www.instagram.com/priyam_consultancy_services/",
+              "https://x.com/services91032",
+              "https://g.co/kgs/rdTYdi6"
+            ]
+          })
+        }} />
+
+        {/* Service Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "name": "Business Process Automation",
+            "description": "Streamline operations with Business Process Automation to boost efficiency, reduce costs, and improve accuracy with smart workflow solutions.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Priyam Consultancy Services",
+              "url": "https://www.priyamconsultancy.com/"
+            },
+            "serviceType": "Business Process Automation",
+            "areaServed": "Worldwide",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Business Process Automation Services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Workflow Automation" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Robotic Process Automation (RPA)" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Process Consulting & Strategy" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Integration & Implementation" } }
+              ]
+            },
+            "mainEntityOfPage": {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "What is Business Process Automation?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Business Process Automation uses technology to automate repetitive workflows, reduce manual effort, and improve efficiency. It helps businesses focus more on strategic and high-value activities."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What are the 4 types of business processes?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The four types are operational, management, supporting, and development processes. Together, they cover core business activities, strategy, support functions, and innovation."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What are the 5 levels of automation?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The five levels are manual, assisted, partial, high, and full automation. They range from fully human-driven tasks to completely autonomous workflows."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What are the benefits of customized Business Process Automation?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Customized BPA improves efficiency, reduces errors, lowers costs, enhances compliance, and provides scalable solutions tailored to your business needs."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What makes up Business Process Automation?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BPA includes workflow automation, RPA, data management, system integration, and analytics. These elements work together to streamline operations and provide useful insights."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How can Sterlo be a valuable Business Process Automation tool?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sterlo is a no-code platform that helps businesses automate workflows, optimize processes, and make data-driven decisions without needing coding expertise."
+                  }
+                }
+              ]
+            }
+          })
+        }} />
+
+        {/* Product Schema */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "business-process-automation",
+            "image": ["https://www.priyamconsultancy.com/img/digital-transformation.png"],
+            "description": "Best business process automation services in Coimbatore offering workflow automation, task automation, operational efficiency improvement, business system integration and digital process management solutions for businesses.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Priyam Consultancy Services"
+            },
+            "review": {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4.9",
+                "bestRating": "5",
+                "worstRating": "1"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Admin"
+              }
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "5283"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.priyamconsultancy.com/business-process-automation/",
+              "priceCurrency": "USD",
+              "price": "00.00",
+              "priceValidUntil": "2026-12-31",
+              "itemCondition": "https://schema.org/UsedCondition",
+              "availability": "https://schema.org/InStock",
+              "seller": {
+                "@type": "Organization",
+                "name": "priyamconsultancy.com"
+              }
+            }
+          })
+        }} />
+
+      </Head>
+      <div style={{ background: "var(--navy)", minHeight: "100vh" }}>
+        <HeroSection />
+        <ApproachSection />
+        <ServicesSection />
+        <ProcessSection />
+        <HowWeWorkSection />
+        <BlogSection />
+        <FAQSection />
+        <CTASection />
+      </div>
     </Layout>
   );
 }

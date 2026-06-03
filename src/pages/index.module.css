@@ -21,3 +21,8 @@
   align-items: center;
   justify-content: center;
 }
+
+h3.insights-h3 {
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}

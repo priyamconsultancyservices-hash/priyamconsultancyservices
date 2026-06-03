@@ -1,0 +1,1082 @@
+"use strict";(self.webpackChunknew_docs_pcs_website_design=self.webpackChunknew_docs_pcs_website_design||[]).push([["2517"],{9393(e,r,t){t.d(r,{A:()=>n});var a=t(4848),i=t(6540);let n=function(){let e=(0,i.useRef)(null);return(0,i.useEffect)(()=>{let r=e.current;if(!r)return;let t=r.getContext("2d"),a="#ed8337",i,n,o=[],s;function l(){i=r.width=r.parentElement.offsetWidth,n=r.height=r.parentElement.offsetHeight}function c(){this.reset()}c.prototype.reset=function(){this.x=Math.random()*i,this.y=Math.random()*n,this.r=2.2*Math.random()+.6,this.type=.55>Math.random()?"dot":.5>Math.random()?"ring":"plus",this.speed=.35*Math.random()+.08,this.dir=Math.random()*Math.PI*2,this.alpha=.45*Math.random()+.1,this.pulse=Math.random()*Math.PI*2,this.pulseSpeed=.018*Math.random()+.008,this.size=4*Math.random()+2},c.prototype.update=function(){this.x+=Math.cos(this.dir)*this.speed,this.y+=Math.sin(this.dir)*this.speed,this.pulse+=this.pulseSpeed,this.dir+=(Math.random()-.5)*.015,this.x<-20&&(this.x=i+20),this.x>i+20&&(this.x=-20),this.y<-20&&(this.y=n+20),this.y>n+20&&(this.y=-20)},c.prototype.draw=function(){let e=this.alpha*(.7+.3*Math.sin(this.pulse));if(t.save(),t.globalAlpha=e,t.strokeStyle=t.fillStyle=a,t.lineWidth=1,"dot"===this.type)t.beginPath(),t.arc(this.x,this.y,this.r+.4*Math.sin(this.pulse),0,2*Math.PI),t.fill();else if("ring"===this.type){let e=this.size*(.9+.15*Math.sin(this.pulse));t.beginPath(),t.arc(this.x,this.y,e,0,2*Math.PI),t.stroke()}else{let e=this.size*(.9+.1*Math.sin(this.pulse));t.beginPath(),t.moveTo(this.x-e,this.y),t.lineTo(this.x+e,this.y),t.moveTo(this.x,this.y-e),t.lineTo(this.x,this.y+e),t.stroke()}t.restore()},window.addEventListener("resize",l),l(),o=[];let d=Math.floor(i*n/9e3);for(let e=0;e<Math.max(d,28);e++)o.push(new c);return!function e(){t.clearRect(0,0,i,n),function(){let e=o.filter(e=>"dot"===e.type);for(let r=0;r<e.length;r++)for(let i=r+1;i<e.length;i++){let n=e[r].x-e[i].x,o=e[r].y-e[i].y,s=Math.sqrt(n*n+o*o);s<110&&(t.save(),t.globalAlpha=(1-s/110)*.12,t.strokeStyle=a,t.lineWidth=.7,t.beginPath(),t.moveTo(e[r].x,e[r].y),t.lineTo(e[i].x,e[i].y),t.stroke(),t.restore())}}(),o.forEach(e=>{e.update(),e.draw()}),s=requestAnimationFrame(e)}(),()=>{cancelAnimationFrame(s),window.removeEventListener("resize",l)}},[]),(0,a.jsx)("section",{id:"cta-final",children:(0,a.jsxs)("div",{className:"cta-banner",style:{"--glow-x":"50%","--glow-y":"50%"},children:[(0,a.jsx)("canvas",{id:"ctaCanvas",ref:e}),(0,a.jsxs)("div",{className:"cta-banner-left",children:[(0,a.jsx)("div",{className:"partners-header",children:(0,a.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Ready to Start?"})}),(0,a.jsxs)("h2",{className:"cta-banner-heading",children:["Let's Talk About Your",(0,a.jsx)("br",{}),"Next Big ",(0,a.jsx)("span",{className:"hl-italic",children:"Growth Move"})]}),(0,a.jsx)("p",{className:"cta-banner-sub",children:"No pressure. Just a quick conversation to understand where you are-and how we can help you move forward."})]}),(0,a.jsxs)("div",{className:"cta-banner-right",children:[(0,a.jsxs)("a",{href:"#",className:"cta-bprimary",children:["Book a Free Consultation",(0,a.jsx)("svg",{viewBox:"0 0 16 16",fill:"none",children:(0,a.jsx)("path",{d:"M3 8h10M9 4l4 4-4 4",stroke:"currentColor",strokeWidth:"1.8",strokeLinecap:"round",strokeLinejoin:"round"})})]}),(0,a.jsx)("a",{href:"#",className:"cta-bghost",children:"View All Services"})]})]})})}},7833(e,r,t){t.r(r),t.d(r,{default:()=>y});var a=t(4848),i=t(6540),n=t(8128),o=t(9393),s=t(1085),l=t(3572);let c=[{"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,item:{"@id":"https://www.priyamconsultancy.com/",name:"Home"}},{"@type":"ListItem",position:2,item:{"@id":"https://www.priyamconsultancy.com/hr-strategy-and-policy-development/",name:"HR Strategy and Policy Development"}}]},{"@context":"https://schema.org","@type":"Organization",name:"Priyam Consultancy Services",url:"https://www.priyamconsultancy.com/",logo:"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",contactPoint:[{"@type":"ContactPoint",telephone:"+91 96774 44048",contactType:"customer support"}],sameAs:["https://www.facebook.com/profile.php?id=61577125709962","https://www.linkedin.com/company/priyam-consultancy-services/","https://www.instagram.com/priyam_consultancy_services/","https://x.com/services91032","https://g.co/kgs/rdTYdi6"]},{"@context":"https://schema.org","@type":"Service","@id":"https://www.priyamconsultancy.com/hr-strategy-and-policy-development/#service",name:"HR Strategy and Policy Development",serviceType:"HR Strategy and Policy Development Services",url:"https://www.priyamconsultancy.com/hr-strategy-and-policy-development/",description:"Priyam Consultancy provides professional HR strategy and policy development services including HR framework creation, employee policy development, workforce planning, organizational strategy, compliance policies and human resource management solutions for businesses across India.",provider:{"@type":"Organization",name:"Priyam Consultancy Services",url:"https://www.priyamconsultancy.com/",logo:{"@type":"ImageObject",url:"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"}},areaServed:{"@type":"Country",name:"India"}},{"@context":"https://schema.org/","@type":"Product",name:"HR Strategy & Policy Development Services in Coimbatore",image:["https://www.priyamconsultancy.com/img/hr-strategy.png"],description:"Best HR strategy and policy development services in Coimbatore offering HR framework creation, employee policy development, workforce planning, compliance policies and organizational HR solutions for businesses.",brand:{"@type":"Brand",name:"Priyam Consultancy Services"},review:{"@type":"Review",reviewRating:{"@type":"Rating",ratingValue:"4.9",bestRating:"5",worstRating:"1"},author:{"@type":"Person",name:"Admin"}},aggregateRating:{"@type":"AggregateRating",ratingValue:"4.9",reviewCount:"4916"},offers:{"@type":"Offer",url:"https://www.priyamconsultancy.com/hr-strategy-and-policy-development/",priceCurrency:"INR",price:"0",priceValidUntil:"2026-12-31",itemCondition:"https://schema.org/NewCondition",availability:"https://schema.org/InStock",seller:{"@type":"Organization",name:"Priyam Consultancy Services"}}},{"@context":"https://schema.org","@type":"FAQPage",mainEntity:[{"@type":"Question",name:"What Does HR Strategy and Policy Development Include?",acceptedAnswer:{"@type":"Answer",text:"It includes full scope planning, drafting, implementation, and consultation around your HR strategy, HR policy development, and overall human resource management framework."}},{"@type":"Question",name:"Can PCS Help Us Develop HR Policies From Scratch?",acceptedAnswer:{"@type":"Answer",text:"Yes. We specialize in development of HR policies that are tailored to your size, industry and growth stage."}},{"@type":"Question",name:"How Frequently Should HR Policies Be Reviewed And Updated?",acceptedAnswer:{"@type":"Answer",text:"We recommend reviewing HR policies annually and/or when there are significant regulatory or organizational changes."}},{"@type":"Question",name:"Can You Support Policy Development For Remote Or Geographically Dispersed Teams?",acceptedAnswer:{"@type":"Answer",text:"Yes! We develop HR strategies and policies for hybrid, remote, and in-office workforces operating in multiple locations."}},{"@type":"Question",name:"What Makes PCS A Trusted Partner For HR Strategy And Development Policy?",acceptedAnswer:{"@type":"Answer",text:"We integrate compliance, business goals and employee needs into our approach. With extensive knowledge around human resource management, we are able to make HR policy development and HR strategy development practically and future-ready."}},{"@type":"Question",name:"Can PCS Support Leadership Hiring And Organizational Design?",acceptedAnswer:{"@type":"Answer",text:"Yes. Extended HR advisory includes org structures, succession planning, and leadership hiring strategies as part of a bundle of human resource policies and strategies."}}]}],d=`
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --hr-orange: #FF6B2B;
+  --hr-orange-light: #FF8F5E;
+  --hr-blue: #1A56DB;
+  --hr-green: #059669;
+  --hr-dark: #0D1117;
+  --hr-gray: #6B7280;
+  --hr-light: #F9FAFB;
+  --hr-white: #FFFFFF;
+  --font: "Poppins", sans-serif;
+
+  /* HTML file color vars */
+  --navy:        #004168;
+  --navy-deep:   #002a44;
+  --navy-mid:    #0a5282;
+  --orange:      #ed8337;
+  --orange-light:#f5a66b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.hr-page { font-family: var(--font); overflow-x: hidden; background: var(--hr-white); }
+
+/* \u{2500}\u{2500}\u{2500} BUTTONS \u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500} */
+.btn { font-family: var(--font); font-weight: 600; font-size: 0.88rem; border: none; cursor: pointer; border-radius: 10px; padding: 13px 28px; transition: all 0.25s ease; }
+.btn-orange { background: var(--hr-orange); color: #fff; box-shadow: 0 4px 18px rgba(255,107,43,0.35); }
+.btn-orange:hover { background: var(--hr-orange-light); transform: translateY(-2px); box-shadow: 0 8px 26px rgba(255,107,43,0.45); }
+.btn-ghost { background: rgba(255,255,255,0.1); color: #fff; border: 1.5px solid rgba(255,255,255,0.3); backdrop-filter: blur(8px); }
+.btn-ghost:hover { background: rgba(255,255,255,0.18); }
+.btn-outline { background: transparent; color: var(--hr-orange); border: 2px solid var(--hr-orange); }
+.btn-outline:hover { background: var(--hr-orange); color: #fff; }
+.btn-lg { padding: 15px 36px; font-size: 0.95rem; }
+
+
+
+/* \u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}
+   1. HERO \u{2014} animated SVG illustration
+\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550} */
+.hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 2rem;
+  padding: 0rem 6% 4rem;
+  position: relative; overflow: hidden;
+  background: var(--navy);
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 65% 70% at 100% 50%, rgba(237,131,55,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 0% 100%, rgba(10,66,102,0.5) 0%, transparent 55%);
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(237,131,55,0.028) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(237,131,55,0.028) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+.hero-left { position: relative; z-index: 2; display: flex; flex-direction: column; }
+.h-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(237,131,55,0.1); border: 1px solid rgba(237,131,55,0.28);
+  color: var(--orange); font-size: 0.72rem; font-weight: 600;
+  padding: 0.38rem 1rem; border-radius: 50px;
+  letter-spacing: 0.09em; text-transform: uppercase;
+  width: fit-content; animation: fadeUp 0.6s ease both;
+}
+.badge-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--orange);
+  animation: pulse-dot 1.6s infinite;
+}
+@keyframes pulse-dot { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.4; transform:scale(1.5); } }
+
+.hero-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2rem, 3.6vw, 3.3rem);
+  font-weight: 600; line-height: 1.15;
+  text-align: start;
+  color:#fff;
+  margin-top: 1.4rem; animation: fadeUp 0.7s 0.08s ease both;
+}
+.hero-heading .hl { color: var(--orange); }
+.hero-heading .lined { position: relative; display: inline-block;}
+.hero-heading .lined::after {
+  content: ''; position: absolute; left: 0; bottom: -3px;
+  width: 100%; height: 3px; background: var(--orange); border-radius: 2px;
+  transform: scaleX(0); transform-origin: left;
+  animation: line-in 0.5s 0.9s ease forwards;
+}
+@keyframes line-in { to { transform: scaleX(1); } }
+
+.hero-sub {
+  margin-top: 1.4rem; font-size: 1rem; line-height: 1.78;
+  color: rgb(255, 255, 255); max-width: fit-content;
+  animation: fadeUp 0.7s 0.16s ease both;
+}
+.hero-actions { margin-top: 2rem; display: flex; gap: 0.9rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.26s ease both; }
+.btn-fill {
+  background: var(--orange);
+  padding: 0.85rem 2rem; border-radius: 50px;
+    font-family: 'Poppins', sans-serif; font-size: 0.92rem; font-weight: 500;
+  text-decoration: none; border: none; cursor: pointer;
+  box-shadow: 0 4px 22px rgba(237,131,55,0.32);
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
+}
+.btn-fill:hover { background: var(--orange-l); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(237,131,55,0.42); }
+.btn-arrow {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(2,43,68,0.3); font-size: 0.85rem;
+}
+@keyframes fadeUp { from{ opacity:0; transform:translateY(26px); } to{ opacity:1; transform:translateY(0); } }
+
+.hero-right {
+  position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeUp 0.9s 0.15s ease both;
+}
+50%    { transform: translate(-50%,-50%) scale(1.18); opacity: 1; }
+}
+}
+30%{ transform:translateY(-18px); }
+  50%{ transform:translateY(-8px); } 70%{ transform:translateY(-20px); } 85%{ transform:translateY(-5px); }
+}
+30%{ transform:scaleX(0.55);opacity:0.2; }
+  50%{ transform:scaleX(0.75);opacity:0.3; } 70%{ transform:scaleX(0.5);opacity:0.18; } 85%{ transform:scaleX(0.85);opacity:0.35; }
+}
+40%{ transform:scale(1.08) rotate(-2deg); } 70%{ transform:scale(0.96) rotate(-5deg); }
+}
+25%{ transform:translateY(-22px) scale(1.15) rotate(8deg); }
+  50%{ transform:translateY(-10px) scale(1.05) rotate(14deg); } 75%{ transform:translateY(-26px) scale(1.18) rotate(10deg); }
+  90%{ transform:translateY(-4px) scale(1.02) rotate(12deg); }
+}
+35%{ transform:translateY(-16px) scale(1.1) rotate(4deg); }
+  60%{ transform:translateY(-6px) scale(1.04) rotate(7deg); } 80%{ transform:translateY(-20px) scale(1.12) rotate(5deg); }
+}
+30%{ transform:scale(1.12) translateY(-12px); }
+  60%{ transform:scale(0.94) translateY(5px); } 80%{ transform:scale(1.08) translateY(-8px); }
+}
+20%{ transform:translateY(-24px) scale(1.2) rotateY(180deg); }
+  45%{ transform:translateY(-12px) scale(1.08) rotateY(280deg); } 65%{ transform:translateY(-28px) scale(1.22) rotateY(360deg); }
+  85%{ transform:translateY(-6px) scale(1.05) rotateY(420deg); }
+}
+50%{ transform:scale(1.3) rotate(30deg); opacity:1; }
+}
+50%{ transform:translateX(8px); } }
+50%{ transform:translateY(-30px) scale(1.2); opacity:0.3; }
+  100%{ transform:translateY(-60px) scale(0.8); opacity:0; }
+}
+
+
+/* \u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}
+   SERVICES \u{2014} Accordion Card Layout
+   \u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500} */
+.hr-services {
+  padding: 100px 80px;
+  background: #004168;
+}
+.hr-services__inner {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: start; margin-top: 63px;
+}
+.hr-services__left { position: sticky; top: 100px; }
+.hr-services__left .hr-tag { margin-bottom: 16px; }
+.hr-services__desc { color: var(--hr-gray); font-size: 0.95rem; line-height: 1.8; margin-bottom: 32px; margin-top: 12px; max-width: 440px; }
+.hr-services__preview {
+  background: #fff; border-radius: 20px; padding: 36px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.07);
+  border-top: 4px solid var(--preview-color, var(--hr-orange));
+  transition: border-color 0.3s ease;
+}
+.hr-services__preview-icon { font-size: 3rem; margin-bottom: 16px; }
+.hr-services__preview-title { font-size: 1.25rem; font-weight: 700; color: var(--hr-dark); margin-bottom: 12px; }
+.hr-services__preview-desc { font-size: 0.88rem; color: var(--hr-gray); line-height: 1.75; margin-bottom: 20px; }
+.hr-services__bullets { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.hr-services__bullet {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.85rem; font-weight: 500; color: var(--hr-dark);
+}
+.hr-services__bullet::before {
+  content: "\u{2713}"; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--bullet-color, var(--hr-orange));
+  color: #fff; font-size: 0.7rem; font-weight: 800;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+
+/* Accordion on the right */
+.hr-services__accordion { display: flex; flex-direction: column; gap: 12px; }
+.hr-acc-item {
+  background: #fff; border-radius: 16px; overflow: hidden;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease; cursor: pointer;
+}
+.hr-acc-item:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.1); }
+.hr-acc-item.open { border-color: var(--item-color, var(--hr-orange)); box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+.hr-acc-header {
+  display: flex; align-items: center; gap: 16px;
+  padding: 20px 24px; cursor: pointer; user-select: none;
+}
+.hr-acc-num {
+  font-size: 0.7rem; font-weight: 800; letter-spacing: 0.1em;
+  color: var(--item-color, var(--hr-orange)); min-width: 28px;
+}
+.hr-acc-icon { font-size: 1.6rem; }
+.hr-acc-title { font-size: 1rem; font-weight: 700; color: var(--hr-dark); flex: 1; }
+.hr-acc-arrow {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--item-color, var(--hr-orange)); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; font-weight: 700;
+  transition: transform 0.3s ease; flex-shrink: 0;
+}
+.hr-acc-item.open .hr-acc-arrow { transform: rotate(45deg); }
+.hr-acc-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 24px;
+}
+.hr-acc-item.open .hr-acc-body { max-height: 300px; padding: 0 24px 24px; }
+.hr-acc-body-inner { padding-top: 12px; border-top: 1px solid #F0F0F0; }
+.hr-acc-body p { font-size: 0.85rem; color: var(--hr-gray); line-height: 1.75; margin-bottom: 14px; }
+.hr-acc-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.hr-acc-tag {
+  font-size: 0.72rem; font-weight: 600; padding: 4px 12px; border-radius: 999px;
+  background: rgba(255,107,43,0.08); color: var(--item-color, var(--hr-orange));
+  border: 1px solid rgba(255,107,43,0.2);
+}
+
+/* \u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}
+   BENEFITS \u{2014} Bento Grid (no-box style)
+   \u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500} */
+.tl-section {
+  position: relative; padding: 6rem 6%;
+  background: #ffffff; overflow: hidden;
+}
+.tl-inner { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; }
+
+.tl-header { text-align: center; margin-bottom: 4rem; }
+.tl-heading {
+  font-family: var(--font); font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  font-weight: 800; line-height: 1.15; letter-spacing: -.025em;
+  color: #0d1f2d; margin-bottom: .85rem;
+}
+.tl-heading span { color: var(--hr-orange); }
+.tl-subtext { font-size: .96rem; line-height: 1.7; color: #6b7a8d; max-width: 560px; margin: 0 auto; }
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+}
+
+.bn-cell {
+  position: relative;
+  padding: 2.4rem 2.2rem;
+  display: flex; flex-direction: column; gap: .7rem;
+  background: transparent;
+  opacity: 1;
+  transition: background 0.3s ease;
+}
+
+.bn-cell-1, .bn-cell-2, .bn-cell-3 { border-top: 1.5px solid rgba(0,65,104,0.08); }
+.bn-cell-2, .bn-cell-5 { border-left: 1.5px solid rgba(0,65,104,0.08); border-right: 1.5px solid rgba(0,65,104,0.08); }
+.bn-cell-4, .bn-cell-5, .bn-cell-6 { border-top: 1.5px solid rgba(0,65,104,0.08); }
+
+.bn-cell::before {
+  content: ''; position: absolute; left: 0; top: 2.4rem; bottom: 2.4rem;
+  width: 3px; border-radius: 2px;
+  background: var(--hr-orange);
+  transform: scaleY(0); transform-origin: top;
+  transition: transform 0.3s ease;
+}
+.bn-cell:hover::before { transform: scaleY(1); }
+.bn-cell:hover { background: rgba(237,131,55,0.025); }
+
+.bn-cell .bn-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(237,131,55,0.1);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-bottom: .2rem;
+  transition: background 0.28s;
+}
+.bn-cell:hover .bn-icon { background: rgba(237,131,55,0.2); }
+.bn-cell .bn-icon svg { width: 22px; height: 22px; stroke: var(--hr-orange); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.bn-cell .bn-num {
+  font-size: .62rem; font-weight: 700; letter-spacing: .1em;
+  color: var(--hr-orange); text-transform: uppercase;
+}
+.bn-cell .bn-title {
+  font-family: var(--font); font-size: 1.05rem; font-weight: 800;
+  color: #0d1f2d; line-height: 1.3;
+}
+.bn-cell .bn-desc {
+  font-size: .875rem; line-height: 1.78; color: #6b7a8d;
+}
+.bn-cell .bn-link {
+  display: inline-flex; align-items: center; gap: .3rem;
+  font-size: .8rem; font-weight: 700; color: var(--hr-orange);
+  text-decoration: none; margin-top: .3rem;
+  opacity: 0; transform: translateX(-6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.bn-cell:hover .bn-link { opacity: 1; transform: translateX(0); }
+
+/* \u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}
+   PROCESS \u{2014} Circular Infographic
+   \u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500} */
+.pr-section {
+  position: relative;
+  padding: 6rem 6% 7rem;
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-mid) 100%);
+  overflow: hidden;
+}
+.pr-section::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(237,131,55,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(237,131,55,0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.pr-inner { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; }
+
+.pr-header { margin-bottom: 3.5rem; text-align: center; }
+.pr-heading {
+  font-family: var(--font);
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  font-weight: 800; line-height: 1.15; letter-spacing: -.025em;
+  color: #fff; margin-bottom: 1rem;
+}
+.pr-subtext {
+  font-size: .92rem; line-height: 1.78; color: rgba(255,255,255,0.5);
+  max-width: 640px; margin: 0 auto; text-align: center;
+}
+h3.faq-h3 {
+  font-size: 2.6rem;
+}
+.circ-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 340px 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  min-height: 540px;
+}
+
+.circ-center {
+  grid-column: 2; grid-row: 1 / 3;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 5;
+}
+.circ-svg-wrap {
+  position: relative; width: 300px; height: 300px;
+}
+.circ-svg-wrap svg {
+  width: 300px; height: 300px;
+  animation: circ-spin 18s linear infinite;
+}
+@keyframes circ-spin { to { transform: rotate(360deg); } }
+
+.circ-core {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; z-index: 6; pointer-events: none;
+}
+.circ-core-title {
+  font-family: var(--font); font-size: 1.1rem; font-weight: 800;
+  color: #fff; line-height: 1.2; letter-spacing: -.01em;
+}
+.circ-core-sub {
+  font-size: .55rem; color: var(--hr-orange); letter-spacing: .1em;
+  text-transform: uppercase; margin-top: .3rem;
+}
+
+.circ-left-top    { grid-column: 1; grid-row: 1; padding-right: 2.5rem; text-align: right; }
+.circ-left-bottom { grid-column: 1; grid-row: 2; padding-right: 2.5rem; text-align: right; }
+.circ-right-top   { grid-column: 3; grid-row: 1; padding-left: 2.5rem; text-align: left; }
+.circ-right-bottom{ grid-column: 3; grid-row: 2; padding-left: 2.5rem; text-align: left; }
+
+.circ-step {
+  display: flex; flex-direction: column; gap: .55rem;
+  padding: 1.4rem 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.circ-left-top .circ-step,
+.circ-left-bottom .circ-step { align-items: flex-end; }
+.circ-right-top .circ-step,
+.circ-right-bottom .circ-step { align-items: flex-start; }
+
+.cs-icon-wrap {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: linear-gradient(135deg, rgba(237,131,55,0.18), rgba(237,131,55,0.06));
+  border: 1.5px solid rgba(237,131,55,0.35);
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.28s, border-color 0.28s, transform 0.28s;
+}
+.circ-step:hover .cs-icon-wrap {
+  background: linear-gradient(135deg, rgba(237,131,55,0.32), rgba(237,131,55,0.12));
+  border-color: var(--hr-orange);
+  transform: scale(1.1);
+}
+.cs-icon-wrap svg { width: 24px; height: 24px; stroke: var(--hr-orange); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+.cs-title {
+  font-family: var(--font); font-size: 1rem; font-weight: 800;
+  color: #fff; line-height: 1.3;
+}
+.cs-desc {
+  font-size: .82rem; line-height: 1.72;
+  color: rgba(255,255,255,0.45); max-width: 240px;
+}
+.circ-left-top .cs-desc,
+.circ-left-bottom .cs-desc { margin-left: auto; }
+h3.hr-h2 {
+    font-size: 2.6rem;
+}
+/* \u{2500}\u{2500}\u{2500} RESPONSIVE \u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500} */
+@media (max-width: 1024px) {
+  .hr-services { padding: 80px 40px; }
+  .hr-services__inner { grid-template-columns: 1fr; }
+  .hr-services__left { position: static; }
+  .bento-grid { grid-template-columns: 1fr 1fr; }
+  .bn-cell-2, .bn-cell-5 { border-left: none; border-right: none; }
+  .bn-cell-3, .bn-cell-6 { border-left: 1.5px solid rgba(0,65,104,0.08); }
+  .circ-layout { grid-template-columns: 1fr; grid-template-rows: auto; min-height: unset; }
+  .circ-center { grid-column: 1; grid-row: 1; margin: 0 auto 2rem; }
+  .circ-left-top, .circ-left-bottom, .circ-right-top, .circ-right-bottom {
+    grid-column: 1; padding: 0;
+  }
+  .circ-left-top .circ-step, .circ-left-bottom .circ-step {
+    align-items: flex-start; text-align: left;
+  }
+  .circ-left-top .cs-desc, .circ-left-bottom .cs-desc { margin-left: 0; }
+  .circ-step { padding: 1rem 1.2rem; border-bottom: 1px dashed rgba(237,131,55,0.18); }
+}
+@media (max-width: 640px) {
+  .hr-services { padding: 60px 20px; }
+  .tl-section { padding: 4rem 5%; }
+  .bento-grid { grid-template-columns: 1fr; }
+  .bn-cell-2,.bn-cell-3,.bn-cell-5,.bn-cell-6 { border-left: none; border-right: none; }
+  .pr-section { padding: 4rem 5% 5rem; }
+  .faq-wrapper {display: block;}
+}
+
+/* \u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550} SERVICES \u{2014} TILT CARDS (HTML layout) \u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550} */
+.svc-section {
+  position: relative; padding: 6rem 6% 7rem;
+  background: linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-mid) 100%);
+  overflow: hidden;
+}
+.svc-section::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(237,131,55,0.04) 1px,transparent 1px),
+                    linear-gradient(90deg,rgba(237,131,55,0.04) 1px,transparent 1px);
+  background-size: 60px 60px;
+}
+.svc-section::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 55% 60% at 5% 20%, rgba(237,131,55,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 55% at 95% 80%, rgba(78,205,196,0.05) 0%, transparent 55%);
+}
+.svc-inner { position: relative; z-index: 2; margin: 0 auto; }
+
+.svc-header { text-align: center; margin-bottom: 4.5rem; }
+.svc-eyebrow {
+  display: inline-flex; align-items: center; gap: .55rem;
+  font-size: .73rem; font-weight: 700; color: var(--orange);
+  letter-spacing: .14em; text-transform: uppercase; margin-bottom: .9rem;
+}
+.svc-eyebrow-line { width: 28px; height: 2px; background: var(--orange); border-radius: 2px; }
+.svc-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  font-weight: 700; line-height: 1.1; letter-spacing: .0em;
+  color: #fff; margin-bottom: .75rem;
+}
+.svc-subtext {
+  font-size: .95rem; line-height: 1.75; color: rgb(255, 255, 255);
+margin: 30px auto;
+}
+
+.svc-trio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  align-items: stretch;
+}
+
+/* \u{2500}\u{2500} TILT CARDS \u{2014} Image-matched dark navy style \u{2500}\u{2500} */
+.svc-tcard {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  transition: transform .38s cubic-bezier(.22,.68,0,1.2),
+              box-shadow .38s ease,
+              border-color .3s;
+  cursor: default;
+}
+.svc-tcard:hover {
+  transform: translateY(-8px);
+  border-color: rgba(237,131,55,0.4);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35), 0 0 0 1px rgba(237,131,55,0.15);
+}
+
+/* Card band \u{2014} top coloured header area like image */
+.svc-tcard-band {
+  position: relative;
+  padding: 1.6rem 1.8rem 2rem;
+  background: rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Number badge \u{2014} top right corner like image */
+.svc-tcard-num {
+  position: absolute; top: 1rem; right: 1.2rem; z-index: 2;
+  font-family: 'Poppins', monospace; font-size: .65rem; font-weight: 800;
+  color: rgba(237,131,55,0.55); letter-spacing: 0.08em;
+}
+
+/* Icon box \u{2014} square rounded like image */
+.svc-tcard-icon {
+  position: relative; z-index: 2;
+  width: 54px; height: 54px; border-radius: 14px;
+  background: rgba(237,131,55,0.12);
+  border: 1px solid rgba(237,131,55,0.22);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1rem;
+  transition: background .3s, transform .35s cubic-bezier(.22,.68,0,1.4);
+}
+.svc-tcard:hover .svc-tcard-icon {
+  background: rgba(237,131,55,0.22);
+  transform: scale(1.05);
+}
+.svc-tcard-icon svg {
+  width: 24px; height: 24px; stroke: var(--orange);
+  fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* Eyebrow label above title like image */
+.svc-tcard-eyebrow {
+  font-size: .62rem; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--orange);
+  margin-bottom: .45rem; display: block;
+}
+
+.svc-tcard-title {
+  position: relative; z-index: 2;
+  font-family: 'Poppins', sans-serif; font-size: 1.25rem; font-weight: 700;
+  color: #fff; line-height: 1.3;
+}
+
+.svc-tcard-body {
+  padding: 1.5rem 1.8rem 1.8rem;
+  display: flex; flex-direction: column;
+  gap: .85rem; flex: 1;
+}
+
+.svc-tcard-desc {
+  font-size: .88rem; line-height: 1.72; color: rgba(255,255,255,0.82);
+  font-family: var(--font);
+  padding-bottom: .8rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+/* Bullet list */
+.svc-tcard-points { display: flex; flex-direction: column; gap: .6rem; list-style: none; padding: 0; }
+.svc-tcard-points li {
+  display: flex; align-items: flex-start; gap: .75rem;
+  font-size: .84rem; line-height: 1.55; color: rgba(255,255,255,0.78);
+}
+
+/* NEW bullet \u{2014} small orange circle with checkmark SVG like image */
+.svc-pt-check {
+  flex-shrink: 0;
+  margin-top: 2px;
+  width: 18px; height: 18px; border-radius: 50%;
+  background: rgba(237,131,55,0.15);
+  border: 1.5px solid rgba(237,131,55,0.5);
+  display: flex; align-items: center; justify-content: center;
+}
+.svc-pt-check svg {
+  width: 9px; height: 9px;
+  stroke: var(--orange); fill: none;
+  stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+}
+
+/* Keep old diamond class for compatibility but hide it */
+.svc-pt-diamond { display: none; }
+
+.svc-tcard-footer { height: 3px; }
+.svc-tcard-1 .svc-tcard-footer { background: linear-gradient(90deg, #ed8337 0%, transparent 100%); }
+.svc-tcard-2 .svc-tcard-footer { background: linear-gradient(90deg, #ed8337 0%, transparent 100%); }
+.svc-tcard-3 .svc-tcard-footer { background: linear-gradient(90deg, #ed8337 0%, transparent 100%); }
+
+@media (max-width: 900px) {
+  .svc-trio-grid { grid-template-columns: 1fr; }
+  .svc-section { padding: 4rem 5% 5rem; }
+}
+
+
+.faq-section { padding: 40px 0px 80px 0px; }
+
+/* \u{2500}\u{2500}\u{2500} STEP FLOW SECTION \u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500} */
+.sf-section {
+  padding: 80px 6% 100px;
+  background: #004168;
+}
+.sf-inner {margin: 0 auto; }
+.sf-header { text-align: center; margin-bottom: 4rem; }
+.sf-heading {
+  font-family: var(--font); font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  font-weight: 700; color: #fff; margin-bottom: .7rem;
+}
+.sf-heading span { color: var(--orange); }
+.sf-subtext { font-size: .94rem; color: rgba(255, 255, 255, 0.94); line-height: 1.75; margin: 0 auto; }
+
+/* Flow row \u{2014} vertically centered so cards can offset up/down */
+.sf-flow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* Each card+arrow pair */
+.sf-card-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 0;
+  min-width: 0;
+}
+
+/* \u{2500}\u{2500} Alternating vertical offset \u{2500}\u{2500}
+   odd  cards (1,3) \u{2192} translateY(-28px)  \u{2014} zoom-out / lifted up
+   even cards (2,4) \u{2192} translateY(+28px)  \u{2014} zoom-out / pushed down
+   Both are scale(0.93) so they look "zoomed out" vs default
+*/
+.sf-card {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  border: 2px dashed #c8d6e0;
+  border-radius: 20px;
+  padding: 1.8rem 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  transition: transform .35s cubic-bezier(.22,.68,0,1.3), box-shadow .3s;
+  /* default scale \u{2014} all cards start same */
+  transform: scale(0.93) translateY(0px);
+}
+
+/* Odd index cards (1st, 3rd) \u{2014} lifted up */
+.sf-card.sf-odd {
+  transform: scale(0.93) translateY(-28px);
+}
+/* Even index cards (2nd, 4th) \u{2014} pushed down */
+.sf-card.sf-even {
+  transform: scale(0.93) translateY(28px);
+}
+
+/* Hover \u{2014} scale back to full & lift */
+.sf-card:hover,
+.sf-card.sf-odd:hover,
+.sf-card.sf-even:hover {
+  // transform: scale(1) translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+  border-style: solid;
+  border-color: var(--sf-color, #004168);
+}
+
+/* Colored left-border accent bar */
+// .sf-card::before {
+//   content: '';
+//   position: absolute;
+//   left: 0; top: 14px; bottom: 14px;
+//   width: 4px;
+//   border-radius: 0 4px 4px 0;
+//   background: var(--sf-color, #004168);
+// }
+
+/* Icon */
+.sf-card-icon {
+  width: 54px; height: 54px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1rem;
+  background: transparent;
+  color: var(--sf-color, #004168);
+  flex-shrink: 0;
+}
+.sf-card-icon svg {
+  width: 36px; height: 36px;
+  stroke: var(--sf-color, #004168);
+  fill: none;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Title */
+.sf-card-title {
+  font-family: var(--font);
+  font-size: .95rem;
+  font-weight: 800;
+  color: var(--sf-color, #ed8337);
+  line-height: 1.25;
+  margin-bottom: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+}
+
+/* Body text */
+.sf-card-desc {
+      font-size: .9rem;
+    line-height: 1.72;
+    color: #000000;
+    font-family: 'Poppins';
+}
+
+/* \u{2500}\u{2500} Orange Arrow \u{2014} animated pointing \u{2500}\u{2500} */
+.sf-arrow {
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  z-index: 2;
+}
+/* Tail line animation \u{2014} draws left to right */
+.sf-arrow-tail {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: sf-tail-draw 1.4s ease-in-out infinite;
+}
+/* Head (chevron) \u{2014} slides in after tail */
+.sf-arrow-head {
+  animation: sf-head-slide 1.4s ease-in-out infinite;
+}
+/* Whole SVG fades in/out gently */
+.sf-arrow svg {
+  width: 40px; height: 40px;
+  filter: drop-shadow(0 0 6px rgba(237,131,55,0.55));
+  animation: sf-arrow-glow 1.4s ease-in-out infinite;
+}
+@keyframes sf-tail-draw {
+  0%        { stroke-dashoffset: 20; opacity: 0.3; }
+  35%, 70%  { stroke-dashoffset: 0;  opacity: 1;   }
+  100%      { stroke-dashoffset: 0;  opacity: 1;   }
+}
+@keyframes sf-head-slide {
+  0%        { transform: translateX(-5px); opacity: 0; }
+  40%, 80%  { transform: translateX(0px);  opacity: 1; }
+  100%      { transform: translateX(2px);  opacity: 0.8; }
+}
+@keyframes sf-arrow-glow {
+  0%, 100% { opacity: 0.7; }
+  50%       { opacity: 1;   }
+}
+
+@media (max-width: 960px) {
+  .sf-flow { flex-wrap: wrap; gap: 1.4rem; align-items: stretch; }
+  .sf-card-wrap { flex: 1 1 calc(50% - 1.4rem); min-width: 220px; }
+  .sf-arrow { display: none; }
+  .sf-card, .sf-card.sf-odd, .sf-card.sf-even { transform: scale(1) translateY(0); }
+}
+@media (max-width: 560px) {
+  .sf-flow { flex-direction: column; }
+  .sf-card-wrap { flex: 1 1 100%; }
+  .sf-section { padding: 60px 5%; }
+  .sf-card, .sf-card.sf-odd, .sf-card.sf-even { transform: scale(1) translateY(0); }
+}
+
+/* \u{2500}\u{2500} ServicesBuiltForResults (BFR) \u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500}\u{2500} */
+.bfr-section {
+  padding: 6rem 6%;
+  background: #ffffff;
+  font-family: var(--font);
+}
+.bfr-inner { max-width: 1200px; margin: 0 auto; }
+.bfr-header { text-align: center; margin-bottom: 3rem; }
+.bfr-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.55rem;
+  font-size: 0.72rem; font-weight: 700; color: var(--orange);
+  letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.9rem;
+}
+.bfr-eyebrow-line { width: 28px; height: 2px; background: var(--orange); border-radius: 2px; display: inline-block; }
+.bfr-title {
+  font-family: var(--font); font-size: clamp(1.75rem, 2.8vw, 2.4rem);
+  font-weight: 600;
+  color: #000000; margin-bottom: 0.85rem;
+}
+.bfr-title span { color: var(--orange); }
+.bfr-sub { font-size: 0.95rem; color: #000000; line-height: 1.72; margin: 0 auto; }
+.bfr-tabs {
+  display: flex; gap: 0; overflow-x: auto;
+  border-bottom: 2px solid #e8edf2; margin-bottom: 2.5rem; scrollbar-width: none;
+}
+.bfr-tabs::-webkit-scrollbar { display: none; }
+.bfr-tab {
+  padding: 0.9rem 1.4rem; font-family: var(--font); font-size: 0.82rem; font-weight: 600;
+  color: #8a96a6; background: none; border: none; cursor: pointer; white-space: nowrap;
+  position: relative; transition: color 0.22s, background 0.22s;
+  border-bottom: 3px solid transparent; margin-bottom: -2px;
+  display: flex; align-items: center; gap: 0.4rem;
+}
+.bfr-tab:hover { color: #0d1f2d; background: rgba(0,65,104,0.03); }
+.bfr-tab.active { color: var(--orange);  font-weight: 700; }
+.bfr-tab-icon { font-size: 1rem; }
+.bfr-panel { animation: bfrFadeUp 0.35s ease both; }
+@keyframes bfrFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.bfr-panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.bfr-panel-title { font-size: 1.5rem; font-weight: 600; color: #0d1f2d; line-height: 1.2; margin-bottom: 1rem;  }
+.bfr-panel-desc { font-size: 0.92rem; color: #000000; line-height: 1.82; margin-bottom: 1.6rem; }
+.bfr-features { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+.bfr-features li { display: flex; align-items: center; gap: 11px; font-size: 0.88rem;  color: #000000; }
+.bfr-check {
+  flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%;
+  background: var(--orange); display: flex; align-items: center; justify-content: center;
+}
+.bfr-check svg { width: 11px; height: 11px; stroke: #fff; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+.bfr-cta-btn {
+  margin-top: 2rem; display: inline-flex; align-items: center; gap: 8px;
+  background: var(--orange); color: #fff;
+  padding: 0.82rem 1.8rem; border-radius: 50px; font-family: var(--font);
+  font-size: 0.88rem; font-weight: 600; border: none; cursor: pointer;
+  transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
+  box-shadow: 0 4px 18px rgba(237,131,55,0.28);
+}
+.bfr-cta-btn:hover { background: var(--orange-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(237,131,55,0.4); }
+.bfr-panel-right {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-mid) 100%);
+  border-radius: 24px; padding: 2.4rem 2.2rem;
+  border: 1px solid rgba(237,131,55,0.22); position: relative; overflow: hidden;
+   display: flex; flex-direction: column; justify-content: space-between;
+}
+.bfr-panel-right::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(237,131,55,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(237,131,55,0.04) 1px, transparent 1px);
+  background-size: 30px 30px; pointer-events: none;
+}
+.bfr-panel-right::after {
+  content: ''; position: absolute; top: -60px; right: -60px;
+  width: 220px; height: 220px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(237,131,55,0.14) 0%, transparent 70%); pointer-events: none;
+}
+.bfr-right-icon { font-size: 3.2rem; position: relative; z-index: 1; margin-bottom: 0.5rem; }
+.bfr-right-stat { position: relative; z-index: 1; }
+.bfr-right-stat-num { font-size: 3rem; font-weight: 900; color: var(--orange); line-height: 1; letter-spacing: -0.03em; }
+.bfr-right-stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-top: 5px; font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+.bfr-right-tags { display: flex; gap: 8px; flex-wrap: wrap; position: relative; z-index: 1; }
+.bfr-right-tag {
+  font-size: 0.7rem; font-weight: 600; padding: 5px 14px; border-radius: 50px;
+  background: rgba(237,131,55,0.12); color: var(--orange-light); border: 1px solid rgba(237,131,55,0.28);
+}
+.bfr-right-cta {
+  margin-top: 1.6rem; display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(237,131,55,0.18); color: var(--orange-light);
+  padding: 0.7rem 1.4rem; border-radius: 50px; font-family: var(--font);
+  font-size: 0.82rem; font-weight: 700; border: 1px solid rgba(237,131,55,0.35);
+  cursor: pointer; transition: background 0.22s, color 0.22s; position: relative; z-index: 1;
+}
+.bfr-right-cta:hover { background: var(--orange); color: var(--navy-deep); }
+@media (max-width: 900px) {
+  .bfr-panel-grid { grid-template-columns: 1fr; }
+  .bfr-panel-right { min-height: auto; }
+  .bfr-section { padding: 4rem 5%; }
+}
+@media (max-width: 640px) {
+  .bfr-tab { font-size: 0.74rem; padding: 0.75rem 0.9rem; }
+  .bfr-title { font-size: 1.55rem; }
+}
+
+/* \u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}
+   MOBILE RESPONSIVE FIXES
+   \u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550} */
+
+/* \u{2500}\u{2500} HERO: Mobile \u{2014} content first, image second, start aligned \u{2500}\u{2500} */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto auto;
+    min-height: auto;
+    padding: 5rem 5% 3rem;
+    align-items: start;
+    gap: 1.5rem;
+  }
+  .hero-left {
+    grid-row: 1;
+    grid-column: 1;
+    align-items: flex-start;
+    text-align: left;
+    padding: 3rem 1.0rem 0 1.0rem;
+
+  }
+  .hero-right {
+    grid-row: 2;
+    grid-column: 1;
+    width: 100%;
+    justify-content: center;
+  }
+  .hero-right img {
+    width: 85% !important;
+    max-width: 360px;
+    margin: 0 auto;
+    display: block;
+  }
+  .hero-heading {
+    font-size: clamp(1.7rem, 6vw, 2.2rem) !important;
+    text-align: start !important;
+  }
+  .hero-sub {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+  .hero-actions {
+    justify-content: flex-start;
+  }
+  .h-badge {
+    font-size: 0.65rem;
+  }
+}
+
+/* \u{2500}\u{2500} OUR BENEFITS (bfr-section): Mobile \u{2014} tabs one-by-one \u{2500}\u{2500} */
+@media (max-width: 768px) {
+  .bfr-section {
+    padding: 3rem 5% 4rem;
+  }
+
+  /* Hide scrollable tab bar, show mobile dot-nav instead */
+  .bfr-tabs {
+    display: none !important;
+  }
+
+  /* Mobile tab navigation */
+  .bfr-mobile-nav {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .bfr-mobile-nav-btn {
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--navy);
+    border: 1.5px solid rgba(237,131,55,0.35);
+    color: var(--orange);
+    font-size: 1.1rem;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .bfr-mobile-nav-btn:hover {
+    background: rgba(237,131,55,0.12);
+  }
+  .bfr-mobile-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  .bfr-mobile-tab-label {
+    flex: 1;
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--orange);
+    background: rgba(237,131,55,0.08);
+    border: 1px solid rgba(237,131,55,0.22);
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bfr-mobile-dots {
+    display: flex !important;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 1.8rem;
+  }
+  .bfr-mobile-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: rgba(0,65,104,0.18);
+    transition: background 0.22s, transform 0.22s;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+  }
+  .bfr-mobile-dot.active {
+    background: var(--orange);
+    transform: scale(1.3);
+  }
+
+  /* Panel stacks on mobile */
+  .bfr-panel-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .bfr-title {
+    font-size: 1.4rem !important;
+    text-align: left;
+  }
+  .bfr-sub {
+    font-size: 0.88rem;
+    text-align: left;
+  }
+  .bfr-header {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Show mobile nav only on mobile, hide on desktop */
+.bfr-mobile-nav,
+.bfr-mobile-dots {
+  display: none;
+}
+
+`,p=[{label:"Understand & Audit",icon:(0,a.jsx)("img",{src:"/img/icon/hr-policy-aduit.webp",alt:"Search",style:{width:"30px",height:"30px"}}),title:"Understand & Audit",desc:"We start by identifying your current HR policies and organizational structure, analyzing what works and where the gaps are, and evaluating how your current human resource management fits your business needs.",features:[],tags:["Review HRPolicies","Analyze OrganizationStructure","Identify ProcessGaps","Evaluate WorkforceAlignment"]},{label:"Strategize & Customize",icon:(0,a.jsx)("img",{src:"/img/icon/hr-policy-strategize.webp",alt:"Plan",style:{width:"30px",height:"30px"}}),title:"Strategize & Customize",desc:"There are no cookie-cutter templates. Our process creates a custom HR strategy development framework, with policy blueprints tailored to your industry, size and organizational context. Everything, from workforce planning to onboarding policy, is laid out.",features:[],tags:["Develop HRStrategies","Customize PolicyFrameworks","Plan WorkforceStructures","Align BusinessObjectives"]},{label:"Draft & Align",icon:(0,a.jsx)("img",{src:"/img/icon/hr-policy-draft.webp",alt:"Align",style:{width:"30px",height:"30px"}}),title:"Draft & Align",desc:"We develop or revise your HR policies, taking care to comply with the law, be culturally relevant, and to be operationally clear. All policies are subject to internal alignment reviews to ensure that they can be adopted across departments.",features:[],tags:["Draft HRPolicies","Ensure LegalCompliance","Maintain CulturalRelevance","Conduct AlignmentReviews"]},{label:"Monitor & Optimize",icon:(0,a.jsx)("img",{src:"/img/icon/hr-policy-monitor.webp",alt:"Check",style:{width:"30px",height:"30px"}}),title:"Monitor & Optimize",desc:"Policies have power only when communicated and executed. We support your leaders and HR staff by training them to implement the new human resource policies and strategies consistently and easily.",features:[],tags:["Train LeadershipTeams","Support PolicyExecution","Monitor ImplementationConsistency","Improve HRProcesses"]},{label:"Implement & Enable",icon:(0,a.jsx)("img",{src:"/img/icon/hr-policy-implement.webp",alt:"Implement",style:{width:"30px",height:"30px"}}),title:"Implement & Enable",desc:"Execution is beyond circulation. We work with you and your HR and leadership teams to do internal rollouts, have conversations, and provide toolkits and communication plans that allow a smooth and consistent adoption.",features:[],tags:["Execute InternalRollouts","Provide CommunicationPlans","Deliver HRToolkits","Enable SmoothAdoption"]},{label:"Review & Refine",icon:(0,a.jsx)("img",{src:"/img/icon/hr-policy-refine.webp",alt:"Refine",style:{width:"30px",height:"30px"}}),title:"Review & Refine",desc:"Keep policies current and compliant with regular audits. Whether caused by regulations or organizational evolution, we believe in the proactive approach of updating strategies and their supporting documentation to remain ahead of risk exposure and match the workforce.",features:[],tags:["Conduct PolicyAudits","Update HRStrategies","Reduce ComplianceRisks","Adapt WorkforcePolicies"]}];function m(){return(0,a.jsxs)("section",{className:"hero",id:"hero",children:[(0,a.jsxs)("div",{className:"hero-left",children:[(0,a.jsxs)("div",{className:"h-badge",children:[(0,a.jsx)("div",{className:"badge-dot"}),"HR & Policy Development"]}),(0,a.jsxs)("h1",{className:"hero-heading",children:["Strategic HR & Policy",(0,a.jsx)("span",{className:"hl lined",children:"Development"})," for Businesses"]}),(0,a.jsxs)("ul",{className:"hero-sub",children:[(0,a.jsx)("li",{children:"Accuracy That Builds a Strong Workforce."}),(0,a.jsx)("li",{children:"Compliance You Never Have to Worry About."}),(0,a.jsx)("li",{children:"Cut Down HR Guesswork."}),(0,a.jsx)("li",{children:"Scalable HR Strategy and Policy Development."})]}),(0,a.jsx)("div",{className:"hero-actions",children:(0,a.jsxs)("a",{className:"btn-fill",href:"#approach",children:["Explore More ",(0,a.jsx)("span",{className:"btn-arrow",children:"\u203A"})]})})]}),(0,a.jsx)("div",{className:"hero-right",children:(0,a.jsx)("img",{src:"/img/hr-strategy.png",alt:"Banner",style:{width:"100%",height:"auto",objectFit:"contain",position:"relative",zIndex:5,animation:"fadeUp .9s .15s ease both"}})})]})}function g(){let[e,r]=(0,i.useState)({name:"",email:"",phone:"",company:"",msg:""}),t=t=>{r({...e,[t.target.name]:t.target.value})};return(0,a.jsxs)("section",{className:"approach",id:"approach",children:[(0,a.jsx)("style",{children:`
+        .approach { position:relative; padding:4rem 6%; overflow:hidden;background: white }
+        .ap-inner { position:relative; z-index:2; margin:0 auto; display:grid; grid-template-columns:1fr 0.7fr; gap:4rem; align-items:center; }
+        .ap-heading { font-family:'Poppins',sans-serif; font-size:clamp(2rem,3vw,2.6rem); line-height:1.12; color:#000; margin-bottom:1.2rem; }
+        .ap-heading span { color:var(--orange); }
+        .ap-intro { font-size:1rem; line-height:1.8; color:#5a6a7a; margin-bottom:2rem; }
+        .ap-form-wrap { position:relative; max-width:450px; }
+        .ap-form-wrap::before { content:''; position:absolute; inset:-2px; background:linear-gradient(135deg,rgba(237,131,55,0.55),rgba(237,131,55,0.1),rgba(237,131,55,0.55)); border-radius:26px; z-index:0; }
+        .ap-form-card { position:relative; z-index:1; background:#004168; border-radius:24px; padding:2.8rem 2.6rem; box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 40px rgba(237,131,55,0.06); border:1px solid rgba(237,131,55,0.18); text-align:center; }
+        .form-card-eyebrow { display:inline-flex; align-items:center; gap:8px; font-family:'Poppins',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--orange); margin-bottom:0.8rem; }
+        .form-card-eyebrow-line { width:22px; height:1px; background:var(--orange); }
+        .form-card-title { font-family:'Poppins',sans-serif; font-size:1.7rem; font-weight:800; color:#fff; line-height:1.15; margin-bottom:2.4rem; }
+        .form-card-title span { color:var(--orange); }
+        .fl-row { display:grid; grid-template-columns:1fr 1fr; gap:0.85rem; }
+        .fl-group { position:relative; margin-bottom:1rem; }
+        .fl-label { display:block; font-family:'Poppins',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:0.4rem; text-align:start; }
+        .fl-input,.fl-textarea { width:100%; padding:0.82rem 1rem; border:1.5px solid rgba(237,131,55,0.2); border-radius:10px; font-family:'Poppins',sans-serif; font-size:0.88rem; color:#fff; background:rgba(255,255,255,0.04); outline:none; appearance:none; transition:border-color 0.22s,background 0.22s,box-shadow 0.22s; }
+        .fl-input::placeholder,.fl-textarea::placeholder { color:rgba(255,255,255,0.3); }
+        .fl-input:focus,.fl-textarea:focus { border-color:var(--orange); background:rgba(237,131,55,0.06); box-shadow:0 0 0 3px rgba(237,131,55,0.1); }
+        .fl-icon { position:absolute; left:0.85rem; top:50%; transform:translateY(-50%); font-size:0.95rem; opacity:0.5; pointer-events:none; }
+        .fl-group.textarea-group .fl-icon { top:0.9rem; transform:none; }
+        .fl-textarea { min-height:88px; resize:none; padding-top:0.82rem; padding-left:1rem; }
+        .phone-row { display:flex; border:1.5px solid rgba(237,131,55,0.2); border-radius:10px; overflow:hidden; background:rgba(255,255,255,0.04); transition:border-color 0.22s,box-shadow 0.22s; }
+        .phone-row:focus-within { border-color:var(--orange); box-shadow:0 0 0 3px rgba(237,131,55,0.1); }
+        .phone-flag { display:flex; align-items:center; gap:0.3rem; padding:0 0.85rem; font-size:0.82rem; font-weight:700; color:#fff; border-right:1.5px solid rgba(237,131,55,0.2); white-space:nowrap; background:rgba(237,131,55,0.08); cursor:default; flex-shrink:0; }
+        .phone-flag-icon { font-size:0.9rem; opacity:0.7; }
+        .phone-row .fl-input { border:none; border-radius:0; background:transparent; box-shadow:none; padding:0.82rem 1rem; }
+        .phone-row .fl-input:focus { box-shadow:none; }
+        .ap-submit { width:100%; background:linear-gradient(135deg,#ed8337,#f5a66b); color:#fff; border:none; padding:1rem 1.5rem; border-radius:12px; font-family:'Poppins',sans-serif; font-size:0.97rem; font-weight:500; cursor:pointer; letter-spacing:0.02em; display:flex; align-items:center; justify-content:center; gap:0.6rem; transition:transform 0.2s,box-shadow 0.2s; }
+        .ap-submit:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(237,131,55,0.5); }
+        .ap-submit-arrow { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:rgba(2,43,68,0.25); font-size:0.9rem; }
+        @media (max-width: 768px) {
+          .approach { padding:3rem 5% 3.5rem; }
+          .ap-inner { grid-template-columns:1fr !important; gap:2rem !important; }
+          .ap-form-wrap { max-width:100% !important; width:100%; }
+          .ap-heading { font-size:clamp(1.6rem,6vw,2.2rem) !important; }
+          .ap-intro { font-size:0.9rem; margin-bottom:1.2rem; }
+          .fl-row { grid-template-columns:1fr !important; gap:0 !important; }
+          .ap-form-card { padding:2rem 1.4rem !important; }
+          .form-card-title { font-size:1.35rem !important; margin-bottom:1.6rem !important; }
+          .fl-input, .fl-textarea { font-size:0.85rem; }
+        }
+      `}),(0,a.jsxs)("div",{className:"ap-inner",children:[(0,a.jsxs)("div",{className:"ap-left",children:[(0,a.jsx)("div",{className:"partners-header1",children:(0,a.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"About PCS"})}),(0,a.jsxs)("h2",{className:"ap-heading",children:["HR Clarity for  ",(0,a.jsx)("span",{children:"Every Stage"})," of Growth"]}),(0,a.jsx)("p",{className:"ap-intro",children:"PCS supports startups and enterprises with tailored HR strategies and policy development designed to create structured, scalable, and compliant workforce management systems."}),(0,a.jsx)("p",{className:"ap-intro",children:"Our team combines industry expertise with a compliance-first approach to develop HR frameworks that improve operational clarity, employee management, and organizational stability."}),(0,a.jsx)("p",{className:"ap-intro",children:"Whether creating new HR policies or refining existing structures, PCS helps businesses make faster, smarter, and more confident workforce management decisions."})]}),(0,a.jsx)("div",{className:"ap-form-wrap",children:(0,a.jsxs)("div",{className:"ap-form-card",children:[(0,a.jsxs)("div",{className:"form-card-eyebrow",children:[(0,a.jsx)("span",{className:"form-card-eyebrow-line"}),"Your Growth, Our Mission",(0,a.jsx)("span",{className:"form-card-eyebrow-line"})]}),(0,a.jsxs)("div",{className:"form-card-title",children:["Get Your ",(0,a.jsx)("span",{children:"Free"})," Quote"]}),(0,a.jsxs)("form",{onSubmit:t=>{t.preventDefault();let a={name:e.name,email:e.email,phone:e.phone,company:e.company,message:e.msg,url:window.location.href};n.Ay.send("service_8xw6k3r","template_jarui36",a,"XWRnXi4hK2SvmRG3q").then(()=>{alert("Message Sent Successfully \u2705"),r({name:"",email:"",phone:"",company:"",msg:""})}).catch(e=>{console.log(e),alert("Failed to send \u274C")})},children:[(0,a.jsxs)("div",{className:"fl-row",children:[(0,a.jsxs)("div",{className:"fl-group",children:[(0,a.jsx)("label",{className:"fl-label",children:"Your Name"}),(0,a.jsxs)("div",{style:{position:"relative"},children:[(0,a.jsx)("span",{className:"fl-icon",children:"\u{1F464}"}),(0,a.jsx)("input",{className:"fl-input",type:"text",name:"name",placeholder:"Full name",value:e.name,onChange:t,required:!0})]})]}),(0,a.jsxs)("div",{className:"fl-group",children:[(0,a.jsx)("label",{className:"fl-label",children:"Company"}),(0,a.jsxs)("div",{style:{position:"relative"},children:[(0,a.jsx)("span",{className:"fl-icon",children:"\u{1F3E2}"}),(0,a.jsx)("input",{className:"fl-input",type:"text",name:"company",placeholder:"Company name",value:e.company,onChange:t})]})]})]}),(0,a.jsxs)("div",{className:"fl-group",children:[(0,a.jsx)("label",{className:"fl-label",children:"Email Address"}),(0,a.jsxs)("div",{style:{position:"relative"},children:[(0,a.jsx)("span",{className:"fl-icon",children:"\u2709\uFE0F"}),(0,a.jsx)("input",{className:"fl-input",type:"email",name:"email",placeholder:"your@email.com",value:e.email,onChange:t,required:!0})]})]}),(0,a.jsxs)("div",{className:"fl-group",children:[(0,a.jsx)("label",{className:"fl-label",children:"Mobile Number"}),(0,a.jsxs)("div",{className:"phone-row",children:[(0,a.jsx)("div",{className:"phone-flag",children:(0,a.jsx)("span",{children:"\u{1F4DE}"})}),(0,a.jsx)("input",{className:"fl-input",type:"tel",name:"phone",placeholder:"Mobile number",value:e.phone,onChange:t,maxLength:"10",pattern:"[0-9]{10}",required:!0})]})]}),(0,a.jsxs)("div",{className:"fl-group textarea-group",children:[(0,a.jsx)("label",{className:"fl-label",children:"Message"}),(0,a.jsxs)("div",{style:{position:"relative"},children:[(0,a.jsx)("span",{className:"fl-icon",style:{top:"0.9rem",transform:"none"},children:"\u{1F4AC}"}),(0,a.jsx)("textarea",{className:"fl-textarea",name:"msg",placeholder:"Tell us about your social media goals...",value:e.msg,onChange:t})]})]}),(0,a.jsxs)("button",{type:"submit",className:"ap-submit",children:["Get Free Consultation ",(0,a.jsx)("span",{className:"ap-submit-arrow",children:"\u203A"})]})]})]})})]})]})}let h=[{id:"01",bg:"rgba(26,86,219,0.08)",title:"Strategic Clarity",desc:"We create clear HR strategies and policy frameworks that align workforce management with your long-term business objectives and operations.",icon:(0,a.jsx)("img",{src:"/img/icon/hr-policy-clarity.webp",alt:"icon",style:{width:"30px",height:"30px"}})},{id:"02",bg:"rgba(224,62,82,0.08)",title:"Compliance Guaranteed",desc:"Our HR policies are developed with a compliance-first approach to ensure legal accuracy, risk reduction, and regulatory alignment consistently.",icon:(0,a.jsx)("img",{src:"/img/icon/hr-policy-compliance-guaranted.webp",alt:"icon",style:{width:"30px",height:"30px"}})},{id:"03",bg:"rgba(217,119,6,0.08)",title:"Structured Implementation",desc:"PCS ensures smooth HR policy execution through structured processes, leadership coordination, employee communication, and implementation-focused operational supp",icon:(0,a.jsx)("img",{src:"/img/icon/hr-policy-structured.webp",alt:"icon",style:{width:"30px",height:"30px"}})},{id:"04",bg:"rgba(13,148,136,0.08)",title:"Scalable for Any Size",desc:"Our HR strategy solutions are flexible and scalable, supporting startups, growing businesses, and large enterprises across diverse workforce structures.",icon:(0,a.jsx)("img",{src:"/img/icon/hr-policy-scalable.webp",alt:"icon",style:{width:"30px",height:"30px"}})}];function f(){return(0,a.jsx)("section",{className:"svc-section",children:(0,a.jsxs)("div",{className:"svc-inner",children:[(0,a.jsxs)("div",{className:"svc-header",children:[(0,a.jsx)("div",{className:"partners-header1",children:(0,a.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"HR & Policy Development Services "})}),(0,a.jsxs)("h3",{className:"hr-h2",style:{textAlign:"center",color:"#fff"},children:["Our Result-Driven  ",(0,a.jsx)("span",{style:{color:"#ed8337"},children:(0,a.jsx)("i",{children:"HR Advisory "})}),"  Framework"]}),(0,a.jsx)("p",{className:"svc-subtext",children:"We bring structure, compliance, and strategy to every HR function."})]}),(0,a.jsxs)("div",{className:"svc-trio-grid",children:[(0,a.jsxs)("div",{className:"svc-tcard svc-tcard-1",children:[(0,a.jsxs)("div",{className:"svc-tcard-band",children:[(0,a.jsx)("div",{className:"svc-tcard-num",children:"01"}),(0,a.jsx)("div",{className:"svc-tcard-icon",children:(0,a.jsx)("img",{src:"/img/icon/hr-policy-development.webp",alt:"service icon",style:{width:"32px",height:"32px"}})}),(0,a.jsx)("span",{className:"svc-tcard-eyebrow",children:"Consultancy"}),(0,a.jsx)("h4",{className:"svc-tcard-title",children:"HR Policy Development Services"})]}),(0,a.jsxs)("div",{className:"svc-tcard-body",children:[(0,a.jsx)("div",{className:"svc-tcard-desc",children:"We handle HR Policy Development end-to-end from setting the cultural tone to ensuring full compliance."}),(0,a.jsxs)("ul",{className:"svc-tcard-points",children:[(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Strategic HR Policy Development aligned to your organization\u2019s goals"]}),(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Employee handbooks, codes of conduct, leave and benefits policies"]}),(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Department-specific and role-based HR policies"]}),(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Policy reviews for clarity, tone, accessibility, and legal compliance"]})]})]}),(0,a.jsx)("div",{className:"svc-tcard-footer"})]}),(0,a.jsxs)("div",{className:"svc-tcard svc-tcard-2",children:[(0,a.jsxs)("div",{className:"svc-tcard-band",children:[(0,a.jsx)("div",{className:"svc-tcard-num",children:"02"}),(0,a.jsx)("div",{className:"svc-tcard-icon",children:(0,a.jsx)("img",{src:"/img/icon/hr-policy-hr-strategy.webp",alt:"service icon",style:{width:"32px",height:"32px"}})}),(0,a.jsx)("span",{className:"svc-tcard-eyebrow",children:"End-to-End"}),(0,a.jsx)("h4",{className:"svc-tcard-title",children:"HR Strategy Development Services"})]}),(0,a.jsxs)("div",{className:"svc-tcard-body",children:[(0,a.jsx)("div",{className:"svc-tcard-desc",children:"For businesses that don\u2019t just want to grow but grow with purpose, structure, and clarity."}),(0,a.jsxs)("ul",{className:"svc-tcard-points",children:[(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Long-term HR strategy development roadmap creation"]}),(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Role clarity, workforce planning, and growth alignment"]}),(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Succession planning, leadership framework, and org design"]}),(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Integration with business goals and operational strategy"]})]})]}),(0,a.jsx)("div",{className:"svc-tcard-footer"})]}),(0,a.jsxs)("div",{className:"svc-tcard svc-tcard-3",children:[(0,a.jsxs)("div",{className:"svc-tcard-band",children:[(0,a.jsx)("div",{className:"svc-tcard-num",children:"03"}),(0,a.jsx)("div",{className:"svc-tcard-icon",children:(0,a.jsx)("img",{src:"/img/icon/hr-policy-hr-audit.webp",alt:"service icon",style:{width:"32px",height:"32px"}})}),(0,a.jsx)("span",{className:"svc-tcard-eyebrow",children:"Outsourcing"}),(0,a.jsx)("h4",{className:"svc-tcard-title",children:"HR Audits & Advisory Services"})]}),(0,a.jsxs)("div",{className:"svc-tcard-body",children:[(0,a.jsx)("div",{className:"svc-tcard-desc",children:"When HR feels overwhelming, we bring structure. When there\u2019s confusion, we bring clarity."}),(0,a.jsxs)("ul",{className:"svc-tcard-points",children:[(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Audit of current HR policies and compliance risks"]}),(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Evaluation of workforce structures and reporting lines"]}),(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Alignment with labor laws, DEI goals, and market practices"]}),(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"svc-pt-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),"Risk mitigation, documentation standardization, and advisory"]})]})]}),(0,a.jsx)("div",{className:"svc-tcard-footer"})]})]})]})})}function x(){let[e,r]=(0,i.useState)(0),t=p.length,n=p[e];return(0,a.jsx)("section",{className:"bfr-section",children:(0,a.jsxs)("div",{className:"bfr-inner",children:[(0,a.jsxs)("div",{className:"bfr-header",children:[(0,a.jsx)("div",{className:"partners-header1",children:(0,a.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Proven HR Strategy & Policy Development"})}),(0,a.jsxs)("h3",{className:"bfr-title",children:["Our Proven  ",(0,a.jsxs)("span",{children:[(0,a.jsx)("i",{children:"HR Strategy and Policy "})," "]})," Development Process"]}),(0,a.jsx)("p",{className:"bfr-sub",children:"We turn HR challenges into strategic advantages with a clear, proven framework built for real-world impact."})]}),(0,a.jsx)("div",{className:"bfr-tabs",children:p.map((t,i)=>(0,a.jsxs)("button",{className:`bfr-tab${e===i?" active":""}`,onClick:()=>r(i),children:[(0,a.jsx)("span",{className:"bfr-tab-icon",children:t.icon}),t.label]},i))}),(0,a.jsxs)("div",{className:"bfr-mobile-nav",children:[(0,a.jsx)("button",{className:"bfr-mobile-nav-btn",onClick:()=>r(e=>Math.max(0,e-1)),disabled:0===e,children:"\u2190"}),(0,a.jsx)("span",{className:"bfr-mobile-tab-label",children:n.label||n.tab||n.title}),(0,a.jsx)("button",{className:"bfr-mobile-nav-btn",onClick:()=>r(e=>Math.min(t-1,e+1)),disabled:e===t-1,children:"\u2192"})]}),(0,a.jsx)("div",{className:"bfr-mobile-dots",children:p.map((t,i)=>(0,a.jsx)("button",{className:`bfr-mobile-dot${e===i?" active":""}`,onClick:()=>r(i)},i))}),(0,a.jsx)("div",{className:"bfr-panel",children:(0,a.jsxs)("div",{className:"bfr-panel-grid",children:[(0,a.jsxs)("div",{className:"bfr-panel-left",children:[(0,a.jsx)("h4",{className:"bfr-panel-title",children:n.title}),(0,a.jsx)("p",{className:"bfr-panel-desc",children:n.desc}),(0,a.jsx)("ul",{className:"bfr-features",children:n.features.map((e,r)=>(0,a.jsxs)("li",{children:[(0,a.jsx)("span",{className:"bfr-check",children:(0,a.jsx)("svg",{viewBox:"0 0 12 12",children:(0,a.jsx)("polyline",{points:"2,6 5,9 10,3"})})}),e]},r))})]}),(0,a.jsxs)("div",{className:"bfr-panel-right",children:[(0,a.jsx)("div",{className:"bfr-right-icon",children:n.rightIcon}),(0,a.jsxs)("div",{className:"bfr-right-stat",children:[(0,a.jsx)("div",{className:"bfr-right-stat-num",children:n.stat}),(0,a.jsx)("div",{className:"bfr-right-stat-label",children:n.statLabel})]}),(0,a.jsx)("div",{className:"bfr-right-tags",children:n.tags.map((e,r)=>(0,a.jsx)("span",{className:"bfr-right-tag",children:e},r))})]})]})},e)]})})}function b(){return(0,a.jsx)("section",{className:"sf-section",children:(0,a.jsxs)("div",{className:"sf-inner",children:[(0,a.jsxs)("div",{className:"sf-header",children:[(0,a.jsx)("div",{className:"partners-header1",style:{justifyContent:"center"},children:(0,a.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"16px",color:"var(--orange)"},children:"Why PCS?"})}),(0,a.jsxs)("h2",{className:"sf-heading",children:["Why Priyam Consultancy Services, ",(0,a.jsx)("span",{children:(0,a.jsx)("i",{children:"HR Strategy and Policy Development "})})," Works for Growing Businesses"]}),(0,a.jsx)("p",{className:"sf-subtext",children:"At Priyam Consultancy Services, we recognize that many organizations experience fragmented processes, outdated policies, and unclear responsibilities. Therefore, our services in HR Strategy and Policy Development simplify the complexity of HR by crafting systems to be practical, compliant, and suitable for your organization. Whether it is policy writing or planning for a future strategic workforce, we focus on providing your organization with a resilient HR foundation that is scalable and future-proof."})]}),(0,a.jsx)("div",{className:"sf-flow",children:h.map((e,r)=>{let t=r%2==0;return(0,a.jsxs)("div",{className:"sf-card-wrap",children:[(0,a.jsxs)("div",{className:`sf-card ${t?"sf-odd":"sf-even"}`,style:{"--sf-color":e.color},children:[(0,a.jsx)("div",{className:"sf-card-icon",children:e.icon}),(0,a.jsx)("h3",{className:"sf-card-title",children:e.title}),(0,a.jsx)("div",{className:"sf-card-desc",children:e.desc})]}),r<h.length-1&&(0,a.jsx)("div",{className:"sf-arrow",children:(0,a.jsxs)("svg",{viewBox:"0 0 48 48",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[(0,a.jsx)("path",{className:"sf-arrow-tail",d:"M8 24H36",stroke:"#ed8337",strokeWidth:"3",strokeLinecap:"round"}),(0,a.jsx)("path",{className:"sf-arrow-head",d:"M28 16L38 24L28 32",stroke:"#ed8337",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"})]})})]},r)})})]})})}let u=[{q:"Can You Support Policy Development For Remote Or Geographically Dispersed Teams?",a:"Yes! We develop HR strategies and policies for hybrid, remote, and in-office workforces operating in multiple locations."},{q:"What Does HR Strategy and Policy Development Include?",a:"It includes full scope planning, drafting, implementation, and consultation around your HR strategy, HR policy development, and overall human resource management framework."},{q:"How Frequently Should HR Policies Be Reviewed And Updated?",a:"We recommend reviewing HR policies annually and/or when there are significant regulatory or organizational changes."},{q:"What Makes PCS A Trusted Partner For HR Strategy And Development Policy?",a:"We integrate compliance, business goals and employee needs into our approach. With extensive knowledge around human resource management, we are able to make HR policy development and HR strategy development practically and future-ready."},{q:"Can PCS Help Us Develop HR Policies From Scratch?",a:"Yes. We specialize in development of HR policies that are tailored to your size, industry and growth stage."},{q:"Can PCS Support Leadership Hiring And Organizational Design?",a:"Yes. Extended HR advisory includes org structures, succession planning, and leadership hiring strategies as part of a bundle of human resource policies and strategies."}];function v(){let[e,r]=(0,i.useState)(null),t=t=>{r(e===t?null:t)};return(0,a.jsxs)("section",{className:"faq-section",children:[(0,a.jsx)("div",{className:"partners-header2",style:{textAlign:"center",marginTop:"20px"},children:(0,a.jsx)("h2",{className:"partners-eyebrow",children:"Frequently Asked Questions"})}),(0,a.jsxs)("div",{className:"container",children:[(0,a.jsx)("div",{className:"faq-head",children:(0,a.jsxs)("h3",{className:"faq-h3",children:["Queries That Could ",(0,a.jsx)("span",{children:"Hold You Back"})]})}),(0,a.jsxs)("div",{className:"faq-wrapper",children:[(0,a.jsx)("div",{className:"faq-col",children:u.slice(0,3).map((r,i)=>(0,a.jsxs)("div",{className:"faq-item",children:[(0,a.jsxs)("div",{className:"faq-question",onClick:()=>t(i),children:[(0,a.jsx)("span",{children:r.q}),(0,a.jsx)("span",{className:"icon",children:e===i?"\u2212":"+"})]}),e===i&&(0,a.jsx)("div",{className:"faq-answer",children:r.a})]},i))}),(0,a.jsx)("div",{className:"faq-col",children:u.slice(3,6).map((r,i)=>(0,a.jsxs)("div",{className:"faq-item",children:[(0,a.jsxs)("div",{className:"faq-question",onClick:()=>t(i+3),children:[(0,a.jsx)("span",{children:r.q}),(0,a.jsx)("span",{className:"icon",children:e===i+3?"\u2212":"+"})]}),e===i+3&&(0,a.jsx)("div",{className:"faq-answer",children:r.a})]},i+3))})]})]})]})}function y(){return(0,a.jsxs)(s.A,{children:[(0,a.jsxs)(l.A,{children:[(0,a.jsx)("title",{children:"HR Strategy Development | HR Policy Development Services "}),(0,a.jsx)("meta",{name:"description",content:" Enhance your workforce with our expert HR Strategy and Policy Development services. Implement customized HR policies, support compliance, and plan for the future. "}),(0,a.jsx)("meta",{name:"keywords",content:"HR Strategy, HR Policy Development, HR Strategy Development, Developing HR Policies, HR Policies, Human Resource Management, HR Policy Development, Human Resource Policies and Strategies, HR Strategy and Policy Development"}),(0,a.jsx)("link",{rel:"canonical",href:"https://www.priyamconsultancy.com/hr-strategy-and-policy-development/"}),(0,a.jsx)("meta",{property:"og:title",content:"HR Strategy Development | HR Policy Development Services"}),(0,a.jsx)("meta",{property:"og:description",content:" Enhance your workforce with our expert HR Strategy and Policy Development services. Implement customized HR policies, support compliance, and plan for the future. "}),(0,a.jsx)("meta",{property:"og:url",content:"https://www.priyamconsultancy.com/hr-strategy-and-policy-development/"}),(0,a.jsx)("meta",{property:"og:image",content:"https://www.priyamconsultancy.com/img/hr-strategy.png"}),(0,a.jsx)("meta",{property:"og:type",content:"website"}),(0,a.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),(0,a.jsx)("meta",{name:"twitter:title",content:"HR Strategy Development | HR Policy Development Services"}),(0,a.jsx)("meta",{name:"twitter:description",content:" Enhance your workforce with our expert HR Strategy and Policy Development services. Implement customized HR policies, support compliance, and plan for the future. "}),(0,a.jsx)("meta",{name:"twitter:image",content:"https://www.priyamconsultancy.com/img/hr-strategy.png"}),c.map((e,r)=>(0,a.jsx)("script",{type:"application/ld+json",children:JSON.stringify(e)},r))]}),(0,a.jsx)("style",{children:d}),(0,a.jsxs)("div",{className:"hr-page",children:[(0,a.jsx)(m,{}),(0,a.jsx)(g,{}),(0,a.jsx)(f,{}),(0,a.jsx)(x,{}),(0,a.jsx)(b,{}),(0,a.jsx)(v,{}),(0,a.jsx)(o.A,{})]})]})}}}]);

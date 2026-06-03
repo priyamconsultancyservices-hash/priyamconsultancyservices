@@ -1,0 +1,696 @@
+"use strict";(self.webpackChunknew_docs_pcs_website_design=self.webpackChunknew_docs_pcs_website_design||[]).push([["572"],{3177(e,t,i){i.d(t,{A:()=>n});var a=i(4848),r=i(6540);let s=`https://corsproxy.io/?${encodeURIComponent("https://www.priyamconsultancy.com/blog/feed/")}`;function n(){let[e,t]=(0,r.useState)([]),[i,n]=(0,r.useState)(!0),[o,l]=(0,r.useState)(null);return(0,r.useEffect)(()=>{fetch(s).then(e=>{if(!e.ok)throw Error(`HTTP ${e.status}`);return e.text()}).then(e=>{t(Array.from(new DOMParser().parseFromString(e,"text/xml").querySelectorAll("item")).slice(0,3).map(e=>{let t=e.querySelector("enclosure"),i=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","content")[0],a=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","thumbnail")[0],r=e.getElementsByTagNameNS("http://purl.org/rss/1.0/modules/content/","encoded")[0],s=r?.textContent||"",n=s.match(/<img[^>]+src=["']([^"']+)["']/i),o=e.querySelector("description")?.textContent||"",l=o.match(/<img[^>]+src=["']([^"']+)["']/i),c=t?.getAttribute("url")||i?.getAttribute("url")||a?.getAttribute("url")||n?.[1]||l?.[1]||null,d=(s||o).replace(/<[^>]*>/g,"").replace(/&[^;]+;/g," ").trim(),p=d.length>340?d.slice(0,340)+"...":d,m=e.getElementsByTagName("link")[0],g=m?.textContent?.trim()||e.querySelector("guid")?.textContent||"#";return{guid:e.querySelector("guid")?.textContent||Math.random().toString(),title:e.querySelector("title")?.textContent?.trim()||"Untitled",link:g,thumbnail:c,excerpt:p}})),n(!1)}).catch(e=>{l(e.message),n(!1)})},[]),(0,a.jsxs)("section",{style:{width:"100%",padding:"4rem 1rem",boxSizing:"border-box",background:"#fff"},children:[(0,a.jsxs)("div",{style:{maxWidth:"1200px",margin:"0 auto"},children:[(0,a.jsxs)("div",{style:{textAlign:"center",marginBottom:"2.5rem"},children:[(0,a.jsx)("h2",{style:{fontSize:"2rem",fontWeight:700,margin:"0 0 0.5rem",color:"#111"},children:"Blogs"}),(0,a.jsx)("p",{style:{color:"#666",margin:0,fontSize:"1rem"},children:"Stay updated with the latest in digital marketing, growth strategies, and industry trends."})]}),i&&(0,a.jsx)("p",{style:{textAlign:"center",color:"#888"},children:"Loading..."}),o&&(0,a.jsxs)("p",{style:{textAlign:"center",color:"red"},children:["Error: ",o]}),(0,a.jsx)("div",{style:{display:"grid",gridTemplateColumns:"repeat(3, 1fr)",gap:"1.5rem"},className:"blog-grid",children:e.map(e=>(0,a.jsxs)("a",{href:e.link,target:"_blank",rel:"noreferrer",style:{border:"1px solid #e5e7eb",borderRadius:"12px",overflow:"hidden",background:"#fff",display:"flex",flexDirection:"column",textDecoration:"none",color:"inherit",transition:"box-shadow 0.2s, transform 0.2s",cursor:"pointer"},onMouseEnter:e=>{e.currentTarget.style.boxShadow="0 8px 24px rgba(0,0,0,0.12)",e.currentTarget.style.transform="translateY(-3px)"},onMouseLeave:e=>{e.currentTarget.style.boxShadow="none",e.currentTarget.style.transform="translateY(0)"},children:[(0,a.jsx)("div",{style:{width:"100%",aspectRatio:"16/9",overflow:"hidden",background:"#1a2744"},children:e.thumbnail?(0,a.jsx)("img",{src:e.thumbnail,alt:e.title,loading:"lazy",style:{width:"100%",height:"100%",objectFit:"cover",display:"block"}}):(0,a.jsx)("div",{style:{width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",opacity:.4,fontSize:"0.8rem"},children:"No image"})}),(0,a.jsxs)("div",{style:{padding:"1.25rem",display:"flex",flexDirection:"column",gap:"0.75rem"},children:[(0,a.jsx)("p",{style:{fontWeight:600,fontSize:"1.1rem",lineHeight:1.6,margin:0,color:"#111"},children:e.title}),(0,a.jsx)("p",{style:{color:"#444",fontSize:"0.875rem",lineHeight:1.6,flex:1,margin:0},children:e.excerpt}),(0,a.jsx)("span",{style:{display:"inline-block",background:"#E87C30",color:"#fff",padding:"0.6rem 1.5rem",borderRadius:"999px",fontWeight:500,alignSelf:"flex-start",marginTop:"0.5rem",fontSize:"0.875rem"},children:"Read More"})]})]},e.guid))})]}),(0,a.jsx)("style",{dangerouslySetInnerHTML:{__html:`
+        @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 600px)  { .blog-grid { grid-template-columns: 1fr !important; } }
+      `}})]})}},9393(e,t,i){i.d(t,{A:()=>s});var a=i(4848),r=i(6540);let s=function(){let e=(0,r.useRef)(null);return(0,r.useEffect)(()=>{let t=e.current;if(!t)return;let i=t.getContext("2d"),a="#ed8337",r,s,n=[],o;function l(){r=t.width=t.parentElement.offsetWidth,s=t.height=t.parentElement.offsetHeight}function c(){this.reset()}c.prototype.reset=function(){this.x=Math.random()*r,this.y=Math.random()*s,this.r=2.2*Math.random()+.6,this.type=.55>Math.random()?"dot":.5>Math.random()?"ring":"plus",this.speed=.35*Math.random()+.08,this.dir=Math.random()*Math.PI*2,this.alpha=.45*Math.random()+.1,this.pulse=Math.random()*Math.PI*2,this.pulseSpeed=.018*Math.random()+.008,this.size=4*Math.random()+2},c.prototype.update=function(){this.x+=Math.cos(this.dir)*this.speed,this.y+=Math.sin(this.dir)*this.speed,this.pulse+=this.pulseSpeed,this.dir+=(Math.random()-.5)*.015,this.x<-20&&(this.x=r+20),this.x>r+20&&(this.x=-20),this.y<-20&&(this.y=s+20),this.y>s+20&&(this.y=-20)},c.prototype.draw=function(){let e=this.alpha*(.7+.3*Math.sin(this.pulse));if(i.save(),i.globalAlpha=e,i.strokeStyle=i.fillStyle=a,i.lineWidth=1,"dot"===this.type)i.beginPath(),i.arc(this.x,this.y,this.r+.4*Math.sin(this.pulse),0,2*Math.PI),i.fill();else if("ring"===this.type){let e=this.size*(.9+.15*Math.sin(this.pulse));i.beginPath(),i.arc(this.x,this.y,e,0,2*Math.PI),i.stroke()}else{let e=this.size*(.9+.1*Math.sin(this.pulse));i.beginPath(),i.moveTo(this.x-e,this.y),i.lineTo(this.x+e,this.y),i.moveTo(this.x,this.y-e),i.lineTo(this.x,this.y+e),i.stroke()}i.restore()},window.addEventListener("resize",l),l(),n=[];let d=Math.floor(r*s/9e3);for(let e=0;e<Math.max(d,28);e++)n.push(new c);return!function e(){i.clearRect(0,0,r,s),function(){let e=n.filter(e=>"dot"===e.type);for(let t=0;t<e.length;t++)for(let r=t+1;r<e.length;r++){let s=e[t].x-e[r].x,n=e[t].y-e[r].y,o=Math.sqrt(s*s+n*n);o<110&&(i.save(),i.globalAlpha=(1-o/110)*.12,i.strokeStyle=a,i.lineWidth=.7,i.beginPath(),i.moveTo(e[t].x,e[t].y),i.lineTo(e[r].x,e[r].y),i.stroke(),i.restore())}}(),n.forEach(e=>{e.update(),e.draw()}),o=requestAnimationFrame(e)}(),()=>{cancelAnimationFrame(o),window.removeEventListener("resize",l)}},[]),(0,a.jsx)("section",{id:"cta-final",children:(0,a.jsxs)("div",{className:"cta-banner",style:{"--glow-x":"50%","--glow-y":"50%"},children:[(0,a.jsx)("canvas",{id:"ctaCanvas",ref:e}),(0,a.jsxs)("div",{className:"cta-banner-left",children:[(0,a.jsx)("div",{className:"partners-header",children:(0,a.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Ready to Start?"})}),(0,a.jsxs)("h2",{className:"cta-banner-heading",children:["Let's Talk About Your",(0,a.jsx)("br",{}),"Next Big ",(0,a.jsx)("span",{className:"hl-italic",children:"Growth Move"})]}),(0,a.jsx)("p",{className:"cta-banner-sub",children:"No pressure. Just a quick conversation to understand where you are-and how we can help you move forward."})]}),(0,a.jsxs)("div",{className:"cta-banner-right",children:[(0,a.jsxs)("a",{href:"#",className:"cta-bprimary",children:["Book a Free Consultation",(0,a.jsx)("svg",{viewBox:"0 0 16 16",fill:"none",children:(0,a.jsx)("path",{d:"M3 8h10M9 4l4 4-4 4",stroke:"currentColor",strokeWidth:"1.8",strokeLinecap:"round",strokeLinejoin:"round"})})]}),(0,a.jsx)("a",{href:"#",className:"cta-bghost",children:"View All Services"})]})]})})}},4171(e,t,i){i.r(t),i.d(t,{default:()=>j});var a=i(4848),r=i(6540),s=i(8128),n=i(3177),o=i(9393),l=i(1085),c=i(3572);function d(){let e="https://www.pcsbusinesssolution.com/digital-marketing",t="https://www.pcsbusinesssolution.com/img/digital-marketing.png";return(0,a.jsxs)(c.A,{children:[(0,a.jsx)("title",{children:"Digital Marketing Agency | Expert Digital Marketing Services"}),(0,a.jsx)("meta",{name:"description",content:"PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!"}),(0,a.jsx)("meta",{name:"keywords",content:"Digital Marketing Agency, Digital Marketing, Digital Marketing Services, Digital Marketing Company, Digital Marketing Solutions, igital Marketing Consultant"}),(0,a.jsx)("link",{rel:"canonical",href:e}),(0,a.jsx)("meta",{property:"og:type",content:"website"}),(0,a.jsx)("meta",{property:"og:title",content:"Digital Marketing Agency | Expert Digital Marketing Services"}),(0,a.jsx)("meta",{property:"og:description",content:"PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!"}),(0,a.jsx)("meta",{property:"og:url",content:e}),(0,a.jsx)("meta",{property:"og:image",content:t}),(0,a.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),(0,a.jsx)("meta",{name:"twitter:title",content:"Digital Marketing Agency | Expert Digital Marketing Services"}),(0,a.jsx)("meta",{name:"twitter:description",content:"PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!"}),(0,a.jsx)("meta",{name:"twitter:image",content:t}),(0,a.jsx)("script",{type:"application/ld+json",children:`
+          {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Priyam Consultancy Services",
+            "alternateName": "PCS",
+            "url": "https://www.priyamconsultancy.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+            },
+            "description": "Priyam Consultancy Services is an all-in-one business solutions provider offering Business Registration, Statutory Compliance, Virtual CFO, Digital Transformation, Digital Marketing, Website Development, and HR Services across India.",
+            "foundingDate": "2020",
+            "areaServed": "IN",
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "telephone": "+91 96774 44048",
+                "contactType": "customer support",
+                "availableLanguage": ["English", "Tamil"]
+              }
+            ],
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=61577125709962",
+              "https://www.linkedin.com/company/priyam-consultancy-services/",
+              "https://www.instagram.com/priyam_consultancy_services/",
+              "https://x.com/services91032",
+              "https://g.co/kgs/rdTYdi6"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Business & Digital Services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Business Registration" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Statutory Compliance" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Virtual CFO Services" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Transformation" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Website Development" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "HR & Payroll Services" } }
+              ]
+            }
+          }
+        `}),(0,a.jsx)("script",{type:"application/ld+json",children:`
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Priyam Consultancy Services",
+            "url": "https://www.priyamconsultancy.com/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.priyamconsultancy.com/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          }
+        `}),(0,a.jsx)("script",{type:"application/ld+json",children:`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Priyam Consultancy Services",
+            "image": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+            "url": "https://www.priyamconsultancy.com/",
+            "description": "All-in-one business consultancy offering registration, compliance, digital transformation, marketing and HR services across India.",
+            "telephone": "+91 96774 44048",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Coimbatore",
+              "addressRegion": "Tamil Nadu",
+              "addressCountry": "IN"
+            },
+            "areaServed": { "@type": "Country", "name": "India" },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=61577125709962",
+              "https://www.linkedin.com/company/priyam-consultancy-services/",
+              "https://www.instagram.com/priyam_consultancy_services/"
+            ]
+          }
+        `}),(0,a.jsx)("script",{type:"application/ld+json",children:`
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://www.priyamconsultancy.com/#service",
+            "serviceType": "Business Consultancy & Digital Services",
+            "name": "Business Registration, Digital Marketing & IT Solutions",
+            "url": "https://www.priyamconsultancy.com/",
+            "description": "Priyam Consultancy Services provides end-to-end business solutions including Business Registration, Statutory Compliance, Virtual CFO, Digital Transformation, SEO, Social Media Marketing, Google Ads, Meta Ads, Website Development, and HR & Payroll Services across India.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Priyam Consultancy Services",
+              "url": "https://www.priyamconsultancy.com/",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+              }
+            },
+            "areaServed": { "@type": "Country", "name": "India" },
+            "offers": {
+              "@type": "Offer",
+              "availability": "https://schema.org/InStock",
+              "priceCurrency": "INR",
+              "url": "https://www.priyamconsultancy.com/"
+            }
+          }
+        `}),(0,a.jsx)("script",{type:"application/ld+json",children:`
+          {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "Business Registration & Digital Solutions",
+            "image": ["https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"],
+            "description": "All-in-one business consultancy services in Coimbatore \u{2014} Business Registration, Compliance, Digital Transformation, Digital Marketing, Website Development, HR & Payroll Management.",
+            "brand": {
+              "@type": "Brand",
+              "name": "Priyam Consultancy Services"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "500",
+              "bestRating": "5",
+              "worstRating": "1"
+            },
+            "review": {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "4.9",
+                "bestRating": "5"
+              },
+              "author": { "@type": "Organization", "name": "Priyam Consultancy Services" }
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://www.priyamconsultancy.com/",
+              "priceCurrency": "INR",
+              "price": "0.00",
+              "priceValidUntil": "2026-12-31",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@type": "Organization", "name": "Priyam Consultancy Services" }
+            }
+          }
+        `}),(0,a.jsx)("script",{type:"application/ld+json",children:`
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@id": "https://www.priyamconsultancy.com/",
+                  "name": "Home"
+                }
+              }
+            ]
+          }
+        `}),(0,a.jsx)("script",{type:"application/ld+json",children:`
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Priyam Consultancy Services \u{2014} All Services",
+            "url": "https://www.priyamconsultancy.com/",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Business Registration" },
+              { "@type": "ListItem", "position": 2, "name": "Statutory Compliance" },
+              { "@type": "ListItem", "position": 3, "name": "Virtual CFO Services" },
+              { "@type": "ListItem", "position": 4, "name": "Digital Transformation" },
+              { "@type": "ListItem", "position": 5, "name": "Search Engine Optimization (SEO)" },
+              { "@type": "ListItem", "position": 6, "name": "Social Media Marketing" },
+              { "@type": "ListItem", "position": 7, "name": "Performance Marketing (PPC)" },
+              { "@type": "ListItem", "position": 8, "name": "Content Marketing" },
+              { "@type": "ListItem", "position": 9, "name": "Website Development" },
+              { "@type": "ListItem", "position": 10, "name": "HR & Payroll Management" }
+            ]
+          }
+        `}),(0,a.jsx)("script",{type:"application/ld+json",children:`
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What makes PCS different from other consultancy agencies?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "At PCS, we focus on strategy, creativity, and measurable business growth. Every solution is customised to your brand goals, helping you build stronger visibility, better engagement, and long-term digital success."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What types of digital marketing services do you provide?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We offer SEO, performance marketing (PPC), social media marketing, content marketing, email & WhatsApp campaigns, graphic design, and analytics-driven strategies to boost online visibility and engagement."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the benefits of digital transformation?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Digital transformation improves operational efficiency, enhances customer experience, and enables data-driven decision-making. It drives innovation, scalability, and long-term business growth."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is a company registration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Company registration is the legal process of forming a business entity, obtaining licenses, and ensuring compliance with government regulations to operate officially."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long to see results through digital marketing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Results vary by strategy; paid campaigns may show immediate impact, while SEO and organic efforts typically take 3 to 6 months for measurable outcomes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How are your HR services different from other agencies?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We provide tailored HR solutions combining strategy, compliance, payroll, recruitment, and employee engagement with seamless integration into your business operations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can PCS manage the entire digital marketing process?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, PCS provides complete end-to-end digital marketing support including branding, website development, SEO, content marketing, social media management, paid advertising, lead generation, and performance tracking."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you work with startups as well as established businesses?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We work with startups, SMEs, and large enterprises. Our team creates scalable solutions suitable for businesses at every stage of growth and expansion."
+                }
+              }
+            ]
+          }
+        `})]})}let p=()=>(0,a.jsx)("style",{children:`
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
+    :root {
+      --navy:#022b44; --navy-deep:#011a2a; --navy-mid:#0a3652;
+      --orange:#ed8337; --orange-light:#f5a66b;
+      --text-dim:rgba(255,255,255,0.45);
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body,#root,main{overflow-x:hidden;max-width:100vw;}
+    img{max-width:100%;height:auto;}
+    // body{font-family:'DM Sans',sans-serif;background:var(--navy);color:#fff;overflow-x:hidden;}
+  `});function m(){return(0,a.jsxs)("section",{className:"hero",id:"hero",children:[(0,a.jsx)("style",{children:`
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* \u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}
+   HERO \u{2014} BRC Standard Layout
+\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550} */
+:root {
+  --navy:      #004168;
+  --navy-deep: #011a2a;
+  --navy-mid:  #0a3652;
+  --orange:    #ed8337;
+  --orange-l:  #f5a66b;
+  --dim:       rgba(255,255,255,0.45);
+  --dim2:      rgba(255,255,255,0.5);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; color: #fff; overflow-x: hidden; }
+
+.hero {
+  min-height: 100svh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 2rem;
+  padding: 2rem 6% 4rem;
+  position: relative; overflow: hidden;
+  background: var(--navy);
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(ellipse 65% 70% at 100% 50%, rgba(237,131,55,0.10) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 0% 100%, rgba(10,66,102,0.5) 0%, transparent 55%);
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image: linear-gradient(rgba(237,131,55,0.028) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(237,131,55,0.028) 1px, transparent 1px);
+  background-size: 52px 52px;
+}
+
+.hero-left { position: relative; z-index: 2; display: flex; flex-direction: column; }
+
+.h-badge {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(237,131,55,0.1); border: 1px solid rgba(237,131,55,0.28);
+  color: var(--orange); font-size: 0.72rem; font-weight: 600;
+  padding: 0.38rem 1rem; border-radius: 50px;
+  letter-spacing: 0.09em; text-transform: uppercase;
+  width: fit-content; animation: fadeUp 0.6s ease both;
+}
+.badge-dot {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--orange);
+  animation: pulse-dot 1.6s infinite;
+}
+@keyframes pulse-dot { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.4; transform:scale(1.5); } }
+
+.hero-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.2rem, 3.8vw, 3.3rem);
+  font-weight: 600; line-height: 1.15;
+  margin-top: 1.4rem; animation: fadeUp 0.7s 0.08s ease both; color: #fff;
+}
+.hero-heading .hl { color: var(--orange); }
+.hero-heading .lined { position: relative; display: inline-block; }
+.hero-heading .lined::after {
+  content: ''; position: absolute; left: 0; bottom: -3px;
+  width: 100%; height: 3px; background: var(--orange); border-radius: 2px;
+  transform: scaleX(0); transform-origin: left;
+  animation: line-in 0.5s 0.9s ease forwards;
+}
+/* orange span support */
+.hero-heading .orange { color: var(--orange); }
+.hero-heading .underline-word { position: relative; display: inline-block; }
+.hero-heading .underline-word::after {
+  content: ''; position: absolute; left: 0; bottom: -3px;
+  width: 100%; height: 3px; background: linear-gradient(90deg,#ed8337,#f5a66b); border-radius: 2px;
+  transform: scaleX(0); transform-origin: left;
+  animation: line-in 0.55s 1s ease forwards;
+}
+@keyframes line-in { to { transform: scaleX(1); } }
+
+.hero-sub {
+  margin-top: 1.4rem; font-size: 1rem; line-height: 1.78;
+  color: rgb(255, 255, 255); max-width: fit-content;
+  animation: fadeUp 0.7s 0.16s ease both;
+}
+.hero-actions { margin-top: 2rem; display: flex; gap: 0.9rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.26s ease both; }
+.btn-fill {
+  background: var(--orange);
+  padding: 0.85rem 2rem; border-radius: 50px;
+  font-family: 'Poppins', sans-serif; font-size: 0.92rem; font-weight: 500;
+  text-decoration: none; border: none; cursor: pointer; color: #fff;
+  box-shadow: 0 4px 22px rgba(237,131,55,0.32);
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
+}
+.btn-fill:hover { background: var(--orange-l); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(237,131,55,0.42); }
+.btn-arrow {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: rgba(2,43,68,0.3); font-size: 0.85rem;
+}
+@keyframes fadeUp { from{ opacity:0; transform:translateY(26px); } to{ opacity:1; transform:translateY(0); } }
+
+.hero-right {
+  overflow: hidden; width: 100%; height: auto;
+  position: relative; z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+}
+img.hero-img { animation: none !important; }
+.hero-img {
+  width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* \u{2550}\u{2550} TABLET (\u{2264} 960px) \u{2550}\u{2550} */
+@media(max-width: 960px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    padding: 6rem 5% 4rem;
+    min-height: auto;
+    text-align: start;
+    gap: 2.5rem;
+  }
+  .hero-left { order: 1; align-items: flex-start;         padding: 3rem 0; }
+  .hero-right { width: 100% !important; height: auto !important; order: 2; display: flex; justify-content: center; }
+  .hero-img { width: 100%; max-width: 480px; height: auto; }
+  .hero-sub { max-width: 90%; }
+  .hero-actions { justify-content: flex-start; }
+}
+
+/* \u{2550}\u{2550} MOBILE (\u{2264} 600px) \u{2550}\u{2550} */
+@media(max-width: 600px) {
+  .hero { padding: 5rem 4% 3rem; gap: 2rem; }
+  .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
+  .hero-sub { font-size: 0.9rem; max-width: 100%; }
+  .hero-img { max-width: 100%; width: 100%; }
+  .h-badge { font-size: 0.65rem; }
+}
+.menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
+
+      `}),(0,a.jsxs)("div",{className:"hero-left",children:[(0,a.jsxs)("div",{className:"h-badge",children:[(0,a.jsx)("div",{className:"badge-dot"}),"Digital Marketing "]}),(0,a.jsxs)("h1",{className:"hero-heading",children:["Best",(0,a.jsx)("span",{className:"hl lined",style:{marginLeft:"12px"},children:"Digital Marketing "}),"Who Puts the Clients First"]}),(0,a.jsx)("p",{className:"hero-sub",children:"As the best digital marketing agency, we believe great digital marketing starts with listening. We ask the right questions to understand what truly holds your business back\u2014whether it's low leads, weak visibility, or underperforming campaigns. As a trusted digital marketing company, we go beyond surface-level strategies and uncover insights that drive real results."}),(0,a.jsx)("div",{className:"hero-actions",children:(0,a.jsxs)("a",{className:"btn-fill",href:"#",children:["Explore More ",(0,a.jsx)("span",{className:"btn-arrow",children:"\u203A"})]})})]}),(0,a.jsx)("div",{className:"hero-right",children:(0,a.jsx)("img",{src:"/img/digital-marketing.png",alt:"Digital Marketing Illustration",className:"hero-img"})})]})}function g(){let[e,t]=(0,r.useState)({name:"",email:"",phone:"",company:"",msg:""}),i=i=>{t({...e,[i.target.name]:i.target.value})};return(0,a.jsxs)("section",{className:"approach",id:"approach",children:[(0,a.jsx)("style",{children:`
+        .approach { position:relative; padding:4rem 6%; overflow:hidden; }
+        .ap-inner { position:relative; z-index:2; margin:0 auto; display:grid; grid-template-columns:1fr 0.7fr; gap:4rem; align-items:center; }
+        .ap-heading { font-family:'Poppins',sans-serif; font-size:clamp(1.6rem,3vw,2.6rem); line-height:1.12; color:#000; margin-bottom:1.2rem;font-weight:600; }
+        .ap-heading span { color:var(--orange); }
+        .ap-intro { font-size:1rem; line-height:1.8; color:#5a6a7a; margin-bottom:2rem; }
+        .ap-form-wrap { position:relative; max-width:450px; width:100%; }
+        @media(max-width:900px){
+          .ap-inner { grid-template-columns:1fr !important; gap:2.5rem; }
+          .ap-form-wrap { max-width:100%; }
+          .fl-row { grid-template-columns:1fr !important; }
+        }
+        @media(max-width:480px){
+          .approach { padding:3rem 4%; }
+          .ap-form-card { padding:2rem 1.4rem; }
+          .form-card-title { font-size:1.4rem; }
+        }
+        .ap-form-wrap::before { content:''; position:absolute; inset:-2px; background:linear-gradient(135deg,rgba(237,131,55,0.55),rgba(237,131,55,0.1),rgba(237,131,55,0.55)); border-radius:26px; z-index:0; }
+        .ap-form-card { position:relative; z-index:1; background:#004168; border-radius:24px; padding:2.8rem 2.6rem; box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 40px rgba(237,131,55,0.06); border:1px solid rgba(237,131,55,0.18); text-align:start; }
+        .form-card-eyebrow { display:inline-flex;     align-items: center; gap:8px; font-family:'Poppins',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--orange); margin-bottom:0.8rem; }
+        .form-card-eyebrow-line { width:22px; height:1px; background:var(--orange); }
+        .form-card-title { font-family:'Poppins',sans-serif; font-size:1.7rem; font-weight:800; color:#fff; line-height:1.15; margin-bottom:2.4rem; }
+        .form-card-title span { color:var(--orange); }
+        .fl-row { display:grid; grid-template-columns:1fr 1fr; gap:0.85rem; }
+        .fl-group { position:relative; margin-bottom:1rem; }
+        .fl-label { display:block; font-family:'Poppins',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:0.4rem; text-align:start; }
+        .fl-input,.fl-textarea { width:100%; padding:0.82rem 1rem 0.82rem 2.6rem; border:1.5px solid rgba(237,131,55,0.2); border-radius:10px; font-family:'Poppins',sans-serif; font-size:0.88rem; color:#fff; background:rgba(255,255,255,0.04); outline:none; appearance:none; transition:border-color 0.22s,background 0.22s,box-shadow 0.22s; }
+        .fl-input::placeholder,.fl-textarea::placeholder { color:rgba(255,255,255,0.3); }
+        .fl-input:focus,.fl-textarea:focus { border-color:var(--orange); background:rgba(237,131,55,0.06); box-shadow:0 0 0 3px rgba(237,131,55,0.1); }
+        .fl-icon { position:absolute; left:0.85rem; top:50%; transform:translateY(-50%); font-size:0.95rem; opacity:0.5; pointer-events:none; }
+        .fl-group.textarea-group .fl-icon { top:0.9rem; transform:none; }
+        .fl-textarea { min-height:88px; resize:none; padding-top:0.82rem; padding-left:2.6rem; }
+        .phone-row { display:flex; border:1.5px solid rgba(237,131,55,0.2); border-radius:10px; overflow:hidden; background:rgba(255,255,255,0.04); transition:border-color 0.22s,box-shadow 0.22s; }
+        .phone-row:focus-within { border-color:var(--orange); box-shadow:0 0 0 3px rgba(237,131,55,0.1); }
+        .phone-flag { display:flex; align-items:flex-start; gap:0.3rem; padding:0 0.85rem; font-size:0.82rem; font-weight:700; color:#fff; border-right:1.5px solid rgba(237,131,55,0.2); white-space:nowrap; background:rgba(237,131,55,0.08); cursor:default; flex-shrink:0; }
+        .phone-flag-icon { font-size:0.9rem; opacity:0.7; }
+        .phone-row .fl-input { border:none; border-radius:0; background:transparent; box-shadow:none; padding:0.82rem 1rem; }
+        .phone-row .fl-input:focus { box-shadow:none; }
+        .ap-submit { width:100%; background:linear-gradient(135deg,#ed8337,#f5a66b); color:#fff; border:none; padding:1rem 1.5rem; border-radius:12px; font-family:'Poppins',sans-serif; font-size:0.97rem; font-weight:500; cursor:pointer; letter-spacing:0.02em; display:flex; align-items:flex-start; justify-content:center; gap:0.6rem; transition:transform 0.2s,box-shadow 0.2s; }
+        .ap-submit:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(237,131,55,0.5); }
+        .ap-submit-arrow { display:inline-flex; align-items:flex-start; justify-content:center; width:24px; height:24px; border-radius:50%; background:rgba(2,43,68,0.25); font-size:0.9rem; }
+      `}),(0,a.jsxs)("div",{className:"ap-inner",children:[(0,a.jsxs)("div",{className:"ap-left",children:[(0,a.jsx)("div",{className:"partners-header1",children:(0,a.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Approach in"})}),(0,a.jsxs)("h2",{className:"ap-heading",children:["Result-Driven  ",(0,a.jsx)("span",{children:"Digital Marketing"})," Services"]}),(0,a.jsx)("p",{className:"ap-intro",children:"At our full-service digital marketing company, every digital marketing service we offer is aligned with measurable business outcomes. Whether it\u2019s lead generation, conversions, or brand awareness, our digital marketing strategies are designed to deliver impact."}),(0,a.jsx)("p",{className:"ap-intro",children:"We don\u2019t believe in guesswork. Our best digital marketing services are backed by data, tracking, and continuous optimization. As a best digital marketing company, we measure what matters and refine what doesn\u2019t work."}),(0,a.jsx)("p",{className:"ap-intro",children:"In the fast-changing world of digital marketing, we stay ahead by constantly testing, learning, and improving. That\u2019s what makes us the best digital marketing agency businesses trust.          "})]}),(0,a.jsx)("div",{className:"ap-form-wrap",children:(0,a.jsxs)("div",{className:"ap-form-card",children:[(0,a.jsxs)("div",{className:"form-card-eyebrow",children:[(0,a.jsx)("span",{className:"form-card-eyebrow-line"}),"Your Growth, Our Mission",(0,a.jsx)("span",{className:"form-card-eyebrow-line"})]}),(0,a.jsxs)("div",{className:"form-card-title",children:["Get Your ",(0,a.jsx)("span",{children:"Free"})," Quote"]}),(0,a.jsxs)("form",{onSubmit:i=>{i.preventDefault();let a={name:e.name,email:e.email,phone:e.phone,company:e.company,message:e.msg,url:window.location.href};s.Ay.send("service_8xw6k3r","template_jarui36",a,"XWRnXi4hK2SvmRG3q").then(()=>{alert("Message Sent Successfully \u2705"),t({name:"",email:"",phone:"",company:"",msg:""})}).catch(e=>{console.log(e),alert("Failed to send \u274C")})},children:[(0,a.jsxs)("div",{className:"fl-row",children:[(0,a.jsxs)("div",{className:"fl-group",children:[(0,a.jsx)("label",{className:"fl-label",children:"Your Name"}),(0,a.jsxs)("div",{style:{position:"relative"},children:[(0,a.jsx)("span",{className:"fl-icon",children:"\u{1F464}"}),(0,a.jsx)("input",{className:"fl-input",type:"text",name:"name",placeholder:"Full name",value:e.name,onChange:i,required:!0})]})]}),(0,a.jsxs)("div",{className:"fl-group",children:[(0,a.jsx)("label",{className:"fl-label",children:"Company"}),(0,a.jsxs)("div",{style:{position:"relative"},children:[(0,a.jsx)("span",{className:"fl-icon",children:"\u{1F3E2}"}),(0,a.jsx)("input",{className:"fl-input",type:"text",name:"company",placeholder:"Company name",value:e.company,onChange:i})]})]})]}),(0,a.jsxs)("div",{className:"fl-group",children:[(0,a.jsx)("label",{className:"fl-label",children:"Email Address"}),(0,a.jsxs)("div",{style:{position:"relative"},children:[(0,a.jsx)("span",{className:"fl-icon",children:"\u2709\uFE0F"}),(0,a.jsx)("input",{className:"fl-input",type:"email",name:"email",placeholder:"your@email.com",value:e.email,onChange:i,required:!0})]})]}),(0,a.jsxs)("div",{className:"fl-group",children:[(0,a.jsx)("label",{className:"fl-label",children:"Mobile Number"}),(0,a.jsxs)("div",{className:"phone-row",children:[(0,a.jsx)("div",{className:"phone-flag",children:(0,a.jsx)("span",{className:"phone-flag-icon",children:"\u{1F4DE}"})}),(0,a.jsx)("input",{className:"fl-input",type:"tel",name:"phone",placeholder:"Mobile number",value:e.phone,onChange:i,maxLength:"10",pattern:"[0-9]{10}",required:!0})]})]}),(0,a.jsxs)("div",{className:"fl-group textarea-group",children:[(0,a.jsx)("label",{className:"fl-label",children:"Message"}),(0,a.jsxs)("div",{style:{position:"relative"},children:[(0,a.jsx)("span",{className:"fl-icon",style:{top:"0.9rem",transform:"none"},children:"\u{1F4AC}"}),(0,a.jsx)("textarea",{className:"fl-textarea",name:"msg",placeholder:"Tell us about your business needs...",value:e.msg,onChange:i})]})]}),(0,a.jsxs)("button",{type:"submit",className:"ap-submit",children:["Get Free Consultation",(0,a.jsx)("span",{className:"ap-submit-arrow",children:"\u203A"})]})]})]})})]})]})}let h=[{icon:(0,a.jsx)("img",{src:"/img/icon/dm-seo.webp",alt:"Search Engine Optimization",width:"28",height:"28"}),title:"Search Engine Optimization",desc:"Our digital marketing experts help your business rank higher, increase visibility, and drive organic traffic consistently.",link:"/search-engine-optimization"},{icon:(0,a.jsx)("img",{src:"/img/icon/paid-marketing.webp",alt:"Paid Marketing",width:"28",height:"28"}),title:"Performance Marketing",desc:"We create high-performing ad campaigns as part of our digital marketing services, targeting the right audience at the right time.",link:"/performance-marketing"},{icon:(0,a.jsx)("img",{src:"/img/icon/dm-content-marketing.webp",alt:"Content Marketing",width:"28",height:"28"}),title:"Content Marketing",desc:"Content is at the core of digital marketing. We craft content that engages, informs, and converts.",link:"/content-marketing"},{icon:(0,a.jsx)("img",{src:"/img/icon/social-media-marketing.webp",alt:"Social Media Marketing",width:"28",height:"28"}),title:"Social Media Marketing",desc:"Our digital marketing service turns engagement into loyalty through strategic storytelling and audience connection.",link:"/social-media-marketing"},{icon:(0,a.jsx)("img",{src:"/img/icon/dm-website-development.webp",alt:"Website Development",width:"28",height:"28"}),title:"Website Development",desc:"As the best digital marketing company, we build responsive, high-performing websites that support your digital marketing goals.",link:"/website-development"},{icon:(0,a.jsx)("img",{src:"/img/icon/email-whatsapp-marketing.webp",alt:"Email and WhatsApp Marketing",width:"28",height:"28"}),title:"Email & WhatsApp Marketing",desc:"We strengthen your digital marketing efforts with direct communication strategies that boost conversions and retention.",link:"/performance-marketing"}];function u(){return(0,a.jsxs)("section",{className:"svc-section",style:{position:"relative",background:"#004168",padding:"8rem 6% 7rem",overflow:"hidden"},children:[(0,a.jsx)("style",{children:`
+        @media(max-width:768px){ .svc-section{ padding:4rem 5% 4rem !important; } }
+        @media(max-width:480px){ .svc-section{ padding:3rem 4% 3rem !important; } }
+        .svc-bg-r{position:absolute;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 60% 55% at 15% 30%,rgba(237,131,55,0.07) 0%,transparent 60%),radial-gradient(ellipse 50% 45% at 85% 70%,rgba(56,189,248,0.05) 0%,transparent 55%);}
+        .svc-grid{position:absolute;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(237,131,55,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(237,131,55,0.03) 1px,transparent 1px);background-size:58px 58px;}
+        .svc-orb{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0;}
+        .svc-orb-1{width:500px;height:500px;top:-120px;left:-100px;background:rgba(237,131,55,0.05);animation:sdm-o 14s ease-in-out infinite alternate;}
+        .svc-orb-2{width:400px;height:400px;bottom:-80px;right:-60px;background:rgba(56,189,248,0.04);animation:sdm-o 14s 4s ease-in-out infinite alternate;}
+        @keyframes sdm-o{from{transform:scale(1);}to{transform:scale(1.2) translate(20px,-20px);}}
+        .svc-header{position:relative;z-index:2;text-align:center;margin-bottom:3rem;margin-left:auto;margin-right:auto;}
+        .svc-tag{display:inline-flex;align-items:flex-start;gap:.55rem;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem;font-family:'DM Sans',sans-serif;}
+        .svc-tagline{width:20px;height:2px;background:var(--orange);border-radius:2px;}
+        .svc-h2{font-family:'Poppins',sans-serif;font-size:clamp(2rem,3.8vw,2.6rem);font-weight:600;line-height:1.1;color:#fff;margin-bottom:1.1rem;}
+        .svc-h2 span{color:var(--orange);}
+        .svc-sub{font-size:.97rem;line-height:1.8;color:rgb(255, 255, 255);}
+        .svc-cards{position:relative;z-index:2;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;}
+        .svc-card{background:linear-gradient(145deg, rgba(10, 54, 82, 0.55), rgb(76 186 235 / 23%));border:1px solid rgba(255,255,255,0.065);border-radius:22px;padding:2rem 1.8rem 1.8rem;position:relative;overflow:hidden;transition:transform .32s ease,box-shadow .32s ease,border-color .32s ease,background .32s ease;cursor:default;}
+        .svc-card::before{content:'';position:absolute;inset:0;border-radius:22px;background:radial-gradient(ellipse 80% 55% at 50% 0%,rgba(237,131,55,0.1) 0%,transparent 70%);opacity:0;transition:opacity .32s;pointer-events:none;}
+        .svc-card:hover{transform:translateY(-10px);box-shadow:0 22px 60px rgba(237,131,55,0.12),0 0 0 1px rgba(237,131,55,0.22);border-color:rgba(237,131,55,0.28);background:rgba(255,255,255,0.045);}
+        .svc-card:hover::before{opacity:1;}
+        .svc-card:hover .svc-icon-ring{border-color:rgba(237,131,55,0.5);box-shadow:0 0 20px rgba(237,131,55,0.2);}
+        .svc-card:hover .svc-learn{color:var(--orange);letter-spacing:.15em;}
+        .svc-icon-wrap{margin-bottom:1.4rem;position:relative;width:60px;height:60px;}
+        .svc-icon-ring{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,rgba(30,100,150,0.8),rgba(10,50,90,0.9));border:1.5px solid rgba(56,189,248,0.22);display:flex;align-items:center;justify-content:center;font-size:1.45rem;transition:border-color .32s,box-shadow .32s;position:relative;z-index:1;}
+        .svc-icon-wrap::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid rgba(237,131,55,0.12);animation:icon-pulse 2.5s ease-in-out infinite;}
+        @keyframes icon-pulse{0%,100%{transform:scale(1);opacity:.6;}50%{transform:scale(1.18);opacity:.15;}}
+        .svc-card-title{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#ee883f;margin-bottom:.7rem;line-height:1.3;}
+        .svc-card-desc{    font-size: 14px; line-height: 1.74;color: rgb(255 255 255); margin-bottom: 1.4rem; letter-spacing: 0.3px; font-family: 'Poppins';}
+        .svc-learn{display:inline-flex;align-items:flex-start;gap:.4rem;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);text-decoration:none;transition:color .25s,letter-spacing .25s;font-family:'DM Sans',sans-serif;}
+        .svc-learn-arr{display:inline-flex;align-items:flex-start;justify-content:center;width:20px;height:20px;border-radius:50%;border:1px solid currentColor;font-size:.7rem;transition:transform .25s;}
+        .svc-card:hover .svc-learn-arr{transform:rotate(45deg) scale(1.1);}
+        .svc-card-line{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--orange),transparent);opacity:0;border-radius:0 0 22px 22px;transition:opacity .32s;}
+        .svc-card:hover .svc-card-line{opacity:1;}
+        @media(max-width:900px){.svc-cards{grid-template-columns:1fr 1fr;gap:1.2rem;}}
+        @media(max-width:580px){.svc-cards{grid-template-columns:1fr;gap:1rem;}
+          .svc-h2{font-size:clamp(1.5rem,5vw,2rem);}
+          section[style*="background:#004168"]:nth-of-type(2){padding:4rem 4% 4rem !important;}
+        }
+      `}),(0,a.jsx)("div",{className:"svc-bg-r"}),(0,a.jsx)("div",{className:"svc-grid"}),(0,a.jsx)("div",{className:"svc-orb svc-orb-1"}),(0,a.jsx)("div",{className:"svc-orb svc-orb-2"}),(0,a.jsxs)("div",{className:"svc-header",children:[(0,a.jsx)("div",{className:"partners-header1",children:(0,a.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Specialized Digital Marketing Services"})}),(0,a.jsxs)("h2",{className:"svc-h2",children:["Smart Marketing. ",(0,a.jsx)("span",{children:"Sharp Execution."})," Stronger Results."]}),(0,a.jsx)("p",{className:"svc-sub",children:"As a full-service digital marketing company, we cover every stage of your customer journey through powerful digital marketing services:"})]}),(0,a.jsx)("div",{className:"svc-cards",children:h.map((e,t)=>(0,a.jsxs)("div",{className:"svc-card",style:{animationDelay:`${.05+.07*t}s`},children:[(0,a.jsx)("div",{className:"svc-icon-wrap",children:(0,a.jsx)("div",{className:"svc-icon-ring",children:e.icon})}),(0,a.jsx)("h3",{className:"svc-card-title",children:e.title}),(0,a.jsx)("div",{className:"svc-card-desc",children:e.desc}),(0,a.jsxs)("a",{className:"svc-learn",href:e.link,children:["LEARN MORE ",(0,a.jsx)("span",{className:"svc-learn-arr",children:"\u2197"})]}),"  ",(0,a.jsx)("div",{className:"svc-card-line"})]},t))})]})}let f=[{num:"01",emoji:(0,a.jsx)("img",{src:"/img/icon/proc-discover.webp",alt:"Discover and Understand",width:"32",height:"32"}),title:"Discover & Understand",desc:"Every brand is different, so we don\u2019t start with assumptions\u2014we start with you. Through in-depth discovery calls, competitor research, and audience analysis, we dig into your business goals, current challenges, and the ecosystem you operate in. This helps us understand the \u201Cwhy\u201D behind the work and sets a strong foundation for everything that follows."},{num:"02",emoji:(0,a.jsx)("img",{src:"/img/icon/proc-audit-strategize.webp",alt:"Audit and Strategize",width:"32",height:"32"}),title:"Audit & Strategize",desc:"Next, we run a full diagnostic of your digital presence\u2014website, content, SEO, paid ads, social media, and more. We identify gaps, missed opportunities, and underperforming channels. Based on this, we create a custom strategy aligned with your objectives\u2014whether it\u2019s brand awareness, lead generation, or revenue growth."},{num:"03",emoji:(0,a.jsx)("img",{src:"/img/icon/proc-execute.webp",alt:"Execute with Precision",width:"32",height:"32"}),title:"Execute with Precision",desc:"Our team then gets to work\u2014designing creatives, writing copy, setting up campaigns, building funnels, and optimizing user journeys. Each piece of work is handled with care, clarity, and a focus on performance. We believe in clean execution with zero guesswork and complete visibility for you at every milestone."},{num:"04",emoji:(0,a.jsx)("img",{src:"/img/icon/proc-track-optimize.webp",alt:"Track Report and Optimize",width:"32",height:"32"}),title:"Track, Report & Optimize",desc:"We don\u2019t just measure for the sake of it\u2014we measure what matters. Every campaign is monitored in real time, KPIs are reviewed weekly, and reports are built to be easy to understand. What\u2019s performing stays, what\u2019s not gets fixed. This ongoing optimization is what helps us keep improving, without wasting time or budget."},{num:"05",emoji:(0,a.jsx)("img",{src:"/img/icon/proc-scale-expand.webp",alt:"Scale and Expand",width:"32",height:"32"}),title:"We Scale & Expand",desc:"Once we have a winning formula, we replicate and scale it across platforms or geographies. Whether it\u2019s scaling ad budgets, expanding into new markets, or growing your content engine, we help you amplify what\u2019s working without losing control of quality or ROI."}];function x(){let[e,t]=(0,r.useState)(!1),[i,s]=(0,r.useState)(0),n=(0,r.useRef)(null);(0,r.useEffect)(()=>{let e=new IntersectionObserver(([e])=>{e.isIntersecting&&t(!0)},{threshold:.1});return n.current&&e.observe(n.current),()=>e.disconnect()},[]),(0,r.useEffect)(()=>{let e=setInterval(()=>s(e=>(e+1)%5),2200);return()=>clearInterval(e)},[]);let o=[270,342,54,126,198];return(0,a.jsxs)("section",{ref:n,className:"prc3-section",style:{position:"relative",background:"#ffffff",padding:"6rem 4% 7rem",overflow:"hidden"},children:[(0,a.jsx)("style",{children:`
+        @media(max-width:768px){ .prc3-section{ padding:3.5rem 4% 4rem !important; } }
+        @media(max-width:480px){ .prc3-section{ padding:2.5rem 4% 3rem !important; } }
+        /* \u{2500}\u{2500} Process Radial Section \u{2500}\u{2500} */
+        .prc3-dotgrid{position:absolute;inset:0;pointer-events:none;z-index:0;
+          background-image:radial-gradient(circle,rgba(237,131,55,0.18) 1px,transparent 1px);
+          background-size:32px 32px;}
+        .prc3-dotgrid::after{content:'';position:absolute;inset:0;
+          background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(255,255,255,0) 30%,#fff 80%);}
+
+        .prc3-header{position:relative;z-index:2;text-align:center;margin-bottom:3.5rem;}
+        .prc3-eyebrow{display:inline-flex;align-items:flex-start;gap:.55rem;font-size:.7rem;font-weight:700;
+          letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:.9rem;font-family:'DM Sans',sans-serif;}
+        .prc3-eye-line{width:28px;height:1.5px;background:var(--orange);border-radius:2px;}
+        .prc3-h2{font-family:'Poppins',sans-serif;font-size:clamp(1.9rem,3vw,2.6rem);font-weight:700;
+          color:#0d1f2d;line-height:1.12;margin-bottom:.8rem;}
+        .prc3-h2 em{color:var(--orange);font-style:normal;}
+        .prc3-sub{font-size:.95rem;line-height:1.82;color:#5a6a7a;margin:0 auto;}
+
+        /* \u{2500}\u{2500} Radial canvas \u{2500}\u{2500} */
+        .prc3-radial-wrap{position:relative;z-index:2;display:flex;gap:3.5rem;
+          align-items:flex-start;justify-content:center;flex-wrap:wrap;max-width:1200px;margin:0 auto;}
+
+        .prc3-orbit-area{position:relative;width:500px;height:500px;flex-shrink:0;}
+
+        /* outer dashed ring */
+        .prc3-ring-outer{position:absolute;inset:10px;border-radius:50%;
+          border:1.5px dashed rgba(237,131,55,0.2);animation:ring-rot 30s linear infinite;}
+        .prc3-ring-mid{position:absolute;inset:55px;border-radius:50%;
+          border:1px dashed rgba(2,43,68,0.1);animation:ring-rot 20s linear infinite reverse;}
+        @keyframes ring-rot{to{transform:rotate(360deg);}}
+
+        /* center hub */
+        .prc3-hub{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+          width:110px;height:110px;border-radius:50%;z-index:5;
+          background:linear-gradient(135deg,#fff 0%,#fef3e8 100%);
+          box-shadow:0 0 0 8px rgba(237,131,55,0.08),0 0 0 16px rgba(237,131,55,0.04),
+                     0 12px 40px rgba(237,131,55,0.2);
+          display:flex;flex-direction:column;align-items:center;justify-content:center;
+          border:2px solid rgba(237,131,55,0.35);cursor:default;}
+        .prc3-hub-logo{width:82px;height:auto;object-fit:contain;margin-bottom:4px;display:block;}
+        .prc3-hub-num{font-family:'Poppins',sans-serif;font-size:2rem;font-weight:900;
+          color:#0d1f2d;line-height:1;}
+        .prc3-hub-sub{font-family:'DM Sans',sans-serif;font-size:.6rem;color:#8a9aaa;margin-top:2px;}
+
+        /* spoke lines (SVG) */
+        .prc3-spokes{position:absolute;inset:0;pointer-events:none;z-index:2;}
+
+        /* orbit nodes */
+        .prc3-orb-node{position:absolute;transform:translate(-50%,-50%);z-index:6;cursor:pointer;}
+        .prc3-orb-ring{width:56px;height:56px;border-radius:50%;border:2px solid rgba(237,131,55,0.25);
+          background:#fff;display:flex;align-items:center;justify-content:center;font-size:1.4rem;
+          box-shadow:0 4px 18px rgba(2,43,68,0.1);transition:all .3s ease;position:relative;}
+        .prc3-orb-ring::before{content:'';position:absolute;inset:-5px;border-radius:50%;
+          border:1px solid rgba(237,131,55,0);transition:border-color .3s,transform .4s;}
+        .prc3-orb-node.active .prc3-orb-ring{
+          background:linear-gradient(135deg,var(--orange),var(--orange-light));
+          border-color:var(--orange);box-shadow:0 8px 30px rgba(237,131,55,0.4);transform:scale(1.18);}
+        .prc3-orb-node.active .prc3-orb-ring::before{border-color:rgba(237,131,55,0.3);transform:scale(1.25);}
+        .prc3-orb-emoji img{width:32px;height:32px;object-fit:contain;display:block;transition:filter .3s;}
+        .prc3-orb-node.active .prc3-orb-emoji img{filter:brightness(0) invert(1);}
+        .prc3-step-num{position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;
+          background:var(--orange);color:#fff;font-family:'Poppins',sans-serif;font-size:.6rem;
+          font-weight:800;display:flex;align-items:flex-start;justify-content:center;
+          box-shadow:0 2px 8px rgba(237,131,55,0.5);}
+
+        /* \u{2500}\u{2500} Magazine card strip (right side) \u{2500}\u{2500} */
+        .prc3-cards-col{display:flex;flex-direction:column;gap:1.2rem;flex:1;min-width:340px;max-width:600px;}
+
+        .prc3-mag-card{display:flex;align-items:stretch;border-radius:14px;overflow:hidden;
+          background:#fff;box-shadow:0 4px 24px rgba(2,43,68,0.07);
+          border:1px solid rgba(2,43,68,0.07);
+          transition:box-shadow .3s,transform .3s,border-color .3s;cursor:pointer;
+          opacity:0;transform:translateX(30px);
+          transition:opacity .6s ease,transform .6s ease,box-shadow .3s,border-color .3s;}
+        .prc3-mag-card.vis{opacity:1;transform:translateX(0);}
+        .prc3-mag-card.active-card{border-color:rgba(237,131,55,0.4);
+          box-shadow:0 8px 36px rgba(237,131,55,0.15);}
+        .prc3-mag-card:hover{box-shadow:0 10px 40px rgba(237,131,55,0.14);
+          transform:translateX(4px);border-color:rgba(237,131,55,0.3);}
+
+        /* left accent bar */
+        .prc3-accent-bar{width:7px;flex-shrink:0;background:rgba(2,43,68,0.08);
+          transition:background .3s;}
+        .prc3-mag-card.active-card .prc3-accent-bar{background:var(--orange);}
+        .prc3-mag-card:hover .prc3-accent-bar{background:var(--orange-light);}
+
+        /* card body */
+        .prc3-card-body{padding:1.4rem 1.6rem;flex:1;}
+        .prc3-card-top{display:flex;align-items:flex-start;gap:.9rem;margin-bottom:.6rem;}
+        .prc3-card-num{font-family:'Poppins',sans-serif;font-size:2.2rem;font-weight:900;
+          color:rgba(2,43,68,0.08);line-height:1;transition:color .3s;min-width:48px;}
+        .prc3-mag-card.active-card .prc3-card-num{color:rgba(237,131,55,0.2);}
+        .prc3-card-title-wrap{flex:1;}
+        .prc3-card-title{font-family:'Poppins',sans-serif;font-size:1rem;font-weight:600;
+          color:#0d1f2d;line-height:1.3;transition:color .3s;}
+        .prc3-mag-card.active-card .prc3-card-title{color:var(--orange);}
+        .prc3-card-icon{font-size:1.4rem;opacity:.8;display:flex;align-items:center;justify-content:center;}
+        .prc3-card-icon img{width:28px;height:28px;object-fit:contain;transition:filter .3s;}
+        .prc3-mag-card.active-card .prc3-card-icon img{filter:brightness(0) saturate(100%) invert(51%) sepia(98%) saturate(1200%) hue-rotate(1deg) brightness(103%);}
+        .prc3-card-desc{font-size:.92rem;line-height:1.78;color:#000;
+          font-family:'poppins',sans-serif;
+          max-height:0;overflow:hidden;transition:max-height .5s ease,opacity .4s ease;opacity:0;}
+        .prc3-mag-card.active-card .prc3-card-desc{max-height:160px;opacity:1;}
+h3.faq-h3 {
+    color: black;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+        /* mobile */
+        @media(max-width:860px){
+          .prc3-orbit-area{width:320px;height:320px;}
+          .prc3-hub{width:75px;height:75px;}
+          .prc3-hub-num{font-size:1.4rem;}
+          .prc3-orb-ring{width:44px;height:44px;font-size:1.1rem;}
+        }
+        @media(max-width:640px){
+          .prc3-radial-wrap{flex-direction:column;gap:2rem;align-items:flex-start;}
+          .prc3-orbit-area{width:280px;height:280px;}
+          .prc3-cards-col{max-width:100%;width:100%;min-width:unset;}
+          .prc3-mag-card{transform:translateX(0)!important;opacity:1!important;}
+        }
+        @media(max-width:480px){
+          .prc3-orbit-area{width:240px;height:240px;}
+          .prc3-hub{width:60px;height:60px;}
+          .prc3-hub-label{font-size:.5rem;}
+          .prc3-hub-num{font-size:1.1rem;}
+          .prc3-hub-sub{display:none;}
+          .prc3-orb-ring{width:36px;height:36px;font-size:.9rem;}
+          .prc3-step-num{width:16px;height:16px;font-size:.5rem;}
+          .prc3-card-body{padding:1rem 1.2rem;}
+        }
+      `}),(0,a.jsx)("div",{className:"prc3-dotgrid"}),(0,a.jsxs)("div",{className:"prc3-header",children:[(0,a.jsx)("div",{className:"partners-header1",children:(0,a.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Digital Marketing Process"})}),(0,a.jsxs)("h3",{className:"prc3-h2",children:["Simple. Strategic. ",(0,a.jsx)("em",{children:"Built Around Your Goals."})]}),(0,a.jsx)("p",{className:"prc3-sub",children:"We follow a clear, collaborative process that ensures every step is aligned with your business outcomes and not just marketing metrics."})]}),(0,a.jsxs)("div",{className:"prc3-radial-wrap",children:[(0,a.jsxs)("div",{className:"prc3-orbit-area",children:[(0,a.jsx)("div",{className:"prc3-ring-outer"}),(0,a.jsx)("div",{className:"prc3-ring-mid"}),(0,a.jsxs)("svg",{className:"prc3-spokes",viewBox:"0 0 500 500",fill:"none",children:[f.map((e,t)=>{let r=o[t]*Math.PI/180,s=250+210*Math.cos(r),n=250+210*Math.sin(r),l=i===t;return(0,a.jsx)("line",{x1:"250",y1:"250",x2:s,y2:n,stroke:l?"rgba(237,131,55,0.55)":"rgba(2,43,68,0.07)",strokeWidth:l?"2":"1",strokeDasharray:l?"none":"4 4",style:{transition:"stroke .4s,stroke-width .4s"}},t)}),f.map((e,t)=>{let i=o[t]*Math.PI/180;return(0,a.jsx)("line",{x1:250+230*Math.cos(i),y1:250+230*Math.sin(i),x2:250+240*Math.cos(i),y2:250+240*Math.sin(i),stroke:"rgba(237,131,55,0.35)",strokeWidth:"2",strokeLinecap:"round"},`t${t}`)})]}),(0,a.jsx)("div",{className:"prc3-hub",children:(0,a.jsx)("img",{src:"/img/priyam-consultancy-logo.png",alt:"PCS Business Solution",className:"prc3-hub-logo"})}),f.map((e,t)=>{let r=o[t]*Math.PI/180,n=250+210*Math.cos(r),l=250+210*Math.sin(r),c=e=>`${e/500*100}%`;return(0,a.jsx)("div",{className:`prc3-orb-node${i===t?" active":""}`,style:{left:c(n),top:c(l)},onClick:()=>s(t),children:(0,a.jsxs)("div",{className:"prc3-orb-ring",children:[(0,a.jsx)("span",{className:"prc3-orb-emoji",children:e.emoji}),(0,a.jsx)("span",{className:"prc3-step-num",children:e.num})]})},t)})]}),(0,a.jsx)("div",{className:"prc3-cards-col",children:f.map((t,r)=>(0,a.jsxs)("div",{className:`prc3-mag-card${e?" vis":""}${i===r?" active-card":""}`,style:{transitionDelay:e?`${.1*r}s`:"0s"},onClick:()=>s(r),children:[(0,a.jsx)("div",{className:"prc3-accent-bar"}),(0,a.jsxs)("div",{className:"prc3-card-body",children:[(0,a.jsxs)("div",{className:"prc3-card-top",children:[(0,a.jsx)("div",{className:"prc3-card-num",children:t.num}),(0,a.jsx)("div",{className:"prc3-card-title-wrap",children:(0,a.jsx)("h4",{className:"prc3-card-title",children:t.title})}),(0,a.jsx)("span",{className:"prc3-card-icon",children:t.emoji})]}),(0,a.jsx)("div",{className:"prc3-card-desc",children:t.desc})]})]},r))})]})]})}let b=[{num:"01",color:"#34d399",label:"We Collaborate, Not Dictate",title:"We Collaborate, Not Dictate",desc:"We work closely with your team to build practical, scalable digital marketing strategies aligned with your goals, ensuring clarity, flexibility, and effective execution."},{num:"02",color:"#a78bfa",label:"We Build with Context",title:"We Build with Context",desc:"Our digital marketing services are tailored to your industry, audience, and growth stage, ensuring strategies are relevant, personalized, and designed to deliver meaningful results."},{num:"03",color:"#ed8337",label:"We Own Outcomes",title:"We Own Outcomes",desc:"We take full responsibility for your digital marketing performance, ensuring transparency, accountability, and consistent results from execution to optimization and measurable business growth."}];function y(){let[e,t]=(0,r.useState)([!1,!1,!1]),i=[(0,r.useRef)(null),(0,r.useRef)(null),(0,r.useRef)(null)];return(0,r.useEffect)(()=>{i.forEach((e,i)=>{let a=new IntersectionObserver(([e])=>{e.isIntersecting&&t(e=>{let t=[...e];return t[i]=!0,t})},{threshold:.15});return e.current&&a.observe(e.current),()=>a.disconnect()})},[]),(0,a.jsxs)("section",{className:"wcu-section",style:{position:"relative",background:"#004168",padding:"4rem 6%",overflow:"hidden"},children:[(0,a.jsx)("style",{children:`
+        @media(max-width:768px){ .wcu-section{ padding:3rem 5% !important; } }
+        @media(max-width:480px){ .wcu-section{ padding:2.5rem 4% !important; } }
+        .wcu-grid-bg{position:absolute;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.03) 1px,transparent 1px);background-size:55px 55px;}
+        .wcu-orb-el{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0;}
+        .wcu-orb-1{width:420px;height:420px;top:-100px;left:-80px;background:rgba(237,131,55,0.07);animation:wcu-of 12s ease-in-out infinite alternate;}
+        .wcu-orb-2{width:360px;height:360px;bottom:-80px;right:-60px;background:rgba(56,189,248,0.05);animation:wcu-of 16s 3s ease-in-out infinite alternate;}
+        @keyframes wcu-of{from{transform:scale(1);}to{transform:scale(1.25) translate(18px,-18px);}}
+        .wcu-inner{position:relative;z-index:2;max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:flex-start;}
+        .wcu-left{position:relative;display:flex;align-items:flex-start;justify-content:center;min-height:420px;}
+        .wcu-illus{position:relative;width:380px;height:380px;display:flex;align-items:flex-start;justify-content:center;}
+        .wcu-illus svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 0 30px rgba(237,131,55,0.12));}
+        .wcu-stat{position:absolute;background:rgba(10,54,82,0.9);backdrop-filter:blur(10px);border:1px solid rgba(237,131,55,0.25);border-radius:12px;padding:8px 14px;font-family:'DM Sans',sans-serif;font-size:0.7rem;color:#fff;white-space:nowrap;box-shadow:0 6px 24px rgba(0,0,0,0.3);animation:wcu-cf 3s ease-in-out infinite;}
+        .wcu-stat .sc-label{font-size:0.58rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:.06em;margin-bottom:2px;}
+        .wcu-stat .sc-val{font-family:'Poppins',sans-serif;font-weight:700;font-size:0.95rem;color:var(--orange);}
+        .wcu-stat .sc-up{color:#34d399;font-size:0.7rem;}
+        .wcu-sc-1{top:30px;left:0;animation-delay:0s;}
+        .wcu-sc-2{top:40px;right:0;animation-delay:.8s;}
+        .wcu-sc-3{bottom:60px;left:10px;animation-delay:1.6s;}
+        .wcu-sc-4{bottom:50px;right:0;animation-delay:.4s;}
+        @keyframes wcu-cf{0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+        .wcu-right{display:flex;flex-direction:column;gap:0;}
+        .wcu-point{display:flex;gap:0;align-items:stretch;position:relative;transition:opacity .55s ease,transform .55s ease;}
+        .wcu-point.vis{opacity:1 !important;transform:translateX(0) !important;}
+        .wcu-num-col{display:flex;flex-direction:column;align-items:flex-start;width:52px;flex-shrink:0;padding-top:4px;}
+        .wcu-num{font-family:'Space Mono',monospace;font-size:1.5rem;font-weight:700;line-height:1;letter-spacing:-0.03em;}
+        .wcu-vert-line{flex:1;width:2px;margin:8px auto 0;background:linear-gradient(180deg,rgba(255,255,255,0.1) 0%,transparent 100%);border-radius:2px;}
+        .wcu-content{flex:1;padding:0 0 3rem 1.2rem;}
+        .wcu-label{display:none;align-items:flex-start;gap:.35rem;font-family:'DM Sans',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.28rem .85rem;border-radius:20px;margin-bottom:.75rem;border:1px solid;}
+        .wcu-title{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#f4a164;line-height:1.3;margin-bottom:.5rem;}
+        .wcu-desc{font-size:.92rem;line-height:1.76;color:rgb(255 255 255 / 90%);max-width:420px;font-family:'poppins'}
+        .wcu-arrow-span{display:inline-block;width:60px;height:2px;position:relative;vertical-align:middle;margin-left:.6rem;}
+        @media(max-width:900px){
+          .wcu-inner{grid-template-columns:1fr;gap:3rem;}
+          .wcu-left{min-height:320px;}
+          .wcu-illus{width:300px;height:300px;}
+        }
+        @media(max-width:480px){
+          .wcu-inner{gap:2rem;}
+          .wcu-left{min-height:260px;}
+          .wcu-illus{width:240px;height:240px;}
+          .wcu-stat{font-size:.6rem;padding:6px 10px;}
+          .wcu-stat .sc-val{font-size:.8rem;}
+          .wcu-sc-1{top:10px;left:-5px;}
+          .wcu-sc-2{top:10px;right:-5px;}
+          .wcu-sc-3{bottom:30px;left:-5px;}
+          .wcu-sc-4{bottom:30px;right:-5px;}
+          .wcu-content{padding:0 0 2rem 1rem;}
+          .wcu-desc{font-size:.85rem;}
+        }
+      `}),(0,a.jsx)("div",{className:"wcu-grid-bg"}),(0,a.jsx)("div",{className:"wcu-orb-el wcu-orb-1"}),(0,a.jsx)("div",{className:"wcu-orb-el wcu-orb-2"}),(0,a.jsxs)("div",{className:"prc3-header",children:[(0,a.jsx)("div",{className:"partners-header1",children:(0,a.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"How We Work"})}),(0,a.jsxs)("h2",{className:"prc3-h2",style:{color:"#fff"},children:["Plan With Purpose. ",(0,a.jsx)("em",{children:"Execute With Precision."})]})]}),(0,a.jsxs)("div",{className:"wcu-inner",children:[(0,a.jsxs)("div",{className:"wcu-left",children:[(0,a.jsxs)("div",{className:"wcu-stat wcu-sc-1",children:[(0,a.jsx)("div",{className:"sc-label",children:"Organic Reach"}),(0,a.jsxs)("div",{className:"sc-val",children:["+218% ",(0,a.jsx)("span",{className:"sc-up",children:"\u2191"})]})]}),(0,a.jsxs)("div",{className:"wcu-stat wcu-sc-2",children:[(0,a.jsx)("div",{className:"sc-label",children:"Campaign ROI"}),(0,a.jsxs)("div",{className:"sc-val",children:["4.8x ",(0,a.jsx)("span",{className:"sc-up",children:"\u2191"})]})]}),(0,a.jsxs)("div",{className:"wcu-stat wcu-sc-3",children:[(0,a.jsx)("div",{className:"sc-label",children:"Lead Quality"}),(0,a.jsxs)("div",{className:"sc-val",children:["94% ",(0,a.jsx)("span",{className:"sc-up",children:"\u2191"})]})]}),(0,a.jsxs)("div",{className:"wcu-stat wcu-sc-4",children:[(0,a.jsx)("div",{className:"sc-label",children:"Conversions"}),(0,a.jsxs)("div",{className:"sc-val",children:["+312% ",(0,a.jsx)("span",{className:"sc-up",children:"\u2191"})]})]}),(0,a.jsx)("div",{className:"wcu-illus",children:(0,a.jsxs)("svg",{viewBox:"0 0 380 380",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[(0,a.jsx)("circle",{cx:"190",cy:"190",r:"155",stroke:"rgba(237,131,55,0.08)",strokeWidth:"1",strokeDasharray:"6 4"}),(0,a.jsx)("circle",{cx:"190",cy:"190",r:"120",stroke:"rgba(237,131,55,0.12)",strokeWidth:"1",strokeDasharray:"4 6"}),(0,a.jsx)("rect",{x:"110",y:"140",width:"160",height:"105",rx:"10",fill:"rgba(10,54,82,0.9)",stroke:"rgba(237,131,55,0.4)",strokeWidth:"1.5"}),(0,a.jsx)("rect",{x:"118",y:"148",width:"144",height:"88",rx:"6",fill:"#0a2535"}),(0,a.jsx)("rect",{x:"176",y:"245",width:"28",height:"12",rx:"2",fill:"rgba(10,54,82,0.9)",stroke:"rgba(237,131,55,0.3)",strokeWidth:"1"}),(0,a.jsx)("rect",{x:"158",y:"255",width:"64",height:"6",rx:"3",fill:"rgba(10,54,82,0.9)",stroke:"rgba(237,131,55,0.25)",strokeWidth:"1"}),(0,a.jsxs)("rect",{x:"126",y:"210",width:"12",height:"22",rx:"2",fill:"rgba(237,131,55,0.7)",children:[(0,a.jsx)("animate",{attributeName:"height",values:"10;22;14;22",dur:"2.5s",repeatCount:"indefinite"}),(0,a.jsx)("animate",{attributeName:"y",values:"222;210;216;210",dur:"2.5s",repeatCount:"indefinite"})]}),(0,a.jsxs)("rect",{x:"143",y:"200",width:"12",height:"32",rx:"2",fill:"#38bdf8",children:[(0,a.jsx)("animate",{attributeName:"height",values:"18;32;24;32",dur:"2.8s",repeatCount:"indefinite"}),(0,a.jsx)("animate",{attributeName:"y",values:"214;200;208;200",dur:"2.8s",repeatCount:"indefinite"})]}),(0,a.jsxs)("rect",{x:"160",y:"206",width:"12",height:"26",rx:"2",fill:"rgba(237,131,55,0.5)",children:[(0,a.jsx)("animate",{attributeName:"height",values:"14;26;20;26",dur:"2.2s",repeatCount:"indefinite"}),(0,a.jsx)("animate",{attributeName:"y",values:"218;206;212;206",dur:"2.2s",repeatCount:"indefinite"})]}),(0,a.jsxs)("rect",{x:"177",y:"195",width:"12",height:"37",rx:"2",fill:"#34d399",children:[(0,a.jsx)("animate",{attributeName:"height",values:"22;37;28;37",dur:"3s",repeatCount:"indefinite"}),(0,a.jsx)("animate",{attributeName:"y",values:"210;195;204;195",dur:"3s",repeatCount:"indefinite"})]}),(0,a.jsxs)("rect",{x:"194",y:"203",width:"12",height:"29",rx:"2",fill:"rgba(237,131,55,0.8)",children:[(0,a.jsx)("animate",{attributeName:"height",values:"16;29;20;29",dur:"2.6s",repeatCount:"indefinite"}),(0,a.jsx)("animate",{attributeName:"y",values:"216;203;212;203",dur:"2.6s",repeatCount:"indefinite"})]}),(0,a.jsxs)("rect",{x:"211",y:"198",width:"12",height:"34",rx:"2",fill:"#38bdf8",children:[(0,a.jsx)("animate",{attributeName:"height",values:"20;34;26;34",dur:"2.4s",repeatCount:"indefinite"}),(0,a.jsx)("animate",{attributeName:"y",values:"212;198;206;198",dur:"2.4s",repeatCount:"indefinite"})]}),(0,a.jsxs)("rect",{x:"228",y:"193",width:"12",height:"39",rx:"2",fill:"#34d399",children:[(0,a.jsx)("animate",{attributeName:"height",values:"24;39;30;39",dur:"2.7s",repeatCount:"indefinite"}),(0,a.jsx)("animate",{attributeName:"y",values:"208;193;201;193",dur:"2.7s",repeatCount:"indefinite"})]}),(0,a.jsx)("polyline",{points:"126,208 143,198 160,204 177,190 194,196 211,184 228,178 250,170",stroke:"#ed8337",strokeWidth:"2",fill:"none",strokeLinecap:"round",strokeLinejoin:"round",children:(0,a.jsx)("animate",{attributeName:"stroke-dasharray",values:"0,300;300,0",dur:"2s",fill:"freeze"})}),(0,a.jsx)("circle",{cx:"250",cy:"170",r:"3",fill:"#ed8337",children:(0,a.jsx)("animate",{attributeName:"r",values:"2;4;2",dur:"1.5s",repeatCount:"indefinite"})}),(0,a.jsx)("rect",{x:"126",y:"153",width:"60",height:"6",rx:"3",fill:"rgba(237,131,55,0.3)"}),(0,a.jsx)("rect",{x:"192",y:"153",width:"30",height:"6",rx:"3",fill:"rgba(255,255,255,0.1)"}),(0,a.jsx)("rect",{x:"228",y:"153",width:"26",height:"6",rx:"3",fill:"rgba(255,255,255,0.08)"}),(0,a.jsxs)("g",{transform:"translate(68,110)",children:[(0,a.jsx)("circle",{cx:"22",cy:"22",r:"22",fill:"rgba(13,74,112,0.85)",stroke:"rgba(237,131,55,0.35)",strokeWidth:"1.5"}),(0,a.jsx)("text",{x:"22",y:"28",textAnchor:"middle",fontSize:"18",children:"\u{1F50D}"}),(0,a.jsx)("animate",{attributeName:"transform",attributeType:"XML",values:"translate(68,110);translate(68,100);translate(68,110)",dur:"2.5s",repeatCount:"indefinite",keyTimes:"0;0.5;1"})]}),(0,a.jsxs)("g",{transform:"translate(268,108)",children:[(0,a.jsx)("circle",{cx:"22",cy:"22",r:"22",fill:"rgba(13,74,112,0.85)",stroke:"rgba(237,131,55,0.35)",strokeWidth:"1.5"}),(0,a.jsx)("text",{x:"22",y:"28",textAnchor:"middle",fontSize:"18",children:"\u{1F4E3}"}),(0,a.jsx)("animate",{attributeName:"transform",attributeType:"XML",values:"translate(268,108);translate(268,98);translate(268,108)",dur:"3s",repeatCount:"indefinite",keyTimes:"0;0.5;1"})]}),(0,a.jsxs)("g",{transform:"translate(62,232)",children:[(0,a.jsx)("circle",{cx:"22",cy:"22",r:"22",fill:"rgba(13,74,112,0.85)",stroke:"rgba(56,189,248,0.35)",strokeWidth:"1.5"}),(0,a.jsx)("text",{x:"22",y:"28",textAnchor:"middle",fontSize:"18",children:"\u{1F4E7}"}),(0,a.jsx)("animate",{attributeName:"transform",attributeType:"XML",values:"translate(62,232);translate(62,222);translate(62,232)",dur:"2.8s",repeatCount:"indefinite",keyTimes:"0;0.5;1"})]}),(0,a.jsxs)("g",{transform:"translate(270,238)",children:[(0,a.jsx)("circle",{cx:"22",cy:"22",r:"22",fill:"rgba(13,74,112,0.85)",stroke:"rgba(52,211,153,0.35)",strokeWidth:"1.5"}),(0,a.jsx)("text",{x:"22",y:"28",textAnchor:"middle",fontSize:"18",children:"\u{1F4CA}"}),(0,a.jsx)("animate",{attributeName:"transform",attributeType:"XML",values:"translate(270,238);translate(270,228);translate(270,238)",dur:"3.2s",repeatCount:"indefinite",keyTimes:"0;0.5;1"})]}),(0,a.jsx)("line",{x1:"112",y1:"132",x2:"130",y2:"148",stroke:"rgba(237,131,55,0.2)",strokeWidth:"1",strokeDasharray:"4 3",children:(0,a.jsx)("animate",{attributeName:"stroke-dashoffset",from:"0",to:"-14",dur:"1.5s",repeatCount:"indefinite"})}),(0,a.jsx)("line",{x1:"268",y1:"132",x2:"254",y2:"148",stroke:"rgba(237,131,55,0.2)",strokeWidth:"1",strokeDasharray:"4 3",children:(0,a.jsx)("animate",{attributeName:"stroke-dashoffset",from:"0",to:"-14",dur:"1.8s",repeatCount:"indefinite"})}),(0,a.jsx)("line",{x1:"106",y1:"252",x2:"120",y2:"248",stroke:"rgba(56,189,248,0.2)",strokeWidth:"1",strokeDasharray:"4 3",children:(0,a.jsx)("animate",{attributeName:"stroke-dashoffset",from:"0",to:"-14",dur:"1.6s",repeatCount:"indefinite"})}),(0,a.jsx)("line",{x1:"270",y1:"252",x2:"262",y2:"248",stroke:"rgba(52,211,153,0.2)",strokeWidth:"1",strokeDasharray:"4 3",children:(0,a.jsx)("animate",{attributeName:"stroke-dashoffset",from:"0",to:"-14",dur:"2s",repeatCount:"indefinite"})}),(0,a.jsxs)("g",{transform:"translate(168,60)",children:[(0,a.jsx)("circle",{cx:"22",cy:"22",r:"20",fill:"rgba(237,131,55,0.12)",stroke:"rgba(237,131,55,0.45)",strokeWidth:"1.5"}),(0,a.jsx)("text",{x:"22",y:"28",textAnchor:"middle",fontSize:"16",children:"\u{1F3AF}"})]}),(0,a.jsx)("line",{x1:"190",y1:"102",x2:"190",y2:"140",stroke:"rgba(237,131,55,0.2)",strokeWidth:"1",strokeDasharray:"4 3",children:(0,a.jsx)("animate",{attributeName:"stroke-dashoffset",from:"0",to:"-14",dur:"1.2s",repeatCount:"indefinite"})})]})})]}),(0,a.jsx)("div",{className:"wcu-right",children:b.map((t,r)=>(0,a.jsxs)("div",{ref:i[r],className:`wcu-point${e[r]?" vis":""}`,style:{opacity:0,transform:"translateX(30px)",transitionDelay:`${.1+.15*r}s`},children:[(0,a.jsxs)("div",{className:"wcu-num-col",children:[(0,a.jsx)("div",{className:"wcu-num",style:{color:t.color},children:t.num}),r<2&&(0,a.jsx)("div",{className:"wcu-vert-line"})]}),(0,a.jsxs)("div",{className:"wcu-content",style:2===r?{paddingBottom:0}:{},children:[(0,a.jsxs)("div",{className:"wcu-label",style:{color:t.color,borderColor:`${t.color}55`,background:`${t.color}14`},children:[t.label,(0,a.jsxs)("span",{className:"wcu-arrow-span",style:{"--arrow-color":t.color,"--arrowb-color":t.color},children:[(0,a.jsx)("span",{style:{position:"absolute",top:0,left:0,right:0,height:"2px",borderRadius:"2px",background:t.color}}),(0,a.jsx)("span",{style:{position:"absolute",right:"-1px",top:"-4px",width:0,height:0,borderTop:"5px solid transparent",borderBottom:"5px solid transparent",borderLeft:`8px solid ${t.color}`}})]})]}),(0,a.jsx)("h3",{className:"wcu-title",children:t.title}),(0,a.jsx)("div",{className:"wcu-desc",children:t.desc})]})]},r))})]})]})}let w=[{q:"What makes PCS different from all the other digital marketing agencies out there?",a:"At PCS, we focus on strategy, creativity, and measurable business growth. Every solution is customised to your brand goals, helping you build stronger visibility, better engagement, and long-term digital success."},{q:"Do you offer custom packages or fixed pricing?",a:"Yes, we offer both fixed plans and customised packages based on your business requirements, industry, goals, and marketing scope to ensure you receive the right solution within your budget."},{q:"Do you only work with established businesses/brands, or with startups as well?",a:"We work with startups, small businesses, growing brands, and established companies. Our team creates scalable digital marketing strategies suitable for businesses at every stage of growth and expansion."},{q:"Can you manage the entire digital marketing process?",a:"Yes, PCS provides complete end-to-end digital marketing support including branding, website development, SEO, content marketing, social media management, paid advertising, lead generation, and performance tracking."},{q:"Do you provide monthly reporting?",a:"Yes, we provide detailed monthly performance reports that include campaign insights, SEO progress, website traffic, engagement metrics, lead performance, and other important data to help you track growth clearly."},{q:"Can PCS help with both organic and paid marketing?",a:"Absolutely. We specialise in both organic and paid marketing strategies including SEO, content marketing, social media growth, Google Ads, Meta Ads, and performance campaigns to support sustainable business growth."}];function v(){let[e,t]=(0,r.useState)(null),i=i=>{t(e===i?null:i)};return(0,a.jsxs)("section",{className:"faq-section",children:[(0,a.jsx)("style",{children:`
+       .container {width:100%;}
+        .faq-section{ padding:4rem 6%; }
+        .faq-wrapper{ display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+        .faq-item{  border-radius:12px; overflow:hidden; margin-bottom:1rem; background:#fff;  }
+        .faq-question{ display:flex; justify-content:space-between; align-items:flex-start; padding:1.1rem 1.4rem; cursor:pointer; font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; color:#0d1f2d; gap:1rem; }
+        .faq-question .icon{ flex-shrink:0; font-size:1.3rem; color:var(--orange); }
+        .faq-answer{ padding:0 1.4rem 1.1rem; font-size:.9rem; line-height:1.78; color:#5a6a7a; font-family:'Poppins',sans-serif; }
+        .faq-head{ text-align:center; margin-bottom:2.5rem; }
+        .faq-head h2{ font-family:'Poppins',sans-serif; font-size:clamp(1.6rem,3vw,2.4rem); font-weight:700; color:#0d1f2d;text-align:center; }
+        .faq-head h2 span{ color:var(--orange); }
+        @media(max-width:768px){
+          .faq-wrapper{ grid-template-columns:1fr; }
+          .faq-section{ padding:3rem 4%; }
+        }
+        @media(max-width:480px){
+          .faq-section{ padding:2.5rem 4%; }
+          .faq-question{ font-size:.88rem; padding:.9rem 1rem; }
+          .faq-answer{ padding:0 1rem .9rem; font-size:.85rem; }
+        }
+      `}),(0,a.jsx)("div",{className:"partners-header2",style:{textAlign:"center",marginTop:"20px"},children:(0,a.jsx)("h4",{className:"partners-eyebrow",children:"Frequently Asked Questions"})}),(0,a.jsxs)("div",{className:"container",children:[(0,a.jsx)("div",{className:"faq-head",children:(0,a.jsxs)("h3",{className:"faq-h3",children:["Queries That Could ",(0,a.jsx)("span",{children:"Hold You Back"})]})}),(0,a.jsxs)("div",{className:"faq-wrapper",children:[(0,a.jsx)("div",{className:"faq-col",children:w.slice(0,3).map((t,r)=>(0,a.jsxs)("div",{className:"faq-item",children:[(0,a.jsxs)("div",{className:"faq-question",onClick:()=>i(r),children:[(0,a.jsx)("span",{children:t.q}),(0,a.jsx)("span",{className:"icon",children:e===r?"\u2212":"+"})]}),e===r&&(0,a.jsx)("div",{className:"faq-answer",children:t.a})]},r))}),(0,a.jsx)("div",{className:"faq-col",children:w.slice(3,6).map((t,r)=>(0,a.jsxs)("div",{className:"faq-item",children:[(0,a.jsxs)("div",{className:"faq-question",onClick:()=>i(r+3),children:[(0,a.jsx)("span",{children:t.q}),(0,a.jsx)("span",{className:"icon",children:e===r+3?"\u2212":"+"})]}),e===r+3&&(0,a.jsx)("div",{className:"faq-answer",children:t.a})]},r+3))})]})]})]})}function j(){return(0,a.jsxs)(l.A,{title:"Digital Marketing Services in India | PCS Business Solution",description:"Result-driven digital marketing services including SEO, social media marketing, PPC, content marketing, and email marketing to grow your business online.",children:[(0,a.jsx)(d,{}),(0,a.jsx)(p,{}),(0,a.jsx)(m,{}),(0,a.jsx)(g,{}),(0,a.jsx)(u,{}),(0,a.jsx)(x,{}),(0,a.jsx)(y,{}),(0,a.jsx)(v,{}),(0,a.jsx)(n.A,{}),(0,a.jsx)(o.A,{})]})}}}]);

@@ -409,6 +409,10 @@ span.tab-emoji {
   text-align: justify;
   font-family: 'Poppins', sans-serif;
 }
+h3.insights-h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 .right {
   flex: 1;
   position: relative;

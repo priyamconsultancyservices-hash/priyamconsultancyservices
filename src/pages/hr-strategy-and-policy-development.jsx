@@ -3,7 +3,184 @@ import emailjs from "@emailjs/browser";
 
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 const banner = "/img/hr-strategy.png";
+
+const pageUrl = "https://www.priyamconsultancy.com/hr-strategy-and-policy-development/";
+const imageUrl = "https://www.priyamconsultancy.com/img/hr-strategy.png";
+
+const schemaData = [
+  // Breadcrumb List Schema
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://www.priyamconsultancy.com/",
+          "name": "Home"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://www.priyamconsultancy.com/hr-strategy-and-policy-development/",
+          "name": "HR Strategy and Policy Development"
+        }
+      }
+    ]
+  },
+
+  // Organization Schema
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Priyam Consultancy Services",
+    "url": "https://www.priyamconsultancy.com/",
+    "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+91 96774 44048",
+        "contactType": "customer support"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61577125709962",
+      "https://www.linkedin.com/company/priyam-consultancy-services/",
+      "https://www.instagram.com/priyam_consultancy_services/",
+      "https://x.com/services91032",
+      "https://g.co/kgs/rdTYdi6"
+    ]
+  },
+
+  // Service Page Schema
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://www.priyamconsultancy.com/hr-strategy-and-policy-development/#service",
+    "name": "HR Strategy and Policy Development",
+    "serviceType": "HR Strategy and Policy Development Services",
+    "url": "https://www.priyamconsultancy.com/hr-strategy-and-policy-development/",
+    "description": "Priyam Consultancy provides professional HR strategy and policy development services including HR framework creation, employee policy development, workforce planning, organizational strategy, compliance policies and human resource management solutions for businesses across India.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Priyam Consultancy Services",
+      "url": "https://www.priyamconsultancy.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+      }
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "India"
+    }
+  },
+
+  // Product Schema
+  {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "HR Strategy & Policy Development Services in Coimbatore",
+    "image": ["https://www.priyamconsultancy.com/img/hr-strategy.png"],
+    "description": "Best HR strategy and policy development services in Coimbatore offering HR framework creation, employee policy development, workforce planning, compliance policies and organizational HR solutions for businesses.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Priyam Consultancy Services"
+    },
+    "review": {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Admin"
+      }
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "4916"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.priyamconsultancy.com/hr-strategy-and-policy-development/",
+      "priceCurrency": "INR",
+      "price": "0",
+      "priceValidUntil": "2026-12-31",
+      "itemCondition": "https://schema.org/NewCondition",
+      "availability": "https://schema.org/InStock",
+      "seller": {
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services"
+      }
+    }
+  },
+
+  // FAQ Schema
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What Does HR Strategy and Policy Development Include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It includes full scope planning, drafting, implementation, and consultation around your HR strategy, HR policy development, and overall human resource management framework."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can PCS Help Us Develop HR Policies From Scratch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We specialize in development of HR policies that are tailored to your size, industry and growth stage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How Frequently Should HR Policies Be Reviewed And Updated?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recommend reviewing HR policies annually and/or when there are significant regulatory or organizational changes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can You Support Policy Development For Remote Or Geographically Dispersed Teams?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! We develop HR strategies and policies for hybrid, remote, and in-office workforces operating in multiple locations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Makes PCS A Trusted Partner For HR Strategy And Development Policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We integrate compliance, business goals and employee needs into our approach. With extensive knowledge around human resource management, we are able to make HR policy development and HR strategy development practically and future-ready."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can PCS Support Leadership Hiring And Organizational Design?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Extended HR advisory includes org structures, succession planning, and leadership hiring strategies as part of a bundle of human resource policies and strategies."
+        }
+      }
+    ]
+  }
+];
 
 const styles = `
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
@@ -344,7 +521,9 @@ const styles = `
   font-size: .92rem; line-height: 1.78; color: rgba(255,255,255,0.5);
   max-width: 640px; margin: 0 auto; text-align: center;
 }
-
+h3.faq-h3 {
+  font-size: 2.6rem;
+}
 .circ-layout {
   position: relative;
   display: grid;
@@ -423,7 +602,9 @@ const styles = `
 }
 .circ-left-top .cs-desc,
 .circ-left-bottom .cs-desc { margin-left: auto; }
-
+h3.hr-h2 {
+    font-size: 2.6rem;
+}
 /* ─── RESPONSIVE ─────────────────────────────────── */
 @media (max-width: 1024px) {
   .hr-services { padding: 80px 40px; }
@@ -1046,21 +1227,21 @@ margin: 30px auto;
 
 const services = [
   {
-    id: "01", icon: <img src="/img/icons/payroll.png" alt="Payroll" style={{width:"28px",height:"28px"}} />, color: "#FF6B2B",
+    id: "01", icon: <img src="/img/icons/payroll.png" alt="Payroll" style={{ width: "28px", height: "28px" }} />, color: "#FF6B2B",
     title: "Payroll Management",
     tagline: "Accurate. Timely. Compliant.",
     desc: "Timely, accurate, and fully compliant — we simplify your payroll so you're never exposed to the complexities of salary processing, tax filings, and benefits admin.",
     bullets: ["Payroll Processing & Accurate Calculations", "Tax Deductions and Form Filing", "Statutory Compliance and Filings"],
   },
   {
-    id: "02", icon: <img src="/img/icons/recruitment.png" alt="Recruitment" style={{width:"28px",height:"28px"}} />, color: "#1A56DB",
+    id: "02", icon: <img src="/img/icons/recruitment.png" alt="Recruitment" style={{ width: "28px", height: "28px" }} />, color: "#1A56DB",
     title: "Recruitment Services",
     tagline: "Right People. Right Roles. Right Now.",
     desc: "We attract top talent that fits both the role and your culture — whether rapidly growing, filling a single position, or looking for future leaders.",
     bullets: ["Job Analysis & Profiling", "Candidate Sourcing & Screening", "Shortlisting", "Interviewing & Selection Support"],
   },
   {
-    id: "03", icon: <img src="/img/icons/tab-plan.png" alt="Plan" style={{width:"20px",height:"20px"}} />, color: "#059669",
+    id: "03", icon: <img src="/img/icons/tab-plan.png" alt="Plan" style={{ width: "20px", height: "20px" }} />, color: "#059669",
     title: "HR Strategy & Policy",
     tagline: "Build Culture. Drive Performance.",
     desc: "We align your HR strategy with your business vision by crafting clear policies and procedures that attract and retain top talent while ensuring workplace compliance.",
@@ -1073,42 +1254,42 @@ const benefits = [
     num: "01", title: "Customized HR Solutions",
     desc: "Personalized HR strategies and policies that align with your company's specific needs, values, and long-term goals.",
     icon: (
-      <img src="/img/icons/benefit-01.png" alt="Customized HR Solutions" style={{width:"28px",height:"28px"}} />
+      <img src="/img/icons/benefit-01.png" alt="Customized HR Solutions" style={{ width: "28px", height: "28px" }} />
     ),
   },
   {
     num: "02", title: "Talent Acquisition Excellence",
     desc: "Attract and hire top talent that fits your culture and long-term objectives seamlessly.",
     icon: (
-      <img src="/img/icons/benefit-02.png" alt="Talent Acquisition" style={{width:"28px",height:"28px"}} />
+      <img src="/img/icons/benefit-02.png" alt="Talent Acquisition" style={{ width: "28px", height: "28px" }} />
     ),
   },
   {
     num: "03", title: "Compliance & Risk Management",
     desc: "Full legal compliance across all HR functions, minimizing costly risks.",
     icon: (
-      <img src="/img/icons/benefit-03.png" alt="Compliance" style={{width:"28px",height:"28px"}} />
+      <img src="/img/icons/benefit-03.png" alt="Compliance" style={{ width: "28px", height: "28px" }} />
     ),
   },
   {
     num: "04", title: "Streamlined Payroll Services",
     desc: "End-to-end payroll with tax compliance, timely payments, and zero errors.",
     icon: (
-      <img src="/img/icons/benefit-04.png" alt="Payroll Services" style={{width:"28px",height:"28px"}} />
+      <img src="/img/icons/benefit-04.png" alt="Payroll Services" style={{ width: "28px", height: "28px" }} />
     ),
   },
   {
     num: "05", title: "Scalable HR Solutions",
     desc: "From a small team to a large enterprise — our HR systems grow with your business at every stage.",
     icon: (
-      <img src="/img/icons/benefit-05.png" alt="Scalable HR" style={{width:"28px",height:"28px"}} />
+      <img src="/img/icons/benefit-05.png" alt="Scalable HR" style={{ width: "28px", height: "28px" }} />
     ),
   },
   {
     num: "06", title: "Cost-Effective HR Support",
     desc: "Maximize ROI by reducing overhead while receiving exceptional, fully tailored HR support across all functions.",
     icon: (
-      <img src="/img/icons/benefit-06.png" alt="Cost-Effective" style={{width:"28px",height:"28px"}} />
+      <img src="/img/icons/benefit-06.png" alt="Cost-Effective" style={{ width: "28px", height: "28px" }} />
     ),
   },
 ];
@@ -1118,35 +1299,35 @@ const processSteps = {
     title: "Deeper Understanding",
     desc: "We begin with a thorough analysis of your business goals, workforce structure, and HR challenges.",
     icon: (
-      <img src="/img/icons/process-understand.png" alt="Deeper Understanding" style={{width:"28px",height:"28px"}} />
+      <img src="/img/icons/process-understand.png" alt="Deeper Understanding" style={{ width: "28px", height: "28px" }} />
     ),
   },
   rightTop: {
     title: "Strategy & Planning",
     desc: "We craft tailored HR strategies aligned with your business vision and long-term objectives.",
     icon: (
-      <img src="/img/icons/process-strategy.png" alt="Strategy & Planning" style={{width:"28px",height:"28px"}} />
+      <img src="/img/icons/process-strategy.png" alt="Strategy & Planning" style={{ width: "28px", height: "28px" }} />
     ),
   },
   rightBottom: {
     title: "Execution & Monitoring",
     desc: "Seamless implementation with continuous monitoring to ensure every initiative stays on track.",
     icon: (
-      <img src="/img/icons/process-execution.png" alt="Execution & Monitoring" style={{width:"28px",height:"28px"}} />
+      <img src="/img/icons/process-execution.png" alt="Execution & Monitoring" style={{ width: "28px", height: "28px" }} />
     ),
   },
   leftBottom: {
     title: "Feedback & Analytics Reports",
     desc: "Detailed reporting and analytics to help you optimize results and make data-driven decisions.",
     icon: (
-      <img src="/img/icons/process-feedback.png" alt="Feedback & Analytics" style={{width:"28px",height:"28px"}} />
+      <img src="/img/icons/process-feedback.png" alt="Feedback & Analytics" style={{ width: "28px", height: "28px" }} />
     ),
   },
 };
 const servicesTabs = [
   {
     label: "Understand & Audit",
-    icon: <img src="/img/icon/hr-policy-aduit.webp" alt="Search" style={{width:"30px",height:"30px"}} />,
+    icon: <img src="/img/icon/hr-policy-aduit.webp" alt="Search" style={{ width: "30px", height: "30px" }} />,
     title: "Understand & Audit",
     desc: "We start by identifying your current HR policies and organizational structure, analyzing what works and where the gaps are, and evaluating how your current human resource management fits your business needs.",
     features: [],
@@ -1154,7 +1335,7 @@ const servicesTabs = [
   },
   {
     label: "Strategize & Customize",
-    icon: <img src="/img/icon/hr-policy-strategize.webp" alt="Plan" style={{width:"30px",height:"30px"}} />,
+    icon: <img src="/img/icon/hr-policy-strategize.webp" alt="Plan" style={{ width: "30px", height: "30px" }} />,
     title: "Strategize & Customize",
     desc: "There are no cookie-cutter templates. Our process creates a custom HR strategy development framework, with policy blueprints tailored to your industry, size and organizational context. Everything, from workforce planning to onboarding policy, is laid out.",
     features: [],
@@ -1162,7 +1343,7 @@ const servicesTabs = [
   },
   {
     label: "Draft & Align",
-    icon: <img src="/img/icon/hr-policy-draft.webp" alt="Align" style={{width:"30px",height:"30px"}} />,
+    icon: <img src="/img/icon/hr-policy-draft.webp" alt="Align" style={{ width: "30px", height: "30px" }} />,
     title: "Draft & Align",
     desc: "We develop or revise your HR policies, taking care to comply with the law, be culturally relevant, and to be operationally clear. All policies are subject to internal alignment reviews to ensure that they can be adopted across departments.",
     features: [],
@@ -1170,7 +1351,7 @@ const servicesTabs = [
   },
   {
     label: "Monitor & Optimize",
-    icon: <img src="/img/icon/hr-policy-monitor.webp" alt="Check" style={{width:"30px",height:"30px"}} />,
+    icon: <img src="/img/icon/hr-policy-monitor.webp" alt="Check" style={{ width: "30px", height: "30px" }} />,
     title: "Monitor & Optimize",
     desc: "Policies have power only when communicated and executed. We support your leaders and HR staff by training them to implement the new human resource policies and strategies consistently and easily.",
     features: [],
@@ -1178,7 +1359,7 @@ const servicesTabs = [
   },
   {
     label: "Implement & Enable",
-    icon: <img src="/img/icon/hr-policy-implement.webp" alt="Implement" style={{width:"30px",height:"30px"}} />,
+    icon: <img src="/img/icon/hr-policy-implement.webp" alt="Implement" style={{ width: "30px", height: "30px" }} />,
     title: "Implement & Enable",
     desc: "Execution is beyond circulation. We work with you and your HR and leadership teams to do internal rollouts, have conversations, and provide toolkits and communication plans that allow a smooth and consistent adoption.",
     features: [],
@@ -1186,32 +1367,32 @@ const servicesTabs = [
   },
   {
     label: "Review & Refine",
-    icon: <img src="/img/icon/hr-policy-refine.webp" alt="Refine" style={{width:"30px",height:"30px"}} />,
+    icon: <img src="/img/icon/hr-policy-refine.webp" alt="Refine" style={{ width: "30px", height: "30px" }} />,
     title: "Review & Refine",
     desc: "Keep policies current and compliant with regular audits. Whether caused by regulations or organizational evolution, we believe in the proactive approach of updating strategies and their supporting documentation to remain ahead of risk exposure and match the workforce.",
     features: [],
     tags: ["Conduct PolicyAudits", "Update HRStrategies", "Reduce ComplianceRisks", "Adapt WorkforcePolicies"],
   },
- 
+
 ];
- 
+
 // ── COMPONENTS ────────────────────────────────────────────────────
 function HeroSection() {
   const particles = [
-    {cx:150,cy:100,r:4,fill:"rgba(237,131,55,0.5)",dur:"3s",delay:"0s"},
-    {cx:250,cy:160,r:3,fill:"rgba(56,189,248,0.5)",dur:"4s",delay:"0.8s"},
-    {cx:310,cy:220,r:3.5,fill:"rgba(52,211,153,0.5)",dur:"3.5s",delay:"0.3s"},
-    {cx:90,cy:200,r:3,fill:"rgba(246,173,85,0.5)",dur:"4.2s",delay:"1.1s"},
-    {cx:370,cy:160,r:2.5,fill:"rgba(237,131,55,0.4)",dur:"3.8s",delay:"0.6s"},
-    {cx:340,cy:350,r:3,fill:"rgba(168,85,247,0.5)",dur:"3.2s",delay:"1.5s"},
-    {cx:50,cy:120,r:2.5,fill:"rgba(56,189,248,0.4)",dur:"4.5s",delay:"0.2s"},
+    { cx: 150, cy: 100, r: 4, fill: "rgba(237,131,55,0.5)", dur: "3s", delay: "0s" },
+    { cx: 250, cy: 160, r: 3, fill: "rgba(56,189,248,0.5)", dur: "4s", delay: "0.8s" },
+    { cx: 310, cy: 220, r: 3.5, fill: "rgba(52,211,153,0.5)", dur: "3.5s", delay: "0.3s" },
+    { cx: 90, cy: 200, r: 3, fill: "rgba(246,173,85,0.5)", dur: "4.2s", delay: "1.1s" },
+    { cx: 370, cy: 160, r: 2.5, fill: "rgba(237,131,55,0.4)", dur: "3.8s", delay: "0.6s" },
+    { cx: 340, cy: 350, r: 3, fill: "rgba(168,85,247,0.5)", dur: "3.2s", delay: "1.5s" },
+    { cx: 50, cy: 120, r: 2.5, fill: "rgba(56,189,248,0.4)", dur: "4.5s", delay: "0.2s" },
   ];
   return (
-    
-      <section className="hero" id="hero">
-      
+
+    <section className="hero" id="hero">
+
       <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot"/>Strategic HR & Policy</div>
+        <div className="h-badge"><div className="badge-dot" />HR & Policy Development</div>
         <h1 className="hero-heading">
           Strategic HR & Policy
           <span className="hl lined">Development</span> for Businesses
@@ -1232,7 +1413,7 @@ function HeroSection() {
         <img
           src={banner}
           alt="Banner"
-          style={{ width: "100%",  height: "auto", objectFit: "contain", position: "relative", zIndex: 5, animation: "fadeUp .9s .15s ease both" }}
+          style={{ width: "100%", height: "auto", objectFit: "contain", position: "relative", zIndex: 5, animation: "fadeUp .9s .15s ease both" }}
         />
       </div>
     </section>
@@ -1345,22 +1526,22 @@ function ApproachSection() {
           </div>
           <h2 className="ap-heading">HR Clarity for  <span>Every Stage</span> of Growth</h2>
           <p className="ap-intro">
-PCS supports startups and enterprises with tailored HR strategies and policy development designed to create structured, scalable, and compliant workforce management systems.
+            PCS supports startups and enterprises with tailored HR strategies and policy development designed to create structured, scalable, and compliant workforce management systems.
 
 
           </p>
           <p className="ap-intro">
-Our team combines industry expertise with a compliance-first approach to develop HR frameworks that improve operational clarity, employee management, and organizational stability.
+            Our team combines industry expertise with a compliance-first approach to develop HR frameworks that improve operational clarity, employee management, and organizational stability.
 
           </p>
-  <p className="ap-intro">
-Whether creating new HR policies or refining existing structures, PCS helps businesses make faster, smarter, and more confident workforce management decisions.
+          <p className="ap-intro">
+            Whether creating new HR policies or refining existing structures, PCS helps businesses make faster, smarter, and more confident workforce management decisions.
 
-  </p>
+          </p>
         </div>
 
         {/* RIGHT FORM */}
-         <div className="ap-form-wrap">
+        <div className="ap-form-wrap">
           <div className="ap-form-card">
             <div className="form-card-eyebrow">
               <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
@@ -1426,7 +1607,7 @@ const stepFlowData = [
     title: "Strategic Clarity",
     desc: "We create clear HR strategies and policy frameworks that align workforce management with your long-term business objectives and operations.",
     icon: (
-      <img src="/img/icon/hr-policy-clarity.webp" alt="icon" style={{width:"30px",height:"30px"}} />
+      <img src="/img/icon/hr-policy-clarity.webp" alt="icon" style={{ width: "30px", height: "30px" }} />
     ),
   },
   {
@@ -1436,7 +1617,7 @@ const stepFlowData = [
     title: "Compliance Guaranteed",
     desc: "Our HR policies are developed with a compliance-first approach to ensure legal accuracy, risk reduction, and regulatory alignment consistently.",
     icon: (
-      <img src="/img/icon/hr-policy-compliance-guaranted.webp" alt="icon" style={{width:"30px",height:"30px"}} />
+      <img src="/img/icon/hr-policy-compliance-guaranted.webp" alt="icon" style={{ width: "30px", height: "30px" }} />
     ),
   },
   {
@@ -1446,7 +1627,7 @@ const stepFlowData = [
     title: "Structured Implementation",
     desc: "PCS ensures smooth HR policy execution through structured processes, leadership coordination, employee communication, and implementation-focused operational supp",
     icon: (
-      <img src="/img/icon/hr-policy-structured.webp" alt="icon" style={{width:"30px",height:"30px"}} />
+      <img src="/img/icon/hr-policy-structured.webp" alt="icon" style={{ width: "30px", height: "30px" }} />
     ),
   },
   {
@@ -1456,7 +1637,7 @@ const stepFlowData = [
     title: "Scalable for Any Size",
     desc: "Our HR strategy solutions are flexible and scalable, supporting startups, growing businesses, and large enterprises across diverse workforce structures.",
     icon: (
-      <img src="/img/icon/hr-policy-scalable.webp" alt="icon" style={{width:"30px",height:"30px"}} />
+      <img src="/img/icon/hr-policy-scalable.webp" alt="icon" style={{ width: "30px", height: "30px" }} />
     ),
   },
 ];
@@ -1507,12 +1688,12 @@ function ServicesSection() {
     <section className="svc-section">
       <div className="svc-inner">
         <div className="svc-header">
-             <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>HR & Policy Development Services </div>
+          <div className="partners-header1">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>HR & Policy Development Services </h2>
           </div>
-      <h2 className="hr-h2" style={{textAlign:'center', color: '#fff'}}>Our Result-Driven  <span style={{color:'#ed8337'}}><i>HR Advisory </i></span>  Framework</h2>
+          <h3 className="hr-h2" style={{ textAlign: 'center', color: '#fff' }}>Our Result-Driven  <span style={{ color: '#ed8337' }}><i>HR Advisory </i></span>  Framework</h3>
           <p className="svc-subtext">
-We bring structure, compliance, and strategy to every HR function.
+            We bring structure, compliance, and strategy to every HR function.
           </p>
         </div>
         <div className="svc-trio-grid">
@@ -1520,23 +1701,23 @@ We bring structure, compliance, and strategy to every HR function.
             <div className="svc-tcard-band">
               <div className="svc-tcard-num">01</div>
               <div className="svc-tcard-icon">
-                <img src="/img/icon/hr-policy-development.webp" alt="service icon" style={{width:"32px",height:"32px"}} />
+                <img src="/img/icon/hr-policy-development.webp" alt="service icon" style={{ width: "32px", height: "32px" }} />
               </div>
               <span className="svc-tcard-eyebrow">Consultancy</span>
-              <div className="svc-tcard-title">HR Policy Development Services</div>
+              <h4 className="svc-tcard-title">HR Policy Development Services</h4>
             </div>
             <div className="svc-tcard-body">
               <div className="svc-tcard-desc">
-We handle HR Policy Development end-to-end from setting the cultural tone to ensuring full compliance.
+                We handle HR Policy Development end-to-end from setting the cultural tone to ensuring full compliance.
 
-                 
+
               </div>
               <ul className="svc-tcard-points">
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Strategic HR Policy Development aligned to your organization’s goals</li>
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Employee handbooks, codes of conduct, leave and benefits policies</li>
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Department-specific and role-based HR policies</li>
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Policy reviews for clarity, tone, accessibility, and legal compliance</li>
-              
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Strategic HR Policy Development aligned to your organization’s goals</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Employee handbooks, codes of conduct, leave and benefits policies</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Department-specific and role-based HR policies</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Policy reviews for clarity, tone, accessibility, and legal compliance</li>
+
               </ul>
             </div>
             <div className="svc-tcard-footer"></div>
@@ -1545,21 +1726,21 @@ We handle HR Policy Development end-to-end from setting the cultural tone to ens
             <div className="svc-tcard-band">
               <div className="svc-tcard-num">02</div>
               <div className="svc-tcard-icon">
-                <img src="/img/icon/hr-policy-hr-strategy.webp" alt="service icon" style={{width:"32px",height:"32px"}} />
+                <img src="/img/icon/hr-policy-hr-strategy.webp" alt="service icon" style={{ width: "32px", height: "32px" }} />
               </div>
               <span className="svc-tcard-eyebrow">End-to-End</span>
-              <div className="svc-tcard-title">HR Strategy Development Services</div>
+              <h4 className="svc-tcard-title">HR Strategy Development Services</h4>
             </div>
             <div className="svc-tcard-body">
               <div className="svc-tcard-desc">
-For businesses that don’t just want to grow but grow with purpose, structure, and clarity.
-                
-                </div>
+                For businesses that don’t just want to grow but grow with purpose, structure, and clarity.
+
+              </div>
               <ul className="svc-tcard-points">
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Long-term HR strategy development roadmap creation</li>
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Role clarity, workforce planning, and growth alignment</li>
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Succession planning, leadership framework, and org design</li>
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Integration with business goals and operational strategy</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Long-term HR strategy development roadmap creation</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Role clarity, workforce planning, and growth alignment</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Succession planning, leadership framework, and org design</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Integration with business goals and operational strategy</li>
 
               </ul>
             </div>
@@ -1569,22 +1750,22 @@ For businesses that don’t just want to grow but grow with purpose, structure, 
             <div className="svc-tcard-band">
               <div className="svc-tcard-num">03</div>
               <div className="svc-tcard-icon">
-                <img src="/img/icon/hr-policy-hr-audit.webp" alt="service icon" style={{width:"32px",height:"32px"}} />
+                <img src="/img/icon/hr-policy-hr-audit.webp" alt="service icon" style={{ width: "32px", height: "32px" }} />
               </div>
               <span className="svc-tcard-eyebrow">Outsourcing</span>
-              <div className="svc-tcard-title">HR Audits & Advisory Services</div>
+              <h4 className="svc-tcard-title">HR Audits & Advisory Services</h4>
             </div>
             <div className="svc-tcard-body">
               <div className="svc-tcard-desc">
-When HR feels overwhelming, we bring structure. When there’s confusion, we bring clarity.
+                When HR feels overwhelming, we bring structure. When there’s confusion, we bring clarity.
 
 
-                </div>
+              </div>
               <ul className="svc-tcard-points">
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Audit of current HR policies and compliance risks</li>
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Evaluation of workforce structures and reporting lines</li>
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Alignment with labor laws, DEI goals, and market practices</li>
-                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>Risk mitigation, documentation standardization, and advisory</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Audit of current HR policies and compliance risks</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Evaluation of workforce structures and reporting lines</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Alignment with labor laws, DEI goals, and market practices</li>
+                <li><span className="svc-pt-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3" /></svg></span>Risk mitigation, documentation standardization, and advisory</li>
               </ul>
             </div>
             <div className="svc-tcard-footer"></div>
@@ -1610,15 +1791,15 @@ function TabServiceSection() {
 
         {/* Header */}
         <div className="bfr-header">
-             <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Proven HR Strategy & Policy Development
-</div>
+          <div className="partners-header1">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Proven HR Strategy & Policy Development
+            </h2>
           </div>
-          <h2 className="bfr-title">
-          Our Proven  <span><i>HR Strategy and Policy </i> </span> Development Process
-          </h2>
+          <h3 className="bfr-title">
+            Our Proven  <span><i>HR Strategy and Policy </i> </span> Development Process
+          </h3>
           <p className="bfr-sub">
-We turn HR challenges into strategic advantages with a clear, proven framework built for real-world impact.
+            We turn HR challenges into strategic advantages with a clear, proven framework built for real-world impact.
 
 
           </p>
@@ -1658,7 +1839,7 @@ We turn HR challenges into strategic advantages with a clear, proven framework b
 
             {/* Left */}
             <div className="bfr-panel-left">
-              <h3 className="bfr-panel-title">{svc.title}</h3>
+              <h4 className="bfr-panel-title">{svc.title}</h4>
               <p className="bfr-panel-desc">{svc.desc}</p>
               <ul className="bfr-features">
                 {svc.features.map((f, i) => (
@@ -1705,12 +1886,12 @@ function StepFlowSection() {
         <div className="sf-header">
           <div className="partners-header1" style={{ justifyContent: "center" }}>
             <div className="partners-eyebrow" style={{ marginBottom: "16px", color: "var(--orange)" }}>
-Why PCS?
-</div>
+              Why PCS?
+            </div>
           </div>
           <h2 className="sf-heading">Why Priyam Consultancy Services, <span><i>HR Strategy and Policy Development </i></span> Works for Growing Businesses</h2>
           <p className="sf-subtext">
-At Priyam Consultancy Services, we recognize that many organizations experience fragmented processes, outdated policies, and unclear responsibilities. Therefore, our services in HR Strategy and Policy Development simplify the complexity of HR by crafting systems to be practical, compliant, and suitable for your organization. Whether it is policy writing or planning for a future strategic workforce, we focus on providing your organization with a resilient HR foundation that is scalable and future-proof.
+            At Priyam Consultancy Services, we recognize that many organizations experience fragmented processes, outdated policies, and unclear responsibilities. Therefore, our services in HR Strategy and Policy Development simplify the complexity of HR by crafting systems to be practical, compliant, and suitable for your organization. Whether it is policy writing or planning for a future strategic workforce, we focus on providing your organization with a resilient HR foundation that is scalable and future-proof.
 
 
 
@@ -1721,39 +1902,39 @@ At Priyam Consultancy Services, we recognize that many organizations experience 
           {stepFlowData.map((step, i) => {
             const isOdd = i % 2 === 0; // 0,2 → odd visual (1st,3rd)
             return (
-            <div key={i} className="sf-card-wrap">
-              <div
-                className={`sf-card ${isOdd ? "sf-odd" : "sf-even"}`}
-                style={{ "--sf-color": step.color }}
-              >
-                <div className="sf-card-icon">{step.icon}</div>
-                <div className="sf-card-title">{step.title}</div>
-                <div className="sf-card-desc">{step.desc}</div>
-              </div>
-              {i < stepFlowData.length - 1 && (
-                <div className="sf-arrow">
-                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    {/* Tail line — animated draw */}
-                    <path
-                      className="sf-arrow-tail"
-                      d="M8 24H36"
-                      stroke="#ed8337"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-                    {/* Arrowhead chevron — slides in */}
-                    <path
-                      className="sf-arrow-head"
-                      d="M28 16L38 24L28 32"
-                      stroke="#ed8337"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+              <div key={i} className="sf-card-wrap">
+                <div
+                  className={`sf-card ${isOdd ? "sf-odd" : "sf-even"}`}
+                  style={{ "--sf-color": step.color }}
+                >
+                  <div className="sf-card-icon">{step.icon}</div>
+                  <h3 className="sf-card-title">{step.title}</h3>
+                  <div className="sf-card-desc">{step.desc}</div>
                 </div>
-              )}
-            </div>
+                {i < stepFlowData.length - 1 && (
+                  <div className="sf-arrow">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      {/* Tail line — animated draw */}
+                      <path
+                        className="sf-arrow-tail"
+                        d="M8 24H36"
+                        stroke="#ed8337"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                      />
+                      {/* Arrowhead chevron — slides in */}
+                      <path
+                        className="sf-arrow-head"
+                        d="M28 16L38 24L28 32"
+                        stroke="#ed8337"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                )}
+              </div>
             );
           })}
         </div>
@@ -1782,12 +1963,12 @@ function FAQSection() {
   return (
     <section className="faq-section">
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -1833,15 +2014,34 @@ function FAQSection() {
 
 export default function HRConsultancy() {
   return (
-    <Layout>
+    <Layout >
+      <Head>
+        <title>HR Strategy Development | HR Policy Development Services </title>
+        <meta name="description" content=" Enhance your workforce with our expert HR Strategy and Policy Development services. Implement customized HR policies, support compliance, and plan for the future. " />
+
+        <meta name="keywords" content="HR Strategy, HR Policy Development, HR Strategy Development, Developing HR Policies, HR Policies, Human Resource Management, HR Policy Development, Human Resource Policies and Strategies, HR Strategy and Policy Development" />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/hr-strategy-and-policy-development/" />
+        <meta property="og:title" content="HR Strategy Development | HR Policy Development Services" />
+        <meta property="og:description" content=" Enhance your workforce with our expert HR Strategy and Policy Development services. Implement customized HR policies, support compliance, and plan for the future. " />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/hr-strategy-and-policy-development/" />
+        <meta property="og:image" content="https://www.priyamconsultancy.com/img/hr-strategy.png" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="HR Strategy Development | HR Policy Development Services" />
+        <meta name="twitter:description" content=" Enhance your workforce with our expert HR Strategy and Policy Development services. Implement customized HR policies, support compliance, and plan for the future. " />
+        <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/hr-strategy.png" />
+        {schemaData.map((schema, i) => (
+          <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
+        ))}
+      </Head>
       <style>{styles}</style>
       <div className="hr-page">
-        <HeroSection/>
-        <ApproachSection/>
+        <HeroSection />
+        <ApproachSection />
         <ServicesSection />
         <TabServiceSection />
         <StepFlowSection />
-        <FAQSection/>
+        <FAQSection />
         <CTASection />
       </div>
     </Layout>

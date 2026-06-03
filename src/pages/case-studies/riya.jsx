@@ -99,7 +99,7 @@ export default function CaseStudy() {
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">Building a Credible Digital Presence for a Business Consulting Firm
-</h1>
+            </h1>
           </div>
         </section>
 
@@ -110,48 +110,48 @@ export default function CaseStudy() {
           <div className="detail-left">
 
             <div className="detail-hero-img">
-              <img src="https://picsum.photos/seed/18/900/400" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
+              <img src="/img/case-study-riya-about.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
             </div>
 
-     
- <div className="detail-section">
+
+            <div className="detail-section">
               <h2>About RIYA
-</h2>
+              </h2>
               <p>Focused on delivering business consulting and operational support solutions, the company helps organizations improve efficiency, compliance, and long-term growth through structured and professional advisory services across multiple business functions.</p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
               <p>To strengthen its market positioning, the firm aimed to establish a credible and professional digital presence that reflected its consulting expertise, service capabilities, and business values. The objective was to improve discoverability, audience trust, and long-term digital engagement through strategic branding, SEO, and social media marketing initiatives.
-</p>
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
               <p>Although the company offered valuable consulting services, its digital communication lacked consistency and strategic positioning. The business required a clearer online structure, stronger visibility, and a professional digital ecosystem capable of improving audience trust, search presence, and client interaction opportunities.
-</p>
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Developed a structured and professional digital brand identity
-</li>
-              <li>Refined service communication and positioning for better audience clarity</li>
-              <li>Implemented SEO strategies to improve search visibility and organic reach
-</li>
-              <li>Executed social media marketing campaigns to strengthen brand engagement
-</li>
-              <li>Improved consistency across website, content, and social platforms
-</li>
-<li>Aligned digital messaging with long-term business and growth objectives
-</li>
+                <li>Developed a structured and professional digital brand identity
+                </li>
+                <li>Refined service communication and positioning for better audience clarity</li>
+                <li>Implemented SEO strategies to improve search visibility and organic reach
+                </li>
+                <li>Executed social media marketing campaigns to strengthen brand engagement
+                </li>
+                <li>Improved consistency across website, content, and social platforms
+                </li>
+                <li>Aligned digital messaging with long-term business and growth objectives
+                </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
               <p>Helped the brand establish a polished and trustworthy digital presence supported by SEO and social media marketing strategies. The improved online structure strengthened brand credibility, enhanced search visibility, increased audience engagement, and created a stronger foundation for long-term business growth and client acquisition.
-</p>
+              </p>
             </div>
 
             {/* CTA */}
@@ -170,7 +170,7 @@ export default function CaseStudy() {
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>Riya</strong></p>
-                  <p>Service: </p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">Website</span>
                 <span className="sidebar-tag">SEO</span>
@@ -184,55 +184,55 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
+
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
             </div>
 
           </div>
