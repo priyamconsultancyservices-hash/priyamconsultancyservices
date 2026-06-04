@@ -1,0 +1,8 @@
+.elementor-30 .elementor-element.elementor-element-14de31c.jet-sticky-section-sticky--stuck.jet-sticky-transition-in, .elementor-30 .elementor-element.elementor-element-14de31c.jet-sticky-section-sticky--stuck.jet-sticky-transition-out{transition:margin 0.1s, padding 0.1s, background 0.1s, box-shadow 0.1s;}.elementor-30 .elementor-element.elementor-element-7cfb3e6 > .elementor-element-populated{margin:0px 0px 0px 0px;--e-column-margin-right:0px;--e-column-margin-left:0px;padding:0px 0px 0px 0px;}/* Start custom CSS for section, class: .elementor-element-14de31c */.site-header .logo img,
+.elementor-widget-site-logo img,
+header .logo img {
+  height: 55px !important;
+  width: auto !important;
+  max-width: 200px !important;
+  object-fit: contain !important;
+}/* End custom CSS */
