@@ -1330,16 +1330,16 @@ export default function DigitalMarketing() {
   return (
     <Layout>
       <Head>
-        <title>Business Process Automation | Improve Efficiency Fast </title>
-        <meta name="description" content="Streamline operations with Business Process Automation to boost efficiency, reduce costs, and improve accuracy with smart workflow solutions. " />
+        <title>Custom Web Application Development Company | Custom App Development </title>
+        <meta name="description" content="Expert custom web application development company delivering scalable, secure, and user-friendly apps tailored to your business needs for digital growth. Contact us! " />
         <link rel="canonical" href="https://www.priyamconsultancy.com/web-and-mobile-application/" />
         <meta name="keywords" content="Business Process Automation, Business Process Automation Services, Business Process Automation Software, Business Automation Software, Business Process Optimisation, Business Automation Solutions, Business Process Automation Solutions, Process Automation Service, BPA Solutions, Business Automation Services Provider" />
-        <meta property="og:title" content="Business Process Automation | Improve Efficiency Fast " />
-        <meta property="og:description" content="Streamline operations with Business Process Automation to boost efficiency, reduce costs, and improve accuracy with smart workflow solutions. " />
+        <meta property="og:title" content="Custom Web Application Development Company | Custom App Development " />
+        <meta property="og:description" content="Expert custom web application development company delivering scalable, secure, and user-friendly apps tailored to your business needs for digital growth. Contact us! " />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Business Process Automation | Improve Efficiency Fast " />
-        <meta name="twitter:description" content="Streamline operations with Business Process Automation to boost efficiency, reduce costs, and improve accuracy with smart workflow solutions. " />
+        <meta name="twitter:title" content="Custom Web Application Development Company | Custom App Development " />
+        <meta name="twitter:description" content="Expert custom web application development company delivering scalable, secure, and user-friendly apps tailored to your business needs for digital growth. Contact us! " />
 
         {/* Breadcrumb Schema */}
         <script type="application/ld+json" dangerouslySetInnerHTML={{

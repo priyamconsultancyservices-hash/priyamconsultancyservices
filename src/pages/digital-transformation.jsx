@@ -378,7 +378,24 @@ const PAGE_CSS = `
   .faq-question { display:flex; justify-content:space-between; align-items:center; padding:1.1rem 1.4rem; cursor:pointer; font-family:'Poppins',sans-serif; font-size:.92rem; font-weight:600; color:#011a2a; gap:1rem; }
   .faq-question .icon { font-size:1.3rem; color:#ed8337; flex-shrink:0; }
   .faq-answer { padding:.2rem 1.4rem 1.1rem; font-size:.88rem; color:#5a6070; line-height:1.78; }
+       h3.faq-h3 {
+    font-size: 2.5rem;
+    color: black;
+}
+    
+    h2.partners-eyebrow {
+        font-size: 0.9rem;
+        font-weight: 900;
+    }
+    .partners-h3-title {
+    color: #fff!important;
+    font-size: 2.5rem;
+        }
 
+        .partners-h3-process{
+        color: #000!important;
+    font-size: 2.5rem;
+    }
   /* RESPONSIVE */
 
   /* ── Tablet 1024px ── */
@@ -653,7 +670,7 @@ export default function DigitalTransformationPage() {
         <section className="dt-services">
           <div className="dt-svc-hdr">
             <div className="partners-header1">
-              <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Digital Transformation Services</div>
+              <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start', color: '#ed8337' }}>Our Specialized Digital Transformation Services</h2>
             </div>
 
             <h3 className="pr-heading">Efficient. <span style={{ color: '#ed8337' }}>Seamless.</span> Impactful.</h3>
@@ -685,7 +702,7 @@ export default function DigitalTransformationPage() {
           <div className="dt-proc-bg" />
           <div className="dt-proc-hdr">
             <div className="partners-header1">
-              <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Process For Digital Transformation</div>
+              <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start',color: '#ed8337' }}>Our Proven Process For Digital Transformation</h2>
             </div>
 
             <h3 className="pr-heading-process">How We <span className="accent" style={{ color: '#ed8337' }}>Transform</span> Your Business</h3>
@@ -708,7 +725,7 @@ export default function DigitalTransformationPage() {
         {/* ══ SECTION 4.5 — VIDEO ══ */}
         <section className="dt-video-section">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Implementation Partners</div>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Implementation Partners</h2>
           </div>
 
           <h3 className="dt-video-title">Empowering Your  <span> Growth Through Seamless </span> Technology Integration</h3>
@@ -722,11 +739,11 @@ export default function DigitalTransformationPage() {
         {/* ══ SECTION 5 — FAQ ══ */}
         <section className="faq-section">
           <div style={{ textAlign: "center", marginBottom: "12px" }}>
-            <span className="partners-eyebrow">Frequently Asked Questions</span>
+            <h2 className="partners-eyebrow">Frequently Asked Questions</h2>
           </div>
           <div className="container">
             <div className="faq-head">
-              <h2>Queries That Could <span>Hold You Back</span></h2>
+              <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
             </div>
             <div className="faq-wrapper">
               <div className="faq-col">
