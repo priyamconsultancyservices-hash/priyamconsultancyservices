@@ -1,40 +1,7 @@
-import { useState, useEffect } from "react";
-import emailjs from "@emailjs/browser";
-import CTASection from "../components/HomePage/CTA";
-import BlogSection from "../components/BlogSection";
-import Layout from '@theme/Layout';
-const banner = "/img/website-design.png";
-import Head from '@docusaurus/Head';
-
-
-function SEOHead() {
-  const pageUrl = "https://www.priyamconsultancy.com/website-design/";
-  const imageUrl = "https://www.priyamconsultancy.com/img/website-design.png";
-
-  return (
-    <Head>
-      {/* ── Primary Meta ── */}
-      <title>Website Design Company | Custom & SEO-Friendly Web Design </title>
-      <meta name="description" content="Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. " />
-      <meta name="keywords" content="Website design, Website design Services, Website designers in Coimbatore, Website design company in coimbatore, Website design agency, website design company, Best website design, sample website design" />
-      <link rel="canonical" href="https://www.priyamconsultancy.com/website-design/" />
-
-      {/* ── Open Graph ── */}
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="Website Design Company | Custom & SEO-Friendly Web Design " />
-      <meta property="og:description" content="Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. " />
-      <meta property="og:url" content="https://www.priyamconsultancy.com/website-design/" />
-      <meta property="og:image" content={imageUrl} />
-      <meta property="og:site_name" content="PCS Business Solution" />
-
-      {/* ── Twitter Card ── */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Website Design Company | Custom & SEO-Friendly Web Design " />
-      <meta name="twitter:description" content="Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. " />
-      <meta name="twitter:image" content={imageUrl} />
-
-      {/* ── Breadcrumb List Schema ── */}
-      <script type="application/ld+json">{`
+"use strict";(self.webpackChunknew_docs_pcs_website_design=self.webpackChunknew_docs_pcs_website_design||[]).push([["4502"],{3177(e,t,i){i.d(t,{A:()=>a});var r=i(4848),n=i(6540);let s=`https://corsproxy.io/?${encodeURIComponent("https://www.priyamconsultancy.com/blog/feed/")}`;function a(){let[e,t]=(0,n.useState)([]),[i,a]=(0,n.useState)(!0),[o,c]=(0,n.useState)(null);return(0,n.useEffect)(()=>{fetch(s).then(e=>{if(!e.ok)throw Error(`HTTP ${e.status}`);return e.text()}).then(e=>{t(Array.from(new DOMParser().parseFromString(e,"text/xml").querySelectorAll("item")).slice(0,3).map(e=>{let t=e.querySelector("enclosure"),i=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","content")[0],r=e.getElementsByTagNameNS("http://search.yahoo.com/mrss/","thumbnail")[0],n=e.getElementsByTagNameNS("http://purl.org/rss/1.0/modules/content/","encoded")[0],s=n?.textContent||"",a=s.match(/<img[^>]+src=["']([^"']+)["']/i),o=e.querySelector("description")?.textContent||"",c=o.match(/<img[^>]+src=["']([^"']+)["']/i),l=t?.getAttribute("url")||i?.getAttribute("url")||r?.getAttribute("url")||a?.[1]||c?.[1]||null,p=(s||o).replace(/<[^>]*>/g,"").replace(/&[^;]+;/g," ").trim(),d=p.length>340?p.slice(0,340)+"...":p,m=e.getElementsByTagName("link")[0],g=m?.textContent?.trim()||e.querySelector("guid")?.textContent||"#";return{guid:e.querySelector("guid")?.textContent||Math.random().toString(),title:e.querySelector("title")?.textContent?.trim()||"Untitled",link:g,thumbnail:l,excerpt:d}})),a(!1)}).catch(e=>{c(e.message),a(!1)})},[]),(0,r.jsxs)("section",{style:{width:"100%",padding:"4rem 1rem",boxSizing:"border-box",background:"#fff"},children:[(0,r.jsxs)("div",{style:{maxWidth:"1200px",margin:"0 auto"},children:[(0,r.jsxs)("div",{style:{textAlign:"center",marginBottom:"2.5rem"},children:[(0,r.jsx)("h2",{style:{fontSize:"2rem",fontWeight:700,margin:"0 0 0.5rem",color:"#111"},children:"Blogs"}),(0,r.jsx)("p",{style:{color:"#666",margin:0,fontSize:"1rem"},children:"Stay updated with the latest in digital marketing, growth strategies, and industry trends."})]}),i&&(0,r.jsx)("p",{style:{textAlign:"center",color:"#888"},children:"Loading..."}),o&&(0,r.jsxs)("p",{style:{textAlign:"center",color:"red"},children:["Error: ",o]}),(0,r.jsx)("div",{style:{display:"grid",gridTemplateColumns:"repeat(3, 1fr)",gap:"1.5rem"},className:"blog-grid",children:e.map(e=>(0,r.jsxs)("a",{href:e.link,target:"_blank",rel:"noreferrer",style:{border:"1px solid #e5e7eb",borderRadius:"12px",overflow:"hidden",background:"#fff",display:"flex",flexDirection:"column",textDecoration:"none",color:"inherit",transition:"box-shadow 0.2s, transform 0.2s",cursor:"pointer"},onMouseEnter:e=>{e.currentTarget.style.boxShadow="0 8px 24px rgba(0,0,0,0.12)",e.currentTarget.style.transform="translateY(-3px)"},onMouseLeave:e=>{e.currentTarget.style.boxShadow="none",e.currentTarget.style.transform="translateY(0)"},children:[(0,r.jsx)("div",{style:{width:"100%",aspectRatio:"16/9",overflow:"hidden",background:"#1a2744"},children:e.thumbnail?(0,r.jsx)("img",{src:e.thumbnail,alt:e.title,loading:"lazy",style:{width:"100%",height:"100%",objectFit:"cover",display:"block"}}):(0,r.jsx)("div",{style:{width:"100%",height:"100%",display:"flex",alignItems:"center",justifyContent:"center",color:"#fff",opacity:.4,fontSize:"0.8rem"},children:"No image"})}),(0,r.jsxs)("div",{style:{padding:"1.25rem",display:"flex",flexDirection:"column",gap:"0.75rem"},children:[(0,r.jsx)("p",{style:{fontWeight:600,fontSize:"1.1rem",lineHeight:1.6,margin:0,color:"#111"},children:e.title}),(0,r.jsx)("p",{style:{color:"#444",fontSize:"0.875rem",lineHeight:1.6,flex:1,margin:0},children:e.excerpt}),(0,r.jsx)("span",{style:{display:"inline-block",background:"#E87C30",color:"#fff",padding:"0.6rem 1.5rem",borderRadius:"999px",fontWeight:500,alignSelf:"flex-start",marginTop:"0.5rem",fontSize:"0.875rem"},children:"Read More"})]})]},e.guid))})]}),(0,r.jsx)("style",{dangerouslySetInnerHTML:{__html:`
+        @media (max-width: 1024px) { .blog-grid { grid-template-columns: repeat(2, 1fr) !important; } }
+        @media (max-width: 600px)  { .blog-grid { grid-template-columns: 1fr !important; } }
+      `}})]})}},9393(e,t,i){i.d(t,{A:()=>s});var r=i(4848),n=i(6540);let s=function(){let e=(0,n.useRef)(null);return(0,n.useEffect)(()=>{let t=e.current;if(!t)return;let i=t.getContext("2d"),r="#ed8337",n,s,a=[],o;function c(){n=t.width=t.parentElement.offsetWidth,s=t.height=t.parentElement.offsetHeight}function l(){this.reset()}l.prototype.reset=function(){this.x=Math.random()*n,this.y=Math.random()*s,this.r=2.2*Math.random()+.6,this.type=.55>Math.random()?"dot":.5>Math.random()?"ring":"plus",this.speed=.35*Math.random()+.08,this.dir=Math.random()*Math.PI*2,this.alpha=.45*Math.random()+.1,this.pulse=Math.random()*Math.PI*2,this.pulseSpeed=.018*Math.random()+.008,this.size=4*Math.random()+2},l.prototype.update=function(){this.x+=Math.cos(this.dir)*this.speed,this.y+=Math.sin(this.dir)*this.speed,this.pulse+=this.pulseSpeed,this.dir+=(Math.random()-.5)*.015,this.x<-20&&(this.x=n+20),this.x>n+20&&(this.x=-20),this.y<-20&&(this.y=s+20),this.y>s+20&&(this.y=-20)},l.prototype.draw=function(){let e=this.alpha*(.7+.3*Math.sin(this.pulse));if(i.save(),i.globalAlpha=e,i.strokeStyle=i.fillStyle=r,i.lineWidth=1,"dot"===this.type)i.beginPath(),i.arc(this.x,this.y,this.r+.4*Math.sin(this.pulse),0,2*Math.PI),i.fill();else if("ring"===this.type){let e=this.size*(.9+.15*Math.sin(this.pulse));i.beginPath(),i.arc(this.x,this.y,e,0,2*Math.PI),i.stroke()}else{let e=this.size*(.9+.1*Math.sin(this.pulse));i.beginPath(),i.moveTo(this.x-e,this.y),i.lineTo(this.x+e,this.y),i.moveTo(this.x,this.y-e),i.lineTo(this.x,this.y+e),i.stroke()}i.restore()},window.addEventListener("resize",c),c(),a=[];let p=Math.floor(n*s/9e3);for(let e=0;e<Math.max(p,28);e++)a.push(new l);return!function e(){i.clearRect(0,0,n,s),function(){let e=a.filter(e=>"dot"===e.type);for(let t=0;t<e.length;t++)for(let n=t+1;n<e.length;n++){let s=e[t].x-e[n].x,a=e[t].y-e[n].y,o=Math.sqrt(s*s+a*a);o<110&&(i.save(),i.globalAlpha=(1-o/110)*.12,i.strokeStyle=r,i.lineWidth=.7,i.beginPath(),i.moveTo(e[t].x,e[t].y),i.lineTo(e[n].x,e[n].y),i.stroke(),i.restore())}}(),a.forEach(e=>{e.update(),e.draw()}),o=requestAnimationFrame(e)}(),()=>{cancelAnimationFrame(o),window.removeEventListener("resize",c)}},[]),(0,r.jsx)("section",{id:"cta-final",children:(0,r.jsxs)("div",{className:"cta-banner",style:{"--glow-x":"50%","--glow-y":"50%"},children:[(0,r.jsx)("canvas",{id:"ctaCanvas",ref:e}),(0,r.jsxs)("div",{className:"cta-banner-left",children:[(0,r.jsx)("div",{className:"partners-header",children:(0,r.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Ready to Start?"})}),(0,r.jsxs)("h2",{className:"cta-banner-heading",children:["Let's Talk About Your",(0,r.jsx)("br",{}),"Next Big ",(0,r.jsx)("span",{className:"hl-italic",children:"Growth Move"})]}),(0,r.jsx)("p",{className:"cta-banner-sub",children:"No pressure. Just a quick conversation to understand where you are-and how we can help you move forward."})]}),(0,r.jsxs)("div",{className:"cta-banner-right",children:[(0,r.jsxs)("a",{href:"#",className:"cta-bprimary",children:["Book a Free Consultation",(0,r.jsx)("svg",{viewBox:"0 0 16 16",fill:"none",children:(0,r.jsx)("path",{d:"M3 8h10M9 4l4 4-4 4",stroke:"currentColor",strokeWidth:"1.8",strokeLinecap:"round",strokeLinejoin:"round"})})]}),(0,r.jsx)("a",{href:"#",className:"cta-bghost",children:"View All Services"})]})]})})}},9484(e,t,i){i.r(t),i.d(t,{default:()=>w});var r=i(4848),n=i(6540),s=i(8128),a=i(9393),o=i(3177),c=i(1085),l=i(3572);function p(){let e="https://www.priyamconsultancy.com/img/website-design.png";return(0,r.jsxs)(l.A,{children:[(0,r.jsx)("title",{children:"Website Design Company | Custom & SEO-Friendly Web Design "}),(0,r.jsx)("meta",{name:"description",content:"Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. "}),(0,r.jsx)("meta",{name:"keywords",content:"Website design, Website design Services, Website designers in Coimbatore, Website design company in coimbatore, Website design agency, website design company, Best website design, sample website design"}),(0,r.jsx)("link",{rel:"canonical",href:"https://www.priyamconsultancy.com/website-design/"}),(0,r.jsx)("meta",{property:"og:type",content:"website"}),(0,r.jsx)("meta",{property:"og:title",content:"Website Design Company | Custom & SEO-Friendly Web Design "}),(0,r.jsx)("meta",{property:"og:description",content:"Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. "}),(0,r.jsx)("meta",{property:"og:url",content:"https://www.priyamconsultancy.com/website-design/"}),(0,r.jsx)("meta",{property:"og:image",content:e}),(0,r.jsx)("meta",{property:"og:site_name",content:"PCS Business Solution"}),(0,r.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),(0,r.jsx)("meta",{name:"twitter:title",content:"Website Design Company | Custom & SEO-Friendly Web Design "}),(0,r.jsx)("meta",{name:"twitter:description",content:"Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. "}),(0,r.jsx)("meta",{name:"twitter:image",content:e}),(0,r.jsx)("script",{type:"application/ld+json",children:`
       {
  "@context":"https://schema.org",
  "@type":"BreadcrumbList",
@@ -60,10 +27,7 @@ function SEOHead() {
 
 
 
-      `}</script>
-
-      {/* ── Organization Schema ── */}
-      <script type="application/ld+json">{`
+      `}),(0,r.jsx)("script",{type:"application/ld+json",children:`
      {
  "@context": "https://schema.org",
  "@type": "Organization",
@@ -86,10 +50,7 @@ function SEOHead() {
  ]
 }
 
-      `}</script>
-
-      {/* ── Service Schema ── */}
-      <script type="application/ld+json">{`
+      `}),(0,r.jsx)("script",{type:"application/ld+json",children:`
       {
   "@context":"https://schema.org",
   "@type":"Service",
@@ -113,10 +74,7 @@ function SEOHead() {
   }
 }
 
-      `}</script>
-
-      {/* ── Product Schema (Business Registration) ── */}
-      <script type="application/ld+json">{`
+      `}),(0,r.jsx)("script",{type:"application/ld+json",children:`
       {
 "@context": "https://schema.org/",
 "@type": "Product",
@@ -161,10 +119,7 @@ function SEOHead() {
 }
 
 
-      `}</script>
-
-      {/* ── FAQ Schema (Business Registration) ── */}
-      <script type="application/ld+json">{`
+      `}),(0,r.jsx)("script",{type:"application/ld+json",children:`
       { 
   "@context": "https://schema.org", 
   "@type": "FAQPage", 
@@ -215,13 +170,7 @@ function SEOHead() {
     }] 
 }
 
-      `}</script>
-    </Head>
-  );
-}
-
-
-const styles = `
+      `})]})}let d=`
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
   :root {
@@ -240,7 +189,7 @@ const styles = `
 
   
 
-  /* ── HERO BADGE ── */
+  /* \u{2500}\u{2500} HERO BADGE \u{2500}\u{2500} */
   .badge {
     display:inline-flex; align-items:center; gap:.5rem;
     background:rgba(237,131,55,0.1); border:1px solid rgba(237,131,55,0.28);
@@ -250,7 +199,7 @@ const styles = `
   }
   .badge-dot { width:6px; height:6px; border-radius:50%; background:var(--orange); animation:pulse-dot 1.6s infinite; }
 
-  /* ══ HERO BANNER (Website Dev) ══ */
+  /* \u{2550}\u{2550} HERO BANNER (Website Dev) \u{2550}\u{2550} */
   .wd-hero {
     min-height:100vh; display:grid; grid-template-columns:1fr 1fr;
     align-items:center; gap:2rem; padding:1rem 6% 4rem;
@@ -278,7 +227,7 @@ const styles = `
   
 
   /* OUR APPROACH */
-  /* ══ OUR APPROACH SECTION ══ */
+  /* \u{2550}\u{2550} OUR APPROACH SECTION \u{2550}\u{2550} */
   section#approach {
     padding-top: 5rem;
 }
@@ -315,7 +264,7 @@ const styles = `
   .wd-ap-submit-arrow { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:rgba(2,43,68,0.25); font-size:.9rem; }
   @media(max-width:900px){ .wd-ap-inner{grid-template-columns:1fr;} .wd-ap-form-wrap{max-width:100%;} }
 
-  /* WHAT WE OFFER — ORBIT */
+  /* WHAT WE OFFER \u{2014} ORBIT */
   .pcs-offer-section { padding:6rem 6% 7rem; background:#004168; overflow:hidden; }
   .pcs-offer-inner { max-width:1200px; margin:0 auto; }
   .pcs-offer-heading {
@@ -390,7 +339,7 @@ const styles = `
   .pcs-offer-placeholder-icon { font-size:2.8rem; opacity:.35; }
   .pcs-offer-placeholder-text { font-family:'Syne',sans-serif; font-size:.85rem; font-weight:600; color:rgba(0,65,104,0.3); }
 
-  /* WHAT'S INCLUDED — ACCORDION */
+  /* WHAT'S INCLUDED \u{2014} ACCORDION */
   .pcs-wi5-section {
     padding:6rem 6% 7rem; background:#ffffff; overflow:hidden; position:relative;
   }
@@ -438,7 +387,7 @@ const styles = `
   .pcs-wi5-tab-progress { height:3px; background:linear-gradient(to right,var(--orange),#1e8fc4); border-radius:0 3px 3px 0; transform-origin:left; transform:scaleX(0); transition:transform .5s .1s ease; }
   .pcs-wi5-tab.open .pcs-wi5-tab-progress { transform:scaleX(1); }
 
-  /* OUR PROCESS — NUMBERED CARDS GRID */
+  /* OUR PROCESS \u{2014} NUMBERED CARDS GRID */
   .pcs-proc-section {
     padding:7rem 6%;
     background:linear-gradient(160deg,var(--navy-deep) 0%,var(--navy) 50%,var(--navy-mid) 100%);
@@ -458,14 +407,14 @@ const styles = `
   @media(max-width:900px){ .pcs-proc-grid { grid-template-columns:repeat(2,1fr); } }
   @media(max-width:560px){ .pcs-proc-grid { grid-template-columns:1fr; } }
 
-  /* ══════════════════════════════════════════════
-     TABLET FIX — 900px to 1020px
+  /* \u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}
+     TABLET FIX \u{2014} 900px to 1020px
      Specifically targets the gap between mobile
      breakpoint (<=900px) and desktop (>1020px)
-  ══════════════════════════════════════════════ */
+  \u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550} */
 
   
-  /* ══ HERO — FULL RESPONSIVE FIX ══ */
+  /* \u{2550}\u{2550} HERO \u{2014} FULL RESPONSIVE FIX \u{2550}\u{2550} */
 
   /* Base hero: ensure no overflow */
   .wd-hero {
@@ -483,7 +432,7 @@ const styles = `
     display: block;
   }
 
-  /* Mobile — single column, left aligned */
+  /* Mobile \u{2014} single column, left aligned */
   @media (max-width: 768px) {
     .wd-hero {
       grid-template-columns: 1fr !important;
@@ -541,7 +490,7 @@ const styles = `
       }
   }
 
-  /* Tablet portrait — single column still */
+  /* Tablet portrait \u{2014} single column still */
   @media (min-width: 769px) and (max-width: 900px) {
     .wd-hero {
       grid-template-columns: 1fr !important;
@@ -554,7 +503,7 @@ const styles = `
 
   @media (min-width: 901px) and (max-width: 1020px) {
 
-    /* ── HERO BANNER ── */
+    /* \u{2500}\u{2500} HERO BANNER \u{2500}\u{2500} */
     .wd-hero {
       grid-template-columns: 1fr 1fr;
       padding: 5rem 4% 3.5rem;
@@ -564,7 +513,7 @@ const styles = `
     .wd-hero-sub { font-size: 0.92rem; }
     .wd-hero-img { height: 340px; }
 
-    /* ── APPROACH SECTION ── */
+    /* \u{2500}\u{2500} APPROACH SECTION \u{2500}\u{2500} */
     .wd-approach { padding: 3.5rem 4%; }
     .wd-ap-inner {
       grid-template-columns: 1fr 0.85fr;
@@ -574,13 +523,13 @@ const styles = `
     .wd-ap-form-card { padding: 2rem 1.8rem; }
     .wd-ap-heading { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 
-    /* ── APPROACH (ApproachSection component) ── */
+    /* \u{2500}\u{2500} APPROACH (ApproachSection component) \u{2500}\u{2500} */
     .ap-inner {
       grid-template-columns: 1fr 0.85fr !important;
       gap: 2rem !important;
     }
 
-    /* ── SERVICES ACCORDION ── */
+    /* \u{2500}\u{2500} SERVICES ACCORDION \u{2500}\u{2500} */
     .svc-section { padding: 4.5rem 4% 5rem; }
     .svc-layout {
       grid-template-columns: 1fr 1fr;
@@ -590,7 +539,7 @@ const styles = `
     .svc-right-col { position: static; top: auto; }
     .acc-desc, .acc-bar-wrap { padding-left: 0; }
 
-    /* ── WHAT WE OFFER — ORBIT ── */
+    /* \u{2500}\u{2500} WHAT WE OFFER \u{2014} ORBIT \u{2500}\u{2500} */
     .pcs-offer-section { padding: 4rem 4% 5rem; }
     .pcs-offer-body {
       grid-template-columns: 1fr 1fr;
@@ -603,7 +552,7 @@ const styles = `
     .pcs-orbit-node-emoji { font-size: 1.1rem; }
     .pcs-orbit-node-lbl { font-size: .58rem; }
 
-    /* ── WHAT'S INCLUDED — ACCORDION ── */
+    /* \u{2500}\u{2500} WHAT'S INCLUDED \u{2014} ACCORDION \u{2500}\u{2500} */
     .pcs-wi5-section { padding: 4rem 4% 5rem; }
     .pcs-wi5-tab-content {
       grid-template-columns: 1fr;
@@ -612,11 +561,11 @@ const styles = `
     }
     .pcs-wi5-tab-head { gap: 1rem; padding: 1.2rem 1.4rem; }
 
-    /* ── PROCESS GRID ── */
+    /* \u{2500}\u{2500} PROCESS GRID \u{2500}\u{2500} */
     .pcs-proc-section { padding: 4rem 4%; }
     .pcs-proc-grid { grid-template-columns: repeat(2, 1fr); gap: 1.2rem; }
 
-    /* ── WHY / FEATURES — 4 BOX ── */
+    /* \u{2500}\u{2500} WHY / FEATURES \u{2014} 4 BOX \u{2500}\u{2500} */
     .pcs-fb-section { padding: 4.5rem 4%; }
     .pcs-fb-grid {
       grid-template-columns: 1fr 120px 1fr;
@@ -627,7 +576,7 @@ const styles = `
     .pcs-fb-box { padding: 1.6rem 1.4rem; min-height: 180px; }
     .pcs-fb-title { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 
-    /* ── WHY CHOOSE US ── */
+    /* \u{2500}\u{2500} WHY CHOOSE US \u{2500}\u{2500} */
     .wcu-section { padding: 3.5rem 4%; }
     .wcu-inner {
       grid-template-columns: 1fr 1fr;
@@ -635,7 +584,7 @@ const styles = `
     }
     .wcu-heading { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 
-    /* ── PORTFOLIO SECTION ── */
+    /* \u{2500}\u{2500} PORTFOLIO SECTION \u{2500}\u{2500} */
     .pf-section { padding: 3.5rem 4%; }
     .pf-inner {
       grid-template-columns: minmax(220px, 340px) 1fr;
@@ -645,7 +594,7 @@ const styles = `
     .pf-cols { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
     .pf-heading { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 
-    /* ── PROCESS SECTION (WebsiteDevelopment) ── */
+    /* \u{2500}\u{2500} PROCESS SECTION (WebsiteDevelopment) \u{2500}\u{2500} */
     .proc-section { padding: 4rem 4%; margin: 0 !important; }
     .proc-cols {
       grid-template-columns: 1fr;
@@ -658,18 +607,18 @@ const styles = `
     .pb-tl, .pb-tr, .pb-bl, .pb-br { display: none; }
     .proc-heading { font-size: clamp(1.5rem, 2.5vw, 2rem); }
 
-    /* ── KEY FEATURES CAROUSEL ── */
+    /* \u{2500}\u{2500} KEY FEATURES CAROUSEL \u{2500}\u{2500} */
     .kf-section { padding: 3rem 0 4rem; }
     .kf-inner { padding: 2rem 2.5rem; }
     .kf-carousel-wrap { height: 360px; }
     .kf-card { width: 300px; }
     .kf-title { font-size: clamp(1.6rem, 2.8vw, 2.2rem); }
 
-    /* ── FAQ SECTION ── */
+    /* \u{2500}\u{2500} FAQ SECTION \u{2500}\u{2500} */
     .faq-wrapper { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
     .faq-section { padding: 3rem 4% 4rem !important; }
 
-    /* ── GENERAL ── */
+    /* \u{2500}\u{2500} GENERAL \u{2500}\u{2500} */
     .pcs-wi5-heading, .pcs-offer-heading { font-size: clamp(1.5rem, 2.5vw, 2rem) !important; }
   }
 h3.faq-h3 {font-size:2.5rem;color:#000;}
@@ -703,7 +652,7 @@ h3.faq-h3 {font-size:2.5rem;color:#000;}
   .pcs-proc-gc-title { font-family:'Poppins',sans-serif; font-size:1rem; font-weight:700; color:#fff; line-height:1.3; }
   .pcs-proc-gc-desc { font-family:'Poppins',sans-serif; font-size:.87rem; line-height:1.78; color:rgba(255,255,255,0.72); flex:1; }
 
-  /* WHY — 4 BOX */
+  /* WHY \u{2014} 4 BOX */
   .pcs-fb-section { padding:7rem 6%; background:#f7f9fc; overflow:hidden; position:relative; }
   .pcs-fb-inner { max-width:1100px; margin:0 auto; position:relative; z-index:2; }
   .pcs-fb-header { text-align:center; margin-bottom:3.5rem; }
@@ -775,12 +724,12 @@ h3.faq-h3 {font-size:2.5rem;color:#000;}
     .pcs-wi5-tab-head { gap:1rem; padding:1.1rem 1.2rem; }
     .pcs-wi5-tab-content { padding:1.2rem 1rem 1.2rem 1rem; }
   }
-  /* ══════════════════════════════════════════
+  /* \u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}
      COMPREHENSIVE MOBILE RESPONSIVE FIXES
      Covers: form, FAQ, orbit, features, all sections
-  ══════════════════════════════════════════ */
+  \u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550}\u{2550} */
 
-  /* ── FORM: 2-col row → 1-col on mobile ── */
+  /* \u{2500}\u{2500} FORM: 2-col row \u{2192} 1-col on mobile \u{2500}\u{2500} */
   @media (max-width: 768px) {
     .wd-fl-row { grid-template-columns: 1fr !important; }
     .wd-ap-form-card { padding: 1.8rem 1.2rem !important; }
@@ -789,7 +738,7 @@ h3.faq-h3 {font-size:2.5rem;color:#000;}
     .wd-ap-inner { grid-template-columns: 1fr !important; gap: 2rem !important; }
     .wd-approach { padding: 3rem 5% !important; }
 
-    /* ── OFFER SECTION ── */
+    /* \u{2500}\u{2500} OFFER SECTION \u{2500}\u{2500} */
     .pcs-offer-section { padding: 3.5rem 5% 4rem !important; }
     .pcs-offer-body { grid-template-columns: 1fr !important; gap: 2rem !important; }
     .pcs-offer-heading { margin-bottom: 2.5rem !important; font-size: clamp(1.5rem, 5vw, 2rem) !important; }
@@ -800,7 +749,7 @@ h3.faq-h3 {font-size:2.5rem;color:#000;}
     .pcs-orbit-node-emoji { font-size: 1rem !important; }
     .pcs-orbit-node-lbl { font-size: 0.55rem !important; }
 
-    /* ── WHAT'S INCLUDED ACCORDION ── */
+    /* \u{2500}\u{2500} WHAT'S INCLUDED ACCORDION \u{2500}\u{2500} */
     .pcs-wi5-section { padding: 3.5rem 5% 4rem !important; }
     .pcs-wi5-tab-content { grid-template-columns: 1fr !important; padding-left: 1rem !important; gap: 1rem !important; }
     .pcs-wi5-tab-head { gap: 0.8rem !important; padding: 1rem 1rem !important; }
@@ -809,14 +758,14 @@ h3.faq-h3 {font-size:2.5rem;color:#000;}
     .pcs-wi5-tab-title { font-size: 0.9rem !important; }
     .pcs-wi5-heading { font-size: clamp(1.4rem, 5vw, 1.9rem) !important; margin-bottom: 2rem !important; }
 
-    /* ── PROCESS GRID ── */
+    /* \u{2500}\u{2500} PROCESS GRID \u{2500}\u{2500} */
     .pcs-proc-section { padding: 3.5rem 5% !important; }
     .pcs-proc-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
     .pcs-proc-gc { padding: 1.4rem 1.2rem !important; }
     .pcs-proc-gc-num { font-size: 2.2rem !important; }
     .pcs-proc-title { font-size: clamp(1.4rem, 5vw, 2rem) !important; }
 
-    /* ── FEATURES (4-BOX) ── */
+    /* \u{2500}\u{2500} FEATURES (4-BOX) \u{2500}\u{2500} */
     .pcs-fb-section { padding: 3.5rem 5% !important; }
     .pcs-fb-grid { grid-template-columns: 1fr !important; }
     .pcs-fb-center-col { display: none !important; }
@@ -829,7 +778,7 @@ h3.faq-h3 {font-size:2.5rem;color:#000;}
     }
     .pcs-fb-title { font-size: clamp(1.4rem, 5vw, 2rem) !important; }
 
-    /* ── FAQ SECTION ── */
+    /* \u{2500}\u{2500} FAQ SECTION \u{2500}\u{2500} */
     .faq-section { padding: 0 5% 60px !important; }
     .faq-wrapper { grid-template-columns: 1fr !important; gap: 0 !important; }
     .faq-head h2 { font-size: clamp(1.4rem, 5vw, 2rem) !important; }
@@ -837,24 +786,24 @@ h3.faq-h3 {font-size:2.5rem;color:#000;}
     .faq-answer { font-size: 0.88rem !important; padding: 0.8rem 1.2rem 1rem !important; }
     .faq-item { margin-bottom: 0.5rem !important; }
 
-    /* ── WCU (Why Choose Us) ── */
+    /* \u{2500}\u{2500} WCU (Why Choose Us) \u{2500}\u{2500} */
     .wcu-section { padding: 3rem 5% !important; }
     .wcu-inner { grid-template-columns: 1fr !important; gap: 2rem !important; }
     .wcu-heading { font-size: clamp(1.4rem, 5vw, 2rem) !important; }
 
-    /* ── PORTFOLIO ── */
+    /* \u{2500}\u{2500} PORTFOLIO \u{2500}\u{2500} */
     .pf-section { padding: 3rem 5% !important; }
     .pf-inner { grid-template-columns: 1fr !important; gap: 1.5rem !important; padding: 1.8rem 1.2rem !important; }
     .pf-cols { grid-template-columns: repeat(2, 1fr) !important; gap: 0.6rem !important; }
     .pf-heading { font-size: clamp(1.4rem, 5vw, 2rem) !important; }
 
-    /* ── KEY FEATURES CAROUSEL ── */
+    /* \u{2500}\u{2500} KEY FEATURES CAROUSEL \u{2500}\u{2500} */
     .kf-section { padding: 2.5rem 0 3rem !important; }
     .kf-inner { padding: 1.5rem 1rem !important; }
     .kf-card { width: 260px !important; }
     .kf-title { font-size: clamp(1.4rem, 5vw, 1.9rem) !important; }
 
-    /* ── HERO (Static page fallback) ── */
+    /* \u{2500}\u{2500} HERO (Static page fallback) \u{2500}\u{2500} */
     .wd-hero {
       grid-template-columns: 1fr !important;
       padding: 5.5rem 5% 3rem !important;
@@ -869,17 +818,17 @@ h3.faq-h3 {font-size:2.5rem;color:#000;}
     .wd-btn-fill { width: auto !important; min-width: 200px !important; justify-content: center !important; }
     .badge { margin: 0 0 1.2rem !important; }
 
-    /* ── APPROACH SECTION (generic) ── */
+    /* \u{2500}\u{2500} APPROACH SECTION (generic) \u{2500}\u{2500} */
     .wd-ap-eyebrow { font-size: 0.62rem !important; }
     .wd-ap-heading { font-size: clamp(1.4rem, 5vw, 2rem) !important; }
     .wd-ap-intro { font-size: 0.92rem !important; }
 
-    /* ── GENERAL PADDING ── */
+    /* \u{2500}\u{2500} GENERAL PADDING \u{2500}\u{2500} */
     section { overflow-x: hidden; }
     .container { padding-left: 1rem !important; padding-right: 1rem !important; }
   }
 
-  /* ── EXTRA SMALL (< 400px) ── */
+  /* \u{2500}\u{2500} EXTRA SMALL (< 400px) \u{2500}\u{2500} */
   @media (max-width: 400px) {
     .wd-hero { padding: 7.5rem 4% 2rem !important; }
     .wd-hero-heading { font-size: clamp(1.4rem, 7.5vw, 1.9rem) !important; }
@@ -893,465 +842,4 @@ h3.faq-h3 {font-size:2.5rem;color:#000;}
     .faq-wrapper { grid-template-columns: 1fr !important; }
   }
 
-`;
-
-const offerData = [
-  { emoji: "/img/icon/design.webp", label: "Social", title: "Social & Third-Party Integrations", desc: "Modern websites need to be connected and functional. PCS integrates your website with social media platforms, analytics tools, CRM systems, and other essential third-party applications. This enhances engagement, improves tracking, and supports your overall digital marketing strategy.", tags: ["Connected","Integrated","Automated","Functional"] },
-  { emoji: "/img/icon/planning.webp", label: "Delivery", title: "On-Time Delivery", desc: "We value your time and business commitments. PCS follows a structured development process with clearly defined timelines to ensure timely project completion. Our efficient workflow ensures your website design is delivered on schedule without compromising on quality or performance.", tags: ["Timely","Reliable","Efficient","Consistent"] },
-  { emoji: "/img/icon/mobile.webp", label: "Experience", title: "Seamless User Experience", desc: "User experience plays a critical role in engagement and conversions. Our team focuses on clean layouts, structured content, and intuitive navigation to ensure visitors can easily find what they’re looking for. A smooth browsing experience encourages users to stay longer and take action.", tags: ["Intuitive","Structured","Smooth","Engaging"] },
-  { emoji: "/img/icon/target.webp", label: "Responsive Design", title: "Responsive & Device-Ready Design", desc: "With users browsing across mobiles, tablets, laptops, and desktops, having a fully responsive website is essential. At PCS, we design websites that seamlessly adapt to all screen sizes and devices. This ensures a consistent, visually appealing, and high-performing experience for your visitors—no matter how they access your website.", tags: ["Adaptive","Responsive","Optimized","Seamless"] },
-  { emoji: "/img/icon/performance.webp", label: "Customized", title: "Customized Website Solutions", desc: "Every business has its own identity, goals, and audience. That’s why PCS delivers tailor-made website solutions designed specifically around your brand requirements. We understand your business objectives and create a website design that not only reflects your brand personality but also differentiates you from competitors.", tags: ["Tailored","Strategic","Unique","Branded"] },
-];
-
-const nodePositions = [
-  { top: "5%", left: "50%" },
-  { top: "22%", left: "87%" },
-  { top: "73%", left: "82%" },
-  { top: "73%", left: "18%" },
-  { top: "22%", left: "13%" },
-];
-
-const connectorAngles = [-90, -18, 54, 126, 198];
-
-const includedData = [
-  { num:"01", icon:"/img/icon/website-custom-design.webp", title:"Custom UI/UX Design", desc:"We craft visually engaging and brand-aligned website designs tailored to your business goals. From layout structure to typography and color systems, every element is thoughtfully designed to enhance visual appeal and user experience.", tags:[{t:"UI Design",c:"t-orange"},{t:"UX Strategy",c:"t-blue"},{t:"Brand Alignment",c:"t-orange"},{t:"Typography",c:"t-blue"}] },
-  { num:"02", icon:"/img/icon/website-design-structured-planning.webp", title:"Structured Content Layout", desc:"Great design supports great content. We organize and structure your website content for clarity, readability, and flow — ensuring visitors can easily navigate and understand your message.", tags:[{t:"Content Hierarchy",c:"t-orange"},{t:"Info Architecture",c:"t-blue"},{t:"CTA Placement",c:"t-orange"},{t:"Navigation Flow",c:"t-blue"}] },
-  { num:"03", icon:"/img/icon/website-design-mobile.webp", title:"Responsive Design Experience", desc:"Our designs are fully responsive, adapting seamlessly across mobiles, tablets, and desktops. This ensures consistent branding, smooth browsing, and a visually polished experience on every device.", tags:[{t:"Mobile-First",c:"t-orange"},{t:"Cross-Device",c:"t-blue"},{t:"Fluid Layouts",c:"t-orange"},{t:"Touch UX",c:"t-blue"}] },
-  { num:"04", icon:"/img/icon/website-design-branding.webp", title:"Visual Branding Consistency", desc:"We maintain strong visual consistency across pages using defined brand elements, imagery, iconography, and design systems — reinforcing credibility and professional identity.", tags:[{t:"Brand Guidelines",c:"t-orange"},{t:"Colour System",c:"t-blue"},{t:"Visual Identity",c:"t-orange"},{t:"Brand Voice",c:"t-blue"}] },
-  { num:"05", icon:"/img/icon/website-design-performance.webp", title:"Performance & Engagement Optimization", desc:"Our design approach focuses on engagement. With clear calls-to-action, intuitive layouts, and strategic section placement, we create websites that not only look impressive but encourage meaningful interaction.", tags:[{t:"Page Speed",c:"t-orange"},{t:"Core Web Vitals",c:"t-blue"},{t:"SEO Architecture",c:"t-orange"},{t:"Conversion Rate",c:"t-blue"}] },
-];
-
-const processSteps = [
-  { num:"01", icon:"/img/icon/website-design-target.webp", title:"Discovery & Requirement Analysis", desc:"We begin by understanding your business, target audience, brand positioning, and goals. This helps us define a clear design direction aligned with your objectives.", tags:["Business Goals","Audience Research","Competitor Analysis"], last:false },
-  { num:"02", icon:"/img/icon/website-design-planning.webp", title:"Research & Strategy Planning", desc:"We analyze competitors, industry trends, and user behavior to create a strategic design plan that ensures clarity, differentiation, and effective communication.", tags:["Wireframes","Site Architecture","Content Planning"], last:false },
-  { num:"03", icon:"/img/icon/website-design-wireframing.webp", title:"Wireframing & Structure", desc:"We design structured wireframes to map layouts, content placement, and user flow. This ensures logical navigation and a strong visual hierarchy before final design execution.", tags:["Visual Design","Brand System","UX Prototyping"], last:false },
-  { num:"04", icon:"/img/icon/website-design-settings.webp", title:"Creative UI Design", desc:"Our team creates visually compelling, brand-focused designs including typography, color schemes, imagery, and interface elements that reflect professionalism and consistency.", tags:["Responsive Code","SEO Structure","Performance"], last:false },
-  { num:"05", icon:"/img/icon/website-design-seo-optimization.webp", title:"Responsive Optimization", desc:"We refine the design for seamless viewing across desktops, tablets, and mobile devices, ensuring consistency, usability, and smooth interaction on every screen.", tags:["Cross-Browser","Speed Testing","QA Review"], last:false },
-  { num:"06", icon:"/img/icon/website-design-launch.webp", title:"Review, Feedback & Finalization", desc:"We collaborate with you for feedback, make necessary refinements, and finalize the design to ensure it meets expectations and is ready for a flawless launch.", tags:["Go Live","Monitoring","Ongoing Support"], last:true },
-];
-
-const whyData = [
-  { cls:"pcs-fb-box-tl", icon:"/img/icon/website-user-design-strategy.webp", title:"Intuitive & User-Centric Design", desc:"At PCS, our website designs are created with the end user in mind. We focus on clarity, smooth navigation, and structured layouts to deliver an engaging and effortless browsing experience that keeps visitors exploring." },
-  { cls:"pcs-fb-box-tr", icon:"/img/icon/website-design-seo-structure.webp", title:"SEO-Ready Design Structure", desc:"We incorporate search-friendly design practices from the beginning. Clean layouts, optimized content placement, and responsive frameworks help improve visibility, enhance organic reach, and support stronger search engine performance." },
-  { cls:"pcs-fb-box-bl", icon:"/img/icon/website-design-mobile-responsive.webp", title:"Responsive & Adaptive Experience", desc:"With most users browsing on mobile devices, we ensure every website design is fully responsive. Our layouts adapt seamlessly across desktops, tablets, and smartphones for consistent branding and flawless usability." },
-  { cls:"pcs-fb-box-br", icon:"/img/icon/website-design-security.webp", title:"Secure & Reliable Framework", desc:"We prioritize website safety by implementing secure design standards and best practices. Our approach helps protect user data, maintain site stability, and ensure long-term performance with regular updates and monitoring support." },
-];
-
-const faqData = [
-  { q: " Do you redesign existing websites?", a: "Yes, we redesign existing websites to improve their visual appeal, user experience, and overall performance. Our redesign process focuses on modern layouts, better navigation, responsive structure, and brand consistency while keeping the useful content intact." },
-  { q: "Do you provide custom UI/UX design?", a: "Yes, we offer fully customized UI/UX design tailored to your brand identity, audience behavior, and business goals. Our approach ensures intuitive navigation, engaging layouts, and a smooth user journey that supports better interaction and conversions." },
-  { q: "What are the most common problems in website design?", a: "Common website design problems include poor navigation, outdated visuals, slow loading speed, lack of mobile responsiveness, inconsistent branding, and unclear call-to-actions. These issues can reduce user trust and affect overall business performance." },
-  { q: "Why is UI/UX important for a business website?", a: "UI/UX design affects how users interact with your website. A well-designed interface improves usability, builds trust, increases engagement, and helps visitors take action more easily." },
-  { q: "Will my website be mobile-friendly and SEO-ready?", a: "Yes, your website will be designed to work smoothly on all devices and follow SEO-friendly structure. We focus on responsive design, clean coding, fast loading, and proper on-page elements to support better visibility." },
-  { q: "What is included in your UI/UX design process?", a: "Our UI/UX design process includes research, wireframing, design mockups, revisions, and final approval. We make sure the design aligns with your business goals and creates a user-friendly experience." },
-];
-
-export default function PCSWebsite() {
-  const [activeOffer, setActiveOffer] = useState(0);
-  const [openTab, setOpenTab] = useState(0);
-
-  // Auto-loop Our Services orbit nodes
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveOffer(prev => (prev + 1) % offerData.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, []);
-
-  // Auto-open Our Included accordion tabs
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setOpenTab(prev => (prev + 1) % includedData.length);
-    }, 3500);
-    return () => clearInterval(timer);
-  }, []);
-
-   const handleOfferSelect = (i) => setActiveOffer(i);
-  const handleTabToggle = (i) => setOpenTab(openTab === i ? -1 : i);
-
-  const [form, setForm] = useState({ name:"", email:"", phone:"", company:"", msg:"" });
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const templateParams = {
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      company: form.company,
-      message: form.msg,
-      url: window.location.href,
-    };
-
-    emailjs
-      .send(
-        "service_8xw6k3r",
-        "template_jarui36",
-        templateParams,
-        "XWRnXi4hK2SvmRG3q"
-      )
-      .then(() => {
-        alert("Message Sent Successfully ✅");
-        setForm({ name:"", email:"", phone:"", company:"", msg:"" });
-      })
-      .catch((error) => {
-        console.log(error);
-        alert("Failed to send ❌");
-      });
-  };
-
-    const [active, setActive] = useState(null);
-
-  const toggle = (index) => {
-    setActive(active === index ? null : index);
-  };
-  return (
-    <Layout>
-      <>
-      <style>{styles}</style>
-
-   
-      <SEOHead />
-      {/* SECTION 1: HERO */}
-     <section className="wd-hero">
-      <div className="wd-hero-bg-radial" />
-      <div className="wd-hero-bg-grid" />
-
-      {/* LEFT */}
-      <div style={{position:"relative",zIndex:2,display:"flex",flexDirection:"column"}}>
-        <div className="badge"><div className="badge-dot" />Elevated Design</div>
-        <h1 className="wd-hero-heading">
-          Professional Website<br />
-          <span className="orange lined" style={{marginRight: '12px'}}>Design</span>Company  That Elevates
-          Your Brand 
-        </h1>
-        <p className="wd-hero-sub">
-As an experienced website design company , we create modern, responsive website design solutions and customizable website design tailored to elevate your brand presence and drive business growth, ensuring performance, user engagement, SEO visibility, and long-term scalability for your success.
-        </p>
-        <div className="wd-hero-actions">
-          <a className="wd-btn-fill" href="#">Get a Free Quote <span className="wd-btn-arrow">›</span></a>
-        </div>
-      </div>
-
-      {/* RIGHT — banner image */}
-      <div style={{position:"relative",zIndex:2,display:"flex",alignItems:"center",justifyContent:"center",animation:"fadeUp .9s .15s ease both"}}>
-        <img
-          src={banner}
-          alt="Website Design Banner"
-          className="wd-hero-img"
-        />
-      </div>
-    </section>
-
-      {/* SECTION 2: OUR APPROACH */}
-     <section className="wd-approach" id="approach">
-      <div className="wd-ap-inner">
-
-        {/* LEFT CONTENT */}
-        <div>
-             <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Strategy for Website Design</div>
-          </div>
-          <h2 className="wd-ap-heading">Strategic,  <span>Responsive </span> & Result-Driven Website Design</h2>
-          <p className="wd-ap-intro">
-Your website design is more than an online presence — it represents your brand’s first impression. We follow a strategy-first approach to create websites aligned with your business goals and growth vision.
-          </p>
-          <p className="wd-ap-intro">
-As an experienced website design company, we focus on UI/UX, responsiveness, SEO, speed, and performance to deliver seamless website design services that improve user experience and engagement across all devices.
-          </p>
-          <p className="wd-ap-intro">
-            We create scalable and modern website solutions that combine visual appeal with functionality, helping businesses strengthen credibility, increase conversions, and support long-term digital growth.
-
-          </p>
-        </div>
-
-              {/* RIGHT FORM */}
-        <div className="wd-ap-form-wrap">
-          <div className="wd-ap-form-card">
-            <div className="wd-form-eyebrow">
-              <span className="wd-form-eyebrow-line"/>Your Growth, Our Mission<span className="wd-form-eyebrow-line"/>
-            </div>
-            <div className="wd-form-title">Get Your <span>Free</span> Quote</div>
-
-            <form onSubmit={handleSubmit}>
-              <div className="wd-fl-row">
-                <div className="wd-fl-group">
-                  <label className="wd-fl-label">Your Name</label>
-                  <div style={{position:"relative"}}>
-                    <span className="wd-fl-icon">👤</span>
-                    <input className="wd-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
-                  </div>
-                </div>
-                <div className="wd-fl-group">
-                  <label className="wd-fl-label">Company</label>
-                  <div style={{position:"relative"}}>
-                    <span className="wd-fl-icon">🏢</span>
-                    <input className="wd-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
-                  </div>
-                </div>
-              </div>
-
-              <div className="wd-fl-group">
-                <label className="wd-fl-label">Email Address</label>
-                <div style={{position:"relative"}}>
-                  <span className="wd-fl-icon">✉️</span>
-                  <input className="wd-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
-                </div>
-              </div>
-
-              <div className="wd-fl-group">
-                <label className="wd-fl-label">Mobile Number</label>
-                <div className="wd-phone-row">
-                  <div className="wd-phone-flag"><span>📞</span></div>
-                  <input className="wd-fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
-                </div>
-              </div>
-
-              <div className="wd-fl-group wd-textarea-group">
-                <label className="wd-fl-label">Message</label>
-                <div style={{position:"relative"}}>
-                  <span className="wd-fl-icon" style={{top:"0.9rem",transform:"none"}}>💬</span>
-                  <textarea className="wd-fl-textarea" name="msg" placeholder="Tell us about your project..." value={form.msg} onChange={handleChange} />
-                </div>
-              </div>
-
-              <button type="submit" className="wd-ap-submit">
-                Get Free Consultation
-                <span className="wd-ap-submit-arrow">›</span>
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
-      {/* SECTION 3: WHAT WE OFFER — ORBIT */}
-      <section className="pcs-offer-section">
-        <div className="pcs-offer-inner">
-                <div className="partners-header1" style={{ marginBottom: '20px', textAlign: 'center' }}>
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Key Uniqueness</h2>
-          </div>
-          <h3 className="pcs-offer-heading">Why Should You Choose <span><i> for Website Design?</i></span></h3>
-          <div className="pcs-offer-body">
-            <div className="pcs-offer-left">
-              <div className="pcs-orbit-wrap">
-                <div className="pcs-orbit-ring"></div>
-                {connectorAngles.map((angle, i) => (
-                  <div key={i} className={`pcs-orbit-connector${activeOffer === i ? " active" : ""}`}
-                    style={{ width:"calc(50% - 62px)", transform:`rotate(${angle}deg) translateY(-50%)` }}
-                  ></div>
-                ))}
-                <div className="pcs-orbit-center">
-                  <div className="pcs-orbit-center-name">PCS</div>
-                  <div className="pcs-orbit-center-sub">Web Design</div>
-                </div>
-                {offerData.map((item, i) => (
-                  <div key={i} className="pcs-orbit-node" style={{ top: nodePositions[i].top, left: nodePositions[i].left }} onClick={() => handleOfferSelect(i)}>
-                    <div className={`pcs-orbit-node-box${activeOffer === i ? " active" : ""}`}>
-                      <img src={item.emoji} alt={item.label} style={{width:"28px",height:"28px",objectFit:"contain", filter: activeOffer === i ? "brightness(0) invert(1)" : "none", transition:"filter 0.3s"}} />
-                      <div className="pcs-orbit-node-lbl">{item.label}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="pcs-offer-right">
-              {activeOffer === -1 && (
-                <div className="pcs-offer-placeholder">
-                  <div className="pcs-offer-placeholder-icon"><img src="/img/icons/click.png" alt="Select an option" style={{width:"40px",height:"40px",objectFit:"contain",opacity:"0.4"}} /></div>
-                  <div className="pcs-offer-placeholder-text">Click any box to view details</div>
-                </div>
-              )}
-              {offerData.map((item, i) => (
-                <div key={i} className={`pcs-offer-panel${activeOffer === i ? " active" : ""}`}>
-                  <div className="pcs-offer-panel-bar"></div>
-                  <div className="pcs-offer-panel-title-row">
-                    <div className="pcs-offer-panel-icon"><img src={item.emoji} alt={item.title} style={{width:"32px",height:"32px",objectFit:"contain", filter:"brightness(0) invert(1)"}} /></div>
-                    <h4 className="pcs-offer-panel-title">{item.title}</h4>
-                  </div>
-                  <div className="pcs-offer-panel-divider"></div>
-                  <div className="pcs-offer-panel-desc">{item.desc}</div>
-                  <div className="pcs-offer-panel-tags">
-                    {item.tags.map((tag, j) => <span key={j} className="pcs-offer-panel-tag">{tag}</span>)}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 4: WHAT'S INCLUDED */}
-      <section className="pcs-wi5-section">
-        <div className="pcs-wi5-inner">
-            <div className="pcs-offer-inner">
-                <div className="partners-header1" style={{ marginBottom: '10px', textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ textAlign: 'center' }}>Our Expertise</div>
-          </div>
-          </div>
-          <h2 className="pcs-wi5-heading">What’s Included in Our  <span><i>Website Design</i></span> Services?</h2>
-          <div className="pcs-wi5-tabs">
-            {includedData.map((tab, i) => (
-              <div key={i} className={`pcs-wi5-tab${openTab === i ? " open" : ""}`}>
-                <div className="pcs-wi5-tab-head" onClick={() => handleTabToggle(i)}>
-                  <div className="pcs-wi5-tab-num">
-                    <div className="pcs-wi5-tab-num-diamond"></div>
-                    <span className="pcs-wi5-tab-num-text">{tab.num}</span>
-                  </div>
-                  <div className="pcs-wi5-tab-icon"><img src={tab.icon} alt={tab.title} style={{width:"22px",height:"22px",objectFit:"contain"}} /></div>
-                  <h3 className="pcs-wi5-tab-title">{tab.title}</h3>
-                  <div className="pcs-wi5-tab-chev">
-                    <span style={{fontSize:"1rem",lineHeight:"1",display:"block"}}>▾</span>
-                  </div>
-                </div>
-                <div className="pcs-wi5-tab-body">
-                  <div className="pcs-wi5-tab-content">
-                    <div className="pcs-wi5-tab-desc">{tab.desc}</div>
-                    {/* <div className="pcs-wi5-tab-tags">
-                      {tab.tags.map((t, j) => <span key={j} className={`pcs-wi5-tab-tag ${t.c}`}>{t.t}</span>)}
-                    </div> */}
-                  </div>
-                  <div className="pcs-wi5-tab-progress"></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: OUR PROCESS */}
-      <section className="pcs-proc-section">
-        <div className="pcs-proc-inner">
-          <div className="pcs-proc-header">
-                 <div className="pcs-offer-inner">
-                <div className="partners-header1" style={{ marginBottom: '10px', textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ textAlign: 'center' }}>Workflow Process</div>
-          </div>
-          </div>
-            <h2 className="pcs-proc-title">Our Website <span><i> Design Process</i></span> </h2>
-          </div>
-          <div className="pcs-proc-grid">
-            {processSteps.map((step, i) => (
-              <div className="pcs-proc-gc" key={i}>
-                <div className="pcs-proc-gc-top">
-                  <div className="pcs-proc-gc-num">{step.num}</div>
-                  <div className="pcs-proc-gc-icon"><img src={step.icon} alt={step.title} style={{width:"28px",height:"28px",objectFit:"contain"}} /></div>
-                </div>
-                <h3 className="pcs-proc-gc-title">{step.title}</h3>
-                <div className="pcs-proc-gc-desc">{step.desc}</div>
-                {/* <div className="pcs-proc-gc-tags">
-                  {step.tags.map((t, j) => <span key={j}>{t}</span>)}
-                </div> */}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
- 
-      {/* SECTION 6: WHY */}
-      <section className="pcs-fb-section">
-        <div className="pcs-fb-inner">
-          <div className="pcs-fb-header">
-           <div className="pcs-offer-inner">
-                <div className="partners-header1" style={{ marginBottom: '10px', textAlign: 'center' }}>
-            <h2 className="partners-eyebrow" style={{ textAlign: 'center' }}>Key Service Features  </h2>
-          </div>
-          </div>            <h3 className="pcs-fb-title">Features of our Corporate <span><i>Website Designs</i></span> Services</h3>
-          </div>
-          <div className="pcs-fb-grid">
-            <div className="pcs-fb-vline"></div>
-            <div className="pcs-fb-hline"></div>
-            <div className={`pcs-fb-box pcs-fb-box-tl`}>
-              <div className="pcs-fb-icon"><img src={whyData[0].icon} alt={whyData[0].title} style={{width:"32px",height:"32px",objectFit:"contain"}} /></div>
-              <h4 className="pcs-fb-box-title">{whyData[0].title}</h4>
-              <div className="pcs-fb-box-desc">{whyData[0].desc}</div>
-            </div>
-            <div className="pcs-fb-center-col">
-              <div className="pcs-fb-center-circle">
-                <div className="pcs-fb-center-inner">
-                  <div className="pcs-fb-center-icon"><img src="/img/priyam-consultancy-logo.png" alt="PCS" style={{width:"80px",height:"80px",objectFit:"contain"}} /></div>
-                </div>
-              </div>
-            </div>
-            <div className={`pcs-fb-box pcs-fb-box-tr`}>
-              <div className="pcs-fb-icon"><img src={whyData[1].icon} alt={whyData[1].title} style={{width:"32px",height:"32px",objectFit:"contain"}} /></div>
-              <h4 className="pcs-fb-box-title">{whyData[1].title}</h4>
-              <div className="pcs-fb-box-desc">{whyData[1].desc}</div>
-            </div>
-            <div className={`pcs-fb-box pcs-fb-box-bl`}>
-              <div className="pcs-fb-icon"><img src={whyData[2].icon} alt={whyData[2].title} style={{width:"32px",height:"32px",objectFit:"contain"}} /></div>
-              <h4 className="pcs-fb-box-title">{whyData[2].title}</h4>
-              <div className="pcs-fb-box-desc">{whyData[2].desc}</div>
-            </div>
-            <div className={`pcs-fb-box pcs-fb-box-br`}>
-              <div className="pcs-fb-icon"><img src={whyData[3].icon} alt={whyData[3].title} style={{width:"32px",height:"32px",objectFit:"contain"}} /></div>
-              <h4 className="pcs-fb-box-title">{whyData[3].title}</h4>
-              <div className="pcs-fb-box-desc">{whyData[3].desc}</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-     {/* blog section */}
-      <BlogSection />
-
-
-      {/* faq section */}
-          <section className="faq-section" style={{padding: '0 0 80px 0'}}>
-      <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
-      </div>
-      <div className="container">
-        {/* TITLE */}
-        <div className="faq-head">
-          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
-        </div>
-        {/* FAQ GRID */}
-        <div className="faq-wrapper">
-
-          {/* LEFT COLUMN */}
-          <div className="faq-col">
-            {faqData.slice(0, 3).map((item, i) => (
-              <div className="faq-item" key={i}>
-                <div className="faq-question" onClick={() => toggle(i)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i ? "−" : "+"}</span>
-                </div>
-                {active === i && (
-                  <div className="faq-answer">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* RIGHT COLUMN */}
-          <div className="faq-col">
-            {faqData.slice(3, 6).map((item, i) => (
-              <div className="faq-item" key={i + 3}>
-                <div className="faq-question" onClick={() => toggle(i + 3)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i + 3 ? "−" : "+"}</span>
-                </div>
-                {active === i + 3 && (
-                  <div className="faq-answer">
-                    {item.a}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    {/* cta section */}
-       <CTASection />
-
-    </>
-    </Layout>
-  );
-}
+`,m=[{emoji:"/img/icon/design.webp",label:"Social",title:"Social & Third-Party Integrations",desc:"Modern websites need to be connected and functional. PCS integrates your website with social media platforms, analytics tools, CRM systems, and other essential third-party applications. This enhances engagement, improves tracking, and supports your overall digital marketing strategy.",tags:["Connected","Integrated","Automated","Functional"]},{emoji:"/img/icon/planning.webp",label:"Delivery",title:"On-Time Delivery",desc:"We value your time and business commitments. PCS follows a structured development process with clearly defined timelines to ensure timely project completion. Our efficient workflow ensures your website design is delivered on schedule without compromising on quality or performance.",tags:["Timely","Reliable","Efficient","Consistent"]},{emoji:"/img/icon/mobile.webp",label:"Experience",title:"Seamless User Experience",desc:"User experience plays a critical role in engagement and conversions. Our team focuses on clean layouts, structured content, and intuitive navigation to ensure visitors can easily find what they\u2019re looking for. A smooth browsing experience encourages users to stay longer and take action.",tags:["Intuitive","Structured","Smooth","Engaging"]},{emoji:"/img/icon/target.webp",label:"Responsive Design",title:"Responsive & Device-Ready Design",desc:"With users browsing across mobiles, tablets, laptops, and desktops, having a fully responsive website is essential. At PCS, we design websites that seamlessly adapt to all screen sizes and devices. This ensures a consistent, visually appealing, and high-performing experience for your visitors\u2014no matter how they access your website.",tags:["Adaptive","Responsive","Optimized","Seamless"]},{emoji:"/img/icon/performance.webp",label:"Customized",title:"Customized Website Solutions",desc:"Every business has its own identity, goals, and audience. That\u2019s why PCS delivers tailor-made website solutions designed specifically around your brand requirements. We understand your business objectives and create a website design that not only reflects your brand personality but also differentiates you from competitors.",tags:["Tailored","Strategic","Unique","Branded"]}],g=[{top:"5%",left:"50%"},{top:"22%",left:"87%"},{top:"73%",left:"82%"},{top:"73%",left:"18%"},{top:"22%",left:"13%"}],f=[-90,-18,54,126,198],h=[{num:"01",icon:"/img/icon/website-custom-design.webp",title:"Custom UI/UX Design",desc:"We craft visually engaging and brand-aligned website designs tailored to your business goals. From layout structure to typography and color systems, every element is thoughtfully designed to enhance visual appeal and user experience.",tags:[{t:"UI Design",c:"t-orange"},{t:"UX Strategy",c:"t-blue"},{t:"Brand Alignment",c:"t-orange"},{t:"Typography",c:"t-blue"}]},{num:"02",icon:"/img/icon/website-design-structured-planning.webp",title:"Structured Content Layout",desc:"Great design supports great content. We organize and structure your website content for clarity, readability, and flow \u2014 ensuring visitors can easily navigate and understand your message.",tags:[{t:"Content Hierarchy",c:"t-orange"},{t:"Info Architecture",c:"t-blue"},{t:"CTA Placement",c:"t-orange"},{t:"Navigation Flow",c:"t-blue"}]},{num:"03",icon:"/img/icon/website-design-mobile.webp",title:"Responsive Design Experience",desc:"Our designs are fully responsive, adapting seamlessly across mobiles, tablets, and desktops. This ensures consistent branding, smooth browsing, and a visually polished experience on every device.",tags:[{t:"Mobile-First",c:"t-orange"},{t:"Cross-Device",c:"t-blue"},{t:"Fluid Layouts",c:"t-orange"},{t:"Touch UX",c:"t-blue"}]},{num:"04",icon:"/img/icon/website-design-branding.webp",title:"Visual Branding Consistency",desc:"We maintain strong visual consistency across pages using defined brand elements, imagery, iconography, and design systems \u2014 reinforcing credibility and professional identity.",tags:[{t:"Brand Guidelines",c:"t-orange"},{t:"Colour System",c:"t-blue"},{t:"Visual Identity",c:"t-orange"},{t:"Brand Voice",c:"t-blue"}]},{num:"05",icon:"/img/icon/website-design-performance.webp",title:"Performance & Engagement Optimization",desc:"Our design approach focuses on engagement. With clear calls-to-action, intuitive layouts, and strategic section placement, we create websites that not only look impressive but encourage meaningful interaction.",tags:[{t:"Page Speed",c:"t-orange"},{t:"Core Web Vitals",c:"t-blue"},{t:"SEO Architecture",c:"t-orange"},{t:"Conversion Rate",c:"t-blue"}]}],b=[{num:"01",icon:"/img/icon/website-design-target.webp",title:"Discovery & Requirement Analysis",desc:"We begin by understanding your business, target audience, brand positioning, and goals. This helps us define a clear design direction aligned with your objectives.",tags:["Business Goals","Audience Research","Competitor Analysis"],last:!1},{num:"02",icon:"/img/icon/website-design-planning.webp",title:"Research & Strategy Planning",desc:"We analyze competitors, industry trends, and user behavior to create a strategic design plan that ensures clarity, differentiation, and effective communication.",tags:["Wireframes","Site Architecture","Content Planning"],last:!1},{num:"03",icon:"/img/icon/website-design-wireframing.webp",title:"Wireframing & Structure",desc:"We design structured wireframes to map layouts, content placement, and user flow. This ensures logical navigation and a strong visual hierarchy before final design execution.",tags:["Visual Design","Brand System","UX Prototyping"],last:!1},{num:"04",icon:"/img/icon/website-design-settings.webp",title:"Creative UI Design",desc:"Our team creates visually compelling, brand-focused designs including typography, color schemes, imagery, and interface elements that reflect professionalism and consistency.",tags:["Responsive Code","SEO Structure","Performance"],last:!1},{num:"05",icon:"/img/icon/website-design-seo-optimization.webp",title:"Responsive Optimization",desc:"We refine the design for seamless viewing across desktops, tablets, and mobile devices, ensuring consistency, usability, and smooth interaction on every screen.",tags:["Cross-Browser","Speed Testing","QA Review"],last:!1},{num:"06",icon:"/img/icon/website-design-launch.webp",title:"Review, Feedback & Finalization",desc:"We collaborate with you for feedback, make necessary refinements, and finalize the design to ensure it meets expectations and is ready for a flawless launch.",tags:["Go Live","Monitoring","Ongoing Support"],last:!0}],x=[{cls:"pcs-fb-box-tl",icon:"/img/icon/website-user-design-strategy.webp",title:"Intuitive & User-Centric Design",desc:"At PCS, our website designs are created with the end user in mind. We focus on clarity, smooth navigation, and structured layouts to deliver an engaging and effortless browsing experience that keeps visitors exploring."},{cls:"pcs-fb-box-tr",icon:"/img/icon/website-design-seo-structure.webp",title:"SEO-Ready Design Structure",desc:"We incorporate search-friendly design practices from the beginning. Clean layouts, optimized content placement, and responsive frameworks help improve visibility, enhance organic reach, and support stronger search engine performance."},{cls:"pcs-fb-box-bl",icon:"/img/icon/website-design-mobile-responsive.webp",title:"Responsive & Adaptive Experience",desc:"With most users browsing on mobile devices, we ensure every website design is fully responsive. Our layouts adapt seamlessly across desktops, tablets, and smartphones for consistent branding and flawless usability."},{cls:"pcs-fb-box-br",icon:"/img/icon/website-design-security.webp",title:"Secure & Reliable Framework",desc:"We prioritize website safety by implementing secure design standards and best practices. Our approach helps protect user data, maintain site stability, and ensure long-term performance with regular updates and monitoring support."}],u=[{q:" Do you redesign existing websites?",a:"Yes, we redesign existing websites to improve their visual appeal, user experience, and overall performance. Our redesign process focuses on modern layouts, better navigation, responsive structure, and brand consistency while keeping the useful content intact."},{q:"Do you provide custom UI/UX design?",a:"Yes, we offer fully customized UI/UX design tailored to your brand identity, audience behavior, and business goals. Our approach ensures intuitive navigation, engaging layouts, and a smooth user journey that supports better interaction and conversions."},{q:"What are the most common problems in website design?",a:"Common website design problems include poor navigation, outdated visuals, slow loading speed, lack of mobile responsiveness, inconsistent branding, and unclear call-to-actions. These issues can reduce user trust and affect overall business performance."},{q:"Why is UI/UX important for a business website?",a:"UI/UX design affects how users interact with your website. A well-designed interface improves usability, builds trust, increases engagement, and helps visitors take action more easily."},{q:"Will my website be mobile-friendly and SEO-ready?",a:"Yes, your website will be designed to work smoothly on all devices and follow SEO-friendly structure. We focus on responsive design, clean coding, fast loading, and proper on-page elements to support better visibility."},{q:"What is included in your UI/UX design process?",a:"Our UI/UX design process includes research, wireframing, design mockups, revisions, and final approval. We make sure the design aligns with your business goals and creates a user-friendly experience."}];function w(){let[e,t]=(0,n.useState)(0),[i,l]=(0,n.useState)(0);(0,n.useEffect)(()=>{let e=setInterval(()=>{t(e=>(e+1)%m.length)},3e3);return()=>clearInterval(e)},[]),(0,n.useEffect)(()=>{let e=setInterval(()=>{l(e=>(e+1)%h.length)},3500);return()=>clearInterval(e)},[]);let[w,y]=(0,n.useState)({name:"",email:"",phone:"",company:"",msg:""}),v=e=>y({...w,[e.target.name]:e.target.value}),[j,N]=(0,n.useState)(null),k=e=>{N(j===e?null:e)};return(0,r.jsx)(c.A,{children:(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)("style",{children:d}),(0,r.jsx)(p,{}),(0,r.jsxs)("section",{className:"wd-hero",children:[(0,r.jsx)("div",{className:"wd-hero-bg-radial"}),(0,r.jsx)("div",{className:"wd-hero-bg-grid"}),(0,r.jsxs)("div",{style:{position:"relative",zIndex:2,display:"flex",flexDirection:"column"},children:[(0,r.jsxs)("div",{className:"badge",children:[(0,r.jsx)("div",{className:"badge-dot"}),"Elevated Design"]}),(0,r.jsxs)("h1",{className:"wd-hero-heading",children:["Professional Website",(0,r.jsx)("br",{}),(0,r.jsx)("span",{className:"orange lined",style:{marginRight:"12px"},children:"Design"}),"Company  That Elevates Your Brand"]}),(0,r.jsx)("p",{className:"wd-hero-sub",children:"As an experienced website design company , we create modern, responsive website design solutions and customizable website design tailored to elevate your brand presence and drive business growth, ensuring performance, user engagement, SEO visibility, and long-term scalability for your success."}),(0,r.jsx)("div",{className:"wd-hero-actions",children:(0,r.jsxs)("a",{className:"wd-btn-fill",href:"#",children:["Get a Free Quote ",(0,r.jsx)("span",{className:"wd-btn-arrow",children:"\u203A"})]})})]}),(0,r.jsx)("div",{style:{position:"relative",zIndex:2,display:"flex",alignItems:"center",justifyContent:"center",animation:"fadeUp .9s .15s ease both"},children:(0,r.jsx)("img",{src:"/img/website-design.png",alt:"Website Design Banner",className:"wd-hero-img"})})]}),(0,r.jsx)("section",{className:"wd-approach",id:"approach",children:(0,r.jsxs)("div",{className:"wd-ap-inner",children:[(0,r.jsxs)("div",{children:[(0,r.jsx)("div",{className:"partners-header1",children:(0,r.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Our Strategy for Website Design"})}),(0,r.jsxs)("h2",{className:"wd-ap-heading",children:["Strategic,  ",(0,r.jsx)("span",{children:"Responsive "})," & Result-Driven Website Design"]}),(0,r.jsx)("p",{className:"wd-ap-intro",children:"Your website design is more than an online presence \u2014 it represents your brand\u2019s first impression. We follow a strategy-first approach to create websites aligned with your business goals and growth vision."}),(0,r.jsx)("p",{className:"wd-ap-intro",children:"As an experienced website design company, we focus on UI/UX, responsiveness, SEO, speed, and performance to deliver seamless website design services that improve user experience and engagement across all devices."}),(0,r.jsx)("p",{className:"wd-ap-intro",children:"We create scalable and modern website solutions that combine visual appeal with functionality, helping businesses strengthen credibility, increase conversions, and support long-term digital growth."})]}),(0,r.jsx)("div",{className:"wd-ap-form-wrap",children:(0,r.jsxs)("div",{className:"wd-ap-form-card",children:[(0,r.jsxs)("div",{className:"wd-form-eyebrow",children:[(0,r.jsx)("span",{className:"wd-form-eyebrow-line"}),"Your Growth, Our Mission",(0,r.jsx)("span",{className:"wd-form-eyebrow-line"})]}),(0,r.jsxs)("div",{className:"wd-form-title",children:["Get Your ",(0,r.jsx)("span",{children:"Free"})," Quote"]}),(0,r.jsxs)("form",{onSubmit:e=>{e.preventDefault();let t={name:w.name,email:w.email,phone:w.phone,company:w.company,message:w.msg,url:window.location.href};s.Ay.send("service_8xw6k3r","template_jarui36",t,"XWRnXi4hK2SvmRG3q").then(()=>{alert("Message Sent Successfully \u2705"),y({name:"",email:"",phone:"",company:"",msg:""})}).catch(e=>{console.log(e),alert("Failed to send \u274C")})},children:[(0,r.jsxs)("div",{className:"wd-fl-row",children:[(0,r.jsxs)("div",{className:"wd-fl-group",children:[(0,r.jsx)("label",{className:"wd-fl-label",children:"Your Name"}),(0,r.jsxs)("div",{style:{position:"relative"},children:[(0,r.jsx)("span",{className:"wd-fl-icon",children:"\u{1F464}"}),(0,r.jsx)("input",{className:"wd-fl-input",type:"text",name:"name",placeholder:"Full name",value:w.name,onChange:v,required:!0})]})]}),(0,r.jsxs)("div",{className:"wd-fl-group",children:[(0,r.jsx)("label",{className:"wd-fl-label",children:"Company"}),(0,r.jsxs)("div",{style:{position:"relative"},children:[(0,r.jsx)("span",{className:"wd-fl-icon",children:"\u{1F3E2}"}),(0,r.jsx)("input",{className:"wd-fl-input",type:"text",name:"company",placeholder:"Company name",value:w.company,onChange:v})]})]})]}),(0,r.jsxs)("div",{className:"wd-fl-group",children:[(0,r.jsx)("label",{className:"wd-fl-label",children:"Email Address"}),(0,r.jsxs)("div",{style:{position:"relative"},children:[(0,r.jsx)("span",{className:"wd-fl-icon",children:"\u2709\uFE0F"}),(0,r.jsx)("input",{className:"wd-fl-input",type:"email",name:"email",placeholder:"your@email.com",value:w.email,onChange:v,required:!0})]})]}),(0,r.jsxs)("div",{className:"wd-fl-group",children:[(0,r.jsx)("label",{className:"wd-fl-label",children:"Mobile Number"}),(0,r.jsxs)("div",{className:"wd-phone-row",children:[(0,r.jsx)("div",{className:"wd-phone-flag",children:(0,r.jsx)("span",{children:"\u{1F4DE}"})}),(0,r.jsx)("input",{className:"wd-fl-input",type:"tel",name:"phone",placeholder:"Mobile number",value:w.phone,onChange:v,maxLength:"10",pattern:"[0-9]{10}",required:!0})]})]}),(0,r.jsxs)("div",{className:"wd-fl-group wd-textarea-group",children:[(0,r.jsx)("label",{className:"wd-fl-label",children:"Message"}),(0,r.jsxs)("div",{style:{position:"relative"},children:[(0,r.jsx)("span",{className:"wd-fl-icon",style:{top:"0.9rem",transform:"none"},children:"\u{1F4AC}"}),(0,r.jsx)("textarea",{className:"wd-fl-textarea",name:"msg",placeholder:"Tell us about your project...",value:w.msg,onChange:v})]})]}),(0,r.jsxs)("button",{type:"submit",className:"wd-ap-submit",children:["Get Free Consultation",(0,r.jsx)("span",{className:"wd-ap-submit-arrow",children:"\u203A"})]})]})]})})]})}),(0,r.jsx)("section",{className:"pcs-offer-section",children:(0,r.jsxs)("div",{className:"pcs-offer-inner",children:[(0,r.jsx)("div",{className:"partners-header1",style:{marginBottom:"20px",textAlign:"center"},children:(0,r.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Key Uniqueness"})}),(0,r.jsxs)("h3",{className:"pcs-offer-heading",children:["Why Should You Choose ",(0,r.jsx)("span",{children:(0,r.jsx)("i",{children:" for Website Design?"})})]}),(0,r.jsxs)("div",{className:"pcs-offer-body",children:[(0,r.jsx)("div",{className:"pcs-offer-left",children:(0,r.jsxs)("div",{className:"pcs-orbit-wrap",children:[(0,r.jsx)("div",{className:"pcs-orbit-ring"}),f.map((t,i)=>(0,r.jsx)("div",{className:`pcs-orbit-connector${e===i?" active":""}`,style:{width:"calc(50% - 62px)",transform:`rotate(${t}deg) translateY(-50%)`}},i)),(0,r.jsxs)("div",{className:"pcs-orbit-center",children:[(0,r.jsx)("div",{className:"pcs-orbit-center-name",children:"PCS"}),(0,r.jsx)("div",{className:"pcs-orbit-center-sub",children:"Web Design"})]}),m.map((i,n)=>(0,r.jsx)("div",{className:"pcs-orbit-node",style:{top:g[n].top,left:g[n].left},onClick:()=>t(n),children:(0,r.jsxs)("div",{className:`pcs-orbit-node-box${e===n?" active":""}`,children:[(0,r.jsx)("img",{src:i.emoji,alt:i.label,style:{width:"28px",height:"28px",objectFit:"contain",filter:e===n?"brightness(0) invert(1)":"none",transition:"filter 0.3s"}}),(0,r.jsx)("div",{className:"pcs-orbit-node-lbl",children:i.label})]})},n))]})}),(0,r.jsxs)("div",{className:"pcs-offer-right",children:[-1===e&&(0,r.jsxs)("div",{className:"pcs-offer-placeholder",children:[(0,r.jsx)("div",{className:"pcs-offer-placeholder-icon",children:(0,r.jsx)("img",{src:"/img/icons/click.png",alt:"Select an option",style:{width:"40px",height:"40px",objectFit:"contain",opacity:"0.4"}})}),(0,r.jsx)("div",{className:"pcs-offer-placeholder-text",children:"Click any box to view details"})]}),m.map((t,i)=>(0,r.jsxs)("div",{className:`pcs-offer-panel${e===i?" active":""}`,children:[(0,r.jsx)("div",{className:"pcs-offer-panel-bar"}),(0,r.jsxs)("div",{className:"pcs-offer-panel-title-row",children:[(0,r.jsx)("div",{className:"pcs-offer-panel-icon",children:(0,r.jsx)("img",{src:t.emoji,alt:t.title,style:{width:"32px",height:"32px",objectFit:"contain",filter:"brightness(0) invert(1)"}})}),(0,r.jsx)("h4",{className:"pcs-offer-panel-title",children:t.title})]}),(0,r.jsx)("div",{className:"pcs-offer-panel-divider"}),(0,r.jsx)("div",{className:"pcs-offer-panel-desc",children:t.desc}),(0,r.jsx)("div",{className:"pcs-offer-panel-tags",children:t.tags.map((e,t)=>(0,r.jsx)("span",{className:"pcs-offer-panel-tag",children:e},t))})]},i))]})]})]})}),(0,r.jsx)("section",{className:"pcs-wi5-section",children:(0,r.jsxs)("div",{className:"pcs-wi5-inner",children:[(0,r.jsx)("div",{className:"pcs-offer-inner",children:(0,r.jsx)("div",{className:"partners-header1",style:{marginBottom:"10px",textAlign:"center"},children:(0,r.jsx)("div",{className:"partners-eyebrow",style:{textAlign:"center"},children:"Our Expertise"})})}),(0,r.jsxs)("h2",{className:"pcs-wi5-heading",children:["What\u2019s Included in Our  ",(0,r.jsx)("span",{children:(0,r.jsx)("i",{children:"Website Design"})})," Services?"]}),(0,r.jsx)("div",{className:"pcs-wi5-tabs",children:h.map((e,t)=>(0,r.jsxs)("div",{className:`pcs-wi5-tab${i===t?" open":""}`,children:[(0,r.jsxs)("div",{className:"pcs-wi5-tab-head",onClick:()=>l(i===t?-1:t),children:[(0,r.jsxs)("div",{className:"pcs-wi5-tab-num",children:[(0,r.jsx)("div",{className:"pcs-wi5-tab-num-diamond"}),(0,r.jsx)("span",{className:"pcs-wi5-tab-num-text",children:e.num})]}),(0,r.jsx)("div",{className:"pcs-wi5-tab-icon",children:(0,r.jsx)("img",{src:e.icon,alt:e.title,style:{width:"22px",height:"22px",objectFit:"contain"}})}),(0,r.jsx)("h3",{className:"pcs-wi5-tab-title",children:e.title}),(0,r.jsx)("div",{className:"pcs-wi5-tab-chev",children:(0,r.jsx)("span",{style:{fontSize:"1rem",lineHeight:"1",display:"block"},children:"\u25BE"})})]}),(0,r.jsxs)("div",{className:"pcs-wi5-tab-body",children:[(0,r.jsx)("div",{className:"pcs-wi5-tab-content",children:(0,r.jsx)("div",{className:"pcs-wi5-tab-desc",children:e.desc})}),(0,r.jsx)("div",{className:"pcs-wi5-tab-progress"})]})]},t))})]})}),(0,r.jsx)("section",{className:"pcs-proc-section",children:(0,r.jsxs)("div",{className:"pcs-proc-inner",children:[(0,r.jsxs)("div",{className:"pcs-proc-header",children:[(0,r.jsx)("div",{className:"pcs-offer-inner",children:(0,r.jsx)("div",{className:"partners-header1",style:{marginBottom:"10px",textAlign:"center"},children:(0,r.jsx)("div",{className:"partners-eyebrow",style:{textAlign:"center"},children:"Workflow Process"})})}),(0,r.jsxs)("h2",{className:"pcs-proc-title",children:["Our Website ",(0,r.jsx)("span",{children:(0,r.jsx)("i",{children:" Design Process"})})," "]})]}),(0,r.jsx)("div",{className:"pcs-proc-grid",children:b.map((e,t)=>(0,r.jsxs)("div",{className:"pcs-proc-gc",children:[(0,r.jsxs)("div",{className:"pcs-proc-gc-top",children:[(0,r.jsx)("div",{className:"pcs-proc-gc-num",children:e.num}),(0,r.jsx)("div",{className:"pcs-proc-gc-icon",children:(0,r.jsx)("img",{src:e.icon,alt:e.title,style:{width:"28px",height:"28px",objectFit:"contain"}})})]}),(0,r.jsx)("h3",{className:"pcs-proc-gc-title",children:e.title}),(0,r.jsx)("div",{className:"pcs-proc-gc-desc",children:e.desc})]},t))})]})}),(0,r.jsx)("section",{className:"pcs-fb-section",children:(0,r.jsxs)("div",{className:"pcs-fb-inner",children:[(0,r.jsxs)("div",{className:"pcs-fb-header",children:[(0,r.jsx)("div",{className:"pcs-offer-inner",children:(0,r.jsx)("div",{className:"partners-header1",style:{marginBottom:"10px",textAlign:"center"},children:(0,r.jsx)("h2",{className:"partners-eyebrow",style:{textAlign:"center"},children:"Key Service Features  "})})}),"            ",(0,r.jsxs)("h3",{className:"pcs-fb-title",children:["Features of our Corporate ",(0,r.jsx)("span",{children:(0,r.jsx)("i",{children:"Website Designs"})})," Services"]})]}),(0,r.jsxs)("div",{className:"pcs-fb-grid",children:[(0,r.jsx)("div",{className:"pcs-fb-vline"}),(0,r.jsx)("div",{className:"pcs-fb-hline"}),(0,r.jsxs)("div",{className:"pcs-fb-box pcs-fb-box-tl",children:[(0,r.jsx)("div",{className:"pcs-fb-icon",children:(0,r.jsx)("img",{src:x[0].icon,alt:x[0].title,style:{width:"32px",height:"32px",objectFit:"contain"}})}),(0,r.jsx)("h4",{className:"pcs-fb-box-title",children:x[0].title}),(0,r.jsx)("div",{className:"pcs-fb-box-desc",children:x[0].desc})]}),(0,r.jsx)("div",{className:"pcs-fb-center-col",children:(0,r.jsx)("div",{className:"pcs-fb-center-circle",children:(0,r.jsx)("div",{className:"pcs-fb-center-inner",children:(0,r.jsx)("div",{className:"pcs-fb-center-icon",children:(0,r.jsx)("img",{src:"/img/priyam-consultancy-logo.png",alt:"PCS",style:{width:"80px",height:"80px",objectFit:"contain"}})})})})}),(0,r.jsxs)("div",{className:"pcs-fb-box pcs-fb-box-tr",children:[(0,r.jsx)("div",{className:"pcs-fb-icon",children:(0,r.jsx)("img",{src:x[1].icon,alt:x[1].title,style:{width:"32px",height:"32px",objectFit:"contain"}})}),(0,r.jsx)("h4",{className:"pcs-fb-box-title",children:x[1].title}),(0,r.jsx)("div",{className:"pcs-fb-box-desc",children:x[1].desc})]}),(0,r.jsxs)("div",{className:"pcs-fb-box pcs-fb-box-bl",children:[(0,r.jsx)("div",{className:"pcs-fb-icon",children:(0,r.jsx)("img",{src:x[2].icon,alt:x[2].title,style:{width:"32px",height:"32px",objectFit:"contain"}})}),(0,r.jsx)("h4",{className:"pcs-fb-box-title",children:x[2].title}),(0,r.jsx)("div",{className:"pcs-fb-box-desc",children:x[2].desc})]}),(0,r.jsxs)("div",{className:"pcs-fb-box pcs-fb-box-br",children:[(0,r.jsx)("div",{className:"pcs-fb-icon",children:(0,r.jsx)("img",{src:x[3].icon,alt:x[3].title,style:{width:"32px",height:"32px",objectFit:"contain"}})}),(0,r.jsx)("h4",{className:"pcs-fb-box-title",children:x[3].title}),(0,r.jsx)("div",{className:"pcs-fb-box-desc",children:x[3].desc})]})]})]})}),(0,r.jsx)(o.A,{}),(0,r.jsxs)("section",{className:"faq-section",style:{padding:"0 0 80px 0"},children:[(0,r.jsx)("div",{className:"partners-header2",style:{textAlign:"center",marginTop:"20px"},children:(0,r.jsx)("h2",{className:"partners-eyebrow",children:"Frequently Asked Questions"})}),(0,r.jsxs)("div",{className:"container",children:[(0,r.jsx)("div",{className:"faq-head",children:(0,r.jsxs)("h3",{className:"faq-h3",children:["Queries That Could ",(0,r.jsx)("span",{children:"Hold You Back"})]})}),(0,r.jsxs)("div",{className:"faq-wrapper",children:[(0,r.jsx)("div",{className:"faq-col",children:u.slice(0,3).map((e,t)=>(0,r.jsxs)("div",{className:"faq-item",children:[(0,r.jsxs)("div",{className:"faq-question",onClick:()=>k(t),children:[(0,r.jsx)("span",{children:e.q}),(0,r.jsx)("span",{className:"icon",children:j===t?"\u2212":"+"})]}),j===t&&(0,r.jsx)("div",{className:"faq-answer",children:e.a})]},t))}),(0,r.jsx)("div",{className:"faq-col",children:u.slice(3,6).map((e,t)=>(0,r.jsxs)("div",{className:"faq-item",children:[(0,r.jsxs)("div",{className:"faq-question",onClick:()=>k(t+3),children:[(0,r.jsx)("span",{children:e.q}),(0,r.jsx)("span",{className:"icon",children:j===t+3?"\u2212":"+"})]}),j===t+3&&(0,r.jsx)("div",{className:"faq-answer",children:e.a})]},t+3))})]})]})]}),(0,r.jsx)(a.A,{})]})})}}}]);
