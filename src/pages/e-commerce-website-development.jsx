@@ -3,7 +3,226 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
-const banner = "/img/woocommerce.png";
+const banner = "/img/ecommerce-banner.png";
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/e-commerce-website-development";
+  const imageUrl = "https://www.priyamconsultancy.com/img/static-website.png";
+
+  return (
+    <Head>
+      {/* ── Primary Meta ── */}
+      <title>Ecommerce Website Development Company in Coimbatore   </title>
+      <meta name="description" content="Ecommerce website development services to build secure, and user-friendly online stores that boost sales, improve customer experience. " />
+      <meta name="keywords" content="ecommerce website development, ecommerce website, e commerce website company in coimbatore, B2B ecommerce website, ecommerce website development agency, custom ecommerce website development, custom ecommerce website development india, ecommerce SEO services, ecommerce website maintenance services" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/e-commerce-website-development" />
+
+      {/* ── Open Graph ── */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Ecommerce Website Development Company in Coimbatore   " />
+      <meta property="og:description" content="Ecommerce website development services to build secure, and user-friendly online stores that boost sales, improve customer experience. " />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/e-commerce-website-development" />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="PCS Business Solution" />
+
+      {/* ── Twitter Card ── */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Ecommerce Website Development Company in Coimbatore   " />
+      <meta name="twitter:description" content="Ecommerce website development services to build secure, and user-friendly online stores that boost sales, improve customer experience. " />
+      <meta name="twitter:image" content={imageUrl} />
+
+      {/* ── Breadcrumb List Schema ── */}
+      <script type="application/ld+json">{`
+  {
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   {
+     "@type":"ListItem",
+     "position":1,
+     "item":{
+       "@id":"https://www.priyamconsultancy.com/",
+       "name":"Home"
+     }
+   },
+   {
+     "@type":"ListItem",
+     "position":2,
+     "item":{
+       "@id":"https://www.priyamconsultancy.com/e-commerce-website-development/",
+       "name":"e-commerce-website-development"
+     }
+   }
+ ]
+}
+
+      `}</script>
+
+      {/* ── Organization Schema ── */}
+      <script type="application/ld+json">{`
+    {
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Priyam Consultancy Services",
+ "url": "https://www.priyamconsultancy.com/",
+ "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+ "contactPoint": [
+   {
+     "@type": "ContactPoint",
+     "telephone": "+91 96774 44048",
+     "contactType": "customer support"
+   }
+ ],
+ "sameAs": [
+   "https://www.facebook.com/profile.php?id=61577125709962",
+   "https://www.linkedin.com/company/priyam-consultancy-services/",
+   "https://www.instagram.com/priyam_consultancy_services/",
+   "https://x.com/services91032",
+   "https://g.co/kgs/rdTYdi6"
+ ]
+}
+
+
+      `}</script>
+
+      {/* ── Service Schema ── */}
+      <script type="application/ld+json">{`
+  {
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "@id":"https://www.priyamconsultancy.com/e-commerce-website-development/#service",
+  "name":"E-Commerce Website Development",
+  "serviceType":"E-Commerce Website Development Services",
+  "url":"https://www.priyamconsultancy.com/e-commerce-website-development/",
+  "description":"Priyam Consultancy provides professional e-commerce website development services including custom online store development, shopping cart integration, payment gateway setup, product management, mobile-responsive ecommerce websites and scalable online business solutions across India.",
+  "provider":{
+    "@type":"Organization",
+    "name":"Priyam Consultancy Services",
+    "url":"https://www.priyamconsultancy.com/",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+    }
+  },
+  "areaServed":{
+    "@type":"Country",
+    "name":"India"
+  }
+}
+
+
+      `}</script>
+
+      {/* ── Product Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+   {  
+"@context": "https://schema.org/",  
+"@type": "Product",  
+"name": "Digital Transformation and Digital Marketing Agency",  
+"image": ["https://www.priyamconsultancy.com/wp-content/uploads/2025/10/who-we-are.webp"],  
+"description": "Leading digital transformation and marketing agency in India offering SEO, PPC, SMM, web & app development, and automation solutions to accelerate business growth.",  
+"mpn": "priyamconsultancy.com",  
+"brand": {  
+"@type": "Brand",  
+"name": "Priyam Consultancy Services"  
+},  
+"review": {  
+"@type": "Review",  
+"reviewRating": {  
+"@type": "Rating",  
+"ratingValue": "4.9",  
+"bestRating": "5",  
+"worstRating": "1"  
+},  
+"author": {  
+"@type": "Person",  
+"name": "Admin"  
+}  
+},  
+"aggregateRating": {  
+"@type": "AggregateRating",  
+"ratingValue": "4.9",  
+"reviewCount": "4521"  
+},  
+"offers": {  
+"@type": "Offer",  
+"url": "https://www.priyamconsultancy.com/",  
+"priceCurrency": "USD",  
+"price": "00.00",  
+"priceValidUntil": "2025-12-31",  
+"itemCondition": "https://schema.org/UsedCondition",  
+"availability": "https://schema.org/InStock",  
+"seller": {  
+"@type": "Organization",  
+"name": "priyamconsultancy.com"  
+}  
+}  
+}  
+
+
+      `}</script>
+
+      {/* ── FAQ Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+ { 
+  "@context": "https://schema.org", 
+  "@type": "FAQPage", 
+  "mainEntity": [{ 
+    "@type": "Question", 
+    "name": "How do you develop an e-commerce website?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "We develop e-commerce websites through a structured process that includes planning, design, platform selection, product setup, payment integration, testing, and launch support." 
+    } 
+  },{ 
+    "@type": "Question", 
+    "name": "What features does a good e-commerce website need?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "A strong e-commerce website should include mobile responsiveness, secure checkout, fast loading speed, product filters, SEO optimization, and analytics integration." 
+    }
+  },{ 
+    "@type": "Question", 
+    "name": "Which platform is best for e-commerce website development?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "The best platform depends on your business needs. Shopify, WooCommerce, and Magento are popular options, and the right choice depends on your products, budget, and growth plans." 
+    } 
+  },{ 
+    "@type": "Question", 
+    "name": "Will my e-commerce website be mobile-friendly?
+", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Yes, every e-commerce website we develop is fully responsive and optimized for mobile users." 
+    } 
+ },{ 
+    "@type": "Question", 
+    "name": "How do you ensure the security of my e-commerce website?
+", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "We use SSL, secure payment processing, firewall protection, and regular security checks to help protect your online store." 
+    } 
+ },{ 
+    "@type": "Question", 
+    "name": "Can you migrate my existing store to a new e-commerce platform?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Yes, we provide secure migration services to move your existing store to a new platform with minimal disruption." 
+    } 
+    }] 
+}
+
+
+      `}</script>
+    </Head>
+  );
+}
+
+
 
 const styles = `
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
@@ -681,15 +900,15 @@ const styles = `
     .wd-btn-fill { width:75% !important; }
     .faq-wrapper { grid-template-columns: 1fr !important; }
   }
-
+ h3.faq-h3{font-size:2.5rem;}
 `;
 
 const offerData = [
-  { img: "/img/icon/woocommerence-customize.webp", label: "Customized", title: "Customized WooCommerce Solutions", desc: "Every business operates differently, so we provide tailored WooCommerce custom development aligned with your products, audience, and growth strategy. From unique features to personalized store functionality, we build scalable eCommerce solutions designed to match your long term goals", tags: ["Tailored","Personalized","Scalable","Strategic"] },
-  { img: "/img/icon/woocommerence-scalable.webp", label: "Scalable", title: "Scalable & Future-Ready", desc: "Our WooCommerce websites are built to grow with your business, allowing easy product expansion, marketing tool integration, and feature upgrades without technical limitations. We ensure flexible architecture, smooth performance, and a seamless checkout experience that supports consistent long term scalability.", tags: ["Flexible","Expandable","Adaptive","Futureproof"] },
-  { img: "/img/icon/woocommerence-experience.webp", label: "Experience", title: "Conversion-Focused User Experience", desc: "We design WooCommerce websites with strategic layouts, optimized product pages, simplified navigation, and streamlined checkout flows. Every element is carefully structured to reduce cart abandonment, enhance engagement, and maximize conversions for consistent revenue growth.", tags: ["Secure","Optimized","Stable","Reliable"] },
-  { img: "/img/icon/woocommerence-security.webp", label: "Security", title: "Performance & Security Optimization", desc: "Our WooCommerce development services include advanced speed optimization, SSL configuration, secure hosting guidance, and strict coding standards. We implement technical best practices that enhance website stability, protect customer data, and ensure a safe, reliable, and high performing eCommerce environment.", tags: ["Engaging","Intuitive","Streamlined","ConversionDriven"] },
-  { img: "/img/icon/woocommerence-delivery.webp", label: "Delivery", title: "On-Time Delivery & Ongoing Support", desc: "A structured milestone driven development workflow ensures your WooCommerce website launches on schedule without delays. Post deployment, continuous technical assistance, performance monitoring, and update support are provided to maintain stability, security, and long term business growth", tags: ["Timely","Supportive","Consistent","Dependable"] },
+  { img: "/img/icon/ecommerence-customize.webp", label: "Customized", title: "Fully Customized Development", desc: "We build tailor-made ecommerce websites designed specifically for your products, audience behavior, and internal operations — offering complete flexibility, scalability, full ownership, seamless future expansion, and optimized performance.", tags: ["Tailored", "Flexible", "Scalable", "Optimized"] },
+  { img: "/img/icon/ecommerence-marketplace.webp", label: "Marketplace", title: "Marketplace Integration Capability", desc: "Your ecommerce platform can be integrated with major marketplaces such as Amazon, Flipkart, and Meesho, enabling synchronized inventory, centralized order management, and streamlined multi-channel selling.", tags: ["Integrated", "Centralized", "Connected", "Streamlined"] },
+  { img: "/img/icon/ecommerence-scalable.webp", label: "Scalable", title: "B2B, B2C & D2C Scalable Architecture", desc: "Our custom ecommerce solutions support B2B, B2C, and D2C models with flexible pricing, bulk ordering, distributor panels, role-based access, and scalable infrastructure to handle growing demand seamlessly.", tags: ["Versatile", "Structured", "Adaptive", "Expandable"] },
+  { img: "/img/icon/ecommerence-security.webp", label: "Security", title: "Performance & Security Optimization", desc: "We implement SSL security, encrypted payment processing, optimized database structures, and performance enhancements to ensure stability, speed, and advanced data protection.", tags: ["Protected", "Fast", "Stable", "Secure"] },
+  { img: "/img/icon/ecommerence-support.webp", label: "Support", title: "Ongoing Support & Maintenance", desc: "Dedicated maintenance services include updates, monitoring, technical troubleshooting, and system enhancements to ensure uninterrupted performance and long-term business growth.", tags: ["Maintained", "Consistent", "Supportive", "Reliable"] },
 ];
 
 const nodePositions = [
@@ -703,46 +922,46 @@ const nodePositions = [
 const connectorAngles = [-90, -18, 54, 126, 198];
 
 const includedData = [
-  { num:"01", icon:"/img/icon/woocommerence-custom-design.webp", title:"Custom WooCommerce Website Design & Development", desc:"We build customized WooCommerce websites aligned with your brand identity and business goals, ensuring optimized design, responsive layouts, seamless checkout, and scalable performance for measurable eCommerce growth.", tags:[{t:"UI Design",c:"t-orange"},{t:"UX Strategy",c:"t-blue"},{t:"Brand Alignment",c:"t-orange"},{t:"Typography",c:"t-blue"}] },
-  { num:"02", icon:"/img/icon/woocommerence-payment.webp", title:"Payment Gateway Integration", desc:"Secure WooCommerce payment gateway setup supports UPI, cards, wallets, and net banking, ensuring safe transactions, smooth checkout functionality, and reliable processing across devices and browsers.", tags:[{t:"Content Hierarchy",c:"t-orange"},{t:"Info Architecture",c:"t-blue"},{t:"CTA Placement",c:"t-orange"},{t:"Navigation Flow",c:"t-blue"}] },
-  { num:"03", icon:"/img/icon/woocommerence-shipping.webp", title:"Shipping & Courier Integration", desc:"Shiprocket courier tracking integration automates shipping workflows, label generation, and real time tracking updates, improving fulfillment accuracy, delivery transparency, and overall customer satisfaction.", tags:[{t:"Mobile-First",c:"t-orange"},{t:"Cross-Device",c:"t-blue"},{t:"Fluid Layouts",c:"t-orange"},{t:"Touch UX",c:"t-blue"}] },
-  { num:"04", icon:"/img/icon/woocommerence-email.webp", title:"CRM, Email & WhatsApp Integration", desc:"We integrate CRM systems, email automation, and WhatsApp Business connectivity to streamline communication, automate responses, improve engagement, and strengthen long term customer relationships.", tags:[{t:"Brand Guidelines",c:"t-orange"},{t:"Colour System",c:"t-blue"},{t:"Visual Identity",c:"t-orange"},{t:"Brand Voice",c:"t-blue"}] },
-  { num:"05", icon:"/img/icon/woocommerence-analytiv-seo.webp", title:"Analytics & SEO Setup Integration", desc:"Foundational SEO and analytics setup including Google Analytics, Tag Manager, Clarity, Search Console, and Bing Webmaster ensures accurate tracking, insights, and sustainable growth.", tags:[{t:"Page Speed",c:"t-orange"},{t:"Core Web Vitals",c:"t-blue"},{t:"SEO Architecture",c:"t-orange"},{t:"Conversion Rate",c:"t-blue"}] },
+  { num: "01", icon: "/img/icon/ecommerence-business.webp", title: "Business Strategy & Technical Planning", desc: "We analyze your revenue model, product structure, target audience, and operational workflow to define the most efficient, scalable, and performance-driven ecommerce architecture aligned with long-term business growth.", tags: [{ t: "UI Design", c: "t-orange" }, { t: "UX Strategy", c: "t-blue" }, { t: "Brand Alignment", c: "t-orange" }, { t: "Typography", c: "t-blue" }] },
+  { num: "02", icon: "/img/icon/ecommerence-store.webp", title: " Product & Store Architecture Setup", desc: "Structured categorization, advanced filtering systems, intelligent navigation flow, optimized database structure, and conversion-focused checkout design enhance the overall shopping experience and improve purchasing efficiency.", tags: [{ t: "Content Hierarchy", c: "t-orange" }, { t: "Info Architecture", c: "t-blue" }, { t: "CTA Placement", c: "t-orange" }, { t: "Navigation Flow", c: "t-blue" }] },
+  { num: "03", icon: "/img/icon/ecommerence-payment.webp", title: "Secure Payment Integration", desc: "We integrate reliable payment gateways with encrypted, compliant, and multi-layered transaction processing systems to ensure safe, seamless, and trustworthy purchases across all devices.", tags: [{ t: "Mobile-First", c: "t-orange" }, { t: "Cross-Device", c: "t-blue" }, { t: "Fluid Layouts", c: "t-orange" }, { t: "Touch UX", c: "t-blue" }] },
+  { num: "04", icon: "/img/icon/ecommerence-integration.webp", title: "Marketplace & Integration", desc: "Your ecommerce system can be connected with Amazon, Flipkart, and Meesho for automated inventory synchronization, centralized order management, real-time updates, and simplified multi-channel selling operations.", tags: [{ t: "Brand Guidelines", c: "t-orange" }, { t: "Colour System", c: "t-blue" }, { t: "Visual Identity", c: "t-orange" }, { t: "Brand Voice", c: "t-blue" }] },
+  { num: "05", icon: "/img/icon/ecommerence-seo-optimize.webp", title: " SEO & Performance Optimization", desc: "Technical SEO configuration, structured metadata, schema implementation, analytics integration, and speed optimization techniques improve search visibility, enhance user engagement, and enable data-driven growth strategies.", tags: [{ t: "Page Speed", c: "t-orange" }, { t: "Core Web Vitals", c: "t-blue" }, { t: "SEO Architecture", c: "t-orange" }, { t: "Conversion Rate", c: "t-blue" }] },
 ];
 
 const processSteps = [
-  { num:"01", icon:"/img/icon/woocommerence-discover.webp", title:"Business Discovery & Requirement Analysis", desc:"We analyze your products, audience, competitors, and revenue goals to define technical requirements, integrations, and scalability for sustainable WooCommerce growth.", tags:["Business Goals","Audience Research","Competitor Analysis"], last:false },
-  { num:"02", icon:"/img/icon/woocommerence-store.webp", title:"Store Architecture & Planning", desc:"We design organized categories, product mapping, and navigation flow to create structured browsing experiences that enhance engagement and consistent sales performance.", tags:["Wireframes","Site Architecture","Content Planning"], last:false },
-  { num:"03", icon:"/img/icon/woocommerence-developmet.webp", title:"UI/UX Design & Custom Development", desc:"Our team builds brand consistent WooCommerce websites with responsive layouts and custom functionality, ensuring seamless interaction and optimized performance across devices.", tags:["Visual Design","Brand System","UX Prototyping"], last:false },
-  { num:"04", icon:"/img/icon/woocommerence-integration.webp", title:"Integration & Automation Setup", desc:"We configure payment gateways, shipping systems, CRM, email automation, WhatsApp integration, and analytics tools to streamline operations and enhance eCommerce efficiency.", tags:["Responsive Code","SEO Structure","Performance"], last:false },
-  { num:"05", icon:"/img/icon/woocommerence-testing.webp", title:"Testing & Performance Optimization", desc:"We conduct testing for checkout flow, payments, responsiveness, speed, and compatibility, optimizing security and stability before launching your WooCommerce store.", tags:["Cross-Browser","Speed Testing","QA Review"], last:false },
-  { num:"06", icon:"/img/icon/woocommerence-launch.webp", title:"Launch & Post-Launch Support", desc:"After approval, we deploy your WooCommerce website with monitoring, updates, troubleshooting support, security maintenance, and performance tracking for growth.", tags:["Go Live","Monitoring","Ongoing Support"], last:true },
+  { num: "01", icon: "/img/icon/ecommerence-discover.webp", title: " Business Discovery & Requirement Analysis", desc: "We evaluate your products, competitors, revenue objectives, and operational challenges to define scalable development requirements.", tags: ["Business Goals", "Audience Research", "Competitor Analysis"], last: false },
+  { num: "02", icon: "/img/icon/ecommerence-store-planning.webp", title: "Store Planning & Wireframing", desc: "Structured architecture and conversion-focused layouts are designed to deliver intuitive and engaging shopping experiences.", tags: ["Wireframes", "Site Architecture", "Content Planning"], last: false },
+  { num: "03", icon: "/img/icon/ecommerence-developmet.webp", title: " UI/UX Design & Development", desc: "We design and develop responsive, high-performance ecommerce platforms using scalable frameworks and clean coding standards.", tags: ["Visual Design", "Brand System", "UX Prototyping"], last: false },
+  { num: "04", icon: "/img/icon/ecommerence-integration-setup.webp", title: "Integration & Setup", desc: "Payment gateways, CRM systems, shipping solutions, marketplace APIs, and analytics tools are integrated seamlessly.", tags: ["Responsive Code", "SEO Structure", "Performance"], last: false },
+  { num: "05", icon: "/img/icon/ecommerence-testing-optimize.webp", title: " Testing & Performance Optimization", desc: "Comprehensive testing ensures checkout efficiency, speed optimization, security validation, and cross-device compatibility.", tags: ["Cross-Browser", "Speed Testing", "QA Review"], last: false },
+  { num: "06", icon: "/img/icon/ecommerence-launch.webp", title: "Launch & Post-Launch Support", desc: "Continuous monitoring, updates, and maintenance ensure long-term operational stability and scalable growth.", tags: ["Go Live", "Monitoring", "Ongoing Support"], last: true },
 ];
 
 const whyData = [
-  { cls:"pcs-fb-box-tl", icon:"/img/icon/woocommerence-feat1.webp", title:"Scalable & Flexible Architecture", desc:"Our WooCommerce websites are built with flexible architecture that supports product expansion, feature upgrades, marketing integrations, and future enhancements, ensuring your online store adapts smoothly as your business grows." },
-  { cls:"pcs-fb-box-tr", icon:"/img/icon/woocommerence-feat2.webp", title:"SEO-Optimized Store Structure", desc:"We implement clean URLs, optimized meta structures, schema markup, and mobile responsive frameworks to improve search visibility, enhance crawlability, and strengthen overall search engine performance from the foundation." },
-  { cls:"pcs-fb-box-bl", icon:"/img/icon/woocommerence-feat3.webp", title:"Secure & Reliable Transactions", desc:"Advanced security configurations, SSL implementation, and trusted payment gateway integrations ensure safe transactions, protect sensitive customer data, and deliver a secure, reliable checkout experience across all devices." },
-  { cls:"pcs-fb-box-br", icon:"/img/icon/woocommerence-feat4.webp", title:"Advanced Reporting & Insights", desc:"Integrated reports and performance dashboards provide detailed insights into sales, customer behavior, and traffic trends, enabling data driven decisions that improve marketing strategies and overall store profitability" },
+  { cls: "pcs-fb-box-tl", icon: "/img/icon/ecommerence-feat1.webp", title: "Custom-Built Ecommerce Platform", desc: "Fully customized architecture designed around your business model, operational workflows, customer journey, and long-term scalability requirements to ensure maximum flexibility and complete system control." },
+  { cls: "pcs-fb-box-tr", icon: "/img/icon/ecommerence-feat2.webp", title: "Marketplace Integration Support", desc: "Seamless integration with Amazon, Flipkart, and Meesho enables synchronized inventory updates, centralized sales management, automated order processing, and efficient multi-channel expansion." },
+  { cls: "pcs-fb-box-bl", icon: "/img/icon/ecommerence-feat3.webp", title: "Secure & Scalable Architecture", desc: "Advanced security protocols, encrypted transactions, firewall protection, and scalable cloud-ready infrastructure ensure high performance, data protection, operational stability, and long-term reliability." },
+  { cls: "pcs-fb-box-br", icon: "/img/icon/ecommerence-feat4.webp", title: "Advanced Analytics ", desc: "CRM connectivity, secure payment integrations, shipping , WhatsApp communication systems, real-time tracking, and advanced reporting dashboards streamline operations and improve strategic decision-making." },
 ];
 
 const faqData = [
-  { q: "What hosting is best for WooCommerce?", a: "The best WooCommerce hosting is reliable, fast, and secure. Managed WooCommerce hosting (e.g., cloud VPS, dedicated WordPress/WooCommerce optimized hosting) ensures faster load times, better uptime, automatic backups, and scalable performance as your store grows. Choose hosts with strong support." },
-  { q: "What is WooCommerce and why should I use it for my online store?", a: "WooCommerce is a free, open-source eCommerce plugin for WordPress that transforms your website into a fully functional online store. You should use WooCommerce because it’s flexible, customizable, easy to use, SEO-friendly, integrates custom features, and scales with your business." },
-  { q: "Can WooCommerce handle a large number of products and orders?", a: "Yes, WooCommerce can handle large catalogs and high order volumes when paired with optimized hosting, caching, database tuning, and performance enhancements. Many large online stores use WooCommerce successfully by implementing scalable architecture and efficient store management practices." },
-  { q: "What payment gateways does WooCommerce support?", a: "WooCommerce supports major payment gateways including PayPal, Stripe, Razorpay, Square, Authorize.net, and many local payment providers. It also allows bank transfers, UPI, wallets, and custom gateways. Additional integrations can be added via plugins for regional payment options." },
-  { q: "Can I migrate my existing store to WooCommerce?", a: "Yes, migrating your existing online store to WooCommerce is possible. Data like products, customers, orders, and categories can be transferred using migration tools or professional services, ensuring a smooth transition without data loss or downtime." },
-  { q: "Is WooCommerce SEO-friendly?", a: "Yes, WooCommerce is SEO-friendly. It supports clean URLs, meta tags, schema markup, mobile responsiveness, and integration with SEO plugins like Yoast and Rank Math. When developed with proper optimization, WooCommerce stores rank well in search engines and attract organic traffic." },
+  { q: "How do you develop an e-commerce website?", a: "We develop e-commerce websites through a structured process that includes planning, design, platform selection, product setup, payment integration, testing, and launch support." },
+  { q: "What features does a good e-commerce website need?", a: "A strong e-commerce website should include mobile responsiveness, secure checkout, fast loading speed, product filters, SEO optimization, and analytics integration." },
+  { q: "Which platform is best for e-commerce website development?", a: "The best platform depends on your business needs. Shopify, WooCommerce, and Magento are popular options, and the right choice depends on your products, budget, and growth plans." },
+  { q: "Will my e-commerce website be mobile-friendly?", a: "Yes, every e-commerce website we develop is fully responsive and optimized for mobile users." },
+  { q: "How do you ensure the security of my e-commerce website?", a: "We use SSL, secure payment processing, firewall protection, and regular security checks to help protect your online store." },
+  { q: "Can you migrate my existing store to a new e-commerce platform?", a: "Yes, we provide secure migration services to move your existing store to a new platform with minimal disruption." },
 ];
 
 export default function PCSWebsite() {
   const [activeOffer, setActiveOffer] = useState(0);
   const [openTab, setOpenTab] = useState(0);
 
-   const handleOfferSelect = (i) => setActiveOffer(i);
+  const handleOfferSelect = (i) => setActiveOffer(i);
   const handleTabToggle = (i) => setOpenTab(openTab === i ? -1 : i);
 
-  const [form, setForm] = useState({ name:"", email:"", phone:"", company:"", msg:"" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const handleSubmit = (e) => {
@@ -766,7 +985,7 @@ export default function PCSWebsite() {
       )
       .then(() => {
         alert("Message Sent Successfully ✅");
-        setForm({ name:"", email:"", phone:"", company:"", msg:"" });
+        setForm({ name: "", email: "", phone: "", company: "", msg: "" });
       })
       .catch((error) => {
         console.log(error);
@@ -774,7 +993,7 @@ export default function PCSWebsite() {
       });
   };
 
-    const [active, setActive] = useState(null);
+  const [active, setActive] = useState(null);
 
   const toggle = (index) => {
     setActive(active === index ? null : index);
@@ -782,354 +1001,352 @@ export default function PCSWebsite() {
   return (
     <Layout>
       <>
-      <style>{styles}</style>
+        <style>{styles}</style>
 
-   
 
-      {/* SECTION 1: HERO */}
-     <section className="wd-hero">
-      <div className="wd-hero-bg-radial" />
-      <div className="wd-hero-bg-grid" />
+        <SEOHead />
+        {/* SECTION 1: HERO */}
+        <section className="wd-hero">
+          <div className="wd-hero-bg-radial" />
+          <div className="wd-hero-bg-grid" />
 
-      {/* LEFT */}
-      <div style={{position:"relative",zIndex:2,display:"flex",flexDirection:"column"}}>
-        <div className="badge"><div className="badge-dot" />WooCommerce</div>
-        <h1 className="wd-hero-heading">
-          Build a Powerful  
-          <span className="orange lined" style={{marginRight: '12px'}}>WooCommerce</span> 
-           Website That Sells 24/7
+          {/* LEFT */}
+          <div style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column" }}>
+            <div className="badge"><div className="badge-dot" />Ecommerce Website</div>
+            <h1 className="wd-hero-heading">
+              Build a Powerful
+              <span className="orange lined" style={{ marginRight: '12px' }}>Ecommerce </span>
+              Website That Drives Sales
 
-        </h1>
-        <p className="wd-hero-sub">
-Your online store should do more than just exist — it should generate revenue consistently. As a professional WooCommerce development company, we create scalable and SEO-ready WooCommerce websites that convert visitors into customers while keeping your WooCommerce development cost efficient and transparent.
-        </p>
-        <div className="wd-hero-actions">
-          <a className="wd-btn-fill" href="#">Get a Free Quote <span className="wd-btn-arrow">›</span></a>
-        </div>
-      </div>
-
-      {/* RIGHT — banner image */}
-      <div style={{position:"relative",zIndex:2,display:"flex",alignItems:"center",justifyContent:"center",animation:"fadeUp .9s .15s ease both"}}>
-        <img
-          src={banner}
-          alt="WooCommerce Website Development Banner"
-          className="wd-hero-img"
-        />
-      </div>
-    </section>
-
-      {/* SECTION 2: OUR APPROACH */}
-     <section className="wd-approach" id="approach">
-      <div className="wd-ap-inner">
-
-        {/* LEFT CONTENT */}
-        <div>
-             <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Strategy for WooCommerce Website Development
-</div>
-          </div>
-          <h2 className="wd-ap-heading">High-Performance <span>SEO-Optimized </span> WooCommerce Solutions</h2>
-          <p className="wd-ap-intro">
-Successful eCommerce websites require more than attractive design — they need speed, structure, and visibility. Our WooCommerce website development approach focuses on performance, responsiveness, SEO readiness, and seamless shopping experiences.
-
-          </p>
-          <p className="wd-ap-intro">
-We follow optimized architecture, clean coding standards, and mobile-first development practices to ensure faster loading speeds, smooth navigation, and reliable functionality across all devices and platforms.
-          </p>
-          <p className="wd-ap-intro">
-            As a reliable WooCommerce development company, we build search-friendly online stores integrated with analytics and webmaster tools to help businesses improve visibility, attract organic traffic, and support long-term growth.
-
-          </p>
-        </div>
-
-        {/* RIGHT FORM */}
-        <div className="wd-ap-form-wrap">
-          <div className="wd-ap-form-card">
-            <div className="wd-form-eyebrow">
-              <span className="wd-form-eyebrow-line"/>Your Growth, Our Mission<span className="wd-form-eyebrow-line"/>
+            </h1>
+            <p className="wd-hero-sub">
+              Your online store should do more than display products — it should convert visitors into paying customers. As a trusted custom e-commerce website development company in Coimbatore, we build secure, scalable, and high-performing stores tailored to your business model and growth objectives.
+            </p>
+            <div className="wd-hero-actions">
+              <a className="wd-btn-fill" href="#">Connect Now <span className="wd-btn-arrow">›</span></a>
             </div>
-            <div className="wd-form-title">Get Your <span>Free</span> Quote</div>
-
-            <form onSubmit={handleSubmit}>
-              <div className="wd-fl-row">
-                <div className="wd-fl-group">
-                  <label className="wd-fl-label">Your Name</label>
-                  <div style={{position:"relative"}}>
-                    <span className="wd-fl-icon">👤</span>
-                    <input className="wd-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
-                  </div>
-                </div>
-                <div className="wd-fl-group">
-                  <label className="wd-fl-label">Company</label>
-                  <div style={{position:"relative"}}>
-                    <span className="wd-fl-icon">🏢</span>
-                    <input className="wd-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
-                  </div>
-                </div>
-              </div>
-
-              <div className="wd-fl-group">
-                <label className="wd-fl-label">Email Address</label>
-                <div style={{position:"relative"}}>
-                  <span className="wd-fl-icon">✉️</span>
-                  <input className="wd-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
-                </div>
-              </div>
-
-              <div className="wd-fl-group">
-                <label className="wd-fl-label">Mobile Number</label>
-                <div className="wd-phone-row">
-                  <div className="wd-phone-flag"><span>📞</span></div>
-                  <input className="wd-fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
-                </div>
-              </div>
-
-              <div className="wd-fl-group wd-textarea-group">
-                <label className="wd-fl-label">Message</label>
-                <div style={{position:"relative"}}>
-                  <span className="wd-fl-icon" style={{top:"0.9rem",transform:"none"}}>💬</span>
-                  <textarea className="wd-fl-textarea" name="msg" placeholder="Tell us about your project..." value={form.msg} onChange={handleChange} />
-                </div>
-              </div>
-
-              <button type="submit" className="wd-ap-submit">
-                Get Free Consultation
-                <span className="wd-ap-submit-arrow">›</span>
-              </button>
-            </form>
           </div>
-        </div>
-      </div>
-    </section>
 
-      {/* SECTION 3: WHAT WE OFFER — ORBIT */}
-      <section className="pcs-offer-section">
-        <div className="pcs-offer-inner">
-                <div className="partners-header1" style={{ marginBottom: '20px', textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Key Uniqueness
-</div>
+          {/* RIGHT — banner image */}
+          <div style={{ position: "relative", zIndex: 2, display: "flex", alignItems: "center", justifyContent: "center", animation: "fadeUp .9s .15s ease both" }}>
+            <img
+              src={banner}
+              alt="WooCommerce Website Development Banner"
+              className="wd-hero-img"
+            />
           </div>
-          <h2 className="pcs-offer-heading">Why Should You Choose us for <span><i>WooCommerce Website Development?</i></span></h2>
-          <div className="pcs-offer-body">
-            <div className="pcs-offer-left">
-              <div className="pcs-orbit-wrap">
-                <div className="pcs-orbit-ring"></div>
-                {connectorAngles.map((angle, i) => (
-                  <div key={i} className={`pcs-orbit-connector${activeOffer === i ? " active" : ""}`}
-                    style={{ width:"calc(50% - 62px)", transform:`rotate(${angle}deg) translateY(-50%)` }}
-                  ></div>
-                ))}
-                <div className="pcs-orbit-center">
-                  <div className="pcs-orbit-center-name">PCS</div>
-                  <div className="pcs-orbit-center-sub">Web Design</div>
+        </section>
+
+        {/* SECTION 2: OUR APPROACH */}
+        <section className="wd-approach" id="approach">
+          <div className="wd-ap-inner">
+
+            {/* LEFT CONTENT */}
+            <div>
+              <div className="partners-header1">
+                <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Strategy for Ecommerce Website Development
+
+                </h2>
+              </div>
+              <h2 className="wd-ap-heading">Strategic <span>Conversion-Focused </span> Ecommerce Solutions</h2>
+              <p className="wd-ap-intro">
+                A successful custom eCommerce website requires more than design — it needs structured architecture, secure payment systems, seamless navigation, and optimized checkout experiences that support performance, engagement, and long-term revenue growth.
+
+              </p>
+              <p className="wd-ap-intro">
+                Our development approach focuses on scalability, flexibility, and smooth functionality to ensure your eCommerce platform delivers reliable performance across all devices, user journeys, and growing business requirements.
+              </p>
+              <p className="wd-ap-intro">
+                We build fully customized eCommerce platforms tailored to your specific business goals, providing complete control, advanced functionality, and future-ready solutions without the limitations of prebuilt platforms.
+              </p>
+            </div>
+
+            {/* RIGHT FORM */}
+            <div className="wd-ap-form-wrap">
+              <div className="wd-ap-form-card">
+                <div className="wd-form-eyebrow">
+                  <span className="wd-form-eyebrow-line" />Your Growth, Our Mission<span className="wd-form-eyebrow-line" />
                 </div>
+                <div className="wd-form-title">Get Your <span>Free</span> Quote</div>
+
+                <form onSubmit={handleSubmit}>
+                  <div className="wd-fl-row">
+                    <div className="wd-fl-group">
+                      <label className="wd-fl-label">Your Name</label>
+                      <div style={{ position: "relative" }}>
+                        <span className="wd-fl-icon">👤</span>
+                        <input className="wd-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
+                      </div>
+                    </div>
+                    <div className="wd-fl-group">
+                      <label className="wd-fl-label">Company</label>
+                      <div style={{ position: "relative" }}>
+                        <span className="wd-fl-icon">🏢</span>
+                        <input className="wd-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="wd-fl-group">
+                    <label className="wd-fl-label">Email Address</label>
+                    <div style={{ position: "relative" }}>
+                      <span className="wd-fl-icon">✉️</span>
+                      <input className="wd-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
+                    </div>
+                  </div>
+
+                  <div className="wd-fl-group">
+                    <label className="wd-fl-label">Mobile Number</label>
+                    <div className="wd-phone-row">
+                      <div className="wd-phone-flag"><span>📞</span></div>
+                      <input className="wd-fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
+                    </div>
+                  </div>
+
+                  <div className="wd-fl-group wd-textarea-group">
+                    <label className="wd-fl-label">Message</label>
+                    <div style={{ position: "relative" }}>
+                      <span className="wd-fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
+                      <textarea className="wd-fl-textarea" name="msg" placeholder="Tell us about your project..." value={form.msg} onChange={handleChange} />
+                    </div>
+                  </div>
+
+                  <button type="submit" className="wd-ap-submit">
+                    Get Free Consultation
+                    <span className="wd-ap-submit-arrow">›</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 3: WHAT WE OFFER — ORBIT */}
+        <section className="pcs-offer-section">
+          <div className="pcs-offer-inner">
+            <div className="partners-header1" style={{ marginBottom: '20px', textAlign: 'center' }}>
+              <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Key Uniqueness</h2>
+            </div>
+            <h3 className="pcs-offer-heading">Why Should You Choose us for <span><i>Ecommerce  Website Development?</i></span></h3>
+            <div className="pcs-offer-body">
+              <div className="pcs-offer-left">
+                <div className="pcs-orbit-wrap">
+                  <div className="pcs-orbit-ring"></div>
+                  {connectorAngles.map((angle, i) => (
+                    <div key={i} className={`pcs-orbit-connector${activeOffer === i ? " active" : ""}`}
+                      style={{ width: "calc(50% - 62px)", transform: `rotate(${angle}deg) translateY(-50%)` }}
+                    ></div>
+                  ))}
+                  <div className="pcs-orbit-center">
+                    <div className="pcs-orbit-center-name">PCS</div>
+                    <div className="pcs-orbit-center-sub">Web Design</div>
+                  </div>
+                  {offerData.map((item, i) => (
+                    <div key={i} className="pcs-orbit-node" style={{ top: nodePositions[i].top, left: nodePositions[i].left }} onClick={() => handleOfferSelect(i)}>
+                      <div className={`pcs-orbit-node-box${activeOffer === i ? " active" : ""}`}>
+                        <img src={item.img} alt={item.label} className="pcs-orbit-node-emoji" style={{ width: "32px", height: "32px", objectFit: "contain" }} />
+                        <div className="pcs-orbit-node-lbl">{item.label}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="pcs-offer-right">
+                {activeOffer === -1 && (
+                  <div className="pcs-offer-placeholder">
+                    <div className="pcs-offer-placeholder-icon"><img src="/img/click-pointer.png" alt="click" style={{ width: "44px", height: "44px", objectFit: "contain", opacity: 0.35 }} /></div>
+                    <div className="pcs-offer-placeholder-text">Click any box to view details</div>
+                  </div>
+                )}
                 {offerData.map((item, i) => (
-                  <div key={i} className="pcs-orbit-node" style={{ top: nodePositions[i].top, left: nodePositions[i].left }} onClick={() => handleOfferSelect(i)}>
-                    <div className={`pcs-orbit-node-box${activeOffer === i ? " active" : ""}`}>
-                      <img src={item.img} alt={item.label} className="pcs-orbit-node-emoji" style={{width:"32px",height:"32px",objectFit:"contain"}} />
-                      <div className="pcs-orbit-node-lbl">{item.label}</div>
+                  <div key={i} className={`pcs-offer-panel${activeOffer === i ? " active" : ""}`}>
+                    <div className="pcs-offer-panel-bar"></div>
+                    <div className="pcs-offer-panel-title-row">
+                      <div className="pcs-offer-panel-icon"><img src={item.img} alt={item.title} style={{ width: "32px", height: "32px", objectFit: "contain" }} /></div>
+                      <div className="pcs-offer-panel-title">{item.title}</div>
+                    </div>
+                    <div className="pcs-offer-panel-divider"></div>
+                    <div className="pcs-offer-panel-desc">{item.desc}</div>
+                    <div className="pcs-offer-panel-tags">
+                      {item.tags.map((tag, j) => <span key={j} className="pcs-offer-panel-tag">{tag}</span>)}
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="pcs-offer-right">
-              {activeOffer === -1 && (
-                <div className="pcs-offer-placeholder">
-                  <div className="pcs-offer-placeholder-icon"><img src="/img/click-pointer.png" alt="click" style={{width:"44px",height:"44px",objectFit:"contain",opacity:0.35}} /></div>
-                  <div className="pcs-offer-placeholder-text">Click any box to view details</div>
-                </div>
-              )}
-              {offerData.map((item, i) => (
-                <div key={i} className={`pcs-offer-panel${activeOffer === i ? " active" : ""}`}>
-                  <div className="pcs-offer-panel-bar"></div>
-                  <div className="pcs-offer-panel-title-row">
-                    <div className="pcs-offer-panel-icon"><img src={item.img} alt={item.title} style={{width:"32px",height:"32px",objectFit:"contain"}} /></div>
-                    <div className="pcs-offer-panel-title">{item.title}</div>
+          </div>
+        </section>
+
+        {/* SECTION 4: WHAT'S INCLUDED */}
+        <section className="pcs-wi5-section">
+          <div className="pcs-wi5-inner">
+            <div className="pcs-offer-inner">
+              <div className="partners-header1" style={{ marginBottom: '10px', textAlign: 'center' }}>
+                <h2 className="partners-eyebrow" style={{ textAlign: 'center' }}>Our Expertise </h2>
+              </div>
+            </div>
+            <h3 className="pcs-wi5-heading">What’s Included in Our  <span><i>Ecommerce   </i></span> Development Services?</h3>
+            <div className="pcs-wi5-tabs">
+              {includedData.map((tab, i) => (
+                <div key={i} className={`pcs-wi5-tab${openTab === i ? " open" : ""}`}>
+                  <div className="pcs-wi5-tab-head" onClick={() => handleTabToggle(i)}>
+                    <div className="pcs-wi5-tab-num">
+                      <div className="pcs-wi5-tab-num-diamond"></div>
+                      <span className="pcs-wi5-tab-num-text">{tab.num}</span>
+                    </div>
+                    <div className="pcs-wi5-tab-icon"><img src={tab.icon} alt={tab.title} style={{ width: "24px", height: "24px", objectFit: "contain" }} /></div>
+                    <div className="pcs-wi5-tab-title">{tab.title}</div>
+                    <div className="pcs-wi5-tab-chev">
+                      <img src="/img/chevron-down.png" alt="toggle" style={{ width: "14px", height: "14px", objectFit: "contain" }} />
+                    </div>
                   </div>
-                  <div className="pcs-offer-panel-divider"></div>
-                  <div className="pcs-offer-panel-desc">{item.desc}</div>
-                  <div className="pcs-offer-panel-tags">
-                    {item.tags.map((tag, j) => <span key={j} className="pcs-offer-panel-tag">{tag}</span>)}
+                  <div className="pcs-wi5-tab-body">
+                    <div className="pcs-wi5-tab-content">
+                      <div className="pcs-wi5-tab-desc">{tab.desc}</div>
+                      {/* <div className="pcs-wi5-tab-tags">
+                      {tab.tags.map((t, j) => <span key={j} className={`pcs-wi5-tab-tag ${t.c}`}>{t.t}</span>)}
+                    </div> */}
+                    </div>
+                    <div className="pcs-wi5-tab-progress"></div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* SECTION 4: WHAT'S INCLUDED */}
-      <section className="pcs-wi5-section">
-        <div className="pcs-wi5-inner">
-            <div className="pcs-offer-inner">
+        {/* SECTION 5: OUR PROCESS */}
+        <section className="pcs-proc-section">
+          <div className="pcs-proc-inner">
+            <div className="pcs-proc-header">
+              <div className="pcs-offer-inner">
                 <div className="partners-header1" style={{ marginBottom: '10px', textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ textAlign: 'center' }}>Our Expertise </div>
-          </div>
-          </div>
-          <h2 className="pcs-wi5-heading">What’s Included in Our  <span><i>WooCommerce  </i></span> Development Services?</h2>
-          <div className="pcs-wi5-tabs">
-            {includedData.map((tab, i) => (
-              <div key={i} className={`pcs-wi5-tab${openTab === i ? " open" : ""}`}>
-                <div className="pcs-wi5-tab-head" onClick={() => handleTabToggle(i)}>
-                  <div className="pcs-wi5-tab-num">
-                    <div className="pcs-wi5-tab-num-diamond"></div>
-                    <span className="pcs-wi5-tab-num-text">{tab.num}</span>
-                  </div>
-                  <div className="pcs-wi5-tab-icon"><img src={tab.icon} alt={tab.title} style={{width:"24px",height:"24px",objectFit:"contain"}} /></div>
-                  <div className="pcs-wi5-tab-title">{tab.title}</div>
-                  <div className="pcs-wi5-tab-chev">
-                    <img src="/img/chevron-down.png" alt="toggle" style={{width:"14px",height:"14px",objectFit:"contain"}} />
-                  </div>
-                </div>
-                <div className="pcs-wi5-tab-body">
-                  <div className="pcs-wi5-tab-content">
-                    <div className="pcs-wi5-tab-desc">{tab.desc}</div>
-                    {/* <div className="pcs-wi5-tab-tags">
-                      {tab.tags.map((t, j) => <span key={j} className={`pcs-wi5-tab-tag ${t.c}`}>{t.t}</span>)}
-                    </div> */}
-                  </div>
-                  <div className="pcs-wi5-tab-progress"></div>
+                  <h2 className="partners-eyebrow" style={{ textAlign: 'center' }}>Workflow Process</h2>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: OUR PROCESS */}
-      <section className="pcs-proc-section">
-        <div className="pcs-proc-inner">
-          <div className="pcs-proc-header">
-                 <div className="pcs-offer-inner">
-                <div className="partners-header1" style={{ marginBottom: '10px', textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ textAlign: 'center' }}>Workflow Process</div>
-          </div>
-          </div>
-            <h2 className="pcs-proc-title">Our  <span><i> WooCommerce Website</i></span> Development Process </h2>
-          </div>
-          <div className="pcs-proc-grid">
-            {processSteps.map((step, i) => (
-              <div className="pcs-proc-gc" key={i}>
-                <div className="pcs-proc-gc-top">
-                  <div className="pcs-proc-gc-num">{step.num}</div>
-                  <div className="pcs-proc-gc-icon"><img src={step.icon} alt={step.title} style={{width:"32px",height:"32px",objectFit:"contain"}} /></div>
-                </div>
-                <div className="pcs-proc-gc-title">{step.title}</div>
-                <div className="pcs-proc-gc-desc">{step.desc}</div>
-                {/* <div className="pcs-proc-gc-tags">
+              <h3 className="pcs-proc-title">Our  <span><i> ECommerce Website</i></span> Development Process </h3>
+            </div>
+            <div className="pcs-proc-grid">
+              {processSteps.map((step, i) => (
+                <div className="pcs-proc-gc" key={i}>
+                  <div className="pcs-proc-gc-top">
+                    <div className="pcs-proc-gc-num">{step.num}</div>
+                    <div className="pcs-proc-gc-icon"><img src={step.icon} alt={step.title} style={{ width: "32px", height: "32px", objectFit: "contain" }} /></div>
+                  </div>
+                  <div className="pcs-proc-gc-title">{step.title}</div>
+                  <div className="pcs-proc-gc-desc">{step.desc}</div>
+                  {/* <div className="pcs-proc-gc-tags">
                   {step.tags.map((t, j) => <span key={j}>{t}</span>)}
                 </div> */}
-              </div>
-            ))}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* SECTION 6: WHY */}
-      <section className="pcs-fb-section">
-        <div className="pcs-fb-inner">
-          <div className="pcs-fb-header">
-           <div className="pcs-offer-inner">
+        </section>
+ 
+        {/* SECTION 6: WHY */}
+        <section className="pcs-fb-section">
+          <div className="pcs-fb-inner">
+            <div className="pcs-fb-header">
+              <div className="pcs-offer-inner">
                 <div className="partners-header1" style={{ marginBottom: '10px', textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ textAlign: 'center' }}>Key Service Features </div>
-          </div>
-          </div>            <h2 className="pcs-fb-title">Features of our  <span><i> WooCommerce </i></span> Development Services</h2>
-          </div>
-          <div className="pcs-fb-grid">
-            <div className="pcs-fb-vline"></div>
-            <div className="pcs-fb-hline"></div>
-            <div className={`pcs-fb-box pcs-fb-box-tl`}>
-              <div className="pcs-fb-icon"><img src={whyData[0].icon} alt={whyData[0].title} style={{width:"28px",height:"28px",objectFit:"contain"}} /></div>
-              <div className="pcs-fb-box-title">{whyData[0].title}</div>
-              <div className="pcs-fb-box-desc">{whyData[0].desc}</div>
-            </div>
-            <div className="pcs-fb-center-col">
-              <div className="pcs-fb-center-circle">
-                <div className="pcs-fb-center-inner">
-                  <div className="pcs-fb-center-icon"><img src="/img/woo-center.png" alt="PCS" style={{width:"36px",height:"36px",objectFit:"contain"}} /></div>
-                  <div className="pcs-fb-center-lbl">PCS</div>
+                  <h2 className="partners-eyebrow" style={{ textAlign: 'center' }}>Key Service Features </h2>
                 </div>
+              </div>            <h3 className="pcs-fb-title">Features of our  <span><i> ECommerce </i></span> Development Services</h3>
+            </div>
+            <div className="pcs-fb-grid">
+              <div className="pcs-fb-vline"></div>
+              <div className="pcs-fb-hline"></div>
+              <div className={`pcs-fb-box pcs-fb-box-tl`}>
+                <div className="pcs-fb-icon"><img src={whyData[0].icon} alt={whyData[0].title} style={{ width: "28px", height: "28px", objectFit: "contain" }} /></div>
+                <div className="pcs-fb-box-title">{whyData[0].title}</div>
+                <div className="pcs-fb-box-desc">{whyData[0].desc}</div>
               </div>
-            </div>
-            <div className={`pcs-fb-box pcs-fb-box-tr`}>
-              <div className="pcs-fb-icon"><img src={whyData[1].icon} alt={whyData[1].title} style={{width:"28px",height:"28px",objectFit:"contain"}} /></div>
-              <div className="pcs-fb-box-title">{whyData[1].title}</div>
-              <div className="pcs-fb-box-desc">{whyData[1].desc}</div>
-            </div>
-            <div className={`pcs-fb-box pcs-fb-box-bl`}>
-              <div className="pcs-fb-icon"><img src={whyData[2].icon} alt={whyData[2].title} style={{width:"28px",height:"28px",objectFit:"contain"}} /></div>
-              <div className="pcs-fb-box-title">{whyData[2].title}</div>
-              <div className="pcs-fb-box-desc">{whyData[2].desc}</div>
-            </div>
-            <div className={`pcs-fb-box pcs-fb-box-br`}>
-              <div className="pcs-fb-icon"><img src={whyData[3].icon} alt={whyData[3].title} style={{width:"28px",height:"28px",objectFit:"contain"}} /></div>
-              <div className="pcs-fb-box-title">{whyData[3].title}</div>
-              <div className="pcs-fb-box-desc">{whyData[3].desc}</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-     {/* blog section */}
-      <BlogSection />
-
-
-      {/* faq section */}
-          <section className="faq-section" style={{padding: '0 0 80px 0'}}>
-      <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
-      </div>
-      <div className="container">
-        {/* TITLE */}
-        <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
-        </div>
-        {/* FAQ GRID */}
-        <div className="faq-wrapper">
-
-          {/* LEFT COLUMN */}
-          <div className="faq-col">
-            {faqData.slice(0, 3).map((item, i) => (
-              <div className="faq-item" key={i}>
-                <div className="faq-question" onClick={() => toggle(i)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i ? "−" : "+"}</span>
-                </div>
-                {active === i && (
-                  <div className="faq-answer">
-                    {item.a}
+              <div className="pcs-fb-center-col">
+                <div className="pcs-fb-center-circle">
+                  <div className="pcs-fb-center-inner">
+                    <div className="pcs-fb-center-icon"><img src="/img/priyam-consultancy-logo.png" alt="PCS" style={{ width: "80px", height: "80px", objectFit: "contain" }} /></div>
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
-
-          {/* RIGHT COLUMN */}
-          <div className="faq-col">
-            {faqData.slice(3, 6).map((item, i) => (
-              <div className="faq-item" key={i + 3}>
-                <div className="faq-question" onClick={() => toggle(i + 3)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i + 3 ? "−" : "+"}</span>
                 </div>
-                {active === i + 3 && (
-                  <div className="faq-answer">
-                    {item.a}
-                  </div>
-                )}
               </div>
-            ))}
+              <div className={`pcs-fb-box pcs-fb-box-tr`}>
+                <div className="pcs-fb-icon"><img src={whyData[1].icon} alt={whyData[1].title} style={{ width: "28px", height: "28px", objectFit: "contain" }} /></div>
+                <div className="pcs-fb-box-title">{whyData[1].title}</div>
+                <div className="pcs-fb-box-desc">{whyData[1].desc}</div>
+              </div>
+              <div className={`pcs-fb-box pcs-fb-box-bl`}>
+                <div className="pcs-fb-icon"><img src={whyData[2].icon} alt={whyData[2].title} style={{ width: "28px", height: "28px", objectFit: "contain" }} /></div>
+                <div className="pcs-fb-box-title">{whyData[2].title}</div>
+                <div className="pcs-fb-box-desc">{whyData[2].desc}</div>
+              </div>
+              <div className={`pcs-fb-box pcs-fb-box-br`}>
+                <div className="pcs-fb-icon"><img src={whyData[3].icon} alt={whyData[3].title} style={{ width: "28px", height: "28px", objectFit: "contain" }} /></div>
+                <div className="pcs-fb-box-title">{whyData[3].title}</div>
+                <div className="pcs-fb-box-desc">{whyData[3].desc}</div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+
+        {/* blog section */}
+        <BlogSection />
 
 
-    {/* cta section */}
-       <CTASection />
+        {/* faq section */}
+        <section className="faq-section" style={{ padding: '0 0 80px 0' }}>
+          <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
+            <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
+          </div>
+          <div className="container">
+            {/* TITLE */}
+            <div className="faq-head">
+              <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
+            </div>
+            {/* FAQ GRID */}
+            <div className="faq-wrapper">
 
-    </>
+              {/* LEFT COLUMN */}
+              <div className="faq-col">
+                {faqData.slice(0, 3).map((item, i) => (
+                  <div className="faq-item" key={i}>
+                    <div className="faq-question" onClick={() => toggle(i)}>
+                      <span>{item.q}</span>
+                      <span className="icon">{active === i ? "−" : "+"}</span>
+                    </div>
+                    {active === i && (
+                      <div className="faq-answer">
+                        {item.a}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+
+              {/* RIGHT COLUMN */}
+              <div className="faq-col">
+                {faqData.slice(3, 6).map((item, i) => (
+                  <div className="faq-item" key={i + 3}>
+                    <div className="faq-question" onClick={() => toggle(i + 3)}>
+                      <span>{item.q}</span>
+                      <span className="icon">{active === i + 3 ? "−" : "+"}</span>
+                    </div>
+                    {active === i + 3 && (
+                      <div className="faq-answer">
+                        {item.a}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        {/* cta section */}
+        <CTASection />
+
+      </>
     </Layout>
   );
 }

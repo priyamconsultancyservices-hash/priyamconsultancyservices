@@ -1206,12 +1206,14 @@ h2.partners-eyebrow {
 } 
     h3.partners-h3-title {
     font-size: 2.5rem;
+    margin-bottom: 1.2rem;
 }
     h3.faq-h3 {
     font-size: 2.3rem;
     color: #000;
     text-align: center;
 }
+
 `;
 
 /* ─── Scroll reveal ─── */
@@ -1494,9 +1496,9 @@ function ServicesSection() {
     <section className="services" id="services">
       <div className="sep-line" />
       <div className="svc-header reveal">
-        <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Business Registration & Compliance Services</div>
+        <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Business Registration & Compliance Services</h2>
 
-        <h2>Simplified Setup. <em> Seamless Compliance. </em>Growth Assured.</h2>
+        <h3 className="partners-h3-title">Simplified Setup. <em style={{ color: '#ed8337',marginBottom: '20px' }}> Seamless Compliance. </em>Growth Assured.</h3>
         <p>From Registration to Reporting, We Deliver End-to-End Solutions That Keep Your Business On Track.</p>
       </div>
       <div className="svc-grid reveal" style={{ transitionDelay: "0.1s" }}>
@@ -1595,13 +1597,13 @@ function WhySection() {
         <div className="why-right reveal" style={{ transitionDelay: "0.12s" }}>
           <div className="why-card tall">
             <div className="why-card-icon"><img src="/img/icon/business-registration-legal.webp" alt="Legal Identity and Protection" width="28" height="28" /></div>
-            <h3 className="why-card-title">Legal Identity & Protection</h3>
+            <h4 className="why-card-title">Legal Identity & Protection</h4>
             <p className="why-card-desc">Secure your business with proper registration, ensuring legal recognition and complete protection from risks.</p>
           </div>
           {WHY_CARDS.map(c => (
             <div className="why-card" key={c.title}>
               <div className="why-card-icon">{c.icon}</div>
-              <h3 className="why-card-title">{c.title}</h3>
+              <h4 className="why-card-title">{c.title}</h4>
               <p className="why-card-desc">{c.desc}</p>
             </div>
           ))}

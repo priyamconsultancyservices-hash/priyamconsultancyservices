@@ -273,10 +273,10 @@ export default function CustomHeader() {
           </nav>
 
           {/* Desktop CTA */}
-          <a href="/contact" className={styles.ctaButton}>Get Started</a>
+          <a href="/contact-us" className={styles.ctaButton}>Get Started</a>
 
           {/* Mobile Center CTA */}
-          <a href="/contact" className={styles.mobileCta}>Get Started →</a>
+          <a href="/contact-us" className={styles.mobileCta}>Get Started →</a>
 
           <button className={styles.hamburger} onClick={() => setMobileOpen(true)} aria-label="Open menu">
             <span /><span /><span />

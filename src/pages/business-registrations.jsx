@@ -476,8 +476,9 @@ function ApproachSection() {
         </div>
 
         {/* RIGHT FORM */}
-        <div className="ap-form-wrap">
+             <div className="ap-form-wrap">
           <div className="ap-form-card">
+
             <div className="form-card-eyebrow">
               <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
             </div>
@@ -493,7 +494,7 @@ function ApproachSection() {
                 <div className="fl-group">
                   <label className="fl-label">Your Name</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon"><img src="/img/icons/form-user.svg" alt="User" width="16" height="16" /></span>
+                    <span className="fl-icon">👤</span>
                     <input
                       className="fl-input"
                       type="text"
@@ -509,7 +510,7 @@ function ApproachSection() {
                 <div className="fl-group">
                   <label className="fl-label">Company</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon"><img src="/img/icons/form-company.svg" alt="Company" width="16" height="16" /></span>
+                    <span className="fl-icon">🏢</span>
                     <input
                       className="fl-input"
                       type="text"
@@ -526,7 +527,7 @@ function ApproachSection() {
               <div className="fl-group">
                 <label className="fl-label">Email Address</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon"><img src="/img/icons/form-email.svg" alt="Email" width="16" height="16" /></span>
+                  <span className="fl-icon">✉️</span>
                   <input
                     className="fl-input"
                     type="email"
@@ -543,7 +544,7 @@ function ApproachSection() {
                 <label className="fl-label">Mobile Number</label>
                 <div className="phone-row">
                   <div className="phone-flag">
-                    <span className="phone-flag-icon"><img src="/img/icons/form-phone.svg" alt="Phone" width="16" height="16" /></span>
+                    <span className="phone-flag-icon">📞</span>
 
                   </div>
                   <input
@@ -563,7 +564,7 @@ function ApproachSection() {
               <div className="fl-group textarea-group">
                 <label className="fl-label">Message</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}><img src="/img/icons/form-message.svg" alt="Message" width="16" height="16" /></span>
+                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
                   <textarea
                     className="fl-textarea"
                     name="msg"
@@ -583,6 +584,7 @@ function ApproachSection() {
 
             </form>
             {/* ✅ FORM END */}
+
           </div>
         </div>
       </div>

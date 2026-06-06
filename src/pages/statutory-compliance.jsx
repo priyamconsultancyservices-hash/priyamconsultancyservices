@@ -4,16 +4,220 @@ import Link from '@docusaurus/Link';
 import emailjs from "@emailjs/browser";
 const banner = "/img/statutory-compliance.png";
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
 
-/* ═══════════════════════════════
-   SECTION 1 — HERO BANNER
-═══════════════════════════════ */
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/statutory-compliance/";
+  const imageUrl = "https://www.priyamconsultancy.com/img/statutory-compliance.png";
+
+  return (
+    <Head>
+      {/* ── Primary Meta ── */}
+      <title>Statutory Compliance Services in Coimbatore | Statutory Compliance</title>
+      <meta name="description" content="Reliable statutory compliance services in Coimbatore. Ensure legal adherence, payroll & labor law compliance with expert guidance for smooth business operations." />
+      <meta name="keywords" content="Statutory Compliance, Statutory Compliance Services, Statutory Compliance Consultants, HR & Statutory Compliance Services, Statutory Compliance Services Providers, HR and Payroll Statutory Compliance, Statutory Compliance Solutions, Statutory Compliance Outsourcing, Statutory Compliance Company, Labour Statutory Compliances" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/statutory-compliance/" />
+
+      {/* ── Open Graph ── */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Statutory Compliance Services in Coimbatore | Statutory Compliance" />
+      <meta property="og:description" content="Reliable statutory compliance services in Coimbatore. Ensure legal adherence, payroll & labor law compliance with expert guidance for smooth business operations." />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/statutory-compliance/" />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="PCS Business Solution" />
+
+      {/* ── Twitter Card ── */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Statutory Compliance Services in Coimbatore | Statutory Compliance" />
+      <meta name="twitter:description" content="Reliable statutory compliance services in Coimbatore. Ensure legal adherence, payroll & labor law compliance with expert guidance for smooth business operations." />
+      <meta name="twitter:image" content={imageUrl} />
+
+      {/* ── Breadcrumb List Schema ── */}
+      <script type="application/ld+json">{`
+        {
+        "@context":"https://schema.org",
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "item":{
+              "@id":"https://www.priyamconsultancy.com/",
+              "name":"Home"
+            }
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "item":{
+              "@id":"https://www.priyamconsultancy.com/statutory-compliance/",
+              "name":"statutory-compliance"
+            }
+          }
+        ]
+        }
+
+      `}</script>
+
+      {/* ── Organization Schema ── */}
+      <script type="application/ld+json">{`
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91 96774 44048",
+            "contactType": "customer support"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61577125709962",
+          "https://www.linkedin.com/company/priyam-consultancy-services/",
+          "https://www.instagram.com/priyam_consultancy_services/",
+          "https://x.com/services91032",
+          "https://g.co/kgs/rdTYdi6"
+        ]
+        }
+
+      `}</script>
+
+      {/* ── Service Schema ── */}
+      <script type="application/ld+json">{`
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "@id":"https://www.priyamconsultancy.com/statutory-compliance/#service",
+          "name":"Statutory Compliance",
+          "serviceType":"Statutory Compliance Services",
+          "url":"https://www.priyamconsultancy.com/statutory-compliance/",
+          "description":"Priyam Consultancy provides professional statutory compliance services including GST compliance, TDS filings, PF and ESI compliance, ROC filings, payroll compliance and regulatory compliance management for businesses across India.",
+          "provider":{
+            "@type":"Organization",
+            "name":"Priyam Consultancy Services",
+            "url":"https://www.priyamconsultancy.com/",
+            "logo":{
+              "@type":"ImageObject",
+              "url":"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+            }
+          },
+          "areaServed":{
+            "@type":"Country",
+            "name":"India"
+          }
+        }
+
+      `}</script>
+
+      {/* ── Product Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+        {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "statutory-compliance",
+        "image": ["https://www.priyamconsultancy.com/img/statutory-compliance.png"],
+        "description": "Best statutory compliance services in Coimbatore offering GST compliance, TDS filings, PF and ESI compliance, ROC filings, payroll compliance and regulatory compliance management for businesses.",
+        "brand": {
+        "@type": "Brand",
+        "name": "Priyam Consultancy Services"
+        },
+        "review": {
+        "@type": "Review",
+        "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1"
+        },
+        "author": {
+        "@type": "Person",
+        "name": "Admin"
+        }
+        },
+        "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "6218"
+        },
+        "offers": {
+        "@type": "Offer",
+        "url": "https://www.priyamconsultancy.com/statutory-compliance/",
+        "priceCurrency": "USD",
+        "price": "00.00",
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": "https://schema.org/UsedCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+        "@type": "Organization",
+        "name": "priyamconsultancy.com"
+        }
+        }
+        }
+
+      `}</script>
+
+      {/* ── FAQ Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "What is statutory compliance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Statutory compliance refers to adhering to government-mandated laws, regulations, and legal requirements applicable to a business. This includes labor laws, tax filings, payroll regulations, PF, ESI, TDS, ROC filings, and other statutory obligations necessary for lawful business operations."
+            }
+          },{
+            "@type": "Question",
+            "name": "Why is compliance important for a business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Compliance helps businesses operate legally, avoid penalties, maintain financial transparency, and build credibility with clients, investors, and regulatory authorities. Proper compliance management also reduces operational risks and supports sustainable long-term business growth and smooth organizational functioning."
+            }
+          },{
+            "@type": "Question",
+            "name": "What are the Big 6 compliance requirements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The commonly referred Big 6 compliance requirements include GST, TDS, PF, ESI, Professional Tax, and ROC filings. These are essential statutory obligations businesses must manage regularly to maintain legal compliance and avoid penalties or regulatory issues."
+            }
+          },{
+            "@type": "Question",
+            "name": "Do small businesses need compliance services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, small businesses also require compliance services to meet legal, tax, labor, and regulatory obligations. Proper compliance management helps avoid penalties, improves operational structure, builds credibility, and ensures smooth business growth from the early stages of operations."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is the difference between legal and statutory compliance?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Legal compliance refers to following all applicable laws and regulations governing business operations, while statutory compliance specifically relates to mandatory requirements defined under statutory acts such as tax laws, labor laws, payroll regulations, and corporate filing obligations."
+            }
+          },{
+            "@type": "Question",
+            "name": "What happens if compliance is missed?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Missing compliance requirements can lead to penalties, legal notices, financial liabilities, operational disruptions, and reputational damage. Continued non-compliance may also affect business credibility, regulatory approvals, taxation processes, and future business expansion or investment opportunities."
+            }
+          }]
+        }
+      `}</script>
+    </Head>
+  );
+}
 /* ═══════════════════════════════
    SECTION 1 — HERO BANNER
 ═══════════════════════════════ */
 function HeroSection() {
   return (
-      <section className="hero" id="hero">
+    <section className="hero" id="hero">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -161,14 +365,14 @@ img.hero-img { animation: none !important; }
 
       {/* LEFT CONTENT */}
       <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot" />Compliance. Simplified.</div>
+        <div className="h-badge"><div className="badge-dot" />Statutory Compliance</div>
         <h1 className="hero-heading">
           Statutory Compliance<br />
           <span className="hl lined">Partner</span> for Accuracy,<br />
           Reliability &amp; Growth
         </h1>
         <p className="hero-sub">
-Timely filings, audits, and regulatory adherence are critical for your business’s credibility and operational stability. At Priyam Consultancy Services, we simplify compliance management, ensuring your business stays legally secure, avoids penalties, and maintains a strong foundation for growth.
+          Timely filings, audits, and regulatory adherence are critical for your business’s credibility and operational stability. At Priyam Consultancy Services, we simplify compliance management, ensuring your business stays legally secure, avoids penalties, and maintains a strong foundation for growth.
         </p>
         <div className="hero-actions">
           <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
@@ -299,10 +503,10 @@ function ApproachSection() {
           </div>
           <h2 className="ap-heading">Statutory   <span>Compliance</span></h2>
           <p className="ap-intro">
-Your business operations and regulatory obligations are unique. That is why your compliance approach must be personalized and well-structured. We begin by understanding your requirements in detail.
+            Your business operations and regulatory obligations are unique. That is why your compliance approach must be personalized and well-structured. We begin by understanding your requirements in detail.
           </p>
           <p className="ap-intro">
-We assess your reporting needs and design a clear, step-by-step compliance plan. This covers audits, filings, and statutory responsibilities with accuracy. Everything is managed efficiently and always on schedule.
+            We assess your reporting needs and design a clear, step-by-step compliance plan. This covers audits, filings, and statutory responsibilities with accuracy. Everything is managed efficiently and always on schedule.
           </p>
           <p className="ap-intro">
             Statutory compliance brings clarity and peace of mind to your business. We track deadlines, maintain proper documentation, and adapt to regulatory changes. This keeps your business compliant while you focus on growth and performance.
@@ -313,6 +517,7 @@ We assess your reporting needs and design a clear, step-by-step compliance plan.
         {/* RIGHT FORM */}
         <div className="ap-form-wrap">
           <div className="ap-form-card">
+
             <div className="form-card-eyebrow">
               <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
             </div>
@@ -328,7 +533,7 @@ We assess your reporting needs and design a clear, step-by-step compliance plan.
                 <div className="fl-group">
                   <label className="fl-label">Your Name</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon"><img src="/img/icons/form-user.svg" alt="User" width="16" height="16" /></span>
+                    <span className="fl-icon">👤</span>
                     <input
                       className="fl-input"
                       type="text"
@@ -344,7 +549,7 @@ We assess your reporting needs and design a clear, step-by-step compliance plan.
                 <div className="fl-group">
                   <label className="fl-label">Company</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon"><img src="/img/icons/form-company.svg" alt="Company" width="16" height="16" /></span>
+                    <span className="fl-icon">🏢</span>
                     <input
                       className="fl-input"
                       type="text"
@@ -361,7 +566,7 @@ We assess your reporting needs and design a clear, step-by-step compliance plan.
               <div className="fl-group">
                 <label className="fl-label">Email Address</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon"><img src="/img/icons/form-email.svg" alt="Email" width="16" height="16" /></span>
+                  <span className="fl-icon">✉️</span>
                   <input
                     className="fl-input"
                     type="email"
@@ -378,7 +583,7 @@ We assess your reporting needs and design a clear, step-by-step compliance plan.
                 <label className="fl-label">Mobile Number</label>
                 <div className="phone-row">
                   <div className="phone-flag">
-                    <span className="phone-flag-icon"><img src="/img/icons/form-phone.svg" alt="Phone" width="16" height="16" /></span>
+                    <span className="phone-flag-icon">📞</span>
 
                   </div>
                   <input
@@ -398,7 +603,7 @@ We assess your reporting needs and design a clear, step-by-step compliance plan.
               <div className="fl-group textarea-group">
                 <label className="fl-label">Message</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}><img src="/img/icons/form-message.svg" alt="Message" width="16" height="16" /></span>
+                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
                   <textarea
                     className="fl-textarea"
                     name="msg"
@@ -418,6 +623,7 @@ We assess your reporting needs and design a clear, step-by-step compliance plan.
 
             </form>
             {/* ✅ FORM END */}
+
           </div>
         </div>
       </div>
@@ -433,8 +639,8 @@ const REG_DATA = [
   { num: "02", tag: "ISA", label: "Internal & Statutory Audits", title: "Thorough audits to <i>ensure accuracy</i>", desc: ["Our team conducts detailed internal and statutory audits to verify financial accuracy and compliance. We review transactions, records, and processes to identify gaps or risks. This ensures your business maintains clarity and control.", "With a strong audit framework, we improve transparency and strengthen governance practices. Our insights help you make informed decisions and stay compliant. This builds trust and supports long-term financial stability."], chips: ["💼 Limited Liability", "🚀 Investor-Ready", "👥 2–200 Shareholders", "📑 Separate Legal Entity"], time: "Avg. 7–12 working days" },
   { num: "03", tag: "CG", label: "Corporate Governance", title: "Maintain proper  <i>records and resolutions</i>", desc: ["We support strong corporate governance by maintaining essential records, registers, and resolutions. Our team ensures all documentation is accurate, updated, and compliant with legal standards. This keeps your business structured and accountable.", "By aligning with statutory requirements, we help build trust among stakeholders and authorities. Proper governance reduces risks and improves operational clarity. It ensures your business functions with integrity and discipline."], chips: ["🤝 Flexible Structure", "🛡️ Limited Liability", "📉 Low Compliance", "💰 Easy Profit Sharing"], time: "Avg. 10–15 working days" },
   { num: "04", tag: "TC", label: "Tax Compliance", title: "Accurate tax filings <i>zero penalties.</i>", desc: ["We manage all aspects of tax compliance, including income tax, GST, and other statutory obligations. Our team ensures accurate preparation and timely submission of all returns. This minimizes errors and compliance risks.", "By tracking deadlines and regulatory updates, we help you avoid penalties and maintain financial discipline. Our approach improves transparency and accountability. It ensures smooth and compliant business operations."], chips: ["👤 Solo Founder", "🏢 Corporate Benefits", "🔒 Asset Protection", "📊 Easy Compliance"], time: "Avg. 7–10 working days" },
-  { num: "05", tag: "RR", label: "Regulatory Reporting", title: "Complete and compliant  <i>government reporting.</i>", desc: ["We handle end-to-end regulatory reporting, ensuring all required submissions are completed accurately. Our team prepares and files reports as per government norms and timelines. This keeps your business aligned with compliance standards.","By maintaining consistency and accuracy, we reduce the risk of non-compliance and penalties. Our structured reporting approach enhances transparency. It supports smooth communication with regulatory authorities."], chips: ["🤝 Shared Ownership", "💡 Easy Formation", "📝 Minimal Compliance", "⚖️ Flexible Agreement"], time: "Avg. 3–7 working days" },
-  { num: "06", tag: "ELLC", label: "Employee & Labour Law Compliance", title: "Ensure PF, ESI, and other labour law <i>obligations are met efficiently.</i>", desc: ["We ensure timely registration and compliance with PF, ESI, and other labour law requirements. Our team manages filings, documentation, and updates with accuracy. This helps your business meet statutory obligations seamlessly.","By maintaining proper records and monitoring compliance regularly, we reduce legal risks. Our services support smooth workforce management and operational efficiency. This allows you to focus on growth and employee engagement"], chips: ["👤 Full Control", "💸 Minimal Cost", "⚡ Quick Setup", "🏪 SMEs & Freelancers"], time: "Avg. 1–3 working days" },
+  { num: "05", tag: "RR", label: "Regulatory Reporting", title: "Complete and compliant  <i>government reporting.</i>", desc: ["We handle end-to-end regulatory reporting, ensuring all required submissions are completed accurately. Our team prepares and files reports as per government norms and timelines. This keeps your business aligned with compliance standards.", "By maintaining consistency and accuracy, we reduce the risk of non-compliance and penalties. Our structured reporting approach enhances transparency. It supports smooth communication with regulatory authorities."], chips: ["🤝 Shared Ownership", "💡 Easy Formation", "📝 Minimal Compliance", "⚖️ Flexible Agreement"], time: "Avg. 3–7 working days" },
+  { num: "06", tag: "ELLC", label: "Employee & Labour Law Compliance", title: "Ensure PF, ESI, and other labour law <i>obligations are met efficiently.</i>", desc: ["We ensure timely registration and compliance with PF, ESI, and other labour law requirements. Our team manages filings, documentation, and updates with accuracy. This helps your business meet statutory obligations seamlessly.", "By maintaining proper records and monitoring compliance regularly, we reduce legal risks. Our services support smooth workforce management and operational efficiency. This allows you to focus on growth and employee engagement"], chips: ["👤 Full Control", "💸 Minimal Cost", "⚡ Quick Setup", "🏪 SMEs & Freelancers"], time: "Avg. 1–3 working days" },
 ];
 const REG_ICONS = [
   <img src="/img/icon/annual-filings-returns.webp" alt="Annual Filings and Returns" width="20" height="20" />,
@@ -513,11 +719,10 @@ function RegistrationSection() {
       <div className="rg-bg-c" style={{ top: "-120px", right: "-120px", width: "400px", height: "400px", border: "1.5px solid rgba(237,131,55,.1)" }} />
       <div className="rg-bg-c" style={{ bottom: "-100px", left: "-80px", width: "300px", height: "300px", border: "1.5px solid rgba(237,131,55,.08)" }} />
       <div style={{ textAlign: "center", marginBottom: "60px", position: "relative", zIndex: 2 }}>
-        <div className="partners-header1" style={{justifyContent: 'center'}}>
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Statutory Compliance Services</div>
-
+        <div className="partners-header1" style={{ justifyContent: 'center' }}>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Statutory Compliance Services</h2>
         </div>
-        <h2 className="rg-sec-h">Every Requirement Met.  <i> Every Deadline Managed.</i></h2>
+        <h3 className="rg-sec-h">Every Requirement Met.  <i> Every Deadline Managed.</i></h3>
         <p className="rg-sec-sub">
           Priyam Consultancy Services provides comprehensive compliance solutions designed to keep your business legally protected and audit-ready.
         </p>
@@ -529,14 +734,14 @@ function RegistrationSection() {
               <div className={`rg-item${active === i ? " active" : ""}`} onClick={() => setActive(i)} style={i === REG_DATA.length - 1 && active !== i ? { borderBottom: "none" } : {}}>
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem", flex: 1 }}>
                   <div className="rg-icon-box">{REG_ICONS[i]}</div>
-                  <div className="rg-name">{item.label}</div>
+                  <h4 className="rg-name">{item.label}</h4>
                 </div>
                 <span className="rg-tag-pill">{item.tag}</span>
                 <div className="rg-item-arr">{active === i ? "▾" : "›"}</div>
               </div>
               {active === i && (
                 <div className="rg-mobile-detail">
-                  <div className="rg-d-title" dangerouslySetInnerHTML={{ __html: item.title }} />
+                  <h5 className="rg-d-title" dangerouslySetInnerHTML={{ __html: item.title }} />
                   {Array.isArray(item.desc) ? (
                     item.desc.map((para, pi) => (
                       <div className="rg-d-desc" key={pi} style={{ marginBottom: pi < item.desc.length - 1 ? "0.8rem" : "0" }}>{para}</div>
@@ -552,7 +757,7 @@ function RegistrationSection() {
         <div className="rg-right">
           <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column" }}>
             <div className="rg-d-eye"><div className="rg-d-num">{d.num}</div><div className="rg-d-lbl">{d.label}</div></div>
-            <div className="rg-d-title" dangerouslySetInnerHTML={{ __html: d.title }} />
+            <h5 className="rg-d-title" dangerouslySetInnerHTML={{ __html: d.title }} />
             {Array.isArray(d.desc) ? (
               d.desc.map((para, pi) => (
                 <div className="rg-d-desc" key={pi} style={{ marginBottom: pi < d.desc.length - 1 ? "1rem" : "0" }}>{para}</div>
@@ -577,11 +782,11 @@ function RegistrationSection() {
 ═══════════════════════════════ */
 const SC_STEPS = [
   { num: "01", color: "orange", icon: <img src="/img/icon/sc-discovery-assessment.webp" alt="Discovery and Assessment" width="35" height="35" />, lbl: "Step 01 · Initiation", title: "Discovery & Assessment", desc: "We analyze your business structure, operations, and regulatory obligations to identify compliance requirements, deadlines, and reporting frameworks, ensuring every statutory responsibility is clearly defined.", time: "~1 Working Day", tColor: "blue", even: false, last: false },
-  { num: "02", color: "blue", icon: <img src="/img/icon/sc-compliance-planning.webp" alt="Compliance Planning and Scheduling" width="35" height="35" />, lbl: "Step 02 · Documentation", title: "Compliance Planning & Scheduling", desc:"We create a comprehensive compliance calendar covering filings, audits, and statutory obligations, prioritizing tasks by deadlines and regulatory importance to prevent delays and maintain full compliance.", time: "~2-3 Working Days", tColor: "orange", even: true, last: false },
-  { num: "03", color: "orange", icon: <img src="/img/icon/sc-documentation-filing.webp" alt="Documentation and Filing" width="35" height="35" />, lbl: "Step 03 · Filing", title: "Documentation & Filing",desc:"We prepare, verify, and submit statutory forms, returns, and registers accurately and on time, reducing errors, avoiding penalties, and ensuring complete compliance without administrative delays.", time: "~2-4 Working Days", tColor: "blue", even: false, last: false },
+  { num: "02", color: "blue", icon: <img src="/img/icon/sc-compliance-planning.webp" alt="Compliance Planning and Scheduling" width="35" height="35" />, lbl: "Step 02 · Documentation", title: "Compliance Planning & Scheduling", desc: "We create a comprehensive compliance calendar covering filings, audits, and statutory obligations, prioritizing tasks by deadlines and regulatory importance to prevent delays and maintain full compliance.", time: "~2-3 Working Days", tColor: "orange", even: true, last: false },
+  { num: "03", color: "orange", icon: <img src="/img/icon/sc-documentation-filing.webp" alt="Documentation and Filing" width="35" height="35" />, lbl: "Step 03 · Filing", title: "Documentation & Filing", desc: "We prepare, verify, and submit statutory forms, returns, and registers accurately and on time, reducing errors, avoiding penalties, and ensuring complete compliance without administrative delays.", time: "~2-4 Working Days", tColor: "blue", even: false, last: false },
   { num: "04", color: "blue", icon: <img src="/img/icon/sc-monitoring-review.webp" alt="Monitoring and Review" width="35" height="35" />, lbl: "Step 04 · Approval", title: "Monitoring & Review", desc: "We continuously track regulatory changes, filing schedules, and audit requirements, conducting regular reviews to maintain accurate records and ensure readiness for inspections and regulatory verifications.", time: "~5-7 Working Days", tColor: "orange", even: true, last: false },
   { num: "05", color: "orange", icon: <img src="/img/icon/sc-continuous-support.webp" alt="Continuous Support and Updates" width="35" height="35" />, lbl: "Step 05 · Complete", title: "Continuous Support & Updates", desc: "We provide ongoing guidance as regulations evolve, updating processes and assisting with filings to keep your business compliant, avoid penalties, and support long-term operational growth.", time: "~1-2 Working Days", tColor: "blue", even: false, last: false },
- 
+
 ];
 
 function SessionChangeSection() {
@@ -631,11 +836,11 @@ function SessionChangeSection() {
       <div className="sc-bg" /><div className="sc-orb sc-orb-a" /><div className="sc-orb sc-orb-b" />
       <div className="sc-inner">
         <div style={{ textAlign: "center", marginBottom: "90px" }}>
-          <div className="partners-header1" style={{justifyContent:'center'}}>
-            <div className="partners-eyebrow" style={{ marginBottom: '20px' }}>Our Statutory Compliance Execution Process</div>
+          <div className="partners-header1" style={{ justifyContent: 'center' }}>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px' }}>Our Statutory Compliance Execution Process</h2>
 
           </div>
-          <h2 className="sc-title">Streamlined, Transparent, and <em className="sc-title-em">Accurate Compliance Management </em></h2>
+          <h3 className="sc-title">Streamlined, Transparent, and <em className="sc-title-em">Accurate Compliance Management </em></h3>
           <p className="sc-sub">
             Our statutory compliance process is designed to reduce risk, save time, and ensure complete regulatory adherence. Every step is managed strategically, accurately, and customized to your business requirements.
           </p>
@@ -652,7 +857,7 @@ function SessionChangeSection() {
                 <div className={`sc-card-top ${s.color === "blue" ? "sc-top-blue" : "sc-top-orange"}`} />
                 <span className="sc-card-icon">{s.icon}</span>
                 <div className={`sc-lbl sc-lbl-${s.color === "blue" ? "blue" : "orange"}`}>{s.lbl}</div>
-                <div className="sc-card-title">{s.title}</div>
+                <h4 className="sc-card-title">{s.title}</h4>
                 <div className="sc-card-desc">{s.desc}</div>
               </div>
             </div>
@@ -725,11 +930,15 @@ function HowWeWorkSection() {
         .faq-head h2 {
           color: #000;
         }
+          h3.faq-h3 {
+          font-size: 2.5rem;
+          color: #000;
+      }
       `}</style>
       <div className="hww-bg" /><div className="hww-orb hww-orb-1" /><div className="hww-orb hww-orb-2" />
       <div style={{ position: "relative", zIndex: 2, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
-          <div className="partners-header1" style={{justifyContent:'center'}}>
+          <div className="partners-header1" style={{ justifyContent: 'center' }}>
             <div className="partners-eyebrow" style={{ marginBottom: '20px' }}>How We Work</div>
 
           </div>
@@ -751,7 +960,7 @@ function HowWeWorkSection() {
                   </div>
                 )}
               </div>
-              <div className="hww-step-title">{s.title}</div>
+              <h3 className="hww-step-title">{s.title}</h3>
               <div className="hww-step-desc">{s.desc}</div>
             </div>
           ))}
@@ -762,12 +971,12 @@ function HowWeWorkSection() {
   );
 }
 const faqData = [
-  { q: "What does statutory compliance mean?", a: "Statutory compliance refers to adhering to laws, rules, and regulations set by government authorities to operate a business legally." },
-  { q: "What is the meaning of compliance services?", a: "Compliance services help businesses meet legal, regulatory, and statutory obligations accurately, on time, and in accordance with applicable laws" },
-  { q: "How many types of statutory compliance are there?", a: "Statutory compliance can be broadly categorized into labor laws, tax compliance, corporate governance, environmental laws, industry-specific regulations, and other statutory filings." },
-  { q: "What is the difference between legal compliance and statutory compliance?", a: "Legal compliance covers all laws applicable to a business, while statutory compliance specifically refers to meeting obligations defined by statutes and government regulations." },
-  { q: "How many types of compliance are there in India?", a: "In India, compliance is generally divided into statutory compliance, regulatory compliance, and corporate compliance, covering legal, tax, labor, and governance obligations." },
-  { q: "What is the big 6 of compliance?", a: "The “Big 6” refers to Income Tax, GST, PF, ESI, Labor Law Registrations, and Company Law compliance, which are critical for business operations." },
+  { q: "What is statutory compliance?", a: "Statutory compliance refers to adhering to government-mandated laws, regulations, and legal requirements applicable to a business. This includes labor laws, tax filings, payroll regulations, PF, ESI, TDS, ROC filings, and other statutory obligations necessary for lawful business operations." },
+  { q: "Why is compliance important for a business?", a: "Compliance helps businesses operate legally, avoid penalties, maintain financial transparency, and build credibility with clients, investors, and regulatory authorities. Proper compliance management also reduces operational risks and supports sustainable long-term business growth and smooth organizational functioning." },
+  { q: "What are the Big 6 compliance requirements?", a: "The commonly referred Big 6 compliance requirements include GST, TDS, PF, ESI, Professional Tax, and ROC filings. These are essential statutory obligations businesses must manage regularly to maintain legal compliance and avoid penalties or regulatory issues." },
+  { q: "Do small businesses need compliance services?", a: "Yes, small businesses also require compliance services to meet legal, tax, labor, and regulatory obligations. Proper compliance management helps avoid penalties, improves operational structure, builds credibility, and ensures smooth business growth from the early stages of operations." },
+  { q: "What is the difference between legal and statutory compliance?", a: " Legal compliance refers to following all applicable laws and regulations governing business operations, while statutory compliance specifically relates to mandatory requirements defined under statutory acts such as tax laws, labor laws, payroll regulations, and corporate filing obligations." },
+  { q: "What happens if compliance is missed?", a: "Missing compliance requirements can lead to penalties, legal notices, financial liabilities, operational disruptions, and reputational damage. Continued non-compliance may also affect business credibility, regulatory approvals, taxation processes, and future business expansion or investment opportunities" },
 ];
 function FAQSection() {
   const [active, setActive] = useState(null);
@@ -778,12 +987,12 @@ function FAQSection() {
   return (
     <section className="faq-section">
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -833,6 +1042,7 @@ function FAQSection() {
 export default function BusinessRegistrationPage() {
   return (
     <Layout>
+      <SEOHead />
       <HeroSection />
       <ApproachSection />
       <RegistrationSection />

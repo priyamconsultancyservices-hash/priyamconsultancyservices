@@ -4,6 +4,222 @@ import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
 const banner = "/img/website-design.png";
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/website-design/";
+  const imageUrl = "https://www.priyamconsultancy.com/img/website-design.png";
+
+  return (
+    <Head>
+      {/* ── Primary Meta ── */}
+      <title>Website Design Company | Custom & SEO-Friendly Web Design </title>
+      <meta name="description" content="Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. " />
+      <meta name="keywords" content="Website design, Website design Services, Website designers in Coimbatore, Website design company in coimbatore, Website design agency, website design company, Best website design, sample website design" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/website-design/" />
+
+      {/* ── Open Graph ── */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Website Design Company | Custom & SEO-Friendly Web Design " />
+      <meta property="og:description" content="Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. " />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/website-design/" />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="PCS Business Solution" />
+
+      {/* ── Twitter Card ── */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Website Design Company | Custom & SEO-Friendly Web Design " />
+      <meta name="twitter:description" content="Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. " />
+      <meta name="twitter:image" content={imageUrl} />
+
+      {/* ── Breadcrumb List Schema ── */}
+      <script type="application/ld+json">{`
+      {
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   {
+     "@type":"ListItem",
+     "position":1,
+     "item":{
+       "@id":"https://www.priyamconsultancy.com/",
+       "name":"Home"
+     }
+   },
+   {
+     "@type":"ListItem",
+     "position":2,
+     "item":{
+       "@id":"https://www.priyamconsultancy.com/website-design/",
+       "name":"website-design"
+     }
+   }
+ ]
+}
+
+
+
+      `}</script>
+
+      {/* ── Organization Schema ── */}
+      <script type="application/ld+json">{`
+     {
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Priyam Consultancy Services",
+ "url": "https://www.priyamconsultancy.com/",
+ "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+ "contactPoint": [
+   {
+     "@type": "ContactPoint",
+     "telephone": "+91 96774 44048",
+     "contactType": "customer support"
+   }
+ ],
+ "sameAs": [
+   "https://www.facebook.com/profile.php?id=61577125709962",
+   "https://www.linkedin.com/company/priyam-consultancy-services/",
+   "https://www.instagram.com/priyam_consultancy_services/",
+   "https://x.com/services91032",
+   "https://g.co/kgs/rdTYdi6"
+ ]
+}
+
+      `}</script>
+
+      {/* ── Service Schema ── */}
+      <script type="application/ld+json">{`
+      {
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "@id":"https://www.priyamconsultancy.com/website-design/#service",
+  "name":"Website Design",
+  "serviceType":"Website Design Services",
+  "url":"https://www.priyamconsultancy.com/website-design/",
+  "description":"Priyam Consultancy provides professional website design services including UI/UX design, responsive website design, landing page design, branding-focused web layouts and user experience optimization for businesses across India.",
+  "provider":{
+    "@type":"Organization",
+    "name":"Priyam Consultancy Services",
+    "url":"https://www.priyamconsultancy.com/",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+    }
+  },
+  "areaServed":{
+    "@type":"Country",
+    "name":"India"
+  }
+}
+
+      `}</script>
+
+      {/* ── Product Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+      {
+"@context": "https://schema.org/",
+"@type": "Product",
+"name": "website-design",
+"image": ["https://www.priyamconsultancy.com/img/website-design.png"],
+"description": "Best website design services in Coimbatore offering responsive website design, UI/UX design, corporate website design, ecommerce website design, landing page design and user-focused web design solutions.",
+"brand": {
+"@type": "Brand",
+"name": "Priyam Consultancy Services"
+},
+"review": {
+"@type": "Review",
+"reviewRating": {
+"@type": "Rating",
+"ratingValue": "4.9",
+"bestRating": "5",
+"worstRating": "1"
+},
+"author": {
+"@type": "Person",
+"name": "Admin"
+}
+},
+"aggregateRating": {
+"@type": "AggregateRating",
+"ratingValue": "4.9",
+"reviewCount": "4524"
+},
+"offers": {
+"@type": "Offer",
+"url": "https://www.priyamconsultancy.com/website-design/",
+"priceCurrency": "USD",
+"price": "00.00",
+"priceValidUntil": "2026-12-31",
+"itemCondition": "https://schema.org/UsedCondition",
+"availability": "https://schema.org/InStock",
+"seller": {
+"@type": "Organization",
+"name": "priyamconsultancy.com"
+}
+}
+}
+
+
+      `}</script>
+
+      {/* ── FAQ Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+      { 
+  "@context": "https://schema.org", 
+  "@type": "FAQPage", 
+  "mainEntity": [{ 
+    "@type": "Question", 
+    "name": "Do you redesign existing websites?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Yes, we redesign existing websites to improve their visual appeal, user experience, and overall performance. Our redesign process focuses on modern layouts, better navigation, responsive structure, and brand consistency while keeping the useful content intact." 
+    } 
+  },{ 
+    "@type": "Question", 
+    "name": "Do you provide custom UI/UX design?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Common website design problems include poor navigation, outdated visuals, slow loading speed, lack of mobile responsiveness, inconsistent branding, and unclear call-to-actions. These issues can reduce user trust and affect overall business performance." 
+    }
+  },{ 
+    "@type": "Question", 
+    "name": "What are the most common problems in website design??", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "UI/UX design affects how users interact with your website. A well-designed interface improves usability, builds trust, increases engagement, and helps visitors take action more easily.
+" 
+    } 
+  },{ 
+    "@type": "Question", 
+    "name": "Why is UI/UX important for a business website", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Absolutely! We offer content writing services and on-page SEO services to ensure that your website looks good and performs well in search engines." 
+    } 
+ },{ 
+    "@type": "Question", 
+    "name": "Will my website be mobile-friendly and SEO-ready?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Yes, your website will be designed to work smoothly on all devices and follow SEO-friendly structure. We focus on responsive design, clean coding, fast loading, and proper on-page elements to support better visibility." 
+    } 
+ },{ 
+    "@type": "Question", 
+    "name": "What is included in your UI/UX design process?
+", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Our UI/UX design process includes research, wireframing, design mockups, revisions, and final approval. We make sure the design aligns with your business goals and creates a user-friendly experience." 
+    } 
+    }] 
+}
+
+      `}</script>
+    </Head>
+  );
+}
+
 
 const styles = `
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
@@ -456,7 +672,7 @@ const styles = `
     /* ── GENERAL ── */
     .pcs-wi5-heading, .pcs-offer-heading { font-size: clamp(1.5rem, 2.5vw, 2rem) !important; }
   }
-
+h3.faq-h3 {font-size:2.5rem;color:#000;}
   .pcs-proc-gc {
     position:relative; background:rgba(255,255,255,0.04);
     border:1px solid rgba(255,255,255,0.09); border-radius:20px;
@@ -722,12 +938,12 @@ const whyData = [
 ];
 
 const faqData = [
-  { q: "Do you redesign existing websites?", a: "Yes, we redesign existing websites to improve visual appeal, user experience, and overall performance. Our redesign process focuses on modern layouts, better navigation, responsive structure, and brand consistency while retaining valuable content and improving usability." },
-  { q: "Do you provide custom UI/UX design?", a: "Absolutely. We offer fully customized UI/UX design tailored to your brand identity, audience behavior, and business goals. Our approach ensures intuitive navigation, engaging layouts, and a seamless user journey that enhances interaction and conversions." },
-  { q: "What are the most common problems in website design?", a: "Common issues include poor navigation, outdated visuals, slow loading speed, lack of mobile responsiveness, inconsistent branding, and unclear call-to-actions. These problems can negatively impact user engagement, credibility, and overall business performance." },
-  { q: "Why choose our website design services?", a: "We combine creativity, strategy, and user-focused design principles to create visually compelling and conversion-driven websites. Our designs are responsive, SEO-ready, brand-aligned, and crafted to deliver measurable business results." },
-  { q: "Why is UI/UX important for a business website?", a: "UI/UX design directly influences how users interact with your website. A well-designed interface improves engagement, builds trust, enhances usability, and increases the likelihood of conversions, helping businesses achieve sustainable digital growth." },
-  { q: "How long does it take to design a UI/UX website?", a: "The timeline depends on project complexity, number of pages, and customization requirements. On average, a standard UI/UX website design takes 2–6 weeks, including research, wireframing, design, revisions, and final approval." },
+  { q: " Do you redesign existing websites?", a: "Yes, we redesign existing websites to improve their visual appeal, user experience, and overall performance. Our redesign process focuses on modern layouts, better navigation, responsive structure, and brand consistency while keeping the useful content intact." },
+  { q: "Do you provide custom UI/UX design?", a: "Yes, we offer fully customized UI/UX design tailored to your brand identity, audience behavior, and business goals. Our approach ensures intuitive navigation, engaging layouts, and a smooth user journey that supports better interaction and conversions." },
+  { q: "What are the most common problems in website design?", a: "Common website design problems include poor navigation, outdated visuals, slow loading speed, lack of mobile responsiveness, inconsistent branding, and unclear call-to-actions. These issues can reduce user trust and affect overall business performance." },
+  { q: "Why is UI/UX important for a business website?", a: "UI/UX design affects how users interact with your website. A well-designed interface improves usability, builds trust, increases engagement, and helps visitors take action more easily." },
+  { q: "Will my website be mobile-friendly and SEO-ready?", a: "Yes, your website will be designed to work smoothly on all devices and follow SEO-friendly structure. We focus on responsive design, clean coding, fast loading, and proper on-page elements to support better visibility." },
+  { q: "What is included in your UI/UX design process?", a: "Our UI/UX design process includes research, wireframing, design mockups, revisions, and final approval. We make sure the design aligns with your business goals and creates a user-friendly experience." },
 ];
 
 export default function PCSWebsite() {
@@ -804,7 +1020,7 @@ export default function PCSWebsite() {
 
       {/* LEFT */}
       <div style={{position:"relative",zIndex:2,display:"flex",flexDirection:"column"}}>
-        <div className="badge"><div className="badge-dot" />Priyam Consultancy Services</div>
+        <div className="badge"><div className="badge-dot" />Elevated Design</div>
         <h1 className="wd-hero-heading">
           Professional Website<br />
           <span className="orange lined" style={{marginRight: '12px'}}>Design</span>Company  That Elevates
@@ -914,9 +1130,9 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
       <section className="pcs-offer-section">
         <div className="pcs-offer-inner">
                 <div className="partners-header1" style={{ marginBottom: '20px', textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Services</div>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Key Uniqueness</h2>
           </div>
-          <h2 className="pcs-offer-heading">Why Should You Choose <span><i>PCS for Website Design?</i></span></h2>
+          <h3 className="pcs-offer-heading">Why Should You Choose <span><i> for Website Design?</i></span></h3>
           <div className="pcs-offer-body">
             <div className="pcs-offer-left">
               <div className="pcs-orbit-wrap">
@@ -952,7 +1168,7 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
                   <div className="pcs-offer-panel-bar"></div>
                   <div className="pcs-offer-panel-title-row">
                     <div className="pcs-offer-panel-icon"><img src={item.emoji} alt={item.title} style={{width:"32px",height:"32px",objectFit:"contain", filter:"brightness(0) invert(1)"}} /></div>
-                    <div className="pcs-offer-panel-title">{item.title}</div>
+                    <h4 className="pcs-offer-panel-title">{item.title}</h4>
                   </div>
                   <div className="pcs-offer-panel-divider"></div>
                   <div className="pcs-offer-panel-desc">{item.desc}</div>
@@ -971,7 +1187,7 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
         <div className="pcs-wi5-inner">
             <div className="pcs-offer-inner">
                 <div className="partners-header1" style={{ marginBottom: '10px', textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ textAlign: 'center' }}>Our Included </div>
+            <div className="partners-eyebrow" style={{ textAlign: 'center' }}>Our Expertise</div>
           </div>
           </div>
           <h2 className="pcs-wi5-heading">What’s Included in Our  <span><i>Website Design</i></span> Services?</h2>
@@ -984,7 +1200,7 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
                     <span className="pcs-wi5-tab-num-text">{tab.num}</span>
                   </div>
                   <div className="pcs-wi5-tab-icon"><img src={tab.icon} alt={tab.title} style={{width:"22px",height:"22px",objectFit:"contain"}} /></div>
-                  <div className="pcs-wi5-tab-title">{tab.title}</div>
+                  <h3 className="pcs-wi5-tab-title">{tab.title}</h3>
                   <div className="pcs-wi5-tab-chev">
                     <span style={{fontSize:"1rem",lineHeight:"1",display:"block"}}>▾</span>
                   </div>
@@ -1010,7 +1226,7 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
           <div className="pcs-proc-header">
                  <div className="pcs-offer-inner">
                 <div className="partners-header1" style={{ marginBottom: '10px', textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ textAlign: 'center' }}>Our Process</div>
+            <div className="partners-eyebrow" style={{ textAlign: 'center' }}>Workflow Process</div>
           </div>
           </div>
             <h2 className="pcs-proc-title">Our Website <span><i> Design Process</i></span> </h2>
@@ -1022,7 +1238,7 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
                   <div className="pcs-proc-gc-num">{step.num}</div>
                   <div className="pcs-proc-gc-icon"><img src={step.icon} alt={step.title} style={{width:"28px",height:"28px",objectFit:"contain"}} /></div>
                 </div>
-                <div className="pcs-proc-gc-title">{step.title}</div>
+                <h3 className="pcs-proc-gc-title">{step.title}</h3>
                 <div className="pcs-proc-gc-desc">{step.desc}</div>
                 {/* <div className="pcs-proc-gc-tags">
                   {step.tags.map((t, j) => <span key={j}>{t}</span>)}
@@ -1032,23 +1248,23 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
           </div>
         </div>
       </section>
-
+ 
       {/* SECTION 6: WHY */}
       <section className="pcs-fb-section">
         <div className="pcs-fb-inner">
           <div className="pcs-fb-header">
            <div className="pcs-offer-inner">
                 <div className="partners-header1" style={{ marginBottom: '10px', textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ textAlign: 'center' }}>Our Features </div>
+            <h2 className="partners-eyebrow" style={{ textAlign: 'center' }}>Key Service Features  </h2>
           </div>
-          </div>            <h2 className="pcs-fb-title">Features of our Corporate <span><i>Website Designs</i></span> Services</h2>
+          </div>            <h3 className="pcs-fb-title">Features of our Corporate <span><i>Website Designs</i></span> Services</h3>
           </div>
           <div className="pcs-fb-grid">
             <div className="pcs-fb-vline"></div>
             <div className="pcs-fb-hline"></div>
             <div className={`pcs-fb-box pcs-fb-box-tl`}>
               <div className="pcs-fb-icon"><img src={whyData[0].icon} alt={whyData[0].title} style={{width:"32px",height:"32px",objectFit:"contain"}} /></div>
-              <div className="pcs-fb-box-title">{whyData[0].title}</div>
+              <h4 className="pcs-fb-box-title">{whyData[0].title}</h4>
               <div className="pcs-fb-box-desc">{whyData[0].desc}</div>
             </div>
             <div className="pcs-fb-center-col">
@@ -1060,17 +1276,17 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
             </div>
             <div className={`pcs-fb-box pcs-fb-box-tr`}>
               <div className="pcs-fb-icon"><img src={whyData[1].icon} alt={whyData[1].title} style={{width:"32px",height:"32px",objectFit:"contain"}} /></div>
-              <div className="pcs-fb-box-title">{whyData[1].title}</div>
+              <h4 className="pcs-fb-box-title">{whyData[1].title}</h4>
               <div className="pcs-fb-box-desc">{whyData[1].desc}</div>
             </div>
             <div className={`pcs-fb-box pcs-fb-box-bl`}>
               <div className="pcs-fb-icon"><img src={whyData[2].icon} alt={whyData[2].title} style={{width:"32px",height:"32px",objectFit:"contain"}} /></div>
-              <div className="pcs-fb-box-title">{whyData[2].title}</div>
+              <h4 className="pcs-fb-box-title">{whyData[2].title}</h4>
               <div className="pcs-fb-box-desc">{whyData[2].desc}</div>
             </div>
             <div className={`pcs-fb-box pcs-fb-box-br`}>
               <div className="pcs-fb-icon"><img src={whyData[3].icon} alt={whyData[3].title} style={{width:"32px",height:"32px",objectFit:"contain"}} /></div>
-              <div className="pcs-fb-box-title">{whyData[3].title}</div>
+              <h4 className="pcs-fb-box-title">{whyData[3].title}</h4>
               <div className="pcs-fb-box-desc">{whyData[3].desc}</div>
             </div>
           </div>
@@ -1084,12 +1300,12 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
       {/* faq section */}
           <section className="faq-section" style={{padding: '0 0 80px 0'}}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">

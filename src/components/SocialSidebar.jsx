@@ -18,7 +18,7 @@ const QuoteIcon = () => (
   </svg>
 );
 
-const PHONE_NUMBER = "+917708067922";
+const PHONE_NUMBER = "+919677444048";
 const WHATSAPP_URL = `https://wa.me/${PHONE_NUMBER}`;
 
 const EMAILJS_CONFIG = {
@@ -176,7 +176,7 @@ export default function SocialSidebar() {
         .sb-hover-form {
           position: absolute;
           right: 58px;
-          bottom: -100px;
+          bottom: 0px;
           width: 360px;
           background: #fff;
           border-radius: 20px;

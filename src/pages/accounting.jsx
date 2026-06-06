@@ -3,7 +3,220 @@ import CTASection from "../components/HomePage/CTA";
 import emailjs from "@emailjs/browser";
 import Layout from '@theme/Layout';
 const banner = "/img/accounting.png";
+import Head from '@docusaurus/Head';
 
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/accounting/";
+  const imageUrl = "https://www.priyamconsultancy.com/img/accounting.png";
+
+  return (
+    <Head>
+      {/* ── Primary Meta ── */}
+      <title>Accounting Services in Coimbatore | Bookkeeping Services</title>
+      <meta name="description" content="Professional accounting services in Coimbatore offering bookkeeping, tax filing, financial reporting, and compliance support to streamline your business growth. " />
+      <meta name="keywords" content="Accounting Services, Virtual Accounting Services, Accounting Company, Outsource Accounting Services, Business Accounting and Book keeping, Professional Accounting Services, Management Accounting and Reporting, Outsourcing of accounting services, Accounting Services for Small Business, Bookkeeping Services" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/accounting/" />
+
+      {/* ── Open Graph ── */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Accounting Services in Coimbatore | Bookkeeping Services" />
+      <meta property="og:description" content="Professional accounting services in Coimbatore offering bookkeeping, tax filing, financial reporting, and compliance support to streamline your business growth. " />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/accounting/" />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="PCS Business Solution" />
+
+      {/* ── Twitter Card ── */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Accounting Services in Coimbatore | Bookkeeping Services" />
+      <meta name="twitter:description" content="Professional accounting services in Coimbatore offering bookkeeping, tax filing, financial reporting, and compliance support to streamline your business growth. " />
+      <meta name="twitter:image" content={imageUrl} />
+
+      {/* ── Breadcrumb List Schema ── */}
+      <script type="application/ld+json">{`
+        {
+        "@context":"https://schema.org",
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "item":{
+              "@id":"https://www.priyamconsultancy.com/",
+              "name":"Home"
+            }
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "item":{
+              "@id":"https://www.priyamconsultancy.com/accounting/",
+              "name":"accounting"
+            }
+          }
+        ]
+        }
+
+
+      `}</script>
+
+      {/* ── Organization Schema ── */}
+      <script type="application/ld+json">{`
+       {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91 96774 44048",
+            "contactType": "customer support"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61577125709962",
+          "https://www.linkedin.com/company/priyam-consultancy-services/",
+          "https://www.instagram.com/priyam_consultancy_services/",
+          "https://x.com/services91032",
+          "https://g.co/kgs/rdTYdi6"
+        ]
+        }
+
+
+      `}</script>
+
+      {/* ── Service Schema ── */}
+      <script type="application/ld+json">{`
+        {
+        "@context":"https://schema.org",
+        "@type":"Service",
+        "@id":"https://www.priyamconsultancy.com/accounting/#service",
+        "name":"Accounting Services",
+        "serviceType":"Accounting Services",
+        "url":"https://www.priyamconsultancy.com/accounting/",
+        "description":"Priyam Consultancy provides professional accounting services including bookkeeping, financial accounting, MIS reporting, tax accounting, financial reporting, compliance management and business accounting solutions for businesses across India.",
+        "provider":{
+          "@type":"Organization",
+          "name":"Priyam Consultancy Services",
+          "url":"https://www.priyamconsultancy.com/",
+          "logo":{
+            "@type":"ImageObject",
+            "url":"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+          }
+        },
+        "areaServed":{
+          "@type":"Country",
+          "name":"India"
+        }
+      }
+
+
+      `}</script>
+
+      {/* ── Product Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+       {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "accounting",
+        "image": ["https://www.priyamconsultancy.com/img/accounting.png"],
+        "description": "Best accounting services in Coimbatore offering bookkeeping, financial accounting, MIS reporting, tax accounting, financial reporting, compliance management and business accounting solutions.",
+        "brand": {
+        "@type": "Brand",
+        "name": "Priyam Consultancy Services"
+        },
+        "review": {
+        "@type": "Review",
+        "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1"
+        },
+        "author": {
+        "@type": "Person",
+        "name": "Admin"
+        }
+        },
+        "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "6494"
+        },
+        "offers": {
+        "@type": "Offer",
+        "url": "https://www.priyamconsultancy.com/accounting/",
+        "priceCurrency": "USD",
+        "price": "00.00",
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": "https://schema.org/UsedCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+        "@type": "Organization",
+        "name": "priyamconsultancy.com"
+        }
+        }
+        }
+
+
+      `}</script>
+
+      {/* ── FAQ Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "What is an accounting service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Accounting services involve managing financial records, bookkeeping, transaction tracking, financial reporting, tax preparation, payroll accounting, and compliance activities. These services help businesses maintain financial accuracy, improve decision-making, ensure regulatory compliance, and monitor overall financial performance effectively."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is MIS reporting in accounting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "MIS (Management Information System) reporting provides structured financial and operational reports that help businesses analyze performance, monitor cash flow, track expenses, and support strategic decision-making. It converts financial data into actionable insights for better business planning and management control."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is tax accounting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tax accounting focuses on preparing, managing, and filing taxes according to applicable tax laws and regulations. It includes GST filing, TDS calculations, income tax compliance, tax planning, and maintaining accurate records to reduce risks and ensure lawful financial operations."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is financial accounting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Financial accounting involves recording, classifying, and summarizing financial transactions to prepare reports such as balance sheets, profit and loss statements, and cash flow statements. It helps businesses evaluate financial health, maintain transparency, and meet statutory reporting requirements."
+            }
+          },{
+            "@type": "Question",
+            "name": "Why choose Priyam Consultancy Services for accounting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Priyam Consultancy Services provides structured, accurate, and compliance-focused accounting solutions tailored to business needs. Our team focuses on financial transparency, timely reporting, tax compliance, and operational efficiency, helping businesses maintain organized financial management and make informed strategic decisions confidently."
+            }
+          },{
+            "@type": "Question",
+            "name": "What are the 7 types of accounting?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The major types of accounting include Financial Accounting, Management Accounting, Cost Accounting, Tax Accounting, Auditing, Forensic Accounting, and Government Accounting. Each type serves different business, compliance, reporting, and financial management purposes based on organizational requirements and operational objectives."
+            }
+          }]
+        }
+
+      `}</script>
+    </Head>
+  );
+}
 
 /* ═══════════════════════════════
    SECTION 1 — HERO BANNER
@@ -13,7 +226,7 @@ const banner = "/img/accounting.png";
 ═══════════════════════════════ */
 function HeroSection() {
   return (
-      <section className="hero" id="hero">
+    <section className="hero" id="hero">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -161,12 +374,12 @@ img.hero-img { animation: none !important; }
 
       {/* LEFT CONTENT */}
       <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot" />Expert Accounting Partner</div>
-       <h1 className="hero-heading">
+        <div className="h-badge"><div className="badge-dot" />Trusted Accounting Solutions</div>
+        <h1 className="hero-heading">
           Accounting Partner For <span className="hl lined">Accuracy & Financial </span> Control
         </h1>
         <p className="hero-sub">
-At Priyam Consultancy Services, we offer complete accounting solutions designed to simplify financial management and ensure transparency. From bookkeeping and payroll to GST, TDS, and MIS reporting, we help you maintain organized records, achieve compliance, and make smarter financial decisions with real-time data and expert support.
+          At Priyam Consultancy Services, we offer complete accounting solutions designed to simplify financial management and ensure transparency. From bookkeeping and payroll to GST, TDS, and MIS reporting, we help you maintain organized records, achieve compliance, and make smarter financial decisions with real-time data and expert support.
         </p>
         <div className="hero-actions">
           <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
@@ -297,10 +510,10 @@ function ApproachSection() {
           </div>
           <h2 className="ap-heading">Accounting  <span>Services</span></h2>
           <p className="ap-intro">
-Every business operates differently, and its accounting system should reflect that. We begin by understanding your operations, revenue model, and reporting needs. This helps us design a system tailored to your business.
+            Every business operates differently, and its accounting system should reflect that. We begin by understanding your operations, revenue model, and reporting needs. This helps us design a system tailored to your business.
           </p>
           <p className="ap-intro">
-We create a structured accounting process where every transaction and entry is accurate. Our approach ensures compliance, consistency, and well-organized financial records. This builds a strong foundation for reliable reporting.
+            We create a structured accounting process where every transaction and entry is accurate. Our approach ensures compliance, consistency, and well-organized financial records. This builds a strong foundation for reliable reporting.
           </p>
           <p className="ap-intro">
             Beyond bookkeeping, we focus on clarity and control through technology and expert review. We deliver timely reports and maintain data accuracy. This enables confident decisions backed by meaningful financial insights.
@@ -311,6 +524,7 @@ We create a structured accounting process where every transaction and entry is a
         {/* RIGHT FORM */}
         <div className="ap-form-wrap">
           <div className="ap-form-card">
+
             <div className="form-card-eyebrow">
               <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
             </div>
@@ -326,7 +540,7 @@ We create a structured accounting process where every transaction and entry is a
                 <div className="fl-group">
                   <label className="fl-label">Your Name</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon"><img src="/img/icons/form-user.svg" alt="User" width="16" height="16" /></span>
+                    <span className="fl-icon">👤</span>
                     <input
                       className="fl-input"
                       type="text"
@@ -342,7 +556,7 @@ We create a structured accounting process where every transaction and entry is a
                 <div className="fl-group">
                   <label className="fl-label">Company</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon"><img src="/img/icons/form-company.svg" alt="Company" width="16" height="16" /></span>
+                    <span className="fl-icon">🏢</span>
                     <input
                       className="fl-input"
                       type="text"
@@ -359,7 +573,7 @@ We create a structured accounting process where every transaction and entry is a
               <div className="fl-group">
                 <label className="fl-label">Email Address</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon"><img src="/img/icons/form-email.svg" alt="Email" width="16" height="16" /></span>
+                  <span className="fl-icon">✉️</span>
                   <input
                     className="fl-input"
                     type="email"
@@ -376,7 +590,7 @@ We create a structured accounting process where every transaction and entry is a
                 <label className="fl-label">Mobile Number</label>
                 <div className="phone-row">
                   <div className="phone-flag">
-                    <span className="phone-flag-icon"><img src="/img/icons/form-phone.svg" alt="Phone" width="16" height="16" /></span>
+                    <span className="phone-flag-icon">📞</span>
 
                   </div>
                   <input
@@ -396,7 +610,7 @@ We create a structured accounting process where every transaction and entry is a
               <div className="fl-group textarea-group">
                 <label className="fl-label">Message</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}><img src="/img/icons/form-message.svg" alt="Message" width="16" height="16" /></span>
+                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
                   <textarea
                     className="fl-textarea"
                     name="msg"
@@ -416,6 +630,7 @@ We create a structured accounting process where every transaction and entry is a
 
             </form>
             {/* ✅ FORM END */}
+
           </div>
         </div>
       </div>
@@ -484,7 +699,7 @@ function RegistrationSection() {
         .rg-dots{display:flex;gap:.4rem;position:absolute;bottom:2.8rem;right:2.8rem;z-index:3;}
         .rg-ddot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2);transition:all .3s;}
         .rg-ddot.active{background:#ed8337;width:20px;border-radius:3px;}
-        
+        h3.faq-h3 {font-size:2.5rem; color:#000;}
         .rg-bg-c{position:absolute;border-radius:50%;pointer-events:none;}
                 @media(max-width:768px){
           .rg-layout{grid-template-columns:1fr !important;}
@@ -513,10 +728,10 @@ function RegistrationSection() {
       <div className="rg-bg-c" style={{ bottom: "-100px", left: "-80px", width: "300px", height: "300px", border: "1.5px solid rgba(237,131,55,.08)" }} />
       <div style={{ textAlign: "center", marginBottom: "60px", position: "relative", zIndex: 2 }}>
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Accounting Services Execution Process </div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Accounting Services Execution Process </h2>
 
         </div>
-        <h2 className="rg-sec-h">Simplified, Accurate, and <i> Insight-Driven Accounting</i> Management Partner</h2>
+        <h3 className="rg-sec-h">Simplified, Accurate, and <i> Insight-Driven Accounting</i> Management Partner</h3>
         <p className="rg-sec-sub">
           Our accounting process at Priyam Consultancy Services is designed for efficiency, precision, and transparency. We combine human expertise with technology to streamline your financial operations, from transaction recording to reporting and compliance.
         </p>
@@ -528,14 +743,14 @@ function RegistrationSection() {
               <div className={`rg-item${active === i ? " active" : ""}`} onClick={() => setActive(i)} style={i === REG_DATA.length - 1 && active !== i ? { borderBottom: "none" } : {}}>
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem", flex: 1 }}>
                   <div className="rg-icon-box">{REG_ICONS[i]}</div>
-                  <div className="rg-name">{item.label}</div>
+                  <h4 className="rg-name">{item.label}</h4>
                 </div>
                 <span className="rg-tag-pill">{item.tag}</span>
                 <div className="rg-item-arr">{active === i ? "▾" : "›"}</div>
               </div>
               {active === i && (
                 <div className="rg-mobile-detail">
-                  <div className="rg-d-title" dangerouslySetInnerHTML={{ __html: item.title }} />
+                  <h5 className="rg-d-title" dangerouslySetInnerHTML={{ __html: item.title }} />
                   {Array.isArray(item.desc) ? (
                     item.desc.map((para, pi) => (
                       <div className="rg-d-desc" key={pi} style={{ marginBottom: pi < item.desc.length - 1 ? "0.8rem" : "0" }}>{para}</div>
@@ -551,7 +766,7 @@ function RegistrationSection() {
         <div className="rg-right">
           <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column" }}>
             <div className="rg-d-eye"><div className="rg-d-num">{d.num}</div><div className="rg-d-lbl">{d.label}</div></div>
-            <div className="rg-d-title" dangerouslySetInnerHTML={{ __html: d.title }} />
+            <h5 className="rg-d-title" dangerouslySetInnerHTML={{ __html: d.title }} />
             {Array.isArray(d.desc) ? (
               d.desc.map((para, pi) => (
                 <div className="rg-d-desc" key={pi} style={{ marginBottom: pi < d.desc.length - 1 ? "1rem" : "0" }}>{para}</div>
@@ -576,8 +791,8 @@ function RegistrationSection() {
 ═══════════════════════════════ */
 const SC_STEPS = [
   { num: "01", color: "orange", icon: <img src="/img/icon/sc-discovery-analysis.webp" alt="Discovery and Analysis" width="35" height="35" />, lbl: "Step 01 · Initiation", title: "Discovery & Analysis", desc: "We record, verify, and reconcile transactions regularly to maintain transparency, prevent discrepancies, and ensure ledgers, bank accounts, and financial records remain accurate and up to date.", time: "~1 Working Day", tColor: "blue", even: false, last: false },
-  { num: "02", color: "blue", icon: <img src="/img/icon/sc-compliance-tax.webp" alt="Compliance and Tax Alignment" width="35" height="35" />, lbl: "Step 02 · Documentation", title: "Compliance & Tax Alignment",desc:"We manage GST, TDS, and statutory filings, aligning accounting data with compliance calendars to ensure legal adherence, timely submissions, and reduced risk of penalties.", time: "~2-3 Working Days", tColor: "orange", even: true, last: false },
-  { num: "03", color: "orange", icon: <img src="/img/icon/sc-reporting-insights.webp" alt="Reporting and Insights" width="35" height="35" />, lbl: "Step 03 · Filing", title: "Reporting & Insights",desc:"We prepare MIS reports, financial statements, and analytical dashboards, providing clear visibility into performance and financial health to support budgeting, planning, and strategic decision-making.", time: "~2-4 Working Days", tColor: "blue", even: false, last: false },
+  { num: "02", color: "blue", icon: <img src="/img/icon/sc-compliance-tax.webp" alt="Compliance and Tax Alignment" width="35" height="35" />, lbl: "Step 02 · Documentation", title: "Compliance & Tax Alignment", desc: "We manage GST, TDS, and statutory filings, aligning accounting data with compliance calendars to ensure legal adherence, timely submissions, and reduced risk of penalties.", time: "~2-3 Working Days", tColor: "orange", even: true, last: false },
+  { num: "03", color: "orange", icon: <img src="/img/icon/sc-reporting-insights.webp" alt="Reporting and Insights" width="35" height="35" />, lbl: "Step 03 · Filing", title: "Reporting & Insights", desc: "We prepare MIS reports, financial statements, and analytical dashboards, providing clear visibility into performance and financial health to support budgeting, planning, and strategic decision-making.", time: "~2-4 Working Days", tColor: "blue", even: false, last: false },
   { num: "04", color: "blue", icon: <img src="/img/icon/sc-continuous-monitoring.webp" alt="Continuous Monitoring and Improvement" width="35" height="35" />, lbl: "Step 04 · Approval", title: "Continuous Monitoring & Improvement", desc: "We conduct regular reviews to identify efficiencies, process improvements, and automation opportunities, ensuring your accounting remains accurate, compliant, and aligned with evolving business and regulatory requirements.", time: "~5-7 Working Days", tColor: "orange", even: true, last: false },
 
 
@@ -631,10 +846,10 @@ function SessionChangeSection() {
       <div className="sc-inner">
         <div style={{ textAlign: "center", marginBottom: "90px" }}>
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Business Registration Execution Process</div>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Business Registration Execution Process</h2>
 
           </div>
-          <h2 className="sc-title">Simplified, Transparent and <em className="sc-title-em">Efficient Business </em>Registration</h2>
+          <h3 className="sc-title">Simplified, Transparent and <em className="sc-title-em">Efficient Business </em>Registration</h3>
           <p className="sc-sub">
             Our Business Registration process at Priyam Consultancy Services is tailored to your business needs. We don’t just file paperwork , we build a solid legal foundation for growth, credibility, and long-term success.
           </p>
@@ -651,7 +866,7 @@ function SessionChangeSection() {
                 <div className={`sc-card-top ${s.color === "blue" ? "sc-top-blue" : "sc-top-orange"}`} />
                 <span className="sc-card-icon">{s.icon}</span>
                 <div className={`sc-lbl sc-lbl-${s.color === "blue" ? "blue" : "orange"}`}>{s.lbl}</div>
-                <div className="sc-card-title">{s.title}</div>
+                <h4 className="sc-card-title">{s.title}</h4>
                 <div className="sc-card-desc">{s.desc}</div>
               </div>
             </div>
@@ -753,7 +968,7 @@ function HowWeWorkSection() {
                   </div>
                 )}
               </div>
-              <div className="hww-step-title">{s.title}</div>
+              <h3 className="hww-step-title">{s.title}</h3>
               <div className="hww-step-desc">{s.desc}</div>
             </div>
           ))}
@@ -764,12 +979,12 @@ function HowWeWorkSection() {
   );
 }
 const faqData = [
-  { q: "What is an accounting service?", a: "Accounting services involve recording, analyzing, and reporting financial transactions to ensure accuracy, compliance, and informed business decision-making." },
-  { q: "What are the 7 types of accounting?", a: "The seven types include financial, managerial, cost, tax, forensic, auditing, and governmental accounting, each serving specific business needs." },
-  { q: "Are accounting services useful for solving the problem of financial planning?", a: "Yes, accounting services provide detailed financial data and analysis, helping businesses plan budgets, manage cash flow, and make informed strategic decisions." },
-  { q: "Who needs accounting services for business?", a: "Startups, SMEs, large corporations, and individual entrepreneurs benefit from accounting services to manage finances, maintain compliance, and support growth strategies." },
-  { q: "What are accounting financial services?", a: "These services cover bookkeeping, payroll, tax filings, MIS reports, financial analysis, budgeting, and regulatory compliance to maintain accurate and reliable financial records." },
-  { q: "Why choose Priyam Consultancy Services accounting services for business?", a: "We provide expert guidance, accurate record-keeping, compliance assurance, and actionable insights, ensuring your business achieves financial clarity and sustainable growth." },
+  { q: "What is an accounting service?", a: "Accounting services involve managing financial records, bookkeeping, transaction tracking, financial reporting, tax preparation, payroll accounting, and compliance activities. These services help businesses maintain financial accuracy, improve decision-making, ensure regulatory compliance, and monitor overall financial performance effectively." },
+  { q: "What is MIS reporting in accounting?", a: "MIS (Management Information System) reporting provides structured financial and operational reports that help businesses analyze performance, monitor cash flow, track expenses, and support strategic decision-making. It converts financial data into actionable insights for better business planning and management control." },
+  { q: "What is tax accounting?", a: "Tax accounting focuses on preparing, managing, and filing taxes according to applicable tax laws and regulations. It includes GST filing, TDS calculations, income tax compliance, tax planning, and maintaining accurate records to reduce risks and ensure lawful financial operations." },
+  { q: "What is financial accounting?", a: "Financial accounting involves recording, classifying, and summarizing financial transactions to prepare reports such as balance sheets, profit and loss statements, and cash flow statements. It helps businesses evaluate financial health, maintain transparency, and meet statutory reporting requirements." },
+  { q: "Why choose Priyam Consultancy Services for accounting?", a: "Priyam Consultancy Services provides structured, accurate, and compliance-focused accounting solutions tailored to business needs. Our team focuses on financial transparency, timely reporting, tax compliance, and operational efficiency, helping businesses maintain organized financial management and make informed strategic decisions confidently." },
+  { q: "What are the 7 types of accounting?", a: "The major types of accounting include Financial Accounting, Management Accounting, Cost Accounting, Tax Accounting, Auditing, Forensic Accounting, and Government Accounting. Each type serves different business, compliance, reporting, and financial management purposes based on organizational requirements and operational objectives." },
 ];
 function FAQSection() {
   const [active, setActive] = useState(null);
@@ -780,12 +995,12 @@ function FAQSection() {
   return (
     <section className="faq-section">
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -835,6 +1050,7 @@ function FAQSection() {
 export default function BusinessRegistrationPage() {
   return (
     <Layout>
+      <SEOHead />
       <HeroSection />
       <ApproachSection />
       <RegistrationSection />

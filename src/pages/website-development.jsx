@@ -5,6 +5,219 @@ const TechImg = "/img/Technology-logos.gif";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
 const banner = "/img/website-development.png";
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/website-development/";
+  const imageUrl = "https://www.priyamconsultancy.com/img/website-development.png";
+
+  return (
+    <Head>
+      {/* ── Primary Meta ── */}
+      <title>Best Website Development Services in Coimbatore | Experts   </title>
+      <meta name="description" content="Professional website development services in Coimbatore. We build fast, SEO-friendly, responsive websites that boost brand presence and business growth. Visit us! " />
+      <meta name="keywords" content="Website Development, Website Development Company in Coimbatore, Web Development Services in Coimbatore, Web Development Company in Coimbatore, Website Development Services in Coimbatore, Website Design & Development in Coimbatore, Website Design Services in Coimbatore " />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/website-development/" />
+
+      {/* ── Open Graph ── */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Best Website Development Services in Coimbatore | Experts   " />
+      <meta property="og:description" content="Professional website development services in Coimbatore. We build fast, SEO-friendly, responsive websites that boost brand presence and business growth. Visit us! " />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/website-development/" />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="PCS Business Solution" />
+
+      {/* ── Twitter Card ── */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Best Website Development Services in Coimbatore | Experts   " />
+      <meta name="twitter:description" content="Professional website development services in Coimbatore. We build fast, SEO-friendly, responsive websites that boost brand presence and business growth. Visit us! " />
+      <meta name="twitter:image" content={imageUrl} />
+
+      {/* ── Breadcrumb List Schema ── */}
+      <script type="application/ld+json">{`
+       {
+        "@context":"https://schema.org",
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "item":{
+              "@id":"https://www.priyamconsultancy.com/",
+              "name":"Home"
+            }
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "item":{
+              "@id":"https://www.priyamconsultancy.com/website-development/",
+              "name":"website-development"
+            }
+          }
+        ]
+        }
+
+
+      `}</script>
+
+      {/* ── Organization Schema ── */}
+      <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Priyam Consultancy Services",
+          "url": "https://www.priyamconsultancy.com/",
+          "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+91 96774 44048",
+              "contactType": "customer support"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=61577125709962",
+            "https://www.linkedin.com/company/priyam-consultancy-services/",
+            "https://www.instagram.com/priyam_consultancy_services/",
+            "https://x.com/services91032",
+            "https://g.co/kgs/rdTYdi6"
+          ]
+          }
+
+      `}</script>
+
+      {/* ── Service Schema ── */}
+      <script type="application/ld+json">{`
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "@id":"https://www.priyamconsultancy.com/website-development/#service",
+          "name":"Website Development",
+          "serviceType":"Website Development Services",
+          "url":"https://www.priyamconsultancy.com/website-development/",
+          "description":"Priyam Consultancy provides professional website development services including custom website development, responsive web design, business websites, CMS development, e-commerce development and scalable web solutions for businesses across India.",
+          "provider":{
+            "@type":"Organization",
+            "name":"Priyam Consultancy Services",
+            "url":"https://www.priyamconsultancy.com/",
+            "logo":{
+              "@type":"ImageObject",
+              "url":"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+            }
+          },
+          "areaServed":{
+            "@type":"Country",
+            "name":"India"
+          }
+        }
+
+      `}</script>
+
+      {/* ── Product Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+      {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "website-development",
+        "image": ["https://www.priyamconsultancy.com/img/website-development.png"],
+        "description": "Best website development services in Coimbatore offering business website development, corporate websites, ecommerce websites, custom web applications, responsive website design and SEO-friendly web development solutions.",
+        "brand": {
+        "@type": "Brand",
+        "name": "Priyam Consultancy Services"
+        },
+        "review": {
+        "@type": "Review",
+        "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1"
+        },
+        "author": {
+        "@type": "Person",
+        "name": "Admin"
+        }
+        },
+        "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "4836"
+        },
+        "offers": {
+        "@type": "Offer",
+        "url": "https://www.priyamconsultancy.com/website-development/",
+        "priceCurrency": "USD",
+        "price": "00.00",
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": "https://schema.org/UsedCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+        "@type": "Organization",
+        "name": "priyamconsultancy.com"
+        }
+        }
+        }
+
+      `}</script>
+
+      {/* ── FAQ Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+       { 
+          "@context": "https://schema.org", 
+          "@type": "FAQPage", 
+          "mainEntity": [{ 
+            "@type": "Question", 
+            "name": "What website development services do you offer?", 
+            "acceptedAnswer": { 
+              "@type": "Answer", 
+              "text": "We offer website design, static website development, custom website development, WooCommerce website development, Shopify website development, and custom e-commerce solutions based on your business needs. 
+        " 
+            } 
+          },{ 
+            "@type": "Question", 
+            "name": "Will my website be mobile-friendly and SEO-ready?", 
+            "acceptedAnswer": { 
+              "@type": "Answer", 
+              "text": "Yes. We build responsive websites that work smoothly on all devices and follow SEO best practices such as clean structure, optimized content, and fast performance." 
+            }
+          },{ 
+            "@type": "Question", 
+            "name": "Can you integrate payment gateways, WhatsApp, CRM, or other tools?", 
+            "acceptedAnswer": { 
+              "@type": "Answer", 
+              "text": "Yes. We can connect your website with the tools your business needs, including payment gateways, WhatsApp chat, CRM systems, and other third-party integrations." 
+            } 
+          },{ 
+            "@type": "Question", 
+            "name": "Do you also help with content and SEO??", 
+            "acceptedAnswer": { 
+              "@type": "Answer", 
+              "text": "Yes. We provide content support and on-page SEO services to help your website communicate clearly and perform better in search results." 
+            } 
+        },{ 
+            "@type": "Question", 
+            "name": "What kind of businesses do you build websites for?", 
+            "acceptedAnswer": { 
+              "@type": "Answer", 
+              "text": "We build websites for startups, small businesses, service companies, ecommerce brands, and growing enterprises that want a strong online presence." 
+            } 
+        },{ 
+            "@type": "Question", 
+            "name": "What is included in your website development service?", 
+            "acceptedAnswer": { 
+              "@type": "Answer", 
+              "text": "Our website development service typically includes planning, design, development, responsive setup, basic SEO implementation, integrations, testing, and launch support." 
+            } 
+            }] 
+        }
+
+      `}</script>
+    </Head>
+  );
+}
+
 
 /* ══════════════════════════════════════
    GLOBAL STYLES
@@ -91,7 +304,7 @@ const GLOBAL_CSS = `
   .wd-ap-submit { width:100%; background:linear-gradient(135deg,#ed8337,#f5a66b); color:#fff; border:none; padding:1rem 1.5rem; border-radius:12px; font-family:'Poppins',sans-serif; font-size:.97rem; font-weight:600; cursor:pointer; letter-spacing:.02em; display:flex; align-items:center; justify-content:center; gap:.6rem; transition:transform .2s,box-shadow .2s; }
   .wd-ap-submit:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(237,131,55,0.5); }
   .wd-ap-submit-arrow { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:rgba(2,43,68,0.25); font-size:.9rem; }
-
+  h3.faq-h3 {font-size:2.5rem; color:#000;}
   /* ══ SERVICES ACCORDION ══ */
   .svc-section {
     position:relative; overflow:hidden;
@@ -721,7 +934,7 @@ function HeroBanner() {
 
       {/* LEFT */}
       <div className="wd-hero-content" style={{position:"relative",zIndex:2,display:"flex",flexDirection:"column"}}>
-        <div className="badge"><div className="badge-dot" />Priyam Consultancy Services</div>
+        <div className="badge"><div className="badge-dot" />Website Development</div>
         <h1 className="wd-hero-heading">
           Performance Driven
           <span className="orange lined">Website Development </span>from Concept to Code 
@@ -1205,9 +1418,9 @@ function ServicesSection() {
       <div className="svc-layout">
         <div className="svc-right-col">
   <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Website Development Services
-</div>
-          </div>          <h2 className="svc-heading">Not Just Websites. <span className="accent"><i>Growth-Driven</i></span> Digital Experiences.</h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Website Development Services
+</h2>
+          </div>          <h3 className="svc-heading">Not Just Websites. <span className="accent"><i>Growth-Driven</i></span> Digital Experiences.</h3>
           <p className="svc-sub">
 We create websites that go beyond pretty pages. They’re fast, intuitive, optimized, and built for long-term impact.
 </p>
@@ -1222,7 +1435,7 @@ We create websites that go beyond pretty pages. They’re fast, intuitive, optim
                 <div className="acc-header" onClick={() => setOpenIdx(isOpen ? -1 : i)}>
                   <span className="acc-num">{s.num}</span>
                   <div className="acc-icon">{s.icon}</div>
-                  <div className="acc-title">{s.title}</div>
+                  <h4 className="acc-title">{s.title}</h4>
                   {/* <span className="acc-tag" style={{background:`${s.tagColor}1e`,color:s.tagColor,border:`1px solid ${s.tagColor}40`}}>{s.tag}</span> */}
                   <div className="acc-arrow">▼</div>
                 </div>
@@ -1264,13 +1477,13 @@ function WhyChooseUsSection() {
 
         {/* RIGHT — TEXT */}
         <div className="wcu-text-col">
-        <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why Choose Us</div>
+        <div className="h2artners-header1">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why Choose Us</h2>
           </div>
-          <h2 className="wcu-heading">
+          <h3 className="wcu-heading">
             Trusted
             <span><i> Website Development Company</i> </span> Delivering Growth-Driven Digital Solutions
-          </h2>
+          </h3>
           <p className="wcu-desc">
 We develop strategic, high-performance websites designed to enhance brand visibility and support measurable business growth. Our solutions combine modern design, structured architecture, and scalable technology tailored to diverse industries and operational requirements.
           </p>
@@ -1294,9 +1507,9 @@ function ProcessSection() {
       <div className="proc-inner">
         <div className="proc-header">
       <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Website Development Process</div>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Website Development Process</h2>
           </div>
-          <h2 className="proc-heading">Planned for Performance. <span><i>Built for Scale.</i></span> Launched with Confidence.</h2>
+          <h3 className="proc-heading">Planned for Performance. <span><i>Built for Scale.</i></span> Launched with Confidence.</h3>
           <p className="proc-sub">
            We follow a transparent, step-by-step process to ensure your site is built efficiently, beautifully, and exactly as you envisioned.
 
@@ -1311,7 +1524,7 @@ function ProcessSection() {
                 <div className="proc-icon">{p.icon}</div>
                 <div className="proc-point-text">
                   <div className="proc-pt-num">{p.num}</div>
-                  <div className="proc-pt-title">{p.title}</div>
+                  <h4 className="proc-pt-title">{p.title}</h4>
                   <div className="proc-pt-desc">{p.desc}</div>
                 </div>
               </div>
@@ -1369,7 +1582,7 @@ function ProcessSection() {
                 <div className="proc-icon">{p.icon}</div>
                 <div className="proc-point-text">
                   <div className="proc-pt-num">{p.num}</div>
-                  <div className="proc-pt-title">{p.title}</div>
+                  <h4 className="proc-pt-title">{p.title}</h4>
                   <div className="proc-pt-desc">{p.desc}</div>
                 </div>
               </div>
@@ -1483,9 +1696,9 @@ function KeyFeaturesSection() {
       <div className="kf-inner">
         <div className="kf-header">
   <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Uniqueness
-</div>
-          </div>          <h2 className="kf-title">Key <span>Features</span></h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Uniqueness
+</h2>
+          </div>          <h3 className="kf-title">Key <span>Features</span></h3>
           <p className="kf-sub">Everything we build is engineered for performance, growth, and lasting digital impact.</p>
         </div>
 
@@ -1504,7 +1717,7 @@ function KeyFeaturesSection() {
             <div key={i} className="kf-card" ref={el => cardRefs.current[i] = el}>
               <div className="kf-icon-wrap">{f.icon}</div>
               <div className="kf-card-body">
-                <div className="kf-card-title">{f.title}</div>
+                <h4 className="kf-card-title">{f.title}</h4>
                 <div className="kf-card-desc">{f.desc}</div>
                 <div className="kf-card-accent"></div>
               </div>
@@ -1530,12 +1743,12 @@ function KeyFeaturesSection() {
 /* ══════ SECTION 5: FAQ ══════ */
 
 const faqData = [
-  { q: "What are website development services?", a: "Website development services involve designing, building, and maintaining websites tailored to business objectives. This includes UI/UX design, coding, integrations, performance optimization, security implementation, and ensuring the website functions smoothly across devices and platforms." },
-  { q: "How much do website development services cost?", a: "Website development cost depends on project scope, features, design complexity, integrations, and customization requirements. Basic websites cost less, while advanced ecommerce or custom platforms require higher investment due to functionality and scalability." },
-  { q: "What types of website development services are available?", a: "Services typically include static website development, dynamic websites, custom website development, ecommerce website development, CMS-based websites, and platform-specific solutions such as WooCommerce and Shopify development, depending on business requirements." },
-  { q: "How long does it take to develop a website?", a: "Development timelines vary based on complexity. A basic website may take 2–4 weeks, while custom or ecommerce websites can take 4–8 weeks or longer, depending on features and integrations." },
-  { q: "Do you provide SEO-friendly websites?", a: "Yes. We develop SEO-friendly websites with clean URL structures, optimized metadata, schema implementation, mobile responsiveness, fast loading speeds, and proper coding standards to improve search engine visibility and organic growth." },
-  { q: "Do You Offer Help With Content And SEO As Well?", a: "Absolutely! We offer content writing services and on-page SEO services to ensure that your website looks good and performs well in search engines." },
+  { q: "What website development services do you offer?", a: "We offer website design, static website development, custom website development, WooCommerce website development, Shopify website development, and custom e-commerce solutions based on your business needs. " },
+  { q: "Will my website be mobile-friendly and SEO-ready?", a: "Yes. We build responsive websites that work smoothly on all devices and follow SEO best practices such as clean structure, optimized content, and fast performance." },
+  { q: "Can you integrate payment gateways, WhatsApp, CRM, or other tools?", a: "Yes. We can connect your website with the tools your business needs, including payment gateways, WhatsApp chat, CRM systems, and other third-party integrations." },
+  { q: "Do you also help with content and SEO?", a: "Yes. We provide content support and on-page SEO services to help your website communicate clearly and perform better in search results." },
+  { q: "What kind of businesses do you build websites for?", a: "We build websites for startups, small businesses, service companies, ecommerce brands, and growing enterprises that want a strong online presence." },
+  { q: "What is included in your website development service?", a: "Our website development service typically includes planning, design, development, responsive setup, basic SEO implementation, integrations, testing, and launch support." },
 ];
 function FAQSection() {
   const [active, setActive] = useState(null);
@@ -1546,12 +1759,12 @@ function FAQSection() {
   return (
     <section className="faq-section">
      <div className="partners-header1" style={{  textAlign: 'center' }}>
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Frequently Asked Questions</div>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Frequently Asked Questions</h2>
           </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -1677,11 +1890,11 @@ function PortfolioSection() {
         {/* LEFT */}
         <div className="pf-left">
        <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our  Portfolio</div>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our  Portfolio</h2>
           </div>
-          <h2 className="pf-heading">
+          <h3 className="pf-heading">
             Proven Website <span><i>Solutions Across</i></span> Industries
-          </h2>
+          </h3>
           <p className="pf-desc">
 Review performance-driven websites developed with strategic architecture, intuitive design, and measurable results.
 
@@ -1718,7 +1931,7 @@ export default function PCSWebsite() {
     <Layout>
       
       <>
-
+      <SEOHead />
       <HeroBanner />
       <ApproachSection />
       <ServicesSection />

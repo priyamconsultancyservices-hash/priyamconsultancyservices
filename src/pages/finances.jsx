@@ -3,6 +3,217 @@ import CTASection from "../components/HomePage/CTA";
 import emailjs from "@emailjs/browser";
 import Layout from '@theme/Layout';
 const banner = "/img/finances.png";
+import Head from '@docusaurus/Head';
+
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/finances/";
+  const imageUrl = "https://www.priyamconsultancy.com/img/finances.png";
+
+  return (
+    <Head>
+      {/* ── Primary Meta ── */}
+      <title>Financial Services Companies in Coimbatore | Financial Services </title>
+      <meta name="description" content="Leading financial services companies in Coimbatore providing accounting, investment, tax planning, and business advisory solutions to drive growth and stability. " />
+      <meta name="keywords" content="Financial Service, Financial Service Company, Business and Financial Services, Financial Service Solutions, Business Valuations, Business Investment Analysis, Financial Service Partner, Finance Consultant, Financial Service in India, Financial Service for Business " />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/finances/" />
+
+      {/* ── Open Graph ── */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Financial Services Companies in Coimbatore | Financial Services " />
+      <meta property="og:description" content="Leading financial services companies in Coimbatore providing accounting, investment, tax planning, and business advisory solutions to drive growth and stability. " />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/finances/" />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="PCS Business Solution" />
+
+      {/* ── Twitter Card ── */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Financial Services Companies in Coimbatore | Financial Services " />
+      <meta name="twitter:description" content="Leading financial services companies in Coimbatore providing accounting, investment, tax planning, and business advisory solutions to drive growth and stability. " />
+      <meta name="twitter:image" content={imageUrl} />
+
+      {/* ── Breadcrumb List Schema ── */}
+      <script type="application/ld+json">{`
+        {
+        "@context":"https://schema.org",
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "item":{
+              "@id":"https://www.priyamconsultancy.com/",
+              "name":"Home"
+            }
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "item":{
+              "@id":"https://www.priyamconsultancy.com/finances/",
+              "name":"finances"
+            }
+          }
+        ]
+        }
+
+      `}</script>
+
+      {/* ── Organization Schema ── */}
+      <script type="application/ld+json">{`
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91 96774 44048",
+            "contactType": "customer support"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61577125709962",
+          "https://www.linkedin.com/company/priyam-consultancy-services/",
+          "https://www.instagram.com/priyam_consultancy_services/",
+          "https://x.com/services91032",
+          "https://g.co/kgs/rdTYdi6"
+        ]
+        }
+
+      `}</script>
+
+      {/* ── Service Schema ── */}
+      <script type="application/ld+json">{`
+        {
+          "@context":"https://schema.org",
+          "@type":"Service",
+          "@id":"https://www.priyamconsultancy.com/finances/#service",
+          "name":"Financial Services",
+          "serviceType":"Financial Services",
+          "url":"https://www.priyamconsultancy.com/finances/",
+          "description":"Priyam Consultancy provides professional financial services including financial planning, financial advisory, wealth management, asset management, corporate finance, taxation support and business financial consulting solutions across India.",
+          "provider":{
+            "@type":"Organization",
+            "name":"Priyam Consultancy Services",
+            "url":"https://www.priyamconsultancy.com/",
+            "logo":{
+              "@type":"ImageObject",
+              "url":"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+            }
+          },
+          "areaServed":{
+            "@type":"Country",
+            "name":"India"
+          }
+        }
+
+      `}</script>
+
+      {/* ── Product Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+      {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "Finances",
+        "image": ["https://www.priyamconsultancy.com/img/finances.png"],
+        "description": "Best financial services in Coimbatore offering financial planning, financial advisory, wealth management, asset management, corporate finance, taxation support and business financial consulting solutions.",
+        "brand": {
+        "@type": "Brand",
+        "name": "Priyam Consultancy Services"
+        },
+        "review": {
+        "@type": "Review",
+        "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1"
+        },
+        "author": {
+        "@type": "Person",
+        "name": "Admin"
+        }
+        },
+        "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "6648"
+        },
+        "offers": {
+        "@type": "Offer",
+        "url": "https://www.priyamconsultancy.com/finances/",
+        "priceCurrency": "USD",
+        "price": "00.00",
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": "https://schema.org/UsedCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+        "@type": "Organization",
+        "name": "priyamconsultancy.com"
+        }
+        }
+        }
+
+      `}</script>
+
+      {/* ── FAQ Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "What is a financial service business?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A financial service business provides services related to money management, investments, accounting, taxation, financial planning, loans, insurance, and business advisory. These services help individuals and organizations manage finances effectively, improve financial stability, and support long-term financial growth objectives."
+            }
+          },{
+            "@type": "Question",
+            "name": "What are the types of financial services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Financial services include accounting, taxation, auditing, investment advisory, wealth management, asset management, insurance, banking, financial planning, corporate finance, payroll services, and compliance management. Each service supports different financial, operational, and strategic business or individual financial requirements."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is financial advisory and why is it important?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Financial advisory involves providing expert guidance on budgeting, investments, cash flow, taxation, risk management, and financial planning. It is important because it helps businesses and individuals make informed financial decisions, reduce risks, improve profitability, and achieve long-term financial stability."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is wealth management service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wealth management services focus on managing and growing an individual’s or organization’s financial assets through investment planning, financial advisory, tax optimization, risk management, and long-term financial strategies. The goal is to preserve wealth while supporting sustainable financial growth and future security."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is asset management service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Asset management services involve managing investments, financial assets, and portfolios to maximize returns while minimizing financial risks. These services include portfolio analysis, investment planning, risk assessment, and continuous monitoring to support long-term financial performance and asset growth."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is corporate finance service?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Corporate finance services help businesses manage financial planning, fundraising, budgeting, investments, mergers, acquisitions, and capital structure decisions. These services support business growth, improve financial efficiency, optimize cash flow, and help organizations make strategic financial decisions confidently."
+            }
+          }]
+        }
+
+      `}</script>
+    </Head>
+  );
+}
 
 /* ═══════════════════════════════
    SECTION 1 — HERO BANNER
@@ -142,11 +353,9 @@ We provide end-to-end financial solutions, including banking, loans, CMA reports
   );
 }
 
-
 /* ═══════════════════════════════
    SECTION 2 — OUR APPROACH
 ═══════════════════════════════ */
-
 function ApproachSection() {
   const [form, setForm] = useState({
     name: "",
@@ -254,8 +463,9 @@ Our reports deliver actionable insights that support confident and informed deci
         </div>
 
         {/* RIGHT FORM */}
-        <div className="ap-form-wrap">
+              <div className="ap-form-wrap">
           <div className="ap-form-card">
+
             <div className="form-card-eyebrow">
               <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
             </div>
@@ -271,7 +481,7 @@ Our reports deliver actionable insights that support confident and informed deci
                 <div className="fl-group">
                   <label className="fl-label">Your Name</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon"><img src="/img/icons/form-user.svg" alt="User" width="16" height="16" /></span>
+                    <span className="fl-icon">👤</span>
                     <input
                       className="fl-input"
                       type="text"
@@ -287,7 +497,7 @@ Our reports deliver actionable insights that support confident and informed deci
                 <div className="fl-group">
                   <label className="fl-label">Company</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon"><img src="/img/icons/form-company.svg" alt="Company" width="16" height="16" /></span>
+                    <span className="fl-icon">🏢</span>
                     <input
                       className="fl-input"
                       type="text"
@@ -304,7 +514,7 @@ Our reports deliver actionable insights that support confident and informed deci
               <div className="fl-group">
                 <label className="fl-label">Email Address</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon"><img src="/img/icons/form-email.svg" alt="Email" width="16" height="16" /></span>
+                  <span className="fl-icon">✉️</span>
                   <input
                     className="fl-input"
                     type="email"
@@ -321,7 +531,7 @@ Our reports deliver actionable insights that support confident and informed deci
                 <label className="fl-label">Mobile Number</label>
                 <div className="phone-row">
                   <div className="phone-flag">
-                    <span className="phone-flag-icon"><img src="/img/icons/form-phone.svg" alt="Phone" width="16" height="16" /></span>
+                    <span className="phone-flag-icon">📞</span>
 
                   </div>
                   <input
@@ -341,7 +551,7 @@ Our reports deliver actionable insights that support confident and informed deci
               <div className="fl-group textarea-group">
                 <label className="fl-label">Message</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}><img src="/img/icons/form-message.svg" alt="Message" width="16" height="16" /></span>
+                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
                   <textarea
                     className="fl-textarea"
                     name="msg"
@@ -361,6 +571,7 @@ Our reports deliver actionable insights that support confident and informed deci
 
             </form>
             {/* ✅ FORM END */}
+
           </div>
         </div>
       </div>
@@ -429,7 +640,7 @@ function RegistrationSection() {
         .rg-dots{display:flex;gap:.4rem;position:absolute;bottom:2.8rem;right:2.8rem;z-index:3;}
         .rg-ddot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.2);transition:all .3s;}
         .rg-ddot.active{background:#ed8337;width:20px;border-radius:3px;}
-        
+        h3.faq-h3{font-size:2.5rem; color:#000;}
         .rg-bg-c{position:absolute;border-radius:50%;pointer-events:none;}
                 @media(max-width:768px){
           .rg-layout{grid-template-columns:1fr !important;}
@@ -458,10 +669,10 @@ function RegistrationSection() {
       <div className="rg-bg-c" style={{ bottom: "-100px", left: "-80px", width: "300px", height: "300px", border: "1.5px solid rgba(237,131,55,.08)" }} />
       <div style={{ textAlign: "center", marginBottom: "60px", position: "relative", zIndex: 2 }}>
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Financial Services</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Financial Services</h2>
 
         </div>
-        <h2 className="rg-sec-h">Every Transaction Managed. <i> Every Report Accurate.</i> </h2>
+        <h3 className="rg-sec-h">Every Transaction Managed. <i> Every Report Accurate.</i> </h3>
         <p className="rg-sec-sub">
             Priyam Consultancy Services offers comprehensive financial solutions tailored to your business goals
         </p>
@@ -473,14 +684,14 @@ function RegistrationSection() {
               <div className={`rg-item${active === i ? " active" : ""}`} onClick={() => setActive(i)} style={i === REG_DATA.length - 1 && active !== i ? { borderBottom: "none" } : {}}>
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem", flex: 1 }}>
                   <div className="rg-icon-box">{REG_ICONS[i]}</div>
-                  <div className="rg-name">{item.label}</div>
+                  <h4 className="rg-name">{item.label}</h4>
                 </div>
                 <span className="rg-tag-pill">{item.tag}</span>
                 <div className="rg-item-arr">{active === i ? "▾" : "›"}</div>
               </div>
               {active === i && (
                 <div className="rg-mobile-detail">
-                  <div className="rg-d-title" dangerouslySetInnerHTML={{ __html: item.title }} />
+                  <h5 className="rg-d-title" dangerouslySetInnerHTML={{ __html: item.title }} />
                   {Array.isArray(item.desc) ? (
                     item.desc.map((para, pi) => (
                       <div className="rg-d-desc" key={pi} style={{ marginBottom: pi < item.desc.length - 1 ? "0.8rem" : "0" }}>{para}</div>
@@ -496,7 +707,7 @@ function RegistrationSection() {
         <div className="rg-right">
           <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column" }}>
             <div className="rg-d-eye"><div className="rg-d-num">{d.num}</div><div className="rg-d-lbl">{d.label}</div></div>
-            <div className="rg-d-title" dangerouslySetInnerHTML={{ __html: d.title }} />
+            <h5 className="rg-d-title" dangerouslySetInnerHTML={{ __html: d.title }} />
             {Array.isArray(d.desc) ? (
               d.desc.map((para, pi) => (
                 <div className="rg-d-desc" key={pi} style={{ marginBottom: pi < d.desc.length - 1 ? "1rem" : "0" }}>{para}</div>
@@ -578,10 +789,9 @@ function SessionChangeSection() {
       <div className="sc-inner">
         <div style={{ textAlign: "center", marginBottom: "90px" }}>
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Financial Execution Process</div>
-
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Financial Execution Process</h2>
           </div>
-          <h2 className="sc-title">Structured, Transparent, and <em className="sc-title-em">Reliable Financial Management </em></h2>
+          <h3 className="sc-title">Structured, Transparent, and <em className="sc-title-em">Reliable Financial Management </em></h3>
           <p className="sc-sub">
                 Our Financial Management process at Priyam Consultancy Services is designed to meet the unique needs of your business, step by step. We don’t just handle numbers — we build a robust financial foundation that enables growth, stability, and long-term success. From cash flow management to audits and strategic planning, every step is precise, compliant, and tailored to your business objectives.
           </p>
@@ -598,7 +808,7 @@ function SessionChangeSection() {
                 <div className={`sc-card-top ${s.color === "blue" ? "sc-top-blue" : "sc-top-orange"}`} />
                 <span className="sc-card-icon">{s.icon}</span>
                 <div className={`sc-lbl sc-lbl-${s.color === "blue" ? "blue" : "orange"}`}>{s.lbl}</div>
-                <div className="sc-card-title">{s.title}</div>
+                <h4 className="sc-card-title">{s.title}</h4>
                 <div className="sc-card-desc">{s.desc}</div>
               </div>
             </div>
@@ -697,7 +907,7 @@ function HowWeWorkSection() {
                   </div>
                 )}
               </div>
-              <div className="hww-step-title">{s.title}</div>
+              <h3 className="hww-step-title">{s.title}</h3>
               <div className="hww-step-desc">{s.desc}</div>
             </div>
           ))}
@@ -708,12 +918,12 @@ function HowWeWorkSection() {
   );
 }
 const faqData = [
-  { q: "What is a financial service business?", a: "A financial service business provides expert support in banking, investments, accounting, loans, and advisory services to help businesses and individuals manage their finances efficiently." },
-  { q: "What are the types of financial services?", a: "Financial services include banking, insurance, investment management, accounting, tax advisory, loans, and financial planning, covering all aspects of money management and business growth" },
-  { q: "What are the four financial services?", a: "The main four financial services are banking, insurance, investment advisory, and accounting, which collectively help businesses and individuals manage, protect, and grow their assets." },
-  { q: "What are the 8 financial sectors?", a: "The eight sectors include banking, insurance, capital markets, investment services, asset management, accounting, tax advisory, and fintech, covering the full spectrum of financial operations." },
-  { q: "Why is a financial advisory important?", a: "Financial advisory helps businesses make informed decisions, optimize resources, manage risks, plan growth, and ensure compliance, ultimately improving profitability and long-term financial stability." },
-  { q: "What are the five types of finance?", a: "The five types are banking, insurance, investment management, accounting, and financial planning, each addressing critical aspects of financial control, risk management, and wealth creation." },
+  { q: "What is a financial service business?", a: "A financial service business provides services related to money management, investments, accounting, taxation, financial planning, loans, insurance, and business advisory. These services help individuals and organizations manage finances effectively, improve financial stability, and support long-term financial growth objectives." },
+  { q: "What are the types of financial services?", a: " Financial services include accounting, taxation, auditing, investment advisory, wealth management, asset management, insurance, banking, financial planning, corporate finance, payroll services, and compliance management. Each service supports different financial, operational, and strategic business or individual financial requirements." },
+  { q: "What is financial advisory and why is it important?", a: " Financial advisory involves providing expert guidance on budgeting, investments, cash flow, taxation, risk management, and financial planning. It is important because it helps businesses and individuals make informed financial decisions, reduce risks, improve profitability, and achieve long-term financial stability." },
+  { q: "What is wealth management service?", a: "Wealth management services focus on managing and growing an individual’s or organization’s financial assets through investment planning, financial advisory, tax optimization, risk management, and long-term financial strategies. The goal is to preserve wealth while supporting sustainable financial growth and future security." },
+  { q: "What is asset management service?", a: " Asset management services involve managing investments, financial assets, and portfolios to maximize returns while minimizing financial risks. These services include portfolio analysis, investment planning, risk assessment, and continuous monitoring to support long-term financial performance and asset growth." },
+  { q: "What is corporate finance service?", a: "Corporate finance services help businesses manage financial planning, fundraising, budgeting, investments, mergers, acquisitions, and capital structure decisions. These services support business growth, improve financial efficiency, optimize cash flow, and help organizations make strategic financial decisions confidently." },
 ];
 function FAQSection() {
   const [active, setActive] = useState(null);
@@ -724,12 +934,12 @@ function FAQSection() {
   return (
     <section className="faq-section">
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -779,6 +989,7 @@ function FAQSection() {
 export default function BusinessRegistrationPage() {
   return (
     <Layout>
+      <SEOHead />
       <HeroSection />
       <ApproachSection />
       <RegistrationSection />
