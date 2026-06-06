@@ -1558,32 +1558,12 @@ function ApplyModal({ role, onClose }) {
     if (file) setResume(file);
   };
 
-  const handleSubmit = async () => {
+ const handleSubmit = async () => {
     if (!form.name || !form.email || !form.phone) return;
     setLoading(true);
 
     try {
-      // ── Step 1: Upload resume to Cloudinary ──
-      let resumeUrl = "Not provided";
-      if (resume) {
-        const cloudData = new FormData();
-        cloudData.append("file", resume);
-        cloudData.append("upload_preset", "PCS Career");
-        cloudData.append("folder", "sterlo_resumes");
-
-        const cloudRes = await fetch(
-          "https://api.cloudinary.com/v1_1/dsmzvp3ew/raw/upload",
-          { method: "POST", body: cloudData }
-        );
-        const cloudJson = await cloudRes.json();
-        if (cloudJson.secure_url) {
-resumeUrl = cloudJson.secure_url.replace('/upload/', '/upload/fl_attachment/');
-        } else {
-          throw new Error("Resume upload failed. Please try again.");
-        }
-      }
-
-      // ── Step 2: Send form data + resume link to Formspree ──
+      // ── Send form data + resume directly to Formspree ──
       const formData = new FormData();
       formData.append("_subject", `New Job Application — ${role.title}`);
       formData.append("name", form.name);
@@ -1594,7 +1574,9 @@ resumeUrl = cloudJson.secure_url.replace('/upload/', '/upload/fl_attachment/');
       formData.append("years_of_experience", form.experience || "Not specified");
       formData.append("linkedin_profile", form.linkedin || "Not provided");
       formData.append("cover_note", form.cover || "Not provided");
-      formData.append("resume_link", resumeUrl);
+      if (resume) {
+        formData.append("resume", resume);
+      }
 
       const res = await fetch("https://formspree.io/f/xbdqnqre", {
         method: "POST",
