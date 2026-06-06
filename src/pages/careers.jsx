@@ -1577,7 +1577,7 @@ function ApplyModal({ role, onClose }) {
         );
         const cloudJson = await cloudRes.json();
         if (cloudJson.secure_url) {
-          resumeUrl = cloudJson.secure_url;
+resumeUrl = cloudJson.secure_url.replace('/upload/', '/upload/fl_attachment/');
         } else {
           throw new Error("Resume upload failed. Please try again.");
         }

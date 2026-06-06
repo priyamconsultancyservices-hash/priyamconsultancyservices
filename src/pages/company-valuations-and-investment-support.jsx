@@ -4,6 +4,216 @@ import Link from '@docusaurus/Link';
 const banner = "/img/inversment.png";
 import emailjs from "@emailjs/browser";
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/company-valuations-and-investment-support";
+  const imageUrl = "https://www.priyamconsultancy.com/img/company-valuations-and-investment-support.png";
+
+  return (
+    <Head>
+      {/* ── Primary Meta ── */}
+      <title>Business Valuation & Investment Advisory Services in India | PCS </title>
+      <meta name="description" content=" Expert company valuation and investment support services in India. Get accurate financial insights, strategic guidance, and trusted advisory for business growth. " />
+      <meta name="keywords" content="Investment Support, Investment and Company Valuation, Investment Support Services, Company Valuation Services, Business Valuation Services, Investment Consultancy Services, Financial and Investment Services, Investment Support Services in India, Investment Valuation Services, Investment Service Consultant" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/company-valuations-and-investment-support/" />
+
+      {/* ── Open Graph ── */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Business Valuation & Investment Advisory Services in India | PCS " />
+      <meta property="og:description" content=" Expert company valuation and investment support services in India. Get accurate financial insights, strategic guidance, and trusted advisory for business growth. " />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/company-valuations-and-investment-support/" />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="Priyam Consultancy Services" />
+
+      {/* ── Twitter Card ── */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Business Valuation & Investment Advisory Services in India | PCS " />
+      <meta name="twitter:description" content=" Expert company valuation and investment support services in India. Get accurate financial insights, strategic guidance, and trusted advisory for business growth. " />
+      <meta name="twitter:image" content={imageUrl} />
+
+      {/* ── Breadcrumb List Schema ── */}
+      <script type="application/ld+json">{`
+      {
+        "@context":"https://schema.org",
+        "@type":"BreadcrumbList",
+        "itemListElement":[
+          {
+            "@type":"ListItem",
+            "position":1,
+            "item":{
+              "@id":"https://www.priyamconsultancy.com/",
+              "name":"Home"
+            }
+          },
+          {
+            "@type":"ListItem",
+            "position":2,
+            "item":{
+              "@id":"https://www.priyamconsultancy.com/company-valuations-and-investment-support/",
+              "name":"company-valuations-and-investment-support"
+            }
+          }
+        ]
+        }
+
+      `}</script>
+
+      {/* ── Organization Schema ── */}
+      <script type="application/ld+json">{`
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91 96774 44048",
+            "contactType": "customer support"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61577125709962",
+          "https://www.linkedin.com/company/priyam-consultancy-services/",
+          "https://www.instagram.com/priyam_consultancy_services/",
+          "https://x.com/services91032",
+          "https://g.co/kgs/rdTYdi6"
+        ]
+        }
+
+      `}</script>
+
+      {/* ── Service Schema ── */}
+      <script type="application/ld+json">{`
+      {
+        "@context":"https://schema.org",
+        "@type":"Service",
+        "@id":"https://www.priyamconsultancy.com/company-valuations-and-investment-support/#service",
+        "name":"Company Valuations and Investment Support",
+        "serviceType":"Company Valuation and Investment Support Services",
+        "url":"https://www.priyamconsultancy.com/company-valuations-and-investment-support/",
+        "description":"Priyam Consultancy provides professional company valuation and investment support services including business valuation, financial analysis, investor readiness, fundraising support, due diligence assistance and strategic investment consulting for businesses across India.",
+        "provider":{
+          "@type":"Organization",
+          "name":"Priyam Consultancy Services",
+          "url":"https://www.priyamconsultancy.com/",
+          "logo":{
+            "@type":"ImageObject",
+            "url":"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+          }
+        },
+        "areaServed":{
+          "@type":"Country",
+          "name":"India"
+        }
+    }
+      `}</script>
+
+      {/* ── Product Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+        {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": "company-valuations-and-investment-support",
+        "image": ["https://www.priyamconsultancy.com/img/inversment.png"],
+        "description": "Best company valuation and investment support services in Coimbatore offering business valuation, financial analysis, investor readiness, fundraising support, due diligence assistance and strategic investment consulting.",
+        "brand": {
+        "@type": "Brand",
+        "name": "Priyam Consultancy Services"
+        },
+        "review": {
+        "@type": "Review",
+        "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1"
+        },
+        "author": {
+        "@type": "Person",
+        "name": "Admin"
+        }
+        },
+        "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "6073"
+        },
+        "offers": {
+        "@type": "Offer",
+        "url": "https://www.priyamconsultancy.com/company-valuations-and-investment-support/",
+        "priceCurrency": "USD",
+        "price": "00.00",
+        "priceValidUntil": "2026-12-31",
+        "itemCondition": "https://schema.org/UsedCondition",
+        "availability": "https://schema.org/InStock",
+        "seller": {
+        "@type": "Organization",
+        "name": "priyamconsultancy.com"
+        }
+        }
+        }
+
+      `}</script>
+
+      {/* ── FAQ Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [{
+            "@type": "Question",
+            "name": "What is company valuation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Company valuation is the process of determining the financial worth of a business based on factors such as revenue, assets, profitability, market position, growth potential, and financial performance. It helps businesses understand their market value for investment, mergers, fundraising, or strategic planning purposes."
+            }
+          },{
+            "@type": "Question",
+            "name": "How do you value a company for investment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A company is valued for investment by analyzing financial statements, revenue models, cash flow, assets, liabilities, market conditions, industry trends, and growth potential. Various valuation methods are applied to determine a fair and realistic business value for investors and stakeholders."
+            }
+          },{
+            "@type": "Question",
+            "name": "What are the main valuation methods?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Common company valuation methods include Discounted Cash Flow (DCF), Comparable Company Analysis, Asset-Based Valuation, Market Capitalization Method, Earnings Multiplier Method, and Precedent Transaction Analysis. The suitable method depends on the business model, industry, and investment objectives."
+            }
+          },{
+            "@type": "Question",
+            "name": "What is the difference between investment and valuation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Valuation determines the financial worth of a business, while investment refers to providing funds into the business for ownership, returns, or growth opportunities. Valuation helps investors assess risk, pricing, and potential returns before making investment decisions."
+            }
+          },{
+            "@type": "Question",
+            "name": "What are investment support services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Investment support services include business valuation, financial analysis, investor presentations, due diligence support, fundraising strategy, financial forecasting, and investment readiness consulting. These services help businesses attract investors, improve financial transparency, and support successful funding opportunities."
+            }
+          },{
+            "@type": "Question",
+            "name": "Why is valuation important before investment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Valuation helps determine a company’s fair market worth before investment discussions. It supports informed decision-making, improves negotiation clarity, reduces financial risk, and helps investors and business owners establish realistic expectations regarding ownership, funding, and future growth potential."
+            }
+          }]
+        }
+
+
+      `}</script>
+    </Head>
+  );
+}
 /* ═══════════════════════════════
    SECTION 1 — HERO BANNER
 ═══════════════════════════════ */
@@ -12,7 +222,7 @@ import Layout from '@theme/Layout';
 ═══════════════════════════════ */
 function HeroSection() {
   return (
-      <section className="hero" id="hero">
+    <section className="hero" id="hero">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -160,14 +370,14 @@ img.hero-img { animation: none !important; }
 
       {/* LEFT CONTENT */}
       <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot" />Certified Valuation Experts</div>
+        <div className="h-badge"><div className="badge-dot" />Business Value Optimization </div>
         <h1 className="hero-heading">
           Unlock True Business
           <span className="hl lined">Value with</span> Expert
-          Valuation &amp; Investment  
+          Valuation &amp; Investment
         </h1>
         <p className="hero-sub">
-We help you see beyond the balance sheet. At Priyam Consultancy Services, our valuation and investment experts provide accurate, data-backed insights that guide funding, mergers, acquisitions, and growth decisions – empowering you to build sustainable strategies rooted in financial strength, long-term value, and business excellence.
+          We help you see beyond the balance sheet. At Priyam Consultancy Services, our valuation and investment experts provide accurate, data-backed insights that guide funding, mergers, acquisitions, and growth decisions – empowering you to build sustainable strategies rooted in financial strength, long-term value, and business excellence.
         </p>
         <div className="hero-actions">
           <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
@@ -185,7 +395,6 @@ We help you see beyond the balance sheet. At Priyam Consultancy Services, our va
     </section>
   );
 }
-
 
 /* ═══════════════════════════════
    SECTION 2 — OUR APPROACH
@@ -298,10 +507,10 @@ function ApproachSection() {
           </div>
           <h2 className="ap-heading">Company   <span>Valuation and Investment</span> Support</h2>
           <p className="ap-intro">
-Your business is more than numbers — it reflects potential, innovation, and performance. We assess every aspect of your organization in detail. This includes revenue models, assets, market position, and risk factors.
+            Your business is more than numbers — it reflects potential, innovation, and performance. We assess every aspect of your organization in detail. This includes revenue models, assets, market position, and risk factors.
           </p>
           <p className="ap-intro">
-Our approach provides a complete 360° view of your enterprise value. We ensure every factor influencing growth and valuation is carefully evaluated. This creates a strong foundation for strategic financial decisions.
+            Our approach provides a complete 360° view of your enterprise value. We ensure every factor influencing growth and valuation is carefully evaluated. This creates a strong foundation for strategic financial decisions.
           </p>
           <p className="ap-intro">
             Beyond valuation, we translate insights into actionable investment strategies. We help identify funding opportunities, evaluate partnerships, and guide growth decisions. This ensures alignment with your long-term business goals.
@@ -428,12 +637,12 @@ Our approach provides a complete 360° view of your enterprise value. We ensure 
    SECTION 3 — REGISTRATION TYPES
 ═══════════════════════════════ */
 const REG_DATA = [
-  { num: "01", tag: "BVFM", label: "Business Valuation & Financial Modeling", title: "Know Your <i>True Worth</i>",desc: ["We begin by understanding your business model, assets, financial statements, and market positioning in detail. This helps identify key value drivers and industry benchmarks. Our approach ensures your valuation is accurate and aligned with real market condition", "By combining financial modeling with data-driven insights, we create a clear picture of your business worth. This supports strategic planning and investor communication. It enables confident financial decisions backed by reliable analysis."] , chips: ["📈 Investor Access", "🏛️ Strong Governance", "📋 Stock Exchange Listed", "✅ Regulatory Compliance"], time: "Avg. 15–25 working days" },
-  { num: "02", tag: "IRFS", label: "Investment Readiness & Funding Support", title: "Prepare, <i> Pitch and Prosper.</i>",desc: ["Our experts prepare your business for funding by structuring financials and refining valuation strategies. We ensure your business meets investor expectations and industry standards. This strengthens your position during funding discussions.","From pitch preparation to investor alignment, we support every stage of the process. Our approach improves credibility and presentation. It increases your chances of securing the right funding for growth."] , chips: ["💼 Limited Liability", "🚀 Investor-Ready", "👥 2–200 Shareholders", "📑 Separate Legal Entity"], time: "Avg. 7–12 working days" },
-  { num: "03", tag: "MAA", label: "Mergers & Acquisitions Advisory", title: "Seamless Deals,  <i>Stronger Growth</i>",desc: ["We provide end-to-end support for mergers and acquisitions with detailed financial analysis. Our team evaluates financial data, projections, and deal structures carefully. This ensures informed decision-making throughout the transaction.","By identifying risks and opportunities, we help you negotiate better terms. Our structured approach ensures smooth execution and compliance. This leads to successful and value-driven business deals."] , chips: ["🤝 Flexible Structure", "🛡️ Limited Liability", "📉 Low Compliance", "💰 Easy Profit Sharing"], time: "Avg. 10–15 working days" },
-  { num: "04", tag: "ESV", label: "Equity & Stakeholder Valuation", title: "Fair Value for <i>Every Share</i>",desc: ["We assess equity distribution and stakeholder value using accurate financial data and valuation methods. This ensures fairness and transparency in ownership structures. It helps maintain balance among stakeholders.", "Our insights support strategic decisions related to investments, exits, and restructuring. We present clear and reliable valuation reports. This builds trust and supports long-term business relationships."] , chips: ["👤 Solo Founder", "🏢 Corporate Benefits", "🔒 Asset Protection", "📊 Easy Compliance"], time: "Avg. 7–10 working days" },
-  { num: "05", tag: "FDD", label: "Financial Due Diligence", title: "Transparency Before <i>Every Transaction</i>",desc: ["We conduct thorough financial due diligence to verify data accuracy and compliance. Our team reviews financial records, reports, and operational metrics in detail. This helps identify risks before any transaction.", "By ensuring transparency and reliability, we strengthen investor confidence. Our process minimizes uncertainties and supports informed decisions. It ensures secure and well-evaluated financial transactions."] , chips: ["🤝 Shared Ownership", "💡 Easy Formation", "📝 Minimal Compliance", "⚖️ Flexible Agreement"], time: "Avg. 3–7 working days" },
-  { num: "06", tag: "GES", label: "Growth & Expansion Strategy", title: "Plan Smart,  <i>Scale Confidently</i>",desc: ["We develop growth strategies based on financial insights, market trends, and business performance. Our approach focuses on scalability and long-term sustainability. This helps your business expand with clarity and direction.", "As your business evolves, we continuously refine strategies and financial plans. This keeps your growth aligned with market dynamics. It ensures you are always prepared for new opportunities."] , chips: ["👤 Full Control", "💸 Minimal Cost", "⚡ Quick Setup", "🏪 SMEs & Freelancers"], time: "Avg. 1–3 working days" },
+  { num: "01", tag: "BVFM", label: "Business Valuation & Financial Modeling", title: "Know Your <i>True Worth</i>", desc: ["We begin by understanding your business model, assets, financial statements, and market positioning in detail. This helps identify key value drivers and industry benchmarks. Our approach ensures your valuation is accurate and aligned with real market condition", "By combining financial modeling with data-driven insights, we create a clear picture of your business worth. This supports strategic planning and investor communication. It enables confident financial decisions backed by reliable analysis."], chips: ["📈 Investor Access", "🏛️ Strong Governance", "📋 Stock Exchange Listed", "✅ Regulatory Compliance"], time: "Avg. 15–25 working days" },
+  { num: "02", tag: "IRFS", label: "Investment Readiness & Funding Support", title: "Prepare, <i> Pitch and Prosper.</i>", desc: ["Our experts prepare your business for funding by structuring financials and refining valuation strategies. We ensure your business meets investor expectations and industry standards. This strengthens your position during funding discussions.", "From pitch preparation to investor alignment, we support every stage of the process. Our approach improves credibility and presentation. It increases your chances of securing the right funding for growth."], chips: ["💼 Limited Liability", "🚀 Investor-Ready", "👥 2–200 Shareholders", "📑 Separate Legal Entity"], time: "Avg. 7–12 working days" },
+  { num: "03", tag: "MAA", label: "Mergers & Acquisitions Advisory", title: "Seamless Deals,  <i>Stronger Growth</i>", desc: ["We provide end-to-end support for mergers and acquisitions with detailed financial analysis. Our team evaluates financial data, projections, and deal structures carefully. This ensures informed decision-making throughout the transaction.", "By identifying risks and opportunities, we help you negotiate better terms. Our structured approach ensures smooth execution and compliance. This leads to successful and value-driven business deals."], chips: ["🤝 Flexible Structure", "🛡️ Limited Liability", "📉 Low Compliance", "💰 Easy Profit Sharing"], time: "Avg. 10–15 working days" },
+  { num: "04", tag: "ESV", label: "Equity & Stakeholder Valuation", title: "Fair Value for <i>Every Share</i>", desc: ["We assess equity distribution and stakeholder value using accurate financial data and valuation methods. This ensures fairness and transparency in ownership structures. It helps maintain balance among stakeholders.", "Our insights support strategic decisions related to investments, exits, and restructuring. We present clear and reliable valuation reports. This builds trust and supports long-term business relationships."], chips: ["👤 Solo Founder", "🏢 Corporate Benefits", "🔒 Asset Protection", "📊 Easy Compliance"], time: "Avg. 7–10 working days" },
+  { num: "05", tag: "FDD", label: "Financial Due Diligence", title: "Transparency Before <i>Every Transaction</i>", desc: ["We conduct thorough financial due diligence to verify data accuracy and compliance. Our team reviews financial records, reports, and operational metrics in detail. This helps identify risks before any transaction.", "By ensuring transparency and reliability, we strengthen investor confidence. Our process minimizes uncertainties and supports informed decisions. It ensures secure and well-evaluated financial transactions."], chips: ["🤝 Shared Ownership", "💡 Easy Formation", "📝 Minimal Compliance", "⚖️ Flexible Agreement"], time: "Avg. 3–7 working days" },
+  { num: "06", tag: "GES", label: "Growth & Expansion Strategy", title: "Plan Smart,  <i>Scale Confidently</i>", desc: ["We develop growth strategies based on financial insights, market trends, and business performance. Our approach focuses on scalability and long-term sustainability. This helps your business expand with clarity and direction.", "As your business evolves, we continuously refine strategies and financial plans. This keeps your growth aligned with market dynamics. It ensures you are always prepared for new opportunities."], chips: ["👤 Full Control", "💸 Minimal Cost", "⚡ Quick Setup", "🏪 SMEs & Freelancers"], time: "Avg. 1–3 working days" },
 ];
 const REG_ICONS = [
   <img src="/img/icon/business-valuation-modeling.webp" alt="Business Valuation and Financial Modeling" width="20" height="20" />,
@@ -507,35 +716,39 @@ function RegistrationSection() {
         @media(min-width:769px){
           .rg-mobile-detail{ display:none !important; }
         }
-
+          h3.faq-h3 {
+    font-size: 2.3rem;
+    color: #000;
+    text-align: center;
+}
       `}</style>
       <div className="rg-bg-c" style={{ top: "-120px", right: "-120px", width: "400px", height: "400px", border: "1.5px solid rgba(237,131,55,.1)" }} />
       <div className="rg-bg-c" style={{ bottom: "-100px", left: "-80px", width: "300px", height: "300px", border: "1.5px solid rgba(237,131,55,.08)" }} />
       <div style={{ textAlign: "center", marginBottom: "60px", position: "relative", zIndex: 2 }}>
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Valuation and Investment Services</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Valuation and Investment Services</h2>
 
         </div>
-        <h2 className="rg-sec-h">Accurate Insights. <i> Strategic Decisions.</i> Confident Growth.</h2>
+        <h3 className="rg-sec-h">Accurate Insights. <i> Strategic Decisions.</i> Confident Growth.</h3>
         <p className="rg-sec-sub">
           Priyam Consultancy Services delivers customized valuation and investment solutions that combine financial precision with strategic foresight, helping you maximize value and make informed business moves.
         </p>
       </div>
-     <div className="rg-layout">
+      <div className="rg-layout">
         <div className="rg-left">
           {REG_DATA.map((item, i) => (
             <div key={i}>
               <div className={`rg-item${active === i ? " active" : ""}`} onClick={() => setActive(i)} style={i === REG_DATA.length - 1 && active !== i ? { borderBottom: "none" } : {}}>
                 <div style={{ display: "flex", alignItems: "center", gap: "1rem", flex: 1 }}>
                   <div className="rg-icon-box">{REG_ICONS[i]}</div>
-                  <div className="rg-name">{item.label}</div>
+                  <h4 className="rg-name">{item.label}</h4>
                 </div>
                 <span className="rg-tag-pill">{item.tag}</span>
                 <div className="rg-item-arr">{active === i ? "▾" : "›"}</div>
               </div>
               {active === i && (
                 <div className="rg-mobile-detail">
-                  <div className="rg-d-title" dangerouslySetInnerHTML={{ __html: item.title }} />
+                  <h5 className="rg-d-title" dangerouslySetInnerHTML={{ __html: item.title }} />
                   {Array.isArray(item.desc) ? (
                     item.desc.map((para, pi) => (
                       <div className="rg-d-desc" key={pi} style={{ marginBottom: pi < item.desc.length - 1 ? "0.8rem" : "0" }}>{para}</div>
@@ -551,7 +764,7 @@ function RegistrationSection() {
         <div className="rg-right">
           <div style={{ position: "relative", zIndex: 2, height: "100%", display: "flex", flexDirection: "column" }}>
             <div className="rg-d-eye"><div className="rg-d-num">{d.num}</div><div className="rg-d-lbl">{d.label}</div></div>
-            <div className="rg-d-title" dangerouslySetInnerHTML={{ __html: d.title }} />
+            <h5 className="rg-d-title" dangerouslySetInnerHTML={{ __html: d.title }} />
             {Array.isArray(d.desc) ? (
               d.desc.map((para, pi) => (
                 <div className="rg-d-desc" key={pi} style={{ marginBottom: pi < d.desc.length - 1 ? "1rem" : "0" }}>{para}</div>
@@ -575,11 +788,11 @@ function RegistrationSection() {
 ═══════════════════════════════ */
 const SC_STEPS = [
   { num: "01", color: "orange", icon: <img src="/img/icon/sc-business-valuation.webp" alt="Business Valuation" width="35" height="35" />, lbl: "Step 01 · Initiation", title: "Business Valuation", desc: "We provide comprehensive valuation services to determine your business’s true economic worth based on performance, assets, and potential, supporting informed decisions, funding, or strategic transactions.", time: "~1 Working Day", tColor: "blue", even: false, last: false },
-  { num: "02", color: "blue", icon: <img src="/img/icon/sc-financial-modeling.webp" alt="Financial Modeling and Forecasting" width="35" height="35" />, lbl: "Step 02 · Documentation", title: "Financial Modeling & Forecasting",desc:"We develop dynamic financial models and forecasts that simulate scenarios, assess profitability and liquidity, and provide stakeholders a clear view of future financial performance and scalability.", time: "~2-3 Working Days", tColor: "orange", even: true, last: false },
-  { num: "03", color: "orange", icon: <img src="/img/icon/sc-investment-readiness.webp" alt="Investment Readiness Assessment" width="35" height="35" />, lbl: "Step 03 · Filing", title: "Investment Readiness Assessment",desc:"We evaluate financial stability, governance, and documentation to ensure your business meets investor expectations, presenting a credible and well-prepared case for funding or strategic partnerships.", time: "~2-4 Working Days", tColor: "blue", even: false, last: false },
+  { num: "02", color: "blue", icon: <img src="/img/icon/sc-financial-modeling.webp" alt="Financial Modeling and Forecasting" width="35" height="35" />, lbl: "Step 02 · Documentation", title: "Financial Modeling & Forecasting", desc: "We develop dynamic financial models and forecasts that simulate scenarios, assess profitability and liquidity, and provide stakeholders a clear view of future financial performance and scalability.", time: "~2-3 Working Days", tColor: "orange", even: true, last: false },
+  { num: "03", color: "orange", icon: <img src="/img/icon/sc-investment-readiness.webp" alt="Investment Readiness Assessment" width="35" height="35" />, lbl: "Step 03 · Filing", title: "Investment Readiness Assessment", desc: "We evaluate financial stability, governance, and documentation to ensure your business meets investor expectations, presenting a credible and well-prepared case for funding or strategic partnerships.", time: "~2-4 Working Days", tColor: "blue", even: false, last: false },
   { num: "04", color: "blue", icon: <img src="/img/icon/sc-mergers-acquisitions.webp" alt="Mergers and Acquisitions Support" width="35" height="35" />, lbl: "Step 04 · Approval", title: "Mergers & Acquisitions Support", desc: "We guide you through due diligence, valuation, and deal structuring, helping negotiate favorable terms and ensure seamless financial integration throughout the merger or acquisition process.", time: "~5-7 Working Days", tColor: "orange", even: true, last: false },
   { num: "05", color: "orange", icon: <img src="/img/icon/sc-investor-relations.webp" alt="Investor Relations and Strategy" width="35" height="35" />, lbl: "Step 05 · Complete", title: "Investor Relations & Strategy", desc: "We strengthen investor communications through accurate reporting and valuation insights, building confidence, supporting transparency, and fostering long-term relationships that drive sustainable financial growth.", time: "~1-2 Working Days", tColor: "blue", even: false, last: false },
-  { num: "06", color: "blue", icon: <img src="/img/icon/sc-regulatory-compliance.webp" alt="Regulatory and Compliance Advisory" width="35" height="35" />, lbl: "Step 06 · Complete", title: "Regulatory & Compliance Advisory", desc:"We ensure all valuations and reports comply with legal, accounting, and tax standards, reducing risks and enhancing credibility during audits, reviews, and investor evaluations.", time: "~2-3 Working Days", tColor: "orange", even: true, last: false },
+  { num: "06", color: "blue", icon: <img src="/img/icon/sc-regulatory-compliance.webp" alt="Regulatory and Compliance Advisory" width="35" height="35" />, lbl: "Step 06 · Complete", title: "Regulatory & Compliance Advisory", desc: "We ensure all valuations and reports comply with legal, accounting, and tax standards, reducing risks and enhancing credibility during audits, reviews, and investor evaluations.", time: "~2-3 Working Days", tColor: "orange", even: true, last: false },
 
 
 ];
@@ -632,10 +845,10 @@ function SessionChangeSection() {
       <div className="sc-inner">
         <div style={{ textAlign: "center", marginBottom: "90px" }}>
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Company Valuation and Investment Support Execution Process</div>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Company Valuation and Investment Support Execution Process</h2>
 
           </div>
-          <h2 className="sc-title">Structured, Transparent, and <em className="sc-title-em">Value-Driven Advisory </em></h2>
+          <h3 className="sc-title">Structured, Transparent, and <em className="sc-title-em">Value-Driven Advisory </em></h3>
           <p className="sc-sub">
             Our Business Registration process at Priyam Consultancy Services is tailored to your business needs. We don’t just file paperwork , we build a solid legal foundation for growth, credibility, and long-term success.
           </p>
@@ -652,7 +865,7 @@ function SessionChangeSection() {
                 <div className={`sc-card-top ${s.color === "blue" ? "sc-top-blue" : "sc-top-orange"}`} />
                 <span className="sc-card-icon">{s.icon}</span>
                 <div className={`sc-lbl sc-lbl-${s.color === "blue" ? "blue" : "orange"}`}>{s.lbl}</div>
-                <div className="sc-card-title">{s.title}</div>
+                <h4 className="sc-card-title">{s.title}</h4>
                 <div className="sc-card-desc">{s.desc}</div>
               </div>
             </div>
@@ -754,7 +967,7 @@ function HowWeWorkSection() {
                   </div>
                 )}
               </div>
-              <div className="hww-step-title">{s.title}</div>
+              <h3 className="hww-step-title">{s.title}</h3>
               <div className="hww-step-desc">{s.desc}</div>
             </div>
           ))}
@@ -765,12 +978,12 @@ function HowWeWorkSection() {
   );
 }
 const faqData = [
-  { q: "What is Investment Valuation?", a: "Investment valuation is the process of determining the current worth of a business or asset to make informed financial, funding, or acquisition decisions." },
-  { q: "What is the difference between investment and valuation?", a: "Investment refers to allocating capital to a business or asset, while valuation is the assessment of its financial and strategic worth." },
-  { q: "What is the valuation of a company for investment?", a: "It is the process of assessing a company’s financial, operational, and strategic value to guide investment, funding, or partnership decisions." },
-  { q: "What do you mean by investment services?", a: "Investment services guide businesses and individuals in funding strategies, capital raising, portfolio management, mergers, acquisitions, and financial decision-making for optimal returns." },
-  { q: "What are the 3 levels of valuation?", a: "The three levels are asset-based valuation, income-based valuation, and market-based valuation, each analyzing different aspects to determine a company’s worth." },
-  { q: "What valuation methods do you use?", a: "Common methods include Discounted Cash Flow (DCF), Comparable Company Analysis, Precedent Transactions, and Asset-Based Valuation, tailored to your business and industry context." },
+  { q: "What is company valuation?", a: "Company valuation is the process of determining the financial worth of a business based on factors such as revenue, assets, profitability, market position, growth potential, and financial performance. It helps businesses understand their market value for investment, mergers, fundraising, or strategic planning purposes." },
+  { q: "How do you value a company for investment?", a: "A company is valued for investment by analyzing financial statements, revenue models, cash flow, assets, liabilities, market conditions, industry trends, and growth potential. Various valuation methods are applied to determine a fair and realistic business value for investors and stakeholders" },
+  { q: "What are the main valuation methods?", a: "Common company valuation methods include Discounted Cash Flow (DCF), Comparable Company Analysis, Asset-Based Valuation, Market Capitalization Method, Earnings Multiplier Method, and Precedent Transaction Analysis. The suitable method depends on the business model, industry, and investment objectives." },
+  { q: "What is the difference between investment and valuation?", a: "Valuation determines the financial worth of a business, while investment refers to providing funds into the business for ownership, returns, or growth opportunities. Valuation helps investors assess risk, pricing, and potential returns before making investment decisions." },
+  { q: "What are investment support services?", a: "Investment support services include business valuation, financial analysis, investor presentations, due diligence support, fundraising strategy, financial forecasting, and investment readiness consulting. These services help businesses attract investors, improve financial transparency, and support successful funding opportunities" },
+  { q: "Why is valuation important before investment?", a: "Valuation helps determine a company’s fair market worth before investment discussions. It supports informed decision-making, improves negotiation clarity, reduces financial risk, and helps investors and business owners establish realistic expectations regarding ownership, funding, and future growth potential" },
 ];
 function FAQSection() {
   const [active, setActive] = useState(null);
@@ -781,12 +994,12 @@ function FAQSection() {
   return (
     <section className="faq-section">
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -836,6 +1049,7 @@ function FAQSection() {
 export default function BusinessRegistrationPage() {
   return (
     <Layout>
+      <SEOHead />
       <HeroSection />
       <ApproachSection />
       <RegistrationSection />

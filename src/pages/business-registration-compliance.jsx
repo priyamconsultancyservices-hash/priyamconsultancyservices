@@ -14,163 +14,19 @@ function SEOHead() {
   const pageUrl = "https://www.pcsbusinesssolution.com/business-registration-compliance";
   const imageUrl = "https://www.pcsbusinesssolution.com/img/business-registration-compliance.png";
 
-  const schemaData = [
-    // 1. Website Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "PCS Business Solution",
-      "url": "https://www.pcsbusinesssolution.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.pcsbusinesssolution.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    // 2. WebPage / Article Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Business Registration & Compliance Services in India | PCS Business Solution",
-      "description": "Expert business registration and compliance services in India. We handle company registration, ROC filings, GST, and all statutory compliance needs. Get started today.",
-      "image": imageUrl,
-      "author": { "@type": "Organization", "name": "PCS Business Solution" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PCS Business Solution",
-        "logo": { "@type": "ImageObject", "url": "https://www.pcsbusinesssolution.com/img/logo.png" }
-      },
-      "url": pageUrl,
-      "datePublished": "2024-01-01",
-      "dateModified": "2025-01-01"
-    },
-    // 3. Local Business Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "PCS Business Solution",
-      "description": "PCS Business Solution provides expert business registration, compliance, HR, digital marketing, and Microsoft App services across India.",
-      "url": "https://www.pcsbusinesssolution.com",
-      "logo": "https://www.pcsbusinesssolution.com/img/logo.png",
-      "image": imageUrl,
-      "telephone": "+91-XXXXXXXXXX",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Your Street Address",
-        "addressLocality": "Chennai",
-        "addressRegion": "Tamil Nadu",
-        "postalCode": "600001",
-        "addressCountry": "IN"
-      },
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "sameAs": [
-        "https://www.linkedin.com/company/pcs-business-solution",
-        "https://www.facebook.com/pcsbusinesssolution"
-      ]
-    },
-    // 4. Service / Product Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Business Registration & Compliance",
-      "provider": { "@type": "Organization", "name": "PCS Business Solution" },
-      "name": "Business Registration & Compliance Services",
-      "description": "Complete business registration and compliance management including Private Limited, LLP, OPC, GST registration, ROC filings, and statutory compliance across India.",
-      "url": pageUrl,
-      "areaServed": { "@type": "Country", "name": "India" },
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "INR",
-        "url": pageUrl
-      }
-    },
-    // 5. Image Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "ImageObject",
-      "contentUrl": imageUrl,
-      "url": pageUrl,
-      "description": "Business Registration and Compliance Services by PCS Business Solution",
-      "name": "Business Registration Compliance Banner"
-    },
-    // 6. Breadcrumb Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pcsbusinesssolution.com" },
-        { "@type": "ListItem", "position": 2, "name": "Business Registration & Compliance", "item": pageUrl }
-      ]
-    },
-    // 7. Listing Schema (ItemList of services)
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Business Registration & Compliance Services",
-      "description": "List of business registration and compliance services offered by PCS Business Solution",
-      "url": pageUrl,
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Private Limited Company Registration" },
-        { "@type": "ListItem", "position": 2, "name": "LLP Registration" },
-        { "@type": "ListItem", "position": 3, "name": "OPC Registration" },
-        { "@type": "ListItem", "position": 4, "name": "GST Registration" },
-        { "@type": "ListItem", "position": 5, "name": "ROC Compliance & Filings" },
-        { "@type": "ListItem", "position": 6, "name": "Statutory Compliance Management" }
-      ]
-    },
-    // 8. FAQ Schema
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is meant by business registration?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Business registration is the official process of giving your business a legal identity to operate lawfully and gain credibility." }
-        },
-        {
-          "@type": "Question",
-          "name": "What are compliances in business?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Compliances mean following all legal, tax, and regulatory requirements to run a business legally. They help avoid penalties and ensure smooth operations." }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the three types of compliance?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The main types are Statutory, Regulatory, and Internal Compliance, covering legal, industry, and organizational obligations." }
-        },
-        {
-          "@type": "Question",
-          "name": "What are regulatory compliance services?",
-          "acceptedAnswer": { "@type": "Answer", "text": "These services help businesses meet government and industry regulations through timely filings, documentation, and audits." }
-        },
-        {
-          "@type": "Question",
-          "name": "How many types of business registration are there?",
-          "acceptedAnswer": { "@type": "Answer", "text": "There are six main types – Sole Proprietorship, Partnership, LLP, Private Limited, OPC, and Public Limited Company." }
-        },
-        {
-          "@type": "Question",
-          "name": "Which business registration is best?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It depends on your goals – Sole Proprietorship for small setups, LLP for flexibility, and Private Limited for startups aiming to scale." }
-        }
-      ]
-    }
-  ];
-
-  return (
+   return (
     <Head>
       {/* ── Primary Meta ── */}
-      <title>Business Registration & Compliance Services in India | PCS Business Solution</title>
-      <meta name="description" content="Expert business registration and compliance services in India. We handle company registration, ROC filings, GST, and all statutory compliance needs. Start your business the right way with PCS." />
-      <meta name="keywords" content="business registration India, company registration, compliance services, ROC filing, GST registration, private limited company, LLP registration, OPC registration, statutory compliance, business compliance management, PCS Business Solution" />
-      <link rel="canonical" href={pageUrl} />
+      <title>Business Registration and Compliance Services | Company Registration</title>
+      <meta name="description" content="Efficient Business Registration and Compliance Services. Get expert support for company registration, legal documentation, and regulatory compliance. Contact us!" />
+      <meta name="keywords" content="Business Registration and Compliance, Business Registration and Compliance Services, Company Registration & Compliance in India, Business Registration Services, Company Registration and Compliances, Business License Registration, Business Registration Consultants, Statutory Compliance Services, Investment and Company Valuation, Virtual CFO Services, Accounting Services, Financial Services" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/business-registration-compliance/" />
 
       {/* ── Open Graph ── */}
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Business Registration & Compliance Services in India | PCS Business Solution" />
-      <meta property="og:description" content="Expert business registration and compliance services in India. ROC filings, GST, and full statutory compliance management." />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:title" content="Business Registration and Compliance Services | Company Registration" />
+      <meta property="og:description" content="Efficient Business Registration and Compliance Services. Get expert support for company registration, legal documentation, and regulatory compliance. Contact us!" />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/business-registration-compliance/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
 
@@ -180,12 +36,398 @@ function SEOHead() {
       <meta name="twitter:description" content="Complete business registration & compliance management in India. PCS Business Solution." />
       <meta name="twitter:image" content={imageUrl} />
 
-      {/* ── Schema JSON-LD ── */}
-      {schemaData.map((schema, i) => (
-        <script key={i} type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      ))}
+      {/* ── Breadcrumb List Schema ── */}
+      <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@id": "https://www.priyamconsultancy.com/",
+        "name": "Home"
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@id": "https://www.priyamconsultancy.com/business-registration-compliance/",
+        "name": "business-registration-compliance"
+      }
+    }
+  ]
+}
+      `}</script>
+
+      {/* ── Organization Schema ── */}
+      <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Priyam Consultancy Services",
+  "url": "www.priyamconsultancy.com/",
+  "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91 96774 44048",
+      "contactType": "customer support"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61577125709962",
+    "https://www.linkedin.com/company/priyam-consultancy-services/",
+    "https://www.instagram.com/priyam_consultancy_services/",
+    "https://x.com/services91032",
+    "https://g.co/kgs/rdTYdi6"
+  ]
+}
+      `}</script>
+
+      {/* ── Service Schema ── */}
+      <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.priyamconsultancy.com/business-registration-compliance/#service",
+  "name": "Business Registration & Compliance",
+  "serviceType": "Business Registration & Compliance Services",
+  "url": "https://www.priyamconsultancy.com/business-registration-compliance/",
+  "description": "Priyam Consultancy provides professional business registration and compliance services including company registration, statutory compliance, virtual CFO services, company valuation and investment support across India.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Priyam Consultancy Services",
+    "url": "https://www.priyamconsultancy.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+    }
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  }
+}
+      `}</script>
+
+      {/* ── Product Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Business Registration and Compliance",
+  "image": ["https://www.priyamconsultancy.com/wp-content/uploads/2025/10/business-registration-compliances.png"],
+  "description": "Streamline your business registration and compliance with expert guidance. Ensure your business stays compliant and grows with fast, accurate, and hassle-free services.",
+  "mpn": "priyamconsultancy.com",
+  "brand": {
+    "@type": "Brand",
+    "name": "Priyam Consultancy Services"
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Admin"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "4345"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.priyamconsultancy.com/business-registration-compliance/",
+    "priceCurrency": "USD",
+    "price": "00.00",
+    "priceValidUntil": "2025-12-31",
+    "itemCondition": "https://schema.org/UsedCondition",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "priyamconsultancy.com"
+    }
+  }
+}
+      `}</script>
+
+      {/* ── FAQ Schema (Business Registration) ── */}
+      <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the benefits of digital transformation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Digital transformation improves operational efficiency, enhances customer experience, and enables data-driven decision-making. It drives innovation, scalability, and long-term business growth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the challenges of digital transformation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Challenges include resistance to change, technology integration issues, skill gaps, data security concerns, and the need for clear strategic planning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Types Of Digital Marketing Services Do You Provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We offer SEO, PPC, social media marketing, content marketing, email campaigns, and analytics-driven strategies to boost online visibility and engagement."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Are Your HR Services Different From Other Agencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide tailored HR solutions, combining strategy, compliance, payroll, recruitment, and employee engagement, with a focus on seamless integration into your business operations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a company registration?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Company registration is the legal process of forming a business entity, obtaining licenses, and ensuring compliance with government regulations to operate officially."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long To See Results Through Digital Marketing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Results vary by strategy; paid campaigns may show immediate impact, while SEO and organic efforts typically take 3–6 months for measurable outcomes."
+      }
+    }
+  ]
+}
+      `}</script>
+
+      {/* ── Product Schema (Website Development) ── */}
+      <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Website Development Services",
+  "image": ["https://www.priyamconsultancy.com/wp-content/uploads/2025/08/website-development-services.webp"],
+  "description": "We provide expert web development services in India to help you transform your business. Website design and development, mobile app development, and SEO are some of our services.",
+  "mpn": "priyamconsultancy.com",
+  "brand": {
+    "@type": "Brand",
+    "name": "Priyam Consultancy Services"
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Admin"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "4327"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.priyamconsultancy.com/website-development/",
+    "priceCurrency": "USD",
+    "price": "00.00",
+    "priceValidUntil": "2025-12-31",
+    "itemCondition": "https://schema.org/UsedCondition",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "priyamconsultancy.com"
+    }
+  }
+}
+      `}</script>
+
+      {/* ── FAQ Schema (Website Development) ── */}
+      <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What Types Of Digital Marketing Services Do You Provide?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We approach each business as a whole, offering a range of services from SEO, social media marketing, Google & Meta ads, content marketing, email marketing, and performance tracking related to your business objectives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Long Does It Take To See Results Through Digital Marketing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This varies depending on the service. Generally, SEO will take 3-6 months to see any measurable impact, while paid campaigns and email marketing can help drive leads in days. We focus on providing short-term gains, while also contending with long-term objectives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will Your Team Understand My Industry?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "100%. We spend an immense amount of time becoming well acquainted with your niche market before we initiate any campaign, dissecting everything from brand voice and market dynamics to audience behavior."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How Are Your HR Services Different From Other Agencies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our specialty is matching candidates to your culture, vision, and long-term objectives, rather than simply matching candidates to roles. Our approach is people-first and performance-backed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "You Help Us With Hiring As Well As Retention?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! We do everything from the sourcing of top-tier talent to designing the onboarding, engagement, and retention strategy. We handle the full employee life-cycle so you can stay focused on your growth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do You Provide Custom HR Solutions For Small Businesses Or Start-Ups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely! We will tailor our HR services to fit your stage and size – whether it is your first team or you're scaling quickly."
+      }
+    }
+  ]
+}
+      `}</script>
+
+      {/* ── Product Schema (Healthcare) ── */}
+      <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org/",
+  "@type": "Product",
+  "name": "Smarter Healthcare Solutions",
+  "image": ["https://www.priyamconsultancy.com/wp-content/uploads/2025/10/healthcare-2048x1678.webp"],
+  "description": "Accelerate innovation in the healthcare industry with our Digital Transformation solutions. Enhance patient care, streamline operations, and boost efficiency with smart technologies.",
+  "mpn": "priyamconsultancy.com",
+  "brand": {
+    "@type": "Brand",
+    "name": "Priyam Consultancy Services"
+  },
+  "review": {
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "4.9",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Admin"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "4193"
+  },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://www.priyamconsultancy.com/healthcare/",
+    "priceCurrency": "USD",
+    "price": "00.00",
+    "priceValidUntil": "2025-12-31",
+    "itemCondition": "https://schema.org/UsedCondition",
+    "availability": "https://schema.org/InStock",
+    "seller": {
+      "@type": "Organization",
+      "name": "priyamconsultancy.com"
+    }
+  }
+}
+      `}</script>
+
+      {/* ── FAQ Schema (Data Analytics) ── */}
+      <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What do you mean by Data Analytics Services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Data Analytics Services involve collecting, processing, and interpreting data to extract meaningful insights that support better business decisions and improve performance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 4 types of Data Analytics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The four types are Descriptive, Diagnostic, Predictive, and Prescriptive Analytics, each helping businesses understand the past, analyze causes, forecast outcomes, and recommend future actions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your Data and Analytics Services scalable for future needs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, our Data Analytics Solutions are designed for scalability, ensuring they adapt seamlessly to evolving data volumes, business models, and technology advancements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Data Analytics with an example?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Data analytics is the process of analyzing raw data to find patterns or trends — for example, a retail company analyzing customer purchase data to predict future demand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the main purpose of Data Analytics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main purpose of Data Analytics is to transform data into actionable insights, helping organizations optimize operations, improve decision-making, and drive business growth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are Data Analytics Services important for businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They help businesses identify opportunities, minimize risks, enhance efficiency, and make data-backed decisions that lead to measurable growth and competitive advantage."
+      }
+    }
+  ]
+}
+      `}</script>
+
     </Head>
   );
 }
@@ -948,7 +1190,28 @@ html { scroll-behavior: smooth; }
     z-index: 2;
 }
 
-
+h2.partners-eyebrow {
+    font-size: 1rem;
+    font-weight: 900;
+}
+    h3.pr-heading {
+    color: #fff;
+    font-size: 2.7rem;
+    margin-bottom: 1.4rem;
+}
+   h3.pr-heading-process {
+    color: #000;
+    font-size: 2.7rem;
+    margin-bottom: 1.4rem;
+} 
+    h3.partners-h3-title {
+    font-size: 2.5rem;
+}
+    h3.faq-h3 {
+    font-size: 2.3rem;
+    color: #000;
+    text-align: center;
+}
 `;
 
 /* ─── Scroll reveal ─── */
@@ -965,29 +1228,29 @@ function useReveal() {
 
 /* ─── DATA ─── */
 const AP_STEPS = [
-  { icon:"📊", title:"360° Enterprise Assessment", desc:"We evaluate revenue models, assets, market positioning, and risk factors to build a complete picture of your enterprise value." },
-  { icon:"🎯", title:"Investment Strategy Translation", desc:"Our experts convert valuations into actionable strategies — identifying funding opportunities and growth-aligned partnerships." },
-  { icon:"🚀", title:"Long-Term Growth Decisions", desc:"We help you make informed decisions that align with your goals, ensuring sustainable performance and investor confidence." },
+  { icon: "📊", title: "360° Enterprise Assessment", desc: "We evaluate revenue models, assets, market positioning, and risk factors to build a complete picture of your enterprise value." },
+  { icon: "🎯", title: "Investment Strategy Translation", desc: "Our experts convert valuations into actionable strategies — identifying funding opportunities and growth-aligned partnerships." },
+  { icon: "🚀", title: "Long-Term Growth Decisions", desc: "We help you make informed decisions that align with your goals, ensuring sustainable performance and investor confidence." },
 ];
 const SERVICES = [
-  { n:"01", icon:<img src="/img/icon/business-registration-service.webp" alt="Business Registration" width="28" height="28" />, title:"Business Registration", desc:"Public Limited, Private Limited, LLP, OPC, Partnership, Sole Proprietorship services.", link: "/business-registration-compliance"},
-  { n:"02", icon:<img src="/img/icon/company-valuations-service.webp" alt="Company Valuations" width="28" height="28" />, title:"Company Valuations", desc:"Accurate valuations and strategic guidance to fuel funding, growth, and smart investments.", link: "/company-valuations" },
-  { n:"03", icon:<img src="/img/icon/statutory-compliance-service.webp" alt="Statutory Compliance" width="28" height="28" />, title:"Statutory Compliance", desc:"Ensuring timely filings, audits, and adherence to all regulatory requirements.",  link: "/statutory-compliance"},
-  { n:"04", icon:<img src="/img/icon/virtual-services.webp" alt="Virtual CFO Services" width="28" height="28" />, title:"Virtual CFO Services", desc:"Strategic financial guidance, budgeting, and reporting to drive informed business decisions.", link: "/virtual-cfo"},
-  { n:"05", icon:<img src="/img/icon/accounting-service.webp" alt="Accounting" width="28" height="28" />, title:"Accounting", desc:"Complete accounting, GST, TDS, MIS reports, payroll, and comprehensive full-scale back-office support.", link: "/accounting"},
-  { n:"06", icon:<img src="/img/icon/finances-service.webp" alt="Finances" width="28" height="28" />, title:"Finances", desc:"Banking, loans, CMA reports, audits, approvals, and complete financial support services.",  link: "/finances" },
+  { n: "01", icon: <img src="/img/icon/business-registration-service.webp" alt="Business Registration" width="28" height="28" />, title: "Business Registration", desc: "Public Limited, Private Limited, LLP, OPC, Partnership, Sole Proprietorship services.", link: "/business-registrations" },
+  { n: "02", icon: <img src="/img/icon/company-valuations-service.webp" alt="Company Valuations" width="28" height="28" />, title: "Company Valuations", desc: "Accurate valuations and strategic guidance to fuel funding, growth, and smart investments.", link: "/company-valuations-and-investment-support" },
+  { n: "03", icon: <img src="/img/icon/statutory-compliance-service.webp" alt="Statutory Compliance" width="28" height="28" />, title: "Statutory Compliance", desc: "Ensuring timely filings, audits, and adherence to all regulatory requirements.", link: "/statutory-compliance" },
+  { n: "04", icon: <img src="/img/icon/virtual-services.webp" alt="Virtual CFO Services" width="28" height="28" />, title: "Virtual CFO Services", desc: "Strategic financial guidance, budgeting, and reporting to drive informed business decisions.", link: "/virtual-cfo-services" },
+  { n: "05", icon: <img src="/img/icon/accounting-service.webp" alt="Accounting" width="28" height="28" />, title: "Accounting", desc: "Complete accounting, GST, TDS, MIS reports, payroll, and comprehensive full-scale back-office support.", link: "/accounting" },
+  { n: "06", icon: <img src="/img/icon/finances-service.webp" alt="Finances" width="28" height="28" />, title: "Finances", desc: "Banking, loans, CMA reports, audits, approvals, and complete financial support services.", link: "/finances" },
 ];
 const PROCESS_STEPS = [
-  { n:"01", icon:<img src="/img/icon/business-registration-discover.webp" alt="Discover" width="28" height="28" />, title:"Discover",      desc:"Every successful business begins with understanding. We learn your goals, model, and growth vision, analyze industry and ownership, and recommend the best entity for long-term alignment.", color:"#ed8337" },
-  { n:"02", icon:<img src="/img/icon/business-registration-assess.webp" alt="Assess and Plan" width="28" height="28" />, title:"Assess & Plan",   desc:"After understanding goals, we review legal, financial, and compliance requirements for your location and structure, mapping registrations, licenses, and taxes to create a clear, risk-aware launch roadmap.", color:"#38bdf8" },
-  { n:"03", icon:<img src="/img/icon/business-registration-register.webp" alt="Register and Establish" width="28" height="28" />, title:"Register & Establish",          desc:"Our experts prepare and file all documents—name approval, incorporation, PAN, TAN, GST, and professional tax—ensuring accuracy, transparency, and efficient, confusion-free legal establishment for your business.", color:"#34d399" },
-  { n:"04", icon:<img src="/img/icon/business-registration-comply.webp" alt="Comply and Maintain" width="28" height="28" />, title:"Comply & Maintain",      desc:"We manage statutory filings, annual returns, renewals, ROC and tax submissions, meeting deadlines, maintaining records, and keeping your business compliant, audit-ready, and legally strong year-round.", color:"#a855f7" },
-  { n:"05", icon:<img src="/img/icon/business-registration-monitor.webp" alt="Monitor and Update" width="28" height="28" />, title:"Monitor & Update",   desc:"Regulations evolve, and so do you. We monitor changes, update registrations, amend records, and advise proactively, ensuring ongoing compliance, accuracy, and alignment with your business growth.", color:"#f6ad55" },
+  { n: "01", icon: <img src="/img/icon/business-registration-discover.webp" alt="Discover" width="28" height="28" />, title: "Discover", desc: "Every successful business begins with understanding. We learn your goals, model, and growth vision, analyze industry and ownership, and recommend the best entity for long-term alignment.", color: "#ed8337" },
+  { n: "02", icon: <img src="/img/icon/business-registration-assess.webp" alt="Assess and Plan" width="28" height="28" />, title: "Assess & Plan", desc: "After understanding goals, we review legal, financial, and compliance requirements for your location and structure, mapping registrations, licenses, and taxes to create a clear, risk-aware launch roadmap.", color: "#38bdf8" },
+  { n: "03", icon: <img src="/img/icon/business-registration-register.webp" alt="Register and Establish" width="28" height="28" />, title: "Register & Establish", desc: "Our experts prepare and file all documents—name approval, incorporation, PAN, TAN, GST, and professional tax—ensuring accuracy, transparency, and efficient, confusion-free legal establishment for your business.", color: "#34d399" },
+  { n: "04", icon: <img src="/img/icon/business-registration-comply.webp" alt="Comply and Maintain" width="28" height="28" />, title: "Comply & Maintain", desc: "We manage statutory filings, annual returns, renewals, ROC and tax submissions, meeting deadlines, maintaining records, and keeping your business compliant, audit-ready, and legally strong year-round.", color: "#a855f7" },
+  { n: "05", icon: <img src="/img/icon/business-registration-monitor.webp" alt="Monitor and Update" width="28" height="28" />, title: "Monitor & Update", desc: "Regulations evolve, and so do you. We monitor changes, update registrations, amend records, and advise proactively, ensuring ongoing compliance, accuracy, and alignment with your business growth.", color: "#f6ad55" },
 ];
 const WHY_CARDS = [
-  { icon:<img src="/img/icon/professional-credibility.webp" alt="Professional Credibility" width="28" height="28" />, title:"Professional Credibility", desc:"Build strong trust with clients and partners through a verified and professionally registered business presence." },
-  { icon:<img src="/img/icon/financial-advantages.webp" alt="Financial Advantages" width="28" height="28" />, title:"Financial Advantages", desc:"Access loans, funding, and tax benefits that support smoother financial growth and scalability." },
-  { icon:<img src="/img/icon/compliance-assurance.webp" alt="Compliance Assurance" width="28" height="28" />, title:"Compliance Assurance", desc:"Stay fully compliant with timely filings, updates, and expert monitoring of regulatory requirements." },
+  { icon: <img src="/img/icon/professional-credibility.webp" alt="Professional Credibility" width="28" height="28" />, title: "Professional Credibility", desc: "Build strong trust with clients and partners through a verified and professionally registered business presence." },
+  { icon: <img src="/img/icon/financial-advantages.webp" alt="Financial Advantages" width="28" height="28" />, title: "Financial Advantages", desc: "Access loans, funding, and tax benefits that support smoother financial growth and scalability." },
+  { icon: <img src="/img/icon/compliance-assurance.webp" alt="Compliance Assurance" width="28" height="28" />, title: "Compliance Assurance", desc: "Stay fully compliant with timely filings, updates, and expert monitoring of regulatory requirements." },
 ];
 
 /* ═══════════════════════════════════════════════════
@@ -995,10 +1258,10 @@ const WHY_CARDS = [
 ═══════════════════════════════════════════════════ */
 function HeroSection() {
   return (
-      <section className="hero" id="hero">
-      
+    <section className="hero" id="hero">
+
       <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot"/>Business Registration Compliance</div>
+        <div className="h-badge"><div className="badge-dot" />Business Registration Compliance</div>
         <h1 className="hero-heading">
           Simple Registration
           Made <span className="hl lined">Strong  business</span>, Compliance
@@ -1028,7 +1291,7 @@ function HeroSection() {
 ═══════════════════════════════════════════════════ */
 
 
- function ApproachSection() {
+function ApproachSection() {
 
   const [form, setForm] = useState({
     name: "",
@@ -1054,7 +1317,7 @@ function HeroSection() {
       company: form.company,
       message: form.msg,
 
-       url: window.location.href, 
+      url: window.location.href,
     };
 
     emailjs
@@ -1087,20 +1350,20 @@ function HeroSection() {
       <div className="ap-inner">
 
         {/* LEFT CONTENT */}
-     <div className="ap-left">
-            <div className="partners-header1">
-        <div className="partners-eyebrow" style={{marginBottom: '20px', textAlign:'start'}}>Our Approach in</div>
+        <div className="ap-left">
+          <div className="partners-header1">
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
 
-      </div>
+          </div>
           <h2 className="ap-heading">Business  <span>Registration & Compliance</span></h2>
           <p className="ap-intro">
-Every great business starts with a strong foundation. We help you register, comply, and launch with confidence. You won’t face confusion, complexity, or red tape that can hold startups back.
+            Every great business starts with a strong foundation. We help you register, comply, and launch with confidence. You won’t face confusion, complexity, or red tape that can hold startups back.
 
           </p>
           <p className="ap-intro">
-       We take care of everything from choosing the right business structure to handling legal filings, licenses, and documentation. Our approach ensures a smooth, hassle-free setup process. This allows you to stay focused on your ideas, innovation, and growth</p>
+            We take care of everything from choosing the right business structure to handling legal filings, licenses, and documentation. Our approach ensures a smooth, hassle-free setup process. This allows you to stay focused on your ideas, innovation, and growth</p>
           <p className="ap-intro">
-           As regulations evolve, we stay ahead for you by monitoring changes and ensuring ongoing compliance. Your business remains protected, updated, and future-ready. Simple, seamless, and reliable—built for lasting success.
+            As regulations evolve, we stay ahead for you by monitoring changes and ensuring ongoing compliance. Your business remains protected, updated, and future-ready. Simple, seamless, and reliable—built for lasting success.
 
           </p>
         </div>
@@ -1110,7 +1373,7 @@ Every great business starts with a strong foundation. We help you register, comp
           <div className="ap-form-card">
 
             <div className="form-card-eyebrow">
-              <span className="form-card-eyebrow-line"/>Your Growth, Our Mission<span className="form-card-eyebrow-line"/>
+              <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
             </div>
             <div className="form-card-title">
               Get Your <span>Free</span> Quote
@@ -1123,7 +1386,7 @@ Every great business starts with a strong foundation. We help you register, comp
 
                 <div className="fl-group">
                   <label className="fl-label">Your Name</label>
-                  <div style={{position:"relative"}}>
+                  <div style={{ position: "relative" }}>
                     <span className="fl-icon">👤</span>
                     <input
                       className="fl-input"
@@ -1139,7 +1402,7 @@ Every great business starts with a strong foundation. We help you register, comp
 
                 <div className="fl-group">
                   <label className="fl-label">Company</label>
-                  <div style={{position:"relative"}}>
+                  <div style={{ position: "relative" }}>
                     <span className="fl-icon">🏢</span>
                     <input
                       className="fl-input"
@@ -1156,7 +1419,7 @@ Every great business starts with a strong foundation. We help you register, comp
 
               <div className="fl-group">
                 <label className="fl-label">Email Address</label>
-                <div style={{position:"relative"}}>
+                <div style={{ position: "relative" }}>
                   <span className="fl-icon">✉️</span>
                   <input
                     className="fl-input"
@@ -1175,7 +1438,7 @@ Every great business starts with a strong foundation. We help you register, comp
                 <div className="phone-row">
                   <div className="phone-flag">
                     <span className="phone-flag-icon">📞</span>
-                  
+
                   </div>
                   <input
                     className="fl-input"
@@ -1184,8 +1447,8 @@ Every great business starts with a strong foundation. We help you register, comp
                     placeholder="Mobile number"
                     value={form.phone}
                     onChange={handleChange}
-  maxLength="10"
-  pattern="[0-9]{10}"
+                    maxLength="10"
+                    pattern="[0-9]{10}"
                     required
                   />
                 </div>
@@ -1193,15 +1456,15 @@ Every great business starts with a strong foundation. We help you register, comp
 
               <div className="fl-group textarea-group">
                 <label className="fl-label">Message</label>
-                <div style={{position:"relative"}}>
-                  <span className="fl-icon" style={{top:"0.9rem",transform:"none"}}>💬</span>
+                <div style={{ position: "relative" }}>
+                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
                   <textarea
                     className="fl-textarea"
                     name="msg"
                     placeholder="Tell us about your business needs..."
                     value={form.msg}
                     onChange={handleChange}
-                    
+
                   />
                 </div>
               </div>
@@ -1229,32 +1492,32 @@ Every great business starts with a strong foundation. We help you register, comp
 function ServicesSection() {
   return (
     <section className="services" id="services">
-      <div className="sep-line"/>
+      <div className="sep-line" />
       <div className="svc-header reveal">
-               <div className="partners-eyebrow" style={{marginBottom: '20px', textAlign:'start'}}>Our Specialized Business Registration & Compliance Services</div>
+        <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Business Registration & Compliance Services</div>
 
         <h2>Simplified Setup. <em> Seamless Compliance. </em>Growth Assured.</h2>
         <p>From Registration to Reporting, We Deliver End-to-End Solutions That Keep Your Business On Track.</p>
       </div>
-      <div className="svc-grid reveal" style={{transitionDelay:"0.1s"}}>
-   {SERVICES.map((item, i) => (
-    <div className="svc-card" key={i}>
+      <div className="svc-grid reveal" style={{ transitionDelay: "0.1s" }}>
+        {SERVICES.map((item, i) => (
+          <div className="svc-card" key={i}>
 
-      <div className="svc-num">{item.n}</div>
+            <div className="svc-num">{item.n}</div>
 
-      <div className="svc-icon">{item.icon}</div>
+            <div className="svc-icon">{item.icon}</div>
 
-      <h3 className="svc-title">{item.title}</h3>
+            <h3 className="svc-title">{item.title}</h3>
 
-      <p className="svc-desc">{item.desc}</p>
+            <p className="svc-desc">{item.desc}</p>
 
-      {/* 🔥 NEW BUTTON */}
-      <Link to={item.link} className="svc-btn">
-        Discover More →
-      </Link>
+            {/* 🔥 NEW BUTTON */}
+            <Link to={item.link} className="svc-btn">
+              Discover More →
+            </Link>
 
-    </div>
-  ))}
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -1264,19 +1527,19 @@ function ServicesSection() {
    SECTION 4 — PROCESS (vertical timeline card design)
 ═══════════════════════════════════════════════════ */
 function ProcessSection() {
-  const TAGS = ["Discover","Assess & Plan","Register & Establish","Comply & Maintain","Monitor & Update"];
+  const TAGS = ["Discover", "Assess & Plan", "Register & Establish", "Comply & Maintain", "Monitor & Update"];
 
   return (
     <section className="process" id="process">
-      <div className="sep-line"/>
+      <div className="sep-line" />
       <div className="proc-header reveal">
-             <div className="partners-eyebrow" style={{marginBottom: '20px', textAlign:'start'}}>Our Proven Business Registration and Compliance Process</div>
+        <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start', color: '#ed8337' }}>Our Proven Business Registration and Compliance Process</h2>
 
-        <h2>Start Smart. <em>Stay Compliant.</em> Grow Fast.</h2>
+        <h3 className="pr-heading-process">Start Smart. <em style={{ color: '#ed8337' }}>Stay Compliant.</em> Grow Fast.</h3>
         <p>From registration to compliance management, we deliver structured, reliable, and efficient solutions for your business success.</p>
       </div>
 
-      <div className="proc-timeline reveal" style={{transitionDelay:"0.1s"}}>
+      <div className="proc-timeline reveal" style={{ transitionDelay: "0.1s" }}>
         {PROCESS_STEPS.map((step, idx) => (
           <div className="proc-tl-row" key={step.n}>
             {/* Big ghost number */}
@@ -1284,8 +1547,8 @@ function ProcessSection() {
 
             {/* Spine: dot + vertical line */}
             <div className="proc-tl-spine">
-              <div className="proc-tl-dot"/>
-              <div className="proc-tl-line"/>
+              <div className="proc-tl-dot" />
+              <div className="proc-tl-line" />
             </div>
 
             {/* Card */}
@@ -1294,7 +1557,7 @@ function ProcessSection() {
                 <div className="proc-tl-icon-box">{step.icon}</div>
                 <div className="proc-tl-text">
                   <div className="proc-tl-badge">Step {step.n}</div>
-                  <div className="proc-tl-title">{step.title}</div>
+                  <h4 className="proc-tl-title">{step.title}</h4>
                   <p className="proc-tl-desc">{step.desc}</p>
                 </div>
                 <div className="proc-tl-tag">{TAGS[idx]}</div>
@@ -1313,33 +1576,32 @@ function ProcessSection() {
 function WhySection() {
   return (
     <section className="why" id="why">
-      <div className="sep-line"/>
-      <div className="why-diagonal"/>
+      <div className="sep-line" />
+      <div className="why-diagonal" />
       <div className="why-inner">
         <div className="why-left1 reveal">
-          <div className="partners-eyebrow" style={{marginBottom: '20px', textAlign:'start'}}>Why Choose Us</div>
-          <h2>Why You Should Choose us for <em style={{color: '#ed8337'}}> Business Registration</em> & Compliance Services</h2>
-          <p style={{marginTop: '20px'}}>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why Choose Us</h2>
+          <h3 className="partners-h3-title">Why You Should Choose us for <em style={{ color: '#ed8337' }}> Business Registration</em> & Compliance Services</h3>
+          <p style={{ marginTop: '20px' }}>
             Starting your business the right way means setting a strong foundation from day one. Registering your business not only gives it a legal identity but also adds credibility, unlocks financial opportunities, and safeguards you from future compliance issues. With expert registration support, you save time, avoid errors, and ensure your business is ready to grow without roadblocks.
           </p>
 
           <a href="#approach" className="why-cta">
             Get Started Free
-            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
           </a>
         </div>
 
-        <div className="why-right reveal" style={{transitionDelay:"0.12s"}}>
+        <div className="why-right reveal" style={{ transitionDelay: "0.12s" }}>
           <div className="why-card tall">
             <div className="why-card-icon"><img src="/img/icon/business-registration-legal.webp" alt="Legal Identity and Protection" width="28" height="28" /></div>
-            <div className="why-card-title">Legal Identity & Protection</div>
+            <h3 className="why-card-title">Legal Identity & Protection</h3>
             <p className="why-card-desc">Secure your business with proper registration, ensuring legal recognition and complete protection from risks.</p>
-         
           </div>
-          {WHY_CARDS.map(c=>(
+          {WHY_CARDS.map(c => (
             <div className="why-card" key={c.title}>
               <div className="why-card-icon">{c.icon}</div>
-              <div className="why-card-title">{c.title}</div>
+              <h3 className="why-card-title">{c.title}</h3>
               <p className="why-card-desc">{c.desc}</p>
             </div>
           ))}
@@ -1351,12 +1613,12 @@ function WhySection() {
 
 
 const faqData = [
-  { q: "What is meant by business registration?", a: "Business registration is the official process of giving your business a legal identity to operate lawfully and gain credibility." },
-  { q: "What are compliances in business?", a: "Compliances mean following all legal, tax, and regulatory requirements to run a business legally. They help avoid penalties and ensure smooth operations." },
-  { q: "What are the three types of compliance?", a: "The main types are Statutory, Regulatory, and Internal Compliance, covering legal, industry, and organizational obligations." },
-  { q: "What are regulatory compliance services?", a: "These services help businesses meet government and industry regulations through timely filings, documentation, and audits." },
-  { q: "How many types of business registration are there?", a: "There are six main types – Sole Proprietorship, Partnership, LLP, Private Limited, OPC, and Public Limited Company." },
-  { q: "Which business registration is best?", a: "It depends on your goals – Sole Proprietorship for small setups, LLP for flexibility, and Private Limited for startups aiming to scale." },
+  { q: "What is business compliance?", a: "Business compliance refers to following all legal, regulatory, financial, and operational requirements applicable to a company. This includes registrations, tax filings, labor laws, statutory reporting, and industry-specific regulations necessary to ensure smooth, lawful, and risk-free business operations." },
+  { q: "What documents are needed for business registration?", a: " Business registration documents typically include PAN card, Aadhaar card, address proof, passport-size photographs, bank details, and registered office proof. Additional documents may vary depending on the business structure, such as proprietorship, partnership, LLP, or private limited company registration requirements." },
+  { q: "Why is compliance important for a business?", a: "Compliance helps businesses operate legally, avoid penalties, maintain financial transparency, and build credibility with clients, investors, and government authorities. Proper compliance management also supports smooth business operations, reduces legal risks, and creates a strong foundation for sustainable long-term growth and expansion." },
+  { q: "What are the annual compliance requirements for a company?", a: " Annual compliance requirements may include income tax filing, GST returns, ROC filings, financial statement submissions, board resolutions, statutory audits, TDS filings, payroll compliance, and maintenance of legal records. Requirements vary based on company structure, industry, and applicable government regulations." },
+  { q: "Can you help with both registration and compliance?", a: " Yes, we provide complete support for business registration and ongoing compliance management. Our services include company incorporation, GST registration, licensing, ROC filings, tax compliance, payroll compliance, documentation management, and statutory reporting to ensure smooth and legally compliant business operations." },
+  { q: "What are the types of compliance?", a: "Business compliance includes statutory compliance, tax compliance, labor law compliance, corporate compliance, environmental compliance, industry-specific regulatory compliance, and financial reporting compliance. Each type ensures businesses operate according to applicable laws, regulations, and operational standards within their respective industries." },
 ];
 
 
@@ -1367,16 +1629,15 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
- 
+
     <section className="faq-section">
-<div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions
-</div>
+      <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
+            <h2 className="partners-eyebrow">Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -1428,8 +1689,8 @@ export default function PCSPage() {
   useReveal();
   return (
     <Layout
-      title="Business Registration & Compliance Services in India | PCS Business Solution"
-      description="Expert business registration and compliance services in India. We handle company registration, ROC filings, GST, and all statutory compliance needs."
+      title="Business Registration and Compliance Services | Company Registration "
+      description="Efficient Business Registration and Compliance Services. Get expert support for company registration, legal documentation, and regulatory compliance. Contact us! "
     >
       <SEOHead />
       <style>{css}</style>
