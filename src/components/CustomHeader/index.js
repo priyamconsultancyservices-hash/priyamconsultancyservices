@@ -117,7 +117,7 @@ export default function CustomHeader() {
         { label: 'Textile',                        href: '/textile',                         icon: <MenuIcon name="textile-icon"       /> },
         { label: 'Healthcare',                     href: '/healthcare',                      icon: <MenuIcon name="healthcare-icon"    /> },
         { label: 'Construction',                   href: '/construction',                    icon: <MenuIcon name="construction-icon"  /> },
-        { label: 'Retail & E-Commerce',            href: '/retail',                          icon: <MenuIcon name="retail-icon"        /> },
+        { label: 'Retail & E-Commerce',            href: '/retail-ecommerce',                          icon: <MenuIcon name="retail-icon"        /> },
         { label: 'Manufacturing',                  href: '/manufacturing',                   icon: <MenuIcon name="manufacturing-icon" /> },
         { label: 'Tourism and Hospitality',        href: '/tourism-and-hospitality',         icon: <MenuIcon name="tourism-icon"       /> },
         { label: 'IT / IT Services',               href: '/it-or-it-services',               icon: <MenuIcon name="it-service-icon"            /> },

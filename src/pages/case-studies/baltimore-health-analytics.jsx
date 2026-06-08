@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="Baltimore Health Analytics Recruitment Case Study | PCS" description="PCS helped Baltimore Health Analytics streamline recruitment, reduce hiring delays, and onboard qualified healthcare analytics professionals.  ">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>Baltimore Health Analytics Recruitment Case Study | PCS</title>
+        <meta name="description" content="PCS helped Baltimore Health Analytics streamline recruitment, reduce hiring delays, and onboard qualified healthcare analytics professionals.  " />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/baltimore-health-analytics/" />
+        <meta property="og:title" content="Baltimore Health Analytics Recruitment Case Study | PCS" />
+        <meta property="og:description" content="PCS helped Baltimore Health Analytics streamline recruitment, reduce hiring delays, and onboard qualified healthcare analytics professionals.  " />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/baltimore-health-analytics/" />
       </Head>
       <style>{styles}</style>
 
@@ -99,7 +99,7 @@ export default function CaseStudy() {
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">Recruitment Support for a US-Based Healthcare Analytics Company
-</h1>
+            </h1>
           </div>
         </section>
 
@@ -113,12 +113,12 @@ export default function CaseStudy() {
               <img src="/img/case-study-baltimore-about.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
             </div>
 
-     
- <div className="detail-section">
+
+            <div className="detail-section">
               <h2>About Baltimore Health Analytics
-</h2>
-              <p>Baltimore Health Analytics is a healthcare-focused analytics company supporting HEDIS consulting, Medicare Advantage operations, and data-driven healthcare solutions. The company works with healthcare organizations to improve operational efficiency, reporting accuracy, and analytical decision-making through specialized healthcare expertise.
-</p>
+              </h2>
+              <p>
+                Baltimore Health Analytics is a healthcare analytics company specializing in HEDIS consulting, Medicare Advantage operations, and data-driven healthcare solutions. The company helps healthcare organizations improve reporting accuracy, operational efficiency, compliance, and decision-making through specialized analytics expertise and industry-focused consulting services</p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
@@ -128,36 +128,36 @@ export default function CaseStudy() {
             <div className="detail-section">
               <h2>The Challenge</h2>
               <p>The company needed candidates with both technical expertise and healthcare domain knowledge. Identifying the right professionals quickly while maintaining recruitment quality and operational efficiency was essential for ongoing project delivery.
-</p>
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Understood operational requirements and hiring expectations in detail</li>
-              <li>Focused on sourcing profiles aligned with healthcare analytics expertise</li>
-              <li>Utilized professional reference networks and LinkedIn connections for targeted hiring
-</li>
-              <li>Screened candidates based on technical and healthcare domain relevance
-</li>
-              <li>Managed interview coordination and recruitment communication end-to-end
-</li>
-<li>Delivered immediate replacement hiring support for critical operational roles
-</li>
+                <li>Understood operational requirements and hiring expectations in detail</li>
+                <li>Focused on sourcing profiles aligned with healthcare analytics expertise</li>
+                <li>Utilized professional reference networks and LinkedIn connections for targeted hiring
+                </li>
+                <li>Screened candidates based on technical and healthcare domain relevance
+                </li>
+                <li>Managed interview coordination and recruitment communication end-to-end
+                </li>
+                <li>Delivered immediate replacement hiring support for critical operational roles
+                </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
               <p>Helped Baltimore Health Analytics successfully onboard suitable candidates through a smooth and efficient recruitment process. By leveraging professional networks and targeted sourcing strategies, the company achieved faster replacement hiring, reduced recruitment delays, and maintained uninterrupted operational continuity across critical healthcare analytics functions.
-</p>
+              </p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like Baltimore Health Analytics
-?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+                ?</h3>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
 
@@ -170,8 +170,8 @@ export default function CaseStudy() {
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>Baltimore Health Analytics
-</strong></p>
-                 <p>Service: </p>
+              </strong></p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">Recruitment Service</span>
 
@@ -183,59 +183,57 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-            </div>
 
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+            </div>
           </div>
-
         </div>
       </div>
     </Layout>

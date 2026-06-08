@@ -81,102 +81,95 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="URCTS Engineering Digital Transformation Case Study " description="We created a professional digital presence for URCTS through branding, website development, & SEO optimization, improving credibility, visibility, and user engagement.">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>URCTS Engineering Digital Transformation Case Study </title>
+        <meta name="description" content="We created a professional digital presence for URCTS through branding, website development, & SEO optimization, improving credibility, visibility, and user engagement." />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/urcts/" />
+        <meta property="og:title" content="URCTS Engineering Digital Transformation Case Study " />
+        <meta property="og:description" content="We created a professional digital presence for URCTS through branding, website development, & SEO optimization, improving credibility, visibility, and user engagement." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/urcts/" />
       </Head>
       <style>{styles}</style>
 
       <div className="detail-wrap">
-
         {/* ── BANNER ── */}
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">Building a Strong Brand Identity & Digital Presence for an Engineering Firm
-</h1>
+            </h1>
           </div>
         </section>
 
         {/* ── BODY ── */}
         <div className="detail-page-body">
-
           {/* LEFT */}
           <div className="detail-left">
-
             <div className="detail-hero-img">
               <img src="/img/case-study-urcts-about.webp" alt="Building a Strong Brand Identity & Digital Presence for an Engineering Firm" />
             </div>
 
-     
- <div className="detail-section">
+            <div className="detail-section">
               <h2>About URCTS
-</h2>
-              <p>URCTS is a global engineering solutions provider serving Oil & Gas, industrial, and infrastructure sectors with multidisciplinary expertise. Established in 2023, the company builds on the engineering legacy of URC Constructions (P) Ltd. URCTS delivers integrated solutions from concept to commissioning with a focus on precision, compliance, and operational excellence. With experience across India, the Middle East, Europe, and the USA, the company supports complex engineering projects with scalable and reliable execution. 
-</p>
+              </h2>
+              <p>
+                URCTS is a global engineering solutions provider serving the Oil & Gas, industrial, and infrastructure sectors. Backed by the legacy of URC Constructions, the company delivers integrated engineering solutions from concept to commissioning, supporting complex projects across India, the Middle East, Europe, and the USA.</p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>URCTS came to establish a professional digital identity that accurately reflected its engineering capabilities, industry expertise, and global operational presence. The objective was to create a structured and SEO-friendly digital platform capable of strengthening credibility and improving visibility across competitive engineering markets. 
-</p>
+              <p>
+                URCTS came to establish a professional digital identity that accurately reflected its engineering capabilities, industry expertise, and global operational presence. The objective was to create a structured and SEO-friendly digital platform capable of strengthening credibility and improving visibility across competitive engineering markets.</p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>Despite strong technical expertise and international project exposure, URCTS lacked a unified brand presentation and a professionally structured online presence. The company needed clearer messaging, improved visual consistency, SEO-focused website content, and a modern platform to effectively showcase its sectors, engineering services, and project capabilities. 
-</p>
+              <p>
+                Despite its strong engineering capabilities and global project experience, URCTS required a more cohesive brand identity and digital presence. The company sought clearer communication, consistent branding, SEO-optimised website content, and a modern platform to effectively showcase its services, expertise, and project portfolio.</p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Developed a cohesive brand identity with consistent visual and communication guidelines
-</li>
-              <li>Crafted SEO-friendly website content aligned with engineering industry search intent
-</li>
-              <li>Structured the website around sectors, capabilities, and project expertise for better navigation
-</li>
-              <li>Designed a clean and user-focused interface to improve accessibility and engagement
-</li>
-              <li>Built conversion-oriented service pages to strengthen inquiry opportunities
-</li>
-<li> Optimized on-page SEO elements to improve digital visibility and search discoverability
-</li>
+                <li>Developed a cohesive brand identity with consistent visual and communication guidelines
+                </li>
+                <li>Crafted SEO-friendly website content aligned with engineering industry search intent
+                </li>
+                <li>Structured the website around sectors, capabilities, and project expertise for better navigation
+                </li>
+                <li>Designed a clean and user-focused interface to improve accessibility and engagement
+                </li>
+                <li>Built conversion-oriented service pages to strengthen inquiry opportunities
+                </li>
+                <li> Optimized on-page SEO elements to improve digital visibility and search discoverability
+                </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
-              <p>We delivered a modern and professionally structured digital presence that strengthened URCTS’s brand positioning and industry credibility. The SEO-optimized website improved visibility, enhanced user engagement, and enabled the company to present its engineering expertise more effectively across global markets. 
-</p>
+              <p>We delivered a modern and professionally structured digital presence that strengthened URCTS’s brand positioning and industry credibility. The SEO-optimized website improved visibility, enhanced user engagement, and enabled the company to present its engineering expertise more effectively across global markets.
+              </p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like URCTS?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
-
           </div>
 
           {/* SIDEBAR */}
           <div className="detail-sidebar">
-
             {/* About */}
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>URCTS</strong></p>
-               <p>Service: </p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">Website Development</span>
                 <span className="sidebar-tag">SEO</span>
-
               </div>
             </div>
 
@@ -185,59 +178,57 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-            </div>
 
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+            </div>
           </div>
-
         </div>
       </div>
     </Layout>

@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="StarHealth Case Study: Bulk Hiring & Recruitment Growth " description="PCS reduced StarHealth's hiring time by 45% and generated 300–400 scheduled interviews through targeted recruitment and Meta Ads campaigns.">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>StarHealth Case Study: Bulk Hiring & Recruitment Growth </title>
+        <meta name="description" content="PCS reduced StarHealth's hiring time by 45% and generated 300–400 scheduled interviews through targeted recruitment and Meta Ads campaigns." />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/starhealth/" />
+        <meta property="og:title" content="StarHealth Case Study: Bulk Hiring & Recruitment Growth " />
+        <meta property="og:description" content="PCS reduced StarHealth's hiring time by 45% and generated 300–400 scheduled interviews through targeted recruitment and Meta Ads campaigns." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/starhealth/" />
       </Head>
       <style>{styles}</style>
 
@@ -99,7 +99,7 @@ export default function CaseStudy() {
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">Bulk Recruitment Support for a Leading Insurance Brand
-</h1>
+            </h1>
           </div>
         </section>
 
@@ -113,52 +113,54 @@ export default function CaseStudy() {
               <img src="/img/case-study-starhealth-about.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
             </div>
 
-     
- <div className="detail-section">
+
+            <div className="detail-section">
               <h2>About StarHealth
-</h2>
-              <p>StarHealth is a prominent insurance provider offering comprehensive health solutions across India, supported by a large and diverse workforce.
-</p>
+              </h2>
+              <p>
+                Star Health is one of India's leading health insurance providers, offering comprehensive insurance solutions for individuals, families, and businesses. With a strong nationwide presence and a large workforce, the company is committed to delivering accessible healthcare coverage, customer service excellence, and financial protection.</p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>StarHealth needed large-scale recruitment support to rapidly expand its regional workforce and meet pressing hiring demands through a reliable local recruitment partner.
-</p>
+              <p>
+                Star Health required large-scale recruitment support to rapidly expand its regional workforce and meet growing business demands. The company sought a dependable recruitment partner capable of sourcing qualified candidates efficiently while maintaining hiring quality, speed, and workforce readiness across multiple locations.</p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>The company required fast, bulk hiring without sacrificing candidate quality. Limited local recruitment channels and tight timelines added pressure to the process.
-</p>
+              <p>
+                The company needed to execute large-scale hiring within strict timelines while maintaining candidate quality and recruitment efficiency. Limited access to local talent networks and increasing workforce demands created challenges, requiring a structured recruitment approach to support rapid expansion and operational continuity.
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Managed bulk recruitment end-to-end
-</li>
-              <li>Leveraged strong local talent networks in Coimbatore
-</li>
-              <li>Coordinated sourcing, screening, and scheduling efficiently
-</li>
-              <li>Ran Meta Ads that generated 300–400 scheduled interviews
-</li>
-              <li>Reduced hiring time by 45% despite bulk scale
-</li>
+                <li>Managed bulk recruitment end-to-end
+                </li>
+                <li>Leveraged strong local talent networks in Coimbatore
+                </li>
+                <li>Coordinated sourcing, screening, and scheduling efficiently
+                </li>
+                <li>Ran Meta Ads that generated 300–400 scheduled interviews
+                </li>
+                <li>Reduced hiring time by 45% despite bulk scale
+                </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
-              <p>PCS enabled StarHealth to complete its large-scale hiring swiftly, achieving a 45% reduction in recruitment time. The efficiency improved significantly, with 300–400 interviews conducted efficiently.
-</p>
+              <p>
+                PCS helped Star Health successfully execute large-scale recruitment campaigns, reducing hiring turnaround time by 45%. Through streamlined sourcing and screening processes, the company efficiently conducted 300–400 interviews, improved recruitment productivity, and supported rapid workforce expansion without compromising candidate quality.
+              </p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like StarHealth
-?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+                ?</h3>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
 
@@ -171,11 +173,11 @@ export default function CaseStudy() {
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>StarHealth
-</strong></p>
-                   <p>Service: </p>
+              </strong></p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">Recruitment Service</span>
-                
+
               </div>
             </div>
 
@@ -184,59 +186,57 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-            </div>
 
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+            </div>
           </div>
-
         </div>
       </div>
     </Layout>

@@ -4,7 +4,87 @@ import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
 const banner = "/img/sterlocare.png";
+import Head from '@docusaurus/Head';
 
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/sterlo-care-partners/";
+  const imageUrl = "https://www.priyamconsultancy.com/img/microsoft-app.png";
+
+  const schemaData = [
+    {
+      
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   {
+     "@type":"ListItem",
+     "position":1,
+     "item":{
+       "@id":"https://www.priyamconsultancy.com/",
+       "name":"Home"
+     }
+   },
+   {
+     "@type":"ListItem",
+     "position":2,
+     "item":{
+       "@id":"https://www.priyamconsultancy.com/sterlo-care-partners/",
+       "name":"sterlo-care-partners"
+     }
+   }
+ ]
+
+
+    },
+   {
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Priyam Consultancy Services",
+ "url": "https://www.priyamconsultancy.com/",
+ "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+ "contactPoint": [
+   {
+     "@type": "ContactPoint",
+     "telephone": "+91 96774 44048",
+     "contactType": "customer support"
+   }
+ ],
+ "sameAs": [
+   "https://www.facebook.com/profile.php?id=61577125709962",
+   "https://www.linkedin.com/company/priyam-consultancy-services/",
+   "https://www.instagram.com/priyam_consultancy_services/",
+   "https://x.com/services91032",
+   "https://g.co/kgs/rdTYdi6"
+ ]
+
+    },
+  ];
+
+  return (
+    <Head>
+      <title>Official SterloCare Partner | SterloCare Implementation Partner for PCS </title>
+      <meta name="description" content="SterloCare's official partner for PCS offering implementation, integration, and support services that streamline processes and increase operational efficiency. " />
+      <meta name="keywords" content="Official SterlocCare Partner, SterlocCare Implementation Partner, SterlocCare Solution Partners, Affiliate SterlocCare Partners, Official SterlocCare Partner Program " />
+      <link rel="canonical" href={pageUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Official SterloCare Partner | SterloCare Implementation Partner for PCS " />
+      <meta property="og:description" content="SterloCare's official partner for PCS offering implementation, integration, and support services that streamline processes and increase operational efficiency. " />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content=" Microsoft App" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Official SterloCare Partner | SterloCare Implementation Partner for PCS " />
+      <meta name="twitter:description" content="SterloCare's official partner for PCS offering implementation, integration, and support services that streamline processes and increase operational efficiency. " />
+      <meta name="twitter:image" content={imageUrl} />
+      {schemaData.map((schema, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
+    </Head>
+  );
+}
 /* ═══════════════════════════════════════════
    GLOBAL STYLES
 ═══════════════════════════════════════════ */
@@ -122,7 +202,8 @@ function HeroSection() {
           </h1>
           <p className="seo-sub">
 Empowering healthcare organizations with end-to-end digital transformation.
-SterloCare modernizes patient experience, care quality, odernizes patient experience, care quality, and operational performance helping hospitals achieve efficiency, compliance, and excellence through automation and real-time intelligence.
+SterloCare modernizes patient experience, care quality, and operational performance helping hospitals achieve efficiency, compliance, and excellence through automation and real-time intelligence.
+
           </p>
           <div className="seo-actions">
             <a className="seo-btn-fill" href="#approach"><span>Get Free SEO Audit</span><div className="seo-btn-arr">›</div></a>
@@ -217,9 +298,7 @@ SterloCare is a comprehensive healthcare software platform designed to digitize 
           <p className="ap2-intro">
 The platform enables hospitals and healthcare networks to deliver standardized, data-driven, and patient-centric services, aligning care delivery with accreditation standards such as NABH and JCI. PCS implements SterloCare to help healthcare providers automate workflows, manage compliance, and improve outcomes—bridging the gap between technology, quality, and patient satisfaction
           </p>
-          <p className="ap2-intro" style={{ color:"rgba(2,43,68,0.45)", fontStyle:"italic" }}>
-            Precise. Proven. Profitable. Built for long-term dominance.
-          </p>
+
         </div>
 
         {/* RIGHT FORM */}
@@ -335,10 +414,10 @@ function WhyChooseSection() {
         {/* LEFT — text + inline features */}
         <div>
     <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why choose SterloCare </div>
-          </div>          <h2 className="wc2-heading">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why choose SterloCare </h2>
+          </div>          <h3 className="wc2-heading">
 Smart Digital Healthcare Solutions
-      </h2>
+      </h3>
           <p className="wc2-desc">
 SterloCare improves patient experience, operational efficiency, and regulatory compliance.
           </p>
@@ -349,7 +428,7 @@ SterloCare improves patient experience, operational efficiency, and regulatory c
                 <div className="wc2-feat-icon">{feat.icon}</div>
                 {i < WHY_CHOOSE_FEATURES.length - 1 && <div className="wc2-divider" style={{ display:"none" }} />}
                 <div className="wc2-feat-body">
-                  <div className="wc2-feat-title">{feat.title}</div>
+                  <h4 className="wc2-feat-title">{feat.title}</h4>
                   <div className="wc2-feat-desc">{feat.desc}</div>
                 </div>
               </div>
@@ -502,7 +581,7 @@ function ServiceCard({ service, index }) {
       )}
 
       {/* Heading */}
-      <h3 style={{
+      <h4 style={{
         fontFamily: "'Poppins',sans-serif",
         fontSize: "1.1rem",
         fontWeight: "700",
@@ -512,7 +591,7 @@ function ServiceCard({ service, index }) {
         transition: "color 0.3s, margin 0.3s",
       }}>
         {service.heading}
-      </h3>
+      </h4>
 
       {/* Content — visible on hover, dark text on white bg */}
       <p style={{
@@ -559,11 +638,11 @@ function SEOServicesSection() {
       {/* Header */}
       <div style={{ textAlign:"center", marginBottom:"4rem", position:"relative", zIndex:2 }}>
             <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Services</div>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Services</h2>
           </div>
-        <h2 style={{ fontFamily:"'Poppins',sans-serif", fontSize:"clamp(1.9rem,2.8vw,2.6rem)", fontWeight:"700", color:"#fff", lineHeight:"1.15" }}>
+        <h3 style={{ fontFamily:"'Poppins',sans-serif", fontSize:"clamp(1.9rem,2.8vw,2.6rem)", fontWeight:"700", color:"#fff", lineHeight:"1.15" }}>
           Comprehensive  <span style={{ color:"#ed8337" }}><i>Healthcare Digitization</i></span> Solutions
-        </h2>
+        </h3>
 
       </div>
 
@@ -707,11 +786,11 @@ function ProcessSection() {
       {/* Section Header */}
       <div style={{ textAlign:"center", marginBottom:"3.5rem" }}>
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom:'20px', textAlign:'start' }}>Our Process</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom:'20px', textAlign:'start' }}>Our Process</h2>
         </div>
-        <h2 style={{ fontFamily:"'Poppins',sans-serif", fontSize:"clamp(1.9rem,2.8vw,2.6rem)", fontWeight:"700", color:"#000000", lineHeight:"1.15" }}>
+        <h3 style={{ fontFamily:"'Poppins',sans-serif", fontSize:"clamp(1.9rem,2.8vw,2.6rem)", fontWeight:"700", color:"#000000", lineHeight:"1.15" }}>
           Seamless   <span style={{ color:"#ed8337" }}><i>Healthcare Digital </i> </span>  Transformation
-        </h2>
+        </h3>
         <p style={{ marginTop:"0.8rem", color:"rgba(0, 0, 0, 0.86)", fontSize:"0.97rem",margin:"0.8rem auto 0", lineHeight:"1.8" }}>
 Our SterloCare Implementation Process handles every phase — from assessment to deployment — with precision, transparency, and efficiency, delivering scalable, integrated healthcare applications tailored to hospitals, clinics, and patient care workflows.
 
@@ -741,10 +820,10 @@ Our SterloCare Implementation Process handles every phase — from assessment to
         <div className="proc-content-panel">
           <div>
             <div className="proc-big-num">{active.num}</div>
-            <h3 className="proc-content-title">
+            <h4 className="proc-content-title">
               {active.title.split(" ").slice(0,1).join(" ")}{" "}
               <em>{active.title.split(" ").slice(1).join(" ")}</em>
-            </h3>
+            </h4>
             <p className="proc-content-desc">{active.desc}</p>
             <div className="proc-content-tag">
               <div className="proc-content-dot" />
@@ -896,7 +975,7 @@ As a SterloCare Implementation Partner, PCS ensures that healthcare organization
             <div className="gs2-card-bar" />
             <div className="gs2-card-num">{card.num}</div>
             <div className="gs2-icon-box">{card.icon}</div>
-            <div className="gs2-card-title">{card.title}</div>
+            <h3 className="gs2-card-title">{card.title}</h3>
             <div className="gs2-card-desc">{card.desc}</div>
           </div>
         ))}
@@ -921,7 +1000,11 @@ function BlogCTAWrapper() {
 ═══════════════════════════════════════════ */
 export default function SEOServicePage() {
   return (
-    <Layout>
+      <Layout
+      title="Official SterloCare Partner | SterloCare Implementation Partner for PCS"
+      description="SterloCare's official partner for PCS offering implementation, integration, and support services that streamline processes and increase operational efficiency. "
+    >
+      <SEOHead />
       <HeroSection />
       <ApproachSection />
       <WhyChooseSection />

@@ -1048,7 +1048,7 @@ export default function PCSWebsite() {
 
                 </h2>
               </div>
-              <h2 className="wd-ap-heading">Strategic <span>Conversion-Focused </span> Ecommerce Solutions</h2>
+              <h3 className="wd-ap-heading">Strategic <span>Conversion-Focused </span> Ecommerce Solutions</h3>
               <p className="wd-ap-intro">
                 A successful custom eCommerce website requires more than design — it needs structured architecture, secure payment systems, seamless navigation, and optimized checkout experiences that support performance, engagement, and long-term revenue growth.
 
@@ -1163,7 +1163,7 @@ export default function PCSWebsite() {
                     <div className="pcs-offer-panel-bar"></div>
                     <div className="pcs-offer-panel-title-row">
                       <div className="pcs-offer-panel-icon"><img src={item.img} alt={item.title} style={{ width: "32px", height: "32px", objectFit: "contain" }} /></div>
-                      <div className="pcs-offer-panel-title">{item.title}</div>
+                      <h4 className="pcs-offer-panel-title">{item.title}</h4>
                     </div>
                     <div className="pcs-offer-panel-divider"></div>
                     <div className="pcs-offer-panel-desc">{item.desc}</div>
@@ -1195,7 +1195,7 @@ export default function PCSWebsite() {
                       <span className="pcs-wi5-tab-num-text">{tab.num}</span>
                     </div>
                     <div className="pcs-wi5-tab-icon"><img src={tab.icon} alt={tab.title} style={{ width: "24px", height: "24px", objectFit: "contain" }} /></div>
-                    <div className="pcs-wi5-tab-title">{tab.title}</div>
+                    <h4 className="pcs-wi5-tab-title">{tab.title}</h4>
                     <div className="pcs-wi5-tab-chev">
                       <img src="/img/chevron-down.png" alt="toggle" style={{ width: "14px", height: "14px", objectFit: "contain" }} />
                     </div>
@@ -1233,7 +1233,7 @@ export default function PCSWebsite() {
                     <div className="pcs-proc-gc-num">{step.num}</div>
                     <div className="pcs-proc-gc-icon"><img src={step.icon} alt={step.title} style={{ width: "32px", height: "32px", objectFit: "contain" }} /></div>
                   </div>
-                  <div className="pcs-proc-gc-title">{step.title}</div>
+                  <h4 className="pcs-proc-gc-title">{step.title}</h4>
                   <div className="pcs-proc-gc-desc">{step.desc}</div>
                   {/* <div className="pcs-proc-gc-tags">
                   {step.tags.map((t, j) => <span key={j}>{t}</span>)}

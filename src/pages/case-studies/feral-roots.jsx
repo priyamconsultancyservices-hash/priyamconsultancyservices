@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Feral Roots Case Study | Sustainable E-Commerce Growth | PCS" description="See how PCS helped Feral Roots establish a strong digital presence and drive e-commerce growth for their sustainable products brand.">
+    <Layout title="Feral Roots SEO & E-Commerce Success Story | PCS" description="We created a scalable SEO friendly e-commerce website that increased local discoverability, customer engagement, online visibility, & business growth for Feral Roots.">
       <Head>
-        <title>Feral Roots Case Study | Sustainable E-Commerce Growth | PCS</title>
-        <meta name="description" content="See how PCS helped Feral Roots establish a strong digital presence and drive e-commerce growth for their sustainable products brand." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/feral-roots" />
-        <meta property="og:title" content="Feral Roots Case Study | Sustainable E-Commerce Growth | PCS" />
-        <meta property="og:description" content="See how PCS helped Feral Roots establish a strong digital presence and drive e-commerce growth for their sustainable products brand." />
+        <title>Feral Roots SEO & E-Commerce Success Story | PCS</title>
+        <meta name="description" content="We created a scalable SEO friendly e-commerce website that increased local discoverability, customer engagement, online visibility, & business growth for Feral Roots." />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/feralroots/" />
+        <meta property="og:title" content="Feral Roots SEO & E-Commerce Success Story | PCS" />
+        <meta property="og:description" content="We created a scalable SEO friendly e-commerce website that increased local discoverability, customer engagement, online visibility, & business growth for Feral Roots." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/feral-roots" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/feralroots/" />
       </Head>
       <style>{styles}</style>
 
@@ -99,7 +99,7 @@ export default function CaseStudy() {
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand
-</h1>
+            </h1>
           </div>
         </section>
 
@@ -108,74 +108,70 @@ export default function CaseStudy() {
 
           {/* LEFT */}
           <div className="detail-left">
-
             <div className="detail-hero-img">
               <img src="/img/case-study-feral-roots-about.webp" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
             </div>
-
-     
- <div className="detail-section">
+            <div className="detail-section">
               <h2>About Feral Roots
-</h2>
-              <p>Feral Roots is a sustainable lifestyle brand focused on empowering tribal communities through ethical trade and responsible sourcing practices. The company works closely with local communities to source natural and millet-based products at fair prices while creating sustainable livelihood opportunities. Rooted in nature and inspired by traditional methods, Feral Roots delivers natural, responsibly made products designed for modern lifestyles. Through fair pricing, value addition, community development, and conscious business practices, the brand promotes long-term social impact and sustainable growth.
-</p>
+              </h2>
+              <p>
+                Feral Roots is a sustainable lifestyle brand that empowers tribal communities through ethical sourcing and fair trade practices. By offering natural and millet-based products, the brand creates livelihood opportunities, promotes community development, and delivers responsibly made products that support long-term social and environmental impact.</p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>Feral Roots, based in Satyamangalam, partnered with PCS to establish a strong digital foundation for its natural and sustainable product business. Although the brand offered high-quality products, it lacked an effective online presence and scalable e-commerce ecosystem. PCS helped transform the brand through a structured digital strategy, resulting in growing website traffic, improved visibility, and increasing customer engagement.
-</p>
+              <p>
+                Feral Roots partnered with PCS to build a strong digital presence and scalable e-commerce ecosystem. Through a structured digital strategy, PCS enhanced brand visibility, increased website traffic, improved customer engagement, and established a solid foundation for sustainable online growth.
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>Despite having quality natural products and a strong brand vision, Feral Roots struggled to reach wider online audiences within a competitive market. The brand required a clear identity, a scalable e-commerce platform, and a performance-driven digital marketing strategy to improve visibility, customer engagement, and long-term online growth.
-</p>
+              <p>
+                Despite having quality natural products and a strong brand vision, Feral Roots struggled to reach wider online audiences within a competitive market. The brand required a clear identity, a scalable e-commerce platform, and a performance-driven digital marketing strategy to improve visibility and long-term online growth.
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Conducted an in-depth brand study to identify positioning, audience behavior, and market opportunities</li>
-              <li>Developed branding, content marketing, and communication strategies aligned with the brand identity
-</li>
-              <li>Built a scalable e-commerce website optimized for user experience, conversions, and operational efficiency</li>
-              <li>Integrated CRM systems, payment gateways, Shiprocket, WhatsApp, and automated email workflows
-</li>
-              <li>Implemented SEO strategies, social media campaigns, and Google My Business optimization for local visibility
-</li>
-<li>Strengthened digital discoverability through content-driven engagement and search-focused optimization initiatives
-</li>
+                <li>Conducted an in-depth brand study to identify positioning, audience behavior, and market opportunities</li>
+                <li>Developed branding, content marketing, and communication strategies aligned with the brand identity
+                </li>
+                <li>Built a scalable e-commerce website optimized for user experience, conversions, and operational efficiency</li>
+                <li>Integrated CRM systems, payment gateways, Shiprocket, WhatsApp, and automated email workflows
+                </li>
+                <li>Implemented SEO strategies, social media campaigns, and Google My Business optimization for local visibility
+                </li>
+                <li>Strengthened digital discoverability through content-driven engagement and search-focused optimization initiatives
+                </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
               <p>We transformed Feral Roots from a brand with minimal digital presence into a growing online business with a scalable e-commerce ecosystem. Through SEO, Google My Business optimization, branding, and performance-driven digital strategies, the brand achieved stronger visibility, improved customer engagement, and significantly higher local discoverability. Local SEO initiatives increased walk-in and enquiry-based customer interactions by over 50%, while the SEO-optimized e-commerce website strengthened online reach, improved Google local search visibility, enhanced brand credibility, and generated more inbound business enquiries, creating a scalable foundation for long-term digital growth.
-</p>
+              </p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like Feral Roots?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
-
           </div>
 
           {/* SIDEBAR */}
           <div className="detail-sidebar">
-
             {/* About */}
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>Feral Roots</strong></p>
-               <p>Service: </p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">E-Commerence Website</span>
                 <span className="sidebar-tag">SEO</span>
                 <span className="sidebar-tag">local SEO</span>
-
               </div>
             </div>
 
@@ -184,59 +180,56 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
             </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
           </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-            </div>
-
-          </div>
-
         </div>
       </div>
     </Layout>

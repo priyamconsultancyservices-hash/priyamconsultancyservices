@@ -4,6 +4,85 @@ import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
 const banner = "/img/odoo.png";
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/odoo-partners";
+  const imageUrl = "https://www.priyamconsultancy.com/img/microsoft-app.png";
+
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/",
+            "name": "Home"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/odoo-partners/",
+            "name": "odoo-partners"
+          }
+        }
+      ]
+
+
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Priyam Consultancy Services",
+      "url": "https://www.priyamconsultancy.com/",
+      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91 96774 44048",
+          "contactType": "customer support"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
+      ]
+    },
+  ];
+
+  return (
+    <Head>
+      <title>Official Odoo Partner | Odoo Implementation & ERP Solutions </title>
+      <meta name="description" content="PCS is an official Odoo Partner that provides end-to-end Odoo implementation, customization, and consulting services. Let's connect now! " />
+      <meta name="keywords" content="Official Odoo Partner, Odoo Implementation Partner, Odoo ERP Solutions Partner, Odoo Official Partner for India, Odoo Gold Partner, Odoo ERP Consultant Partners, Odoo Implementation & ERP Solutions, Odoo Official Certified Partner" />
+      <link rel="canonical" href={pageUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Official Odoo Partner | Odoo Implementation & ERP Solutions " />
+      <meta property="og:description" content="PCS is an official Odoo Partner that provides end-to-end Odoo implementation, customization, and consulting services. Let's connect now! " />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content=" Microsoft App" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Official Odoo Partner | Odoo Implementation & ERP Solutions " />
+      <meta name="twitter:description" content="PCS is an official Odoo Partner that provides end-to-end Odoo implementation, customization, and consulting services. Let's connect now! " />
+      <meta name="twitter:image" content={imageUrl} />
+      {schemaData.map((schema, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
+    </Head>
+  );
+}
 
 /* ═══════════════════════════════════════════
    GLOBAL STYLES
@@ -117,11 +196,11 @@ function HeroSection() {
           <div className="seo-badge"><div className="badge-dot-red" />Odoo</div>
           <h1 className="seo-hero-heading">
             Transform Your with Business
-             to <span className="seo-underline seo-red">Odoo</span>
+            to <span className="seo-underline seo-red">Odoo</span>
             — All-in-One ERP Solution
           </h1>
           <p className="seo-sub">
-PCS leverages Odoo to streamline and unify business operations across industries, from startups to enterprises  business operations across industries,. From accounting and inventory to HR and CRM, all processes are integrated into one system. With modular customization and automation, we tailor Odoo to match your workflows and boost efficiency.
+            PCS leverages Odoo to streamline and unify business operations across industries, from startups to enterprises  business operations across industries,. From accounting and inventory to HR and CRM, all processes are integrated into one system. With modular customization and automation, we tailor Odoo to match your workflows and boost efficiency.
 
           </p>
           <div className="seo-actions">
@@ -135,7 +214,7 @@ PCS leverages Odoo to streamline and unify business operations across industries
             <img
               src={banner}
               alt="SEO Growth Illustration"
-              style={{ width:"100%", height:"100%", objectFit:"contain", position:"relative", zIndex:5 }}
+              style={{ width: "100%", height: "100%", objectFit: "contain", position: "relative", zIndex: 5 }}
             />
           </div>
         </div>
@@ -148,7 +227,7 @@ PCS leverages Odoo to streamline and unify business operations across industries
    SECTION 2 — OUR APPROACH + FORM
 ═══════════════════════════════════════════ */
 function ApproachSection() {
-  const [form, setForm] = useState({ name:"", email:"", phone:"", company:"", msg:"" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const sendEmail = (e) => {
@@ -157,13 +236,13 @@ function ApproachSection() {
       name: form.name, email: form.email, phone: form.phone,
       company: form.company, message: form.msg, url: window.location.href,
     };
-    emailjs.send("service_8xw6k3r","template_jarui36", templateParams,"XWRnXi4hK2SvmRG3q")
-      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name:"",email:"",phone:"",company:"",msg:"" }); })
+    emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
+      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name: "", email: "", phone: "", company: "", msg: "" }); })
       .catch(() => alert("Failed to send ❌"));
   };
 
   return (
-    <section id="approach" style={{ background:"#ffffff", padding:"5rem 6%", position:"relative", overflow:"hidden" }}>
+    <section id="approach" style={{ background: "#ffffff", padding: "5rem 6%", position: "relative", overflow: "hidden" }}>
       <style>{`
         /* eyebrow shared */
         .seo-eyebrow-wrap { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
@@ -207,17 +286,17 @@ function ApproachSection() {
       <div className="ap2-inner">
         {/* LEFT */}
         <div>
-             <div className="partners-header1">
+          <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
           </div>
           <h2 className="ap2-heading">What is  <span><i>Odoo</i> </span></h2>
           <p className="ap2-intro">
-Odoo is an all-in-one, open-source business application designed to integrate and manage every aspect of organizational operations efficiently. Its modular structure allows businesses to select and customize applications according to their unique needs, creating a flexible system that supports growth, improves coordination, and simplifies complex business processes.
+            Odoo is an all-in-one, open-source business application designed to integrate and manage every aspect of organizational operations efficiently. Its modular structure allows businesses to select and customize applications according to their unique needs, creating a flexible system that supports growth, improves coordination, and simplifies complex business processes.
           </p>
           <p className="ap2-intro">
-With Odoo, organizations gain complete visibility and control over operations through automation, centralized management, and real-time data insights. This unified platform empowers teams to make smarter decisions, enhance productivity, streamline workflows, and support sustainable, long-term growth in an increasingly competitive and fast-changing business environment.
+            With Odoo, organizations gain complete visibility and control over operations through automation, centralized management, and real-time data insights. This unified platform empowers teams to make smarter decisions, enhance productivity, streamline workflows, and support sustainable, long-term growth in an increasingly competitive and fast-changing business environment.
           </p>
-          <p className="ap2-intro" style={{ color:"rgba(2,43,68,0.45)", fontStyle:"italic" }}>
+          <p className="ap2-intro" style={{ color: "rgba(2,43,68,0.45)", fontStyle: "italic" }}>
             Precise. Proven. Profitable. Built for long-term dominance.
           </p>
         </div>
@@ -233,14 +312,14 @@ With Odoo, organizations gain complete visibility and control over operations th
               <div className="ap2-fl-row">
                 <div className="ap2-fl-group">
                   <label className="ap2-fl-label">Your Name</label>
-                  <div style={{ position:"relative" }}>
+                  <div style={{ position: "relative" }}>
                     <span className="ap2-fl-icon">👤</span>
                     <input className="ap2-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
                   </div>
                 </div>
                 <div className="ap2-fl-group">
                   <label className="ap2-fl-label">Company</label>
-                  <div style={{ position:"relative" }}>
+                  <div style={{ position: "relative" }}>
                     <span className="ap2-fl-icon">🏢</span>
                     <input className="ap2-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
                   </div>
@@ -248,7 +327,7 @@ With Odoo, organizations gain complete visibility and control over operations th
               </div>
               <div className="ap2-fl-group">
                 <label className="ap2-fl-label">Email Address</label>
-                <div style={{ position:"relative" }}>
+                <div style={{ position: "relative" }}>
                   <span className="ap2-fl-icon">✉️</span>
                   <input className="ap2-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
                 </div>
@@ -262,8 +341,8 @@ With Odoo, organizations gain complete visibility and control over operations th
               </div>
               <div className="ap2-fl-group">
                 <label className="ap2-fl-label">Message</label>
-                <div style={{ position:"relative" }}>
-                  <span className="ap2-fl-icon" style={{ top:"0.9rem", transform:"none" }}>💬</span>
+                <div style={{ position: "relative" }}>
+                  <span className="ap2-fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
                   <textarea className="ap2-fl-textarea" name="msg" placeholder="Tell us about your SEO goals..." value={form.msg} onChange={handleChange} />
                 </div>
               </div>
@@ -334,21 +413,21 @@ function WhyChooseSection() {
       <div className="wc2-inner">
         {/* LEFT — text + inline features */}
         <div>
-    <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why choose Odoo</div>
-          </div>          <h2 className="wc2-heading">
-All-in-One Platform for Smarter Business Management          </h2>
+          <div className="partners-header1">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why choose Odoo</h2>
+          </div>          <h3 className="wc2-heading">
+            All-in-One Platform for Smarter Business Management          </h3>
           <p className="wc2-desc">
-A powerful, flexible, and cost-efficient solution designed to meet the needs of businesses of every size.
+            A powerful, flexible, and cost-efficient solution designed to meet the needs of businesses of every size.
           </p>
 
           <div className="wc2-features">
             {WHY_CHOOSE_FEATURES.map((feat, i) => (
-              <div key={i} className="wc2-feat" style={{ animation:`fadeUp 0.5s ${i*0.1}s ease both` }}>
+              <div key={i} className="wc2-feat" style={{ animation: `fadeUp 0.5s ${i * 0.1}s ease both` }}>
                 <div className="wc2-feat-icon">{feat.icon}</div>
-                {i < WHY_CHOOSE_FEATURES.length - 1 && <div className="wc2-divider" style={{ display:"none" }} />}
+                {i < WHY_CHOOSE_FEATURES.length - 1 && <div className="wc2-divider" style={{ display: "none" }} />}
                 <div className="wc2-feat-body">
-                  <div className="wc2-feat-title">{feat.title}</div>
+                  <h4 className="wc2-feat-title">{feat.title}</h4>
                   <div className="wc2-feat-desc">{feat.desc}</div>
                 </div>
               </div>
@@ -477,7 +556,7 @@ function ServiceCard({ service, index }) {
         transition: "all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)",
         zIndex: 10,
       }}>
-        <div style={{ width:"32px", height:"32px" }}>{service.icon}</div>
+        <div style={{ width: "32px", height: "32px" }}>{service.icon}</div>
       </div>
 
       {/* Tag pill */}
@@ -501,7 +580,7 @@ function ServiceCard({ service, index }) {
       )}
 
       {/* Heading */}
-      <h3 style={{
+      <h4 style={{
         fontFamily: "'Poppins',sans-serif",
         fontSize: "1.1rem",
         fontWeight: "700",
@@ -511,7 +590,7 @@ function ServiceCard({ service, index }) {
         transition: "color 0.3s, margin 0.3s",
       }}>
         {service.heading}
-      </h3>
+      </h4>
 
       {/* Content — visible on hover, dark text on white bg */}
       <p style={{
@@ -552,22 +631,22 @@ function SEOServicesSection() {
       `}</style>
 
       {/* Background decorative elements */}
-      <div style={{ position:"absolute", width:"500px", height:"500px", borderRadius:"50%", background:"radial-gradient(circle,rgba(237,131,55,0.04) 0%,transparent 70%)", top:"-100px", right:"-100px", pointerEvents:"none" }} />
-      <div style={{ position:"absolute", width:"400px", height:"400px", borderRadius:"50%", background:"radial-gradient(circle,rgba(17,34,64,0.6) 0%,transparent 70%)", bottom:"-80px", left:"-80px", pointerEvents:"none" }} />
+      <div style={{ position: "absolute", width: "500px", height: "500px", borderRadius: "50%", background: "radial-gradient(circle,rgba(237,131,55,0.04) 0%,transparent 70%)", top: "-100px", right: "-100px", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", width: "400px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle,rgba(17,34,64,0.6) 0%,transparent 70%)", bottom: "-80px", left: "-80px", pointerEvents: "none" }} />
 
       {/* Header */}
-      <div style={{ textAlign:"center", marginBottom:"4rem", position:"relative", zIndex:2 }}>
-            <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Services</div>
-          </div>
-        <h2 style={{ fontFamily:"'Poppins',sans-serif", fontSize:"clamp(1.9rem,2.8vw,2.6rem)", fontWeight:"700", color:"#fff", lineHeight:"1.15" }}>
-          Complete Odoo ERP <span style={{ color:"#ed8337" }}><i>Implementation & Support</i></span>
-        </h2>
+      <div style={{ textAlign: "center", marginBottom: "4rem", position: "relative", zIndex: 2 }}>
+        <div className="partners-header1">
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Services</h2>
+        </div>
+        <h3 style={{ fontFamily: "'Poppins',sans-serif", fontSize: "clamp(1.9rem,2.8vw,2.6rem)", fontWeight: "700", color: "#fff", lineHeight: "1.15" }}>
+          Complete Odoo ERP <span style={{ color: "#ed8337" }}><i>Implementation & Support</i></span>
+        </h3>
 
       </div>
 
       {/* Cards Grid */}
-      <div className="seo-services-grid" style={{ position:"relative", zIndex:2 }}>
+      <div className="seo-services-grid" style={{ position: "relative", zIndex: 2 }}>
         {SEO_SERVICES.map((service, i) => (
           <ServiceCard key={i} service={service} index={i} />
         ))}
@@ -620,7 +699,7 @@ const PROCESS_STEPS = [
     title: "Training & Support",
     desc: "Once deployed, we provide hands-on training and continuous post-launch support to empower your team. Our experts ensure your system remains optimized, updated, and aligned with your evolving business needs.",
   },
-    {
+  {
     num: "06",
     icon: (
       <img src="/img/icon/odoo-proc-launch.webp" alt="Launch & Post-Launch Support" width="28" height="28" />
@@ -636,7 +715,7 @@ function ProcessSection() {
   const active = PROCESS_STEPS[activeTab];
 
   return (
-    <section style={{ background:"#ffffff", padding:"5rem 6%", position:"relative", overflow:"hidden" }}>
+    <section style={{ background: "#ffffff", padding: "5rem 6%", position: "relative", overflow: "hidden" }}>
       <style>{`
         /* ── Vertical Tab Layout (Desktop) ── */
         .proc-outer { max-width:1180px; margin:0 auto; display:grid; grid-template-columns:260px 1fr; gap:0; align-items:stretch; border-radius:20px; overflow:hidden; box-shadow:0 12px 50px rgba(2,43,68,0.10); border:1.5px solid rgba(2,43,68,0.07); }
@@ -711,22 +790,22 @@ function ProcessSection() {
       `}</style>
 
       {/* Section Header */}
-      <div style={{ textAlign:"center", marginBottom:"3.5rem" }}>
+      <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom:'20px', textAlign:'start' }}>Our Process</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Process</h2>
         </div>
-        <h2 style={{ fontFamily:"'Poppins',sans-serif", fontSize:"clamp(1.9rem,2.8vw,2.6rem)", fontWeight:"700", color:"#000000", lineHeight:"1.15" }}>
-          Streamlined Approach for  <span style={{ color:"#ed8337" }}><i>Odoo </i> </span>  Implementation
-        </h2>
-        <p style={{ marginTop:"0.8rem", color:"rgba(0, 0, 0, 0.86)", fontSize:"0.97rem",margin:"0.8rem auto 0", lineHeight:"1.8" }}>
-Our Odoo Implementation Process ensures every phase — from assessment to deployment — is handled with precision, transparency, and efficiency.
+        <h3 style={{ fontFamily: "'Poppins',sans-serif", fontSize: "clamp(1.9rem,2.8vw,2.6rem)", fontWeight: "700", color: "#000000", lineHeight: "1.15" }}>
+          Streamlined Approach for  <span style={{ color: "#ed8337" }}><i>Odoo </i> </span>  Implementation
+        </h3>
+        <p style={{ marginTop: "0.8rem", color: "rgba(0, 0, 0, 0.86)", fontSize: "0.97rem", margin: "0.8rem auto 0", lineHeight: "1.8" }}>
+          Our Odoo Implementation Process ensures every phase — from assessment to deployment — is handled with precision, transparency, and efficiency.
         </p>
       </div>
 
       {/* ── DESKTOP: Left vertical tabs + Right content ── */}
       <div className="proc-outer">
         <div className="proc-vtab-col">
-         
+
           {PROCESS_STEPS.map((step, i) => (
             <button
               key={i}
@@ -745,10 +824,10 @@ Our Odoo Implementation Process ensures every phase — from assessment to deplo
         <div className="proc-content-panel">
           <div>
             <div className="proc-big-num">{active.num}</div>
-            <h3 className="proc-content-title">
-              {active.title.split(" ").slice(0,1).join(" ")}{" "}
+            <h4 className="proc-content-title">
+              {active.title.split(" ").slice(0, 1).join(" ")}{" "}
               <em>{active.title.split(" ").slice(1).join(" ")}</em>
-            </h3>
+            </h4>
             <p className="proc-content-desc">{active.desc}</p>
             <div className="proc-content-tag">
               <div className="proc-content-dot" />
@@ -832,10 +911,10 @@ function GetStartedSection() {
   const [activeCard, setActiveCard] = useState(1);
 
   return (
-    <section style={{ background:"linear-gradient(135deg,#022b44 0%,#004168 55%,#0a3652 100%)", padding:"6rem 6%", position:"relative", overflow:"hidden" }}>
+    <section style={{ background: "linear-gradient(135deg,#022b44 0%,#004168 55%,#0a3652 100%)", padding: "6rem 6%", position: "relative", overflow: "hidden" }}>
       {/* subtle bg orb */}
-      <div style={{ position:"absolute", width:"600px", height:"600px", borderRadius:"50%", background:"radial-gradient(circle,rgba(237,131,55,0.06) 0%,transparent 65%)", top:"-150px", right:"-100px", pointerEvents:"none" }} />
-      <div style={{ position:"absolute", width:"400px", height:"400px", borderRadius:"50%", background:"radial-gradient(circle,rgba(237,131,55,0.04) 0%,transparent 65%)", bottom:"-100px", left:"-80px", pointerEvents:"none" }} />
+      <div style={{ position: "absolute", width: "600px", height: "600px", borderRadius: "50%", background: "radial-gradient(circle,rgba(237,131,55,0.06) 0%,transparent 65%)", top: "-150px", right: "-100px", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", width: "400px", height: "400px", borderRadius: "50%", background: "radial-gradient(circle,rgba(237,131,55,0.04) 0%,transparent 65%)", bottom: "-100px", left: "-80px", pointerEvents: "none" }} />
 
       <style>{`
         /* ── Get Started Section ── */
@@ -877,16 +956,16 @@ function GetStartedSection() {
       `}</style>
 
       {/* Header */}
-      <div style={{ position:"relative", zIndex:2 }}>
-      <div className="partners-header1" style={{textAlign: 'center'}}>
-            <div className="partners-eyebrow" style={{ marginBottom: '20px' }}>Odoo Partner</div>
-          </div>      <h2 className="gs2-main-title">
-        
-        Why PCS for <span className="gs2-title-accent"><i>Odoo </i></span> Partner
-      </h2>
-      <p className="gs2-sub">
-As a trusted Odoo Partner, PCS delivers industry-specific, results-driven ERP solutions that streamline operations and accelerate digital transformation.
-      </p>
+      <div style={{ position: "relative", zIndex: 2 }}>
+        <div className="partners-header1" style={{ textAlign: 'center' }}>
+          <div className="partners-eyebrow" style={{ marginBottom: '20px' }}>Odoo Partner</div>
+        </div>      <h2 className="gs2-main-title">
+
+          Why PCS for <span className="gs2-title-accent"><i>Odoo </i></span> Partner
+        </h2>
+        <p className="gs2-sub">
+          As a trusted Odoo Partner, PCS delivers industry-specific, results-driven ERP solutions that streamline operations and accelerate digital transformation.
+        </p>
       </div>
 
       {/* Unified 4-card container */}
@@ -900,7 +979,7 @@ As a trusted Odoo Partner, PCS delivers industry-specific, results-driven ERP so
             <div className="gs2-card-bar" />
             <div className="gs2-card-num">{card.num}</div>
             <div className="gs2-icon-box">{card.icon}</div>
-            <div className="gs2-card-title">{card.title}</div>
+            <h3 className="gs2-card-title">{card.title}</h3>
             <div className="gs2-card-desc">{card.desc}</div>
           </div>
         ))}
@@ -925,7 +1004,11 @@ function BlogCTAWrapper() {
 ═══════════════════════════════════════════ */
 export default function SEOServicePage() {
   return (
-    <Layout>
+    <Layout
+      title="Official Odoo Partner | Odoo Implementation & ERP Solutions"
+      description="PCS is an official Odoo Partner that provides end-to-end Odoo implementation, customization, and consulting services. Let's connect now! "
+    >
+      <SEOHead />
       <HeroSection />
       <ApproachSection />
       <WhyChooseSection />

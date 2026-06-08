@@ -3,6 +3,154 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
 const banner = "/img/healthcare.webp";
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/healthcare/";
+  const imageUrl = "https://www.pcsbusinesssolution.com/img/2.webp";
+
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/",
+            "name": "Home"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/healthcare/",
+            "name": "healthcare"
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Priyam Consultancy Services",
+      "url": "https://www.priyamconsultancy.com/",
+      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91 96774 44048",
+          "contactType": "customer support"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
+      ]
+
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://www.priyamconsultancy.com/healthcare/#service",
+      "name": "Healthcare Industry Services",
+      "serviceType": "Business Solutions for Healthcare Industry",
+      "url": "https://www.priyamconsultancy.com/healthcare/",
+      "description": "Priyam Consultancy provides digital marketing, website development, HR services, payroll management, business registration, statutory compliance, Virtual CFO services, accounting and business consulting solutions tailored for healthcare providers, clinics, hospitals and medical organizations across India.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Why does a healthcare clinic/hospital need digital marketing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Digital marketing helps healthcare providers improve online visibility, build patient trust, promote healthcare services, and attract new patients. It supports appointment generation, strengthens local search presence, and helps clinics and hospitals communicate effectively with patients across digital platforms."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can social media marketing help healthcare businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Social media marketing helps healthcare businesses improve patient engagement, increase awareness about treatments and services, share health-related information, and build credibility. It also supports brand visibility, patient communication, and targeted campaigns that help attract relevant healthcare audiences online."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What features should a healthcare website have?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A healthcare website should include service information, doctor profiles, online appointment booking, contact details, patient testimonials, mobile responsiveness, SEO optimization, secure patient communication, and easy navigation. These features improve patient experience, accessibility, trust, and overall engagement with healthcare services."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can you build a website with online appointment booking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we develop healthcare websites with integrated online appointment booking systems, patient enquiry forms, doctor schedules, automated confirmations, and user-friendly interfaces. These features help healthcare providers streamline patient management, improve accessibility, and enhance overall patient convenience and operational efficiency."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What HR services do healthcare providers need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Healthcare providers typically require recruitment, payroll management, compliance management, attendance tracking, workforce planning, onboarding, shift scheduling, and HR policy support. These services help manage medical and non-medical staff efficiently while ensuring compliance with healthcare and labor regulations."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does payroll management work for medical staff?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Payroll management for medical staff includes salary processing, shift calculations, overtime management, statutory deductions, attendance tracking, incentive handling, and compliance reporting. Structured payroll systems ensure accurate payments, reduce administrative workload, and maintain smooth workforce operations within healthcare organizations."
+        }
+      }]
+    },
+  ];
+
+  return (
+    <Head>
+      <title>Healthcare Digital Marketing Company for Hospitals & Clinics</title>
+      <meta name="description" content="Grow your healthcare business with expert digital marketing, website development, and HR solutions. Attract more patients and scale with confidence." />
+      <meta name="keywords" content="Healthcare Digital Marketing Company, Healthcare Website Development, HR Solutions for Healthcare, Healthcare workforce management , Payroll In Hospitals & Healthcare, healthcare digital marketing agency, healthcare website development services, Best Hospital Website Development Company" />
+      <link rel="canonical" href={pageUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Healthcare Digital Marketing Company for Hospitals & Clinics" />
+      <meta property="og:description" content="Grow your healthcare business with expert digital marketing, website development, and HR solutions. Attract more patients and scale with confidence." />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="PCS Business Solution" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Healthcare Digital Marketing Company for Hospitals & Clinics" />
+      <meta name="twitter:description" content="Grow your healthcare business with expert digital marketing, website development, and HR solutions. Attract more patients and scale with confidence." />
+      <meta name="twitter:image" content={imageUrl} />
+      {schemaData.map((schema, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
+    </Head>
+  );
+}
 
 // EmailJS will be loaded via CDN in the component
 
@@ -437,7 +585,7 @@ li.dropdown.mega {
 //   faq  section
 .faq-section {background: #fff!important;  }
 .faq-head h2 {color: #000}
-
+h3.faq-h3{font-size:2.5rem;  color:#000;}
 /* ===== HERO SECTION RESPONSIVE ===== */
 .seo-hero-section {
   grid-template-columns: 1fr;
@@ -600,29 +748,29 @@ function HeroSection() {
       `}</style>
 
       {/* Dark overlay for text readability over background image */}
-      <div className="hero-overlay" style={{ position:"absolute", inset:0, zIndex:1 }} />
+      <div className="hero-overlay" style={{ position: "absolute", inset: 0, zIndex: 1 }} />
 
       {/* Orbs */}
       <div className="hero-orb hero-orb-1" />
       <div className="hero-orb hero-orb-2" />
 
       {/* LEFT CONTENT — order:1 on mobile (comes first) */}
-      <div className="hero-content-left" style={{ position:"relative", zIndex:2, display:"flex", flexDirection:"column", paddingBottom:"3rem", order:1 }}>
+      <div className="hero-content-left" style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column", paddingBottom: "3rem", order: 1 }}>
         <div className="seo-badge"><div className="badge-dot-red" />Healthcare </div>
         <h1 className="seo-hero-heading">
           Powering Progress
-         in the <span className="seo-underline seo-red" style={{marginRight: '10px'}}>Healthcare</span>
+          in the <span className="seo-underline seo-red" style={{ marginRight: '10px' }}>Healthcare</span>
           Industry  Powering Progress
         </h1>
         <p className="seo-sub">
-Enabling healthcare providers to grow with confidence, We bring together registration, compliance, HR solutions for healthcare, digital transformation, and digital marketing , Website Development into a unified, end-to-end solution.       </p>
+          Enabling healthcare providers to grow with confidence, We bring together registration, compliance, HR solutions for healthcare, digital transformation, and digital marketing , Website Development into a unified, end-to-end solution.       </p>
         <div className="seo-actions">
           <a className="seo-btn-fill" href="#approach"><span>Get in Touch</span><div className="seo-btn-arr">›</div></a>
         </div>
       </div>
 
-            {/* RIGHT — empty, banner image shows through */}
-      <div style={{ order:2 }} />
+      {/* RIGHT — empty, banner image shows through */}
+      <div style={{ order: 2 }} />
 
       {/* Mobile: collapse to 1 col, full cover */}
       <style>{`
@@ -638,7 +786,7 @@ Enabling healthcare providers to grow with confidence, We bring together registr
    SECTION 2 — OUR APPROACH + FORM
 ═══════════════════════════════════════════ */
 function ApproachSection() {
-  const [form, setForm] = useState({ name:"", email:"", phone:"", company:"", msg:"" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const sendEmail = (e) => {
@@ -647,13 +795,13 @@ function ApproachSection() {
       name: form.name, email: form.email, phone: form.phone,
       company: form.company, message: form.msg, url: window.location.href,
     };
-    emailjs.send("service_8xw6k3r","template_jarui36", templateParams,"XWRnXi4hK2SvmRG3q")
-      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name:"",email:"",phone:"",company:"",msg:"" }); })
+    emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
+      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name: "", email: "", phone: "", company: "", msg: "" }); })
       .catch(() => alert("Failed to send ❌"));
   };
 
   return (
-    <section id="approach" style={{ background:"#ffffff", padding:"5rem 6%", position:"relative", overflow:"hidden" }}>
+    <section id="approach" style={{ background: "#ffffff", padding: "5rem 6%", position: "relative", overflow: "hidden" }}>
       <style>{`
         /* eyebrow shared */
         .seo-eyebrow-wrap { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
@@ -696,18 +844,16 @@ function ApproachSection() {
       <div className="ap2-inner">
         {/* LEFT */}
         <div>
-             <div className="partners-header1">
+          <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>About Industry</div>
           </div>
           <h2 className="ap2-heading"><span>Healthcare Industry in India </span> — Care Meets Innovation</h2>
           <p className="ap2-intro">
-India's healthcare industry plays a critical role in improving quality of life, spanning hospitals, clinics, diagnostic centers, and specialized care providers — offering immense opportunities. </p>
+            India's healthcare industry plays a critical role in improving quality of life, spanning hospitals, clinics, diagnostic centers, and specialized care providers — offering immense opportunities. </p>
           <p className="ap2-intro">
             But in today’s evolving landscape, delivering quality care alone is not enough. Compliance, strong digital presence, efficient workforce management, and technology adoption have become essential for healthcare providers to operate effectively and scale. That’s where PCS, a trusted Healthcare Digital Marketing Company and healthcare digital marketing agency, steps in with end-to-end support.
-         </p>
-          <p className="ap2-intro" style={{ color:"rgba(2,43,68,0.45)", fontStyle:"italic" }}>
-            Precise. Proven. Profitable. Built for long-term dominance.
           </p>
+
         </div>
 
         {/* RIGHT FORM */}
@@ -721,14 +867,14 @@ India's healthcare industry plays a critical role in improving quality of life, 
               <div className="ap2-fl-row">
                 <div className="ap2-fl-group">
                   <label className="ap2-fl-label">Your Name</label>
-                  <div style={{ position:"relative" }}>
+                  <div style={{ position: "relative" }}>
                     <span className="ap2-fl-icon">👤</span>
                     <input className="ap2-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
                   </div>
                 </div>
                 <div className="ap2-fl-group">
                   <label className="ap2-fl-label">Company</label>
-                  <div style={{ position:"relative" }}>
+                  <div style={{ position: "relative" }}>
                     <span className="ap2-fl-icon">🏢</span>
                     <input className="ap2-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
                   </div>
@@ -736,7 +882,7 @@ India's healthcare industry plays a critical role in improving quality of life, 
               </div>
               <div className="ap2-fl-group">
                 <label className="ap2-fl-label">Email Address</label>
-                <div style={{ position:"relative" }}>
+                <div style={{ position: "relative" }}>
                   <span className="ap2-fl-icon">✉️</span>
                   <input className="ap2-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
                 </div>
@@ -750,8 +896,8 @@ India's healthcare industry plays a critical role in improving quality of life, 
               </div>
               <div className="ap2-fl-group">
                 <label className="ap2-fl-label">Message</label>
-                <div style={{ position:"relative" }}>
-                  <span className="ap2-fl-icon" style={{ top:"0.9rem", transform:"none" }}>💬</span>
+                <div style={{ position: "relative" }}>
+                  <span className="ap2-fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
                   <textarea className="ap2-fl-textarea" name="msg" placeholder="Tell us about your SEO goals..." value={form.msg} onChange={handleChange} />
                 </div>
               </div>
@@ -774,28 +920,28 @@ function WhyPCSSection() {
     <section className="pcs-section" id="why-pcs">
       <div className="pcs-inner">
         <div className="pcs-header">
-            <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Challenges</div>
-          </div>          <h2 className="pcs-h2">The Biggest Challenges in the  <span><i>Healthcare  Industry </i></span> Today</h2>
+          <div className="partners-header1">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Challenges</h2>
+          </div>          <h3 className="pcs-h2">The Biggest Challenges in the  <span><i>Healthcare  Industry </i></span> Today</h3>
           <p className="pcs-lead">
 
-Running a healthcare organization comes with its own set of complexities. Here are the most common challenges faced by providers: 
+            Running a healthcare organization comes with its own set of complexities. Here are the most common challenges faced by providers:
           </p>
         </div>
         <div className="pcs-radial-layout">
           {/* LEFT */}
           <div className="pcs-radial-col left">
             {[
-              { num:"01 · Expertise", title:"Compliance Complexity", desc:"Managing licenses, accreditations, and regulatory filings can overwhelm healthcare providers.", icon:"/img/icon/healthcare-compliance.webp", iconStyle:{background:"rgba(0,65,104,0.3)",borderColor:"rgba(0,130,210,0.5)"} },
-              { num:"02 · Approach", title:"Digital Absence ", desc:"Managing licenses, accreditations, and regulatory filings can overwhelm healthcare providers.", icon:"/img/icon/healthcare-digital-absence.webp", iconStyle:{background:"rgba(237,131,55,0.2)",borderColor:"rgba(237,131,55,0.5)"} },
-              { num:"03 · Reliability", title:"Patient Reach", desc:"Without effective digital marketing strategies, hospitals struggle to reach and engage the right audience.", icon:"/img/icon/healthcare-buyer-reach.webp", iconStyle:{background:"rgba(10,82,130,0.3)",borderColor:"rgba(20,120,190,0.5)"} },
+              { num: "01 · Expertise", title: "Compliance Complexity", desc: "Managing licenses, accreditations, and regulatory filings can overwhelm healthcare providers.", icon: "/img/icon/healthcare-compliance.webp", iconStyle: { background: "rgba(0,65,104,0.3)", borderColor: "rgba(0,130,210,0.5)" } },
+              { num: "02 · Approach", title: "Digital Absence ", desc: "Managing licenses, accreditations, and regulatory filings can overwhelm healthcare providers.", icon: "/img/icon/healthcare-digital-absence.webp", iconStyle: { background: "rgba(237,131,55,0.2)", borderColor: "rgba(237,131,55,0.5)" } },
+              { num: "03 · Reliability", title: "Patient Reach", desc: "Without effective digital marketing strategies, hospitals struggle to reach and engage the right audience.", icon: "/img/icon/healthcare-buyer-reach.webp", iconStyle: { background: "rgba(10,82,130,0.3)", borderColor: "rgba(20,120,190,0.5)" } },
             ].map((p, i) => (
               <div className="pcs-point" key={i}>
                 <div className="pcs-point-line"></div>
                 <div className="pcs-point-icon-wrap" style={p.iconStyle}><img src={p.icon} alt={p.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
                 <div className="pcs-point-body">
                   <span className="pcs-point-num">{p.num}</span>
-                  <div className="pcs-point-title">{p.title}</div>
+                  <h4 className="pcs-point-title">{p.title}</h4>
                   <div className="pcs-point-desc">{p.desc}</div>
                 </div>
               </div>
@@ -815,9 +961,9 @@ Running a healthcare organization comes with its own set of complexities. Here a
           {/* RIGHT */}
           <div className="pcs-radial-col right">
             {[
-              { num:"04 · Delivery", title:"Workforce Challenges", desc:"Managing staff efficiently requires strong healthcare workforce management and reliable HR solutions for healthcare.", icon:"/img/icon/healthcare-growth.webp", iconStyle:{background:"rgba(0,42,68,0.4)",borderColor:"rgba(0,100,170,0.5)"} },
-              { num:"05 · Value", title:"Technology Gap", desc:"Limited adoption of digital tools affects operational efficiency and patient experience.", icon:"/img/icon/healthcare-technology.webp", iconStyle:{background:"rgba(20,102,160,0.3)",borderColor:"rgba(30,140,210,0.5)"} },
-              { num:"06 · Growth", title:"Brand Visibility", desc:"Low online visibility reduces patient trust and acquisition, emphasizing the need for a strong digital presence.", icon:"/img/icon/healthcare-brand-visibility.webp", iconStyle:{background:"rgba(201,109,26,0.2)",borderColor:"rgba(237,131,55,0.5)"} },
+              { num: "04 · Delivery", title: "Workforce Challenges", desc: "Managing staff efficiently requires strong healthcare workforce management and reliable HR solutions for healthcare.", icon: "/img/icon/healthcare-growth.webp", iconStyle: { background: "rgba(0,42,68,0.4)", borderColor: "rgba(0,100,170,0.5)" } },
+              { num: "05 · Value", title: "Technology Gap", desc: "Limited adoption of digital tools affects operational efficiency and patient experience.", icon: "/img/icon/healthcare-technology.webp", iconStyle: { background: "rgba(20,102,160,0.3)", borderColor: "rgba(30,140,210,0.5)" } },
+              { num: "06 · Growth", title: "Brand Visibility", desc: "Low online visibility reduces patient trust and acquisition, emphasizing the need for a strong digital presence.", icon: "/img/icon/healthcare-brand-visibility.webp", iconStyle: { background: "rgba(201,109,26,0.2)", borderColor: "rgba(237,131,55,0.5)" } },
 
             ].map((p, i) => (
               <div className="pcs-point" key={i}>
@@ -915,10 +1061,10 @@ function ChallengesSection() {
           display: "flex", alignItems: "center", justifyContent: "center",
           gap: "12px", marginBottom: "14px",
         }}>
-                    <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Solutions</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Solutions</h2>
 
         </div>
-        <h2 style={{
+        <h3 style={{
           fontFamily: "'Poppins', sans-serif",
           fontSize: isMobile ? "22px" : isTablet ? "28px" : "clamp(28px, 3.5vw, 40px)",
           fontWeight: "700", color: "#0d1f2d",
@@ -926,15 +1072,15 @@ function ChallengesSection() {
         }}>
           How We Help {" "}
           <span style={{ color: "#ed8337", fontStyle: "italic" }}>
-           Hospitals & Healthcare 
-          </span>{" "} Providers Grow 
+            Hospitals & Healthcare
+          </span>{" "} Providers Grow
           Grow
-        </h2>
+        </h3>
         <p style={{
           fontSize: isMobile ? "13px" : "15px", color: "#000000", fontWeight: "300",
-           margin: "30px auto", lineHeight: "1.75",
+          margin: "30px auto", lineHeight: "1.75",
         }}>
-From business registration to digital growth and website development, we provide the right solutions at every stage of your healthcare journey.  </p>     </div>
+          From business registration to digital growth and website development, we provide the right solutions at every stage of your healthcare journey.  </p>     </div>
 
       {/* ══════════════════════════════════
           MOBILE — Accordion (tab → content below each)
@@ -1073,12 +1219,12 @@ From business registration to digital growth and website development, we provide
                 width: "120px", height: "120px", borderRadius: "50%",
                 background: "#F5C49A", opacity: "0.18", pointerEvents: "none",
               }} />
-              <h3 style={{
+              <h4 style={{
                 fontFamily: "'Poppins', sans-serif",
                 fontSize: isTablet ? "19px" : "clamp(18px, 2.2vw, 24px)",
                 fontWeight: "700", color: "#0d1f2d",
                 lineHeight: "1.35", margin: "0",
-              }}>{current.title}</h3>
+              }}>{current.title}</h4>
             </div>
 
             {/* Right Pane */}
@@ -1116,15 +1262,15 @@ function CaseStudySection() {
     <section className="cs-section" id="case-study">
       <div className="cs-inner">
         <div className="cs-header">
-            <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
-          </div>          <h2 className="cs-h2">Real Results for <span>Real  Businesses</span></h2>
+          <div className="partners-header1">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</h2>
+          </div>          <h3 className="cs-h2">Real Results for <span>Real  Businesses</span></h3>
         </div>
         <div className="cs-quote-wrap">
           <div className="cs-q-mark">"</div>
           <div className="cs-q-mark-r">"</div>
           <p className="cs-quote-text">
-            We have helped businesses across <em>industries streamline compliance</em>, build their <em>digital presence</em>, and achieve  <em>consistent growth.</em> 
+            We have helped businesses across <em>industries streamline compliance</em>, build their <em>digital presence</em>, and achieve  <em>consistent growth.</em>
           </p>
           <div className="cs-quote-attr">
             <span className="cs-quote-line"></span>
@@ -1139,12 +1285,12 @@ function CaseStudySection() {
 
 
 const faqData = [
-  { q: "What is a financial service business?", a: "A financial service business provides expert support in banking, investments, accounting, loans, and advisory services to help businesses and individuals manage their finances efficiently." },
-  { q: "What are the types of financial services?", a: "Financial services include banking, insurance, investment management, accounting, tax advisory, loans, and financial planning, covering all aspects of money management and business growth" },
-  { q: "What are the four financial services?", a: "The main four financial services are banking, insurance, investment advisory, and accounting, which collectively help businesses and individuals manage, protect, and grow their assets." },
-  { q: "What are the 8 financial sectors?", a: "The eight sectors include banking, insurance, capital markets, investment services, asset management, accounting, tax advisory, and fintech, covering the full spectrum of financial operations." },
-  { q: "Why is a financial advisory important?", a: "Financial advisory helps businesses make informed decisions, optimize resources, manage risks, plan growth, and ensure compliance, ultimately improving profitability and long-term financial stability." },
-  { q: "What are the five types of finance?", a: "The five types are banking, insurance, investment management, accounting, and financial planning, each addressing critical aspects of financial control, risk management, and wealth creation." },
+  { q: "Why does a healthcare clinic/hospital need digital marketing?", a: "Digital marketing helps healthcare providers improve online visibility, build patient trust, promote healthcare services, and attract new patients. It supports appointment generation, strengthens local search presence, and helps clinics and hospitals communicate effectively with patients across digital platforms." },
+  { q: "How can social media marketing help healthcare businesses?", a: "Social media marketing helps healthcare businesses improve patient engagement, increase awareness about treatments and services, share health-related information, and build credibility. It also supports brand visibility, patient communication, and targeted campaigns that help attract relevant healthcare audiences online." },
+  { q: "What features should a healthcare website have?", a: "A healthcare website should include service information, doctor profiles, online appointment booking, contact details, patient testimonials, mobile responsiveness, SEO optimization, secure patient communication, and easy navigation. These features improve patient experience, accessibility, trust, and overall engagement with healthcare services" },
+  { q: "Can you build a website with online appointment booking?", a: "Yes, we develop healthcare websites with integrated online appointment booking systems, patient enquiry forms, doctor schedules, automated confirmations, and user-friendly interfaces. These features help healthcare providers streamline patient management, improve accessibility, and enhance overall patient convenience and operational efficiency." },
+  { q: "What HR services do healthcare providers need?", a: "Healthcare providers typically require recruitment, payroll management, compliance management, attendance tracking, workforce planning, onboarding, shift scheduling, and HR policy support. These services help manage medical and non-medical staff efficiently while ensuring compliance with healthcare and labor regulations." },
+  { q: "How does payroll management work for medical staff?", a: "Payroll management for medical staff includes salary processing, shift calculations, overtime management, statutory deductions, attendance tracking, incentive handling, and compliance reporting. Structured payroll systems ensure accurate payments, reduce administrative workload, and maintain smooth workforce operations within healthcare organizations." },
 ];
 function FAQSection() {
   const [active, setActive] = useState(null);
@@ -1153,14 +1299,14 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section"  style={{ background:"#ffffff" }}>
+    <section className="faq-section" style={{ background: "#ffffff" }}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -1209,7 +1355,11 @@ function FAQSection() {
 export default function HealthcarePCS() {
 
   return (
-    <Layout>
+    <Layout
+      title="Healthcare Digital Marketing Company for Hospitals & Clinics"
+      description="Grow your healthcare business with expert digital marketing, website development, and HR solutions. Attract more patients and scale with confidence."
+    >
+      <SEOHead />
       <style>{css}</style>
       <HeroSection />
       <ApproachSection />

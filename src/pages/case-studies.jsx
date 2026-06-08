@@ -1,5 +1,7 @@
 import Layout from '@theme/Layout';
 const banner = "/img/case-study.png";
+import Head from '@docusaurus/Head';
+
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
@@ -300,23 +302,23 @@ const styles = `
 `;
 
 const cards = [
-  { id: 1,   image: "/img/case-study-tactive.webp", badge: "bdg-dm", label: "Perfomance Marketing", tags: ["SEO"], client: "Tactive", slug: "tactive", title: "From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand", overview: "Tactive Software Systems is a technology-driven company delivering dedicated construction ERP solutions . Backed by over 17 years of research and development and supported by the industry expertise of URC Constructions, Tactive helps construction businesses streamline operations and make data-driven decisions." },
-  { id: 2,   image: "/img/case-study-sterlocare.webp", badge: "bdg-seo", label: "SEO", tags: ["Perfomance Marketing"], client: "SterloCare", slug: "sterlocare", title: "Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand", overview: "SterloCare, powered by the OREOPS Framework, delivers low-code technology solutions for web and mobile application development. Established in 2016, the company helps businesses streamline workflows, manage operations, and build scalable digital solutions with minimal coding. Operating across India, GCC, Africa, and the USA, SterloCare focuses on innovation, enterprise performance, and user-centric technology experiences." },
-  { id: 3,   image: "/img/case-study-urtc.webp", badge: "bdg-dm", label: "Website Development", tags: ["SEO"], client: "URCTS", slug: "urcts", title: "Building a Strong Brand Identity and Digital Presence for an Engineering Firm", overview: "URCTS is a global engineering solutions provider serving Oil & Gas, industrial, and infrastructure sectors with multidisciplinary expertise. Established in 2023, the company builds on the engineering legacy of URC Constructions (P) Ltd. URCTS delivers integrated solutions from concept to commissioning with a focus on precision, compliance, and operational excellence. With experience across India, the Middle East, Europe, and the USA, the company supports complex engineering projects with scalable and reliable execution. " },
-  { id: 4,   image: "/img/case-study-feral.webp", badge: "bdg-seo", label: "E-Commerence Website Development", tags: ["Local SEO"], client: "Feral Roots", slug: "feral-roots", title: "From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand", overview: "Feral Roots is a sustainable lifestyle brand focused on empowering tribal communities through ethical trade and responsible sourcing practices. The company works closely with local communities to source natural and millet-based products at fair prices while creating sustainable livelihood opportunities." },
-  { id: 5,  image: "/img/case-study-ey-chiquita.webp",  badge: "bdg-ppc", label: "Meta Ads", tags: [], client: "Ey Chiquita", slug: "ey-chiquita", title: "Driving 100 Qualified Leads Through Social Media Marketing for a Fashion Brand", overview: "Ey Chiquita is a fashion and lifestyle brand focused on creating trend-driven products and engaging digital experiences for modern consumers. The brand emphasizes style, audience engagement, and strong social media presence to connect with fashion-focused customers." },
-  { id: 6,   image: "/img/case-study-zky.webp", badge: "bdg-seo", label: "SEO", tags: ["Website Development"], client: "ZKY", slug: "zky", title: "Establishing a Professional Digital Presence for an HR Verification Company", overview: "ZKY wanted a professional online identity that reflected trust, accuracy, and reliability within the HR verification industry. We created a structured digital presence designed to strengthen credibility and support business enquiries." },
-  { id: 7,   image: "/img/case-study-riya.webp", badge: "bdg-dm", label: "SEO", tags: ["Website Development", "SMM"], client: "RIYA", slug: "riya", title: "Building a Credible Digital Presence for a Business Consulting Firm", overview: "Focused on delivering business consulting and operational support solutions, the company helps organizations improve efficiency, compliance, and long-term growth through structured and professional advisory services across multiple business functions." },
-  { id: 8,   image: "/img/case-study-abb.webp", badge: "bdg-smm", label: "Website Development", tags: ["SEO"], client: "ABB", slug: "abb", title: "Strengthening Digital Presence for a Digital Transformation Company", overview: "ABB Management Consulting helps MSMEs accelerate growth through Digital Transformation, Application Development, and Process Automation solutions. The company focuses on improving operational efficiency, streamlining business processes, and enabling sustainable growth through technology-driven strategies and innovation-focused consulting services." },
-  { id: 9,   image: "/img/case-study-sterlo.webp", badge: "bdg-ppc", label: "Content Marketing", tags: ["SEO"], client: "Sterlo", slug: "sterlo", title: "Enterprise Lead Generation Across India and GCC for a Low Code No Code Platform", overview: "Sterlo is a low code / no code platform developed under the OREOPS Framework, enabling businesses to create web and mobile applications, manage workflows, and generate reports with minimal coding." },
-  { id: 10,   image: "/img/case-study-sterlobuild.webp", badge: "bdg-dm", label: "SEO", tags: ["Content Marketing"], client: "SterloBuild", slug: "sterlobuild", title: "Enterprise Lead Generation Across India for a Construction Tech SaaS Brand", overview: "SterloBuild is a construction technology SaaS platform focused on simplifying construction workflows and improving operational efficiency through digital solutions designed for the construction industry." },
-  { id: 11,   image: "/img/case-study-analytixhub.webp", badge: "bdg-seo", label: "Recruitment Service", tags: ["Payroll"], client: "Analytix Hub", slug: "analytix-hub", title: "Fast Recruitment and On-Time Payroll Enablement for an IT Company", overview: "Analytix Hub is an IT services firm delivering technology solutions and operational support for business scaling needs." },
-  { id: 12,  image: "/img/case-study-ainqa.webp", badge: "bdg-smm", label: "Recruitment Service", tags: [], client: "AINQA", slug: "ainqa", title: "On-Time Recruitment Closure for Critical IT Roles", overview: "AINQA is a technology company specializing in digital services and IT solutions for diverse industries." },
-  { id: 13,  image: "/img/case-study-starhealth.webp", badge: "bdg-ppc", label: "Recruitment Service", tags: [], client: "StarHealth", slug: "starhealth", title: "Bulk Recruitment Support for a Leading Insurance Brand", overview: "StarHealth is a prominent insurance provider offering comprehensive health solutions across India, supported by a large and diverse workforce." },
-  { id: 14,   image: "/img/case-study-baltimore.webp", badge: "bdg-dm", label: "Recruitment Service", tags: [], client: "Baltimore Health Analytics", slug: "baltimore-health-analytics", title: "Recruitment Support for a US-Based Healthcare Analytics Company", overview: "Baltimore Health Analytics is a healthcare-focused analytics company supporting HEDIS consulting, Medicare Advantage operations, and data-driven healthcare solutions." },
-  { id: 15,   image: "/img/case-study-talent-tribe.webp", badge: "bdg-seo", label: "SEO", tags: ["Website Development"], client: "Talent Tribe", slug: "talent-tribe", title: "Brand Identity and Website Development for a Recruitment Company", overview: "Talent Tribe wanted a professional brand identity and website that clearly represented its recruitment expertise while creating a strong first impression for both employers and job seekers." },
-  { id: 16,   image: "/img/case-study-curetech.webp", badge: "bdg-seo", label: "Recruitment Service", tags: [""], client: "Cure Tech", slug: "cure-tech", title: "Fast Recruitment Support for a Printing & Packaging Startup", overview: "Cure Tech is a startup operating within the printing and packaging industry, focused on building efficient operational capabilities and strengthening its workforce during the early stages of business growth." },
-  { id: 17,   image: "/img/case-study-natural.webp", badge: "bdg-seo", label: "Recruitment Service", tags: [""], client: "Natural Salon", slug: "natural-salon", title: "Fast Recruitment Support for a Growing Salon Brand", overview: "Natural Salon is a beauty and wellness brand focused on delivering professional salon and grooming services through skilled talent, customer-focused experiences, and consistent service quality." },
+  { id: 1, image: "/img/case-study-tactive.webp", badge: "bdg-dm", label: "Perfomance Marketing", tags: ["SEO"], client: "Tactive", slug: "tactive", title: "From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand", overview: "Tactive Software Systems is a technology-driven company delivering dedicated construction ERP solutions . Backed by over 17 years of research and development and supported by the industry expertise of URC Constructions, Tactive helps construction businesses streamline operations and make data-driven decisions." },
+  { id: 2, image: "/img/case-study-sterlocare.webp", badge: "bdg-seo", label: "SEO", tags: ["Perfomance Marketing"], client: "SterloCare", slug: "sterlocare", title: "Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand", overview: "SterloCare, powered by the OREOPS Framework, delivers low-code technology solutions for web and mobile application development. Established in 2016, the company helps businesses streamline workflows, manage operations, and build scalable digital solutions with minimal coding. Operating across India, GCC, Africa, and the USA, SterloCare focuses on innovation, enterprise performance, and user-centric technology experiences." },
+  { id: 3, image: "/img/case-study-urtc.webp", badge: "bdg-dm", label: "Website Development", tags: ["SEO"], client: "URCTS", slug: "urcts", title: "Building a Strong Brand Identity and Digital Presence for an Engineering Firm", overview: "URCTS is a global engineering solutions provider serving Oil & Gas, industrial, and infrastructure sectors with multidisciplinary expertise. Established in 2023, the company builds on the engineering legacy of URC Constructions (P) Ltd. URCTS delivers integrated solutions from concept to commissioning with a focus on precision, compliance, and operational excellence. With experience across India, the Middle East, Europe, and the USA, the company supports complex engineering projects with scalable and reliable execution. " },
+  { id: 4, image: "/img/case-study-feral.webp", badge: "bdg-seo", label: "E-Commerence Website Development", tags: ["Local SEO"], client: "Feral Roots", slug: "feral-roots", title: "From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand", overview: "Feral Roots is a sustainable lifestyle brand focused on empowering tribal communities through ethical trade and responsible sourcing practices. The company works closely with local communities to source natural and millet-based products at fair prices while creating sustainable livelihood opportunities." },
+  { id: 5, image: "/img/case-study-ey-chiquita.webp", badge: "bdg-ppc", label: "Meta Ads", tags: [], client: "Ey Chiquita", slug: "ey-chiquita", title: "Driving 100 Qualified Leads Through Social Media Marketing for a Fashion Brand", overview: "Ey Chiquita is a fashion and lifestyle brand focused on creating trend-driven products and engaging digital experiences for modern consumers. The brand emphasizes style, audience engagement, and strong social media presence to connect with fashion-focused customers." },
+  { id: 6, image: "/img/case-study-sterlo.webp", badge: "bdg-ppc", label: "Content Marketing", tags: ["SEO"], client: "Sterlo", slug: "sterlo", title: "Enterprise Lead Generation Across India and GCC for a Low Code No Code Platform", overview: "Sterlo is a low code / no code platform developed under the OREOPS Framework, enabling businesses to create web and mobile applications, manage workflows, and generate reports with minimal coding." },
+  { id: 7, image: "/img/case-study-zky.webp", badge: "bdg-seo", label: "SEO", tags: ["Website Development"], client: "ZKY", slug: "zky", title: "Establishing a Professional Digital Presence for an HR Verification Company", overview: "ZKY wanted a professional online identity that reflected trust, accuracy, and reliability within the HR verification industry. We created a structured digital presence designed to strengthen credibility and support business enquiries." },
+  { id: 8, image: "/img/case-study-riya.webp", badge: "bdg-dm", label: "SEO", tags: ["Website Development", "SMM"], client: "RIYA", slug: "riya-consultancy", title: "Building a Credible Digital Presence for a Business Consulting Firm", overview: "Focused on delivering business consulting and operational support solutions, the company helps organizations improve efficiency, compliance, and long-term growth through structured and professional advisory services across multiple business functions." },
+  { id: 9, image: "/img/case-study-abb.webp", badge: "bdg-smm", label: "Website Development", tags: ["SEO"], client: "ABB", slug: "abb", title: "Strengthening Digital Presence for a Digital Transformation Company", overview: "ABB Management Consulting helps MSMEs accelerate growth through Digital Transformation, Application Development, and Process Automation solutions. The company focuses on improving operational efficiency, streamlining business processes, and enabling sustainable growth through technology-driven strategies and innovation-focused consulting services." },
+  { id: 10, image: "/img/case-study-sterlobuild.webp", badge: "bdg-dm", label: "SEO", tags: ["Content Marketing"], client: "SterloBuild", slug: "sterlobuild", title: "Enterprise Lead Generation Across India for a Construction Tech SaaS Brand", overview: "SterloBuild is a construction technology SaaS platform focused on simplifying construction workflows and improving operational efficiency through digital solutions designed for the construction industry." },
+  { id: 11, image: "/img/case-study-analytixhub.webp", badge: "bdg-seo", label: "Recruitment Service", tags: ["Payroll"], client: "Analytix Hub", slug: "analytixhub", title: "Fast Recruitment and On-Time Payroll Enablement for an IT Company", overview: "Analytix Hub is an IT services firm delivering technology solutions and operational support for business scaling needs." },
+  { id: 12, image: "/img/case-study-ainqa.webp", badge: "bdg-smm", label: "Recruitment Service", tags: [], client: "AINQA", slug: "ainqa", title: "On-Time Recruitment Closure for Critical IT Roles", overview: "AINQA is a technology company specializing in digital services and IT solutions for diverse industries." },
+  { id: 13, image: "/img/case-study-starhealth.webp", badge: "bdg-ppc", label: "Recruitment Service", tags: [], client: "StarHealth", slug: "starhealth", title: "Bulk Recruitment Support for a Leading Insurance Brand", overview: "StarHealth is a prominent insurance provider offering comprehensive health solutions across India, supported by a large and diverse workforce." },
+  { id: 14, image: "/img/case-study-baltimore.webp", badge: "bdg-dm", label: "Recruitment Service", tags: [], client: "Baltimore Health Analytics", slug: "baltimore-health-analytics", title: "Recruitment Support for a US-Based Healthcare Analytics Company", overview: "Baltimore Health Analytics is a healthcare-focused analytics company supporting HEDIS consulting, Medicare Advantage operations, and data-driven healthcare solutions." },
+  { id: 15, image: "/img/case-study-curetech.webp", badge: "bdg-seo", label: "Recruitment Service", tags: [], client: "Cure Tech", slug: "cure-tek-manufacturing", title: "Fast Recruitment Support for a Printing & Packaging Startup", overview: "Cure Tech is a startup operating within the printing and packaging industry, focused on building efficient operational capabilities and strengthening its workforce during the early stages of business growth." },
+  { id: 16, image: "/img/case-study-natural.webp", badge: "bdg-seo", label: "Recruitment Service", tags: [], client: "Natural Salon", slug: "naturals", title: "Fast Recruitment Support for a Growing Salon Brand", overview: "Natural Salon is a beauty and wellness brand focused on delivering professional salon and grooming services through skilled talent, customer-focused experiences, and consistent service quality." },
+  { id: 17, image: "/img/case-study-talent-tribe.webp", badge: "bdg-seo", label: "SEO", tags: ["Website Development"], client: "Talent Tribe", slug: "talent-tribe", title: "Brand Identity and Website Development for a Recruitment Company", overview: "Talent Tribe wanted a professional brand identity and website that clearly represented its recruitment expertise while creating a strong first impression for both employers and job seekers." },
 
 ];
 
@@ -339,23 +341,23 @@ function Badge({ cls, label, tags = [] }) {
 
 /* ── Card: entire card + button both go to slug page ── */
 function CaseStudyCard({ card }) {
-const {
-  image,
-  badge,
-  label,
-  tags,
-  title,
-  client,
-  overview,
-  slug
-} = card;
+  const {
+    image,
+    badge,
+    label,
+    tags,
+    title,
+    client,
+    overview,
+    slug
+  } = card;
   return (
     <a className="cs-card" href={`/case-studies/${slug}`}>
       <div className="cs-thumb">
-<img
-  src={image}
-  alt={title}
-/>      </div>
+        <img
+          src={image}
+          alt={title}
+        />      </div>
       <div className="cs-body">
         <Badge cls={badge} label={label} tags={tags} />
         {client && <div className="cs-client">{client}</div>}
@@ -372,9 +374,18 @@ const {
 export default function CaseStudyCards() {
   return (
     <Layout
-      title="Case Studies | PCS Healthcare"
-      description="Explore real-world case studies from PCS Healthcare covering digital marketing, SEO, PPC, social media, and lead generation for healthcare and technology brands."
+      title=" Case Studies & Success Stories | Priyam Consultancy services "
+      description="Explore real case studies showcasing website development, digital marketing, branding, SEO, and business growth results delivered by Priyam Consultancy."
     >
+      <Head>
+        <title> Case Studies & Success Stories | Priyam Consultancy services </title>
+        <meta name="description" content="Explore real case studies showcasing website development, digital marketing, branding, SEO, and business growth results delivered by Priyam Consultancy." />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/" />
+        <meta property="og:title" content=" Case Studies & Success Stories | Priyam Consultancy services " />
+        <meta property="og:description" content="Explore real case studies showcasing website development, digital marketing, branding, SEO, and business growth results delivered by Priyam Consultancy." />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/" />
+      </Head>
+
       <div className="cs-wrap">
         <style>{styles}</style>
 

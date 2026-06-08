@@ -81,75 +81,85 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="Talent Tribe Recruitment & Hiring Case Study | PCS" description="Discover how PCS created a professional website for Talent Tribe, improving digital presence, user experience, brand visibility,  and customer engagement.">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>Talent Tribe Recruitment & Hiring Case Study | PCS</title>
+        <meta name="description" content="Discover how PCS created a professional website for Talent Tribe, improving digital presence, user experience, brand visibility,  and customer engagement." />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/talent-tribe/" />
+        <meta property="og:title" content="Talent Tribe Recruitment & Hiring Case Study | PCS" />
+        <meta property="og:description" content="Discover how PCS created a professional website for Talent Tribe, improving digital presence, user experience, brand visibility,  and customer engagement." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/talent-tribe/" />
       </Head>
       <style>{styles}</style>
 
       <div className="detail-wrap">
-
         {/* ── BANNER ── */}
         <section className="detail-banner">
           <div className="detail-banner-inner">
-            <h1 className="detail-banner-title">From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand</h1>
+            <h1 className="detail-banner-title">
+              Building a Professional Digital Presence for Talent Tribe
+            </h1>
           </div>
         </section>
 
         {/* ── BODY ── */}
         <div className="detail-page-body">
-
           {/* LEFT */}
           <div className="detail-left">
-
             <div className="detail-hero-img">
               <img src="/img/case-study-talent-tribe.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
             </div>
 
-     
- <div className="detail-section">
-              <h2>About</h2>
-              <p>Tactive approached us to build a structured B2B marketing ecosystem focused on generating qualified leads across India and international markets for its construction ERP solutions.</p>
+            <div className="detail-section">
+              <h2>About Talent Tribe</h2>
+              <p>
+                Talent Tribe is a recruitment and talent acquisition company dedicated to helping organizations identify, attract, and hire qualified professionals across various industries. The company focuses on delivering efficient recruitment solutions that support workforce growth, business expansion, and long-term talent acquisition success.
+              </p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>Tactive approached us to build a structured B2B marketing ecosystem focused on generating qualified leads across India and international markets for its construction ERP solutions.</p>
+              <p>
+                Talent Tribe partnered with PCS to establish a professional online presence that effectively showcased its recruitment expertise and service offerings. While the company possessed strong industry knowledge and recruitment capabilities, it lacked a structured digital platform that could communicate its value proposition, build trust, and generate business enquiries.
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>Tactive had no existing lead pipeline, minimal digital presence, and needed to reach niche decision-makers — project managers, procurement heads, and CTOs — in a highly competitive construction tech space.</p>
+              <p>
+                Talent Tribe required a modern and professional website that reflected its recruitment expertise and strengthened its market positioning. The absence of a dedicated digital platform limited brand visibility, online credibility, and customer engagement. The company needed a website that could clearly communicate its services, improve user experience, and support future business growth.
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Built a full-funnel B2B demand generation engine targeting construction industry decision-makers.</li>
-              <li>Launched LinkedIn and Google Ads campaigns with ICP-aligned messaging and landing pages.</li>
-              <li>Developed SEO-driven content to capture organic search demand for construction ERP keywords.</li>
-              <li>Implemented CRM workflows to track, score, and nurture leads through a structured pipeline.</li>
-              <li>Ran retargeting campaigns to re-engage warm prospects and improve demo booking rates.</li>
+                <li>Developed a professional website aligned with the company's brand identity</li>
+                <li>Utilized AI-assisted content development to create structured and engaging website content
+                </li>
+                <li>Designed a user-friendly and mobile-responsive website experience</li>
+                <li>Created clear service presentation and navigation architecture</li>
+                <li>Implemented SEO-friendly website content and page structure
+                </li>
+                <li>Integrated enquiry-focused call-to-action elements
+                </li>
+                <li>Optimized website performance and usability for improved engagement </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
-              <p>Within 8 months, Tactive moved from zero pipeline to 35 Cr+ in qualified opportunities, with consistent monthly lead flow and a measurably improved demo-to-proposal conversion rate.</p>
+              <p>
+                PCS successfully delivered a professional AI-assisted website that strengthened Talent Tribe's digital presence and brand credibility. The new platform improved online visibility, enhanced user experience, and created a strong foundation for lead generation. With a structured website and optimized content, Talent Tribe now has a scalable digital asset that effectively communicates its recruitment expertise and supports future business growth.
+              </p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like Tactive?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
-
           </div>
 
           {/* SIDEBAR */}
@@ -170,59 +180,56 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
             </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
           </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-            </div>
-
-          </div>
-
         </div>
       </div>
     </Layout>

@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title=" SterloCare SaaS Lead Generation & SEO Case Study | PCS  " description="PCS helped SterloCare rank 50+ keywords in Google's Top 10, increase search visibility, and generate qualified enterprise leads across India and GCC.">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title> SterloCare SaaS Lead Generation & SEO Case Study | PCS  </title>
+        <meta name="description" content="PCS helped SterloCare rank 50+ keywords in Google's Top 10, increase search visibility, and generate qualified enterprise leads across India and GCC." />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/sterlocare/" />
+        <meta property="og:title" content=" SterloCare SaaS Lead Generation & SEO Case Study | PCS  " />
+        <meta property="og:description" content="PCS helped SterloCare rank 50+ keywords in Google's Top 10, increase search visibility, and generate qualified enterprise leads across India and GCC." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/sterlocare/" />
       </Head>
       <style>{styles}</style>
 
@@ -116,18 +116,18 @@ export default function CaseStudy() {
 
             <div className="detail-section">
               <h2>About SterloCare</h2>
-              <p>SterloCare, powered by the OREOPS Framework, delivers low-code technology solutions for web and mobile application development. Established in 2016, the company helps businesses streamline workflows, manage operations, and build scalable digital solutions with minimal coding. Operating across India, GCC, Africa, and the USA, SterloCare focuses on innovation, enterprise performance, and user-centric technology experiences.
+              <p>SterloCare, powered by the OREOPS Framework, provides low-code web and mobile application development solutions that help businesses automate processes, improve operational efficiency, and scale faster. Since 2016, it has served clients across India, GCC, Africa, and the USA with innovative, user-focused technology solutions. 
               </p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>SterloCare partnered with PCS to strengthen its digital presence and generate qualified enterprise leads across India and GCC markets through SEO, content marketing, and performance-driven campaigns.
+              <p>SterloCare partnered with PCS to enhance its digital visibility and attract qualified enterprise prospects across India and GCC markets. Through strategic SEO, content marketing, and performance-driven campaigns, PCS helped strengthen brand positioning, improve online reach, and support sustainable lead generation efforts
               </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>Despite offering strong healthcare technology solutions, SterloCare had limited online visibility within a competitive healthcare SaaS market. The brand required stronger search visibility, structured lead generation, and region-specific marketing strategies to support expansion across India and GCC countries.
+              <p>Despite offering strong healthcare technology solutions, SterloCare had limited online visibility within a competitive healthcare SaaS market. The brand required stronger search visibility, structured lead generation, and region-specific marketing strategies to support expansion across India and GCC countries. 
               </p>
             </div>
 
@@ -157,7 +157,7 @@ export default function CaseStudy() {
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like SterloCare?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
 

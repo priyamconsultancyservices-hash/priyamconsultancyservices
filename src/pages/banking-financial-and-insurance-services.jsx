@@ -3,6 +3,110 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
 const banner = "/img/banking.webp";
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/banking-financial-and-insurance-services/";
+  const imageUrl = "https://www.pcsbusinesssolution.com/img/2.webp";
+
+  const schemaData = [
+    {
+     "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+   {
+     "@type":"ListItem",
+     "position":1,
+     "item":{
+       "@id":"https://www.priyamconsultancy.com/",
+       "name":"Home"
+     }
+   },
+   {
+     "@type":"ListItem",
+     "position":2,
+     "item":{
+       "@id":"https://www.priyamconsultancy.com/banking-financial-and-insurance-services/",
+       "name":"Banking, Financial & Insurance Services"
+     }
+   }
+ ]
+
+    },
+    {
+      "@context": "https://schema.org",
+ "@type": "Organization",
+ "name": "Priyam Consultancy Services",
+ "url": "https://www.priyamconsultancy.com/",
+ "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+ "contactPoint": [
+   {
+     "@type": "ContactPoint",
+     "telephone": "+91 96774 44048",
+     "contactType": "customer support"
+   }
+ ],
+ "sameAs": [
+   "https://www.facebook.com/profile.php?id=61577125709962",
+   "https://www.linkedin.com/company/priyam-consultancy-services/",
+   "https://www.instagram.com/priyam_consultancy_services/",
+   "https://x.com/services91032",
+   "https://g.co/kgs/rdTYdi6"
+ ]
+
+    },
+    {
+        "@context":"https://schema.org",
+  "@type":"Service",
+  "@id":"https://www.priyamconsultancy.com/banking-financial-and-insurance-services/#service",
+  "name":"Banking, Financial & Insurance Industry Services",
+  "serviceType":"Business Solutions for Banking, Financial & Insurance Industry",
+  "url":"https://www.priyamconsultancy.com/banking-financial-and-insurance-services/",
+  "description":"Priyam Consultancy provides digital marketing, SEO, website development, recruitment services, payroll management, HR solutions, compliance support, accounting, Virtual CFO services and business consulting solutions tailored for banking, financial services, insurance companies and fintech businesses across India.",
+  "provider":{
+    "@type":"Organization",
+    "name":"Priyam Consultancy Services",
+    "url":"https://www.priyamconsultancy.com/",
+    "logo":{
+      "@type":"ImageObject",
+      "url":"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+    }
+  },
+  "areaServed":{
+    "@type":"Country",
+    "name":"India"
+  }
+
+    },
+
+  ];
+
+  return (
+    <Head>
+      <title>Website Development for Banking & Finance Firms | PCS </title>
+      <meta name="description" content="Build a professional website for banking and finance firms with SEO and digital marketing support from PCS to improve online visibility and get more customers." />
+      <meta name="keywords" content="digital marketing agency for financial services​, digital marketing for financial services,​ insurance companies hiring, Website Development for Banking & Finance, Banking Website Development" />
+      <link rel="canonical" href={pageUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Website Development for Banking & Finance Firms | PCS " />
+      <meta property="og:description" content="Build a professional website for banking and finance firms with SEO and digital marketing support from PCS to improve online visibility and get more customers." />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="PCS Business Solution" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Website Development for Banking & Finance Firms | PCS " />
+      <meta name="twitter:description" content="Build a professional website for banking and finance firms with SEO and digital marketing support from PCS to improve online visibility and get more customers." />
+      <meta name="twitter:image" content={imageUrl} />
+      {schemaData.map((schema, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
+    </Head>
+  );
+}
+
 
 // EmailJS will be loaded via CDN in the component
 
@@ -598,6 +702,7 @@ function HeroSection() {
           .seo-hero-heading { font-size:clamp(1.4rem,7vw,1.7rem) !important; font-weight:600 !important; }
           .seo-sub { font-size:0.8rem !important; }
         }
+          h3.faq-h3{font-size:2.5rem; color:#000;}
       `}</style>
 
       {/* Dark overlay for text readability */}
@@ -777,8 +882,8 @@ function WhyPCSSection() {
       <div className="pcs-inner">
         <div className="pcs-header">
             <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Challenges</div>
-          </div>          <h2 className="pcs-h2">The Biggest Challenges in the  <span><i>Financial Services Industry  </i></span> Today</h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Challenges</h2>
+          </div>          <h3 className="pcs-h2">The Biggest Challenges in the  <span><i>Financial Services Industry  </i></span> Today</h3>
           <p className="pcs-lead">
 Operating in the banking and financial sector comes with its own set of complexities. Here are the most common challenges: </p>
         </div>
@@ -795,7 +900,7 @@ Operating in the banking and financial sector comes with its own set of complexi
                 <div className="pcs-point-icon-wrap" style={p.iconStyle}><img src={p.icon} alt={p.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
                 <div className="pcs-point-body">
                   <span className="pcs-point-num">{p.num}</span>
-                  <div className="pcs-point-title">{p.title}</div>
+                  <h4 className="pcs-point-title">{p.title}</h4>
                   <div className="pcs-point-desc">{p.desc}</div>
                 </div>
               </div>
@@ -823,7 +928,7 @@ Operating in the banking and financial sector comes with its own set of complexi
                 <div className="pcs-point-icon-wrap" style={p.iconStyle}><img src={p.icon} alt={p.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
                 <div className="pcs-point-body">
                   <span className="pcs-point-num">{p.num}</span>
-                  <div className="pcs-point-title">{p.title}</div>
+                  <h4 className="pcs-point-title">{p.title}</h4>
                   <div className="pcs-point-desc">{p.desc}</div>
                 </div>
                 <div className="pcs-point-line"></div>
@@ -914,10 +1019,10 @@ function ChallengesSection() {
           display: "flex", alignItems: "center", justifyContent: "center",
           gap: "12px", marginBottom: "14px",
         }}>
-                    <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Solutions</div>
+                    <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Solutions</h2>
 
         </div>
-        <h2 style={{
+        <h3 style={{
           fontFamily: "'Poppins', sans-serif",
           fontSize: isMobile ? "22px" : isTablet ? "28px" : "clamp(28px, 3.5vw, 40px)",
           fontWeight: "700", color: "#0d1f2d",
@@ -928,7 +1033,7 @@ function ChallengesSection() {
            Banking, Financial & Insurance  
           </span>{" "} Businesses  Grow
           Grow
-        </h2>
+        </h3>
        <p style={{
           fontSize: isMobile ? "13px" : "15px", color: "#000000", fontWeight: "300",
            margin: "30px auto", lineHeight: "1.75",
@@ -1073,12 +1178,12 @@ From business registration to digital growth and website development, we provide
                 width: "120px", height: "120px", borderRadius: "50%",
                 background: "#F5C49A", opacity: "0.18", pointerEvents: "none",
               }} />
-              <h3 style={{
+              <h4 style={{
                 fontFamily: "'Poppins', sans-serif",
                 fontSize: isTablet ? "19px" : "clamp(18px, 2.2vw, 24px)",
                 fontWeight: "700", color: "#0d1f2d",
                 lineHeight: "1.35", margin: "0",
-              }}>{current.title}</h3>
+              }}>{current.title}</h4>
             </div>
 
             {/* Right Pane */}
@@ -1155,12 +1260,12 @@ function FAQSection() {
   return (
     <section className="faq-section"  style={{ background:"#ffffff" }}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -1209,7 +1314,11 @@ function FAQSection() {
 export default function HealthcarePCS() {
 
   return (
-    <Layout>
+       <Layout
+      title="Website Development for Banking & Finance Firms | PCS "
+      description="Build a professional website for banking and finance firms with SEO and digital marketing support from PCS to improve online visibility and get more customers."
+    >
+      <SEOHead />
       <style>{css}</style>
       <HeroSection />
       <ApproachSection />

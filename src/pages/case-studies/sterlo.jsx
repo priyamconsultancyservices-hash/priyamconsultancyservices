@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="Sterlo SaaS SEO & Lead Generation Case Study | PCS" description="PCS helped Sterlo achieve 5.47K search impressions, 467 organic clicks, and first-page Google rankings, strengthening enterprise visibility and lead generation.">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>Sterlo SaaS SEO & Lead Generation Case Study | PCS</title>
+        <meta name="description" content="PCS helped Sterlo achieve 5.47K search impressions, 467 organic clicks, and first-page Google rankings, strengthening enterprise visibility and lead generation." />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/sterlo/" />
+        <meta property="og:title" content="Sterlo SaaS SEO & Lead Generation Case Study | PCS" />
+        <meta property="og:description" content="PCS helped Sterlo achieve 5.47K search impressions, 467 organic clicks, and first-page Google rankings, strengthening enterprise visibility and lead generation." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/sterlo/" />
       </Head>
       <style>{styles}</style>
 
@@ -99,7 +99,7 @@ export default function CaseStudy() {
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">Enterprise Lead Generation for a Global Low Code / No Code Platform
-</h1>
+            </h1>
           </div>
         </section>
 
@@ -113,51 +113,53 @@ export default function CaseStudy() {
               <img src="/img/case-study-sterlo-about.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
             </div>
 
-     
- <div className="detail-section">
+
+            <div className="detail-section">
               <h2>About Sterlo</h2>
-              <p>Sterlo is a low code / no code platform developed under the OREOPS Framework, enabling businesses to create web and mobile applications, manage workflows, and generate reports with minimal coding. Designed for scalability and enterprise efficiency, the platform supports organizations in accelerating digital transformation through flexible and user-friendly technology solutions across global markets.
-</p>
+              <p>
+                Sterlo is a low-code/no-code platform powered by the OREOPS Framework, enabling businesses to build web and mobile applications, automate workflows, and generate reports with minimal coding. Designed for scalability and efficiency, it helps organizations accelerate digital transformation through flexible, user-friendly technology solutions.
+              </p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>Sterlo aimed to strengthen its global digital presence and generate enterprise-ready leads for its low code / no code platform through strategic branding, SEO, content marketing, and performance-driven digital campaigns. The focus was to improve platform visibility, enhance enterprise positioning, and create a scalable lead generation ecosystem capable of supporting long-term international growth.
-</p>
+              <p>
+                Sterlo partnered with PCS to enhance its global digital presence and attract enterprise-ready prospects. Through strategic branding, SEO, content marketing, and performance-driven campaigns, PCS improved platform visibility, strengthened enterprise positioning, and built a scalable lead generation framework to support long-term international growth.</p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>Although Sterlo offered a powerful enterprise platform, the brand required stronger market positioning, clearer communication of product capabilities, and a scalable digital strategy capable of attracting high-intent enterprise decision-makers across international markets.
-</p>
+              <p>
+                Although Sterlo offered a powerful enterprise platform, the brand required stronger market positioning, clearer communication of product capabilities, and a scalable digital strategy capable of attracting high-intent enterprise decision-makers across international markets.
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Revamped the website to improve platform positioning and user experience
-</li>
-              <li>Restructured sub-product pages for clearer communication and navigation</li>
-              <li>Conducted competitor analysis and high-intent keyword research
-</li>
-              <li>Implemented branding, SEO, and content marketing strategies for global visibility
-</li>
-              <li>Executed targeted digital campaigns focused on enterprise audiences
-</li>
-<li>Optimized website structure and content to improve engagement and search performance
-</li>
+                <li>Revamped the website to improve platform positioning and user experience
+                </li>
+                <li>Restructured sub-product pages for clearer communication and navigation</li>
+                <li>Conducted competitor analysis and high-intent keyword research
+                </li>
+                <li>Implemented branding, SEO, and content marketing strategies for global visibility
+                </li>
+                <li>Executed targeted digital campaigns focused on enterprise audiences
+                </li>
+                <li>Optimized website structure and content to improve engagement and search performance
+                </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
               <p>PCS helped Sterlo strengthen its enterprise visibility and improve organic search performance across global markets. Over the last three months, the platform generated 467 organic clicks and achieved 5.47K search impressions with an average CTR of 8.5%. Keyword rankings improved significantly, reaching an average position of 6.3, while multiple targeted keywords secured first-page visibility on Google. Daily clicks and search impressions showed steady upward growth till last month, contributing to stronger organic reach, improved engagement, and a scalable foundation for long-term enterprise lead generation.
-</p>
+              </p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like Sterlo?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
 
@@ -170,7 +172,7 @@ export default function CaseStudy() {
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>Sterlo</strong></p>
-                   <p>Service: </p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">Content Marketing</span>
                 <span className="sidebar-tag">SEO</span>
@@ -183,59 +185,57 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-            </div>
 
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+            </div>
           </div>
-
         </div>
       </div>
     </Layout>

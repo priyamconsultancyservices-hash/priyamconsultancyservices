@@ -11,160 +11,144 @@ const banner = "/img/2.webp";
    SEO META & SCHEMA
 ═══════════════════════════════════════════════════ */
 function SEOHead() {
-  const pageUrl = "https://www.pcsbusinesssolution.com/textile-industry";
+  const pageUrl = "https://www.priyamconsultancy.com/textile/";
   const imageUrl = "https://www.pcsbusinesssolution.com/img/2.webp";
 
   const schemaData = [
     {
+
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "PCS Business Solution",
-      "url": "https://www.pcsbusinesssolution.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.pcsbusinesssolution.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Textile Industry Business Solutions in India | PCS Business Solution",
-      "description": "Complete business solutions for the textile and garment industry — registration, compliance, HR, digital marketing, and digital transformation under one roof.",
-      "image": imageUrl,
-      "author": { "@type": "Organization", "name": "PCS Business Solution" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PCS Business Solution",
-        "logo": { "@type": "ImageObject", "url": "https://www.pcsbusinesssolution.com/img/logo.png" }
-      },
-      "url": pageUrl,
-      "datePublished": "2024-01-01",
-      "dateModified": "2025-01-01"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "PCS Business Solution",
-      "description": "PCS Business Solution empowers textile and garment businesses with registration, compliance, HR, and digital marketing services across India.",
-      "url": "https://www.pcsbusinesssolution.com",
-      "logo": "https://www.pcsbusinesssolution.com/img/logo.png",
-      "image": imageUrl,
-      "telephone": "+91-XXXXXXXXXX",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Your Street Address",
-        "addressLocality": "Chennai",
-        "addressRegion": "Tamil Nadu",
-        "postalCode": "600001",
-        "addressCountry": "IN"
-      },
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "sameAs": [
-        "https://www.linkedin.com/company/pcs-business-solution",
-        "https://www.facebook.com/pcsbusinesssolution"
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/",
+            "name": "Home"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/textile/",
+            "name": "textile"
+          }
+        }
       ]
+
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Priyam Consultancy Services",
+      "url": "https://www.priyamconsultancy.com/",
+      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91 96774 44048",
+          "contactType": "customer support"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
+      ]
+
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "Textile Industry Business Solutions",
-      "provider": { "@type": "Organization", "name": "PCS Business Solution" },
-      "name": "Textile Industry Business Solutions",
-      "description": "End-to-end business solutions for textile and garment businesses including registration, compliance, HR, digital transformation, and digital marketing services.",
-      "url": pageUrl,
-      "areaServed": { "@type": "Country", "name": "India" },
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "INR",
-        "url": pageUrl
+      "@id": "https://www.priyamconsultancy.com/textile/#service",
+      "name": "Textile Industry Services",
+      "serviceType": "Business Solutions for Textile Industry",
+      "url": "https://www.priyamconsultancy.com/textile/",
+      "description": "Priyam Consultancy provides digital marketing, website development, HR services, payroll management, business registration, statutory compliance, Virtual CFO services, accounting and business consulting solutions tailored for textile businesses across India.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
       }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "ImageObject",
-      "contentUrl": imageUrl,
-      "url": pageUrl,
-      "description": "Textile Industry Business Solutions by PCS Business Solution",
-      "name": "Textile Industry Banner"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pcsbusinesssolution.com" },
-        { "@type": "ListItem", "position": 2, "name": "Textile Industry", "item": pageUrl }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Textile Industry Business Services",
-      "description": "List of business services offered to textile and garment industry by PCS Business Solution",
-      "url": pageUrl,
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Business Registration for Textile Companies" },
-        { "@type": "ListItem", "position": 2, "name": "Compliance Management" },
-        { "@type": "ListItem", "position": 3, "name": "HR & Payroll Solutions" },
-        { "@type": "ListItem", "position": 4, "name": "Digital Marketing for Textile Brands" },
-        { "@type": "ListItem", "position": 5, "name": "Digital Transformation" },
-        { "@type": "ListItem", "position": 6, "name": "Microsoft Apps Integration" }
-      ]
+
     },
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a financial service business?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A financial service business provides expert support in banking, investments, accounting, loans, and advisory services to help businesses and individuals manage their finances efficiently." }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the types of financial services?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Financial services include banking, insurance, investment management, accounting, tax advisory, loans, and financial planning, covering all aspects of money management and business growth." }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the four financial services?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The main four financial services are banking, insurance, investment advisory, and accounting, which collectively help businesses and individuals manage, protect, and grow their assets." }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the 8 financial sectors?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The eight sectors include banking, insurance, capital markets, investment services, asset management, accounting, tax advisory, and fintech, covering the full spectrum of financial operations." }
-        },
-        {
-          "@type": "Question",
-          "name": "Why is a financial advisory important?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Financial advisory helps businesses make informed decisions, optimize resources, manage risks, plan growth, and ensure compliance, ultimately improving profitability and long-term financial stability." }
-        },
-        {
-          "@type": "Question",
-          "name": "What are the five types of finance?",
-          "acceptedAnswer": { "@type": "Answer", "text": "The five types are banking, insurance, investment management, accounting, and financial planning, each addressing critical aspects of financial control, risk management, and wealth creation." }
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Why does a textile business need digital marketing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Digital marketing helps textile businesses improve brand visibility, attract buyers, showcase products, and generate enquiries across domestic and international markets. It supports lead generation, strengthens online presence, and helps textile brands compete effectively through SEO, social media, and performance marketing strategies."
         }
-      ]
-    }
+      }, {
+        "@type": "Question",
+        "name": "What licenses are required for textile businesses in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Textile businesses in India may require GST registration, trade license, MSME registration, factory license, pollution control approvals, import-export code (IEC), and labor law registrations. Required licenses depend on manufacturing activities, export operations, and the scale of business operations."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can you help with textile compliance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We support textile businesses with statutory compliance, labor law management, payroll compliance, GST filings, factory-related compliance, documentation, and regulatory reporting. Our services help businesses maintain legal compliance, reduce operational risks, and ensure smooth day-to-day workforce and business operations."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What HR services do textile companies need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Textile companies commonly require recruitment, payroll management, attendance tracking, labor compliance, shift management, workforce planning, onboarding, and HR policy support. These services help manage large operational teams efficiently while maintaining productivity and compliance across manufacturing units and facilities."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does digital marketing work for textile exporters?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, digital marketing is highly effective for textile exporters. SEO, LinkedIn marketing, content marketing, and performance campaigns help exporters improve international visibility, generate global enquiries, showcase products professionally, and connect with distributors, wholesalers, and buyers across international markets."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What certifications do textile exporters need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Textile exporters may require certifications such as Import Export Code (IEC), GST registration, ISO certification, OEKO-TEX certification, GOTS certification, and other buyer or country-specific compliance certifications. Certification requirements vary based on export markets, products, and industry regulations."
+        }
+      }]
+
+    },
   ];
 
   return (
     <Head>
-      <title>Textile Industry Business Solutions in India | PCS Business Solution</title>
-      <meta name="description" content="Complete business solutions for the textile and garment industry — registration, compliance, HR, digital marketing, and digital transformation. Grow your textile business with PCS Business Solution." />
-      <meta name="keywords" content="textile industry business solutions, garment business registration, textile compliance India, HR for textile companies, digital marketing textile, textile digital transformation, PCS Business Solution, textile business growth India" />
+      <title>Digital Marketing for Textile Industry | Web & HR Services</title>
+      <meta name="description" content="Grow your textile or garment business with digital marketing, website development, and HR solutions. Attract buyers, generate leads, and scale faster." />
+      <meta name="keywords" content="digital marketing for textile industry, Best textile website development Company, digital marketing for clothing brands, Digital Marketing for Textile & Garment Brands, Digital Transformation Solutions for Textile Manufacturers, Textile Business Registration & Compliance Services, Digital Marketing Agency for Fabrics & Textiles, garment industry manpower services" />
       <link rel="canonical" href={pageUrl} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Textile Industry Business Solutions in India | PCS Business Solution" />
-      <meta property="og:description" content="End-to-end business solutions for textile & garment businesses — registration, compliance, HR & digital marketing." />
+      <meta property="og:title" content="Digital Marketing for Textile Industry | Web & HR Services" />
+      <meta property="og:description" content="Grow your textile or garment business with digital marketing, website development, and HR solutions. Attract buyers, generate leads, and scale faster." />
       <meta property="og:url" content={pageUrl} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Textile Industry Business Solutions | PCS Business Solution" />
-      <meta name="twitter:description" content="Registration, compliance, HR & digital marketing for textile and garment businesses in India." />
+      <meta name="twitter:description" content="Grow your textile or garment business with digital marketing, website development, and HR solutions. Attract buyers, generate leads, and scale faster." />
       <meta name="twitter:image" content={imageUrl} />
       {schemaData.map((schema, i) => (
         <script key={i} type="application/ld+json">
@@ -698,6 +682,7 @@ li.dropdown.mega {
   .ap-form-card { padding:1.5rem 1rem !important; }
   .phone-row { flex-wrap:wrap !important; }
 }
+  h3.faq-h3{color:#000; font-size:2.5rem;}
 `;
 /* ═══════════════════════════════════════════
    SECTION 1 — HERO BANNER (Finance Orange Theme)
@@ -770,29 +755,29 @@ function HeroSection() {
       `}</style>
 
       {/* Dark overlay for text readability */}
-      <div className="hero-overlay" style={{ position:"absolute", inset:0, zIndex:1 }} />
+      <div className="hero-overlay" style={{ position: "absolute", inset: 0, zIndex: 1 }} />
 
       {/* Orbs */}
       <div className="hero-orb hero-orb-1" />
       <div className="hero-orb hero-orb-2" />
 
       {/* LEFT CONTENT — order:1 on mobile (comes first) */}
-      <div className="hero-content-left" style={{ position:"relative", zIndex:2, display:"flex", flexDirection:"column", paddingBottom:"3rem", order:1 }}>
+      <div className="hero-content-left" style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column", paddingBottom: "3rem", order: 1 }}>
         <div className="seo-badge"><div className="badge-dot-red" />Textile </div>
         <h1 className="seo-hero-heading">
-          Empowering with Grow 
-          <span className="seo-underline seo-red" style={{marginRight: '10px'}}>Textile Industry</span>
+          Empowering with Grow
+          <span className="seo-underline seo-red" style={{ marginRight: '10px' }}>Textile Industry</span>
           to Grow with Confidence
         </h1>
         <p className="seo-sub">
-Supporting textile and garment businesses from inception to expansion, PCS brings together registration, compliance, HR solutions, digital transformation, and digital marketing for the textile industry under one roof — creating a seamless path to scalable growth.         </p>
+          Supporting textile and garment businesses from inception to expansion, PCS brings together registration, compliance, HR solutions, digital transformation, and digital marketing for the textile industry under one roof — creating a seamless path to scalable growth.         </p>
         <div className="seo-actions">
           <a className="seo-btn-fill" href="#approach"><span>Get in Touch</span><div className="seo-btn-arr">›</div></a>
         </div>
       </div>
 
       {/* RIGHT — empty, banner image shows through */}
-      <div style={{ order:2 }} />
+      <div style={{ order: 2 }} />
 
       {/* Mobile: collapse to 1 col, full cover */}
       <style>{`
@@ -808,7 +793,7 @@ Supporting textile and garment businesses from inception to expansion, PCS bring
    SECTION 2 — OUR APPROACH + FORM
 ═══════════════════════════════════════════ */
 function ApproachSection() {
-  const [form, setForm] = useState({ name:"", email:"", phone:"", company:"", msg:"" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const sendEmail = (e) => {
@@ -817,13 +802,13 @@ function ApproachSection() {
       name: form.name, email: form.email, phone: form.phone,
       company: form.company, message: form.msg, url: window.location.href,
     };
-    emailjs.send("service_8xw6k3r","template_jarui36", templateParams,"XWRnXi4hK2SvmRG3q")
-      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name:"",email:"",phone:"",company:"",msg:"" }); })
+    emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
+      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name: "", email: "", phone: "", company: "", msg: "" }); })
       .catch(() => alert("Failed to send ❌"));
   };
 
   return (
-    <section id="approach" style={{ background:"#ffffff", padding:"5rem 6%", position:"relative", overflow:"hidden" }}>
+    <section id="approach" style={{ background: "#ffffff", padding: "5rem 6%", position: "relative", overflow: "hidden" }}>
       <style>{`
         /* eyebrow shared */
         .seo-eyebrow-wrap { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
@@ -866,17 +851,15 @@ function ApproachSection() {
       <div className="ap2-inner">
         {/* LEFT */}
         <div>
-             <div className="partners-header1">
+          <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>About Industry</div>
           </div>
           <h2 className="ap2-heading"><span>Textile Industry in India </span> — Tradition Meets Transformation</h2>
           <p className="ap2-intro">
-India's textile industry is a major contributor to the nation's economy and employment, spanning fabric manufacturers and garment exporters to clothing brands and retail outlets — offering immense opportunities.          </p>
+            India's textile industry is a major contributor to the nation's economy and employment, spanning fabric manufacturers and garment exporters to clothing brands and retail outlets — offering immense opportunities.          </p>
           <p className="ap2-intro">
-But staying competitive in today's fast-evolving market demands more than just quality products. Compliance, digital presence, skilled manpower, and technology adoption have become essential for textile businesses to survive and scale. That’s where PCS, a trusted Digital Marketing Agency for Fabrics & Textile steps in end-to-end support.           </p>
-          <p className="ap2-intro" style={{ color:"rgba(2,43,68,0.45)", fontStyle:"italic" }}>
-            Precise. Proven. Profitable. Built for long-term dominance.
-          </p>
+            But staying competitive in today's fast-evolving market demands more than just quality products. Compliance, digital presence, skilled manpower, and technology adoption have become essential for textile businesses to survive and scale. That’s where PCS, a trusted Digital Marketing Agency for Fabrics & Textile steps in end-to-end support.           </p>
+
         </div>
 
         {/* RIGHT FORM */}
@@ -890,14 +873,14 @@ But staying competitive in today's fast-evolving market demands more than just q
               <div className="ap2-fl-row">
                 <div className="ap2-fl-group">
                   <label className="ap2-fl-label">Your Name</label>
-                  <div style={{ position:"relative" }}>
+                  <div style={{ position: "relative" }}>
                     <span className="ap2-fl-icon">👤</span>
                     <input className="ap2-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
                   </div>
                 </div>
                 <div className="ap2-fl-group">
                   <label className="ap2-fl-label">Company</label>
-                  <div style={{ position:"relative" }}>
+                  <div style={{ position: "relative" }}>
                     <span className="ap2-fl-icon">🏢</span>
                     <input className="ap2-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
                   </div>
@@ -905,7 +888,7 @@ But staying competitive in today's fast-evolving market demands more than just q
               </div>
               <div className="ap2-fl-group">
                 <label className="ap2-fl-label">Email Address</label>
-                <div style={{ position:"relative" }}>
+                <div style={{ position: "relative" }}>
                   <span className="ap2-fl-icon">✉️</span>
                   <input className="ap2-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
                 </div>
@@ -919,8 +902,8 @@ But staying competitive in today's fast-evolving market demands more than just q
               </div>
               <div className="ap2-fl-group">
                 <label className="ap2-fl-label">Message</label>
-                <div style={{ position:"relative" }}>
-                  <span className="ap2-fl-icon" style={{ top:"0.9rem", transform:"none" }}>💬</span>
+                <div style={{ position: "relative" }}>
+                  <span className="ap2-fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
                   <textarea className="ap2-fl-textarea" name="msg" placeholder="Tell us about your SEO goals..." value={form.msg} onChange={handleChange} />
                 </div>
               </div>
@@ -943,27 +926,27 @@ function WhyPCSSection() {
     <section className="pcs-section" id="why-pcs">
       <div className="pcs-inner">
         <div className="pcs-header">
-            <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Challenges</div>
-          </div>          <h2 className="pcs-h2">The Biggest Challenges in the  <span><i>Textile Industry </i></span> Today</h2>
+          <div className="partners-header1">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Challenges</h2>
+          </div>          <h3 className="pcs-h2">The Biggest Challenges in the  <span><i>Textile Industry </i></span> Today</h3>
           <p className="pcs-lead">
-       Running a healthcare organization comes with its own set of complexities. Here are the most common challenges faced by providers: 
+            Running a healthcare organization comes with its own set of complexities. Here are the most common challenges faced by providers:
           </p>
         </div>
         <div className="pcs-radial-layout">
           {/* LEFT */}
           <div className="pcs-radial-col left">
             {[
-              { num:"01 · Expertise", title:"Compliance Complexity ", desc:"Managing licenses, GST, and regulatory filings overwhelms most textile businesses daily. ", icon:"/img/icon/textile-compliance.webp", iconStyle:{background:"rgba(0,65,104,0.3)",borderColor:"rgba(0,130,210,0.5)"} },
-              { num:"02 · Approach", title:"Digital Absence ", desc:"The absence of a website and structured digital presence prevents textile businesses from tapping into wider markets. ", icon:"/img/icon/textile-digital-absence.webp", iconStyle:{background:"rgba(237,131,55,0.2)",borderColor:"rgba(237,131,55,0.5)"} },
-              { num:"03 · Reliability", title:"Buyer Reach ", desc:"Without digital marketing, garment brands struggle to connect with right buyers.", icon:"/img/icon/textile-buyer-reach.webp", iconStyle:{background:"rgba(10,82,130,0.3)",borderColor:"rgba(20,120,190,0.5)"} },
+              { num: "01 · Expertise", title: "Compliance Complexity ", desc: "Managing licenses, GST, and regulatory filings overwhelms most textile businesses daily. ", icon: "/img/icon/textile-compliance.webp", iconStyle: { background: "rgba(0,65,104,0.3)", borderColor: "rgba(0,130,210,0.5)" } },
+              { num: "02 · Approach", title: "Digital Absence ", desc: "The absence of a website and structured digital presence prevents textile businesses from tapping into wider markets. ", icon: "/img/icon/textile-digital-absence.webp", iconStyle: { background: "rgba(237,131,55,0.2)", borderColor: "rgba(237,131,55,0.5)" } },
+              { num: "03 · Reliability", title: "Buyer Reach ", desc: "Without digital marketing, garment brands struggle to connect with right buyers.", icon: "/img/icon/textile-buyer-reach.webp", iconStyle: { background: "rgba(10,82,130,0.3)", borderColor: "rgba(20,120,190,0.5)" } },
             ].map((p, i) => (
               <div className="pcs-point" key={i}>
                 <div className="pcs-point-line"></div>
                 <div className="pcs-point-icon-wrap" style={p.iconStyle}><img src={p.icon} alt={p.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
                 <div className="pcs-point-body">
                   <span className="pcs-point-num">{p.num}</span>
-                  <div className="pcs-point-title">{p.title}</div>
+                  <h4 className="pcs-point-title">{p.title}</h4>
                   <div className="pcs-point-desc">{p.desc}</div>
                 </div>
               </div>
@@ -983,15 +966,15 @@ function WhyPCSSection() {
           {/* RIGHT */}
           <div className="pcs-radial-col right">
             {[
-              { num:"04 · Growth", title:"Manpower Shortage ", desc:"Finding and retaining skilled garment workers remains a constant operational challenge.", icon:"/img/icon/textile-manpower.webp", iconStyle:{background:"rgba(201,109,26,0.2)",borderColor:"rgba(237,131,55,0.5)"} },
-              { num:"05 · Delivery", title:"Technology Gap ", desc:"Many textile businesses still run manually, causing inefficiencies and missed growth.", icon:"/img/icon/textile-technology.webp", iconStyle:{background:"rgba(0,42,68,0.4)",borderColor:"rgba(0,100,170,0.5)"} },
-              { num:"06 · Value", title:"Brand Visibility ", desc:"Poor online visibility makes it harder for clothing brands to attract customers.", icon:"/img/icon/textile-brand-visibility.webp", iconStyle:{background:"rgba(20,102,160,0.3)",borderColor:"rgba(30,140,210,0.5)"} },
+              { num: "04 · Growth", title: "Manpower Shortage ", desc: "Finding and retaining skilled garment workers remains a constant operational challenge.", icon: "/img/icon/textile-manpower.webp", iconStyle: { background: "rgba(201,109,26,0.2)", borderColor: "rgba(237,131,55,0.5)" } },
+              { num: "05 · Delivery", title: "Technology Gap ", desc: "Many textile businesses still run manually, causing inefficiencies and missed growth.", icon: "/img/icon/textile-technology.webp", iconStyle: { background: "rgba(0,42,68,0.4)", borderColor: "rgba(0,100,170,0.5)" } },
+              { num: "06 · Value", title: "Brand Visibility ", desc: "Poor online visibility makes it harder for clothing brands to attract customers.", icon: "/img/icon/textile-brand-visibility.webp", iconStyle: { background: "rgba(20,102,160,0.3)", borderColor: "rgba(30,140,210,0.5)" } },
             ].map((p, i) => (
               <div className="pcs-point" key={i}>
                 <div className="pcs-point-icon-wrap" style={p.iconStyle}><img src={p.icon} alt={p.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
                 <div className="pcs-point-body">
                   <span className="pcs-point-num">{p.num}</span>
-                  <div className="pcs-point-title">{p.title}</div>
+                  <h4 className="pcs-point-title">{p.title}</h4>
                   <div className="pcs-point-desc">{p.desc}</div>
                 </div>
                 <div className="pcs-point-line"></div>
@@ -1082,10 +1065,10 @@ function ChallengesSection() {
           display: "flex", alignItems: "center", justifyContent: "center",
           gap: "12px", marginBottom: "14px",
         }}>
-                    <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Solutions</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Solutions</h2>
 
         </div>
-        <h2 style={{
+        <h3 style={{
           fontFamily: "'Poppins', sans-serif",
           fontSize: isMobile ? "22px" : isTablet ? "28px" : "clamp(28px, 3.5vw, 40px)",
           fontWeight: "700", color: "#0d1f2d",
@@ -1096,12 +1079,12 @@ function ChallengesSection() {
             Brands &amp; Textile Businesses
           </span>{" "}
           Grow
-        </h2>
-       <p style={{
+        </h3>
+        <p style={{
           fontSize: isMobile ? "13px" : "15px", color: "#000000", fontWeight: "300",
-           margin: "30px auto", lineHeight: "1.75",
+          margin: "30px auto", lineHeight: "1.75",
         }}>
-From business registration to digital growth and website development, we provide the right solutions at every stage of your textile business journey        </p>
+          From business registration to digital growth and website development, we provide the right solutions at every stage of your textile business journey        </p>
       </div>
 
       {/* ══════════════════════════════════
@@ -1241,12 +1224,12 @@ From business registration to digital growth and website development, we provide
                 width: "120px", height: "120px", borderRadius: "50%",
                 background: "#F5C49A", opacity: "0.18", pointerEvents: "none",
               }} />
-              <h3 style={{
+              <h4 style={{
                 fontFamily: "'Poppins', sans-serif",
                 fontSize: isTablet ? "19px" : "clamp(18px, 2.2vw, 24px)",
                 fontWeight: "700", color: "#0d1f2d",
                 lineHeight: "1.35", margin: "0",
-              }}>{current.title}</h3>
+              }}>{current.title}</h4>
             </div>
 
             {/* Right Pane */}
@@ -1284,15 +1267,15 @@ function CaseStudySection() {
     <section className="cs-section" id="case-study">
       <div className="cs-inner">
         <div className="cs-header">
-            <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
-          </div>          <h2 className="cs-h2">Real Results for <span>Real  Businesses</span></h2>
+          <div className="partners-header1">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</h2>
+          </div>          <h3 className="cs-h2">Real Results for <span>Real  Businesses</span></h3>
         </div>
         <div className="cs-quote-wrap">
           <div className="cs-q-mark">"</div>
           <div className="cs-q-mark-r">"</div>
           <p className="cs-quote-text">
-            We have helped businesses across <em>industries streamline compliance</em>, build their <em>digital presence</em>, and achieve  <em>consistent growth.</em> 
+            We have helped businesses across <em>industries streamline compliance</em>, build their <em>digital presence</em>, and achieve  <em>consistent growth.</em>
           </p>
           <div className="cs-quote-attr">
             <span className="cs-quote-line"></span>
@@ -1307,12 +1290,12 @@ function CaseStudySection() {
 
 
 const faqData = [
-  { q: "What is a financial service business?", a: "A financial service business provides expert support in banking, investments, accounting, loans, and advisory services to help businesses and individuals manage their finances efficiently." },
-  { q: "What are the types of financial services?", a: "Financial services include banking, insurance, investment management, accounting, tax advisory, loans, and financial planning, covering all aspects of money management and business growth" },
-  { q: "What are the four financial services?", a: "The main four financial services are banking, insurance, investment advisory, and accounting, which collectively help businesses and individuals manage, protect, and grow their assets." },
-  { q: "What are the 8 financial sectors?", a: "The eight sectors include banking, insurance, capital markets, investment services, asset management, accounting, tax advisory, and fintech, covering the full spectrum of financial operations." },
-  { q: "Why is a financial advisory important?", a: "Financial advisory helps businesses make informed decisions, optimize resources, manage risks, plan growth, and ensure compliance, ultimately improving profitability and long-term financial stability." },
-  { q: "What are the five types of finance?", a: "The five types are banking, insurance, investment management, accounting, and financial planning, each addressing critical aspects of financial control, risk management, and wealth creation." },
+  { q: "Why does a textile business need digital marketing?", a: " Digital marketing helps textile businesses improve brand visibility, attract buyers, showcase products, and generate enquiries across domestic and international markets. It supports lead generation, strengthens online presence, and helps textile brands compete effectively through SEO, social media, and performance marketing strategies." },
+  { q: "What licenses are required for textile businesses in India?", a: " Textile businesses in India may require GST registration, trade license, MSME registration, factory license, pollution control approvals, import-export code (IEC), and labor law registrations. Required licenses depend on manufacturing activities, export operations, and the scale of business operations." },
+  { q: "How can you help with textile compliance?", a: "We support textile businesses with statutory compliance, labor law management, payroll compliance, GST filings, factory-related compliance, documentation, and regulatory reporting. Our services help businesses maintain legal compliance, reduce operational risks, and ensure smooth day-to-day workforce and business operations." },
+  { q: "What HR services do textile companies need?", a: "Textile companies commonly require recruitment, payroll management, attendance tracking, labor compliance, shift management, workforce planning, onboarding, and HR policy support. These services help manage large operational teams efficiently while maintaining productivity and compliance across manufacturing units and facilities." },
+  { q: "Does digital marketing work for textile exporters?", a: "Yes, digital marketing is highly effective for textile exporters. SEO, LinkedIn marketing, content marketing, and performance campaigns help exporters improve international visibility, generate global enquiries, showcase products professionally, and connect with distributors, wholesalers, and buyers across international markets." },
+  { q: "What certifications do textile exporters need?", a: " Textile exporters may require certifications such as Import Export Code (IEC), GST registration, ISO certification, OEKO-TEX certification, GOTS certification, and other buyer or country-specific compliance certifications. Certification requirements vary based on export markets, products, and industry regulations." },
 ];
 function FAQSection() {
   const [active, setActive] = useState(null);
@@ -1321,14 +1304,14 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section"  style={{ background:"#ffffff" }}>
+    <section className="faq-section" style={{ background: "#ffffff" }}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -1378,8 +1361,8 @@ export default function HealthcarePCS() {
 
   return (
     <Layout
-      title="Textile Industry Business Solutions in India | PCS Business Solution"
-      description="Complete business solutions for the textile and garment industry — registration, compliance, HR, digital marketing, and digital transformation."
+      title="Digital Marketing for Textile Industry | Web & HR Services"
+      description="Grow your textile or garment business with digital marketing, website development, and HR solutions. Attract buyers, generate leads, and scale faster."
     >
       <SEOHead />
       <style>{css}</style>

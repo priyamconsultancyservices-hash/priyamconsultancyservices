@@ -3,6 +3,156 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
 const banner = "/img/it-service.webp";
+import Head from '@docusaurus/Head';
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/it-or-it-services";
+  const imageUrl = "https://www.pcsbusinesssolution.com/img/2.webp";
+
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/",
+            "name": "Home"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/it-or-it-services/",
+            "name": "IT / IT Services"
+          }
+        }
+      ]
+
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Priyam Consultancy Services",
+      "url": "https://www.priyamconsultancy.com/",
+      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91 96774 44048",
+          "contactType": "customer support"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
+      ]
+
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://www.priyamconsultancy.com/it-or-it-services/#service",
+      "name": "IT / IT Services Industry Solutions",
+      "serviceType": "Business Solutions for IT and IT Services Industry",
+      "url": "https://www.priyamconsultancy.com/it-or-it-services/",
+      "description": "Priyam Consultancy provides digital marketing, SEO, LinkedIn marketing, website development, recruitment services, payroll management, HR solutions, statutory compliance, Virtual CFO services, accounting and business consulting solutions tailored for IT companies, software firms, IT service providers and technology businesses across India.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+
+
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "Why does an IT company need digital marketing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Digital marketing helps IT companies improve brand visibility, generate qualified leads, showcase technical expertise, and attract potential clients globally. Strategies like SEO, content marketing, LinkedIn marketing, and performance campaigns help strengthen market positioning and support long-term business growth."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Does digital marketing work for B2B IT service providers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, digital marketing is highly effective for B2B IT service providers. It helps businesses reach decision-makers, improve search visibility, build credibility, and generate high-intent enquiries through SEO, LinkedIn marketing, content strategies, and targeted performance marketing campaigns."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can recruitment services help IT companies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Recruitment services help IT companies identify skilled technical professionals quickly and efficiently. Structured hiring support reduces recruitment delays, improves candidate quality, supports project continuity, and enables businesses to scale teams based on evolving technology and operational requirements."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How does payroll management work for IT professionals?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Payroll management for IT professionals includes salary processing, attendance tracking, tax deductions, incentives, reimbursements, statutory compliance, and payroll reporting. A structured payroll system ensures accurate salary disbursement, legal compliance, and smooth workforce management across technical and operational teams."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What HR policies are essential for IT companies?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IT companies commonly require policies related to employee conduct, attendance, remote work, data security, leave management, payroll, performance evaluation, workplace ethics, and compliance. Strong HR policies help maintain operational consistency, employee productivity, and professional work culture standards."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What licenses are required for IT businesses in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IT businesses in India may require company registration, GST registration, Shop and Establishment registration, MSME registration, Professional Tax registration, and other industry-specific approvals. Required licenses depend on business structure, service offerings, operational scale, and applicable regulatory requirements."
+        }
+      }]
+
+    },
+  ];
+
+  return (
+    <Head>
+      <title>Digital Marketing for IT Companies & IT Recruitment Services | Priyam Consultancy </title>
+      <meta name="description" content="Boost your IT business with expert digital marketing, website development, SEO, and IT recruitment services. PCS helps IT companies generate leads and improve online visibility." />
+      <meta name="keywords" content="digital marketing for it companies,digital marketing for it industry,IT Recruitment Consultants, it job placement agencies,website development for it company" />
+      <link rel="canonical" href={pageUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Digital Marketing for IT Companies & IT Recruitment Services | Priyam Consultancy " />
+      <meta property="og:description" content="Boost your IT business with expert digital marketing, website development, SEO, and IT recruitment services. PCS helps IT companies generate leads and improve online visibility." />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="PCS Business Solution" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Digital Marketing for IT Companies & IT Recruitment Services | Priyam Consultancy " />
+      <meta name="twitter:description" content="Boost your IT business with expert digital marketing, website development, SEO, and IT recruitment services. PCS helps IT companies generate leads and improve online visibility." />
+      <meta name="twitter:image" content={imageUrl} />
+      {schemaData.map((schema, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
+    </Head>
+  );
+}
 
 // EmailJS will be loaded via CDN in the component
 
@@ -529,6 +679,7 @@ li.dropdown.mega {
   .ap-form-card { padding:1.5rem 1rem !important; }
   .phone-row { flex-wrap:wrap !important; }
 }
+  h3.faq-h3{font-size:2.5rem; color:#000;}
 `;
 /* ═══════════════════════════════════════════
    SECTION 1 — HERO BANNER (Finance Orange Theme)
@@ -601,29 +752,29 @@ function HeroSection() {
       `}</style>
 
       {/* Dark overlay for text readability */}
-      <div className="hero-overlay" style={{ position:"absolute", inset:0, zIndex:1 }} />
+      <div className="hero-overlay" style={{ position: "absolute", inset: 0, zIndex: 1 }} />
 
       {/* Orbs */}
       <div className="hero-orb hero-orb-1" />
       <div className="hero-orb hero-orb-2" />
 
       {/* LEFT CONTENT — order:1 on mobile (comes first) */}
-      <div className="hero-content-left" style={{ position:"relative", zIndex:2, display:"flex", flexDirection:"column", paddingBottom:"3rem", order:1 }}>
+      <div className="hero-content-left" style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column", paddingBottom: "3rem", order: 1 }}>
         <div className="seo-badge"><div className="badge-dot-red" />IT / IT Services </div>
         <h1 className="seo-hero-heading">
           Driving Growth Services
-          in <span className="seo-underline seo-red" style={{marginRight: '10px'}}>IT / IT Services</span>
+          in <span className="seo-underline seo-red" style={{ marginRight: '10px' }}>IT / IT Services</span>
           with Confidence
         </h1>
         <p className="seo-sub">
-Supporting IT companies from inception to expansion, PCS brings together registration, compliance, HR solutions, digital transformation, and digital marketing for IT companies — along with digital marketing for IT industry strategies — under one roof, creating a seamless path to scalable growth.   </p>
+          Supporting IT companies from inception to expansion, PCS brings together registration, compliance, HR solutions, digital transformation, and digital marketing for IT companies — along with digital marketing for IT industry strategies — under one roof, creating a seamless path to scalable growth.   </p>
         <div className="seo-actions">
           <a className="seo-btn-fill" href="#approach"><span>Get in Touch</span><div className="seo-btn-arr">›</div></a>
         </div>
       </div>
 
-            {/* RIGHT — empty, banner image shows through */}
-      <div style={{ order:2 }} />
+      {/* RIGHT — empty, banner image shows through */}
+      <div style={{ order: 2 }} />
 
       {/* Mobile: collapse to 1 col, full cover */}
       <style>{`
@@ -639,7 +790,7 @@ Supporting IT companies from inception to expansion, PCS brings together registr
    SECTION 2 — OUR APPROACH + FORM
 ═══════════════════════════════════════════ */
 function ApproachSection() {
-  const [form, setForm] = useState({ name:"", email:"", phone:"", company:"", msg:"" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const sendEmail = (e) => {
@@ -648,13 +799,13 @@ function ApproachSection() {
       name: form.name, email: form.email, phone: form.phone,
       company: form.company, message: form.msg, url: window.location.href,
     };
-    emailjs.send("service_8xw6k3r","template_jarui36", templateParams,"XWRnXi4hK2SvmRG3q")
-      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name:"",email:"",phone:"",company:"",msg:"" }); })
+    emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
+      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name: "", email: "", phone: "", company: "", msg: "" }); })
       .catch(() => alert("Failed to send ❌"));
   };
 
   return (
-    <section id="approach" style={{ background:"#ffffff", padding:"5rem 6%", position:"relative", overflow:"hidden" }}>
+    <section id="approach" style={{ background: "#ffffff", padding: "5rem 6%", position: "relative", overflow: "hidden" }}>
       <style>{`
         /* eyebrow shared */
         .seo-eyebrow-wrap { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
@@ -697,15 +848,15 @@ function ApproachSection() {
       <div className="ap2-inner">
         {/* LEFT */}
         <div>
-             <div className="partners-header1">
+          <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>About Industry</div>
           </div>
           <h2 className="ap2-heading"><span>IT Industry   </span> — Innovation Meets Opportunity</h2>
           <p className="ap2-intro">
-The IT and IT services industry continues to drive global innovation, spanning software companies, service providers, startups, and tech enterprises — offering vast opportunities for growth.  </p>
- <p className="ap2-intro">
-In today’s competitive landscape, strong digital presence, talent acquisition, and operational efficiency are essential. Businesses investing in digital marketing for IT companies and digital marketing for IT industry are better positioned to attract clients, build credibility, and scale globally. That’s where PCS steps in with end-to-end support.</p>
-          <p className="ap2-intro" style={{ color:"rgba(2,43,68,0.45)", fontStyle:"italic" }}>
+            The IT and IT services industry continues to drive global innovation, spanning software companies, service providers, startups, and tech enterprises — offering vast opportunities for growth.  </p>
+          <p className="ap2-intro">
+            In today’s competitive landscape, strong digital presence, talent acquisition, and operational efficiency are essential. Businesses investing in digital marketing for IT companies and digital marketing for IT industry are better positioned to attract clients, build credibility, and scale globally. That’s where PCS steps in with end-to-end support.</p>
+          <p className="ap2-intro" style={{ color: "rgba(2,43,68,0.45)", fontStyle: "italic" }}>
             Precise. Proven. Profitable. Built for long-term dominance.
           </p>
         </div>
@@ -721,14 +872,14 @@ In today’s competitive landscape, strong digital presence, talent acquisition,
               <div className="ap2-fl-row">
                 <div className="ap2-fl-group">
                   <label className="ap2-fl-label">Your Name</label>
-                  <div style={{ position:"relative" }}>
+                  <div style={{ position: "relative" }}>
                     <span className="ap2-fl-icon">👤</span>
                     <input className="ap2-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
                   </div>
                 </div>
                 <div className="ap2-fl-group">
                   <label className="ap2-fl-label">Company</label>
-                  <div style={{ position:"relative" }}>
+                  <div style={{ position: "relative" }}>
                     <span className="ap2-fl-icon">🏢</span>
                     <input className="ap2-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
                   </div>
@@ -736,7 +887,7 @@ In today’s competitive landscape, strong digital presence, talent acquisition,
               </div>
               <div className="ap2-fl-group">
                 <label className="ap2-fl-label">Email Address</label>
-                <div style={{ position:"relative" }}>
+                <div style={{ position: "relative" }}>
                   <span className="ap2-fl-icon">✉️</span>
                   <input className="ap2-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
                 </div>
@@ -750,8 +901,8 @@ In today’s competitive landscape, strong digital presence, talent acquisition,
               </div>
               <div className="ap2-fl-group">
                 <label className="ap2-fl-label">Message</label>
-                <div style={{ position:"relative" }}>
-                  <span className="ap2-fl-icon" style={{ top:"0.9rem", transform:"none" }}>💬</span>
+                <div style={{ position: "relative" }}>
+                  <span className="ap2-fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
                   <textarea className="ap2-fl-textarea" name="msg" placeholder="Tell us about your SEO goals..." value={form.msg} onChange={handleChange} />
                 </div>
               </div>
@@ -774,26 +925,26 @@ function WhyPCSSection() {
     <section className="pcs-section" id="why-pcs">
       <div className="pcs-inner">
         <div className="pcs-header">
-            <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Challenges</div>
-          </div>          <h2 className="pcs-h2">The Biggest Challenges in the  <span><i>IT Industry  </i></span> Today</h2>
+          <div className="partners-header1">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Challenges</h2>
+          </div>          <h3 className="pcs-h2">The Biggest Challenges in the  <span><i>IT Industry  </i></span> Today</h3>
           <p className="pcs-lead">
-Running an IT business comes with its own set of complexities. Here are the most common challenges: </p>
+            Running an IT business comes with its own set of complexities. Here are the most common challenges: </p>
         </div>
         <div className="pcs-radial-layout">
           {/* LEFT */}
           <div className="pcs-radial-col left">
             {[
-              { num:"01 · Expertise", title:"Compliance Complexity", desc:" Managing registrations, regulatory filings, and financial compliance can be time-consuming.", icon:"/img/icon/it-services-compliance.webp", iconStyle:{background:"rgba(0,65,104,0.3)",borderColor:"rgba(0,130,210,0.5)"} },
-              { num:"02 · Approach", title:"Digital Presence Gap", desc:"Lack of a strong online presence highlights the need for website development for IT companies to improve credibility and client acquisition", icon:"/img/icon/it-services-digital-absence.webp", iconStyle:{background:"rgba(237,131,55,0.2)",borderColor:"rgba(237,131,55,0.5)"} },
-              { num:"03 · Reliability", title:"Client Acquisition", desc:"Without effective digital marketing for IT companies , businesses struggle to generate consistent leads and visibility.", icon:"/img/icon/it-services-buyer-reach.webp", iconStyle:{background:"rgba(10,82,130,0.3)",borderColor:"rgba(20,120,190,0.5)"} },
+              { num: "01 · Expertise", title: "Compliance Complexity", desc: " Managing registrations, regulatory filings, and financial compliance can be time-consuming.", icon: "/img/icon/it-services-compliance.webp", iconStyle: { background: "rgba(0,65,104,0.3)", borderColor: "rgba(0,130,210,0.5)" } },
+              { num: "02 · Approach", title: "Digital Presence Gap", desc: "Lack of a strong online presence highlights the need for website development for IT companies to improve credibility and client acquisition", icon: "/img/icon/it-services-digital-absence.webp", iconStyle: { background: "rgba(237,131,55,0.2)", borderColor: "rgba(237,131,55,0.5)" } },
+              { num: "03 · Reliability", title: "Client Acquisition", desc: "Without effective digital marketing for IT companies , businesses struggle to generate consistent leads and visibility.", icon: "/img/icon/it-services-buyer-reach.webp", iconStyle: { background: "rgba(10,82,130,0.3)", borderColor: "rgba(20,120,190,0.5)" } },
             ].map((p, i) => (
               <div className="pcs-point" key={i}>
                 <div className="pcs-point-line"></div>
                 <div className="pcs-point-icon-wrap" style={p.iconStyle}><img src={p.icon} alt={p.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
                 <div className="pcs-point-body">
                   <span className="pcs-point-num">{p.num}</span>
-                  <div className="pcs-point-title">{p.title}</div>
+                  <h4 className="pcs-point-title">{p.title}</h4>
                   <div className="pcs-point-desc">{p.desc}</div>
                 </div>
               </div>
@@ -813,15 +964,15 @@ Running an IT business comes with its own set of complexities. Here are the most
           {/* RIGHT */}
           <div className="pcs-radial-col right">
             {[
-              { num:"04 · Growth", title:"Talent Shortage", desc:"Finding skilled professionals increases reliance on IT Recruitment Consultants and IT job placement agencies.", icon:"/img/icon/it-services-growth.webp", iconStyle:{background:"rgba(201,109,26,0.2)",borderColor:"rgba(237,131,55,0.5)"} },
-              { num:"05 · Delivery", title:"Technology & Scaling Challenges", desc:"Adapting to evolving technologies while maintaining growth can be challenging.", icon:"/img/icon/it-services-technology.webp", iconStyle:{background:"rgba(0,42,68,0.4)",borderColor:"rgba(0,100,170,0.5)"} },
-              { num:"06 · Value", title:"Brand Visibility", desc:" Low online visibility impacts trust and competitiveness in the IT industry.", icon:"/img/icon/it-services-brand-visibility.webp", iconStyle:{background:"rgba(20,102,160,0.3)",borderColor:"rgba(30,140,210,0.5)"} },
+              { num: "04 · Growth", title: "Talent Shortage", desc: "Finding skilled professionals increases reliance on IT Recruitment Consultants and IT job placement agencies.", icon: "/img/icon/it-services-growth.webp", iconStyle: { background: "rgba(201,109,26,0.2)", borderColor: "rgba(237,131,55,0.5)" } },
+              { num: "05 · Delivery", title: "Technology & Scaling Challenges", desc: "Adapting to evolving technologies while maintaining growth can be challenging.", icon: "/img/icon/it-services-technology.webp", iconStyle: { background: "rgba(0,42,68,0.4)", borderColor: "rgba(0,100,170,0.5)" } },
+              { num: "06 · Value", title: "Brand Visibility", desc: " Low online visibility impacts trust and competitiveness in the IT industry.", icon: "/img/icon/it-services-brand-visibility.webp", iconStyle: { background: "rgba(20,102,160,0.3)", borderColor: "rgba(30,140,210,0.5)" } },
             ].map((p, i) => (
               <div className="pcs-point" key={i}>
                 <div className="pcs-point-icon-wrap" style={p.iconStyle}><img src={p.icon} alt={p.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
                 <div className="pcs-point-body">
                   <span className="pcs-point-num">{p.num}</span>
-                  <div className="pcs-point-title">{p.title}</div>
+                  <h4 className="pcs-point-title">{p.title}</h4>
                   <div className="pcs-point-desc">{p.desc}</div>
                 </div>
                 <div className="pcs-point-line"></div>
@@ -912,10 +1063,10 @@ function ChallengesSection() {
           display: "flex", alignItems: "center", justifyContent: "center",
           gap: "12px", marginBottom: "14px",
         }}>
-                    <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Solutions</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Solutions</h2>
 
         </div>
-        <h2 style={{
+        <h3 style={{
           fontFamily: "'Poppins', sans-serif",
           fontSize: isMobile ? "22px" : isTablet ? "28px" : "clamp(28px, 3.5vw, 40px)",
           fontWeight: "700", color: "#0d1f2d",
@@ -923,16 +1074,16 @@ function ChallengesSection() {
         }}>
           How We Help {" "}
           <span style={{ color: "#ed8337", fontStyle: "italic" }}>
-            IT Companies 
+            IT Companies
           </span>{" "}   Grow
           Grow
-        </h2>
-       <p style={{
+        </h3>
+        <p style={{
           fontSize: isMobile ? "13px" : "15px", color: "#000000", fontWeight: "300",
-           margin: "30px auto", lineHeight: "1.75",
+          margin: "30px auto", lineHeight: "1.75",
         }}>
-From business registration to digital growth and website development, we provide the right solutions at every stage of your IT business journey.
- </p>      </div>
+          From business registration to digital growth and website development, we provide the right solutions at every stage of your IT business journey.
+        </p>      </div>
 
       {/* ══════════════════════════════════
           MOBILE — Accordion (tab → content below each)
@@ -1071,12 +1222,12 @@ From business registration to digital growth and website development, we provide
                 width: "120px", height: "120px", borderRadius: "50%",
                 background: "#F5C49A", opacity: "0.18", pointerEvents: "none",
               }} />
-              <h3 style={{
+              <h4 style={{
                 fontFamily: "'Poppins', sans-serif",
                 fontSize: isTablet ? "19px" : "clamp(18px, 2.2vw, 24px)",
                 fontWeight: "700", color: "#0d1f2d",
                 lineHeight: "1.35", margin: "0",
-              }}>{current.title}</h3>
+              }}>{current.title}</h4>
             </div>
 
             {/* Right Pane */}
@@ -1114,7 +1265,7 @@ function CaseStudySection() {
     <section className="cs-section" id="case-study">
       <div className="cs-inner">
         <div className="cs-header">
-            <div className="partners-header1">
+          <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
           </div>          <h2 className="cs-h2">Real Results for <span>Real  Businesses</span></h2>
         </div>
@@ -1122,7 +1273,7 @@ function CaseStudySection() {
           <div className="cs-q-mark">"</div>
           <div className="cs-q-mark-r">"</div>
           <p className="cs-quote-text">
-            We have helped businesses across <em>industries streamline compliance</em>, build their <em>digital presence</em>, and achieve  <em>consistent growth.</em> 
+            We have helped businesses across <em>industries streamline compliance</em>, build their <em>digital presence</em>, and achieve  <em>consistent growth.</em>
           </p>
           <div className="cs-quote-attr">
             <span className="cs-quote-line"></span>
@@ -1151,14 +1302,14 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section"  style={{ background:"#ffffff" }}>
+    <section className="faq-section" style={{ background: "#ffffff" }}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -1207,7 +1358,11 @@ function FAQSection() {
 export default function HealthcarePCS() {
 
   return (
-    <Layout>
+    <Layout
+      title="Digital Marketing for IT Companies & IT Recruitment Services | Priyam Consultancy "
+      description="Boost your IT business with expert digital marketing, website development, SEO, and IT recruitment services. PCS helps IT companies generate leads and improve online visibility."
+    >
+      <SEOHead />
       <style>{css}</style>
       <HeroSection />
       <ApproachSection />

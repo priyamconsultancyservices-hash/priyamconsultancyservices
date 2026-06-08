@@ -115,7 +115,7 @@ function SEOHead() {
 
       {/* ── Product Schema (Business Registration) ── */}
       <script type="application/ld+json">{`
-{
+
   "@context": "https://schema.org/",
   "@type": "Product",
   "name": "Business Registration and Compliance",
@@ -162,60 +162,53 @@ function SEOHead() {
 
       {/* ── FAQ Schema (Business Registration) ── */}
       <script type="application/ld+json">{`
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What are the benefits of digital transformation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Digital transformation improves operational efficiency, enhances customer experience, and enables data-driven decision-making. It drives innovation, scalability, and long-term business growth."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What are the challenges of digital transformation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Challenges include resistance to change, technology integration issues, skill gaps, data security concerns, and the need for clear strategic planning."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What Types Of Digital Marketing Services Do You Provide?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We offer SEO, PPC, social media marketing, content marketing, email campaigns, and analytics-driven strategies to boost online visibility and engagement."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How Are Your HR Services Different From Other Agencies?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We provide tailored HR solutions, combining strategy, compliance, payroll, recruitment, and employee engagement, with a focus on seamless integration into your business operations."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is a company registration?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Company registration is the legal process of forming a business entity, obtaining licenses, and ensuring compliance with government regulations to operate officially."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How Long To See Results Through Digital Marketing?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Results vary by strategy; paid campaigns may show immediate impact, while SEO and organic efforts typically take 3–6 months for measurable outcomes."
-      }
+{ 
+  "@context": "https://schema.org", 
+  "@type": "FAQPage", 
+  "mainEntity": [{ 
+    "@type": "Question", 
+    "name": "What are the benefits of digital transformation?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Digital transformation improves operational efficiency, enhances customer experience, and enables data-driven decision-making. It drives innovation, scalability, and long-term business growth." 
+    } 
+  },{ 
+    "@type": "Question", 
+    "name": "What are the challenges of digital transformation?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Challenges include resistance to change, technology integration issues, skill gaps, data security concerns, and the need for clear strategic planning." 
     }
-  ]
-}
+  },{ 
+    "@type": "Question", 
+    "name": "What Types Of Digital Marketing Services Do You Provide?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "We offer SEO, PPC, social media marketing, content marketing, email campaigns, and analytics-driven strategies to boost online visibility and engagement." 
+    } 
+  },{ 
+    "@type": "Question", 
+    "name": "How Are Your HR Services Different From Other Agencies?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "We provide tailored HR solutions, combining strategy, compliance, payroll, recruitment, and employee engagement, with a focus on seamless integration into your business operations." 
+    } 
+ },{ 
+    "@type": "Question", 
+    "name": "What is a company registration?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Company registration is the legal process of forming a business entity, obtaining licenses, and ensuring compliance with government regulations to operate officially." 
+    } 
+ },{ 
+    "@type": "Question", 
+    "name": "How Long To See Results Through Digital Marketing?", 
+    "acceptedAnswer": { 
+      "@type": "Answer", 
+      "text": "Results vary by strategy; paid campaigns may show immediate impact, while SEO and organic efforts typically take 3–6 months for measurable outcomes." 
+    } 
+    }] 
+
       `}</script>
 
       {/* ── Product Schema (Website Development) ── */}

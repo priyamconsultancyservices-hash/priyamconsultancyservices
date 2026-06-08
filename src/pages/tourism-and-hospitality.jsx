@@ -3,6 +3,158 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
 const banner = "/img/tourism.webp";
+import Head from '@docusaurus/Head';
+
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/tourism-and-hospitality";
+  const imageUrl = "https://www.pcsbusinesssolution.com/img/2.webp";
+
+  const schemaData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/",
+            "name": "Home"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/tourism-and-hospitality/",
+            "name": "Tourism & Hospitality"
+          }
+        }
+      ]
+
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Priyam Consultancy Services",
+      "url": "https://www.priyamconsultancy.com/",
+      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91 96774 44048",
+          "contactType": "customer support"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
+      ]
+
+
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://www.priyamconsultancy.com/tourism-and-hospitality/#service",
+      "name": "Tourism & Hospitality Industry Services",
+      "serviceType": "Business Solutions for Tourism & Hospitality Industry",
+      "url": "https://www.priyamconsultancy.com/tourism-and-hospitality/",
+      "description": "Priyam Consultancy provides digital marketing, SEO, website development, online booking engine integration, HR services, seasonal staffing solutions, payroll management, business registration, statutory compliance, Virtual CFO services, accounting and business consulting solutions tailored for hotels, resorts, travel agencies and tourism businesses across India.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How can SEO help my hotel/tourism business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SEO improves your hotel or tourism business visibility on search engines by targeting travel-related keywords and optimizing website content. Better rankings help attract travelers, increase booking enquiries, improve local discoverability, and generate consistent organic traffic from potential customers searching online."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can you integrate online booking engine with hotel website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we integrate online booking engines with hotel and tourism websites to simplify reservations, room availability management, payment processing, and customer enquiries. These integrations improve user experience, streamline booking operations, and support higher direct booking conversions through your website."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How do you handle seasonal staffing for tourism businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We support tourism businesses with flexible recruitment solutions for seasonal staffing requirements. Our services include workforce planning, bulk hiring, onboarding support, payroll management, and temporary staffing coordination to help businesses manage peak travel seasons efficiently without operational disruptions."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What business registration does a tourism/hotel business need?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tourism and hotel businesses may require GST registration, trade license, FSSAI license, Shop and Establishment registration, fire safety approvals, pollution control clearances, and tourism department registrations. Required registrations depend on business type, services offered, and operational scale."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What are the penalties for non-compliance in tourism?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Non-compliance in the tourism and hospitality industry can result in fines, license suspension, legal notices, operational restrictions, and reputational damage. Failure to maintain regulatory, tax, labor, or safety compliance may also affect business continuity and customer trust significantly."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How can social media marketing help tourism businesses?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Social media marketing helps tourism businesses improve destination visibility, attract travelers, showcase experiences, and increase booking enquiries. Engaging travel content, reels, campaigns, and targeted advertising help businesses build audience interest, strengthen brand awareness, and drive customer engagement across digital platforms."
+        }
+      }]
+
+    },
+  ];
+
+  return (
+    <Head>
+      <title>Digital Marketing for Tourism | Website & HR Solutions</title>
+      <meta name="description" content="Digital marketing helps tourism businesses by creating engaging content, targeted ads, and social media strategies to attract travelers and boost bookings." />
+      <meta name="keywords" content="digital marketing for tourism, chef recruitment agency, Travel web design company, Tourism Website Development, hospitality recruitment agency" />
+      <link rel="canonical" href={pageUrl} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Digital Marketing for Tourism | Website & HR Solutions" />
+      <meta property="og:description" content="Digital marketing helps tourism businesses by creating engaging content, targeted ads, and social media strategies to attract travelers and boost bookings." />
+      <meta property="og:url" content={pageUrl} />
+      <meta property="og:image" content={imageUrl} />
+      <meta property="og:site_name" content="PCS Business Solution" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Digital Marketing for Tourism | Website & HR Solutions" />
+      <meta name="twitter:description" content="Digital marketing helps tourism businesses by creating engaging content, targeted ads, and social media strategies to attract travelers and boost bookings." />
+      <meta name="twitter:image" content={imageUrl} />
+      {schemaData.map((schema, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
+    </Head>
+  );
+}
 
 // EmailJS will be loaded via CDN in the component
 
@@ -529,6 +681,7 @@ li.dropdown.mega {
   .ap-form-card { padding:1.5rem 1rem !important; }
   .phone-row { flex-wrap:wrap !important; }
 }
+  h3.faq-h3{font-size:2.5rem; color:#000;}
 `;
 /* ═══════════════════════════════════════════
    SECTION 1 — HERO BANNER (Finance Orange Theme)
@@ -601,29 +754,29 @@ function HeroSection() {
       `}</style>
 
       {/* Dark overlay for text readability */}
-      <div className="hero-overlay" style={{ position:"absolute", inset:0, zIndex:1 }} />
+      <div className="hero-overlay" style={{ position: "absolute", inset: 0, zIndex: 1 }} />
 
       {/* Orbs */}
       <div className="hero-orb hero-orb-1" />
       <div className="hero-orb hero-orb-2" />
 
       {/* LEFT CONTENT — order:1 on mobile (comes first) */}
-      <div className="hero-content-left" style={{ position:"relative", zIndex:2, display:"flex", flexDirection:"column", paddingBottom:"3rem", order:1 }}>
+      <div className="hero-content-left" style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column", paddingBottom: "3rem", order: 1 }}>
         <div className="seo-badge"><div className="badge-dot-red" />Tourism & Hospitality </div>
         <h1 className="seo-hero-heading">
           Driving  Excellence
           in <span className="seo-underline seo-red">Tourism &amp; Hospitality</span>
-        with Excellence
+          with Excellence
         </h1>
         <p className="seo-sub">
-We support your business journey with registration, compliance, HR solutions, digital transformation, and digital marketing for tourism — all in one place, ensuring seamless operations, stronger visibility, and scalable growth at every stage.     </p>
+          We support your business journey with registration, compliance, HR solutions, digital transformation, and digital marketing for tourism — all in one place, ensuring seamless operations, stronger visibility, and scalable growth at every stage.     </p>
         <div className="seo-actions">
           <a className="seo-btn-fill" href="#approach"><span>Get in Touch</span><div className="seo-btn-arr">›</div></a>
         </div>
       </div>
 
-            {/* RIGHT — empty, banner image shows through */}
-      <div style={{ order:2 }} />
+      {/* RIGHT — empty, banner image shows through */}
+      <div style={{ order: 2 }} />
 
       {/* Mobile: collapse to 1 col, full cover */}
       <style>{`
@@ -639,7 +792,7 @@ We support your business journey with registration, compliance, HR solutions, di
    SECTION 2 — OUR APPROACH + FORM
 ═══════════════════════════════════════════ */
 function ApproachSection() {
-  const [form, setForm] = useState({ name:"", email:"", phone:"", company:"", msg:"" });
+  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
   const sendEmail = (e) => {
@@ -648,13 +801,13 @@ function ApproachSection() {
       name: form.name, email: form.email, phone: form.phone,
       company: form.company, message: form.msg, url: window.location.href,
     };
-    emailjs.send("service_8xw6k3r","template_jarui36", templateParams,"XWRnXi4hK2SvmRG3q")
-      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name:"",email:"",phone:"",company:"",msg:"" }); })
+    emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
+      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name: "", email: "", phone: "", company: "", msg: "" }); })
       .catch(() => alert("Failed to send ❌"));
   };
 
   return (
-    <section id="approach" style={{ background:"#ffffff", padding:"5rem 6%", position:"relative", overflow:"hidden" }}>
+    <section id="approach" style={{ background: "#ffffff", padding: "5rem 6%", position: "relative", overflow: "hidden" }}>
       <style>{`
         /* eyebrow shared */
         .seo-eyebrow-wrap { display:flex; align-items:center; gap:12px; margin-bottom:12px; }
@@ -697,17 +850,15 @@ function ApproachSection() {
       <div className="ap2-inner">
         {/* LEFT */}
         <div>
-             <div className="partners-header1">
+          <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>About Industry</div>
           </div>
           <h2 className="ap2-heading"><span>Tourism & Hospitality Industry   </span> — Experience Meets Opportunity</h2>
           <p className="ap2-intro">
-The tourism and hospitality industry is built on experiences, spanning travel agencies, hotels, resorts, and service providers — offering vast opportunities for growth.    </p>
- <p className="ap2-intro">
-However, in today’s competitive landscape, success depends on more than service quality. Digital presence, customer engagement, workforce management, and operational efficiency are critical. Businesses investing in digital marketing for tourism are better positioned to attract, engage, and retain customers. That’s where PCS steps in with end-to-end support.</p>
-          <p className="ap2-intro" style={{ color:"rgba(2,43,68,0.45)", fontStyle:"italic" }}>
-            Precise. Proven. Profitable. Built for long-term dominance.
-          </p>
+            The tourism and hospitality industry is built on experiences, spanning travel agencies, hotels, resorts, and service providers — offering vast opportunities for growth.    </p>
+          <p className="ap2-intro">
+            However, in today’s competitive landscape, success depends on more than service quality. Digital presence, customer engagement, workforce management, and operational efficiency are critical. Businesses investing in digital marketing for tourism are better positioned to attract, engage, and retain customers. That’s where PCS steps in with end-to-end support.</p>
+
         </div>
 
         {/* RIGHT FORM */}
@@ -721,14 +872,14 @@ However, in today’s competitive landscape, success depends on more than servic
               <div className="ap2-fl-row">
                 <div className="ap2-fl-group">
                   <label className="ap2-fl-label">Your Name</label>
-                  <div style={{ position:"relative" }}>
+                  <div style={{ position: "relative" }}>
                     <span className="ap2-fl-icon">👤</span>
                     <input className="ap2-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
                   </div>
                 </div>
                 <div className="ap2-fl-group">
                   <label className="ap2-fl-label">Company</label>
-                  <div style={{ position:"relative" }}>
+                  <div style={{ position: "relative" }}>
                     <span className="ap2-fl-icon">🏢</span>
                     <input className="ap2-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
                   </div>
@@ -736,7 +887,7 @@ However, in today’s competitive landscape, success depends on more than servic
               </div>
               <div className="ap2-fl-group">
                 <label className="ap2-fl-label">Email Address</label>
-                <div style={{ position:"relative" }}>
+                <div style={{ position: "relative" }}>
                   <span className="ap2-fl-icon">✉️</span>
                   <input className="ap2-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
                 </div>
@@ -750,8 +901,8 @@ However, in today’s competitive landscape, success depends on more than servic
               </div>
               <div className="ap2-fl-group">
                 <label className="ap2-fl-label">Message</label>
-                <div style={{ position:"relative" }}>
-                  <span className="ap2-fl-icon" style={{ top:"0.9rem", transform:"none" }}>💬</span>
+                <div style={{ position: "relative" }}>
+                  <span className="ap2-fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
                   <textarea className="ap2-fl-textarea" name="msg" placeholder="Tell us about your SEO goals..." value={form.msg} onChange={handleChange} />
                 </div>
               </div>
@@ -774,26 +925,26 @@ function WhyPCSSection() {
     <section className="pcs-section" id="why-pcs">
       <div className="pcs-inner">
         <div className="pcs-header">
-            <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Challenges</div>
-          </div>          <h2 className="pcs-h2">The Biggest Challenges in the  <span><i>Tourism & Hospitality Industry  </i></span> Today</h2>
+          <div className="partners-header1">
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Challenges</h2>
+          </div>          <h3 className="pcs-h2">The Biggest Challenges in the  <span><i>Tourism & Hospitality Industry  </i></span> Today</h3>
           <p className="pcs-lead">
-Running a tourism or hospitality business comes with its own set of challenges. Here are the most common ones:     </p>
+            Running a tourism or hospitality business comes with its own set of challenges. Here are the most common ones:     </p>
         </div>
         <div className="pcs-radial-layout">
           {/* LEFT */}
           <div className="pcs-radial-col left">
             {[
-              { num:"01 · Expertise", title:"Compliance Complexity", desc:" Managing registrations, licenses, and regulatory requirements can be time-consuming.", icon:"/img/icon/tourism-hp-compliance.webp", iconStyle:{background:"rgba(0,65,104,0.3)",borderColor:"rgba(0,130,210,0.5)"} },
-              { num:"02 · Approach", title:"Digital Absence ", desc:" Lack of a strong online presence highlights the need for Tourism Website Development and a reliable Travel web design company.", icon:"/img/icon/tourism-hp-digital-absence.webp", iconStyle:{background:"rgba(237,131,55,0.2)",borderColor:"rgba(237,131,55,0.5)"} },
-              { num:"03 · Reliability", title:"Customer Reach", desc:" Without effective digital marketing for tourism, businesses struggle to attract the right audience and bookings", icon:"/img/icon/tourism-hp-buyer-reach.webp", iconStyle:{background:"rgba(10,82,130,0.3)",borderColor:"rgba(20,120,190,0.5)"} },
+              { num: "01 · Expertise", title: "Compliance Complexity", desc: " Managing registrations, licenses, and regulatory requirements can be time-consuming.", icon: "/img/icon/tourism-hp-compliance.webp", iconStyle: { background: "rgba(0,65,104,0.3)", borderColor: "rgba(0,130,210,0.5)" } },
+              { num: "02 · Approach", title: "Digital Absence ", desc: " Lack of a strong online presence highlights the need for Tourism Website Development and a reliable Travel web design company.", icon: "/img/icon/tourism-hp-digital-absence.webp", iconStyle: { background: "rgba(237,131,55,0.2)", borderColor: "rgba(237,131,55,0.5)" } },
+              { num: "03 · Reliability", title: "Customer Reach", desc: " Without effective digital marketing for tourism, businesses struggle to attract the right audience and bookings", icon: "/img/icon/tourism-hp-buyer-reach.webp", iconStyle: { background: "rgba(10,82,130,0.3)", borderColor: "rgba(20,120,190,0.5)" } },
             ].map((p, i) => (
               <div className="pcs-point" key={i}>
                 <div className="pcs-point-line"></div>
                 <div className="pcs-point-icon-wrap" style={p.iconStyle}><img src={p.icon} alt={p.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
                 <div className="pcs-point-body">
                   <span className="pcs-point-num">{p.num}</span>
-                  <div className="pcs-point-title">{p.title}</div>
+                  <h4 className="pcs-point-title">{p.title}</h4>
                   <div className="pcs-point-desc">{p.desc}</div>
                 </div>
               </div>
@@ -813,15 +964,15 @@ Running a tourism or hospitality business comes with its own set of challenges. 
           {/* RIGHT */}
           <div className="pcs-radial-col right">
             {[
-              { num:"04 · Growth", title:"Workforce Challenges", desc:" Hiring skilled staff increases the need for a trusted hospitality recruitment agency and chef recruitment agency.", icon:"/img/icon/tourism-hp-workforce.webp", iconStyle:{background:"rgba(201,109,26,0.2)",borderColor:"rgba(237,131,55,0.5)"} },
-              { num:"05 · Delivery", title:"Seasonal Demand Fluctuation", desc:"Managing demand across peak and off-peak seasons impacts revenue stability.", icon:"/img/icon/tourism-hp-demand.webp", iconStyle:{background:"rgba(0,42,68,0.4)",borderColor:"rgba(0,100,170,0.5)"} },
-              { num:"06 · Value", title:"Brand Visibility", desc:" Low online visibility reduces bookings and customer trust.", icon:"/img/icon/tourism-hp-brand-visibility.webp", iconStyle:{background:"rgba(20,102,160,0.3)",borderColor:"rgba(30,140,210,0.5)"} },
+              { num: "04 · Growth", title: "Workforce Challenges", desc: " Hiring skilled staff increases the need for a trusted hospitality recruitment agency and chef recruitment agency.", icon: "/img/icon/tourism-hp-workforce.webp", iconStyle: { background: "rgba(201,109,26,0.2)", borderColor: "rgba(237,131,55,0.5)" } },
+              { num: "05 · Delivery", title: "Seasonal Demand Fluctuation", desc: "Managing demand across peak and off-peak seasons impacts revenue stability.", icon: "/img/icon/tourism-hp-demand.webp", iconStyle: { background: "rgba(0,42,68,0.4)", borderColor: "rgba(0,100,170,0.5)" } },
+              { num: "06 · Value", title: "Brand Visibility", desc: " Low online visibility reduces bookings and customer trust.", icon: "/img/icon/tourism-hp-brand-visibility.webp", iconStyle: { background: "rgba(20,102,160,0.3)", borderColor: "rgba(30,140,210,0.5)" } },
             ].map((p, i) => (
               <div className="pcs-point" key={i}>
                 <div className="pcs-point-icon-wrap" style={p.iconStyle}><img src={p.icon} alt={p.title} style={{ width: "30px", height: "30px", objectFit: "contain" }} /></div>
                 <div className="pcs-point-body">
                   <span className="pcs-point-num">{p.num}</span>
-                  <div className="pcs-point-title">{p.title}</div>
+                  <h4 className="pcs-point-title">{p.title}</h4>
                   <div className="pcs-point-desc">{p.desc}</div>
                 </div>
                 <div className="pcs-point-line"></div>
@@ -912,10 +1063,10 @@ function ChallengesSection() {
           display: "flex", alignItems: "center", justifyContent: "center",
           gap: "12px", marginBottom: "14px",
         }}>
-                    <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Solutions</div>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Solutions</h2>
 
         </div>
-        <h2 style={{
+        <h3 style={{
           fontFamily: "'Poppins', sans-serif",
           fontSize: isMobile ? "22px" : isTablet ? "28px" : "clamp(28px, 3.5vw, 40px)",
           fontWeight: "700", color: "#0d1f2d",
@@ -923,16 +1074,16 @@ function ChallengesSection() {
         }}>
           How We Help {" "}
           <span style={{ color: "#ed8337", fontStyle: "italic" }}>
-            Tourism & Hospitality 
+            Tourism & Hospitality
           </span>{" "} Businesses  Grow
           Grow
-        </h2>
-       <p style={{
+        </h3>
+        <p style={{
           fontSize: isMobile ? "13px" : "15px", color: "#000000", fontWeight: "300",
-           margin: "30px auto", lineHeight: "1.75",
+          margin: "30px auto", lineHeight: "1.75",
         }}>
-From business registration to digital growth and website development, we provide the right solutions at every stage of your manufacturing business journey.
- </p>      </div>
+          From business registration to digital growth and website development, we provide the right solutions at every stage of your manufacturing business journey.
+        </p>      </div>
 
       {/* ══════════════════════════════════
           MOBILE — Accordion (tab → content below each)
@@ -1071,12 +1222,12 @@ From business registration to digital growth and website development, we provide
                 width: "120px", height: "120px", borderRadius: "50%",
                 background: "#F5C49A", opacity: "0.18", pointerEvents: "none",
               }} />
-              <h3 style={{
+              <h4 style={{
                 fontFamily: "'Poppins', sans-serif",
                 fontSize: isTablet ? "19px" : "clamp(18px, 2.2vw, 24px)",
                 fontWeight: "700", color: "#0d1f2d",
                 lineHeight: "1.35", margin: "0",
-              }}>{current.title}</h3>
+              }}>{current.title}</h4>
             </div>
 
             {/* Right Pane */}
@@ -1114,7 +1265,7 @@ function CaseStudySection() {
     <section className="cs-section" id="case-study">
       <div className="cs-inner">
         <div className="cs-header">
-            <div className="partners-header1">
+          <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
           </div>          <h2 className="cs-h2">Real Results for <span>Real  Businesses</span></h2>
         </div>
@@ -1122,7 +1273,7 @@ function CaseStudySection() {
           <div className="cs-q-mark">"</div>
           <div className="cs-q-mark-r">"</div>
           <p className="cs-quote-text">
-            We have helped businesses across <em>industries streamline compliance</em>, build their <em>digital presence</em>, and achieve  <em>consistent growth.</em> 
+            We have helped businesses across <em>industries streamline compliance</em>, build their <em>digital presence</em>, and achieve  <em>consistent growth.</em>
           </p>
           <div className="cs-quote-attr">
             <span className="cs-quote-line"></span>
@@ -1137,12 +1288,12 @@ function CaseStudySection() {
 
 
 const faqData = [
-  { q: "What is a financial service business?", a: "A financial service business provides expert support in banking, investments, accounting, loans, and advisory services to help businesses and individuals manage their finances efficiently." },
-  { q: "What are the types of financial services?", a: "Financial services include banking, insurance, investment management, accounting, tax advisory, loans, and financial planning, covering all aspects of money management and business growth" },
-  { q: "What are the four financial services?", a: "The main four financial services are banking, insurance, investment advisory, and accounting, which collectively help businesses and individuals manage, protect, and grow their assets." },
-  { q: "What are the 8 financial sectors?", a: "The eight sectors include banking, insurance, capital markets, investment services, asset management, accounting, tax advisory, and fintech, covering the full spectrum of financial operations." },
-  { q: "Why is a financial advisory important?", a: "Financial advisory helps businesses make informed decisions, optimize resources, manage risks, plan growth, and ensure compliance, ultimately improving profitability and long-term financial stability." },
-  { q: "What are the five types of finance?", a: "The five types are banking, insurance, investment management, accounting, and financial planning, each addressing critical aspects of financial control, risk management, and wealth creation." },
+  { q: "How can SEO help my hotel/tourism business?", a: "SEO improves your hotel or tourism business visibility on search engines by targeting travel-related keywords and optimizing website content. Better rankings help attract travelers, increase booking enquiries, improve local discoverability, and generate consistent organic traffic from potential customers searching online" },
+  { q: "Can you integrate online booking engine with hotel website?", a: "Yes, we integrate online booking engines with hotel and tourism websites to simplify reservations, room availability management, payment processing, and customer enquiries. These integrations improve user experience, streamline booking operations, and support higher direct booking conversions through your website." },
+  { q: "How do you handle seasonal staffing for tourism businesses?", a: "We support tourism businesses with flexible recruitment solutions for seasonal staffing requirements. Our services include workforce planning, bulk hiring, onboarding support, payroll management, and temporary staffing coordination to help businesses manage peak travel seasons efficiently without operational disruptions." },
+  { q: "What business registration does a tourism/hotel business need?", a: "Tourism and hotel businesses may require GST registration, trade license, FSSAI license, Shop and Establishment registration, fire safety approvals, pollution control clearances, and tourism department registrations. Required registrations depend on business type, services offered, and operational scale." },
+  { q: "What are the penalties for non-compliance in tourism?", a: " Non-compliance in the tourism and hospitality industry can result in fines, license suspension, legal notices, operational restrictions, and reputational damage. Failure to maintain regulatory, tax, labor, or safety compliance may also affect business continuity and customer trust significantly." },
+  { q: "How can social media marketing help tourism businesses?", a: "Social media marketing helps tourism businesses improve destination visibility, attract travelers, showcase experiences, and increase booking enquiries. Engaging travel content, reels, campaigns, and targeted advertising help businesses build audience interest, strengthen brand awareness, and drive customer engagement across digital platforms." },
 ];
 function FAQSection() {
   const [active, setActive] = useState(null);
@@ -1151,14 +1302,14 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section"  style={{ background:"#ffffff" }}>
+    <section className="faq-section" style={{ background: "#ffffff" }}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-        <div className="partners-eyebrow" >Frequently Asked Questions</div>
+        <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
-          <h2>Queries That Could <span>Hold You Back</span></h2>
+          <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
         </div>
         {/* FAQ GRID */}
         <div className="faq-wrapper">
@@ -1207,7 +1358,11 @@ function FAQSection() {
 export default function HealthcarePCS() {
 
   return (
-    <Layout>
+    <Layout
+      title="Digital Marketing for Tourism | Website & HR Solutions"
+      description="Digital marketing helps tourism businesses by creating engaging content, targeted ads, and social media strategies to attract travelers and boost bookings."
+    >
+      <SEOHead />
       <style>{css}</style>
       <HeroSection />
       <ApproachSection />

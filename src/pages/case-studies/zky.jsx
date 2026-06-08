@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="ZKY HR Verification Digital Presence Case Study | PCS" description="We created a professional digital presence for ZKY, enhancing brand credibility, online visibility, and trust among HR and corporate audiences. ">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>ZKY HR Verification Digital Presence Case Study | PCS</title>
+        <meta name="description" content="We created a professional digital presence for ZKY, enhancing brand credibility, online visibility, and trust among HR and corporate audiences. " />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/zky/" />
+        <meta property="og:title" content="ZKY HR Verification Digital Presence Case Study | PCS" />
+        <meta property="og:description" content="We created a professional digital presence for ZKY, enhancing brand credibility, online visibility, and trust among HR and corporate audiences. " />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/zky/" />
       </Head>
       <style>{styles}</style>
 
@@ -99,8 +99,8 @@ export default function CaseStudy() {
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">
-Establishing a Professional Digital Presence for an HR Verification Company
-</h1>
+              Establishing a Professional Digital Presence for an HR Verification Company
+            </h1>
           </div>
         </section>
 
@@ -114,48 +114,53 @@ Establishing a Professional Digital Presence for an HR Verification Company
               <img src="/img/case-study-zky-about.webp" alt="Establishing a Professional Digital Presence for an HR Verification Company" />
             </div>
 
-     
- <div className="detail-section">
-              <h2>About</h2>
-              <p>Tactive approached us to build a structured B2B marketing ecosystem focused on generating qualified leads across India and international markets for its construction ERP solutions.</p>
+
+            <div className="detail-section">
+              <h2>About ZKY</h2>
+              <p>
+                ZKY is a background verification and HR screening solutions provider helping organizations make informed hiring decisions. The company delivers reliable employee verification services, including identity, education, employment, and address checks, enabling businesses to reduce hiring risks and build a trustworthy workforce.
+              </p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>ZKY wanted a professional online identity that reflected trust, accuracy, and reliability within the HR verification industry. We created a structured digital presence designed to strengthen credibility and support business enquiries.
-</p>
+              <p>
+                ZKY partnered with PCS to establish a professional digital presence that reflects trust, accuracy, and reliability in the HR verification industry. Through structured branding and website development, PCS enhanced credibility, strengthened brand perception, and created a platform designed to support business enquiries and growth.
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>The company lacked a strong digital identity to effectively communicate its verification services and expertise. Building confidence among corporate decision-makers and improving online visibility were key priorities.
-</p>
+              <p>
+                The company lacked a strong digital identity to effectively showcase its verification services and industry expertise. Building trust among corporate decision-makers, improving online visibility, and creating a credible platform for business enquiries were essential priorities for supporting future growth.
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Developed a clean and professional digital presence
-</li>
-              <li>Structured service communication for better clarity and trust</li>
-              <li>Refined brand presentation to reflect credibility and expertise
-</li>
-              <li>Focused on enquiry-driven digital positioning
-</li>
-              <li>Improved visibility among business and HR audiences
-</li>
+                <li>Developed a clean and professional digital presence
+                </li>
+                <li>Structured service communication for better clarity and trust</li>
+                <li>Refined brand presentation to reflect credibility and expertise
+                </li>
+                <li>Focused on enquiry-driven digital positioning
+                </li>
+                <li>Improved visibility among business and HR audiences
+                </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
-              <p>ZKY established a stronger and more credible digital identity that improved brand perception, increased visibility among corporate audiences, and positioned the company as a reliable HR verification partner.
-</p>
+              <p>
+                ZKY established a stronger and more credible digital presence that enhanced brand perception, improved visibility among corporate decision-makers, and reinforced its position as a trusted HR verification partner. The structured online identity also supported greater business enquiries and long-term growth opportunities.
+              </p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like ZKY?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
 
@@ -168,7 +173,7 @@ Establishing a Professional Digital Presence for an HR Verification Company
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>ZKY</strong></p>
-                  <p>Service: </p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag"> Website</span>
                 <span className="sidebar-tag">SEO</span>
@@ -180,59 +185,57 @@ Establishing a Professional Digital Presence for an HR Verification Company
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-            </div>
 
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+            </div>
           </div>
-
         </div>
       </div>
     </Layout>

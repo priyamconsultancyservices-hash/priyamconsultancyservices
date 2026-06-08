@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="Construction ERP Lead Generation Case Study | Priyam Consultancy" description="Learn how PCS helped a construction ERP company generate qualified leads and expanded across India, GCC, Africa, and Oceania through SEO and digital marketing">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://priyamconsultancy.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>Construction ERP Lead Generation Case Study | Priyam Consultancy</title>
+        <meta name="description" content="Learn how PCS helped a construction ERP company generate qualified leads and expanded across India, GCC, Africa, and Oceania through SEO and digital marketing" />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/tactive/" />
+        <meta property="og:title" content="Construction ERP Lead Generation Case Study | Priyam Consultancy" />
+        <meta property="og:description" content="Learn how PCS helped a construction ERP company generate qualified leads and expanded across India, GCC, Africa, and Oceania through SEO and digital marketing" />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://priyamconsultancy.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/tactive/" />
       </Head>
       <style>{styles}</style>
 
@@ -113,13 +113,12 @@ export default function CaseStudy() {
             <div className="detail-section">
               <h2>About Tactive</h2>
               <p>
-                Tactive Software Systems is a technology-driven company delivering dedicated construction ERP solutions . Backed by over 17 years of research and development and supported by the industry expertise of URC Constructions, Tactive helps construction businesses streamline operations and make data-driven decisions.
-              </p>
+                Tactive Software Systems is a technology-driven company delivering dedicated construction ERP solutions . Backed by over 17 years of research and development and supported by the industry expertise of URC Constructions, Tactive helps construction businesses streamline operations and make data-driven decisions.              </p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
               <p>
-                Tactive partnered with us to build a structured B2B performance marketing ecosystem focused on generating qualified leads across Indian and international markets for its construction ERP solutions.
+                Tactive partnered with PCS to establish a structured B2B performance marketing ecosystem focused on increasing brand visibility, generating qualified leads, and strengthening market presence for its construction ERP solutions. The objective was to create a scalable digital strategy that supported growth across both markets.
               </p>
             </div>
 
@@ -150,7 +149,7 @@ export default function CaseStudy() {
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like Tactive?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
           </div>

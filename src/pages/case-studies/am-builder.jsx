@@ -146,7 +146,7 @@ export default function CaseStudy() {
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like Tactive?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
 

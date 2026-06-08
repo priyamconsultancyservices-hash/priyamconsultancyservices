@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="Ey Chiquita Social Media Marketing Case Study | PCS" description="PCS generated 100+ qualified leads, increased engagement by 35%+, and reduced CPL by 25% through strategic social media marketing. ">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>Ey Chiquita Social Media Marketing Case Study | PCS</title>
+        <meta name="description" content="PCS generated 100+ qualified leads, increased engagement by 35%+, and reduced CPL by 25% through strategic social media marketing. " />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/ey-chiquita/" />
+        <meta property="og:title" content="Ey Chiquita Social Media Marketing Case Study | PCS" />
+        <meta property="og:description" content="PCS generated 100+ qualified leads, increased engagement by 35%+, and reduced CPL by 25% through strategic social media marketing. " />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/ey-chiquita/" />
       </Head>
       <style>{styles}</style>
 
@@ -99,85 +99,77 @@ export default function CaseStudy() {
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">Driving 100+ Qualified Leads Through Social Media Marketing for a Fashion Brand
-</h1>
+            </h1>
           </div>
         </section>
 
         {/* ── BODY ── */}
         <div className="detail-page-body">
-
           {/* LEFT */}
           <div className="detail-left">
-
             <div className="detail-hero-img">
               <img src="/img/case-study-ey-chiquita-about.webp" alt="Driving 100+ Qualified Leads Through Social Media Marketing for a Fashion Brand" />
             </div>
-
-     
- <div className="detail-section">
+            <div className="detail-section">
               <h2>About Ey Chiquita
-</h2>
+              </h2>
               <p>
                 Ey Chiquita is a fashion and lifestyle brand focused on creating trend-driven products and engaging digital experiences for modern consumers. The brand emphasizes style, audience engagement, and strong social media presence to connect with fashion-focused customers.
-</p>
+              </p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>Ey Chiquita partnered with PCS to transform its growing social media presence into a consistent lead generation channel. Through performance-focused social media marketing, targeted Meta Ads campaigns, and conversion-oriented strategies, the brand aimed to improve customer acquisition, engagement, and digital visibility.
-</p>
+              <p>
+                Ey Chiquita partnered with PCS to transform its growing social media presence into a consistent lead generation channel. Through performance-focused social media marketing, targeted Meta Ads campaigns, and conversion-oriented strategies, the brand aimed to improve customer acquisition, engagement, and digital visibility.</p>
             </div>
-
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>Operating in a highly competitive fashion and lifestyle market, Ey Chiquita required a structured digital marketing strategy capable of generating qualified enquiries while maintaining cost efficiency. The brand also needed stronger audience engagement, improved ad performance, and scalable customer acquisition campaigns.
-</p>
+              <p>
+                Operating in a highly competitive fashion and lifestyle market, Ey Chiquita required a structured digital marketing strategy capable of generating qualified enquiries while maintaining cost efficiency. The brand also needed stronger audience engagement, improved ad performance, and scalable customer acquisition campaigns.
+              </p>
             </div>
-
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Built a performance-focused lead generation framework through social media marketing
-</li>
-              <li>Executed targeted Meta Ads campaigns for high-intent fashion audiences</li>
-              <li>Developed engaging creatives and conversion-driven ad messaging
-</li>
-              <li>Continuously optimized audience targeting, creatives, and bidding strategies
-</li>
-              <li>Improved campaign efficiency through CTR and engagement-focused optimization
-</li>
-<li>Balanced lead generation growth while maintaining controlled advertising spend
-</li>
+                <li>Built a performance-focused lead generation framework through social media marketing
+                </li>
+                <li>Executed targeted Meta Ads campaigns for high-intent fashion audiences</li>
+                <li>Developed engaging creatives and conversion-driven ad messaging
+                </li>
+                <li>Continuously optimized audience targeting, creatives, and bidding strategies
+                </li>
+                <li>Improved campaign efficiency through CTR and engagement-focused optimization
+                </li>
+                <li>Balanced lead generation growth while maintaining controlled advertising spend
+                </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
               <p>PCS generated 100+ qualified leads for Ey Chiquita through targeted social media marketing and Meta Ads campaigns. Lead generation increased by over 40%, while Cost Per Lead (CPL) reduced by 25% through audience refinement and campaign optimization. High-converting creatives improved ad engagement by 35%+, and Click-Through Rates (CTR) increased significantly through optimized ad copy and targeting strategies. The campaigns also strengthened brand visibility, audience reach, and overall digital marketing performance across targeted customer segments.
-</p>
+              </p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like Ey Chiquita
-?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+                ?</h3>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
-
           </div>
 
           {/* SIDEBAR */}
           <div className="detail-sidebar">
-
             {/* About */}
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong> Ey Chiquita
-</strong></p>
-             <p>Service: </p>
+              </strong></p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">Meta Ads</span>
-
               </div>
             </div>
 
@@ -186,59 +178,56 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
             </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
           </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-            </div>
-
-          </div>
-
         </div>
       </div>
     </Layout>

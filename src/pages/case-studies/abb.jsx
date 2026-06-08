@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="ABB Management Consulting Digital Growth Case Study" description="Discover how PCS strengthened ABB's digital presence through strategic branding, content optimization, and improved online positioning. ">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>ABB Management Consulting Digital Growth Case Study</title>
+        <meta name="description" content="Discover how PCS strengthened ABB's digital presence through strategic branding, content optimization, and improved online positioning. " />
+        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/abb" />
+        <meta property="og:title" content="ABB Management Consulting Digital Growth Case Study" />
+        <meta property="og:description" content="Discover how PCS strengthened ABB's digital presence through strategic branding, content optimization, and improved online positioning. " />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/abb" />
       </Head>
       <style>{styles}</style>
 
@@ -117,18 +117,21 @@ export default function CaseStudy() {
             <div className="detail-section">
               <h2>About ABB
               </h2>
-              <p>ABB Management Consulting helps MSMEs accelerate growth through Digital Transformation, Application Development, and Process Automation solutions. The company focuses on improving operational efficiency, streamlining business processes, and enabling sustainable growth through technology-driven strategies and innovation-focused consulting services.
+              <p>
+                ABB Management Consulting empowers MSMEs through Digital Transformation, Application Development, and Process Automation solutions. By combining technology-driven strategies with business consulting expertise, the company helps organizations improve efficiency, streamline operations, enhance productivity, and achieve sustainable growth in an increasingly competitive market.
               </p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>ABB aimed to establish a professional digital presence that accurately reflected its expertise in digital transformation and innovation-led IT solutions. The objective was to create a strong online identity aligned with its market positioning, service capabilities, and long-term business vision.
+              <p>
+                ABB aimed to establish a professional digital presence that accurately reflected its expertise in digital transformation and innovation-led IT solutions. The objective was to create a strong online identity aligned with its market positioning, service capabilities, and long-term business vision.
               </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>Despite offering specialized technology and consulting services, the company required a more refined digital ecosystem to communicate its expertise effectively. Limited brand consistency, unclear positioning, and a lack of structured digital communication affected visibility and overall market perception within a competitive digital transformation industry.
+              <p>
+                Despite offering specialized technology and consulting solutions, the company needed a stronger digital presence to effectively showcase its expertise. Improving brand consistency, clarifying market positioning, and establishing structured digital communication were essential to enhance visibility, credibility, and competitiveness within the digital transformation landscape.
               </p>
             </div>
 
@@ -148,24 +151,21 @@ export default function CaseStudy() {
                 </li>
               </ul>
             </div>
-
             <div className="detail-section">
               <h2>The Result</h2>
               <p>We established a stronger and more credible digital identity that improved brand clarity, online visibility, and audience trust. The refined digital presence strengthened the company’s positioning within the digital transformation space while creating a scalable platform for future business growth and engagement.</p>
             </div>
-
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like ABB?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>
+                We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
-
           </div>
 
           {/* SIDEBAR */}
           <div className="detail-sidebar">
-
             {/* About */}
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
@@ -232,9 +232,7 @@ export default function CaseStudy() {
                 <div className="recent-arrow">→</div>
               </a>
             </div>
-
           </div>
-
         </div>
       </div>
     </Layout>

@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="IT Recruitment & Talent Acquisition Case Study | AINQA" description=" PCS streamlined recruitment for AINQA, enabling faster hiring, reduced bottlenecks, and uninterrupted project execution.  ">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>IT Recruitment & Talent Acquisition Case Study | AINQA</title>
+        <meta name="description" content=" PCS streamlined recruitment for AINQA, enabling faster hiring, reduced bottlenecks, and uninterrupted project execution.  " />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/ainqa/" />
+        <meta property="og:title" content="IT Recruitment & Talent Acquisition Case Study | AINQA" />
+        <meta property="og:description" content=" PCS streamlined recruitment for AINQA, enabling faster hiring, reduced bottlenecks, and uninterrupted project execution.  " />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/ainqa/" />
       </Head>
       <style>{styles}</style>
 
@@ -99,7 +99,7 @@ export default function CaseStudy() {
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">On-Time Recruitment Closure for Critical IT Roles
-</h1>
+            </h1>
           </div>
         </section>
 
@@ -113,53 +113,56 @@ export default function CaseStudy() {
               <img src="/img/case-study-ainqa-about.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
             </div>
 
-     
- <div className="detail-section">
-              <h2>About AINQA
-</h2>
-              <p>AINQA is a technology company specializing in digital services and IT solutions for diverse industries.
 
-</p>
+            <div className="detail-section">
+              <h2>About AINQA
+              </h2>
+              <p>
+                AINQA is a technology company delivering digital services and IT solutions across multiple industries. The company focuses on helping businesses improve operational efficiency, adopt modern technologies, and achieve sustainable growth through innovative software, automation, and technology-driven business solutions.
+
+              </p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>AINQA needed swift recruitment to fill several critical IT roles and ensure uninterrupted progress across technology projects.
+              <p>
+                AINQA required swift recruitment support to fill multiple critical IT positions and maintain project momentum. The company sought qualified talent within tight timelines to ensure uninterrupted delivery, support business growth, and meet evolving client and technology requirements efficiently.
 
-</p>
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>Hiring delays were putting project timelines at risk. The firm needed a faster, more structured recruitment process to avoid disruptions and meet critical project milestones.
-</p>
+              <p>
+                Hiring delays were impacting project schedules and resource availability. The company needed a faster, more structured recruitment process to identify qualified professionals quickly, reduce hiring bottlenecks, and ensure critical project milestones were achieved without operational disruptions or delivery delays.
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Managed the recruitment lifecycle end-to-end
-</li>
-              <li>Clarified role requirements to ensure candidate relevance
-</li>
-              <li>Leveraged job portals to target high-potential candidates
-</li>
-              <li>Streamlined screening and interview workflows
-.</li>
-              <li>Closed all critical IT roles within one month, reducing hiring delays by 40%
-</li>
+                <li>Managed the recruitment lifecycle end-to-end
+                </li>
+                <li>Clarified role requirements to ensure candidate relevance
+                </li>
+                <li>Leveraged job portals to target high-potential candidates
+                </li>
+                <li>Streamlined screening and interview workflows
+                  .</li>
+                <li>Closed all critical IT roles within one month, reducing hiring delays by 40%
+                </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
-              <p>We enabled AINQA to fill vital IT roles within one month. Recruitment efficiency improved by 40%, ensuring timely project delivery and reduced hiring bottlenecks.
-</p>
+              <p>
+                PCS helped AINQA successfully fill critical IT positions within one month through a streamlined recruitment process. The company improved hiring efficiency by 40%, reduced recruitment bottlenecks, strengthened workforce readiness, and ensured timely project delivery without impacting operational performance or client commitments.</p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like AINQA?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
 
@@ -172,7 +175,7 @@ export default function CaseStudy() {
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>AINQA</strong></p>
-                   <p>Service: </p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">Recruitment Service</span>
               </div>
@@ -183,59 +186,57 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-            </div>
 
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+            </div>
           </div>
-
         </div>
       </div>
     </Layout>

@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="Analytix Hub Recruitment & Payroll Case Study | PCS" description="PCS helped Analytix Hub reduce hiring turnaround by 40%, streamline payroll management, and support rapid workforce scaling with efficient onboarding.">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>Analytix Hub Recruitment & Payroll Case Study | PCS</title>
+        <meta name="description" content="PCS helped Analytix Hub reduce hiring turnaround by 40%, streamline payroll management, and support rapid workforce scaling with efficient onboarding." />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/analytixhub/" />
+        <meta property="og:title" content="Analytix Hub Recruitment & Payroll Case Study | PCS" />
+        <meta property="og:description" content="PCS helped Analytix Hub reduce hiring turnaround by 40%, streamline payroll management, and support rapid workforce scaling with efficient onboarding." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/analytixhub/" />
       </Head>
       <style>{styles}</style>
 
@@ -98,7 +98,7 @@ export default function CaseStudy() {
         {/* ── BANNER ── */}
         <section className="detail-banner">
           <div className="detail-banner-inner">
-            <h1 className="detail-banner-title">Building a Credible Digital Presence for a Business Consulting Firm
+            <h1 className="detail-banner-title">Fast Recruitment & On-Time Payroll Enablement for an IT Company
             </h1>
           </div>
         </section>
@@ -110,54 +110,56 @@ export default function CaseStudy() {
           <div className="detail-left">
 
             <div className="detail-hero-img">
-              <img src="/img/case-study-riya-about.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
+              <img src="/img/case-study-analytixhub-about.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
             </div>
 
 
             <div className="detail-section">
-              <h2>About RIYA
+              <h2>About Analytix Hub
               </h2>
-              <p>Focused on delivering business consulting and operational support solutions, the company helps organizations improve efficiency, compliance, and long-term growth through structured and professional advisory services across multiple business functions.</p>
+              <p>
+                Analytix Hub is an IT services firm providing technology solutions, digital support, and operational services that help businesses scale efficiently. The company focuses on improving business performance through reliable technology implementation, process optimization, and scalable solutions tailored to evolving organizational needs.</p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
-              <p>To strengthen its market positioning, the firm aimed to establish a credible and professional digital presence that reflected its consulting expertise, service capabilities, and business values. The objective was to improve discoverability, audience trust, and long-term digital engagement through strategic branding, SEO, and social media marketing initiatives.
+              <p>
+                Analytix Hub required rapid talent acquisition and accurate payroll management to support critical project timelines during a major expansion phase. The objective was to onboard qualified professionals quickly, ensure compliance, and maintain seamless workforce operations while supporting business growth.
               </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
-              <p>Although the company offered valuable consulting services, its digital communication lacked consistency and strategic positioning. The business required a clearer online structure, stronger visibility, and a professional digital ecosystem capable of improving audience trust, search presence, and client interaction opportunities.
-              </p>
+              <p>
+                Facing urgent hiring requirements and strict payroll accuracy expectations, the company needed to shorten recruitment timelines, onboard qualified talent efficiently, and maintain error-free payroll processing. Ensuring workforce continuity and operational efficiency without impacting critical project delivery was a key business priority.</p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-                <li>Developed a structured and professional digital brand identity
+                <li>Conducted simultaneous recruitment and payroll management
                 </li>
-                <li>Refined service communication and positioning for better audience clarity</li>
-                <li>Implemented SEO strategies to improve search visibility and organic reach
+                <li>Identified, screened, and onboarded candidates within just 7 days, reducing typical hiring time by 40%
                 </li>
-                <li>Executed social media marketing campaigns to strengthen brand engagement
+                <li>Ensured accurate payroll processing without delays
                 </li>
-                <li>Improved consistency across website, content, and social platforms
+                <li>Maintained operational continuity during rapid expansion
                 </li>
-                <li>Aligned digital messaging with long-term business and growth objectives
+                <li>Reduced turnover time by 35%, enabling faster project ramp-up
                 </li>
               </ul>
             </div>
 
             <div className="detail-section">
               <h2>The Result</h2>
-              <p>Helped the brand establish a polished and trustworthy digital presence supported by SEO and social media marketing strategies. The improved online structure strengthened brand credibility, enhanced search visibility, increased audience engagement, and created a stronger foundation for long-term business growth and client acquisition.
+              <p>
+                PCS helped Analytix Hub rapidly scale its workforce through streamlined recruitment and efficient payroll management. The company reduced hiring turnaround time by 40%, ensured timely salary processing, improved onboarding efficiency, and maintained uninterrupted project execution during a critical growth phase.
               </p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
-              <h3>Ready to achieve results like Riya?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <h3>Ready to achieve results like Analytix Hub?</h3>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
 
@@ -169,13 +171,11 @@ export default function CaseStudy() {
             {/* About */}
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
-              <p>Client: <strong>Riya</strong></p>
+              <p>Client: <strong>Analytix Hub</strong></p>
               <p>Service: </p>
               <div className="sidebar-tag-row">
-                <span className="sidebar-tag">Website</span>
-                <span className="sidebar-tag">SEO</span>
-                <span className="sidebar-tag">SMM</span>
-
+                <span className="sidebar-tag">Recruitment Service </span>
+                <span className="sidebar-tag">Payroll</span>
               </div>
             </div>
 

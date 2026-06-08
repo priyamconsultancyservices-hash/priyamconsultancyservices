@@ -81,15 +81,15 @@ const styles = `
 
 export default function CaseStudy() {
   return (
-    <Layout title="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" description="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform.">
+    <Layout title="SterloBuild SEO & Digital Visibility Case Study | PCS" description="Discover how PCS improved SterloBuild's online visibility through content strategy, SEO optimization, industry-focused positioning, and a stronger digital presence.">
       <Head>
-        <title>Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS</title>
-        <meta name="description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
-        <link rel="canonical" href="https://www.pcshealthcare.com/case-studies/tactive" />
-        <meta property="og:title" content="Tactive Case Study | 35 Cr+ Pipeline for a Construction Tech ERP Brand | PCS" />
-        <meta property="og:description" content="See how PCS helped Tactive build a 35 Cr+ qualified lead pipeline from scratch using B2B digital marketing, LinkedIn Ads, and SEO for their construction ERP platform." />
+        <title>SterloBuild SEO & Digital Visibility Case Study | PCS</title>
+        <meta name="description" content="Discover how PCS improved SterloBuild's online visibility through content strategy, SEO optimization, industry-focused positioning, and a stronger digital presence." />
+        <link rel="canonical" href=" https://www.priyamconsultancy.com/case-studies/sterlobuild/" />
+        <meta property="og:title" content="SterloBuild SEO & Digital Visibility Case Study | PCS" />
+        <meta property="og:description" content="Discover how PCS improved SterloBuild's online visibility through content strategy, SEO optimization, industry-focused positioning, and a stronger digital presence." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.pcshealthcare.com/case-studies/tactive" />
+        <meta property="og:url" content=" https://www.priyamconsultancy.com/case-studies/sterlobuild/" />
       </Head>
       <style>{styles}</style>
 
@@ -99,7 +99,7 @@ export default function CaseStudy() {
         <section className="detail-banner">
           <div className="detail-banner-inner">
             <h1 className="detail-banner-title">Building Initial Digital Visibility for a Construction Tech SaaS Brand
-</h1>
+            </h1>
           </div>
         </section>
 
@@ -113,39 +113,39 @@ export default function CaseStudy() {
               <img src="/img/case-study-sterlobuild-about.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" />
             </div>
 
-     
- <div className="detail-section">
+
+            <div className="detail-section">
               <h2>About SterloBuild
-</h2>
-              <p>SterloBuild is a construction technology SaaS platform focused on simplifying construction workflows and improving operational efficiency through digital solutions designed for the construction industry.
-</p>
+              </h2>
+              <p>
+                SterloBuild is a construction technology SaaS platform that helps construction businesses streamline project management, workforce coordination, documentation, and operational workflows. Designed for the construction industry, the platform improves efficiency, enhances visibility, and supports better decision-making through integrated digital solutions and automation.</p>
             </div>
             <div className="detail-section">
               <h2>Overview</h2>
               <p>They aimed to establish an initial digital presence and create foundational visibility within the Indian construction technology market. The focus was on building a professional online identity and improving discoverability through structured content and basic SEO-driven digital initiatives.
-</p>
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>The Challenge</h2>
               <p>As an emerging construction tech brand with a single-page website, SterloBuild had limited digital visibility and minimal search presence. The company needed clearer positioning, industry-relevant content, and a structured foundation to support future SEO and digital marketing growth.
-</p>
+              </p>
             </div>
 
             <div className="detail-section">
               <h2>Our Strategy</h2>
               <ul>
-              <li>Developed a content-focused digital visibility approach for the initial launch stage
-</li>
-              <li>Created industry-relevant website content aligned with construction technology services
-</li>
-              <li>Performed keyword research based on construction-related search intent</li>
-              <li>Optimized on-page content structure for improved discoverability
-</li>
-              <li>Focused on building foundational brand credibility and communication clarity
-</li>
-<li>Strengthened the website presentation for better user understanding and engagement
-</li>
+                <li>Developed a content-focused digital visibility approach for the initial launch stage
+                </li>
+                <li>Created industry-relevant website content aligned with construction technology services
+                </li>
+                <li>Performed keyword research based on construction-related search intent</li>
+                <li>Optimized on-page content structure for improved discoverability
+                </li>
+                <li>Focused on building foundational brand credibility and communication clarity
+                </li>
+                <li>Strengthened the website presentation for better user understanding and engagement
+                </li>
               </ul>
             </div>
 
@@ -153,13 +153,13 @@ export default function CaseStudy() {
               <h2>The Result</h2>
               <p>Establish a cleaner and more professional digital presence within the construction technology space. Through content refinement and foundational SEO optimization, the brand improved its online clarity, strengthened initial visibility, and created a scalable starting point for future digital growth initiatives.
 
-</p>
+              </p>
             </div>
 
             {/* CTA */}
             <div className="detail-cta-block">
               <h3>Ready to achieve results like SterloBuild?</h3>
-              <p>Let's build a strategy tailored to your business goals and market. Our team is ready to help you grow.</p>
+              <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
               <a className="cs-cta" href="/contact">Get in Touch →</a>
             </div>
 
@@ -172,7 +172,7 @@ export default function CaseStudy() {
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>SterloBuild</strong></p>
-                 <p>Service: </p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">SEO</span>
                 <span className="sidebar-tag">Content Marketing</span>
@@ -185,59 +185,57 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-            </div>
 
+              <a className="recent-item" href="/case-studies/sterlocare">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/urcts">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Digital Marketing
+                  </div>
+                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/feral-roots">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />SEO
+                  </div>
+                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/am-builder">
+                <div className="recent-thumb">
+                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-smm">
+                    <span className="dot" />Social Media
+                  </div>
+                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+            </div>
           </div>
-
         </div>
       </div>
     </Layout>
