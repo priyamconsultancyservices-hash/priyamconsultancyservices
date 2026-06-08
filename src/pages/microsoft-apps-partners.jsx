@@ -66,11 +66,11 @@ function SEOHead() {
       <title>Microsoft Web and Mobile Application Partner | Microsoft App</title>
       <meta name="description" content="Microsoft Web and Mobile Application Partner PCS offers innovative, scalable solutions for building, deploying, and managing business-critical applications. " />
       <meta name="keywords" content="Microsoft Web and Mobile Application Partner, Microsoft App Partner, Microsoft AppSource, Microsoft Partner Network, Power Apps Partners, Microsoft Solutions Partner, Microsoft Software, Microsoft Partner, Microsoft Web Application, Microsoft Web and Mobile Application" />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/microsoft-apps-partners/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Microsoft Web and Mobile Application Partner | Microsoft App" />
       <meta property="og:description" content="Microsoft Web and Mobile Application Partner PCS offers innovative, scalable solutions for building, deploying, and managing business-critical applications. " />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/microsoft-apps-partners/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content=" Microsoft App" />
       <meta name="twitter:card" content="summary_large_image" />

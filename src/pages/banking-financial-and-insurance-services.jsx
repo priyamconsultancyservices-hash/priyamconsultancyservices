@@ -87,11 +87,11 @@ function SEOHead() {
       <title>Website Development for Banking & Finance Firms | PCS </title>
       <meta name="description" content="Build a professional website for banking and finance firms with SEO and digital marketing support from PCS to improve online visibility and get more customers." />
       <meta name="keywords" content="digital marketing agency for financial services​, digital marketing for financial services,​ insurance companies hiring, Website Development for Banking & Finance, Banking Website Development" />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/banking-financial-and-insurance-services/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Website Development for Banking & Finance Firms | PCS " />
       <meta property="og:description" content="Build a professional website for banking and finance firms with SEO and digital marketing support from PCS to improve online visibility and get more customers." />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/banking-financial-and-insurance-services/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />

@@ -132,11 +132,11 @@ function SEOHead() {
       <title>Healthcare Digital Marketing Company for Hospitals & Clinics</title>
       <meta name="description" content="Grow your healthcare business with expert digital marketing, website development, and HR solutions. Attract more patients and scale with confidence." />
       <meta name="keywords" content="Healthcare Digital Marketing Company, Healthcare Website Development, HR Solutions for Healthcare, Healthcare workforce management , Payroll In Hospitals & Healthcare, healthcare digital marketing agency, healthcare website development services, Best Hospital Website Development Company" />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/healthcare/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Healthcare Digital Marketing Company for Hospitals & Clinics" />
       <meta property="og:description" content="Grow your healthcare business with expert digital marketing, website development, and HR solutions. Attract more patients and scale with confidence." />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/healthcare/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />

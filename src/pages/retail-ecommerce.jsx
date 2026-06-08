@@ -132,11 +132,11 @@ function SEOHead() {
       <title>Retail Digital Marketing | Ecommerce Website & HR Services</title>
       <meta name="description" content="Drive your retail business with retail digital marketing, ecommerce website development, and HR solutions. Increase sales, attract customers, and scale faster. " />
       <meta name="keywords" content="retail digital marketing, e commerce website development, digital marketing for ecommerce, digital marketing in retail, Retail Staffing and Recruitment Agencies" />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/retail-ecommerce" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Retail Digital Marketing | Ecommerce Website & HR Services" />
       <meta property="og:description" content="Drive your retail business with retail digital marketing, ecommerce website development, and HR solutions. Increase sales, attract customers, and scale faster. " />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/retail-ecommerce" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />

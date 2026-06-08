@@ -134,11 +134,11 @@ function SEOHead() {
       <title>Digital Marketing for IT Companies & IT Recruitment Services | Priyam Consultancy </title>
       <meta name="description" content="Boost your IT business with expert digital marketing, website development, SEO, and IT recruitment services. PCS helps IT companies generate leads and improve online visibility." />
       <meta name="keywords" content="digital marketing for it companies,digital marketing for it industry,IT Recruitment Consultants, it job placement agencies,website development for it company" />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/it-or-it-services" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Digital Marketing for IT Companies & IT Recruitment Services | Priyam Consultancy " />
       <meta property="og:description" content="Boost your IT business with expert digital marketing, website development, SEO, and IT recruitment services. PCS helps IT companies generate leads and improve online visibility." />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/it-or-it-services" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />

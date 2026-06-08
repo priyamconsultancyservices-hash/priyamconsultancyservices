@@ -135,11 +135,11 @@ function SEOHead() {
       <title>Digital Marketing for Manufacturers | Website & HR Services</title>
       <meta name="description" content="Boost your business visibility with expert digital marketing, website development, and HR solutions. Generate leads, increase visibility, and scale faster. " />
       <meta name="keywords" content="digital marketing for manufacturers, Hr solutions for manufacturers, website development for manufacturers, website development, Industrial Website Development" />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/manufacturing/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Digital Marketing for Manufacturers | Website & HR Services" />
       <meta property="og:description" content="Boost your business visibility with expert digital marketing, website development, and HR solutions. Generate leads, increase visibility, and scale faster. " />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/manufacturing/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />

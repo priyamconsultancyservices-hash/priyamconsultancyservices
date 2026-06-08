@@ -66,11 +66,11 @@ function SEOHead() {
       <title>Official SterloCare Partner | SterloCare Implementation Partner for PCS </title>
       <meta name="description" content="SterloCare's official partner for PCS offering implementation, integration, and support services that streamline processes and increase operational efficiency. " />
       <meta name="keywords" content="Official SterlocCare Partner, SterlocCare Implementation Partner, SterlocCare Solution Partners, Affiliate SterlocCare Partners, Official SterlocCare Partner Program " />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/sterlo-care-partners/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Official SterloCare Partner | SterloCare Implementation Partner for PCS " />
       <meta property="og:description" content="SterloCare's official partner for PCS offering implementation, integration, and support services that streamline processes and increase operational efficiency. " />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/sterlo-care-partners/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content=" Microsoft App" />
       <meta name="twitter:card" content="summary_large_image" />

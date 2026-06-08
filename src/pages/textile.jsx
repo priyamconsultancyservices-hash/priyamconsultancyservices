@@ -139,11 +139,11 @@ function SEOHead() {
       <title>Digital Marketing for Textile Industry | Web & HR Services</title>
       <meta name="description" content="Grow your textile or garment business with digital marketing, website development, and HR solutions. Attract buyers, generate leads, and scale faster." />
       <meta name="keywords" content="digital marketing for textile industry, Best textile website development Company, digital marketing for clothing brands, Digital Marketing for Textile & Garment Brands, Digital Transformation Solutions for Textile Manufacturers, Textile Business Registration & Compliance Services, Digital Marketing Agency for Fabrics & Textiles, garment industry manpower services" />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/textile/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Digital Marketing for Textile Industry | Web & HR Services" />
       <meta property="og:description" content="Grow your textile or garment business with digital marketing, website development, and HR solutions. Attract buyers, generate leads, and scale faster." />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/textile/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />

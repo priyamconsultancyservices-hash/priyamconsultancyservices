@@ -136,11 +136,11 @@ function SEOHead() {
       <title>Digital Marketing for Tourism | Website & HR Solutions</title>
       <meta name="description" content="Digital marketing helps tourism businesses by creating engaging content, targeted ads, and social media strategies to attract travelers and boost bookings." />
       <meta name="keywords" content="digital marketing for tourism, chef recruitment agency, Travel web design company, Tourism Website Development, hospitality recruitment agency" />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/tourism-and-hospitality" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Digital Marketing for Tourism | Website & HR Solutions" />
       <meta property="og:description" content="Digital marketing helps tourism businesses by creating engaging content, targeted ads, and social media strategies to attract travelers and boost bookings." />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/tourism-and-hospitality" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />

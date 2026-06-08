@@ -130,11 +130,11 @@ function SEOHead() {
       <title>Digital Marketing for Construction Companies | Website & HR</title>
       <meta name="description" content="Grow your construction business with expertise in digital marketing, website development, and HR solutions. Generate quality leads and build a stronger brand." />
       <meta name="keywords" content="Digital Marketing for Construction Companies, Construction Website development, payroll services for construction companies, hr services for construction industry" />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/construction/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Digital Marketing for Construction Companies | Website & HR" />
       <meta property="og:description" content="Grow your construction business with expertise in digital marketing, website development, and HR solutions. Generate quality leads and build a stronger brand." />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/construction/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />

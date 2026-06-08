@@ -62,11 +62,11 @@ function SEOHead() {
       <title>Official Sterlo build Partner | Sterlo build Implementation & ERP Solutions </title>
       <meta name="description" content="PCS is an official Odoo Partner that provides end-to-end Odoo implementation, customization, and consulting services. Let's connect now! " />
       <meta name="keywords" content="Official Odoo Partner, Odoo Implementation Partner, Odoo ERP Solutions Partner, Odoo Official Partner for India, Odoo Gold Partner, Odoo ERP Consultant Partners, Odoo Implementation & ERP Solutions, Odoo Official Certified Partner " />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/sterlo-build-partners/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Official Sterlo build Partner | Sterlo build Implementation & ERP Solutions " />
       <meta property="og:description" content="PCS is an official Odoo Partner that provides end-to-end Odoo implementation, customization, and consulting services. Let's connect now! " />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/sterlo-build-partners/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content=" Microsoft App" />
       <meta name="twitter:card" content="summary_large_image" />
