@@ -255,7 +255,7 @@ function HeroSection() {
         @media(max-width:900px){
           .hero-section {
             grid-template-columns: 1fr !important;
-            padding: 6rem 5% 3rem !important;
+            padding: 1rem 5% 3rem !important;
             min-height: auto !important;
             text-align: start;
           }
@@ -291,10 +291,11 @@ function HeroSection() {
 
         /* Mobile */
         @media(max-width:600px){
+          h3.faq-h3 {font-size:1.9rem!important;}
           .hero-section {
-            padding: 5rem 4% 2.5rem !important;
+            padding: 1rem 4% 2.5rem !important;
           }
-          .hero-heading { font-size: clamp(1.7rem,6vw,2.2rem) !important; }
+          .hero-heading { font-size: clamp(1.7rem,6vw,2.2rem) !important;         line-height: 1.46;}
           .hero-sub { font-size: 0.9rem !important; max-width: 100% !important; }
           .illus-wrap, .hero-img-wrap {
             height: auto !important;
@@ -335,7 +336,7 @@ function HeroSection() {
 We provide end-to-end financial solutions, including banking, loans, CMA reports, audits, and approvals. Our expert guidance ensures accurate financial management, smooth operations, and strategic support to help your business grow confidently.
         </p>
         <div className="hero-actions">
-          <a className="btn-fill" href="#"><span>Explore More</span><div className="btn-arr">›</div></a>
+          <a className="btn-fill" href="/contact-us"><span>Explore More</span><div className="btn-arr">›</div></a>
         </div>
       </div>
 

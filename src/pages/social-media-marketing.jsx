@@ -333,9 +333,10 @@ h3.faq-h3 {
   @media(max-width:480px){
     .smm-hero-right .smm-hero-img { max-width:240px !important; }
     .smm-hero-right img { max-width:240px !important; }
-    .smm-hero { padding:4rem 4% 3rem !important; gap:1.5rem !important; min-height:auto !important; }
-    .smm-hero-heading { font-size:clamp(1.6rem,6vw,2.2rem) !important; }
+    .smm-hero { padding:1rem 4% 3rem !important; gap:1.5rem !important; min-height:auto !important; }
+    .smm-hero-heading { font-size:clamp(1.6rem,6vw,2.2rem) !important;         line-height: 1.46;}
     .smm-hero-sub { font-size:.9rem !important; }
+      h3.faq-h3 {font-size:1.9rem!important;}
   }
 
 `;
@@ -418,7 +419,7 @@ At PCS, we don’t just manage platforms — we deliver results through social m
 
         </p>
         <div className="smm-hero-actions">
-          <a className="smm-btn-fill" href="#">Explore More <span className="smm-btn-arrow">›</span></a>
+          <a className="smm-btn-fill" href="/contact-us">Explore More <span className="smm-btn-arrow">›</span></a>
         </div>
       </div>
       <div className="smm-hero-right"><SmmScene /></div>
@@ -480,7 +481,7 @@ function ApproachSection() {
       <div className="ap-inner">
         <div className="ap-left">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
           <h2 className="ap-heading">Purpose-Driven <span>Social Media </span> That Engages, Grows & Converts</h2>
           <p className="ap-intro">
@@ -579,7 +580,7 @@ function Services() {
       <div className="smm-svc-glow smm-ssvg2" />
       <div className="smm-svc-hdr">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Social Media Marketing Services</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Social Media Marketing Services</h2>
         </div>
         <h3 className="smm-svc-h2">Not Just Posts. <span> <i>Conversations </i></span>That Convert.</h3>
         <p className="smm-svc-sub">
@@ -636,7 +637,7 @@ function Process() {
       <div className="smm-tp-cross" />
       <div className="smm-tp-header">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Social Media Marketing Process</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Proven Social Media Marketing Process</h2>
         </div>
         <h3 className="smm-tp-h2">Strategy Driven. <em><i> Audience First.</i></em> ROI Focused.</h3>
         <p className="smm-tp-sub">
@@ -672,7 +673,7 @@ function HowWeWork() {
       <div className="smm-hww-glow smm-hww-glow-2" />
       <div className="smm-hww-header">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Focus on Your Results in Social Media Marketing</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Focus on Your Results in Social Media Marketing</h2>
         </div>
         <h3 className="smm-hww-h2">Create Content. <span><i>Build Community. </i></span> Drive Results.</h3>
         <p className="smm-hww-sub">

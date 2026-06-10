@@ -122,7 +122,7 @@ const STYLES = `
   .smm-sp-content { position:relative; z-index:2; }
   .smm-sp-subtitle {display:none; font-family:'Space Mono',monospace; font-size:.6rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-bottom:.55rem; transition:color .35s; }
  
-  .smm-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.5rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
+  .smm-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.3rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
   .smm-svc-panel:hover .smm-sp-title { letter-spacing:.01em; }
   .smm-sp-desc { font-size:.86rem; line-height:1.76; color:rgba(255,255,255,0.93); max-height:0; overflow:hidden; transition:max-height .5s ease,color .5s ease,margin .5s ease; margin-bottom:0; }
   .smm-svc-panel:hover .smm-sp-desc { max-height:140px; color:rgb(255,255,255); margin-bottom:.9rem; font-family:'Poppins'; }
@@ -503,11 +503,12 @@ function Hero() {
         }
         /* MOBILE */
         @media(max-width: 600px) {
-          .hero { padding: 5rem 4% 3rem; gap: 2rem; }
-          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
+          .hero { padding: 1rem 4% 3rem; gap: 2rem; }
+          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important;        line-height: 1.46; }
           .hero-sub { font-size: 0.9rem; max-width: 100%; }
           .hero-img { max-width: 100%; width: 100%; }
           .h-badge { font-size: 0.65rem; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
         .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
       `}</style>
@@ -523,7 +524,7 @@ function Hero() {
         <p className="hero-sub">
           As a leading Graphic Design Company, PCS transforms ideas into impactful visuals that define your brand identity. Our graphic design approach blends creativity with strategy to craft logos, social media creatives, and brand assets that capture attention.We go beyond aesthetics — our graphic design services ensure consistency, recognition, and strong brand recall.         </p>
         <div className="hero-actions">
-          <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 
@@ -593,7 +594,7 @@ function ApproachSection() {
       <div className="ap-inner">
         <div className="ap-left">
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</h2>
           </div>
           <h3 className="ap-heading">Creative Designs that <span>Speak Your Brand</span> </h3>
           <p className="ap-intro">
@@ -694,7 +695,7 @@ function Services() {
       <div className="smm-svc-glow smm-ssvg2" />
       <div className="smm-svc-hdr">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Graphic Design Services</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Graphic Design Services</h2>
         </div>
         <h3 className="smm-svc-h2">Pixel Perfect. <span> <i>Purpose Driven. </i></span>Brand Defining</h3>
         <p className="smm-svc-sub">
@@ -753,7 +754,7 @@ function Process() {
       <div className="smm-tp-cross" />
       <div className="smm-tp-header">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Creative Design Process</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Proven Creative Design Process</h2>
         </div>
         <h3 className="smm-tp-h2">Crafted for Impact, <em> <i>Aligned with Vision</i> </em></h3>
         <p className="smm-tp-sub">
@@ -792,7 +793,7 @@ function HowWeWork() {
       <div className="smm-hww-glow smm-hww-glow-2" />
       <div className="smm-hww-header">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Focus on Your Brand Through Creative Design</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Focus on Your Brand Through Creative Design</h2>
         </div>
         <h3 className="smm-hww-h2">Visualize Ideas. <span><i>Elevate Identity.  </i></span> Inspire Action.</h3>
       </div>
@@ -1051,12 +1052,12 @@ export default function PcsSmmPage() {
         <title>Creative Graphic And Logo Design Company In Coimbatore </title>
         <meta name="description" content="Creative graphic and logo design company in Coimbatore offering modern, professional branding solutions. Boost your business identity with expert design services. " />
         <meta name="keywords" content="Graphic Design, Graphic Design Company, Graphic Design Services, Logo Design, Branding Agency, Graphic Design Agency, Logo Design Agency, Logo Design Services, Graphic Design in Coimbatore, Graphic Design Company in Coimbatore, Graphic Design Services in Coimbatore, Logo Design in Coimbatore, Branding Agency in Coimbatore, Graphic Design Agency in Coimbatore, Logo Design Agency in Coimbatore " />
-        <link rel="canonical" href="https://www.priyamconsultancy.com/graphic-design" />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/graphic-design/" />
         {/* Open Graph */}
         <meta property="og:title" content="Creative Graphic And Logo Design Company In Coimbatore " />
         <meta property="og:description" content="Creative graphic and logo design company in Coimbatore offering modern, professional branding solutions. Boost your business identity with expert design services. " />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/graphic-design" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/graphic-design/" />
         <meta property="og:image" content="https://www.priyamconsultancy.com/img/graphic-design.png" />
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />

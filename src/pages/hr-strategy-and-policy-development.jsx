@@ -1081,7 +1081,7 @@ margin: 30px auto;
     grid-template-columns: 1fr !important;
     grid-template-rows: auto auto;
     min-height: auto;
-    padding: 5rem 5% 3rem;
+    padding: 1rem 5% 3rem;
     align-items: start;
     gap: 1.5rem;
   }
@@ -1108,6 +1108,7 @@ margin: 30px auto;
   .hero-heading {
     font-size: clamp(1.7rem, 6vw, 2.2rem) !important;
     text-align: start !important;
+            line-height: 1.46;
   }
   .hero-sub {
     font-size: 0.9rem;
@@ -1119,6 +1120,10 @@ margin: 30px auto;
   .h-badge {
     font-size: 0.65rem;
   }
+    h3.hr-h2 {
+    font-size: 2rem;
+}
+      h3.faq-h3 {font-size:1.9rem!important;}
 }
 
 /* ── OUR BENEFITS (bfr-section): Mobile — tabs one-by-one ── */
@@ -1405,7 +1410,7 @@ function HeroSection() {
           <li>Scalable HR Strategy and Policy Development.</li>
         </ul>
         <div className="hero-actions">
-          <a className="btn-fill" href="#approach">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 
@@ -1522,7 +1527,7 @@ function ApproachSection() {
         {/* LEFT CONTENT */}
         <div className="ap-left">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>About PCS</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>About PCS</div>
           </div>
           <h2 className="ap-heading">HR Clarity for  <span>Every Stage</span> of Growth</h2>
           <p className="ap-intro">
@@ -1689,7 +1694,7 @@ function ServicesSection() {
       <div className="svc-inner">
         <div className="svc-header">
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>HR & Policy Development Services </h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>HR & Policy Development Services </h2>
           </div>
           <h3 className="hr-h2" style={{ textAlign: 'center', color: '#fff' }}>Our Result-Driven  <span style={{ color: '#ed8337' }}><i>HR Advisory </i></span>  Framework</h3>
           <p className="svc-subtext">
@@ -1792,7 +1797,7 @@ function TabServiceSection() {
         {/* Header */}
         <div className="bfr-header">
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Proven HR Strategy & Policy Development
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Proven HR Strategy & Policy Development
             </h2>
           </div>
           <h3 className="bfr-title">

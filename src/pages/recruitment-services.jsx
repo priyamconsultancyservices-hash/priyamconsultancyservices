@@ -1080,7 +1080,7 @@ margin: 30px auto;
     grid-template-columns: 1fr !important;
     grid-template-rows: auto auto;
     min-height: auto;
-    padding: 5rem 5% 3rem;
+    padding: 1rem 5% 3rem;
     align-items: start;
     gap: 1.5rem;
   }
@@ -1106,6 +1106,7 @@ margin: 30px auto;
   .hero-heading {
     font-size: clamp(1.7rem, 6vw, 2.2rem) !important;
     text-align: start !important;
+            line-height: 1.46;
   }
   .hero-sub {
     font-size: 0.9rem;
@@ -1117,6 +1118,11 @@ margin: 30px auto;
   .h-badge {
     font-size: 0.65rem;
   }
+      h3.faq-h3 {font-size:1.9rem!important;}
+      
+h3.hr-h2 {
+    font-size: 2rem;
+}
 }
 
 /* ── OUR BENEFITS (bfr-section): Mobile — tabs one-by-one ── */
@@ -1402,7 +1408,7 @@ function HeroSection() {
           <li>Precision hiring that reduces attrition and improves team performance.</li>
         </ul>
         <div className="hero-actions">
-          <a className="btn-fill" href="#approach">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 
@@ -1519,7 +1525,7 @@ function ApproachSection() {
         {/* LEFT CONTENT */}
         <div className="ap-left">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
           <h2 className="ap-heading">Human-Centered <span>Hiring</span> That Aligns With Business Goals</h2>
           <p className="ap-intro">
@@ -1684,7 +1690,7 @@ function ServicesSection() {
       <div className="svc-inner">
         <div className="svc-header">
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Recruitment Services </h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Recruitment Services </h2>
           </div>
           <h3 className="hr-h2" style={{ textAlign: 'center', color: '#fff' }}>Your Hiring Partner,  <span style={{ color: '#ed8337' }}><i>From Role Design </i></span>  to Rollout</h3>
           <p className="svc-subtext">
@@ -1784,7 +1790,7 @@ function TabServiceSection() {
         {/* Header */}
         <div className="bfr-header">
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Recruitment Process</h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Proven Recruitment Process</h2>
           </div>
           <h3 className="bfr-title">
             Need-Based. <span> <i>Candidate-Centric. </i></span> Speed-Oriented.

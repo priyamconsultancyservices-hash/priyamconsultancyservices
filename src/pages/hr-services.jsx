@@ -9,7 +9,7 @@ const banner = "/img/hr-services.png";
    SEO META & SCHEMA
 ═══════════════════════════════════════════════════ */
 function SEOHead() {
-  const pageUrl = "https://www.pcsbusinesssolution.com/hr-services";
+  const pageUrl = "https://www.pcsbusinesssolution.com/hr-services/";
   const imageUrl = "https://www.pcsbusinesssolution.com/img/hr-services.png";
   const schemaData = [
     // Breadcrumb List Schema
@@ -189,12 +189,12 @@ function SEOHead() {
       <title>Best HR Services in Coimbatore | HR consultancy in coimbatore </title>
       <meta name="description" content="Best HR services in Coimbatore offering end-to-end HR solutions including recruitment, payroll, compliance, and training. Grow your team with expert HR support. " />
       <meta name="keywords" content="HR Services, HR Services in Coimbatore, HR Solutions, HR Solutions in Coimbatore, HR consultancy in coimbatore, HR Consultant in Coimbatore, HR Support Services in Coimbatore, HR Consultancy Services in Coimbatore, Human Resource Consultants in Coimbatore, HR Service Provider in Coimbatore, Human Resource Services in Coimbatore, Human Resource Management Services in Coimbatore, Payroll Management, Recruitment Services, HR Strategy, HR Policy Development" />
-      <link rel="canonical" href="https://www.priyamconsultancy.com/hr-services" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/hr-services/" />
       {/* Open Graph */}
       <meta property="og:title" content="Best HR Services in Coimbatore | HR consultancy in coimbatore " />
       <meta property="og:description" content="Best HR services in Coimbatore offering end-to-end HR solutions including recruitment, payroll, compliance, and training. Grow your team with expert HR support. " />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.priyamconsultancy.com/hr-services" />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/hr-services/" />
       <meta property="og:image" content="https://www.priyamconsultancy.com/img/hr-services.png" />
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -490,7 +490,7 @@ section.hr-services {
   grid-template-columns: repeat(3, 1fr);
   gap: 0;
 }
-
+h3.hr-h2 {font-size:2.5rem;}
 .bn-cell {
   position: relative;
   padding: 2.4rem 2.2rem;
@@ -673,6 +673,7 @@ h3.faq-h3 {
 
 /* ─── RESPONSIVE ─────────────────────────────────── */
 @media (max-width: 1024px) {
+
   .hr-services { padding: 80px 40px; }
   .hr-services__inner { grid-template-columns: 1fr; }
   .hr-services__left { position: static; }
@@ -711,15 +712,18 @@ h3.faq-h3 {
 
 @media (max-width: 768px) {
   /* Hero */
-  .hero { padding: 4.5rem 5% 3rem; }
-  .hero-heading { font-size: clamp(1.6rem, 5vw, 2.2rem); }
+  .hero { padding:2rem 5% 3rem; }
+  .hero-heading { font-size: clamp(1.6rem, 5vw, 2.2rem);         line-height: 1.46;}
   .hero-sub { font-size: 0.92rem; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
-
+  h3.faq-h3 {font-size:1.9rem!important;}
+  h3.hr-h2 {
+    font-size: 2rem;
+}
   /* Approach form */
   .fl-row { grid-template-columns: 1fr !important; }
   .ap-form-card { padding: 2rem 1.4rem !important; }
-
+h3.hr-h2 {font-size:2rem;}
   /* Services */
   .hr-services { padding: 60px 5%; }
   .hr-services__preview { padding: 24px; }
@@ -759,18 +763,19 @@ h3.faq-h3 {
 
 @media (max-width: 480px) {
   /* Hero */
-  .hero { padding: 4rem 5% 2.5rem; gap: 1.5rem; }
-  .hero-heading { font-size: clamp(1.4rem, 7vw, 1.8rem); text-align: left; }
+  .hero { padding: 1rem 5% 2.5rem; gap: 1.5rem; }
+  .hero-heading { font-size: clamp(1.4rem, 7vw, 1.8rem); text-align: left;         line-height: 1.46;}
   .h-badge { font-size: 0.62rem; padding: 0.3rem 0.8rem; }
   .hero-right img { max-width: 80%; }
   .btn-fill { width: 100%; justify-content: center; font-size: 0.85rem; padding: 0.75rem 1.2rem; }
-
+  h3.faq-h3 {font-size:1.9rem!important;}
   /* Approach */
   .approach { padding: 3rem 5% !important; }
   .ap-heading { font-size: 1.5rem !important; }
   .ap-intro { font-size: 0.88rem !important; }
   .ap-form-card { padding: 1.6rem 1.1rem !important; }
   .form-card-title { font-size: 1.3rem !important; }
+h3.hr-h2 {font-size:2rem;}
 
   /* Services — accordion mode */
   .hr-services { padding: 50px 16px; }
@@ -982,7 +987,7 @@ function HeroSection() {
           <li>We manage HR so you can focus on growing your business-hassle-free.</li>
         </ul>
         <div className="hero-actions">
-          <a className="btn-fill" href="#approach">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 
@@ -1052,6 +1057,7 @@ function ApproachSection() {
   return (
     <section className="approach" id="approach">
       <style>{`
+     
         .approach { position:relative; padding:4rem 6%; overflow:hidden;background: white }
         .ap-inner { position:relative; z-index:2; margin:0 auto; display:grid; grid-template-columns:1fr 0.7fr; gap:4rem; align-items:center; }
         @media (max-width:1024px) { .ap-inner { grid-template-columns:1fr; gap:2.5rem; } .ap-form-wrap { max-width:100%; } }
@@ -1085,9 +1091,9 @@ function ApproachSection() {
         .ap-submit { width:100%; background:linear-gradient(135deg,#ed8337,#f5a66b); color:#fff; border:none; padding:1rem 1.5rem; border-radius:12px; font-family:'Poppins',sans-serif; font-size:0.97rem; font-weight:500; cursor:pointer; letter-spacing:0.02em; display:flex; align-items:center; justify-content:center; gap:0.6rem; transition:transform 0.2s,box-shadow 0.2s; }
         .ap-submit:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(237,131,55,0.5); }
         .ap-submit-arrow { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:rgba(2,43,68,0.25); font-size:0.9rem; }
-      h3.hr-h2 {
-    font-size: 2.5rem;
-}
+//       h3.hr-h2 {
+//     font-size: 2.5rem;
+// }
       `}</style>
 
       <div className="ap-inner">
@@ -1095,7 +1101,7 @@ function ApproachSection() {
         {/* LEFT CONTENT */}
         <div className="ap-left">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
           <h2 className="ap-heading"> <span>Human Resource </span>Management</h2>
           <p className="ap-intro">
@@ -1254,7 +1260,7 @@ function BenefitsSection() {
       <div className="tl-inner">
         <div className="tl-header">
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Benefits </h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Benefits </h2>
           </div>
           <h3 className="tl-heading">Benefits of Choosing <span>Our HR Consultancy </span> Services</h3>
           <p className="tl-subtext">
@@ -1285,7 +1291,7 @@ function ProcessSection() {
       <div className="pr-inner">
         <div className="pr-header">
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Human Resource Management Process</h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Human Resource Management Process</h2>
           </div>
           <h3 className="pr-heading">Our Human <span style={{ color: '#ed8337' }}>Resource Management</span> Process</h3>
           <p className="pr-subtext">

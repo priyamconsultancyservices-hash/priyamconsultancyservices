@@ -510,11 +510,12 @@ function Hero() {
         }
         /* MOBILE */
         @media(max-width: 600px) {
-          .hero { padding: 5rem 4% 3rem; gap: 2rem; }
-          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
+          .hero { padding: 1rem 4% 3rem; gap: 2rem; }
+          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important;         line-height: 1.46;}
           .hero-sub { font-size: 0.9rem; max-width: 100%; }
           .hero-img { max-width: 100%; width: 100%; }
           .h-badge { font-size: 0.65rem; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
         .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
       `}</style>
@@ -528,7 +529,7 @@ function Hero() {
         </h1>
         <p className="hero-sub">
           At PCS, we help brands scale through result-driven ecommerce marketing and marketplace growth strategies. As a performance-focused ecommerce marketing agency and digital marketing agency for ecommerce, we combine data, creativity, and platform expertise to drive visibility, traffic, and conversions. </p>        <div className="hero-actions">
-          <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 
@@ -598,7 +599,7 @@ function ApproachSection() {
       <div className="ap-inner">
         <div className="ap-left">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
           <h2 className="ap-heading">Strategic <span>Marketplace & E-commerce </span> Marketing Growth That Drives Sales</h2>
           <p className="ap-intro">
@@ -735,7 +736,7 @@ function Process() {
       <div className="smm-tp-cross" />
       <div className="smm-tp-header">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Marketplace & E-commerce Marketing Process</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Proven Marketplace & E-commerce Marketing Process</h2>
         </div>
         <h3 className="smm-tp-h2">List Better. <em> <i>Rank Higher. </i></em>Sell More.</h3>
 
@@ -769,7 +770,7 @@ function HowWeWork() {
       <div className="smm-hww-glow smm-hww-glow-2" />
       <div className="smm-hww-header">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Focus on Your Results </h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Focus on Your Results </h2>
         </div>
         <h3 className="smm-hww-h2">Optimize Listings. <span><i>Drive Traffic.</i></span> Increase Sales.</h3>
       </div>

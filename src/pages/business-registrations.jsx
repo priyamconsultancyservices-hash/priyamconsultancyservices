@@ -8,7 +8,7 @@ import Head from '@docusaurus/Head';
 
 
 function SEOHead() {
-  const pageUrl = "https://www.priyamconsultancy.com/business-registrations";
+  const pageUrl = "https://www.priyamconsultancy.com/business-registrations/";
   const imageUrl = "https://www.priyamconsultancy.com/img/business-registration.png";
 
   return (
@@ -17,13 +17,13 @@ function SEOHead() {
       <title>Business Registration Services | Company Registration in Coimbatore </title>
       <meta name="description" content="Professional Business Registration Services in Coimbatore. Get seamless company registration, legal support, and compliance guidance for your business growth. " />
       <meta name="keywords" content="Business Registration, Business Registration Services, Business Registration Consultants, Limited Company Registration Services, Private Limited Company Registration Services, Public Limited Company Registration Services, Limited Liability Partnership Services, Company Registration Consultants" />
-      <link rel="canonical" href="https://www.priyamconsultancy.com/business-registrations" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/business-registrations/" />
 
       {/* ── Open Graph ── */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Business Registration Services | Company Registration in Coimbatore " />
       <meta property="og:description" content="Professional Business Registration Services in Coimbatore. Get seamless company registration, legal support, and compliance guidance for your business growth. " />
-      <meta property="og:url" content="https://www.priyamconsultancy.com/business-registrations" />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/business-registrations/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="Priyam Consultancy Services" />
 
@@ -320,18 +320,20 @@ function HeroSection() {
           /* hww */
           .hww-flow { grid-template-columns: 1fr !important; }
           .hww-arrow { display: none !important; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
         .menu li{position:relative;cursor:pointer;font-size:16px;color:black;}
         /* ══ BANNER FIX ══ */
         .hero-img-col { overflow: hidden; }
         @media(max-width:1100px){
-          .hero-section { gap: 1.5rem !important; padding: 6rem 5% 3rem !important; }
-          .hero-heading { font-size: clamp(1.9rem, 3vw, 2.8rem) !important; }
+          .hero-section { gap: 1.5rem !important; padding: 1rem 5% 3rem !important; }
+          .hero-heading { font-size: clamp(1.9rem, 3vw, 2.8rem) !important;         line-height: 1.46; }
         }
         @media(max-width:400px){
           .hero-img-wrap { min-height: 180px !important; }
           .hero-heading { font-size: 1.6rem !important; line-height: 1.2 !important; }
           .hero-sub { font-size: 0.85rem !important; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
       
       `}</style>
@@ -348,7 +350,7 @@ function HeroSection() {
 
         </p>
         <div className="hero-actions">
-          <a className="btn-fill" href="#"><span>Explore More</span><div className="btn-arr">›</div></a>
+          <a className="btn-fill" href="/contact-us"><span>Explore More</span><div className="btn-arr">›</div></a>
         </div>
       </div>
 

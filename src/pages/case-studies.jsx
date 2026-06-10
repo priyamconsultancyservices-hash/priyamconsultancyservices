@@ -93,7 +93,7 @@ const styles = `
     .banner-img-wrap { width: 44%; }
   }
   @media (max-width: 640px) {
-    .banner { padding: 40px 20px 44px; }
+    .banner { padding: 70px 20px 44px; }
     .banner-split { flex-direction: column; align-items: flex-start; gap: 28px; }
     .banner-inner { width: 100%; }
     .banner-img-wrap { width: 100%; max-width: 100%; justify-content: center; }

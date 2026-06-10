@@ -1448,9 +1448,7 @@ function Home() {
       <head>
         <title> Website Development & Digital Marketing Agency in India | HR Solutions</title>
         <meta name="description" content="We are the No.1 website development and digital marketing agency in India, offering SEO, social media marketing, and HR solutions to help businesses grow faster." />
-
         <link rel="canonical" href="https://www.priyamconsultancy.com/" />
-
         <meta name="keywords" content="Digital Marketing, Digital Marketing Agency, Digital Marketing Services, Digital Transformation, Digital Transformation Consulting, Digital Transformation Company, HR Services, HR Slutions, HR Consultant, HR Consultancy Services, HR Service Provider, Business Registration, HRMS Solutions, Corporate Compliance, CFO Services" />
 
         {/* 1. WebSite Schema */}

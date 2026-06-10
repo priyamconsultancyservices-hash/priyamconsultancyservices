@@ -2,232 +2,9 @@ import { useState } from "react";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 
-const SITE_URL = "https://www.sterlo.com"; // ← உங்கள் domain இங்கே மாற்றவும்
+const SITE_URL = "https://www.priyamconsultancy.com/careers/"; // ← உங்கள் domain இங்கே மாற்றவும்
 
 const banner = "/img/career.png";
-
-/* ═══════════════════════════════════════════════════════
-   SEO — Careers Page (Main)
-   Title       : 60 chars max
-   Description : 150–160 chars
-   Keywords    : page-specific, comma-separated
-═══════════════════════════════════════════════════════ */
-const CAREERS_SEO = {
-  title: "Careers at Sterlo | Join Our Digital Marketing & Tech Team",
-  description:
-    "Explore exciting career opportunities at Sterlo in Coimbatore. We're hiring Website Developers, Digital Marketing Analysts, Content Writers, Graphic Designers & more.",
-  keywords:
-    "careers at Sterlo, jobs in Coimbatore, digital marketing jobs, website developer jobs Coimbatore, content writer jobs, graphic designer jobs, HR executive jobs, video editor jobs, marketing agency hiring, Sterlo careers",
-  canonical: `${SITE_URL}/careers`,
-  ogImage: `${SITE_URL}/img/career.png`,
-};
-
-/* ═══════════════════════════════════════════════════════
-   SCHEMA HELPERS
-═══════════════════════════════════════════════════════ */
-
-// 1. Product Schema — Careers page (represents Sterlo's recruitment/hiring service as a product)
-const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "@id": `${SITE_URL}/careers#product`,
-  name: "Careers at Sterlo — Join Our Team",
-  description:
-    "Explore open job positions at Sterlo, Coimbatore. We offer roles in Website Development, Digital Marketing, Content Writing, Graphic Design, HR, and Video Editing.",
-  url: `${SITE_URL}/careers`,
-  image: {
-    "@type": "ImageObject",
-    url: `${SITE_URL}/img/career.png`,
-    width: 1200,
-    height: 630,
-  },
-  brand: {
-    "@type": "Brand",
-    name: "Sterlo",
-  },
-  manufacturer: {
-    "@type": "Organization",
-    name: "Sterlo",
-    url: SITE_URL,
-    logo: `${SITE_URL}/img/logo.png`,
-  },
-  offers: {
-    "@type": "Offer",
-    priceCurrency: "INR",
-    price: "0",
-    availability: "https://schema.org/InStock",
-    url: `${SITE_URL}/careers`,
-    seller: {
-      "@type": "Organization",
-      name: "Sterlo",
-    },
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.8",
-    reviewCount: "120",
-    bestRating: "5",
-    worstRating: "1",
-  },
-};
-
-// 2. WebSite Schema (global — inject on every page ideally via plugin)
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": `${SITE_URL}/#website`,
-  url: SITE_URL,
-  name: "Sterlo",
-  description:
-    "Sterlo is a growth-focused digital marketing and technology agency based in Coimbatore, India.",
-  publisher: { "@id": `${SITE_URL}/#organization` },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
-    },
-    "query-input": "required name=search_term_string",
-  },
-};
-
-// 3. Local Business / Organization Schema
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": ["Organization", "LocalBusiness"],
-  "@id": `${SITE_URL}/#organization`,
-  name: "Sterlo",
-  url: SITE_URL,
-  logo: {
-    "@type": "ImageObject",
-    url: `${SITE_URL}/img/logo.png`,
-    width: 200,
-    height: 60,
-  },
-  image: `${SITE_URL}/img/career.png`,
-  description:
-    "Sterlo is a digital marketing and technology agency in Coimbatore offering SEO, paid media, web development, and AI-driven marketing services.",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Coimbatore",
-    addressRegion: "Tamil Nadu",
-    addressCountry: "IN",
-  },
-  sameAs: [
-    "https://www.linkedin.com/company/sterlo",  // ← update with actual URLs
-    "https://twitter.com/sterlo",
-    "https://www.instagram.com/sterlo",
-  ],
-};
-
-// 4. Breadcrumb Schema
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": `${SITE_URL}/careers#breadcrumb`,
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: SITE_URL,
-    },
-    {
-      "@type": "ListItem",
-      position: 2,
-      name: "Careers",
-      item: `${SITE_URL}/careers`,
-    },
-  ],
-};
-
-// 5. Listing Schema — all open roles as ItemList
-const rolesListingSchema = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  name: "Open Roles at Sterlo",
-  description:
-    "Current job openings at Sterlo, Coimbatore — across digital marketing, web development, design, HR, and video production.",
-  url: `${SITE_URL}/careers`,
-  numberOfItems: 9,
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Website Developer", url: `${SITE_URL}/careers#website-developer` },
-    { "@type": "ListItem", position: 2, name: "Digital Marketing Analyst", url: `${SITE_URL}/careers#digital-marketing-analyst` },
-    { "@type": "ListItem", position: 3, name: "Content Writer", url: `${SITE_URL}/careers#content-writer` },
-    { "@type": "ListItem", position: 4, name: "Graphic Designer", url: `${SITE_URL}/careers#graphic-designer` },
-    { "@type": "ListItem", position: 5, name: "HR Executive", url: `${SITE_URL}/careers#hr-executive` },
-    { "@type": "ListItem", position: 6, name: "Video Editor", url: `${SITE_URL}/careers#video-editor` },
-    { "@type": "ListItem", position: 7, name: "Web Developer Intern", url: `${SITE_URL}/careers#web-developer-intern` },
-    { "@type": "ListItem", position: 8, name: "Digital Marketing Intern", url: `${SITE_URL}/careers#digital-marketing-intern` },
-    { "@type": "ListItem", position: 9, name: "Content Writer Intern", url: `${SITE_URL}/careers#content-writer-intern` },
-  ],
-};
-
-// 6. FAQ Schema — common careers questions
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What job openings are currently available at Sterlo?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sterlo is currently hiring for Website Developer, Digital Marketing Analyst, Content Writer, Graphic Designer, HR Executive, Video Editor, and intern positions in Coimbatore.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Where is Sterlo located?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sterlo is based in Coimbatore, Tamil Nadu, India. All current openings are for the Coimbatore office.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I apply for a job at Sterlo?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "You can apply directly through our Careers page by clicking 'Apply Now' on the role you're interested in. Fill in your details, upload your resume, and submit your application. Our team will get back to you within 3–5 business days.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the hiring process at Sterlo?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our hiring process has 4 stages: Application Review, Introduction Call, Technical/Functional Evaluation, and a Final In-Person Discussion followed by an offer.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Sterlo offer internship opportunities?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, Sterlo offers internships for Web Developer, Digital Marketing, Content Writing, and Graphic Design roles — ideal for students and freshers looking for hands-on experience.",
-      },
-    },
-  ],
-};
-
-// 7. Image Schema — careers banner image
-const imageSchema = {
-  "@context": "https://schema.org",
-  "@type": "ImageObject",
-  contentUrl: `${SITE_URL}/img/career.png`,
-  url: `${SITE_URL}/careers`,
-  name: "Careers at Sterlo — Join Our Team in Coimbatore",
-  description:
-    "Sterlo careers page banner showing open roles in digital marketing, web development, design, and more.",
-  width: 1200,
-  height: 630,
-  encodingFormat: "image/png",
-  copyrightHolder: {
-    "@type": "Organization",
-    name: "Sterlo",
-  },
-};
 
 // Helper: build JobPosting schema per role (used in JobDetail page)
 function buildJobPostingSchema(role) {
@@ -299,21 +76,20 @@ function CareersPageSEO() {
   return (
     <Head>
       {/* ── Primary Meta ── */}
-      <title>{CAREERS_SEO.title}</title>
-      <meta name="description" content={CAREERS_SEO.description} />
-      <meta name="keywords" content={CAREERS_SEO.keywords} />
+      <title>Business Registration and Compliance Services | Company Registration </title>
+      <meta name="description" content="Efficient Business Registration and Compliance Services. Get expert support for company registration, legal documentation, and regulatory compliance. Contact us! " />
+      <meta name="keywords" content="" />
       <meta name="robots" content="index, follow" />
-      <meta name="author" content="Sterlo" />
 
       {/* ── Canonical ── */}
-      <link rel="canonical" href={CAREERS_SEO.canonical} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/careers/" />
 
       {/* ── Open Graph ── */}
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={CAREERS_SEO.title} />
-      <meta property="og:description" content={CAREERS_SEO.description} />
-      <meta property="og:url" content={CAREERS_SEO.canonical} />
-      <meta property="og:image" content={CAREERS_SEO.ogImage} />
+      <meta property="og:title" content="Business Registration and Compliance Services | Company Registration " />
+      <meta property="og:description" content="Efficient Business Registration and Compliance Services. Get expert support for company registration, legal documentation, and regulatory compliance. Contact us! "/>
+      <meta property="og:url" content="https://www.priyamconsultancy.com/careers/" />
+      
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Sterlo" />
@@ -321,31 +97,11 @@ function CareersPageSEO() {
 
       {/* ── Twitter Card ── */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={CAREERS_SEO.title} />
-      <meta name="twitter:description" content={CAREERS_SEO.description} />
-      <meta name="twitter:image" content={CAREERS_SEO.ogImage} />
-      <meta name="twitter:site" content="@sterlo" />
+      <meta name="twitter:title" content="Business Registration and Compliance Services | Company Registration " />
+      <meta name="twitter:description" content="Efficient Business Registration and Compliance Services. Get expert support for company registration, legal documentation, and regulatory compliance. Contact us! "/>
+      <meta name="twitter:site" content="" />
 
-      {/* ── Schema: Product ── */}
-      <script type="application/ld+json">{JSON.stringify(productSchema)}</script>
-
-      {/* ── Schema: WebSite ── */}
-      <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
-
-      {/* ── Schema: Organization / Local Business ── */}
-      <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-
-      {/* ── Schema: Breadcrumb ── */}
-      <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-
-      {/* ── Schema: ItemList (all open roles) ── */}
-      <script type="application/ld+json">{JSON.stringify(rolesListingSchema)}</script>
-
-      {/* ── Schema: FAQ ── */}
-      <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-
-      {/* ── Schema: Image ── */}
-      <script type="application/ld+json">{JSON.stringify(imageSchema)}</script>
+   
     </Head>
   );
 }
@@ -1197,26 +953,26 @@ const styles = `
 const hiringSteps = [
   {
     grad: "bg-g1",
-    title: "Application Review",
-    desc: "Once your application is submitted, our hiring team carefully reviews your profile and shortlists candidates whose skills and experience align with our requirements.",
+    title: "Profile Screening",
+    desc: "After receiving your application, our recruitment team reviews your qualifications, experience, and relevant skills to shortlist candidates who best fit the role requirements.",
     icon: "/img/icon/hiring-step1.webp",
   },
   {
     grad: "bg-g2",
-    title: "Introduction Call",
-    desc: "A discovery call is scheduled to understand your background, core strengths, career goals, and how well your profile matches the role.",
+    title: "Initial Interaction",
+    desc: "A preliminary discussion is arranged to learn about your professional background, key strengths, career aspirations, and overall suitability for the opportunity.",
     icon: "/img/icon/hiring-step2.webp",
   },
   {
     grad: "bg-g3",
-    title: "Technical / Functional Evaluation",
-    desc: "You will participate in a video discussion with our hiring managers, along with a system-based assessment to evaluate your technical or functional capabilities.",
+    title: "Technical / Functional Assessment",
+    desc: "Candidates will attend a virtual discussion with the respective hiring panel, along with an assessment process designed to evaluate technical knowledge and functional expertise.",
     icon: "/img/icon/hiring-step3.webp",
   },
   {
     grad: "bg-g4",
-    title: "Final In-Person Discussion & Offer",
-    desc: "Selected candidates will attend an in-person discussion on role fit, culture, compensation, and notice period, followed by a formal offer.",
+    title: "Final Face-to-Face Discussion & Offer",
+    desc: "Shortlisted candidates will participate in a final in-person meeting covering role expectations, work culture, compensation details, and joining timeline, followed by the official offer process.",
     icon: "/img/icon/hiring-step4.webp",
   },
 ];
@@ -1333,55 +1089,54 @@ const openRoles = [
     title: "HR Executive",
     location: "Coimbatore",
     openings: 2,
-    experience: "1–3 Years in Human Resources or Talent Acquisition. Any Graduate or MBA in HR.",
+    experience: "Bachelor’s degree in Human Resources, Business Administration, or related field with 1+ years of HR or recruitment experience.",
     desc: "Support end-to-end recruitment, employee engagement, and HR operations to build a strong, motivated workforce aligned with organisational goals.",
     bullets: [
-      "Manage end-to-end recruitment processes including job posting, sourcing, screening, and interview coordination.",
-      "Collaborate with hiring managers to understand role requirements and define accurate job descriptions.",
-      "Source candidates through job portals (Naukri, LinkedIn, Indeed), social media, and employee referrals.",
-      "Conduct initial HR screening calls and coordinate technical and managerial interview rounds.",
-      "Maintain and update candidate databases, recruitment trackers, and MIS reports.",
-      "Coordinate onboarding activities including document collection, induction scheduling, and system access setup.",
-      "Support employee engagement initiatives, HR communications, and internal events.",
-      "Assist with HR policy implementation, attendance management, and payroll inputs.",
-      "Handle employee queries related to HR policies, leave management, and employee benefits.",
+      "Manage end-to-end recruitment and candidate coordination",
+      "Handle onboarding and employee documentation processes",
+      "Support employee engagement and internal communication activities",
+      "Coordinate interviews and maintain hiring records",
+      "Assist in implementing HR policies and procedures",
+      "Maintain employee databases and attendance records",
+      "Support management in day-to-day HR operations",
+      "Stay updated with HR practices and recruitment trends",
     
       "--- Skills Required ---",
-      "Talent Acquisition",
-      "End-to-End Recruitment",
-      "Job Portals (Naukri / LinkedIn)",
-      "Onboarding & Induction",
-      "Employee Engagement",
-      "HR MIS & Reporting",
-      "Payroll Basics",
-      "HR Policies & Compliance",
+      "Strong understanding of recruitment, onboarding, and employee coordination",
+      "Good communication and interpersonal skills",
+      "Knowledge of HR processes, policies, and documentation",
+      "Ability to manage employee records and recruitment databases",
+      "Familiarity with MS Office and HR management tools",
+      "Strong organizational and multitasking abilities",
+      "Problem-solving mindset with attention to detail",
+      "Ability to work independently and within teams",
     ],
   },
   {
     title: "Video Editor",
     location: "Coimbatore",
     openings: 2,
-    experience: "1–3 Years in Video Editing / Post-Production. Any Graduate in Media, Film, or related field.",
+    experience: "Bachelor’s degree or equivalent practical experience with 1+ years of professional video editing experience.",
     desc: "Edit raw footage into engaging, high-quality videos aligned with brand goals by incorporating music, sound design, colour grading, and motion graphics.",
     bullets: [
-      "Edit raw footage into polished, engaging videos aligned with brand guidelines and project briefs.",
-      "Add music, sound design, colour grading, and motion graphics to enhance video quality.",
-      "Collaborate with the marketing and design teams on video concepts, scripts, and storyboards.",
-      "Create short-form video content for social media platforms including LinkedIn, Instagram, and YouTube.",
-      "Produce explainer videos, product demos, testimonials, and promotional reels.",
-      "Ensure all deliverables are completed on time and meet defined quality standards.",
-      "Manage and organise video assets, raw footage, and project files efficiently.",
-      "Stay updated on video editing trends, platform-specific formats, and algorithm changes.",
+      "Edit engaging videos for marketing, branding, and social media platforms",
+      "Create high-quality visual content aligned with brand guidelines",
+      "Collaborate with creative and marketing teams for campaign execution",
+      "Add motion graphics, effects, subtitles, and audio enhancements",
+      "Optimize videos for different digital platforms and formats",
+      "Manage revisions and deliver projects within deadlines",
+      "Organize project files and maintain editing workflows",
+      "Stay updated with current editing trends and creative techniques",
     
       "--- Skills Required ---",
-      "Adobe Premiere Pro",
-      "After Effects",
-      "DaVinci Resolve",
-      "Colour Grading",
-      "Motion Graphics",
-      "Sound Design",
-      "Short-form Content",
-      "Storyboarding",
+      "Strong proficiency in Adobe Premiere Pro, After Effects, and video editing tool",
+      "Understanding of motion graphics, transitions, and storytelling techniques",
+      "Ability to edit content for social media, branding, and marketing campaigns",
+      "Knowledge of video formats, color correction, and audio balancing",
+      "Creativity with strong visual communication skills",
+      "Creativity with strong visual communication skills",
+      "Effective utilization of AI tools for editing and content enhancement",
+      "Attention to detail and time management skills",
     ],
   },
   {
@@ -1492,54 +1247,54 @@ const openRoles = [
     title: "HR Executive Intern",
     location: "Coimbatore",
     openings: 2,
-    experience: "Fresher or up to 1 Year of experience. Any Graduate or pursuing MBA in HR.",
+    experience: "Pursuing or recently completed a degree in Human Resources, Business Administration, or related field.",
     desc: "Assist the HR team with recruitment coordination, employee engagement activities, and HR operations to gain practical exposure in core human resources functions.",
     bullets: [
-      "Assist in sourcing, screening, and shortlisting candidates from job portals and LinkedIn.",
-      "Schedule and coordinate interviews between candidates and hiring managers.",
-      "Maintain and update recruitment trackers, candidate databases, and MIS reports.",
-      "Support onboarding activities including documentation, induction coordination, and asset setup.",
-      "Assist in drafting job descriptions, offer letters, and HR communication templates.",
-      "Help coordinate employee engagement activities, internal events, and recognition programs.",
-      "Handle basic HR administrative tasks such as attendance tracking and leave records.",
-      "Assist in HR policy documentation and compliance-related activities.",
+      "Assist the HR team in recruitment and onboarding activities",
+      "Schedule interviews and coordinate with candidates",
+      "Maintain employee and recruitment records",
+      "Support internal HR operations and documentation",
+      "Help with employee engagement initiatives",
+      "Assist in preparing reports and HR-related data",
+      "Coordinate communication between teams and candidates",
+      "Learn and support daily HR administrative tasks",
     
       "--- Skills Required ---",
-      "Recruitment Basics",
-      "LinkedIn Sourcing",
-      "Job Portal Usage",
-      "MS Excel / Google Sheets",
-      "Communication Skills",
-      "Attention to Detail",
-      "Documentation",
-      "Time Management",
+      "Good verbal and written communication skills",
+      "Basic understanding of recruitment and HR operations",
+      "Familiarity with MS Office and online recruitment platforms",
+      "Strong coordination and organizational abilities",
+      "Willingness to learn and adapt in a fast-paced environment",
+      "Attention to detail and professional attitude",
+      "Ability to manage tasks efficiently",
+      "Team collaboration and interpersonal skills",
     ],
   },
   {
     title: "Video Editor Intern",
     location: "Coimbatore",
     openings: 2,
-    experience: "Fresher or up to 1 Year of experience. Any Graduate in Media, Film Production, or related field.",
+    experience: "Pursuing or recently completed a degree in Visual Communication, Media, Multimedia, or related field.",
     desc: "Assist the creative team in editing video content for digital platforms while developing hands-on skills in post-production, colour grading, and motion graphics.",
     bullets: [
-      "Assist in editing raw footage into polished videos for social media, websites, and marketing campaigns.",
-      "Add background music, voiceovers, sound effects, and subtitles to video projects.",
-      "Apply basic colour correction and grading to enhance visual consistency.",
-      "Support the creation of short-form content including reels, stories, and video ads.",
-      "Assist in creating simple motion graphics, lower thirds, and animated text using After Effects or similar tools.",
-      "Organise and manage raw footage, project files, and exported assets systematically.",
-      "Collaborate with the design and marketing teams on video concepts and storyboards.",
-      "Incorporate feedback from senior editors to improve output quality and meet deadlines.",
+      "Assist in editing videos for social media and marketing campaigns",
+      "Support the creative team with video production requirements",
+      "Add basic transitions, subtitles, and audio adjustments",
+      "Organize raw footage and project files efficiently",
+      "Participate in brainstorming and creative discussions",
+      "Assist with content formatting for different platforms",
+      "Learn editing workflows and content optimization techniques",
+      "Support the team in day-to-day video editing activities",
     
       "--- Skills Required ---",
-      "Adobe Premiere Pro (Basics)",
-      "After Effects (Basics)",
-      "Colour Correction Basics",
-      "Subtitle & Captions",
-      "Short-form Video Editing",
-      "File Management",
-      "Creativity",
-      "Team Collaboration",
+      "Basic knowledge of Adobe Premiere Pro, After Effects, or similar editing software",
+      "Understanding of video editing principles and storytelling",
+      "Interest in social media and digital content creation",
+      "Creativity and willingness to learn new editing techniques",
+      "Basic knowledge of audio editing and transitions",
+      "Ability to manage tasks and meet deadlines",
+      "Attention to detail and visual consistency",
+      "Team collaboration and communication skills",
     ],
   },
 ];
@@ -1805,14 +1560,13 @@ export default function CareersPage() {
               Careers at Sterlo
             </div>
             <h1 className="banner-title">
-              Build Your  <span className="underline-word">Career</span>
+              Build Your  <span className="underline-word">Future with PCS</span>
             </h1>
             <p className="banner-subtitle">
-              At PCS, we don’t just hire for roles — we build growth-focused professionals. Our team works at the intersection of strategy, creativity, performance, and AI-driven marketing. If you’re curious, data-minded, and ready to grow fast, you’ll fit right in.
+At PCS, we don’t just hire for roles — we build growth-focused professionals.
+Our team operates at the intersection of strategy, creativity, performance, and AI-driven marketing. We value individuals who are self-driven, take full ownership of their work, and hold themselves accountable for outcomes. If you’re curious, data-minded, and ready to grow fast in a responsibility-first environment, you’ll fit right in.
             </p>
-            <div className="hero-actions">
-              <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
-            </div>
+  
 
 
           </div>
@@ -1834,10 +1588,9 @@ export default function CareersPage() {
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Hiring Process</div>
 
           </div>
-          <h2 className="hww-title">Our<span className="hww-accent" style={{color: '#ed8337'}}><i> Hiring Process </i></span> </h2>
+          <h2 className="hww-title">Our<span className="hww-accent" style={{color: '#ed8337', marginBottom:'20px'}}><i> Recruitment Process </i></span> </h2>
           <p className="section-subtitle">
-            At sterlo, Hiring process is clear and purposeful—focused on skills, real-world evaluation, and mutual fit.
-            Each stage is designed to ensure the right alignment from application to offer.
+           At Sterlo, our recruitment process is structured, transparent, and focused on identifying the right talent through practical evaluation and role alignment. Every stage is carefully designed to create a smooth experience from application to final selectio
           </p>
         </div>
 
@@ -1858,12 +1611,11 @@ export default function CareersPage() {
       <section className="roles-section">
         <div className="section-header">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>How We Work</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Join Our Team</div>
           </div>
-          <h2 className="hww-title">Discover <span className="hww-accent" style={{color: '#ed8337'}}><i> Open Roles at </i></span> Excellence in Your Journey</h2>
+          <h2 className="hww-title">Explore  <span className="hww-accent" style={{color: '#ed8337'}}><i> Opportunities & Build </i></span> Your Career</h2>
           <p className="section-subtitle">
-            Grow with sterlo! Step into opportunities that encourage ownership, expose you to diverse responsibilities,
-            and provide end-to-end exposure that strengthens your expertise.
+        Grow with PCS ! Discover career opportunities that encourage responsibility, support continuous learning, and provide hands-on experience to help you strengthen your professional expertise.
           </p>
         </div>
 

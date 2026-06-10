@@ -678,9 +678,9 @@ content: '';
 );
 
 const PROCESS_STEPS = [
-  { step: "01", title: "Understanding What Really Matters", phase: "Phase 1 — Understand", desc: "We begin with in-depth research to clearly understand your business, industry landscape, and competitive environment. This includes industry analysis, competitor mapping, keyword research, audience behavior insights, and current performance evaluation. By identifying opportunities, challenges, and intent-driven data, we lay a strong foundation for a focused and effective digital marketing strategy.", bullets: [] },
-  { step: "02", title: "Customized Digital Growth Roadmap", phase: "Phase 2 — Digital ", desc: "As a strategy-first digital marketing agency, we design customized growth roadmaps aligned with your specific objectives—whether it’s brand awareness, lead generation, customer acquisition, or revenue growth. Each roadmap outlines clear action plans, timelines, channels, and performance benchmarks to ensure every digital effort contributes directly to your business goals", bullets: [] },
-  { step: "03", title: "Fast Execution With Expertise", phase: "Phase 3 — Fast ", desc: "Once the strategy is defined, our in-house team of digital marketing specialists executes with speed, precision, and accountability. From SEO and paid advertising to content creation and social media campaigns, we ensure seamless execution across platforms while maintaining quality, consistency, and alignment with the overall growth plan.", bullets: [] },
+  { step: "01", title: "Insight Discovery ", phase: "Phase 1 — Understand", desc: "We begin with in-depth research to clearly understand your business, industry landscape, and competitive environment. This includes industry analysis, competitor mapping, keyword research, audience behavior insights, and current performance evaluation. By identifying opportunities, challenges, and intent-driven data, we lay a strong foundation for a focused and effective digital marketing strategy.", bullets: [] },
+  { step: "02", title: "Strategy Planning ", phase: "Phase 2 — Planning ", desc: "As a strategy-first digital marketing agency, we design customized growth roadmaps aligned with your specific objectives—whether it’s brand awareness, lead generation, customer acquisition, or revenue growth. Each roadmap outlines clear action plans, timelines, channels, and performance benchmarks to ensure every digital effort contributes directly to your business goals.", bullets: [] },
+  { step: "03", title: ". Rapid Execution ", phase: "Phase 3 — Execution ", desc: "Once the strategy is defined, our in-house team of digital marketing specialists executes with speed, precision, and accountability. From SEO and paid advertising to content creation and social media campaigns, we ensure seamless execution across platforms while maintaining quality, consistency, and alignment with the overall growth plan", bullets: [] },
   { step: "04", title: "Continuous Optimization", phase: "Phase 4 — Optimize ", desc: "Digital marketing is an ongoing process, not a one-time activity. We continuously monitor campaign performance, analyze data, test new approaches, and optimize strategies in real time. By refining targeting, creatives, content, and funnels, we ensure sustained growth, improved efficiency, and long-term digital success.", bullets: [] },
 ];
 
@@ -747,7 +747,7 @@ body { font-family: 'Poppins', sans-serif; color: #fff; overflow-x: hidden; }
 
 .hero-heading {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(2.2rem, 3.8vw, 3.3rem);
+  font-size: clamp(2.2rem, 3.8vw, 3rem);
   font-weight: 600; line-height: 1.15;
   margin-top: 1.4rem; animation: fadeUp 0.7s 0.08s ease both; color: #fff;
 }
@@ -838,16 +838,14 @@ img.hero-img { animation: none !important; }
       <div className="hero-left">
         <div className="h-badge"><div className="badge-dot" />Digital Marketing </div>
         <h1 className="hero-heading">
-            Trusted Digital
-          <span className="hl lined" style={{ marginRight: '12px' }}>   Marketing Company</span>
-            in Coimbatore
+            Grow Your Business with Coimbatore’s Most  
+          <span className="hl lined" style={{ marginRight: '12px' }}>Trusted Digital Marketing  </span>
+           Company
         </h1>
         <p className="hero-sub">
-Grow your business with a results-driven Digital Marketing Company in Coimbatore that focuses on visibility, lead generation, and long-term business growth. At PCS, we don’t just run campaigns — we build strategic digital ecosystems that help businesses attract the right audience, generate quality leads, and improve conversions. 
-        </p>
+Grow your business with a results-driven Digital Marketing Company in Coimbatore that focuses on visibility, lead generation, and long-term business growth. At PCS, we don’t just run campaigns — we build strategic digital ecosystems that help businesses attract the right audience, generate quality leads, and improve conversions.        </p>
         <p className="hero-sub">
-As a performance-focused Digital Marketing Agency, we help brands stay ahead in today’s competitive digital landscape through customized marketing strategies that drive ROI, engagement, and growth. 
-        </p>
+As a performance-focused Digital Marketing Agency, we deliver tailored strategies that improve ROI, engagement, and sustainable growth in today’s competitive digital landscape.        </p>
 
       </div>
 
@@ -1170,14 +1168,12 @@ function WhoWeAre() {
       <div className="left">
         <div className="why-eyebrow">Who We Are</div>
         <h2><em><i>No.1 Digital Marketing</i></em> Agency in Coimbatore</h2>
-        <p>PCS is recognized as one of the most trusted providers of Digital Marketing Services in Coimbatore, helping businesses improve visibility, strengthen customer engagement, and increase revenue through strategic digital solutions.
- </p>
         <p>
-Unlike traditional agencies that focus only on impressions and reports, our approach is built around measurable business outcomes. Every campaign is strategically planned based on your business goals, industry trends, target audience, and market competition.
-        </p>
+PCS is recognized as one of the most trusted providers of Digital Marketing Services in Coimbatore, helping businesses improve visibility, strengthen customer engagement, and increase revenue through result-oriented digital strategies. </p>
         <p>
-        If you are searching for a reliable Digital Marketing Company in Coimbatore that focuses on both branding and performance, PCS delivers strategies designed for long-term success.
-</p>
+Unlike traditional agencies that focus only on impressions, our approach is built around measurable business outcomes. Every campaign is strategically designed based on your industry, audience behavior, and market competition.        </p>
+        <p>
+If you are searching for a reliable Digital Marketing Company in Coimbatore, PCS delivers performance-driven solutions that combine branding and conversion-focused marketing for long-term success.</p>
       </div>
       <div className="right">
         <img src={who} alt="Who We Are" className="who-img" />
@@ -1195,7 +1191,7 @@ const infographicCards = [
     id: "L1", side: "left",
     accentColor: "#004168",
     diamondBorder: "#ed8337e9",
-    title: "Search Engine Optimization",
+    title: "Traffic Growth ",
     text: "Increased website impressions from 340 to 10,000+ per month using SEO-rich Digital Marketing strategies.",
     icon: <img src="/img/icon/seo-miletones.webp" alt="SEO" width="44" height="44" />,
   },
@@ -1203,7 +1199,7 @@ const infographicCards = [
     id: "R1", side: "right",
     accentColor: "#004168",
     diamondBorder: "#ed8337",
-    title: "Paid Marketing (PPC)",
+    title: "Ranking Success ",
     text: "Secured Top 5 Google rankings using ethical SEO and expert content-led Digital Marketing solutions.",
     icon: <img src="/img/icon/secure-miletones.webp" alt="Paid Marketing" width="44" height="44" />,
   },
@@ -1211,7 +1207,7 @@ const infographicCards = [
     id: "L2", side: "left",
     accentColor: "#004168",
     diamondBorder: "#ed8337",
-    title: "Content Marketing",
+    title: "Lead Expansion ",
     text: "Achieved 150% growth in qualified lead generation, scaling from zero to a 40cr strong-performing pipeline.",
     icon: <img src="/img/icon/achive-miletones.webp" alt="Content Marketing" width="44" height="44" />,
   },
@@ -1219,7 +1215,7 @@ const infographicCards = [
     id: "R2", side: "right",
     accentColor: "#004168",
     diamondBorder: "#ed8337",
-    title: "Social Media Marketing",
+    title: "Global Reach ",
     text: "Delivered performance-driven ad campaigns across India, GCC, SEA, Africa, USA, and the UK through advanced Digital Marketing frameworks.",
     icon: <img src="/img/icon/driven-miletones.webp" alt="Social Media" width="44" height="44" />,
   },
@@ -1227,7 +1223,7 @@ const infographicCards = [
     id: "L3", side: "left",
     accentColor: "#004168",
     diamondBorder: "#ed8337e9",
-    title: "Website Development",
+    title: "Revenue Impact ",
     text: "Generated over ₹35 Cr in qualified leads for a single client through precise Digital Marketing funnels.",
     icon: <img src="/img/icon/lead-miletones.webp" alt="Website Development" width="44" height="44" />,
   },
@@ -1235,7 +1231,7 @@ const infographicCards = [
     id: "R3", side: "right",
     accentColor: "#004168",
     diamondBorder: "#ed8337e9",
-    title: "Email & WhatsApp Marketing",
+    title: "Conversion Optimization ",
     text: "Reduced bounce rates from 80% to 35% and cut lead costs by 45% through optimized Digital Marketing executions.",
     icon: <img src="/img/icon/bounce-miletones.webp" alt="Email Marketing" width="44" height="44" />,
   },
@@ -1274,10 +1270,9 @@ function BusinessInfographic() {
           <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>
 Our Major Milestones</div>
         </div>
-        <h2 className="svc-h2">Smart Marketing. <span>Sharp Execution.</span> Stronger Results.</h2>
+        <h2 className="svc-h2">Key Moments in  <span>Our Growth </span> Story.</h2>
         <p className="svc-sub">
-Celebrating the key achievements that define our growth, success, and commitment as one of the best digital marketing agencies in Coimbatore.
-
+Celebrating achievements that define our journey as a leading best digital marketing company in Coimbatore focused on measurable success. 
 
 </p>
       </div>
@@ -1510,14 +1505,13 @@ function MilestonesCTA() {
         <div className="ms-cta-left">
              <div className="partners-header1">
           <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>
-Our Major Milestones</div>
+Case Studies</div>
         </div>
           <h2 className="ms-cta-title">
             Explore <span>Proven Results Through</span><br/> Our Case Studies
           </h2>
           <p className="ms-cta-desc">
-            Discover our projects that demonstrate how strategy and clear execution drive measurable business success.
-          </p>
+Discover our projects that demonstrate how strategy and clear execution drive measurable business success.          </p>
         </div>
 
         <div className="ms-cta-right">
@@ -1528,9 +1522,9 @@ Our Major Milestones</div>
             <span className="ms-cta-btn-arr">→</span>
           </a>
 
-          <a href="/our-work" className="ms-cta-btn-secondary">
+          <a href="/portfolio" className="ms-cta-btn-secondary">
             <span className="ms-cta-btn-ico">📊</span>
-            View Our Case Studies
+            View Results
           </a>
         </div>
       </div>
@@ -1544,7 +1538,7 @@ const SERVICES = [
   {
     icon: <img src="/img/icon/seo-dm.webp" alt="Search Engine Optimization" width="28" height="28" />,
     title: "SEO (Search Engine Optimization)",
-    desc: "We help your brand appear where customers search. Our Digital Marketing SEO strategies focus on authority-building, keyword targeting, link architecture, and long-term search ranking.",
+    desc: "We help your brand appear where customers search. Our Digital Marketing SEO strategies focus on authority-building, keyword targeting, link architecture, and  long-term search ranking.",
     link: "/search-engine-optimization/",
   },
   {
@@ -1627,10 +1621,9 @@ function ServicesSection() {
         <div className="partners-header1">
           <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Digital Marketing Services in Coimbatore</div>
         </div>
-        <h2 className="svc-h2">Smart Marketing. <span>Sharp Execution.</span> Stronger Results.</h2>
+        <h2 className="svc-h2">Comprehensive <span>Solutions </span> Under One Roof </h2>
         <p className="svc-sub">
 As a full-stack Digital Marketing Agency in Coimbatore, PCS delivers innovative solutions that combine creativity, analytics, and technology.
-
 </p>
       </div>
       <div className="svc-cards">
@@ -1720,7 +1713,7 @@ const MILESTONES = [
 const benefits = [
   {
     num: "01", title: "Experience That Drives Outcomes",
-    desc: "Years of proven expertise in digital marketing, delivering strategies that go beyond theory to create measurable business growth and long-term impact.",
+    desc: "Years of proven expertise in digital marketing  , delivering strategies that go beyond theory to create measurable business growth and long-term impact.",
     icon: <img src="/img/icon/experience-benifits.webp" alt="Experience" width="30" height="30" />,
   },
   {
@@ -1730,17 +1723,17 @@ const benefits = [
   },
   {
     num: "03", title: "Innovation That Reinvents The Way You Work",
-    desc: "We blend creativity with modern tech to deliver digital marketing solutions that streamline processes, and transform how your business operates.",
+    desc: "We blend creativity with modern tech to deliver digital marketing solutions that streamline processes , and transform how your business operates.",
     icon: <img src="/img/icon/innovation-benifits.webp" alt="Innovation" width="30" height="30" />,
   },
   {
     num: "04", title: "Support that's Always On, Always Human",
-    desc: "Round-the-clock assistance with a personal touch—our team ensures you're never left waiting for answers or solutions.",
+    desc: "Round-the-clock assistance with a personal touch—our team ensures you’re never left waiting for answers or solutions.",
     icon: <img src="/img/icon/support-benifits.webp" alt="Support" width="30" height="30" />,
   },
   {
     num: "05", title: "Customized Strategies for Every Business",
-    desc: "We don't believe in one-size-fits-all. Every campaign is tailored to your brand, audience, and goals for maximum impact.",
+    desc: "We don’t believe in one-size-fits-all. Every campaign is tailored to your brand, audience, and goals for maximum impact.",
     icon: <img src="/img/icon/customized-benifits.webp" alt="Customized Strategies" width="30" height="30" />,
   },
   {
@@ -1757,7 +1750,7 @@ function BenefitsSection() {
       <div className="tl-inner">
         <div className="tl-header">
               <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Benefits </div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Uniqueness </div>
           </div>
           <h2 className="tl-heading">How we <span>differ from </span> others</h2>
           <p className="tl-subtext">From SEO to paid ads, we deliver result-driven digital marketing strategies designed to grow your business in Coimbatore and beyond.</p>
@@ -1821,12 +1814,11 @@ function Process() {
       <div className="ppc-tp-cross" />
       <div className="ppc-tp-header">
         <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Proven PPC Execution Process</div>
+          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>From Strategy to Success </div>
         </div>
-        <h2 className="ppc-tp-h2">Built for Clarity,<em> Tuned for Results</em></h2>
+        <h2 className="ppc-tp-h2">Our <em> Work Process</em></h2>
         <p className="ppc-tp-sub">
-          Every pay per click ads campaign starts with strategy and ends with measurable impact. Our process ensures your ad spend works harder, smarter, and faster.
-        </p>
+Our streamlined process combines research, planning, execution, and optimization to deliver measurable digital marketing results and business growth.         </p>
       </div>
       <div className="ppc-tp-body">
         {PROCESS_STEPS.map((step, i) => <ProcessStep key={step.step} step={step} index={i} />)}
@@ -1837,14 +1829,14 @@ function Process() {
 
 // ─── How We Work Data ────────────────────────────────────────────────────────
 const HOW_WE_WORK_DM = [
-  { img: "/img/digital-marketing/textile-dm.webp", title: "Textile ", desc: "We help textile manufacturers and apparel brands grow through digital marketing . Our industry-focused approach boosts visibility, strengthens branding, and generates high-quality leads.", link: "/textile" },
+  { img: "/img/digital-marketing/textile-dm.webp", title: "Textile ", desc: "We help textile manufacturers and apparel brands grow through digital marketing . Our industry-focused approach boosts visibility, strengthens branding, and generates high-quality leads", link: "/textile" },
   { img: "/img/digital-marketing/hospitals-dm.webp", title: "Healthcare", desc: "We support hospitals and clinics with effective healthcare digital marketing, local SEO, Google Ads . PCS ensures better patient engagement through targeted campaigns and optimized digital platforms.", link: "/healthcare" },
-  { img: "/img/digital-marketing/construction-dm.webp", title: "Construction", desc: "PCS elevates construction and real estate brands with lead generation, PPC, landing page optimization, and hyperlocal marketing. Our campaigns boost project visibility and attract high-intent buyers in competitive markets.", link: "/construction" },
+  { img: "/img/digital-marketing/construction-dm.webp", title: "Construction", desc: "PCS elevates construction and real estate brands with lead generation, PPC, landing page optimization, and hyperlocal marketing. Our campaigns boost project visibility and attract high-intent buyers in competitive markets", link: "/construction" },
   { img: "/img/digital-marketing/manufacturing-dm.webp", title: "Manufacturing", desc: "We empower manufacturing companies through B2B SEO, email marketing  and performance marketing. PCS helps industrial brands build authority, increase search presence, and convert business enquiries.", link: "/retail-ecommerce" },
   { img: "/img/digital-marketing/retail-dm.webp", title: "Retail & E-Commerce", desc: "As one of the top digital marketing companies in Coimbatore, we deliver e-commerce SEO, shopping ads, and remarketing campaigns that increase conversions.", link: "/manufacturing" },
   { img: "/img/digital-marketing/tourism-dm.webp", title: "Tourism & Hospitality ", desc: "PCS helps hotels, resorts, and travel businesses grow with travel digital marketing, review management, social media branding, and location-based marketing that boost bookings and online visibility.", link: "/tourism-and-hospitality" },
-  { img: "/img/digital-marketing/it-service-dm.webp", title: "IT / IT Service", desc: "Clear, transparent reports that show exactly what's working — no jargon, just actionable insights you can use to grow your business faster.", link: "/it-or-it-services" },
-  { img: "/img/digital-marketing/bankin-finace-dm.webp", title: "Banking", desc: "We never set and forget — every campaign is continuously refined based on real performance data to ensure you always get the best possible results.", link: "/banking-financial-and-insurance-services" },
+  { img: "/img/digital-marketing/it-service-dm.webp", title: "IT / IT Service", desc: "PCS helps IT companies, SaaS businesses, and technology service providers accelerate growth through B2B digital marketing, SEO, content marketing, LinkedIn campaigns, and lead generation strategies. ", link: "/it-or-it-services" },
+  { img: "/img/digital-marketing/bankin-finace-dm.webp", title: "Banking", desc: "PCS helps banks, financial institutions, insurance providers, and fintech companies strengthen their digital presence through targeted marketing strategies. Our expertise in SEO, performance marketing, lead generation, content marketing, and reputation management helps build trust, attract qualified customers, and drive growth in highly competitive financial markets. ", link: "/banking-financial-and-insurance-services" },
 ];
 
 // ─── How We Work ─────────────────────────────────────────────────────────────
@@ -1973,7 +1965,7 @@ function HowWeWork() {
         <div className="partners-header1">
           <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Industries We Serve</div>
         </div>
-        <h2 className="dm-hww-h2">Plan Smart. <span><em>Execute Sharper.</em></span> Deliver Right.</h2>
+        <h2 className="dm-hww-h2">Customized <span><em>Digital Strategies </em></span> for Every Industry </h2>
         <p style= {{margin: '30px 0'}}>As a leading Digital Marketing Agency in Coimbatore, PCS supports:
 </p>
       </div>
@@ -2021,12 +2013,12 @@ function HowWeWork() {
 }
 
 const faqData = [
-  { q: "What digital marketing services do you offer?", a: "We provide end-to-end digital marketing services including SEO, PPC, Content, and Social Media Marketing to grow your business online. Our expert team also delivers website development and creative graphic design to make your brand stand out." },
-  { q: "What is pay-per-click in digital marketing?", a: "Pay-Per-Click (PPC) is a digital advertising model where you pay only when someone clicks on your ad. It helps businesses get instant visibility on search engines and social media. With targeted campaigns, PPC drives qualified leads and measurable ROI." },
-  { q: "What is ROI in digital marketing?", a: "In digital marketing, ROI (Return on Investment) measures how profitable your marketing efforts are compared to the amount you spend. It shows whether your campaigns are generating enough leads, sales, or brand value to justify the cost." },
-  { q: "What is CRM in digital marketing?", a: "CRM (Customer Relationship Management) is a strategy and technology used to manage and analyze customer interactions. It helps businesses increase sales, build a strong reputation, and improve customer satisfaction. In digital marketing, CRM ensures better targeting, personalized campaigns, and long-term customer loyalty" },
-  { q: "What is brand awareness in digital marketing?", a: "Brand awareness in digital marketing refers to how well your target audience recognizes and remembers your brand online. It’s about creating visibility through channels like social media, SEO, PPC, and content so that customers think of your brand first when they need your product or service. Strong brand awareness builds trust, credibility, and long-term customer loyalty" },
-  { q: "What is a good CTR for digital marketing?", a: "A good CTR (Click-Through Rate) in digital marketing varies by platform, industry, and campaign type. On average, 2% to 5% is considered strong. Search ads often get higher CTRs than display or social ads since users actively seek solutions. A higher CTR shows your ad is relevant, engaging, and targeting the right audience." },
+  { q: "What does a Digital Marketing Company in Coimbatore do?", a: "A Digital Marketing Company in Coimbatore helps businesses grow online through services like SEO, Google Ads, social media marketing, content marketing, and website optimization. The goal is to increase visibility, generate leads, and improve sales." },
+  { q: "Why should I choose a Digital Marketing Agency in Coimbatore for my business?", a: "Choosing a Digital Marketing Agency in Coimbatore ensures local market understanding, targeted strategies, and cost-effective campaigns. Agencies like PCS focus on measurable results such as leads, conversions, and ROI." },
+  { q: "What are the benefits of Digital Marketing Services in Coimbatore?", a: "Digital Marketing Services in Coimbatore help businesses improve online presence, attract targeted customers, increase website traffic, and generate high-quality leads through SEO, PPC, and social media strategies." },
+  { q: "How long does it take to see results from digital marketing?", a: "Results depend on strategy and competition. SEO may take 3–6 months, while paid advertising campaigns can generate immediate leads. A combined digital strategy delivers both short-term and long-term growth." },
+  { q: "Do you provide customized digital marketing strategies?", a: "Yes, every business is unique. A professional Digital Marketing Company in Coimbatore creates customized strategies based on your industry, target audience, competition, and business goals to ensure better performance and ROI." },
+  { q: "Why is PCS considered the best digital marketing company in Coimbatore?", a: "PCS is trusted as one of the best digital marketing companies in Coimbatore due to its result-driven approach, strong lead generation strategies, transparent reporting, and focus on measurable business growth." },
 
 ];
 // ─── FAQ ─────────────────────────────────────────────────────────────────────

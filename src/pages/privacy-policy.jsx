@@ -1,4 +1,30 @@
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/privacy-policy/";
+
+  return (
+    <Head>
+      <title>Privacy Policy | Priyam Consultancy Services </title>
+      <meta name="description" content="The purpose of this privacy policy is to govern how Priyam Consultancy Services collects, uses, maintains, and discloses information collected from users.  " />
+      <meta name="keywords" content="Official Odoo Partner, Odoo Implementation Partner, Odoo ERP Solutions Partner, Odoo Official Partner for India, Odoo Gold Partner, Odoo ERP Consultant Partners, Odoo Implementation & ERP Solutions, Odoo Official Certified Partner" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/privacy-policy/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Privacy Policy | Priyam Consultancy Services " />
+      <meta property="og:description" content="The purpose of this privacy policy is to govern how Priyam Consultancy Services collects, uses, maintains, and discloses information collected from users.  " />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/privacy-policy/" />
+      <meta property="og:site_name" content=" Microsoft App" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Privacy Policy | Priyam Consultancy Services " />
+      <meta name="twitter:description" content="The purpose of this privacy policy is to govern how Priyam Consultancy Services collects, uses, maintains, and discloses information collected from users.  " />
+  
+    </Head>
+  );
+}
+
+
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -197,6 +223,7 @@ const styles = `
 export default function PrivacyPolicy() {
   return (
     <Layout>
+      <SEOHead />
       <div className="tos-wrap">
       <style>{styles}</style>
 

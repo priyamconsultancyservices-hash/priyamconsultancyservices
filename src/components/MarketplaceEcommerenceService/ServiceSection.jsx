@@ -88,6 +88,20 @@ const TAB_BAR_STYLES = `
     .htab-bar-wrap { padding: 0 5%; }
     .htab-btn { padding: 0.6rem 1.1rem; font-size: 0.8rem; }
   }
+
+  @media (max-width:660px) {
+  .htab-bar {
+    display: inline;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 5px;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    justify-content: center;
+    text-align: center;
+    margin-bottom:30px;
+}
+    }
 `;
 
 function ServicePanel({ svc, index }) {

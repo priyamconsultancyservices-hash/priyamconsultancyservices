@@ -343,7 +343,7 @@ const css = `
 }
 
 @media (max-width: 640px) {
-  .pg-banner { padding: 36px 20px 40px; }
+  .pg-banner { padding: 70px 20px 40px; }
   .pg-banner-inner { flex-direction: column; align-items: flex-start; gap: 24px; }
   .pg-banner-left  { width: 100%; }
   .pg-banner-right { width: 100%; max-width: 100%; justify-content: center; }

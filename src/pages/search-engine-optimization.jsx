@@ -130,7 +130,7 @@ const STYLES = `
   .pcs-sp-content { position:relative; z-index:2; }
   .pcs-sp-subtitle {display:none; font-family:'Space Mono',monospace; font-size:.6rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-bottom:.55rem; transition:color .35s; }
 
-  .pcs-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.24); font-weight:800; color:#fff; line-height:1.15; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
+  .pcs-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.3rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
   .pcs-svc-panel:hover .pcs-sp-title { letter-spacing:.01em; }
   .pcs-sp-desc { font-size:.86rem; line-height:1.76; color:rgba(255, 255, 255, 0.93); max-height:0; overflow:hidden; transition:max-height .5s ease,color .5s ease,margin .5s ease; margin-bottom:0; }
   .pcs-svc-panel:hover .pcs-sp-desc { max-height:140px; color:rgb(255, 255, 255); margin-bottom:.9rem; font-family:'poppins'}
@@ -552,11 +552,12 @@ function Hero() {
         }
         /* MOBILE */
         @media(max-width: 600px) {
-          .hero { padding: 5rem 4% 3rem; gap: 2rem; }
-          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
+          .hero { padding: 1rem 4% 3rem; gap: 2rem; }
+          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important;         line-height: 1.46;}
           .hero-sub { font-size: 0.9rem; max-width: 100%; }
           .hero-img { max-width: 100%; width: 100%; }
           .h-badge { font-size: 0.65rem; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
         .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
       `}</style>
@@ -572,7 +573,7 @@ function Hero() {
         <p className="hero-sub">
 Whether your traffic is stagnant, leads are drying up, or you’re overspending on paid campaigns, our search engine optimization services deliver sustainable, organic growth. As a performance-driven SEO company, we combine search engine marketing insights with data-backed execution to attract the right audience and turn visibility into measurable business results.         </p>
         <div className="hero-actions">
-          <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 

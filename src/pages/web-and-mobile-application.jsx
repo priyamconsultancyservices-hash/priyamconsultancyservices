@@ -431,7 +431,7 @@ li.dropdown.mega {
     .proc-grid { grid-template-columns: 1fr !important; }
   }
   @media(max-width:900px) {
-    .dm-hero { grid-template-columns: 1fr; padding: 7rem 5% 4rem; text-align: start; }
+    .dm-hero { grid-template-columns: 1fr; padding: 2rem 5% 4rem; text-align: start; }
     .dm-hero-left { align-items: flex-start; }
     .dm-hero-sub { max-width: 100%; }
     .dm-hero-right { margin-top: 2rem; }
@@ -439,6 +439,16 @@ li.dropdown.mega {
     .dm-illus-wrap img { width: 100%; height: auto; }
     .ap-inner { grid-template-columns: 1fr !important; }
     .ap-form-wrap { max-width: 100% !important; }
+    h3.partners-h3-title {
+    font-size: 2rem;
+}
+    h3.partners-h3-process {
+    font-size: 2rem;
+}
+    section#process {
+    padding: 4rem 1rem 4rem;
+}
+      h3.faq-h3 {font-size:1.9rem!important;}
     }
   @media(max-width:768px) {
     .dm-proc-track { flex-direction: column; min-height: auto; }
@@ -452,16 +462,44 @@ li.dropdown.mega {
     .dm-proc-tl-item { flex: 0 0 50%; border-bottom: 1px solid rgba(237,131,55,0.07); }
     .faq-wrapper { flex-direction: column !important; }
     .faq-col { width: 100% !important; }
+    h3.partners-h3-title {
+    font-size: 2rem;
+}
+    h3.partners-h3-process {
+    font-size: 2rem;
+}
+    section#process {
+    padding: 4rem 1rem 4rem;
+}
+      h3.faq-h3 {font-size:1.9rem!important;}
   }
   @media(max-width:580px) {
     .dm-svc-grid { grid-template-columns: 1fr; }
     .dm-svc-stats { grid-template-columns: 1fr; margin: 3rem 4% 0; }
-    .dm-hero { padding: 6rem 4% 3rem; }
+    .dm-hero { padding: 4rem 4% 3rem; }
+    h3.partners-h3-title {
+    font-size: 2rem;
+}
+    h3.partners-h3-process {
+    font-size: 2rem;
+}
+      h3.faq-h3 {font-size:1.9rem!important;}
   }
   @media(max-width:540px) {
     .dm-nav-links, .dm-nav-btn { display: none; }
-    .dm-hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem); text-align: start; }
+    h3.partners-h3-title {
+    font-size: 2rem;
+}
+    h3.partners-h3-process {
+    font-size: 2rem;
+}
+    section#process {
+    padding: 4rem 1rem 4rem;
+}
+      h3.faq-h3 {font-size:1.9rem!important;}
+    .dm-hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem); text-align: start;         line-height: 1.46;}
     }
+
 
 
 // who we work section
@@ -832,7 +870,7 @@ function HeroSection() {
 
         </p>
         <div className="dm-hero-actions">
-          <a className="dm-btn-fill" href="#services">
+          <a className="dm-btn-fill" href="/contact-us">
             Explore More <span className="dm-btn-arrow">›</span>
           </a>
         </div>
@@ -941,7 +979,7 @@ function ApproachSection() {
         {/* LEFT CONTENT */}
         <div className="ap-left">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
           <h2 className="ap-heading">Custom   <span>Web & Mobile </span> Applications</h2>
           <p className="ap-intro">
@@ -1080,7 +1118,7 @@ function ServicesSection() {
       <div className="dm-svc-blob dm-svc-blob-2"></div>
       <div className="dm-svc-hdr">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Custom Web & Mobile Application Services</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Custom Web & Mobile Application Services</h2>
         </div>
         <h3 className="partners-h3-title">Every Application Tailored.  <em style={{ color: '#ed8337' }}><i>Every Feature Optimized.</i></em></h3>
         <p>
@@ -1114,7 +1152,7 @@ function ProcessSection() {
     <section className="dm-proc-section" id="process">
       <div className="dm-proc-hdr">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start', color: '#ed8337' }}>Our Application Development Process</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center', color: '#ed8337' }}>Our Application Development Process</h2>
         </div>
         <h3 className="partners-h3-process">Structured, Scalable, and  <em style={{ color: '#ed8337' }}><i>Reliable Application  </i></em> Development</h3>
         <p>
@@ -1220,7 +1258,7 @@ function HowWeWorkSection() {
       <div style={{ position: "relative", zIndex: 2, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why PCS?
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Why PCS?
             </h2>
 
           </div>

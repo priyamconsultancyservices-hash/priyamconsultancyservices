@@ -1,4 +1,29 @@
 import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/terms-and-conditions";
+
+  return (
+    <Head>
+        <title>Terms & Conditions | Priyam Consultancy Services  </title>
+      <meta name="description" content="Priyam Consultancy Services operates this website. The terms we, us, and our refer to PCS, which offers this website. " />
+      <meta name="keywords" content="digital marketing services India, SEO services, social media marketing, PPC advertising, content marketing, email marketing, online marketing agency, digital marketing company India, PCS Business Solution" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/terms-and-conditions" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Terms & Conditions | Priyam Consultancy Services  " />
+      <meta property="og:description" content="Priyam Consultancy Services operates this website. The terms we, us, and our refer to PCS, which offers this website. " />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/terms-and-conditions" />
+      <meta property="og:site_name" content="PCS Business Solution" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Terms & Conditions | Priyam Consultancy Services  " />
+      <meta name="twitter:description" content="Priyam Consultancy Services operates this website. The terms we, us, and our refer to PCS, which offers this website. " /> 
+    </Head>
+  );
+}
+
+
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
@@ -183,6 +208,7 @@ const styles = `
 export default function TermsOfService() {
   return (
     <Layout>
+       <SEOHead />
       <div className="tos-wrap">
       <style>{styles}</style>
 

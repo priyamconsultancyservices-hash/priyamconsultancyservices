@@ -943,7 +943,7 @@ function HeroBanner() {
 At PCS, we deliver strategic website development services that combine design, performance, and scalability to help businesses grow online. As a trusted website development agency in Coimbatore , we ensure high-value solutions optimized for cost efficiency.
         </p>
         <div className="wd-hero-actions">
-          <a className="wd-btn-fill" href="#">Get a Free Quote <span className="wd-btn-arrow">›</span></a>
+          <a className="wd-btn-fill" href="/contact-us">Get a Free Quote <span className="wd-btn-arrow">›</span></a>
         </div>
       </div>
 
@@ -1122,7 +1122,8 @@ function ApproachSection() {
     }
     .badge {
       margin: 0 0 1.2rem !important;
-    }
+      }
+        h3.faq-h3 {font-size:1.9rem!important;}
   }
 
   /* Small mobile */
@@ -1132,6 +1133,7 @@ function ApproachSection() {
     }
     .wd-hero-heading {
       font-size: clamp(1.5rem, 7vw, 2rem) !important;
+              line-height: 1.46;
     }
     .wd-hero-img {
       max-height: 220px !important;
@@ -1146,7 +1148,7 @@ function ApproachSection() {
       gap: 2rem !important;
     }
     
-    .wd-hero-heading { font-size: clamp(1.8rem, 4vw, 2.6rem) !important; }
+    .wd-hero-heading { font-size: clamp(1.8rem, 4vw, 2.6rem) !important;        line-height: 1.46; }
     .wd-hero-img { height: auto !important; max-height: 360px !important; }
   }
 
@@ -1278,7 +1280,7 @@ function ApproachSection() {
         {/* LEFT CONTENT */}
         <div className="ap-left">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
           <h2 className="ap-heading">Smart, Scalable, and <span> Stunning Websites</span> Built for Results</h2>
           <p className="ap-intro">
@@ -1418,14 +1420,14 @@ function ServicesSection() {
       <div className="svc-layout">
         <div className="svc-right-col">
   <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Website Development Services
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Website Development Services
 </h2>
           </div>          <h3 className="svc-heading">Not Just Websites. <span className="accent"><i>Growth-Driven</i></span> Digital Experiences.</h3>
           <p className="svc-sub">
 We create websites that go beyond pretty pages. They’re fast, intuitive, optimized, and built for long-term impact.
 </p>
 
-          <a href="#" className="svc-cta-btn">Get a Free Consultation &nbsp;→</a>
+          <a href="/contact-us" className="svc-cta-btn">Get a Free Consultation &nbsp;→</a>
         </div>
         <div className="svc-accordion">
           {SERVICES.map((s, i) => {
@@ -1478,7 +1480,7 @@ function WhyChooseUsSection() {
         {/* RIGHT — TEXT */}
         <div className="wcu-text-col">
         <div className="h2artners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why Choose Us</h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Why Choose Us</h2>
           </div>
           <h3 className="wcu-heading">
             Trusted
@@ -1507,7 +1509,7 @@ function ProcessSection() {
       <div className="proc-inner">
         <div className="proc-header">
       <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Website Development Process</h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Proven Website Development Process</h2>
           </div>
           <h3 className="proc-heading">Planned for Performance. <span><i>Built for Scale.</i></span> Launched with Confidence.</h3>
           <p className="proc-sub">
@@ -1696,7 +1698,7 @@ function KeyFeaturesSection() {
       <div className="kf-inner">
         <div className="kf-header">
   <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Uniqueness
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Uniqueness
 </h2>
           </div>          <h3 className="kf-title">Key <span>Features</span></h3>
           <p className="kf-sub">Everything we build is engineered for performance, growth, and lasting digital impact.</p>
@@ -1890,7 +1892,7 @@ function PortfolioSection() {
         {/* LEFT */}
         <div className="pf-left">
        <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our  Portfolio</h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Portfolio</h2>
           </div>
           <h3 className="pf-heading">
             Proven Website <span><i>Solutions Across</i></span> Industries
@@ -1901,7 +1903,7 @@ Review performance-driven websites developed with strategic architecture, intuit
           </p>
 
           <div className="pf-btns">
-            <a href="#" className="pf-btn">View All Projects →</a>
+            <a href="/portfolio" className="pf-btn">View All Projects →</a>
           </div>
         </div>
 

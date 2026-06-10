@@ -696,7 +696,7 @@ function HeroSection() {
       backgroundPosition: "center",
       backgroundRepeat: "no-repeat",
     }}>
-      <style>{`
+       <style>{`
         @media(max-width:1008px){
           .hero-overlay { background: #004168d4 !important; }
         }
@@ -726,6 +726,7 @@ function HeroSection() {
           .seo-badge { margin:0 !important; }
           .seo-sub { max-width:100% !important; text-align:start !important; }
           .seo-actions { justify-content:flex-start !important; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
         @media(max-width:640px){
           .seo-hero-section { grid-template-columns:1fr !important; padding:5rem 5% 3rem !important; text-align:left !important; }
@@ -733,17 +734,20 @@ function HeroSection() {
           .seo-badge { margin:0 !important; }
           .seo-sub { max-width:100% !important; text-align:left !important; font-size:0.88rem !important; }
           .seo-actions { justify-content:flex-start !important; flex-wrap:wrap; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
         @media(max-width:480px){
-          .seo-hero-section { padding:5rem 4% 2.5rem !important; min-height:100svh !important; background-position:top right !important; }
-          .seo-hero-heading { font-size:clamp(1.5rem,7.5vw,1.7rem) !important; font-weight:600 !important; color:#fff !important; line-height:1.2 !important; text-shadow:0 2px 12px rgba(0,0,0,0.6) !important; }
+          .seo-hero-section { padding:2rem 4% 2.5rem !important; min-height:55svh !important; background-position:top right !important; }
+          .seo-hero-heading { font-size:clamp(1.5rem,7.5vw,1.7rem) !important; font-weight:600 !important; color:#fff !important; line-height:1.46 !important; text-shadow:0 2px 12px rgba(0,0,0,0.6) !important; }
           .seo-sub { font-size:0.84rem !important; color:rgba(255,255,255,0.95) !important; line-height:1.7 !important; text-shadow:0 1px 8px rgba(0,0,0,0.5) !important; margin-top:1rem !important; }
           .seo-badge { font-size:0.65rem !important; }
           .seo-btn-fill { padding:0.78rem 1.6rem !important; font-size:0.85rem !important; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
         @media(max-width:380px){
           .seo-hero-heading { font-size:clamp(1.4rem,7vw,1.7rem) !important; font-weight:600 !important; }
           .seo-sub { font-size:0.8rem !important; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
       `}</style>
 
@@ -765,7 +769,7 @@ function HeroSection() {
         <p className="seo-sub">
           Enabling healthcare providers to grow with confidence, We bring together registration, compliance, HR solutions for healthcare, digital transformation, and digital marketing , Website Development into a unified, end-to-end solution.       </p>
         <div className="seo-actions">
-          <a className="seo-btn-fill" href="#approach"><span>Get in Touch</span><div className="seo-btn-arr">›</div></a>
+          <a className="seo-btn-fill" href="/contact-us"><span>Get in Touch</span><div className="seo-btn-arr">›</div></a>
         </div>
       </div>
 
@@ -775,7 +779,7 @@ function HeroSection() {
       {/* Mobile: collapse to 1 col, full cover */}
       <style>{`
         @media(max-width:900px){
-          .seo-hero-section { grid-template-columns:1fr !important; min-height:100svh !important; background-size:cover !important; background-position:center !important; }
+          .seo-hero-section { grid-template-columns:1fr !important; min-height:55svh !important; background-size:cover !important; background-position:center !important; }
         }
       `}</style>
     </section>

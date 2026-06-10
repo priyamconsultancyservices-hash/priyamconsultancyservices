@@ -123,7 +123,7 @@ const STYLES = `
   .smm-sp-content { position:relative; z-index:2; }
   .smm-sp-subtitle {display:none; font-family:'Space Mono',monospace; font-size:.6rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-bottom:.55rem; transition:color .35s; }
   
-  .smm-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.5rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
+  .smm-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.3rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
   .smm-svc-panel:hover .smm-sp-title { letter-spacing:.01em; }
   .smm-sp-desc { font-size:.86rem; line-height:1.76; color:rgba(255,255,255,0.93); max-height:0; overflow:hidden; transition:max-height .5s ease,color .5s ease,margin .5s ease; margin-bottom:0; }
   .smm-svc-panel:hover .smm-sp-desc { max-height:140px; color:rgb(255,255,255); margin-bottom:.9rem; font-family:'Poppins'; }
@@ -326,7 +326,7 @@ const STYLES = `
     .smm-badge { align-self:center; }
     .smm-hero-actions { justify-content:center; }
     .smm-hero-sub { text-align:start; }
-    .smm-hero-heading { text-align:start; }
+    .smm-hero-heading { text-align:start;         line-height: 1.46;}
   }
 
   /* ── SMM HERO IMAGE MOBILE FIX ── */
@@ -335,9 +335,10 @@ const STYLES = `
   }
   @media(max-width:480px){
     .smm-hero-right img { max-width:240px !important; }
-    .smm-hero { padding:4rem 4% 3rem !important; gap:1.5rem !important; min-height:auto !important; }
-    .smm-hero-heading { font-size:clamp(1.7rem,6vw,2.2rem) !important; }
+    .smm-hero { padding:1rem 4% 3rem !important; gap:1.5rem !important; min-height:auto !important; }
+    .smm-hero-heading { font-size:clamp(1.7rem,6vw,2.2rem) !important;         line-height: 1.46;}
     .smm-hero-sub { font-size:.9rem !important; }
+      h3.faq-h3 {font-size:1.9rem!important;}
   }
   .smm-hero-img { height:auto !important; max-width:100%; }
 
@@ -499,7 +500,7 @@ function Hero() {
         @media(max-width: 960px) {
           .hero {
             grid-template-columns: 1fr;
-            padding: 6rem 5% 4rem;
+            padding: 4rem 5% 4rem;
             min-height: auto;
             text-align: start;
             gap: 2.5rem;
@@ -512,11 +513,12 @@ function Hero() {
         }
         /* MOBILE */
         @media(max-width: 600px) {
-          .hero { padding: 5rem 4% 3rem; gap: 2rem; }
-          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
+          .hero { padding: 1rem 4% 3rem; gap: 2rem; }
+          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important;         line-height: 1.46;}
           .hero-sub { font-size: 0.9rem; max-width: 100%; }
           .hero-img { max-width: 100%; width: 100%; }
           .h-badge { font-size: 0.65rem; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
         .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
       `}</style>
@@ -532,7 +534,7 @@ function Hero() {
         <p className="hero-sub">
           At PCS, content marketing isn’t just about writing — it’s about creating value that drives results. As a performance-focused content marketing agency, we deliver content marketing services that attract, engage, and convert your ideal audience.        </p>
         <div className="hero-actions">
-          <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 
@@ -602,7 +604,7 @@ function ApproachSection() {
       <div className="ap-inner">
         <div className="ap-left">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
           <h2 className="ap-heading"><span>Strategic Content </span> That Drives Search, Shares & Sales</h2>
           <p className="ap-intro">
@@ -702,7 +704,7 @@ function Services() {
       <div className="smm-svc-glow smm-ssvg2" />
       <div className="smm-svc-hdr">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Content Marketing Services</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Content Marketing Services</h2>
         </div>
         <h3 className="smm-svc-h2">Not Just Content. <span> <i>Content That Works.</i></span></h3>
         <p className="smm-svc-sub">
@@ -761,7 +763,7 @@ function Process() {
       <div className="smm-tp-cross" />
       <div className="smm-tp-header">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Content Marketing Process</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Proven Content Marketing Process</h2>
         </div>
         <h3 className="smm-tp-h2">Built on Strategy. <em> <i>Refined by Insight. </i></em> Measured by Impact.</h3>
         <p className="smm-tp-sub">
@@ -797,7 +799,7 @@ function HowWeWork() {
       <div className="smm-hww-glow smm-hww-glow-2" />
       <div className="smm-hww-header">
         <div className="partners-header1">
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Focus on Your Results in Content Marketing</h2>
+          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Focus on Your Results in Content Marketing</h2>
         </div>
         <h3 className="smm-hww-h2">Plan Smart.  <span><i>Write Better.</i></span> Deliver Results.</h3>
       </div>
@@ -1058,12 +1060,12 @@ export default function PcsSmmPage() {
         </title>
         <meta name="description" content="PCS is a leading content marketing agency in India. Our content strategy and creation help drive traffic, generate leads, & boost brand visibility on search engines." />
         <meta name="keywords" content="Content Marketing, Content Marketing Agency, Content Marketing Service, Content Marketing Strategy, Content Marketing Company, Social Media Content Agency, Content Creation Companies" />
-        <link rel="canonical" href="https://www.priyamconsultancy.com/content-marketing" />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/content-marketing/" />
         {/* Open Graph */}
         <meta property="og:title" content="Content Marketing Agency in India | Content Marketing Services" />
         <meta property="og:description" content="PCS is a leading content marketing agency in India. Our content strategy and creation help drive traffic, generate leads, & boost brand visibility on search engines." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/content-marketing" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/content-marketing/" />
         <meta property="og:image" content="https://www.priyamconsultancy.com/img/content-marketing.png" />
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />

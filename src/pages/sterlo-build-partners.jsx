@@ -166,7 +166,7 @@ function HeroSection() {
         .seo-illus-wrap { position:relative; width:100%;max-width:600px; height:470px; display:flex; align-items:center; justify-content:center; }
 
         @media(max-width:900px){
-          section.hero-main-section { padding:4rem 5% 2rem !important; min-height:auto !important; display:block !important; }
+          section.hero-main-section { padding:0rem 5% 2rem !important; min-height:auto !important; display:block !important; }
           .hero-section-grid { grid-template-columns:1fr !important; gap:1.5rem; padding: 4rem 0; }
           .hero-content-col { order:1; padding-bottom:0; text-align:start !important; align-items:flex-start !important; }
           .hero-img-col { order:2; }
@@ -200,7 +200,7 @@ function HeroSection() {
             SterloBuild accelerates construction digital transformation by streamlining operations, enhancing safety, and ensuring quality compliance, seamlessly integrating with ERP systems to deliver real-time visibility for efficient, safer overall project execution.
           </p>
           <div className="seo-actions">
-            <a className="seo-btn-fill" href="#approach"><span>Get Free SEO Audit</span><div className="seo-btn-arr">›</div></a>
+            <a className="seo-btn-fill" href="/contact-us"><span>Lets Connect</span><div className="seo-btn-arr">›</div></a>
           </div>
         </div>
 

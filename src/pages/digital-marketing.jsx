@@ -11,7 +11,7 @@ const banner = "/img/digital-marketing.png";
    SEO META & SCHEMA
 ═══════════════════════════════════════════════════ */
 function SEOHead() {
-  const pageUrl = "https://www.pcsbusinesssolution.com/digital-marketing";
+  const pageUrl = "https://www.priyamconsultancy.com/digital-marketing/";
   const imageUrl = "https://www.pcsbusinesssolution.com/img/digital-marketing.png";
 
 
@@ -21,11 +21,11 @@ function SEOHead() {
       <title>Digital Marketing Agency | Expert Digital Marketing Services</title>
       <meta name="description" content="PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!" />
       <meta name="keywords" content="Digital Marketing Agency, Digital Marketing, Digital Marketing Services, Digital Marketing Company, Digital Marketing Solutions, igital Marketing Consultant" />
-      <link rel="canonical" href={pageUrl} />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/digital-marketing/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Digital Marketing Agency | Expert Digital Marketing Services" />
       <meta property="og:description" content="PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!" />
-      <meta property="og:url" content={pageUrl} />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/digital-marketing/" />
       <meta property="og:image" content={imageUrl} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Digital Marketing Agency | Expert Digital Marketing Services" />
@@ -477,11 +477,12 @@ img.hero-img { animation: none !important; }
 
 /* ══ MOBILE (≤ 600px) ══ */
 @media(max-width: 600px) {
-  .hero { padding: 5rem 4% 3rem; gap: 2rem; }
-  .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
+  .hero { padding: 1rem 4% 3rem; gap: 2rem; }
+  .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important;        line-height: 1.46; }
   .hero-sub { font-size: 0.9rem; max-width: 100%; }
   .hero-img { max-width: 100%; width: 100%; }
   .h-badge { font-size: 0.65rem; }
+    h3.faq-h3 {font-size:1.9rem!important;}
 }
 .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
 
@@ -499,7 +500,7 @@ img.hero-img { animation: none !important; }
           As the best digital marketing agency, we believe great digital marketing starts with listening. We ask the right questions to understand what truly holds your business back—whether it's low leads, weak visibility, or underperforming campaigns. As a trusted digital marketing company, we go beyond surface-level strategies and uncover insights that drive real results.
         </p>
         <div className="hero-actions">
-          <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 

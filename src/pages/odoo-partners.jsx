@@ -8,7 +8,7 @@ import Head from '@docusaurus/Head';
 
 
 function SEOHead() {
-  const pageUrl = "https://www.priyamconsultancy.com/odoo-partners";
+  const pageUrl = "https://www.priyamconsultancy.com/odoo-partners/";
   const imageUrl = "https://www.priyamconsultancy.com/img/microsoft-app.png";
 
   const schemaData = [
@@ -28,7 +28,7 @@ function SEOHead() {
           "@type": "ListItem",
           "position": 2,
           "item": {
-            "@id": "https://www.priyamconsultancy.com/odoo-partners/",
+            "@id": "https://www.priyamconsultancy.com/odoo-partners//",
             "name": "odoo-partners"
           }
         }
@@ -64,11 +64,11 @@ function SEOHead() {
       <title>Official Odoo Partner | Odoo Implementation & ERP Solutions </title>
       <meta name="description" content="PCS is an official Odoo Partner that provides end-to-end Odoo implementation, customization, and consulting services. Let's connect now! " />
       <meta name="keywords" content="Official Odoo Partner, Odoo Implementation Partner, Odoo ERP Solutions Partner, Odoo Official Partner for India, Odoo Gold Partner, Odoo ERP Consultant Partners, Odoo Implementation & ERP Solutions, Odoo Official Certified Partner" />
-      <link rel="canonical" href="https://www.priyamconsultancy.com/odoo-partners" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/odoo-partners/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Official Odoo Partner | Odoo Implementation & ERP Solutions " />
       <meta property="og:description" content="PCS is an official Odoo Partner that provides end-to-end Odoo implementation, customization, and consulting services. Let's connect now! " />
-      <meta property="og:url" content="https://www.priyamconsultancy.com/odoo-partners" />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/odoo-partners/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content=" Microsoft App" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -169,7 +169,7 @@ function HeroSection() {
         .seo-illus-wrap { position:relative; width:100%; max-width:600px; height:470px; display:flex; align-items:center; justify-content:center; }
 
         @media(max-width:900px){
-          section.hero-main-section { padding:4rem 5% 2rem !important; min-height:auto !important; display:block !important; }
+          section.hero-main-section { padding:0rem 5% 2rem !important; min-height:auto !important; display:block !important; }
           .hero-section-grid { grid-template-columns:1fr !important; gap:1.5rem; padding: 4rem 0; }
           .hero-content-col { order:1; padding-bottom:0; text-align:start !important; align-items:flex-start !important; }
           .hero-img-col { order:2; }
@@ -204,7 +204,7 @@ function HeroSection() {
 
           </p>
           <div className="seo-actions">
-            <a className="seo-btn-fill" href="#approach"><span>Get Free SEO Audit</span><div className="seo-btn-arr">›</div></a>
+            <a className="seo-btn-fill" href="/contact-us"><span>Lets Conenct</span><div className="seo-btn-arr">›</div></a>
           </div>
         </div>
 

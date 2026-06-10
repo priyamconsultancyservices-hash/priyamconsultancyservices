@@ -849,18 +849,18 @@ const styles = `
     /* ── HERO (Static page fallback) ── */
     .wd-hero {
       grid-template-columns: 1fr !important;
-      padding: 5.5rem 5% 3rem !important;
+      padding: 4rem 5% 3rem !important;
       gap: 2rem !important;
       text-align: left !important;
       min-height: auto !important;
     }
-    .wd-hero-heading { font-size: clamp(1.6rem, 6vw, 2.3rem) !important; text-align: left !important; }
+    .wd-hero-heading { font-size: clamp(1.6rem, 6vw, 2.3rem) !important; text-align: left !important;         line-height: 1.46;}
     .wd-hero-sub { font-size: 0.92rem !important; }
     .wd-hero-img { height: auto !important; max-height: 260px !important; width: 100% !important; object-fit: contain !important; }
     .wd-hero-actions { justify-content: flex-start !important; }
     .wd-btn-fill { width: auto !important; min-width: 200px !important; justify-content: center !important; }
     .badge { margin: 0 0 1.2rem !important; }
-
+  h3.faq-h3 {font-size:1.9rem!important;}
     /* ── APPROACH SECTION (generic) ── */
     .wd-ap-eyebrow { font-size: 0.62rem !important; }
     .wd-ap-heading { font-size: clamp(1.4rem, 5vw, 2rem) !important; }
@@ -868,21 +868,22 @@ const styles = `
 
     /* ── GENERAL PADDING ── */
     section { overflow-x: hidden; }
-    .container { padding-left: 1rem !important; padding-right: 1rem !important; }
+    // .container { padding-left: 1rem !important; padding-right: 1rem !important; }
   }
 
   /* ── EXTRA SMALL (< 400px) ── */
   @media (max-width: 400px) {
-    .wd-hero { padding: 7.5rem 4% 2rem !important; }
-    .wd-hero-heading { font-size: clamp(1.4rem, 7.5vw, 1.9rem) !important; }
+    .wd-hero { padding: 3.5rem 4% 2rem !important; }
+    .wd-hero-heading { font-size: clamp(1.4rem, 7.5vw, 1.9rem) !important;         line-height: 1.46;}
     .wd-hero-img { max-height: 200px !important; }
     .wd-ap-form-card { padding: 1.4rem 1rem !important; }
     .wd-form-title { font-size: 1.2rem !important; }
     .pcs-orbit-wrap { width: 220px !important; height: 220px !important; }
-    .pcs-orbit-node-box { width: 54px !important; height: 54px !important; }
+    .pcs-orbit-node-box { width: 65px !important; height: 75px !important; }
     .pcs-orbit-center { width: 68px !important; height: 68px !important; }
     .wd-btn-fill { width: 75% !important; }
     .faq-wrapper { grid-template-columns: 1fr !important; }
+      h3.faq-h3 {font-size:1.9rem!important;}
   }
     h3.faq-h3{font-size:2.5rem;}
 
@@ -1044,7 +1045,7 @@ export default function PCSWebsite() {
               Your digital presence should communicate credibility, clarity, and confidence. Through our Custom Website Development services in Coimbatore, we deliver tailored websites engineered for performance, scalability, and long-term business success.
             </p>
             <div className="wd-hero-actions">
-              <a className="wd-btn-fill" href="#">Get a Free Quote <span className="wd-btn-arrow">›</span></a>
+              <a className="wd-btn-fill" href="/contact-us">Get a Free Quote <span className="wd-btn-arrow">›</span></a>
             </div>
           </div>
 
@@ -1065,7 +1066,7 @@ export default function PCSWebsite() {
             {/* LEFT CONTENT */}
             <div>
               <div className="partners-header1">
-                <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Strategy for Custom Website Development</div>
+                <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Strategy for Custom Website Development</div>
               </div>
               <h2 className="wd-ap-heading">Strategic,   <span>High-Performance </span> Custom Website Solutions</h2>
               <p className="wd-ap-intro">

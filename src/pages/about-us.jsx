@@ -20,6 +20,32 @@ const Tactive = "/img/tactive.webp";
 const URCTC = "/img/urctc.webp";
 const ZKY = "/img/zky.webp";
 
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/about-us/";
+
+  return (
+    <Head>
+      <title>About | Digital Transformation HR Services & Marketing Agency </title>
+      <meta name="description" content="PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!" />
+      <meta name="keywords" content="Digital Marketing Services, Digital Marketing Agency, Top Digital Marketing Agency, Human Resource, HR Services, HR service provider, HR Recruitment, HR consulting services,Website development " />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/about-us/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="About | Digital Transformation HR Services & Marketing Agency " />
+      <meta property="og:description" content="PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!" />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/about-us/" />
+      <meta property="og:site_name" content=" Microsoft App" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="About | Digital Transformation HR Services & Marketing Agency " />
+      <meta name="twitter:description" content="PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!" />
+  
+    </Head>
+  );
+}
+
+
 const css = `
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
 
@@ -325,7 +351,7 @@ const css = `
     .pcs-trust-list{grid-template-columns:1fr;}
     .pcs-trust-head{margin-bottom:2.5rem;}
     .pcs-trust-item{padding:1.6rem 0;}
-    .pcs-ti-num{font-size:2.8rem;width:48px;}
+    .pcs-ti-num{font-size:2rem;width:48px;}
 
     /* Partners & Clients */
     .pcs-pc-section{padding:0 0 4rem 0;}
@@ -345,7 +371,7 @@ const css = `
 
   /* Small mobile — 400px */
   @media(max-width:400px){
-    .pcs-hero{padding:5.5rem 4% 3rem;}
+    .pcs-hero{padding:3.5rem 4% 3rem;}
     .pcs-hero-heading{font-size:1.65rem;}
     .pcs-about-heading,.pcs-story-heading{font-size:1.4rem;}
     .pcs-mq-item{width:88px;height:50px;}
@@ -587,6 +613,7 @@ export default function PCSAboutUs() {
 
   return (
     <div id="pcs-about-wrapper" style={{ fontFamily: "'Poppins', sans-serif" }}>
+    <SEOHead />
 
       {/* HERO */}
       <section className="pcs-hero">

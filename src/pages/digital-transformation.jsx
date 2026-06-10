@@ -406,13 +406,19 @@ const PAGE_CSS = `
   /* ── Tablet 900px ── */
   @media(max-width:900px) {
     /* Hero */
-    .dt-hero { grid-template-columns:1fr !important; padding:6rem 5% 3rem !important; gap:2rem; text-align:center !important; }
+    h3.pr-heading {
+    font-size: 2rem;
+}
+    h3.pr-heading-process {
+    font-size: 2rem;
+}
+    .dt-hero { grid-template-columns:1fr !important; padding:4rem 5% 3rem !important; gap:2rem; text-align:center !important; }
     .dt-hero > div:first-child { align-items:center; padding-bottom:0 !important; }
-    .dt-badge { margin:0 auto; }
-    .dt-hero-h { font-size:clamp(1.8rem,6vw,2.4rem) !important; }
+    // .dt-badge { margin:0 auto; text-alihn:start;}
+    .dt-hero-h { font-size:clamp(1.8rem,6vw,2.4rem) !important;        line-height: 1.46; }
     .dt-hero-sub { text-align:start; }
     .dt-hero-actions { justify-content:start; }
-
+  h3.faq-h3 {font-size:1.9rem!important;}
     /* Approach */
     .approach { padding:3rem 5% !important; }
     .ap-inner { grid-template-columns:1fr !important; gap:2.5rem; }
@@ -453,10 +459,16 @@ const PAGE_CSS = `
   /* ── Mobile 600px ── */
   @media(max-width:600px) {
     /* Hero */
-    .dt-hero { padding:5.5rem 4% 2.5rem !important; }
-    .dt-hero-h { font-size:clamp(1.5rem,7vw,2rem) !important; }
+    .dt-hero { padding:4rem 4% 2.5rem !important; }
+    .dt-hero-h { font-size:clamp(1.5rem,7vw,2rem) !important;         line-height: 1.46;}
     .dt-hero-sub { font-size:.9rem; }
-
+  h3.faq-h3 {font-size:1.9rem!important;}
+  h3.pr-heading {
+    font-size: 2rem;
+}
+    h3.pr-heading-process {
+    font-size: 2rem;
+}
     /* Approach */
     .approach { padding:2.5rem 4% !important; }
     .ap-form-card { padding:1.8rem 1.4rem; }
@@ -488,11 +500,18 @@ const PAGE_CSS = `
 
   /* ── Small mobile 400px ── */
   @media(max-width:400px) {
-    .dt-hero { padding:7.5rem 4% 2rem !important; }
-    .dt-hero-h { font-size:1.45rem !important; }
+    .dt-hero { padding:4rem 4% 2rem !important; }
+    .dt-hero-h { font-size:1.45rem !important;         line-height: 1.46; }
     .approach { padding:2rem 4% !important; }
     .ap-form-card { padding:1.4rem 1.1rem; }
     .dt-services,.dt-process,.dt-video-section,.faq-section { padding:40px 4% !important; }
+      h3.faq-h3 {font-size:1.9rem!important;}
+      h3.pr-heading {
+    font-size: 2rem;
+}
+    h3.pr-heading-process {
+    font-size: 2rem;
+}
   }
   img.logo-gif {
     width: 100%;
@@ -503,6 +522,7 @@ h3.pr-heading {
     font-size: 2.7rem;
     margin-bottom: 1.4rem;
 }
+
    h3.pr-heading-process {
     color: #000;
     font-size: 2.7rem;
@@ -583,7 +603,7 @@ export default function DigitalTransformationPage() {
 
             </p>
             <div className="dt-hero-actions">
-              <a className="dt-btn" href="#">Explore More ›</a>
+              <a className="dt-btn" href="/contact-us">Explore More ›</a>
             </div>
           </div>
           <div style={{ position: "relative", zIndex: 2, display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -702,7 +722,7 @@ export default function DigitalTransformationPage() {
           <div className="dt-proc-bg" />
           <div className="dt-proc-hdr">
             <div className="partners-header1">
-              <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start',color: '#ed8337' }}>Our Proven Process For Digital Transformation</h2>
+              <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start', color: '#ed8337' }}>Our Proven Process For Digital Transformation</h2>
             </div>
 
             <h3 className="pr-heading-process">How We <span className="accent" style={{ color: '#ed8337' }}>Transform</span> Your Business</h3>

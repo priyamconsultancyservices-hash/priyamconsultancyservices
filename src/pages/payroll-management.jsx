@@ -1079,7 +1079,7 @@ margin: 30px auto;
     grid-template-columns: 1fr !important;
     grid-template-rows: auto auto;
     min-height: auto;
-    padding: 5rem 5% 3rem;
+    padding: 1rem 5% 3rem;
     align-items: start;
     gap: 1.5rem;
   }
@@ -1106,11 +1106,16 @@ margin: 30px auto;
   .hero-heading {
     font-size: clamp(1.7rem, 6vw, 2.2rem) !important;
     text-align: start !important;
+            line-height: 1.46;
   }
   .hero-sub {
     font-size: 0.9rem;
     max-width: 100%;
   }
+      h3.faq-h3 {font-size:1.9rem!important;}
+      h3.hr-h2 {
+    font-size: 2rem;
+}
   .hero-actions {
     justify-content: flex-start;
   }
@@ -1414,7 +1419,7 @@ function HeroSection() {
           <li>Scalable Payroll Solutions for Business Types.</li>
         </ul>
         <div className="hero-actions">
-          <a className="btn-fill" href="#approach">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 
@@ -1533,7 +1538,7 @@ function ApproachSection() {
         {/* LEFT CONTENT */}
         <div className="ap-left">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
           <h2 className="ap-heading">Seamless <span>Payroll for</span> Every Stage of Growth</h2>
           <p className="ap-intro">
@@ -1757,7 +1762,7 @@ function ServicesSection() {
       <div className="svc-inner">
         <div className="svc-header">
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Payroll Management Services </h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Payroll Management Services </h2>
           </div>
           <h3 className="hr-h2" style={{ textAlign: 'center', color: '#fff' }}>Our Result-Driven  <span style={{ color: '#ed8337' }}><i>Payroll Management </i></span>  Sources</h3>
           <p className="svc-subtext">
@@ -1857,7 +1862,7 @@ function TabServiceSection() {
         {/* Header */}
         <div className="bfr-header">
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Proven Payroll Process</h2>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Proven Payroll Process</h2>
           </div>
           <h3 className="bfr-title">
             Compliance-Focused. <span><i>Tech-Powered. </i> </span> People-First.

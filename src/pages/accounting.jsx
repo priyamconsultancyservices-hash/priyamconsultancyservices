@@ -362,11 +362,12 @@ img.hero-img { animation: none !important; }
 
 /* ══ MOBILE (≤ 600px) ══ */
 @media(max-width: 600px) {
-  .hero { padding: 5rem 4% 3rem; gap: 2rem; }
-  .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
+  .hero { padding: 1rem 4% 3rem; gap: 2rem; }
+  .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important;         line-height: 1.46;}
   .hero-sub { font-size: 0.9rem; max-width: 100%; }
   .hero-img { max-width: 100%; width: 100%; }
   .h-badge { font-size: 0.65rem; }
+    h3.faq-h3 {font-size:1.9rem!important;}
 }
 .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
 
@@ -382,7 +383,7 @@ img.hero-img { animation: none !important; }
           At Priyam Consultancy Services, we offer complete accounting solutions designed to simplify financial management and ensure transparency. From bookkeeping and payroll to GST, TDS, and MIS reporting, we help you maintain organized records, achieve compliance, and make smarter financial decisions with real-time data and expert support.
         </p>
         <div className="hero-actions">
-          <a className="btn-fill" href="#">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 

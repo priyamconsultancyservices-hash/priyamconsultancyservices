@@ -133,7 +133,7 @@ width:100%;
   .ppc-sp-content { position:relative; z-index:2; }
   .ppc-sp-subtitle {display: none; font-family:'Space Mono',monospace; font-size:.6rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; margin-bottom:.55rem; transition:color .35s; }
   
-  .ppc-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.5rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
+  .ppc-sp-title { font-family:'Poppins',sans-serif; font-size:clamp(1.15rem,1.7vw,1.3rem); font-weight:800; color:#fff; line-height:1.15; margin-bottom:.75rem; transition:letter-spacing .35s ease; }
   .ppc-svc-panel:hover .ppc-sp-title { letter-spacing:.01em; }
   .ppc-sp-desc { font-size:.86rem; line-height:1.76; color:rgba(255,255,255,0.93); max-height:0; overflow:hidden; transition:max-height .5s ease,color .5s ease,margin .5s ease; margin-bottom:0; }
   .ppc-svc-panel:hover .ppc-sp-desc { max-height:140px; color:rgb(255,255,255); margin-bottom:.9rem; font-family:'Poppins'; }
@@ -533,11 +533,12 @@ function Hero() {
         }
         /* MOBILE */
         @media(max-width: 600px) {
-          .hero { padding: 5rem 4% 3rem; gap: 2rem; }
-          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
+          .hero { padding: 1rem 4% 3rem; gap: 2rem; }
+          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important;        line-height: 1.46; }
           .hero-sub { font-size: 0.9rem; max-width: 100%; }
           .hero-img { max-width: 100%; width: 100%; }
           .h-badge { font-size: 0.65rem; }
+            h3.faq-h3 {font-size:1.9rem!important;}
         }
         .menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
       `}</style>
@@ -554,7 +555,7 @@ function Hero() {
           At PCS, our performance marketing services are built around one thing: results. Whether it's Google Ads, Meta, LinkedIn, or display networks, we drive high-intent traffic that converts into leads, sales, and real business outcomes. As a trusted performance marketing agency, we combine data, strategy, and creativity to deliver campaigns that don't just spend your budget — they grow your business.
         </p>
         <div className="hero-actions">
-          <a className="btn-fill" href="#">Get Free Audit <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Get Free Audit <span className="btn-arrow">›</span></a>
         </div>
       </div>
 
@@ -647,7 +648,7 @@ function ApproachSection() {
       <div className="ap-inner">
         <div className="ap-left">
           <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
           <h2 className="ap-heading">Strategic <span>Performance Marketing Campaigns </span> Built to Perform</h2>
           <p className="ap-intro">

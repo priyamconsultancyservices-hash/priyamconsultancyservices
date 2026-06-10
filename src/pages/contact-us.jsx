@@ -2,6 +2,31 @@ import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Layout from '@theme/Layout';
 const banner = "/img/contact-us.png";
+import Head from '@docusaurus/Head';
+
+
+function SEOHead() {
+  const pageUrl = "https://www.priyamconsultancy.com/contact-us/";
+
+  return (
+    <Head>
+      <title>Get in Touch with Priyam Consultancy | Contact Us </title>
+      <meta name="description" content="Get professional support for business registration, compliance management, website development, HR solutions, and digital marketing. Contact PCS today." />
+      <meta name="keywords" content="" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/contact-us/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Get in Touch with Priyam Consultancy | Contact Us " />
+      <meta property="og:description" content="Get professional support for business registration, compliance management, website development, HR solutions, and digital marketing. Contact PCS today." />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/contact-us/" />
+      <meta property="og:site_name" content=" Microsoft App" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="Get in Touch with Priyam Consultancy | Contact Us " />
+      <meta name="twitter:description" content="Get professional support for business registration, compliance management, website development, HR solutions, and digital marketing. Contact PCS today." />
+  
+    </Head>
+  );
+}
+
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
@@ -88,10 +113,10 @@ color:#000;
   @keyframes float-ud { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-14px);} }
 
   @media(max-width:900px){
-    .pcs-hero{grid-template-columns:1fr;padding:7rem 5% 5rem;text-align:center;}
+    .pcs-hero{grid-template-columns:1fr;padding:5rem 5% 5rem;text-align:start;}
     .pcs-badge{margin:0 auto 1.4rem;}
     .pcs-hero-img-wrap{width:320px;height:300px;}
-    .pcs-hero-quote{border-left:none; padding-left:0; text-align:center;}
+    .pcs-hero-quote{border-left:none; padding-left:0; text-align:start;}
   }
   @media(max-width:540px){
     .pcs-nav-links,.pcs-nav-btn{display:none;}
@@ -471,6 +496,7 @@ export default function ContactPage() {
 
   return (
     <Layout>
+      <SEOHead />
       <style>{styles}</style>
 
       {/* HERO SECTION */}

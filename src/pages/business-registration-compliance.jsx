@@ -14,7 +14,7 @@ function SEOHead() {
   const pageUrl = "https://www.pcsbusinesssolution.com/business-registration-compliance";
   const imageUrl = "https://www.pcsbusinesssolution.com/img/business-registration-compliance.png";
 
-   return (
+  return (
     <Head>
       {/* ── Primary Meta ── */}
       <title>Business Registration and Compliance Services | Company Registration</title>
@@ -1021,7 +1021,7 @@ html { scroll-behavior: smooth; }
   }
   .hero-left {
     order: 1;
-    padding: 3rem 0;
+    padding: 2rem 0;
     align-items: flex-start;
   }
   .hero-right { width: 100% !important; height: auto !important; order: 2; display: flex; justify-content: center; }
@@ -1071,7 +1071,7 @@ html { scroll-behavior: smooth; }
 @media(max-width:600px) {
   /* ── HERO ── */
   .hero {
-    padding: 5rem 4% 3rem;
+    padding: 3rem 4% 3rem;
     gap: 2rem;
   }
   .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; text-align: start !important; }
@@ -1172,6 +1172,9 @@ html { scroll-behavior: smooth; }
   .faq-answer { font-size: 0.82rem; }
   .faq-item { padding: 12px 14px; border-radius: 8px; }
   .section-subtitle { margin-bottom: 0.8rem; }
+  h3.pr-heading-process {  font-size: 2.4rem!important;}
+  h3.partners-h3-title {  font-size: 2rem!important;}
+  h3.faq-h3 {font-size:1.9rem!important;}
 }
 
 
@@ -1266,7 +1269,7 @@ function HeroSection() {
 
         </p>
         <div className="hero-actions">
-          <a className="btn-fill" href="#approach">Explore More <span className="btn-arrow">›</span></a>
+          <a className="btn-fill" href="/contact-us">Explore More <span className="btn-arrow">›</span></a>
         </div>
       </div>
 
@@ -1491,7 +1494,7 @@ function ServicesSection() {
       <div className="svc-header reveal">
         <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Business Registration & Compliance Services</h2>
 
-        <h3 className="partners-h3-title">Simplified Setup. <em style={{ color: '#ed8337',marginBottom: '20px' }}> Seamless Compliance. </em>Growth Assured.</h3>
+        <h3 className="partners-h3-title">Simplified Setup. <em style={{ color: '#ed8337', marginBottom: '20px' }}> Seamless Compliance. </em>Growth Assured.</h3>
         <p>From Registration to Reporting, We Deliver End-to-End Solutions That Keep Your Business On Track.</p>
       </div>
       <div className="svc-grid reveal" style={{ transitionDelay: "0.1s" }}>
@@ -1627,7 +1630,7 @@ function FAQSection() {
 
     <section className="faq-section">
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
-            <h2 className="partners-eyebrow">Frequently Asked Questions</h2>
+        <h2 className="partners-eyebrow">Frequently Asked Questions</h2>
       </div>
       <div className="container">
         {/* TITLE */}
