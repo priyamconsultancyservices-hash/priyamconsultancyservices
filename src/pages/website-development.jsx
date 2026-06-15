@@ -1812,25 +1812,25 @@ function FAQSection() {
 
 /* ══════ SECTION 2C: PORTFOLIO ══════ */
 const PORTFOLIO_COL1 = [
-  { img:"https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&q=80", label:"E-Commerce Store", tag:"Shopify" },
-  { img:"https://images.unsplash.com/photo-1559028012-481c04fa702d?w=400&q=80", label:"SaaS Dashboard", tag:"React" },
-  { img:"https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80", label:"Mobile App UI", tag:"Flutter" },
-  { img:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80", label:"Corporate Website", tag:"WordPress" },
-  { img:"https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=400&q=80", label:"Analytics Platform", tag:"Next.js" },
+  { img:"/img/portfolio/urcts.webp", label:"URCTS", tag:"" },
+  { img:"/img/portfolio/am.webp", label:"AM Builders", tag:"" },
+  { img:"/img/portfolio/zky.webp", label:"ZKY", tag:"" },
+  { img:"/img/portfolio/abb.webp", label:"ABB", tag:"" },
+  { img:"/img/portfolio/riya.webp", label:"Riya consultancy", tag:"" },
 ];
 const PORTFOLIO_COL2 = [
-  { img:"https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&q=80", label:"Food Delivery App", tag:"React Native" },
-  { img:"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80", label:"Personal Brand", tag:"Custom" },
-  { img:"https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=400&q=80", label:"Agency Landing", tag:"Static" },
-  { img:"https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&q=80", label:"Online Store", tag:"WooCommerce" },
-  { img:"https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&q=80", label:"Tech Startup", tag:"Next.js" },
+  { img:"/img/portfolio/feralroots.webp", label:"Feral Roots", tag:"" },
+  { img:"/img/portfolio/sterlocare.webp", label:"SterloCare", tag:"" },
+  { img:"/img/portfolio/sterlo.webp", label:"Sterlo", tag:"" },
+  { img:"/img/portfolio/talenttribe.webp", label:"Talent Tribe", tag:"" },
+  { img:"/img/portfolio/sterlobuild.webp", label:"SterloBuild", tag:"" },
 ];
 const PORTFOLIO_COL3 = [
-  { img:"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&q=80", label:"Real Estate Portal", tag:"Custom" },
-  { img:"https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&q=80", label:"Design Studio", tag:"WordPress" },
-  { img:"https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=400&q=80", label:"Healthcare Site", tag:"React" },
-  { img:"https://images.unsplash.com/photo-1529078155058-5d716f45d604?w=400&q=80", label:"Restaurant Website", tag:"Shopify" },
-  { img:"https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&q=80", label:"Blog Platform", tag:"Next.js" },
+  { img:"/img/portfolio/product1.webp", label:"", tag:"" },
+  { img:"/img/portfolio/product2.webp", label:"", tag:"" },
+  { img:"/img/portfolio/product3.webp", label:"", tag:"" },
+  { img:"/img/portfolio/product4.webp", label:"", tag:"" },
+  { img:"/img/portfolio/product5.webp", label:"", tag:"" },
 ];
 
 function PortfolioColumn({ items, speed, direction }) {

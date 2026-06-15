@@ -18,17 +18,17 @@ function SEOHead() {
 
   return (
     <Head>
-      <title>Digital Marketing Agency | Expert Digital Marketing Services</title>
+      <title>Digital Marketing Agency in Coimbatore | Priyam Consultancy</title>
       <meta name="description" content="PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!" />
       <meta name="keywords" content="Digital Marketing Agency, Digital Marketing, Digital Marketing Services, Digital Marketing Company, Digital Marketing Solutions, igital Marketing Consultant" />
       <link rel="canonical" href="https://www.priyamconsultancy.com/digital-marketing/" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Digital Marketing Agency | Expert Digital Marketing Services" />
+      <meta property="og:title" content="Digital Marketing Agency in Coimbatore | Priyam Consultancy" />
       <meta property="og:description" content="PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!" />
       <meta property="og:url" content="https://www.priyamconsultancy.com/digital-marketing/" />
       <meta property="og:image" content={imageUrl} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Digital Marketing Agency | Expert Digital Marketing Services" />
+      <meta name="twitter:title" content="Digital Marketing Agency in Coimbatore | Priyam Consultancy" />
       <meta name="twitter:description" content="PCS is the best digital marketing agency in India with results-driven strategies. We offer the best digital marketing services in India for your brand's growth!" />
       <meta name="twitter:image" content={imageUrl} />
 

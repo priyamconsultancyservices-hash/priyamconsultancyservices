@@ -1,0 +1,378 @@
+"use strict";(self.webpackChunknew_docs_pcs_website_design=self.webpackChunknew_docs_pcs_website_design||[]).push([["3741"],{5348(e,i,n){n.d(i,{A:()=>p});var a=n(4848),t=n(6540),o=n(1085),r=n(3572),s=n(6763);let l=`
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+  :root {
+    --navy: #004168;
+    --navy-deep: #002a44;
+    --navy-mid: #0a5282;
+    --orange: #ed8337;
+    --orange-light: #f5a66b;
+    --green: #34d399;
+    --blue: #1a73e8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  .jd-wrap {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f4f8;
+    color: #0d1f2d;
+  }
+
+  /* \u{2500}\u{2500} BANNER \u{2500}\u{2500} */
+  .banner {
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 55%, var(--navy-mid) 100%);
+    padding: 3rem 5% 4rem;
+  }
+  .banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(237,131,55,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(237,131,55,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: grid-drift 22s linear infinite;
+  }
+  .banner::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(ellipse 55% 80% at 80% 60%, rgba(237,131,55,0.12) 0%, transparent 65%),
+      radial-gradient(ellipse 45% 70% at 5% 20%, rgba(0,42,68,0.6) 0%, transparent 55%);
+  }
+  @keyframes grid-drift { from{background-position:0 0} to{background-position:60px 60px} }
+
+  .banner-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    max-width: 800px;
+    width: 100%;
+  }
+  .banner-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(237,131,55,0.12);
+    border: 1px solid rgba(237,131,55,0.32);
+    color: var(--orange);
+    font-size: .7rem;
+    font-weight: 700;
+    padding: .38rem 1.1rem;
+    border-radius: 50px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    animation: fadeUp .5s ease both;
+  }
+  .eyebrow-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--orange);
+    animation: pulse-dot 1.6s infinite;
+  }
+  @keyframes pulse-dot { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.5)} }
+  .banner-title {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.15;
+    animation: fadeUp .6s .08s ease both;
+  }
+  .banner-title span { color: var(--orange); }
+  .banner-subtitle {
+    font-size: .95rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.88);
+    max-width: 620px;
+    animation: fadeUp .65s .16s ease both;
+  }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+  /* \u{2500}\u{2500} BODY LAYOUT \u{2500}\u{2500} */
+  .jd-body {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2.5rem;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    align-items: start;
+  }
+
+  /* \u{2500}\u{2500} BACK BUTTON \u{2500}\u{2500} */
+  .jd-back {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    background: none;
+    border: none;
+    color: var(--blue);
+    font-size: .82rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    transition: gap .2s;
+  }
+  .jd-back:hover { gap: .7rem; color: var(--blue); }
+
+  /* \u{2500}\u{2500} META ROW \u{2500}\u{2500} */
+  .jd-meta-row {
+    display: block;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1.5px solid rgba(0,65,104,0.1);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 2.2rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .jd-meta-item {
+    flex: 1;
+    min-width: 160px;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+  }
+  .jd-meta-label {
+    font-size: .67rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: #8a9aaa;
+  }
+  .jd-meta-value {
+    font-size: .88rem;
+    font-weight: 600;
+    color: #0d1f2d;
+    line-height: 1.4;
+  }
+  .jd-meta-divider {
+    width: 1px;
+    background: rgba(0,65,104,0.08);
+    align-self: stretch;
+  }
+
+  /* \u{2500}\u{2500} SECTIONS \u{2500}\u{2500} */
+  .jd-section { margin-bottom: 2rem; }
+  .jd-section-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0d1f2d;
+    margin-bottom: 1rem;
+    padding-bottom: .6rem;
+    border-bottom: 2px solid rgba(26,115,232,0.15);
+  }
+  .jd-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+  }
+  .jd-bullets li {
+    font-size: .875rem;
+    color: #3a4a5a;
+    line-height: 1.75;
+    padding-left: 1.4rem;
+    position: relative;
+  }
+  .jd-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 10px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--blue);
+  }
+
+  /* \u{2500}\u{2500} SIDEBAR \u{2500}\u{2500} */
+  .jd-sidebar {
+    position: sticky;
+    top: 24px;
+    align-self: start;
+  }
+  .jd-sticky-card {
+    background: #fff;
+    border: 1.5px solid rgba(26,115,232,0.15);
+    border-radius: 18px;
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 8px 32px rgba(26,115,232,0.1);
+  }
+  .jd-sticky-role {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0d1f2d;
+    line-height: 1.3;
+  }
+  .jd-sticky-loc {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    font-size: .8rem;
+    color: #6a7a8a;
+    font-weight: 500;
+  }
+  .jd-sticky-divider { height: 1px; background: rgba(0,65,104,0.08); }
+  .jd-sticky-info { display: flex; flex-direction: column; gap: .55rem; }
+  .jd-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .82rem;
+    color: #6a7a8a;
+  }
+  .jd-info-row strong { color: #0d1f2d; font-weight: 700; }
+  .jd-apply-btn {
+    width: 100%;
+    padding: .9rem;
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: .92rem;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background .22s, transform .18s, box-shadow .22s;
+    box-shadow: 0 4px 18px rgba(26,115,232,0.35);
+    letter-spacing: .02em;
+  }
+  .jd-apply-btn:hover {
+    background: #1558c0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(26,115,232,0.45);
+  }
+  .jd-apply-note {
+    font-size: .72rem;
+    color: #9aabba;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 860px) {
+    .jd-body {
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 1.2rem;
+      gap: 1.8rem;
+    }
+    .jd-sidebar { position: static; width: 100%; }
+  }
+
+  /* \u{2500}\u{2500} APPLY MODAL \u{2500}\u{2500} */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,20,40,0.55);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    animation: fadeIn .2s ease;
+  }
+  @keyframes fadeIn { from{opacity:0} to{opacity:1} }
+  .modal-box {
+    background: #fff;
+    border-radius: 22px;
+    width: 100%;
+    max-width: 580px;
+    max-height: 92vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.22);
+    animation: slideUp .28s ease;
+    position: relative;
+  }
+  @keyframes slideUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+  .modal-header {
+    background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 60%, var(--navy-mid) 100%);
+    padding: 1.8rem 2rem 1.5rem;
+    border-radius: 22px 22px 0 0;
+    position: relative;
+  }
+  .modal-header::before {
+    content:''; position:absolute; inset:0; border-radius:22px 22px 0 0;
+    background-image:linear-gradient(rgba(237,131,55,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(237,131,55,0.07) 1px,transparent 1px);
+    background-size:40px 40px; pointer-events:none;
+  }
+  .modal-eyebrow { font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:.45rem;position:relative;z-index:1; }
+  .modal-title { font-size:1.2rem;font-weight:800;color:#fff;line-height:1.3;position:relative;z-index:1; }
+  .modal-subtitle { font-size:.78rem;color:rgba(255,255,255,0.55);margin-top:.35rem;position:relative;z-index:1; }
+  .modal-close {
+    position:absolute;top:1.1rem;right:1.1rem;width:32px;height:32px;border-radius:50%;
+    background:rgba(255,255,255,0.12);border:none;color:#fff;font-size:1.1rem;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;transition:background .2s;z-index:2;font-family:'Poppins',sans-serif;
+  }
+  .modal-close:hover{background:rgba(255,255,255,0.22);}
+  .modal-body { padding:1.8rem 2rem 2rem;display:flex;flex-direction:column;gap:1.1rem; }
+  .form-row { display:grid;grid-template-columns:1fr 1fr;gap:1rem; }
+  .form-group { display:flex;flex-direction:column;gap:.4rem; }
+  .form-label { font-size:.72rem;font-weight:700;color:#3a4a5a;letter-spacing:.04em;text-transform:uppercase; }
+  .form-label span { color:#e53e3e;margin-left:2px; }
+  .form-input,.form-select,.form-textarea {
+    width:100%;padding:.72rem 1rem;border:1.5px solid #dde3ea;border-radius:10px;
+    font-size:.875rem;color:#0d1f2d;font-family:'Poppins',sans-serif;background:#f8fafc;
+    transition:border-color .2s,box-shadow .2s;outline:none;
+  }
+  .form-input:focus,.form-select:focus,.form-textarea:focus {
+    border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,115,232,0.1);background:#fff;
+  }
+  .form-textarea { resize:vertical;min-height:90px; }
+  .form-select { appearance:none;cursor:pointer; }
+  .file-upload-area {
+    border:2px dashed #c8d5e4;border-radius:12px;padding:1.4rem;text-align:center;
+    cursor:pointer;transition:border-color .2s,background .2s;background:#f8fafc;position:relative;
+  }
+  .file-upload-area:hover { border-color:var(--blue);background:rgba(26,115,232,0.04); }
+  .file-upload-area input[type="file"] { position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%; }
+  .file-upload-icon { font-size:1.8rem;margin-bottom:.4rem; }
+  .file-upload-text { font-size:.8rem;color:#6a7a8a;line-height:1.6; }
+  .file-upload-text strong { color:var(--blue); }
+  .file-name { margin-top:.5rem;font-size:.75rem;color:var(--blue);font-weight:600;background:rgba(26,115,232,0.08);border-radius:6px;padding:.3rem .7rem;display:inline-block; }
+  .modal-submit {
+    width:100%;padding:.95rem;background:var(--blue);color:#fff;border:none;border-radius:12px;
+    font-size:.95rem;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;
+    transition:background .22s,transform .18s,box-shadow .22s;box-shadow:0 4px 18px rgba(26,115,232,0.35);margin-top:.4rem;
+  }
+  .modal-submit:hover { background:#1558c0;transform:translateY(-2px);box-shadow:0 8px 28px rgba(26,115,232,0.45); }
+  .modal-submit:disabled { background:#a0b4cc;cursor:not-allowed;transform:none;box-shadow:none; }
+  .modal-success { padding:3rem 2rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:1rem; }
+  .success-icon {
+    width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,#34d399,#059669);
+    display:flex;align-items:center;justify-content:center;font-size:2rem;
+    box-shadow:0 8px 24px rgba(52,211,153,0.35);animation:pop .4s cubic-bezier(.34,1.56,.64,1);
+  }
+  @keyframes pop { from{transform:scale(0)} to{transform:scale(1)} }
+  .success-title { font-size:1.3rem;font-weight:800;color:#0d1f2d; }
+  .success-sub { font-size:.85rem;color:#6a7a8a;line-height:1.7;max-width:360px; }
+  .success-close {
+    margin-top:.5rem;padding:.7rem 2rem;background:var(--blue);color:#fff;border:none;
+    border-radius:10px;font-size:.875rem;font-weight:700;font-family:'Poppins',sans-serif;cursor:pointer;transition:background .2s;
+  }
+  .success-close:hover { background:#1558c0; }
+  @media (max-width: 520px) {
+    .form-row { grid-template-columns: 1fr; }
+    .modal-body { padding: 1.4rem 1.2rem 1.6rem; }
+    .modal-header { padding: 1.4rem 1.2rem 1.2rem; }
+  }
+`;function d({role:e,onClose:i}){let[n,o]=(0,t.useState)({name:"",email:"",phone:"",experience:"",linkedin:"",cover:""}),[r,s]=(0,t.useState)(null),[l,c]=(0,t.useState)(!1),[p,m]=(0,t.useState)(!1),g=e=>i=>o(n=>({...n,[e]:i.target.value})),f=async()=>{if(n.name&&n.email&&n.phone){m(!0);try{let i=new FormData;i.append("_subject",`New Job Application \u{2014} ${e.title}`),i.append("name",n.name),i.append("email",n.email),i.append("phone",n.phone),i.append("role_title",e.title),i.append("location",e.location),i.append("years_of_experience",n.experience||"Not specified"),i.append("linkedin_profile",n.linkedin||"Not provided"),i.append("cover_note",n.cover||"Not provided"),r&&i.append("resume",r);let a=await fetch("https://formspree.io/f/xbdqnqre",{method:"POST",body:i,headers:{Accept:"application/json"}}),t=await a.json();if(a.ok)c(!0);else{let e=t?.errors?.map(e=>e.message).join(", ")||"Something went wrong.";alert(`Error: ${e}`)}}catch(e){alert(e.message||"Network error. Please check your connection.")}finally{m(!1)}}};return(0,a.jsx)("div",{className:"modal-overlay",onClick:e=>e.target===e.currentTarget&&i(),children:(0,a.jsx)("div",{className:"modal-box",children:l?(0,a.jsxs)("div",{className:"modal-success",children:[(0,a.jsx)("div",{className:"success-icon",children:"\u2713"}),(0,a.jsx)("div",{className:"success-title",children:"Application Submitted!"}),(0,a.jsxs)("p",{className:"success-sub",children:["Thank you for applying for ",(0,a.jsx)("strong",{children:e.title}),". Our team will review your profile and get back to you within 3\u20135 business days."]}),(0,a.jsx)("button",{className:"success-close",onClick:i,children:"Close"})]}):(0,a.jsxs)(a.Fragment,{children:[(0,a.jsxs)("div",{className:"modal-header",children:[(0,a.jsx)("button",{className:"modal-close",onClick:i,children:"\u2715"}),(0,a.jsx)("div",{className:"modal-eyebrow",children:"Apply Now"}),(0,a.jsx)("div",{className:"modal-title",children:e.title}),(0,a.jsxs)("div",{className:"modal-subtitle",children:["\u{1F4CD} ",e.location," \xa0\xb7\xa0 ",e.title.toLowerCase().includes("intern")?"Internship":"Full-time"," \xa0\xb7\xa0 ",e.openings," Opening",e.openings>1?"s":""]})]}),(0,a.jsxs)("div",{className:"modal-body",children:[(0,a.jsxs)("div",{className:"form-row",children:[(0,a.jsxs)("div",{className:"form-group",children:[(0,a.jsxs)("label",{className:"form-label",children:["Full Name ",(0,a.jsx)("span",{children:"*"})]}),(0,a.jsx)("input",{className:"form-input",placeholder:"John Doe",value:n.name,onChange:g("name")})]}),(0,a.jsxs)("div",{className:"form-group",children:[(0,a.jsxs)("label",{className:"form-label",children:["Phone Number ",(0,a.jsx)("span",{children:"*"})]}),(0,a.jsx)("input",{className:"form-input",placeholder:"+91 98765 43210",value:n.phone,onChange:g("phone")})]})]}),(0,a.jsxs)("div",{className:"form-group",children:[(0,a.jsxs)("label",{className:"form-label",children:["Email Address ",(0,a.jsx)("span",{children:"*"})]}),(0,a.jsx)("input",{className:"form-input",type:"email",placeholder:"you@email.com",value:n.email,onChange:g("email")})]}),(0,a.jsxs)("div",{className:"form-row",children:[(0,a.jsxs)("div",{className:"form-group",children:[(0,a.jsx)("label",{className:"form-label",children:"Years of Experience"}),(0,a.jsxs)("select",{className:"form-select",value:n.experience,onChange:g("experience"),children:[(0,a.jsx)("option",{value:"",children:"Select..."}),(0,a.jsx)("option",{children:"Fresher (0\u20131 yr)"}),(0,a.jsx)("option",{children:"1\u20133 Years"}),(0,a.jsx)("option",{children:"3\u20135 Years"}),(0,a.jsx)("option",{children:"5\u20138 Years"}),(0,a.jsx)("option",{children:"8+ Years"})]})]}),(0,a.jsxs)("div",{className:"form-group",children:[(0,a.jsx)("label",{className:"form-label",children:"LinkedIn Profile"}),(0,a.jsx)("input",{className:"form-input",placeholder:"linkedin.com/in/yourname",value:n.linkedin,onChange:g("linkedin")})]})]}),(0,a.jsxs)("div",{className:"form-group",children:[(0,a.jsxs)("label",{className:"form-label",children:["Upload Resume ",(0,a.jsx)("span",{children:"*"})]}),(0,a.jsxs)("div",{className:"file-upload-area",children:[(0,a.jsx)("input",{type:"file",accept:".pdf,.doc,.docx",onChange:e=>{let i=e.target.files[0];i&&s(i)}}),(0,a.jsx)("div",{className:"file-upload-icon",children:"\u{1F4C4}"}),(0,a.jsxs)("div",{className:"file-upload-text",children:[(0,a.jsx)("strong",{children:"Click to upload"})," or drag & drop",(0,a.jsx)("br",{}),"PDF, DOC, DOCX (max 5MB)"]}),r&&(0,a.jsxs)("div",{className:"file-name",children:["\u2713 ",r.name]})]})]}),(0,a.jsxs)("div",{className:"form-group",children:[(0,a.jsx)("label",{className:"form-label",children:"Cover Note"}),(0,a.jsx)("textarea",{className:"form-textarea",placeholder:"Tell us why you're a great fit for this role...",value:n.cover,onChange:g("cover")})]}),(0,a.jsx)("button",{className:"modal-submit",onClick:f,disabled:p||!n.name||!n.email||!n.phone,children:p?r?"\u{1F4E4} Uploading Resume...":"Submitting...":"Submit Application \u2192"})]})]})})})}function c({role:e}){let i=e.title.toLowerCase().replace(/\s+/g,"-"),n=`${s.W6}/career/${i}/`,t=e.title.toLowerCase().includes("intern"),o={"@context":"https://schema.org","@type":"JobPosting",title:e.title,description:e.desc,datePosted:"2025-01-01",validThrough:"2025-12-31",employmentType:t?"INTERN":"FULL_TIME",hiringOrganization:{"@type":"Organization",name:"Sterlo",sameAs:s.W6,logo:`${s.W6}/img/logo.png`},jobLocation:{"@type":"Place",address:{"@type":"PostalAddress",addressLocality:"Coimbatore",addressRegion:"Tamil Nadu",addressCountry:"IN"}},experienceRequirements:e.experience,numberOfPositions:e.openings,url:n,directApply:!0},l={"@context":"https://schema.org","@type":"BreadcrumbList",itemListElement:[{"@type":"ListItem",position:1,name:"Home",item:s.W6},{"@type":"ListItem",position:2,name:"Careers",item:`${s.W6}/careers/`},{"@type":"ListItem",position:3,name:e.title,item:n}]};return(0,a.jsxs)(r.A,{children:[(0,a.jsxs)("title",{children:[e.title," Jobs in Coimbatore | Sterlo Careers"]}),(0,a.jsx)("meta",{name:"description",content:`Apply for ${e.title} at Sterlo, Coimbatore. ${e.desc.slice(0,130)}. ${e.openings} openings available.`}),(0,a.jsx)("meta",{name:"keywords",content:`${e.title} jobs Coimbatore, ${e.title} careers, Sterlo ${e.title}, ${e.title} hiring Coimbatore`}),(0,a.jsx)("meta",{name:"robots",content:"index, follow"}),(0,a.jsx)("link",{rel:"canonical",href:n}),(0,a.jsx)("meta",{property:"og:type",content:"article"}),(0,a.jsx)("meta",{property:"og:title",content:`${e.title} | Sterlo Careers`}),(0,a.jsx)("meta",{property:"og:description",content:e.desc}),(0,a.jsx)("meta",{property:"og:url",content:n}),(0,a.jsx)("meta",{property:"og:image",content:`${s.W6}/img/career.png`}),(0,a.jsx)("meta",{property:"og:site_name",content:"Sterlo"}),(0,a.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),(0,a.jsx)("meta",{name:"twitter:title",content:`${e.title} | Sterlo Careers`}),(0,a.jsx)("meta",{name:"twitter:description",content:e.desc}),(0,a.jsx)("script",{type:"application/ld+json",children:JSON.stringify(o)}),(0,a.jsx)("script",{type:"application/ld+json",children:JSON.stringify(l)})]})}function p({role:e}){let[i,n]=(0,t.useState)(!1),r=e.title.toLowerCase().includes("intern");return(0,a.jsxs)(o.A,{children:[(0,a.jsx)("style",{children:l}),(0,a.jsx)(c,{role:e}),i&&(0,a.jsx)(d,{role:e,onClose:()=>n(!1)}),(0,a.jsx)("section",{className:"banner",children:(0,a.jsxs)("div",{className:"banner-inner",children:[(0,a.jsxs)("div",{className:"banner-eyebrow",children:[(0,a.jsx)("div",{className:"eyebrow-dot"}),r?"Internship Opening":"Open Position"]}),(0,a.jsx)("h1",{className:"banner-title",children:e.title}),(0,a.jsx)("p",{className:"banner-subtitle",children:e.desc})]})}),(0,a.jsxs)("div",{className:"jd-body",children:[(0,a.jsxs)("div",{className:"jd-content",children:[(0,a.jsx)("a",{className:"jd-back",href:"/careers/",children:"\u2190 Back to Open Roles"}),(0,a.jsxs)("div",{className:"jd-meta-row",children:[(0,a.jsxs)("div",{className:"jd-meta-item",children:[(0,a.jsx)("span",{className:"jd-meta-label",children:"Location"}),(0,a.jsxs)("span",{className:"jd-meta-value",children:["\u{1F4CD} ",e.location]})]}),(0,a.jsx)("div",{className:"jd-meta-divider"}),(0,a.jsxs)("div",{className:"jd-meta-item",children:[(0,a.jsx)("span",{className:"jd-meta-label",children:"Openings"}),(0,a.jsxs)("span",{className:"jd-meta-value",children:[e.openings," Positions"]})]}),(0,a.jsx)("div",{className:"jd-meta-divider"}),(0,a.jsxs)("div",{className:"jd-meta-item",children:[(0,a.jsx)("span",{className:"jd-meta-label",children:"Type"}),(0,a.jsx)("span",{className:"jd-meta-value",children:r?"Internship":"Full-time"})]}),(0,a.jsx)("div",{className:"jd-meta-divider"}),(0,a.jsxs)("div",{className:"jd-meta-item",children:[(0,a.jsx)("span",{className:"jd-meta-label",children:"Experience & Qualification"}),(0,a.jsx)("span",{className:"jd-meta-value",children:e.experience})]})]}),(0,a.jsxs)("div",{className:"jd-section",children:[(0,a.jsx)("h2",{className:"jd-section-title",children:"Job Description"}),(0,a.jsx)("ul",{className:"jd-bullets",children:e.jobDescription.map((e,i)=>(0,a.jsx)("li",{children:e},i))})]}),(0,a.jsxs)("div",{className:"jd-section",children:[(0,a.jsx)("h2",{className:"jd-section-title",children:"Skills Required"}),(0,a.jsx)("ul",{className:"jd-bullets",children:e.skills.map((e,i)=>(0,a.jsx)("li",{children:e},i))})]})]}),(0,a.jsx)("div",{className:"jd-sidebar",children:(0,a.jsxs)("div",{className:"jd-sticky-card",children:[(0,a.jsx)("div",{className:"jd-sticky-role",children:e.title}),(0,a.jsxs)("div",{className:"jd-sticky-loc",children:[(0,a.jsxs)("svg",{viewBox:"0 0 24 24",width:"14",height:"14",stroke:"currentColor",fill:"none",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round",children:[(0,a.jsx)("path",{d:"M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"}),(0,a.jsx)("circle",{cx:"12",cy:"10",r:"3"})]}),e.location]}),(0,a.jsx)("div",{className:"jd-sticky-divider"}),(0,a.jsxs)("div",{className:"jd-sticky-info",children:[(0,a.jsxs)("div",{className:"jd-info-row",children:[(0,a.jsx)("span",{children:"Openings"}),(0,a.jsx)("strong",{children:e.openings})]}),(0,a.jsxs)("div",{className:"jd-info-row",children:[(0,a.jsx)("span",{children:"Type"}),(0,a.jsx)("strong",{children:r?"Internship":"Full-time"})]}),(0,a.jsxs)("div",{className:"jd-info-row",children:[(0,a.jsx)("span",{children:"Location"}),(0,a.jsx)("strong",{children:e.location})]})]}),(0,a.jsx)("button",{className:"jd-apply-btn",onClick:()=>n(!0),children:"Apply Now \u2192"}),(0,a.jsx)("p",{className:"jd-apply-note",children:"We'll get back to you within 3\u20135 business days."})]})})]})]})}},6763(e,i,n){n.d(i,{Rf:()=>t,W6:()=>a,aj:()=>o,iy:()=>r,l0:()=>s});let a="https://www.priyamconsultancy.com",t=[{title:"Profile Screening",desc:"After receiving your application, our recruitment team reviews your qualifications, experience, and relevant skills to shortlist candidates who best fit the role requirements.",icon:"/img/icon/hiring-step1.webp"},{title:"Initial Interaction",desc:"A preliminary discussion is arranged to learn about your professional background, key strengths, career aspirations, and overall suitability for the opportunity.",icon:"/img/icon/hiring-step2.webp"},{title:"Technical / Functional Assessment",desc:"Candidates will attend a virtual discussion with the respective hiring panel, along with an assessment process designed to evaluate technical knowledge and functional expertise.",icon:"/img/icon/hiring-step3.webp"},{title:"Final Face-to-Face Discussion & Offer",desc:"Shortlisted candidates will participate in a final in-person meeting covering role expectations, work culture, compensation details, and joining timeline, followed by the official offer process.",icon:"/img/icon/hiring-step4.webp"}],o=[{title:"Website Developer",location:"Coimbatore",openings:2,experience:"Bachelor's degree or equivalent practical experience with 2+ years of website development experience.",desc:"Design, develop, and maintain high-performance websites and web applications that deliver exceptional user experiences across desktop and mobile platforms.",jobDescription:["Design, develop, and maintain high-performance websites","Optimize websites for speed, usability, and conversions","Collaborate with marketing and design teams for execution","Implement updates, enhancements, and new features","Troubleshoot technical issues and ensure smooth performance","Maintain documentation and version control","Stay updated with latest web technologies and best practices"],skills:["Strong knowledge of HTML, CSS, JavaScript, Shopify, WordPress Platform","Experience in responsive and performance-focused web development","Understanding of SEO, page speed, and UX best practices","Ability to debug and optimize websites efficiently","Experience working with APIs and third-party integrations","Effective utilization of AI tools for development, testing, and optimization","Strong problem-solving and analytical thinking","Ability to work independently and in collaborative teams"]},{title:"Digital Marketing Analyst",location:"Coimbatore",openings:2,experience:"Bachelor's degree or equivalent qualification with 2+ years of experience in digital marketing analytics.",desc:"Plan, execute, and optimise digital marketing campaigns across SEO, SEM, social media, and email channels to drive brand awareness, lead generation, and business growth.",jobDescription:["Track and analyze digital marketing performance across organic and paid channels","Manage technical SEO, on-page SEO, off-page SEO, and local SEO initiatives","Implement and optimize AEO, GEO, Google PMAX, and Meta Andromeda strategies","Prepare detailed performance reports, dashboards, and insights","Identify trends, gaps, and optimization opportunities across campaigns","Support campaign optimization using data-backed decisions","Monitor lead quality, conversion performance, and overall ROI","Maintain structured documentation and tracking frameworks","Stay updated with evolving analytics tools, AI-driven platforms, and marketing trends"],skills:["Strong understanding of SEO, AEO, GEO, paid ads, and social media performance metrics","Hands-on experience with Google Analytics, Search Console, and advertising platforms","Expertise in branding, organic lead generation, and paid campaign execution","Ability to analyze data and convert insights into actionable growth decisions","Knowledge of performance funnels, lead quality metrics, and conversion tracking","Strong experience in reporting, dashboards, and performance monitoring","Effective utilization of AI tools for analytics, forecasting, and optimization","High attention to data accuracy, detail, and insight communication"]},{title:"Content Writer",location:"Coimbatore",openings:2,experience:"Bachelor's degree or equivalent qualification with 2+ years of content writing experience.",desc:"Create compelling, SEO-optimised content across blogs, website pages, social media, and marketing collaterals that communicates our brand voice and drives audience engagement.",jobDescription:["Create high-quality content for blogs, websites, ads, and social media platforms","Plan, research, and execute content aligned with brand positioning and business goals","Align content strategy with SEO, AEO, and lead generation objectives","Collaborate closely with marketing teams on campaign-based content execution","Edit, refine, and optimize content for clarity, engagement, and performance","Conduct in-depth research to support authority-driven and insight-led content","Maintain structured content calendars, documentation, and publishing schedules","Stay updated with evolving content trends, search behavior, and AI-led discovery"],skills:["Strong writing, editing, and storytelling abilities","Understanding of SEO, AEO, and content structure","Ability to research and simplify complex topics","Knowledge of brand tone and messaging consistency","Experience writing blogs, website content, and social media copies","Effective utilization of AI tools for research and optimization","Attention to detail and content quality","Ability to meet deadlines consistently"]},{title:"Graphic Designer",location:"Coimbatore",openings:2,experience:"Bachelor's degree or equivalent qualification with 2+ years of graphic design experience.",desc:"Create visually compelling graphics, marketing creatives, and brand assets that communicate effectively across digital and print channels.",jobDescription:["Design creatives for digital marketing and branding","Maintain visual consistency across platforms","Collaborate with marketing and content teams","Create ad creatives, banners, and social visuals","Revise designs based on feedback","Maintain organized design assets","Stay updated with design trends and tools"],skills:["Strong understanding of design principles and branding","Experience with Adobe, CorelDraw, Canva","Ability to design creatives for social media, ads, and websites","Visual storytelling and layout skills","Attention to brand consistency and detail","Effective utilization of AI design tools for ideation and speed","Time management and creative problem-solving","Ability to work collaboratively with teams"]},{title:"HR Executive",location:"Coimbatore",openings:2,experience:"Bachelor's degree in Human Resources, Business Administration, or related field with 1+ years of HR or recruitment experience.",desc:"Support end-to-end recruitment, employee engagement, and HR operations to build a strong, motivated workforce aligned with organisational goals.",jobDescription:["Manage end-to-end recruitment and candidate coordination","Handle onboarding and employee documentation processes","Support employee engagement and internal communication activities","Coordinate interviews and maintain hiring records","Assist in implementing HR policies and procedures","Maintain employee databases and attendance records","Support management in day-to-day HR operations","Stay updated with HR practices and recruitment trends"],skills:["Strong understanding of recruitment, onboarding, and employee coordination","Good communication and interpersonal skills","Knowledge of HR processes, policies, and documentation","Ability to manage employee records and recruitment databases","Familiarity with MS Office and HR management tools","Strong organizational and multitasking abilities","Problem-solving mindset with attention to detail","Ability to work independently and within teams"]},{title:"Video Editor",location:"Coimbatore",openings:2,experience:"Bachelor's degree or equivalent practical experience with 1+ years of professional video editing experience.",desc:"Edit raw footage into engaging, high-quality videos aligned with brand goals by incorporating music, sound design, colour grading, and motion graphics.",jobDescription:["Edit engaging videos for marketing, branding, and social media platforms","Create high-quality visual content aligned with brand guidelines","Collaborate with creative and marketing teams for campaign execution","Add motion graphics, effects, subtitles, and audio enhancements","Optimize videos for different digital platforms and formats","Manage revisions and deliver projects within deadlines","Organize project files and maintain editing workflows","Stay updated with current editing trends and creative techniques"],skills:["Strong proficiency in Adobe Premiere Pro, After Effects, and video editing tools","Understanding of motion graphics, transitions, and storytelling techniques","Ability to edit content for social media, branding, and marketing campaigns","Knowledge of video formats, color correction, and audio balancing","Creativity with strong visual communication skills","Ability to manage multiple editing projects efficiently","Effective utilization of AI tools for editing and content enhancement","Attention to detail and time management skills"]},{title:"Web Developer Intern",location:"Coimbatore",openings:2,experience:"Student / Fresher pursuing or completed a relevant degree.",desc:"Assist the development team in building and maintaining web applications while gaining hands-on experience in modern web technologies and real-world projects.",jobDescription:["Assist in website development tasks","Support senior developers on live projects","Learn performance and SEO best practices","Debug and test website features","Maintain basic documentation","Apply learnings through hands-on execution","Continuously improve technical skills"],skills:["Basic knowledge of web development fundamentals","Willingness to learn modern development practices","Interest in website performance and optimization","Basic understanding of HTML, CSS, or JavaScript","Problem-solving mindset","Effective utilization of AI tools for learning and development","Good communication skills","Ability to follow guidance and instructions"]},{title:"Digital Marketing Intern",location:"Coimbatore",openings:2,experience:"Student / Fresher with interest in digital marketing.",desc:"Support the digital marketing team in executing campaigns, creating content, and analysing performance to build practical skills in a fast-paced marketing environment.",jobDescription:["Assist in SEO, AEO, GEO, ads, and social media tasks","Support campaign execution and reporting","Conduct market and keyword research","Learn analytics and performance tracking","Support content and lead generation activities","Maintain task documentation","Gain hands-on exposure to real campaigns"],skills:["Basic understanding of digital marketing concepts","Interest in SEO, AEO, GEO, ads, and social media","Willingness to learn analytics and tools","Research and data interpretation skills","Good communication skills","Effective utilization of AI tools for research and reporting","Curiosity and learning mindset","Ability to work in a team"]},{title:"Content Writer Intern",location:"Coimbatore",openings:2,experience:"Student / Fresher with interest in writing and content creation.",desc:"Assist the content team in creating well-researched, engaging written content for digital platforms while developing core writing, editing, and SEO skills.",jobDescription:["Assist in writing blogs and social media content","Conduct research for content topics","Edit and refine content drafts","Learn SEO and content frameworks","Support senior writers","Maintain content schedules","Improve writing through practice and feedback"],skills:["Basic writing and grammar skills","Interest in digital content and marketing","Research and learning ability","Creativity and storytelling mindset","Attention to detail","Effective utilization of AI tools for content drafting","Time management skills","Openness to feedback"]},{title:"Graphic Designer Intern",location:"Coimbatore",openings:2,experience:"Student / Fresher with basic design knowledge.",desc:"Support the design team in creating visually compelling graphics for digital and print channels while building proficiency in industry-standard design tools.",jobDescription:["Assist in creating marketing creatives","Support senior designers on projects","Learn brand guidelines and workflows","Design social media and basic visuals","Revise designs based on feedback","Maintain organized design assets","Improve skills through hands-on practice"],skills:["Basic understanding of design principles","Familiarity with design tools","Creativity and visual sense","Willingness to learn branding systems","Attention to detail","Effective utilization of AI design tools for ideation","Time management skills","Ability to accept feedback"]},{title:"HR Executive Intern",location:"Coimbatore",openings:2,experience:"Pursuing or recently completed a degree in Human Resources, Business Administration, or related field.",desc:"Assist the HR team with recruitment coordination, employee engagement activities, and HR operations to gain practical exposure in core human resources functions.",jobDescription:["Assist the HR team in recruitment and onboarding activities","Schedule interviews and coordinate with candidates","Maintain employee and recruitment records","Support internal HR operations and documentation","Help with employee engagement initiatives","Assist in preparing reports and HR-related data","Coordinate communication between teams and candidates","Learn and support daily HR administrative tasks"],skills:["Good verbal and written communication skills","Basic understanding of recruitment and HR operations","Familiarity with MS Office and online recruitment platforms","Strong coordination and organizational abilities","Willingness to learn and adapt in a fast-paced environment","Attention to detail and professional attitude","Ability to manage tasks efficiently","Team collaboration and interpersonal skills"]},{title:"Video Editor Intern",location:"Coimbatore",openings:2,experience:"Pursuing or recently completed a degree in Visual Communication, Media, Multimedia, or related field.",desc:"Assist the creative team in editing video content for digital platforms while developing hands-on skills in post-production, colour grading, and motion graphics.",jobDescription:["Assist in editing videos for social media and marketing campaigns","Support the creative team with video production requirements","Add basic transitions, subtitles, and audio adjustments","Organize raw footage and project files efficiently","Participate in brainstorming and creative discussions","Assist with content formatting for different platforms","Learn editing workflows and content optimization techniques","Support the team in day-to-day video editing activities"],skills:["Basic knowledge of Adobe Premiere Pro, After Effects, or similar editing software","Understanding of video editing principles and storytelling","Interest in social media and digital content creation","Creativity and willingness to learn new editing techniques","Basic knowledge of audio editing and transitions","Ability to manage tasks and meet deadlines","Attention to detail and visual consistency","Team collaboration and communication skills"]}];function r(e){return e.toLowerCase().replace(/\s+/g,"-")}function s(e){return o.find(i=>r(i.title)===e)||null}},1473(e,i,n){n.r(i),n.d(i,{default:()=>r});var a=n(4848),t=n(5348);let o=(0,n(6763).l0)("web-developer-intern");function r(){return o?(0,a.jsx)(t.A,{role:o}):(0,a.jsx)("div",{children:"Role not found"})}}}]);
