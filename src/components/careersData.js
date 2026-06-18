@@ -28,6 +28,16 @@ export const openRoles = [
     title: "Website Developer",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "Web Developer | Careers at Priyam Consultancy ",
+      description:
+        "Looking for a Website Developer job? Join PCS and build innovative websites, enhance your technical skills, and grow your career in a dynamic environment.",
+      keywords:
+        "Website Developer Jobs ,Website Developer Career, Web Developer Jobs,  Website Developer Vacancy",
+      canonical:
+        "https://www.priyamconsultancy.com/career/website-developer/"
+    },
+
     experience: "Bachelor's degree or equivalent practical experience with 2+ years of website development experience.",
     desc: "Design, develop, and maintain high-performance websites and web applications that deliver exceptional user experiences across desktop and mobile platforms.",
     jobDescription: [
@@ -54,6 +64,16 @@ export const openRoles = [
     title: "Digital Marketing Analyst",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "Digital Marketing Analyst Jobs | Careers at Priyam Consultancy  ",
+      description:
+        "Join Priyam Consultancy as a Digital Marketing Analyst. Work on SEO, PPC, social media, and analytics projects while growing your digital marketing career. ",
+      keywords:
+        "Digital Marketing Analyst Jobs,Digital Marketing Analyst Career ,Digital Marketing Jobs",
+      canonical:
+        "https://www.priyamconsultancy.com/career/digital-marketing-analyst"
+    },
+
     experience: "Bachelor's degree or equivalent qualification with 2+ years of experience in digital marketing analytics.",
     desc: "Plan, execute, and optimise digital marketing campaigns across SEO, SEM, social media, and email channels to drive brand awareness, lead generation, and business growth.",
     jobDescription: [
@@ -82,6 +102,16 @@ export const openRoles = [
     title: "Content Writer",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "Content Writer Career Opportunities | PCS  ",
+      description:
+        " Looking for Content Writer jobs? Join PCS to create engaging content, improve SEO performance, and grow your career in digital marketing.",
+      keywords:
+        "Content Writer Career, Content Writing Jobs, SEO Content Writer Jobs ",
+      canonical:
+        "https://www.priyamconsultancy.com/career/content-writer/"
+    },
+
     experience: "Bachelor's degree or equivalent qualification with 2+ years of content writing experience.",
     desc: "Create compelling, SEO-optimised content across blogs, website pages, social media, and marketing collaterals that communicates our brand voice and drives audience engagement.",
     jobDescription: [
@@ -109,6 +139,16 @@ export const openRoles = [
     title: "Graphic Designer",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "Graphic Designer Jobs | Careers at Priyam Consultancy",
+      description:
+        "Looking for Graphic Designer jobs? Join Priyam Consultancy to work on branding, social media creatives, websites, and marketing campaigns. ",
+      keywords:
+        "Graphic Designer Career , Graphic Designer Jobs, SEO Content Writer Jobs",
+      canonical:
+        "https://www.priyamconsultancy.com/career/graphic-designer/"
+    },
+
     experience: "Bachelor's degree or equivalent qualification with 2+ years of graphic design experience.",
     desc: "Create visually compelling graphics, marketing creatives, and brand assets that communicate effectively across digital and print channels.",
     jobDescription: [
@@ -135,6 +175,16 @@ export const openRoles = [
     title: "HR Executive",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "HR Executive Jobs | Careers at Priyam Consultancy ",
+      description:
+        "Join Priyam Consultancy as an HR Executive and gain practical experience in recruitment, onboarding, employee engagement, and HR operations. ",
+      keywords:
+        "HR Executive Jobs, HR Executive Jobs ,HR career",
+      canonical:
+        "https://www.priyamconsultancy.com/career/hr-executive/"
+    },
+
     experience: "Bachelor's degree in Human Resources, Business Administration, or related field with 1+ years of HR or recruitment experience.",
     desc: "Support end-to-end recruitment, employee engagement, and HR operations to build a strong, motivated workforce aligned with organisational goals.",
     jobDescription: [
@@ -162,6 +212,16 @@ export const openRoles = [
     title: "Video Editor",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "Video Editor Jobs | Careers at Priyam Consultancy  ",
+      description:
+        "Apply for Video Editor jobs at Priyam Consultancy. Create engaging video content, reels, marketing campaigns, and brand stories for diverse clients",
+      keywords:
+        "Video Editor Career, Video Editing Jobs, Video Editor Jobs, Video Production Jobs",
+      canonical:
+        "https://www.priyamconsultancy.com/career/video-editor/"
+    },
+
     experience: "Bachelor's degree or equivalent practical experience with 1+ years of professional video editing experience.",
     desc: "Edit raw footage into engaging, high-quality videos aligned with brand goals by incorporating music, sound design, colour grading, and motion graphics.",
     jobDescription: [
@@ -189,6 +249,16 @@ export const openRoles = [
     title: "Web Developer Intern",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "Web Developer Internship | Careers at Priyam Consultancy",
+      description:
+        "Apply for a Web Developer Internship at Priyam Consultancy. Gain hands-on experience in website development, coding, and real-world client projects.  ",
+      keywords:
+        "Web Developer Internship,Web Development Internship,Web Developer Intern Jobs",
+      canonical:
+        "https://www.priyamconsultancy.com/career/web-developer-intern/"
+    },
+
     experience: "Student / Fresher pursuing or completed a relevant degree.",
     desc: "Assist the development team in building and maintaining web applications while gaining hands-on experience in modern web technologies and real-world projects.",
     jobDescription: [
@@ -215,6 +285,16 @@ export const openRoles = [
     title: "Digital Marketing Intern",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "Digital Marketing Internship | Careers at Priyam Consultancy ",
+      description:
+        " Looking for a Digital Marketing Internship? Work on real client projects and build practical skills in SEO, PPC, social media, and analytics. ",
+      keywords:
+        "Digital Marketing Internship,Digital Marketing Intern ,Digital Marketing Internship in Coimbatore",
+      canonical:
+        "https://www.priyamconsultancy.com/career/digital-marketing-intern/"
+    },
+
     experience: "Student / Fresher with interest in digital marketing.",
     desc: "Support the digital marketing team in executing campaigns, creating content, and analysing performance to build practical skills in a fast-paced marketing environment.",
     jobDescription: [
@@ -241,6 +321,16 @@ export const openRoles = [
     title: "Content Writer Intern",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "Content Writer Internship | Careers at Priyam Consultancy ",
+      description:
+        "Start your content writing career with a Content Writer Internship at Priyam Consultancy and gain practical experience in digital marketing. ",
+      keywords:
+        "Content Writer Internship,Content Writer Intern, Content Writing Internship , SEO Content Writer Internship",
+      canonical:
+        "http://localhost:3000/career/content-writer-intern/"
+    },
+
     experience: "Student / Fresher with interest in writing and content creation.",
     desc: "Assist the content team in creating well-researched, engaging written content for digital platforms while developing core writing, editing, and SEO skills.",
     jobDescription: [
@@ -267,6 +357,16 @@ export const openRoles = [
     title: "Graphic Designer Intern",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "Apply for a Graphic Design Internship | PCS  ",
+      description:
+        "Looking for a Graphic Design Internship? Work on real client projects, create engaging digital designs, and build a strong creative portfolio. ",
+      keywords:
+        "Graphic Design Internship ,Graphic Designer Intern,Graphic Design Internship",
+      canonical:
+        "https://www.priyamconsultancy.com/career/graphic-designer-intern"
+    },
+
     experience: "Student / Fresher with basic design knowledge.",
     desc: "Support the design team in creating visually compelling graphics for digital and print channels while building proficiency in industry-standard design tools.",
     jobDescription: [
@@ -293,6 +393,16 @@ export const openRoles = [
     title: "HR Executive Intern",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "HR Executive Internship | Careers at Priyam Consultancy ",
+      description:
+        "Apply for an HR Internship at Priyam Consultancy. Gain hands-on experience in recruitment, onboarding, employee engagement, and HR operations. ",
+      keywords:
+        "HR Internship,HR Executive Intern,Human Resources Internship",
+      canonical:
+        "https://www.priyamconsultancy.com/career/hr-executive-intern/"
+    },
+
     experience: "Pursuing or recently completed a degree in Human Resources, Business Administration, or related field.",
     desc: "Assist the HR team with recruitment coordination, employee engagement activities, and HR operations to gain practical exposure in core human resources functions.",
     jobDescription: [
@@ -320,6 +430,16 @@ export const openRoles = [
     title: "Video Editor Intern",
     location: "Coimbatore",
     openings: 2,
+    seo: {
+      title: "Video Editing Internship | Careers at Priyam Consultancy ",
+      description:
+        "Looking for a Video Editing Internship? Work on real client projects, create engaging video content, and build a professional creative portfolio.   ",
+      keywords:
+        "Video Editor Intern, Video Editing Internship, Video Editing Internship",
+      canonical:
+        " https://www.priyamconsultancy.com/career/video-editor-intern/"
+    },
+
     experience: "Pursuing or recently completed a degree in Visual Communication, Media, Multimedia, or related field.",
     desc: "Assist the creative team in editing video content for digital platforms while developing hands-on skills in post-production, colour grading, and motion graphics.",
     jobDescription: [

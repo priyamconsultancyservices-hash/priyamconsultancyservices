@@ -114,8 +114,8 @@ const styles = `
     display: grid;
     grid-template-columns: 1fr 320px;
     gap: 2.5rem;
-    max-width: 1280px;
-    margin: 0 auto;
+    // max-width: 1280px;
+    margin: 0 60px;
     padding: 3rem 2rem;
     align-items: start;
   }
@@ -435,117 +435,117 @@ function ApplyModal({ role, onClose }) {
   //     setLoading(false);
   //   }
   // };
-const handleSubmit = async () => {
-  if (!form.name || !form.email || !form.phone) {
-    alert("Please fill all required fields.");
-    return;
-  }
+  const handleSubmit = async () => {
+    if (!form.name || !form.email || !form.phone) {
+      alert("Please fill all required fields.");
+      return;
+    }
 
-  setLoading(true);
+    setLoading(true);
 
-  try {
-    let resumeUrl = "";
+    try {
+      let resumeUrl = "";
 
-    // Upload Resume to Cloudinary
-    if (resume) {
-      const cloudData = new FormData();
+      // Upload Resume to Cloudinary
+      if (resume) {
+        const cloudData = new FormData();
 
-      cloudData.append("file", resume);
-      cloudData.append("upload_preset", "PCS Career");
+        cloudData.append("file", resume);
+        cloudData.append("upload_preset", "PCS Career");
 
-   const cloudRes = await fetch(
-  "https://api.cloudinary.com/v1_1/dsmzvp3ew/raw/upload",
-  {
-    method: "POST",
-    body: cloudData,
-  }
-);
-
-      const cloudResult = await cloudRes.json();
-
-      if (!cloudRes.ok) {
-        throw new Error(
-          cloudResult?.error?.message ||
-            "Resume upload failed."
+        const cloudRes = await fetch(
+          "https://api.cloudinary.com/v1_1/dsmzvp3ew/raw/upload",
+          {
+            method: "POST",
+            body: cloudData,
+          }
         );
+
+        const cloudResult = await cloudRes.json();
+
+        if (!cloudRes.ok) {
+          throw new Error(
+            cloudResult?.error?.message ||
+            "Resume upload failed."
+          );
+        }
+
+        resumeUrl = cloudResult.secure_url;
       }
 
-      resumeUrl = cloudResult.secure_url;
-    }
+      // Send Details to Formspree
+      const formData = new FormData();
 
-    // Send Details to Formspree
-    const formData = new FormData();
+      formData.append(
+        "_subject",
+        `New Job Application — ${role.title}`
+      );
 
-    formData.append(
-      "_subject",
-      `New Job Application — ${role.title}`
-    );
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("phone", form.phone);
+      formData.append("role_title", role.title);
+      formData.append("location", role.location);
 
-    formData.append("name", form.name);
-    formData.append("email", form.email);
-    formData.append("phone", form.phone);
-    formData.append("role_title", role.title);
-    formData.append("location", role.location);
+      formData.append(
+        "years_of_experience",
+        form.experience || "Not specified"
+      );
 
-    formData.append(
-      "years_of_experience",
-      form.experience || "Not specified"
-    );
+      formData.append(
+        "linkedin_profile",
+        form.linkedin || "Not provided"
+      );
 
-    formData.append(
-      "linkedin_profile",
-      form.linkedin || "Not provided"
-    );
+      formData.append(
+        "cover_note",
+        form.cover || "Not provided"
+      );
 
-    formData.append(
-      "cover_note",
-      form.cover || "Not provided"
-    );
+      formData.append(
+        "resume_url",
+        resumeUrl || "Resume not uploaded"
+      );
 
-    formData.append(
-      "resume_url",
-      resumeUrl || "Resume not uploaded"
-    );
+      const res = await fetch(
+        "https://formspree.io/f/xbdqnqre",
+        {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      );
 
-    const res = await fetch(
-      "https://formspree.io/f/xbdqnqre",
-      {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
+      const data = await res.json();
+
+      if (res.ok) {
+        setSubmitted(true);
+
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          experience: "",
+          linkedin: "",
+          cover: "",
+        });
+
+        setResume(null);
+      } else {
+        const errMsg =
+          data?.errors?.map((e) => e.message).join(", ") ||
+          "Something went wrong.";
+
+        alert(`Error: ${errMsg}`);
       }
-    );
-
-    const data = await res.json();
-
-    if (res.ok) {
-      setSubmitted(true);
-
-      setForm({
-        name: "",
-        email: "",
-        phone: "",
-        experience: "",
-        linkedin: "",
-        cover: "",
-      });
-
-      setResume(null);
-    } else {
-      const errMsg =
-        data?.errors?.map((e) => e.message).join(", ") ||
-        "Something went wrong.";
-
-      alert(`Error: ${errMsg}`);
+    } catch (err) {
+      alert(err.message || "Submission failed.");
+    } finally {
+      setLoading(false);
     }
-  } catch (err) {
-    alert(err.message || "Submission failed.");
-  } finally {
-    setLoading(false);
-  }
-};
+  };
   return (
     <div className="modal-overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
       <div className="modal-box">
@@ -679,19 +679,19 @@ function JobSEO({ role }) {
 
   return (
     <Head>
-      <title>{role.title} Jobs in Coimbatore | Sterlo Careers</title>
-      <meta name="description" content={`Apply for ${role.title} at Sterlo, Coimbatore. ${role.desc.slice(0, 130)}. ${role.openings} openings available.`} />
-      <meta name="keywords" content={`${role.title} jobs Coimbatore, ${role.title} careers, Sterlo ${role.title}, ${role.title} hiring Coimbatore`} />
+      <title>{role.seo?.title || `${role.title} `} </title>
+      <meta name="description"  content={role.seo?.description || role.desc} />
+      <meta name="keywords" content={role.seo?.keywords || role.title}/>
+      <link rel="canonical"  href={role.seo?.canonical || canonicalUrl} />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={canonicalUrl} />
       <meta property="og:type" content="article" />
-      <meta property="og:title" content={`${role.title} | Sterlo Careers`} />
+      <meta property="og:title" content={`${role.title}`} />
       <meta property="og:description" content={role.desc} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={`${SITE_URL}/img/career.png`} />
       <meta property="og:site_name" content="Sterlo" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={`${role.title} | Sterlo Careers`} />
+      <meta name="twitter:title" content={`${role.title} `} />
       <meta name="twitter:description" content={role.desc} />
       <script type="application/ld+json">{JSON.stringify(jobSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>

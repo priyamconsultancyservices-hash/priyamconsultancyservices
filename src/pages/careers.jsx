@@ -248,7 +248,7 @@ const styles = `
   /* shared eyebrow helpers used from original CSS */
   .partners-eyebrow {
     display: inline-flex; align-items: center; gap: .45rem;
-    color: var(--blue); font-size: .72rem; font-weight: 700;
+    color: #ed8337; font-size: .95rem; font-weight: 900;
     letter-spacing: .13em; text-transform: uppercase;
   }
   .hww-title {
