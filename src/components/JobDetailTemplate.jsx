@@ -401,41 +401,151 @@ function ApplyModal({ role, onClose }) {
     if (file) setResume(file);
   };
 
-  const handleSubmit = async () => {
-    if (!form.name || !form.email || !form.phone) return;
-    setLoading(true);
-    try {
-      const formData = new FormData();
-      formData.append("_subject", `New Job Application — ${role.title}`);
-      formData.append("name", form.name);
-      formData.append("email", form.email);
-      formData.append("phone", form.phone);
-      formData.append("role_title", role.title);
-      formData.append("location", role.location);
-      formData.append("years_of_experience", form.experience || "Not specified");
-      formData.append("linkedin_profile", form.linkedin || "Not provided");
-      formData.append("cover_note", form.cover || "Not provided");
-      if (resume) formData.append("resume", resume);
+  // const handleSubmit = async () => {
+  //   if (!form.name || !form.email || !form.phone) return;
+  //   setLoading(true);
+  //   try {
+  //     const formData = new FormData();
+  //     formData.append("_subject", `New Job Application — ${role.title}`);
+  //     formData.append("name", form.name);
+  //     formData.append("email", form.email);
+  //     formData.append("phone", form.phone);
+  //     formData.append("role_title", role.title);
+  //     formData.append("location", role.location);
+  //     formData.append("years_of_experience", form.experience || "Not specified");
+  //     formData.append("linkedin_profile", form.linkedin || "Not provided");
+  //     formData.append("cover_note", form.cover || "Not provided");
+  //     if (resume) formData.append("resume", resume);
 
-      const res = await fetch("https://formspree.io/f/xbdqnqre", {
+  //     const res = await fetch("https://formspree.io/f/xbdqnqre", {
+  //       method: "POST",
+  //       body: formData,
+  //       headers: { Accept: "application/json" },
+  //     });
+  //     const data = await res.json();
+  //     if (res.ok) {
+  //       setSubmitted(true);
+  //     } else {
+  //       const errMsg = data?.errors?.map((e) => e.message).join(", ") || "Something went wrong.";
+  //       alert(`Error: ${errMsg}`);
+  //     }
+  //   } catch (err) {
+  //     alert(err.message || "Network error. Please check your connection.");
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+const handleSubmit = async () => {
+  if (!form.name || !form.email || !form.phone) {
+    alert("Please fill all required fields.");
+    return;
+  }
+
+  setLoading(true);
+
+  try {
+    let resumeUrl = "";
+
+    // Upload Resume to Cloudinary
+    if (resume) {
+      const cloudData = new FormData();
+
+      cloudData.append("file", resume);
+      cloudData.append("upload_preset", "PCS Career");
+
+   const cloudRes = await fetch(
+  "https://api.cloudinary.com/v1_1/dsmzvp3ew/raw/upload",
+  {
+    method: "POST",
+    body: cloudData,
+  }
+);
+
+      const cloudResult = await cloudRes.json();
+
+      if (!cloudRes.ok) {
+        throw new Error(
+          cloudResult?.error?.message ||
+            "Resume upload failed."
+        );
+      }
+
+      resumeUrl = cloudResult.secure_url;
+    }
+
+    // Send Details to Formspree
+    const formData = new FormData();
+
+    formData.append(
+      "_subject",
+      `New Job Application — ${role.title}`
+    );
+
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("phone", form.phone);
+    formData.append("role_title", role.title);
+    formData.append("location", role.location);
+
+    formData.append(
+      "years_of_experience",
+      form.experience || "Not specified"
+    );
+
+    formData.append(
+      "linkedin_profile",
+      form.linkedin || "Not provided"
+    );
+
+    formData.append(
+      "cover_note",
+      form.cover || "Not provided"
+    );
+
+    formData.append(
+      "resume_url",
+      resumeUrl || "Resume not uploaded"
+    );
+
+    const res = await fetch(
+      "https://formspree.io/f/xbdqnqre",
+      {
         method: "POST",
         body: formData,
-        headers: { Accept: "application/json" },
-      });
-      const data = await res.json();
-      if (res.ok) {
-        setSubmitted(true);
-      } else {
-        const errMsg = data?.errors?.map((e) => e.message).join(", ") || "Something went wrong.";
-        alert(`Error: ${errMsg}`);
+        headers: {
+          Accept: "application/json",
+        },
       }
-    } catch (err) {
-      alert(err.message || "Network error. Please check your connection.");
-    } finally {
-      setLoading(false);
-    }
-  };
+    );
 
+    const data = await res.json();
+
+    if (res.ok) {
+      setSubmitted(true);
+
+      setForm({
+        name: "",
+        email: "",
+        phone: "",
+        experience: "",
+        linkedin: "",
+        cover: "",
+      });
+
+      setResume(null);
+    } else {
+      const errMsg =
+        data?.errors?.map((e) => e.message).join(", ") ||
+        "Something went wrong.";
+
+      alert(`Error: ${errMsg}`);
+    }
+  } catch (err) {
+    alert(err.message || "Submission failed.");
+  } finally {
+    setLoading(false);
+  }
+};
   return (
     <div className="modal-overlay" onClick={(e) => e.target === e.currentTarget && onClose()}>
       <div className="modal-box">
