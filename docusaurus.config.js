@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Digital Transformation and Digital Marketing Agency in India',
+  title: 'Priyam Consultancy Services | Digital Marketing, HR & Business Solutions',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/pcs-fav-icon.webp',
 
