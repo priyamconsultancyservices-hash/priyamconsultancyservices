@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Layout from '@theme/Layout';
 import CTASection from "../components/HomePage/CTA";
+import emailjs from "@emailjs/browser";
 
 import Head from '@docusaurus/Head';
 
@@ -180,19 +181,25 @@ function SEOHead() {
 
   return (
     <Head>
-      <title>No.1 Digital Marketing Company in Coimbatore | ROI-Driven </title>
-      <meta name="description" content="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. " />
+      <title>: No.1 Digital Marketing Company in Coimbatore | ROI-Driven  </title>
+      <meta name="description" content="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. 
+
+" />
       <meta name="keywords" content="digital marketing services India, SEO services, social media marketing, PPC advertising, content marketing, email marketing, online marketing agency, digital marketing company India, PCS Business Solution" />
       <link rel="canonical" href={pageUrl} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="No.1 Digital Marketing Company in Coimbatore | ROI-Driven " />
-      <meta property="og:description" content="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. " />
+      <meta property="og:title" content=": No.1 Digital Marketing Company in Coimbatore | ROI-Driven  " />
+      <meta property="og:description" content="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. 
+
+" />
       <meta property="og:url" content={pageUrl} />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="No.1 Digital Marketing Company in Coimbatore | ROI-Driven " />
-      <meta name="twitter:description" content="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. " />
+      <meta name="twitter:title" content=": No.1 Digital Marketing Company in Coimbatore | ROI-Driven  " />
+      <meta name="twitter:description" content="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. 
+
+" />
       <meta name="twitter:image" content={imageUrl} />
       {schemaData.map((schema, i) => (
         <script key={i} type="application/ld+json">
@@ -273,7 +280,7 @@ const FontLoader = () => (
     }
 
     /* ── BENEFITS SECTION ── */
-    .tl-section{position:relative;padding:6rem 4%;background:#ffffff;overflow:hidden;}
+    .tl-section{position:relative;padding:6rem 4% 4%;background:#ffffff;overflow:hidden;}
     .tl-inner{position:relative;z-index:2;margin:0 auto;}
     .tl-header{text-align:center;margin-bottom:4rem;}
     .tl-heading{font-family:'Poppins',sans-serif;font-size:clamp(1.7rem,2.8vw,2.4rem);font-weight:700;line-height:1.15;color:#000;margin-bottom:.85rem;}
@@ -680,175 +687,271 @@ content: '';
 const PROCESS_STEPS = [
   { step: "01", title: "Insight Discovery ", phase: "Phase 1 — Understand", desc: "We begin with in-depth research to clearly understand your business, industry landscape, and competitive environment. This includes industry analysis, competitor mapping, keyword research, audience behavior insights, and current performance evaluation. By identifying opportunities, challenges, and intent-driven data, we lay a strong foundation for a focused and effective digital marketing strategy.", bullets: [] },
   { step: "02", title: "Strategy Planning ", phase: "Phase 2 — Planning ", desc: "As a strategy-first digital marketing agency, we design customized growth roadmaps aligned with your specific objectives—whether it’s brand awareness, lead generation, customer acquisition, or revenue growth. Each roadmap outlines clear action plans, timelines, channels, and performance benchmarks to ensure every digital effort contributes directly to your business goals.", bullets: [] },
-  { step: "03", title: ". Rapid Execution ", phase: "Phase 3 — Execution ", desc: "Once the strategy is defined, our in-house team of digital marketing specialists executes with speed, precision, and accountability. From SEO and paid advertising to content creation and social media campaigns, we ensure seamless execution across platforms while maintaining quality, consistency, and alignment with the overall growth plan", bullets: [] },
+  { step: "03", title: "Rapid Execution ", phase: "Phase 3 — Execution ", desc: "Once the strategy is defined, our in-house team of digital marketing specialists executes with speed, precision, and accountability. From SEO and paid advertising to content creation and social media campaigns, we ensure seamless execution across platforms while maintaining quality, consistency, and alignment with the overall growth plan.", bullets: [] },
   { step: "04", title: "Continuous Optimization", phase: "Phase 4 — Optimize ", desc: "Digital marketing is an ongoing process, not a one-time activity. We continuously monitor campaign performance, analyze data, test new approaches, and optimize strategies in real time. By refining targeting, creatives, content, and funnels, we ensure sustained growth, improved efficiency, and long-term digital success.", bullets: [] },
 ];
 
 // hero section 
 
+const HERO_STATS = [
+  {
+    value: "₹17.88 Cr+",
+    label: "Total Ad Spend Managed",
+    icon: (
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 6v2m0 8v2M9.5 9.5a2.5 2.5 0 0 1 5 0c0 1.5-1.5 2-2.5 2.5S9.5 14 9.5 15.5a2.5 2.5 0 0 0 5 0"/>
+      </svg>
+    ),
+  },
+  {
+    value: "1,93,989+",
+    label: "Leads Generated",
+    icon: (
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+    ),
+  },
+  {
+    value: "829+",
+    label: "Campaigns Managed",
+    icon: (
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <line x1="18" y1="20" x2="18" y2="10"/>
+        <line x1="12" y1="20" x2="12" y2="4"/>
+        <line x1="6" y1="20" x2="6" y2="14"/>
+      </svg>
+    ),
+  },
+  {
+    value: "4X",
+    label: "Average ROI Delivered",
+    icon: (
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+        <polyline points="17 6 23 6 23 12"/>
+      </svg>
+    ),
+  },
+];
+ 
 function HeroSection() {
   return (
     <section className="hero" id="hero">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-/* ══════════════════════════════════════════
-   HERO — BRC Standard Layout
-══════════════════════════════════════════ */
-:root {
-  --navy:      #004168;
-  --navy-deep: #011a2a;
-  --navy-mid:  #0a3652;
-  --orange:    #ed8337;
-  --orange-l:  #f5a66b;
-  --dim:       rgba(255,255,255,0.45);
-  --dim2:      rgba(255,255,255,0.5);
-}
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Poppins', sans-serif; color: #fff; overflow-x: hidden; }
-
-.hero {
-  min-height: 100svh;
-  display: grid; grid-template-columns: 1fr 1fr;
-  align-items: center; gap: 2rem;
-  padding: 2rem 6% 4rem;
-  position: relative; overflow: hidden;
-  background: var(--navy);
-}
-.hero::before {
-  content: ''; position: absolute; inset: 0; pointer-events: none;
-  background:
-    radial-gradient(ellipse 65% 70% at 100% 50%, rgba(237,131,55,0.10) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 60% at 0% 100%, rgba(10,66,102,0.5) 0%, transparent 55%);
-}
-.hero::after {
-  content: ''; position: absolute; inset: 0; pointer-events: none;
-  background-image: linear-gradient(rgba(237,131,55,0.028) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(237,131,55,0.028) 1px, transparent 1px);
-  background-size: 52px 52px;
-}
-
-.hero-left { position: relative; z-index: 2; display: flex; flex-direction: column; }
-
-.h-badge {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: rgba(237,131,55,0.1); border: 1px solid rgba(237,131,55,0.28);
-  color: var(--orange); font-size: 0.72rem; font-weight: 600;
-  padding: 0.38rem 1rem; border-radius: 50px;
-  letter-spacing: 0.09em; text-transform: uppercase;
-  width: fit-content; animation: fadeUp 0.6s ease both;
-}
-.badge-dot {
-  width: 6px; height: 6px; border-radius: 50%; background: var(--orange);
-  animation: pulse-dot 1.6s infinite;
-}
-@keyframes pulse-dot { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.4; transform:scale(1.5); } }
-
-.hero-heading {
-  font-family: 'Poppins', sans-serif;
-  font-size: clamp(2.2rem, 3.8vw, 3rem);
-  font-weight: 600; line-height: 1.15;
-  margin-top: 1.4rem; animation: fadeUp 0.7s 0.08s ease both; color: #fff;
-}
-.hero-heading .hl { color: var(--orange); }
-.hero-heading .lined { position: relative; display: inline-block; }
-.hero-heading .lined::after {
-  content: ''; position: absolute; left: 0; bottom: -3px;
-  width: 100%; height: 3px; background: var(--orange); border-radius: 2px;
-  transform: scaleX(0); transform-origin: left;
-  animation: line-in 0.5s 0.9s ease forwards;
-}
-/* orange span support */
-.hero-heading .orange { color: var(--orange); }
-.hero-heading .underline-word { position: relative; display: inline-block; }
-.hero-heading .underline-word::after {
-  content: ''; position: absolute; left: 0; bottom: -3px;
-  width: 100%; height: 3px; background: linear-gradient(90deg,#ed8337,#f5a66b); border-radius: 2px;
-  transform: scaleX(0); transform-origin: left;
-  animation: line-in 0.55s 1s ease forwards;
-}
-@keyframes line-in { to { transform: scaleX(1); } }
-
-.hero-sub {
-  margin-top: 1.4rem; font-size: 1rem; line-height: 1.78;
-  color: rgb(255, 255, 255); max-width: fit-content;
-  animation: fadeUp 0.7s 0.16s ease both;
-}
-.hero-actions { margin-top: 2rem; display: flex; gap: 0.9rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.26s ease both; }
-.btn-fill {
-  background: var(--orange);
-  padding: 0.85rem 2rem; border-radius: 50px;
-  font-family: 'Poppins', sans-serif; font-size: 0.92rem; font-weight: 500;
-  text-decoration: none; border: none; cursor: pointer; color: #fff;
-  box-shadow: 0 4px 22px rgba(237,131,55,0.32);
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
-}
-.btn-fill:hover { background: var(--orange-l); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(237,131,55,0.42); }
-.btn-arrow {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 22px; height: 22px; border-radius: 50%;
-  background: rgba(2,43,68,0.3); font-size: 0.85rem;
-}
-@keyframes fadeUp { from{ opacity:0; transform:translateY(26px); } to{ opacity:1; transform:translateY(0); } }
-
-.hero-right {
-  overflow: hidden; width: 100%; height: auto;
-  position: relative; z-index: 2;
-  display: flex; align-items: center; justify-content: center;
-}
-img.hero-img { animation: none !important; }
-.hero-img {
-  width: 100%;
-  object-fit: contain;
-  display: block;
-}
-
-/* ══ TABLET (≤ 960px) ══ */
-@media(max-width: 960px) {
-  .hero {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-    padding: 6rem 5% 4rem;
-    min-height: auto;
-    text-align: start;
-    gap: 2.5rem;
-  }
-  .hero-left { order: 1; align-items: flex-start;         padding: 3rem 0; }
-  .hero-right { width: 100% !important; height: auto !important; order: 2; display: flex; justify-content: center; }
-  .hero-img { width: 100%; max-width: 480px; height: auto; }
-  .hero-sub { max-width: 90%; }
-  .hero-actions { justify-content: flex-start; }
-}
-
-/* ══ MOBILE (≤ 600px) ══ */
-@media(max-width: 600px) {
-  .hero { padding: 5rem 4% 3rem; gap: 2rem; }
-  .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
-  .hero-sub { font-size: 0.9rem; max-width: 100%; }
-  .hero-img { max-width: 100%; width: 100%; }
-  .h-badge { font-size: 0.65rem; }
-}
-.menu li { position: relative; cursor: pointer; font-size: 16px; color: black; }
-
+ 
+        :root {
+          --navy:      #004168;
+          --navy-deep: #011a2a;
+          --navy-mid:  #0a3652;
+          --orange:    #ed8337;
+          --orange-l:  #f5a66b;
+          --dim:       rgba(255,255,255,0.45);
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: #fff; overflow-x: hidden; }
+ 
+        .hero {
+          min-height: 100svh;
+          display: grid; grid-template-columns: 1fr 1fr;
+          align-items: center; gap: 2rem;
+          padding: 2rem 6% 4rem;
+          position: relative; overflow: hidden;
+          background: var(--navy);
+        }
+        .hero::before {
+          content: ''; position: absolute; inset: 0; pointer-events: none;
+          background:
+            radial-gradient(ellipse 65% 70% at 100% 50%, rgba(237,131,55,0.10) 0%, transparent 60%),
+            radial-gradient(ellipse 50% 60% at 0% 100%, rgba(10,66,102,0.5) 0%, transparent 55%);
+        }
+        .hero::after {
+          content: ''; position: absolute; inset: 0; pointer-events: none;
+          background-image: linear-gradient(rgba(237,131,55,0.028) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(237,131,55,0.028) 1px, transparent 1px);
+          background-size: 52px 52px;
+        }
+ 
+        .hero-left { position: relative; z-index: 2; display: flex; flex-direction: column; }
+ 
+        .h-badge {
+          display: inline-flex; align-items: center; gap: 0.5rem;
+          background: rgba(237,131,55,0.1); border: 1px solid rgba(237,131,55,0.28);
+          color: var(--orange); font-size: 0.72rem; font-weight: 600;
+          padding: 0.38rem 1rem; border-radius: 50px;
+          letter-spacing: 0.09em; text-transform: uppercase;
+          width: fit-content; animation: fadeUp 0.6s ease both;
+        }
+        .badge-dot {
+          width: 6px; height: 6px; border-radius: 50%; background: var(--orange);
+          animation: pulse-dot 1.6s infinite;
+        }
+        @keyframes pulse-dot { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:.4; transform:scale(1.5); } }
+ 
+        .hero-heading {
+          font-family: 'Poppins', sans-serif;
+          font-size: clamp(2.2rem, 3.8vw, 3rem);
+          font-weight: 600; line-height: 1.15;
+          margin-top: 1.4rem; animation: fadeUp 0.7s 0.08s ease both; color: #fff;
+        }
+        .hero-heading .hl { color: var(--orange); }
+        .hero-heading .lined { position: relative; display: inline-block; }
+        .hero-heading .lined::after {
+          content: ''; position: absolute; left: 0; bottom: -3px;
+          width: 100%; height: 3px; background: var(--orange); border-radius: 2px;
+          transform: scaleX(0); transform-origin: left;
+          animation: line-in 0.5s 0.9s ease forwards;
+        }
+        @keyframes line-in { to { transform: scaleX(1); } }
+ 
+        .hero-sub {
+          margin-top: 1.4rem; font-size: 1rem; line-height: 1.78;
+          color: rgba(255,255,255,0.9); max-width: fit-content;
+          animation: fadeUp 0.7s 0.16s ease both;
+        }
+        .hero-actions { margin-top: 2rem; display: flex; gap: 0.9rem; flex-wrap: wrap; animation: fadeUp 0.7s 0.26s ease both; }
+        .btn-fill {
+          background: var(--orange);
+          padding: 0.85rem 2rem; border-radius: 50px;
+          font-family: 'Poppins', sans-serif; font-size: 0.92rem; font-weight: 500;
+          text-decoration: none; border: none; cursor: pointer; color: #fff;
+          box-shadow: 0 4px 22px rgba(237,131,55,0.32);
+          display: inline-flex; align-items: center; gap: 0.5rem;
+          transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
+        }
+        .btn-fill:hover { background: var(--orange-l); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(237,131,55,0.42); }
+        .btn-arrow {
+          display: inline-flex; align-items: center; justify-content: center;
+          width: 22px; height: 22px; border-radius: 50%;
+          background: rgba(2,43,68,0.3); font-size: 0.85rem;
+        }
+        @keyframes fadeUp { from{ opacity:0; transform:translateY(26px); } to{ opacity:1; transform:translateY(0); } }
+ 
+        /* ── INLINE HERO STATS GRID ── */
+        .hero-stats-grid {
+          margin-top: 2.2rem;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+          animation: fadeUp 0.7s 0.36s ease both;
+        }
+        .hero-stat-card {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          background: rgba(255,255,255,0.07);
+          border: 1px solid rgba(255,255,255,0.10);
+          border-radius: 14px;
+          padding: 14px 16px;
+          backdrop-filter: blur(8px);
+          transition: background 0.25s ease, transform 0.22s ease, border-color 0.25s ease;
+        }
+        .hero-stat-card:hover {
+          background: rgba(237,131,55,0.12);
+          border-color: rgba(237,131,55,0.35);
+          transform: translateY(-3px);
+        }
+        .hero-stat-icon-box {
+          width: 48px;
+          height: 48px;
+          border-radius: 12px;
+          background: #004168;
+          border: 1.5px solid rgba(255,255,255,0.15);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+        .hero-stat-text { display: flex; flex-direction: column; gap: 2px; }
+        .hero-stat-value {
+          font-family: 'Poppins', sans-serif;
+          font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+          font-weight: 800;
+          color: #ed8337;
+          line-height: 1.1;
+          letter-spacing: -0.01em;
+        }
+        .hero-stat-label {
+          font-family: 'Poppins', sans-serif;
+          font-size: 0.75rem;
+          font-weight: 400;
+          color: rgba(255,255,255,0.72);
+          line-height: 1.3;
+        }
+ 
+        .hero-right {
+          overflow: hidden; width: 100%; height: auto;
+          position: relative; z-index: 2;
+          display: flex; align-items: center; justify-content: center;
+        }
+        img.hero-img { animation: none !important; }
+        .hero-img { width: 100%; object-fit: contain; display: block; }
+ 
+        /* ══ TABLET ══ */
+        @media(max-width: 960px) {
+          .hero {
+            grid-template-columns: 1fr;
+            padding: 6rem 5% 4rem;
+            min-height: auto;
+            gap: 2.5rem;
+          }
+          .hero-left { order: 1; align-items: flex-start; padding: 3rem 0; }
+          .hero-right { width: 100% !important; height: auto !important; order: 2; display: flex; justify-content: center; }
+          .hero-img { width: 100%; max-width: 480px; height: auto; }
+          .hero-sub { max-width: 90%; }
+          .hero-actions { justify-content: flex-start; }
+          .hero-stats-grid { grid-template-columns: 1fr 1fr; }
+        }
+ 
+        /* ══ MOBILE ══ */
+        @media(max-width: 600px) {
+          .hero { padding: 5rem 4% 3rem; gap: 2rem; }
+          .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
+          .hero-sub { font-size: 0.9rem; max-width: 100%; }
+          .hero-img { max-width: 100%; width: 100%; }
+          .h-badge { font-size: 0.65rem; }
+          .hero-stats-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+          .hero-stat-card { padding: 10px 12px; gap: 10px; }
+          .hero-stat-icon-box { width: 40px; height: 40px; border-radius: 10px; }
+          .hero-stat-value { font-size: 0.95rem; }
+          .hero-stat-label { font-size: 0.68rem; }
+        }
       `}</style>
-
+ 
       {/* LEFT CONTENT */}
       <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot" />Digital Marketing </div>
+        <div className="h-badge"><div className="badge-dot" />Real Results. Measurable Growth</div>
         <h1 className="hero-heading">
-            Grow Your Business with Coimbatore’s Most  
-          <span className="hl lined" style={{ marginRight: '12px' }}>Trusted Digital Marketing  </span>
-           Company
+          #1 Best 
+          <span className="hl lined" style={{ marginLeft: '12px' }}>  Digital Marketing  </span>
+          Company in Coimbatore
         </h1>
         <p className="hero-sub">
-Grow your business with a results-driven Digital Marketing Company in Coimbatore that focuses on visibility, lead generation, and long-term business growth. At PCS, we don’t just run campaigns — we build strategic digital ecosystems that help businesses attract the right audience, generate quality leads, and improve conversions.        </p>
-        <p className="hero-sub">
-As a performance-focused Digital Marketing Agency, we deliver tailored strategies that improve ROI, engagement, and sustainable growth in today’s competitive digital landscape.        </p>
+          PCS is a results-focused Digital Marketing Company in Coimbatore helping businesses increase online visibility, attract qualified leads, and improve conversions through SEO, Performance Marketing, Social Media Marketing, and Website Development
+        </p>
+
+ 
+        {/* ── INLINE STATS CARDS (Image 1 design) ── */}
+        <div className="hero-stats-grid">
+          {HERO_STATS.map((stat, i) => (
+            <div className="hero-stat-card" key={i}>
+              <div className="hero-stat-icon-box">{stat.icon}</div>
+              <div className="hero-stat-text">
+                <span className="hero-stat-value">{stat.value}</span>
+                <span className="hero-stat-label">{stat.label}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
 
       </div>
-
+ 
       {/* RIGHT CONTACT FORM */}
       <div className="hero-right">
         <div className="hero-form-card">
@@ -863,21 +966,6 @@ As a performance-focused Digital Marketing Agency, we deliver tailored strategie
               position: relative;
               z-index: 3;
             }
-            .hero-form-badge {
-              display: inline-flex;
-              align-items: center;
-              gap: 0.4rem;
-              background: transparent;
-              border: 1px solid #022b44;
-              color: #022b44;
-              font-size: 0.7rem;
-              font-weight: 600;
-              padding: 0.3rem 0.85rem;
-              border-radius: 50px;
-              letter-spacing: 0.07em;
-              text-transform: uppercase;
-              margin-bottom: 1rem;
-            }
             .hero-form-title {
               font-family: 'Poppins', sans-serif;
               font-size: clamp(1.5rem, 2.5vw, 1.9rem);
@@ -886,180 +974,106 @@ As a performance-focused Digital Marketing Agency, we deliver tailored strategie
               line-height: 1.2;
               margin-bottom: 0.4rem;
             }
-            .hero-form-title span {
-              color: #ed8337;
-            }
-            .hero-form-sub {
-              font-size: 0.85rem;
-              color: #666;
-              margin-bottom: 1.5rem;
-            }
+            .hero-form-title span { color: #ed8337; }
+            .hero-form-sub { font-size: 0.85rem; color: #666; margin-bottom: 1.5rem; }
             .hero-form-row {
-             display: flex;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    grid-auto-flow: row;
-    flex-direction: column;
+              display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1rem;
             }
-            .hero-form-field {
-              display: flex;
-              flex-direction: column;
-              gap: 0.3rem;
-            }
-            .hero-form-field.full {
-              grid-column: 1 / -1;
-            }
+            .hero-form-field { display: flex; flex-direction: column; gap: 0.3rem; }
             .hero-form-field input,
             .hero-form-field textarea {
-              border: none;
-              border-bottom: 1.5px solid #ccc;
-              outline: none;
-              padding: 0.55rem 0;
-              font-size: 0.88rem;
-              font-family: 'Poppins', sans-serif;
-              color: #022b44;
-              background: transparent;
-              transition: border-color 0.2s;
-              width: 100%;
+              border: none; border-bottom: 1.5px solid #ccc; outline: none;
+              padding: 0.55rem 0; font-size: 0.88rem;
+              font-family: 'Poppins', sans-serif; color: #022b44;
+              background: transparent; transition: border-color 0.2s; width: 100%;
             }
             .hero-form-field input:focus,
-            .hero-form-field textarea:focus {
-              border-bottom-color: #ed8337;
-            }
+            .hero-form-field textarea:focus { border-bottom-color: #ed8337; }
             .hero-form-field input::placeholder,
-            .hero-form-field textarea::placeholder {
-              color: #aaa;
-              font-size: 0.85rem;
-            }
-            .hero-form-field textarea {
-              resize: none;
-              min-height: 64px;
-            }
+            .hero-form-field textarea::placeholder { color: #aaa; font-size: 0.85rem; }
+            .hero-form-field textarea { resize: none; min-height: 64px; }
             .hero-phone-wrap {
-              display: flex;
-              align-items: flex-end;
-              gap: 0.5rem;
-              border-bottom: 1.5px solid #ccc;
-              transition: border-color 0.2s;
+              display: flex; align-items: flex-end; gap: 0.5rem;
+              border-bottom: 1.5px solid #ccc; transition: border-color 0.2s;
             }
-            .hero-phone-wrap:focus-within {
-              border-bottom-color: #ed8337;
-            }
+            .hero-phone-wrap:focus-within { border-bottom-color: #ed8337; }
             .hero-phone-prefix {
-              font-size: 0.88rem;
-              font-weight: 700;
-              color: #022b44;
-              padding-bottom: 0.55rem;
-              white-space: nowrap;
-              flex-shrink: 0;
+              font-size: 0.88rem; font-weight: 700; color: #022b44;
+              padding-bottom: 0.55rem; white-space: nowrap; flex-shrink: 0;
             }
-            .hero-phone-wrap input {
-              border: none !important;
-              border-bottom: none !important;
-              padding: 0.55rem 0 !important;
-              flex: 1;
-            }
-            .hero-phone-wrap input:focus {
-              border-bottom: none !important;
-            }
-            .hero-form-footer {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin-top: 1.4rem;
-              gap: 1rem;
-            }
+            .hero-phone-wrap input { border: none !important; border-bottom: none !important; padding: 0.55rem 0 !important; flex: 1; }
+            .hero-form-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 1.4rem; gap: 1rem; }
             .hero-form-btn {
-              display: inline-flex;
-              align-items: center;
-              gap: 0.6rem;
-              background: #ed8337;
-              color: #fff;
-              border: none;
-              border-radius: 50px;
-              padding: 0.85rem 1.8rem;
-              font-family: 'Poppins', sans-serif;
-              font-size: 0.9rem;
-              font-weight: 600;
-              cursor: pointer;
-              transition: background 0.2s, transform 0.18s;
-              flex-shrink: 0;
+              display: inline-flex; align-items: center; gap: 0.6rem;
+              background: #ed8337; color: #fff; border: none; border-radius: 50px;
+              padding: 0.85rem 1.8rem; font-family: 'Poppins', sans-serif;
+              font-size: 0.9rem; font-weight: 600; cursor: pointer;
+              transition: background 0.2s, transform 0.18s; flex-shrink: 0;
             }
-            .hero-form-btn:hover {
-              background: #004168;
-              transform: translateY(-2px);
-            }
+            .hero-form-btn:hover { background: #004168; transform: translateY(-2px); }
             .hero-form-btn-arrow {
-              width: 26px;
-              height: 26px;
-              border-radius: 50%;
+              width: 26px; height: 26px; border-radius: 50%;
               background: rgba(255,255,255,0.15);
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 0.9rem;
+              display: flex; align-items: center; justify-content: center; font-size: 0.9rem;
             }
-            .hero-form-reply {
-              font-size: 0.78rem;
-              color: #888;
-              line-height: 1.4;
-            }
-            .hero-form-reply strong {
-              display: block;
-              color: #555;
-              font-size: 0.82rem;
-            }
-            @media(max-width: 960px) {
-              .hero-form-card {
-                max-width: 100%;
-              }
-            }
+            @media(max-width: 960px) { .hero-form-card { max-width: 100%; } }
             @media(max-width: 600px) {
-              .hero-form-card {
-                padding: 1.6rem 1.4rem 1.8rem;
-              }
-              .hero-form-row {
-                grid-template-columns: 1fr;
-              }
+              .hero-form-card { padding: 1.6rem 1.4rem 1.8rem; }
             }
           `}</style>
-
+ 
           <h2 className="hero-form-title">Your Growth, <span>Our Mission.</span></h2>
           <p className="hero-form-sub">Fill in your details — we'll get back within 24 hours.</p>
-
           <HeroContactForm />
         </div>
       </div>
     </section>
   );
 }
-
 function HeroContactForm() {
-  const [form, setForm] = useState({ name: '', email: '', phone: '', company: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    msg: ""
+  });
 
   const handleChange = (e) => {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = () => {
-    if (!form.name || !form.email || !form.phone) return;
-    setSubmitted(true);
-  };
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  if (submitted) {
-    return (
-      <div style={{ textAlign: 'center', padding: '2rem 0' }}>
-        <div style={{ fontSize: '2.5rem', marginBottom: '0.8rem' }}>✅</div>
-        <p style={{ color: '#022b44', fontWeight: 700, fontSize: '1.1rem', marginBottom: '0.4rem' }}>Thank you!</p>
-        <p style={{ color: '#666', fontSize: '0.88rem' }}>We'll get back to you within 24 hours.</p>
-      </div>
-    );
-  }
+    const templateParams = {
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      company: form.company,
+      message: form.msg,
+      url: window.location.href,
+    };
+
+    emailjs
+      .send(
+        "service_8xw6k3r",
+        "template_jarui36",
+        templateParams,
+        "XWRnXi4hK2SvmRG3q"
+      )
+      .then(() => {
+        alert("Message Sent Successfully ✅");
+        setForm({ name: "", email: "", phone: "", company: "", msg: "" });
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Failed to send ❌");
+      });
+  };
 
   return (
-    <>
+    <form onSubmit={sendEmail}>
       <div className="hero-form-row">
         <div className="hero-form-field">
           <input
@@ -1068,8 +1082,12 @@ function HeroContactForm() {
             placeholder="Your Name"
             value={form.name}
             onChange={handleChange}
+            required
           />
         </div>
+      </div>
+
+      <div className="hero-form-row">
         <div className="hero-form-field">
           <input
             type="email"
@@ -1077,6 +1095,7 @@ function HeroContactForm() {
             placeholder="Email Address"
             value={form.email}
             onChange={handleChange}
+            required
           />
         </div>
       </div>
@@ -1091,9 +1110,15 @@ function HeroContactForm() {
               placeholder="Mobile Number"
               value={form.phone}
               onChange={handleChange}
+              maxLength="10"
+              pattern="[0-9]{10}"
+              required
             />
           </div>
         </div>
+      </div>
+
+      <div className="hero-form-row">
         <div className="hero-form-field">
           <input
             type="text"
@@ -1106,26 +1131,27 @@ function HeroContactForm() {
       </div>
 
       <div className="hero-form-row">
-        <div className="hero-form-field full">
+        <div className="hero-form-field">
           <textarea
-            name="message"
+            name="msg"
             placeholder="Your Message"
-            value={form.message}
+            value={form.msg}
             onChange={handleChange}
           />
         </div>
       </div>
 
       <div className="hero-form-footer">
-        <button className="hero-form-btn" onClick={handleSubmit}>
+        <button type="submit" className="hero-form-btn">
           Send Message
           <span className="hero-form-btn-arrow">→</span>
         </button>
-
       </div>
-    </>
+    </form>
   );
 }
+
+
 
 const PARTNERS = [
   { id: 1, name: "Analytix-Hub", logo: Analytix },
@@ -1167,13 +1193,18 @@ function WhoWeAre() {
 
       <div className="left">
         <div className="why-eyebrow">Who We Are</div>
-        <h2><em><i>No.1 Digital Marketing</i></em> Agency in Coimbatore</h2>
+        <h2>No.1 <em><i>Digital Marketing Company in Coimbatore</i></em>  for ROI-Focused Growth </h2>
         <p>
-PCS is recognized as one of the most trusted providers of Digital Marketing Services in Coimbatore, helping businesses improve visibility, strengthen customer engagement, and increase revenue through result-oriented digital strategies. </p>
+PCS is recognized as a trusted Digital Marketing Company in Coimbatore helping businesses transform their online presence into measurable business outcomes.</p>
         <p>
-Unlike traditional agencies that focus only on impressions, our approach is built around measurable business outcomes. Every campaign is strategically designed based on your industry, audience behavior, and market competition.        </p>
-        <p>
-If you are searching for a reliable Digital Marketing Company in Coimbatore, PCS delivers performance-driven solutions that combine branding and conversion-focused marketing for long-term success.</p>
+Unlike agencies that focus only on clicks and impressions, our team focuses on generating qualified leads, increasing conversions, and improving customer acquisition. Every campaign is backed by detailed market research, audience insights, and performance analysis.
+        </p>
+       
+<p>Our comprehensive Digital Marketing Services in Coimbatore combine SEO, PPC advertising, content marketing, social media marketing, website development, and performance marketing under one roof.
+</p>
+<p>If you're searching for a Digital Marketing Company in Coimbatore that focuses on growth rather than vanity metrics, PCS is your ideal partner.
+</p>
+
       </div>
       <div className="right">
         <img src={who} alt="Who We Are" className="who-img" />
@@ -1386,9 +1417,11 @@ function MilestonesCTA() {
           bottom: -150px; right: -90px;
           background: radial-gradient(ellipse, rgba(0,65,104,0.07) 0%, transparent 70%);
         }
+          .left p {
+    margin-top: 12px;}
         .ms-cta-line-top {
           position: relative; z-index: 2; height: 1.5px;
-          background: linear-gradient(90deg, transparent, rgba(237,131,55,0.35), transparent);
+          background: linear-gradient(90deg, transparent, rgb(237 131 55 / 19%), transparent);
         }
         .ms-cta-line-bottom {
           position: relative; z-index: 2; height: 1px;
@@ -1534,41 +1567,54 @@ Discover our projects that demonstrate how strategy and clear execution drive me
   );
 }
 
+
 const SERVICES = [
   {
-    icon: <img src="/img/icon/seo-dm.webp" alt="Search Engine Optimization" width="28" height="28" />,
+    icon: <img src="/img/icon/seo-dm.webp" alt="Search Engine Optimization" width="26" height="26" />,
     title: "SEO (Search Engine Optimization)",
-    desc: "We help your brand appear where customers search. Our Digital Marketing SEO strategies focus on authority-building, keyword targeting, link architecture, and  long-term search ranking.",
+    subtitle: "Get Found on Google & Drive Organic Growth",
+    desc: "Improve search visibility and attract high-intent customers through strategic SEO.",
+    bullets: [" On-Page & Technical SEO", "Keyword Research & Optimization", " Local SEO & GMB Management"],
     link: "/search-engine-optimization/",
   },
   {
-    icon: <img src="/img/icon/dm-paid-marketing.webp" alt="Paid Marketing" width="28" height="28" />,
+    icon: <img src="/img/icon/dm-paid-marketing.webp" alt="Paid Marketing" width="26" height="26" />,
     title: "PPC (Paid Marketing)",
-    desc: "Maximize your reach instantly with targeted paid campaigns. We create data-driven ads that attract the right audience, boost conversions, and deliver measurable ROI.",
+    subtitle: "Run ROI-Focused Advertising Campaigns",
+    desc: "Generate quality leads faster with targeted performance marketing campaigns.",
+    bullets: ["Google Search & Display Ads", " Performance Max Campaigns", "Conversion Optimization"],
     link: "/performance-marketing/",
   },
   {
-    icon: <img src="/img/icon/content-marketing-dm.webp" alt="Content Marketing" width="28" height="28" />,
-    title: "Content Marketing",
-    desc: "Engage and inspire your audience with impactful content strategies—blogs, videos, and social posts that build authority, boost visibility, and drive business growth.",
-    link: "/content-marketing/",
-  },
-  {
-    icon: <img src="/img/icon/dm-social-media-marketing.webp" alt="Social Media Marketing" width="28" height="28" />,
+    icon: <img src="/img/icon/dm-social-media-marketing.webp" alt="Social Media Marketing" width="26" height="26" />,
     title: "Social Media Marketing",
-    desc: "We build brands that people love. Our Digital Marketing experts create campaigns that spark engagement, build community, and convert followers into buyers.",
+    subtitle: "Build Visibility & Audience Engagement",
+    desc: "Connect with your audience through creative and conversion-focused campaigns.",
+    bullets: [" Facebook & Instagram Marketing", "LinkedIn Marketing", "Creative Content Campaigns"],
     link: "/social-media-marketing/",
   },
   {
-    icon: <img src="/img/icon/website-development-dm.webp" alt="Website Development" width="28" height="28" />,
+    icon: <img src="/img/icon/content-marketing-dm.webp" alt="Content Marketing" width="26" height="26" />,
+    title: "Content Marketing",
+    subtitle: "Create Content That Builds Authority",
+    desc: "Strengthen brand credibility through valuable and engaging content.",
+    bullets: ["SEO Blog Writing", "Website & Landing Page Content", "Content Strategy Development"],
+    link: "/content-marketing/",
+  },
+  {
+    icon: <img src="/img/icon/website-development-dm.webp" alt="Website Development" width="26" height="26" />,
     title: "Website Development",
-    desc: "Designing and developing responsive, user-friendly websites that showcase your brand, enhance customer experience, and drive online growth with lasting impact.",
+    subtitle: "Build Websites That Convert Visitors",
+    desc: "Develop responsive websites designed for user experience and growth.",
+    bullets: [" Corporate Websites", " Ecommerce Development ", " Landing Page Design"],
     link: "/website-development/",
   },
   {
-    icon: <img src="/img/icon/dm-email-whatsapp-marketing.webp" alt="Email and WhatsApp Marketing" width="28" height="28" />,
+    icon: <img src="/img/icon/dm-email-whatsapp-marketing.webp" alt="Graphic Design" width="26" height="26" />,
     title: "Graphic Design",
-    desc: "Crafting creative and impactful designs that capture attention, reflect your brand identity, and communicate your message with clarity and style.",
+    subtitle: "Create Visuals That Strengthen Brands",
+    desc: "Design impactful creatives that communicate your message effectively.",
+    bullets: ["Branding & Marketing Creatives", "Social Media Designs", "Brochures & Presentation Design "],
     link: "/graphic-design/",
   },
 ];
@@ -1585,61 +1631,131 @@ function ServicesSection() {
         .svc-orb-1{width:500px;height:500px;top:-120px;left:-100px;background:rgba(237,131,55,0.05);animation:sdm-o 14s ease-in-out infinite alternate;}
         .svc-orb-2{width:400px;height:400px;bottom:-80px;right:-60px;background:rgba(56,189,248,0.04);animation:sdm-o 14s 4s ease-in-out infinite alternate;}
         @keyframes sdm-o{from{transform:scale(1);}to{transform:scale(1.2) translate(20px,-20px);}}
+
         .svc-header{position:relative;z-index:2;text-align:center;margin-bottom:3rem;margin-left:auto;margin-right:auto;}
         .svc-tag{display:inline-flex;align-items:flex-start;gap:.55rem;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:1rem;font-family:'DM Sans',sans-serif;}
         .svc-tagline{width:20px;height:2px;background:var(--orange);border-radius:2px;}
         .svc-h2{font-family:'Poppins',sans-serif;font-size:clamp(2rem,3.8vw,2.6rem);font-weight:600;line-height:1.1;color:#fff;margin-bottom:1.1rem;}
         .svc-h2 span{color:var(--orange);}
         .svc-sub{font-size:.97rem;line-height:1.8;color:rgb(255, 255, 255);}
+
+        /* ── Card grid (reference layout) ── */
         .svc-cards{position:relative;z-index:2;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;}
-        .svc-card{background:linear-gradient(145deg, rgba(10, 54, 82, 0.55), rgb(76 186 235 / 23%));border:1px solid rgba(255,255,255,0.065);border-radius:22px;padding:2rem 1.8rem 1.8rem;position:relative;overflow:hidden;transition:transform .32s ease,box-shadow .32s ease,border-color .32s ease,background .32s ease;cursor:default;}
-        .svc-card::before{content:'';position:absolute;inset:0;border-radius:22px;background:radial-gradient(ellipse 80% 55% at 50% 0%,rgba(237,131,55,0.1) 0%,transparent 70%);opacity:0;transition:opacity .32s;pointer-events:none;}
-        .svc-card:hover{transform:translateY(-10px);box-shadow:0 22px 60px rgba(237,131,55,0.12),0 0 0 1px rgba(237,131,55,0.22);border-color:rgba(237,131,55,0.28);background:rgba(255,255,255,0.045);}
-        .svc-card:hover::before{opacity:1;}
-        .svc-card:hover .svc-icon-ring{border-color:rgba(237,131,55,0.5);box-shadow:0 0 20px rgba(237,131,55,0.2);}
-        .svc-card:hover .svc-learn{color:var(--orange);letter-spacing:.15em;}
-        .svc-icon-wrap{margin-bottom:1.4rem;position:relative;width:60px;height:60px;}
-        .svc-icon-ring{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,rgba(30,100,150,0.8),rgba(10,50,90,0.9));border:1.5px solid rgba(56,189,248,0.22);display:flex;align-items:center;justify-content:center;font-size:1.45rem;transition:border-color .32s,box-shadow .32s;position:relative;z-index:1;}
-        .svc-icon-wrap::after{content:'';position:absolute;inset:-5px;border-radius:50%;border:1px solid rgba(237,131,55,0.12);animation:icon-pulse 2.5s ease-in-out infinite;}
-        @keyframes icon-pulse{0%,100%{transform:scale(1);opacity:.6;}50%{transform:scale(1.18);opacity:.15;}}
-        .svc-card-title{font-family:'Poppins',sans-serif;font-size:1.05rem;font-weight:700;color:#ee883f;margin-bottom:.7rem;line-height:1.3;}
-        .svc-card-desc{    font-size: 14px; line-height: 1.74;color: rgb(255 255 255); margin-bottom: 1.4rem; letter-spacing: 0.3px; font-family: 'Poppins';}
-        .svc-learn{display:inline-flex;align-items:flex-start;gap:.4rem;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,0.3);text-decoration:none;transition:color .25s,letter-spacing .25s;font-family:'DM Sans',sans-serif;}
-        .svc-learn-arr{display:inline-flex;align-items:flex-start;justify-content:center;width:20px;height:20px;border-radius:50%;border:1px solid currentColor;font-size:.7rem;transition:transform .25s;}
-        .svc-card:hover .svc-learn-arr{transform:rotate(45deg) scale(1.1);}
-        .svc-card-line{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--orange),transparent);opacity:0;border-radius:0 0 22px 22px;transition:opacity .32s;}
-        .svc-card:hover .svc-card-line{opacity:1;}
+
+        .svc-card{
+          // background:#fff;
+          border-radius:16px;
+          overflow:hidden;
+          display:flex;
+          flex-direction:column;
+          box-shadow:0 14px 38px rgba(0,0,0,0.22);
+          transition:transform .32s ease, box-shadow .32s ease;
+        }
+        .svc-card:hover{
+          transform:translateY(-8px);
+          box-shadow:0 22px 50px rgba(0,0,0,0.3),0 0 0 1px rgba(237,131,55,0.35);
+        }
+
+        /* Header band — navy, with icon + title + subtitle */
+        .svc-card-head{
+          // background:linear-gradient(135deg,#0a3652,#022b44);
+          padding:1.5rem 1.6rem 1.3rem;
+          position:relative;
+          overflow:hidden;
+        }
+        .svc-card-head::after{
+          content:'';position:absolute;bottom:0;left:0;right:0;height:1.5px;
+          background:linear-gradient(90deg,#ed8337,#f5a66b);
+        }
+        .svc-card-icon-row{display:flex;align-items:center;gap:.7rem;margin-bottom:.55rem;}
+        .svc-icon-ring-sm{
+          width:42px;height:42px;border-radius:50%;flex-shrink:0;
+          background:rgba(237,131,55,0.16);
+          border:1.5px solid rgba(237,131,55,0.4);
+          display:flex;align-items:center;justify-content:center;
+        }
+        .svc-card-title{font-family:'Poppins',sans-serif;font-size:1.04rem;font-weight:700;color:#fff;line-height:1.28;}
+        .svc-card-subtitle{font-family:'Poppins',sans-serif;font-size:.78rem;font-weight:400;color:rgba(255,255,255,0.62);line-height:1.4;}
+
+        /* Body — white, intro + checklist + CTA */
+        .svc-card-body{padding:1.5rem 1.6rem 1.7rem;display:flex;flex-direction:column;flex:1;}
+        .svc-card-desc{font-family:'Poppins',sans-serif;font-size:.85rem;line-height:1.7;color:#fff;margin-bottom:1.1rem;}
+        .svc-card-bullets{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.4rem;}
+        .svc-card-bullet{display:flex;align-items:flex-start;gap:.5rem;font-family:'Poppins',sans-serif;font-size:.83rem;font-weight:500;color:#fff;line-height:1.4;}
+        .svc-bullet-check{
+          width:16px;height:16px;border-radius:50%;flex-shrink:0;margin-top:1px;
+          background:rgba(237,131,55,0.12);
+          display:flex;align-items:center;justify-content:center;
+        }
+        .svc-bullet-check svg{width:9px;height:9px;stroke:#ed8337;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+
+        .svc-card-cta{
+          display:inline-flex;align-items:center;justify-content:center;gap:.45rem;
+          margin-top:auto;
+          color:#ed8337;
+          font-family:'Poppins',sans-serif;font-size:.82rem;font-weight:600;
+          padding:.7rem 1.3rem;border-radius:50px;
+          text-decoration:none;width:fit-content;
+          transition:background .22s,transform .18s;
+        }
+        .svc-card-cta:hover{transform:translateY(-2px);text-decoration:none;}
+        .svc-card-cta-arr{font-size:.78rem;transition:transform .22s;}
+        .svc-card-cta:hover .svc-card-cta-arr{transform:translateX(3px);}
+
         @media(max-width:900px){.svc-cards{grid-template-columns:1fr 1fr;gap:1.2rem;}}
-        @media(max-width:580px){.svc-cards{grid-template-columns:1fr;gap:1rem;}
+        @media(max-width:580px){
+          .svc-cards{grid-template-columns:1fr;gap:1rem;}
           .svc-h2{font-size:clamp(1.5rem,5vw,2rem);}
-          section[style*="background:#004168"]:nth-of-type(2){padding:4rem 4% 4rem !important;}
         }
       `}</style>
       <div className="svc-bg-r" /><div className="svc-grid" />
       <div className="svc-orb svc-orb-1" /><div className="svc-orb svc-orb-2" />
+
       <div className="svc-header">
         <div className="partners-header1">
           <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Specialized Digital Marketing Services in Coimbatore</div>
         </div>
         <h2 className="svc-h2">Comprehensive <span>Solutions </span> Under One Roof </h2>
         <p className="svc-sub">
-As a full-stack Digital Marketing Agency in Coimbatore, PCS delivers innovative solutions that combine creativity, analytics, and technology.
-</p>
+          As a leading Digital Marketing Agency in Coimbatore, PCS provides end-to-end digital solutions designed to help businesses attract, engage, and convert customers. Our Digital Marketing Services in Coimbatore are built around measurable growth, improved visibility, and sustainable ROI.
+        </p>
       </div>
+
       <div className="svc-cards">
         {SERVICES.map((s, i) => (
-          <div key={i} className="svc-card" style={{ animationDelay: `${.05 + i * .07}s` }}>
-            <div className="svc-icon-wrap"><div className="svc-icon-ring">{s.icon}</div></div>
-            <div className="svc-card-title">{s.title}</div>
-            <div className="svc-card-desc">{s.desc}</div>
-<a className="svc-learn" href={s.link}>LEARN MORE <span className="svc-learn-arr">↗</span></a>
-            <div className="svc-card-line" />
+          <div key={i} className="svc-card">
+            <div className="svc-card-head">
+              <div className="svc-card-icon-row">
+                <div className="svc-icon-ring-sm">{s.icon}</div>
+                <div>
+                  <div className="svc-card-title">{s.title}</div>
+                  <div className="svc-card-subtitle">{s.subtitle}</div>
+                </div>
+              </div>
+            </div>
+            <div className="svc-card-body">
+              <p className="svc-card-desc">{s.desc}</p>
+              <div className="svc-card-bullets">
+                {s.bullets.map((b, bi) => (
+                  <div className="svc-card-bullet" key={bi}>
+                    <span className="svc-bullet-check">
+                      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12" /></svg>
+                    </span>
+                    <span>{b}</span>
+                  </div>
+                ))}
+              </div>
+              <a className="svc-card-cta" href={s.link}>
+                Learn More <span className="svc-card-cta-arr">→</span>
+              </a>
+            </div>
           </div>
         ))}
       </div>
     </section>
   );
 }
+ 
 const MILESTONES = [
   {
     pos: "left", slot: "top",
@@ -1771,6 +1887,216 @@ function BenefitsSection() {
   );
 }
 
+/* ═══════════════════════════════════════════════════
+   UNIQUENESS CTA — matches reference image layout
+   (heading + subtext + 3 trust pills + 2 buttons)
+   themed with site colors: --navy:#004168  --orange:#ed8337
+═══════════════════════════════════════════════════ */
+function UniquenessCTA() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  return (
+    <>
+      {/* ── POPUP OVERLAY ── */}
+      {showPopup && (
+        <div
+          onClick={(e) => { if (e.target === e.currentTarget) setShowPopup(false); }}
+          style={{
+            position: "fixed", inset: 0, zIndex: 9999,
+            background: "rgba(2,43,68,0.75)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            padding: "1rem",
+          }}
+        >
+          <div style={{
+            background: "#fff", borderRadius: 20,
+            padding: "2.2rem 2.4rem 2.4rem",
+            width: "100%", maxWidth: 480,
+            position: "relative",
+            boxShadow: "0 20px 60px rgba(0,0,0,0.35)",
+            maxHeight: "90vh", overflowY: "auto",
+          }}>
+            {/* Close Button */}
+            <button
+              onClick={() => setShowPopup(false)}
+              style={{
+                position: "absolute", top: 14, right: 16,
+                background: "none", border: "none",
+                fontSize: "1.4rem", cursor: "pointer",
+                color: "#999", lineHeight: 1,
+                padding: "4px 8px", borderRadius: "50%",
+              }}
+            >✕</button>
+
+            {/* ✅ Hero form title style */}
+            <h2 className="hero-form-title">
+              Your Growth, <span>Our Mission.</span>
+            </h2>
+            <p className="hero-form-sub">
+              Fill in your details — we'll get back within 24 hours.
+            </p>
+
+            {/* ✅ Exact same HeroContactForm component reuse */}
+            <HeroContactForm />
+          </div>
+        </div>
+      )}
+
+      {/* ── EXISTING CTA SECTION ── */}
+      <section className="uniq-cta-section">
+        <style>{`
+          .uniq-cta-section {
+            background: #ffffff;
+            padding: 1rem 4% 6rem;
+            display: flex;
+            justify-content: center;
+          }
+          .uniq-cta-card {
+            position: relative;
+            max-width: 1100px;
+            width: 100%;
+            background: #fff;
+            border-radius: 28px;
+            padding: 3.4rem 3rem 3.2rem;
+            box-shadow: 0 18px 60px rgba(0,65,104,0.10);
+            border: 1px solid rgba(0,65,104,0.06);
+            overflow: hidden;
+            text-align: center;
+          }
+          .uniq-cta-glow-tr {
+            position: absolute; top: -90px; right: -90px;
+            width: 280px; height: 280px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(237,131,55,0.16) 0%, transparent 70%);
+            pointer-events: none;
+          }
+          .uniq-cta-glow-bl {
+            position: absolute; bottom: -100px; left: -100px;
+            width: 260px; height: 260px; border-radius: 50%;
+            background: radial-gradient(circle, rgba(0,65,104,0.06) 0%, transparent 70%);
+            pointer-events: none;
+          }
+          .uniq-cta-heading {
+            position: relative; z-index: 2;
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(1.6rem, 3vw, 2.3rem);
+            font-weight: 700; color: #0d1f2d; line-height: 1.3;
+            max-width: 720px; margin: 0 auto 1rem;
+          }
+          .uniq-cta-heading span { color: #ed8337; }
+          .uniq-cta-sub {
+            position: relative; z-index: 2;
+            font-family: 'Poppins', sans-serif;
+            font-size: .94rem; line-height: 1.78; color: #5b6b7a;
+            max-width: 620px; margin: 0 auto 2.3rem;
+          }
+          .uniq-cta-pills {
+            position: relative; z-index: 2;
+            display: flex; justify-content: center; flex-wrap: wrap;
+            gap: 1rem; margin-bottom: 2.5rem;
+          }
+          .uniq-cta-pill {
+            display: flex; align-items: center; gap: .7rem;
+            background: #fff; border: 1px solid rgba(0,65,104,0.08);
+            border-radius: 50px; padding: .65rem 1.3rem .65rem .55rem;
+            box-shadow: 0 6px 18px rgba(0,65,104,0.06);
+            transition: transform .25s ease, box-shadow .25s ease;
+          }
+          .uniq-cta-pill:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(237,131,55,0.16); }
+          .uniq-cta-pill-icon {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: #ed8337; display: flex; align-items: center; justify-content: center;
+          }
+          .uniq-cta-pill-icon svg { width: 17px; height: 17px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+          .uniq-cta-pill-text { font-family: 'Poppins', sans-serif; font-size: .85rem; font-weight: 600; color: #0d1f2d; white-space: nowrap; }
+          .uniq-cta-actions {
+            position: relative; z-index: 2;
+            display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
+          }
+          .uniq-cta-btn-primary {
+            display: inline-flex; align-items: center; gap: .55rem;
+            background: #ed8337; color: #fff; border: none; border-radius: 50px;
+            padding: .95rem 2rem;
+            font-family: 'Poppins', sans-serif; font-size: .92rem; font-weight: 600;
+            text-decoration: none; cursor: pointer;
+            box-shadow: 0 8px 26px rgba(237,131,55,0.32);
+            transition: background .22s ease, transform .18s ease, box-shadow .22s ease;
+          }
+          .uniq-cta-btn-primary:hover {
+            background: #f5a66b; transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(237,131,55,0.4);
+            color: #fff; text-decoration: none;
+          }
+          .uniq-cta-btn-secondary {
+            display: inline-flex; align-items: center; gap: .6rem;
+            background: #004168; color: #fff; border: none; border-radius: 50px;
+            padding: .95rem 2rem;
+            font-family: 'Poppins', sans-serif; font-size: .92rem; font-weight: 600;
+            text-decoration: none; cursor: pointer;
+            transition: background .22s ease, transform .18s ease;
+          }
+          .uniq-cta-btn-secondary:hover { background: #0a3652; transform: translateY(-2px); color: #fff; text-decoration: none; }
+          @media(max-width: 640px) {
+            .uniq-cta-section { padding: 0 5% 4rem; }
+            .uniq-cta-card { padding: 2.3rem 1.4rem 2.5rem; border-radius: 20px; }
+            .uniq-cta-btn-primary, .uniq-cta-btn-secondary { width: 100%; justify-content: center; }
+            .uniq-cta-actions { flex-direction: column; }
+          }
+        `}</style>
+
+        <div className="uniq-cta-card">
+          <div className="uniq-cta-glow-tr" />
+          <div className="uniq-cta-glow-bl" />
+
+          <h2 className="uniq-cta-heading">
+            Ready to Work with a Leading <span>Digital Marketing Company</span> in Coimbatore?
+          </h2>
+          <p className="uniq-cta-sub">
+            Whether your goal is lead generation, brand visibility, SEO growth, or revenue expansion,
+            We provide customized Digital Marketing Services designed to deliver measurable business results.
+          </p>
+
+          <div className="uniq-cta-pills">
+            <div className="uniq-cta-pill">
+              <span className="uniq-cta-pill-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <span className="uniq-cta-pill-text">Proven Industry Expertise</span>
+            </div>
+            <div className="uniq-cta-pill">
+              <span className="uniq-cta-pill-icon">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14 18.2 21 12 17.6 5.8 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+              </span>
+              <span className="uniq-cta-pill-text">Results-Driven Strategies</span>
+            </div>
+            <div className="uniq-cta-pill">
+              <span className="uniq-cta-pill-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+              </span>
+              <span className="uniq-cta-pill-text">Transparent Performance Tracking</span>
+            </div>
+          </div>
+
+          <div className="uniq-cta-actions">
+            {/* ✅ a tag → button, onClick popup open */}
+            <button
+              onClick={() => setShowPopup(true)}
+              className="uniq-cta-btn-primary"
+            >
+              Request a Free Proposal <span>→</span>
+            </button>
+
+            <a href="tel:+919677444048" className="uniq-cta-btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 4.36 19.79 19.79 0 0 1 7.43 1.3 2 2 0 0 1 9.43 3.3v3a2 2 0 0 1-2 1.72 12.05 12.05 0 0 0-.7 2.81 2 2 0 0 1 .45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+              Schedule a Call
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
 // ─── Process ─────────────────────────────────────────────────────────────────
 function ProcessStep({ step, index }) {
   const [ref, visible] = useInView(0.1);
@@ -1829,14 +2155,14 @@ Our streamlined process combines research, planning, execution, and optimization
 
 // ─── How We Work Data ────────────────────────────────────────────────────────
 const HOW_WE_WORK_DM = [
-  { img: "/img/digital-marketing/textile-dm.webp", title: "Textile ", desc: "We help textile manufacturers and apparel brands grow through digital marketing . Our industry-focused approach boosts visibility, strengthens branding, and generates high-quality leads", link: "/textile" },
+  { img: "/img/digital-marketing/textile-dm.webp", title: "Textile ", desc: "We help textile manufacturers and apparel brands grow through digital marketing . Our industry-focused approach boosts visibility, strengthens branding, and generates high-quality leads.", link: "/textile" },
   { img: "/img/digital-marketing/hospitals-dm.webp", title: "Healthcare", desc: "We support hospitals and clinics with effective healthcare digital marketing, local SEO, Google Ads . PCS ensures better patient engagement through targeted campaigns and optimized digital platforms.", link: "/healthcare" },
-  { img: "/img/digital-marketing/construction-dm.webp", title: "Construction", desc: "PCS elevates construction and real estate brands with lead generation, PPC, landing page optimization, and hyperlocal marketing. Our campaigns boost project visibility and attract high-intent buyers in competitive markets", link: "/construction" },
-  { img: "/img/digital-marketing/manufacturing-dm.webp", title: "Manufacturing", desc: "We empower manufacturing companies through B2B SEO, email marketing  and performance marketing. PCS helps industrial brands build authority, increase search presence, and convert business enquiries.", link: "/retail-ecommerce" },
-  { img: "/img/digital-marketing/retail-dm.webp", title: "Retail & E-Commerce", desc: "As one of the top digital marketing companies in Coimbatore, we deliver e-commerce SEO, shopping ads, and remarketing campaigns that increase conversions.", link: "/manufacturing" },
+  { img: "/img/digital-marketing/construction-dm.webp", title: "Construction", desc: "PCS elevates construction and real estate brands with lead generation, PPC, landing page optimization, and hyperlocal marketing. Our campaigns boost project visibility and attract buyers in competitive markets.", link: "/construction" },
+  { img: "/img/digital-marketing/manufacturing-dm.webp", title: "Manufacturing", desc: "We empower manufacturing companies through B2B SEO, email marketing  and performance marketing. PCS helps industrial brands build authority, increase search presence, and convert business enquiries.", link: "/manufacturing" },
+  { img: "/img/digital-marketing/retail-dm.webp", title: "Retail & E-Commerce", desc: "As one of the top digital marketing companies in Coimbatore, we deliver e-commerce SEO, shopping ads, and remarketing campaigns that increase conversions and maximize revenue. ", link: "/retail-ecommerce" },
   { img: "/img/digital-marketing/tourism-dm.webp", title: "Tourism & Hospitality ", desc: "PCS helps hotels, resorts, and travel businesses grow with travel digital marketing, review management, social media branding, and location-based marketing that boost bookings and online visibility.", link: "/tourism-and-hospitality" },
-  { img: "/img/digital-marketing/it-service-dm.webp", title: "IT / IT Service", desc: "PCS helps IT companies, SaaS businesses, and technology service providers accelerate growth through B2B digital marketing, SEO, content marketing, LinkedIn campaigns, and lead generation strategies. ", link: "/it-or-it-services" },
-  { img: "/img/digital-marketing/bankin-finace-dm.webp", title: "Banking", desc: "PCS helps banks, financial institutions, insurance providers, and fintech companies strengthen their digital presence through targeted marketing strategies. Our expertise in SEO, performance marketing, lead generation, content marketing, and reputation management helps build trust, attract qualified customers, and drive growth in highly competitive financial markets. ", link: "/banking-financial-and-insurance-services" },
+  { img: "/img/digital-marketing/it-service-dm.webp", title: "IT / IT Service", desc: "PCS helps IT companies, SaaS businesses, and technology service providers accelerate growth through B2B digital marketing, SEO, content marketing, LinkedIn campaigns, and lead generation strategies.", link: "/it-or-it-services" },
+  { img: "/img/digital-marketing/bankin-finace-dm.webp", title: "Banking, Financial & Insurance", desc: "PCS helps banks, insurance providers, and fintech companies grow online through SEO, performance marketing, lead generation, and content strategies that attract qualified customers. ", link: "/banking-financial-and-insurance-services" },
 ];
 
 // ─── How We Work ─────────────────────────────────────────────────────────────
@@ -1927,7 +2253,7 @@ function HowWeWork() {
         .dm-hww-glow-2{width:500px;height:500px;bottom:-160px;right:-120px;background:rgba(56,189,248,0.05);animation:dm-orb 14s ease-in-out infinite reverse;}
         @keyframes dm-orb{0%,100%{transform:translateY(0);}50%{transform:translateY(-24px);}}
         .dm-hww-header{position:relative;z-index:2;text-align:center;padding:0 6% 3.5rem;}
-        .dm-hww-h2{font-family:'Poppins',sans-serif;font-size:clamp(2rem,3.5vw,2.9rem);font-weight:600;line-height:1.12;letter-spacing:-0.02em;color:#fff;margin:0;}
+        .dm-hww-h2{font-family:'Poppins',sans-serif;font-size:clamp(2rem,3.5vw,2.68rem);font-weight:600;line-height:1.12;letter-spacing:-0.02em;color:#fff;margin:0;}
         .dm-hww-h2 span{color:#ed8337;}
         .dm-hww-h2 em{font-style:italic;}
         .dm-carousel-outer{position:relative;z-index:2;padding:0 4rem 1rem;}
@@ -1965,8 +2291,8 @@ function HowWeWork() {
         <div className="partners-header1">
           <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Industries We Serve</div>
         </div>
-        <h2 className="dm-hww-h2">Customized <span><em>Digital Strategies </em></span> for Every Industry </h2>
-        <p style= {{margin: '30px 0'}}>As a leading Digital Marketing Agency in Coimbatore, PCS supports:
+        <h2 className="dm-hww-h2">Industries We Serve Through  <span><em>Digital Marketing Services </em></span> in Coimbatore </h2>
+        <p style= {{margin: '30px 0'}}>As a trusted Digital Marketing Company in Coimbatore, we create customized strategies for businesses across diverse industries. Our industry-specific expertise helps us understand customer behavior, market trends, and growth opportunities more effectively.
 </p>
       </div>
 
@@ -2066,22 +2392,25 @@ function FAQSection() {
 export default function DigitalMarketingLandingPage() {
   return (
     <Layout
-      title="No.1 Digital Marketing Company in Coimbatore | ROI-Driven "
-      description="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. "
+      title=": No.1 Digital Marketing Company in Coimbatore | ROI-Driven  "
+      description="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. 
+
+"
     >
       <SEOHead />
       <FontLoader />
       <HeroSection />
-      <Partners />
       <WhoWeAre />
       <BusinessInfographic />
+      <Partners />
       <MilestonesCTA />
       <ServicesSection />
-      <BenefitsSection />
+     <BenefitsSection />
+      <UniquenessCTA />
       <HowWeWork />
       <Process />
       <FAQSection />
-       <CTASection />
+      <CTASection />
     </Layout>
   );
 }
