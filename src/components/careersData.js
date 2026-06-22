@@ -35,7 +35,7 @@ export const openRoles = [
       keywords:
         "Website Developer Jobs ,Website Developer Career, Web Developer Jobs,  Website Developer Vacancy",
       canonical:
-        "https://www.priyamconsultancy.com/career/website-developer/"
+        "https://www.priyamconsultancy.com/careers/website-developer/"
     },
 
     experience: "Bachelor's degree or equivalent practical experience with 2+ years of website development experience.",
@@ -71,7 +71,7 @@ export const openRoles = [
       keywords:
         "Digital Marketing Analyst Jobs,Digital Marketing Analyst Career ,Digital Marketing Jobs",
       canonical:
-        "https://www.priyamconsultancy.com/career/digital-marketing-analyst"
+        "https://www.priyamconsultancy.com/careers/digital-marketing-analyst/"
     },
 
     experience: "Bachelor's degree or equivalent qualification with 2+ years of experience in digital marketing analytics.",
@@ -109,7 +109,7 @@ export const openRoles = [
       keywords:
         "Content Writer Career, Content Writing Jobs, SEO Content Writer Jobs ",
       canonical:
-        "https://www.priyamconsultancy.com/career/content-writer/"
+        "https://www.priyamconsultancy.com/careers/content-writer/"
     },
 
     experience: "Bachelor's degree or equivalent qualification with 2+ years of content writing experience.",
@@ -146,7 +146,7 @@ export const openRoles = [
       keywords:
         "Graphic Designer Career , Graphic Designer Jobs, SEO Content Writer Jobs",
       canonical:
-        "https://www.priyamconsultancy.com/career/graphic-designer/"
+        "https://www.priyamconsultancy.com/careers/graphic-designer/"
     },
 
     experience: "Bachelor's degree or equivalent qualification with 2+ years of graphic design experience.",
@@ -182,7 +182,7 @@ export const openRoles = [
       keywords:
         "HR Executive Jobs, HR Executive Jobs ,HR career",
       canonical:
-        "https://www.priyamconsultancy.com/career/hr-executive/"
+        "https://www.priyamconsultancy.com/careers/hr-executive/"
     },
 
     experience: "Bachelor's degree in Human Resources, Business Administration, or related field with 1+ years of HR or recruitment experience.",
@@ -219,7 +219,7 @@ export const openRoles = [
       keywords:
         "Video Editor Career, Video Editing Jobs, Video Editor Jobs, Video Production Jobs",
       canonical:
-        "https://www.priyamconsultancy.com/career/video-editor/"
+        "https://www.priyamconsultancy.com/careers/video-editor/"
     },
 
     experience: "Bachelor's degree or equivalent practical experience with 1+ years of professional video editing experience.",
@@ -256,7 +256,7 @@ export const openRoles = [
       keywords:
         "Web Developer Internship,Web Development Internship,Web Developer Intern Jobs",
       canonical:
-        "https://www.priyamconsultancy.com/career/web-developer-intern/"
+        "https://www.priyamconsultancy.com/careers/web-developer-intern/"
     },
 
     experience: "Student / Fresher pursuing or completed a relevant degree.",
@@ -292,7 +292,7 @@ export const openRoles = [
       keywords:
         "Digital Marketing Internship,Digital Marketing Intern ,Digital Marketing Internship in Coimbatore",
       canonical:
-        "https://www.priyamconsultancy.com/career/digital-marketing-intern/"
+        "https://www.priyamconsultancy.com/careers/digital-marketing-intern/"
     },
 
     experience: "Student / Fresher with interest in digital marketing.",
@@ -328,7 +328,7 @@ export const openRoles = [
       keywords:
         "Content Writer Internship,Content Writer Intern, Content Writing Internship , SEO Content Writer Internship",
       canonical:
-        "http://localhost:3000/career/content-writer-intern/"
+        "https://www.priyamconsultancy.com/careers/content-writer-intern/"
     },
 
     experience: "Student / Fresher with interest in writing and content creation.",
@@ -364,7 +364,7 @@ export const openRoles = [
       keywords:
         "Graphic Design Internship ,Graphic Designer Intern,Graphic Design Internship",
       canonical:
-        "https://www.priyamconsultancy.com/career/graphic-designer-intern"
+        "https://www.priyamconsultancy.com/careers/graphic-designer-intern/"
     },
 
     experience: "Student / Fresher with basic design knowledge.",
@@ -400,7 +400,7 @@ export const openRoles = [
       keywords:
         "HR Internship,HR Executive Intern,Human Resources Internship",
       canonical:
-        "https://www.priyamconsultancy.com/career/hr-executive-intern/"
+        "https://www.priyamconsultancy.com/careers/hr-executive-intern/"
     },
 
     experience: "Pursuing or recently completed a degree in Human Resources, Business Administration, or related field.",
@@ -437,7 +437,7 @@ export const openRoles = [
       keywords:
         "Video Editor Intern, Video Editing Internship, Video Editing Internship",
       canonical:
-        " https://www.priyamconsultancy.com/career/video-editor-intern/"
+        "https://www.priyamconsultancy.com/careers/video-editor-intern/"
     },
 
     experience: "Pursuing or recently completed a degree in Visual Communication, Media, Multimedia, or related field.",

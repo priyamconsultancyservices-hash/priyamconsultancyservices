@@ -1160,7 +1160,9 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
             <div className="pcs-offer-right">
               {activeOffer === -1 && (
                 <div className="pcs-offer-placeholder">
-                  <div className="pcs-offer-placeholder-icon"><img src="/img/icons/click.png" alt="Select an option" style={{width:"40px",height:"40px",objectFit:"contain",opacity:"0.4"}} /></div>
+                  <div className="pcs-offer-placeholder-icon">
+                    <img src="/img/icons/click.png" alt="Select an option" style={{width:"40px",height:"40px",objectFit:"contain",opacity:"0.4"}} />
+                    </div>
                   <div className="pcs-offer-placeholder-text">Click any box to view details</div>
                 </div>
               )}

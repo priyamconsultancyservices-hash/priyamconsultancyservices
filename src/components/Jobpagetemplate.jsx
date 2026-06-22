@@ -2,7 +2,7 @@ import { useState } from "react";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 
-const SITE_URL = "https://www.sterlo.com";
+const SITE_URL = "https://www.priyamconsultancy.com/";
 
 /* ═══════════════════════════════════════════════════════
    SHARED STYLES (same as careers.jsx)
@@ -563,7 +563,7 @@ export default function JobPageTemplate({ role }) {
   const [showModal, setShowModal] = useState(false);
 
   const slug = role.title.toLowerCase().replace(/\s+/g, "-");
-  const canonicalUrl = `${SITE_URL}/career/${slug}`;
+  const canonicalUrl = `${SITE_URL}/careers/${slug}`;
   const isIntern = role.title.toLowerCase().includes("intern");
 
   // Split bullets into job description and skills
@@ -614,7 +614,7 @@ export default function JobPageTemplate({ role }) {
   return (
     <Layout>
       <Head>
-        <title>{role.title} Jobs in Coimbatore | Sterlo Careers</title>
+        <title>{role.title} </title>
         <meta
           name="description"
           content={`Apply for ${role.title} at Sterlo, Coimbatore. ${role.desc.slice(0, 120)}. ${role.openings} openings available.`}
@@ -626,13 +626,13 @@ export default function JobPageTemplate({ role }) {
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:type" content="article" />
-        <meta property="og:title" content={`${role.title} | Sterlo Careers`} />
+        <meta property="og:title" content={`${role.title} `} />
         <meta property="og:description" content={role.desc} />
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content={`${SITE_URL}/img/career.png`} />
         <meta property="og:site_name" content="Sterlo" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`${role.title} | Sterlo Careers`} />
+        <meta name="twitter:title" content={`${role.title} `} />
         <meta name="twitter:description" content={role.desc} />
         <meta name="twitter:image" content={`${SITE_URL}/img/career.png`} />
         <script type="application/ld+json">{JSON.stringify(jobSchema)}</script>
@@ -658,7 +658,6 @@ export default function JobPageTemplate({ role }) {
 
         {/* JOB DETAIL BODY */}
         <div className="jd-body">
-
           {/* LEFT — Content */}
           <div className="jd-content">
             <a className="jd-back" href="/careers">← Back to Open Roles</a>

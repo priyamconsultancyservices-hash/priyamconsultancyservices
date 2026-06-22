@@ -634,8 +634,8 @@ function ApplyModal({ role, onClose }) {
    SEO HEAD
 ══════════════════════════════════════════ */
 function JobSEO({ role }) {
-  const slug = role.title.toLowerCase().replace(/\s+/g, "-");
-  const canonicalUrl = `${SITE_URL}/career/${slug}/`;
+const slug = role.slug || role.title.toLowerCase().replace(/\s+/g, "-");
+  const canonicalUrl = `${SITE_URL}/careers/${slug}/`;
   const isIntern = role.title.toLowerCase().includes("intern");
 
   const jobSchema = {

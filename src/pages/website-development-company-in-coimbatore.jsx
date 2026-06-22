@@ -15,16 +15,17 @@ function SEOHead() {
   ];
   return (
     <Head>
-      <title>Website Development Company in Coimbatore | Expert Web </title>
+      <title>Website Development Company in Coimbatore | Expert Web  </title>
       <meta name="description" content="Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . " />
+      <meta name="keywords" content="Web Development Company in Coimbatore, Digital Marketing Company Coimbatore, Digital Marketing in Coimbatore, SEO Company in Coimbatore, Recruitment Agency in Coimbatore, SEO Services in Coimbatore, Website Development Company in Coimbatore" />
       <link rel="canonical" href="https://www.priyamconsultancy.com/website-development-company-in-coimbatore/" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Website Development Company in Coimbatore | Expert Web " />
+      <meta property="og:title" content="Website Development Company in Coimbatore | Expert Web  " />
       <meta property="og:description" content="Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . " />
       <meta property="og:url" content="https://www.priyamconsultancy.com/website-development-company-in-coimbatore/" />
       <meta property="og:image" content={imageUrl} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Website Development Company in Coimbatore | Expert Web " />
+      <meta name="twitter:title" content="Website Development Company in Coimbatore | Expert Web  " />
       <meta name="twitter:description" content="Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . " />
       <meta name="twitter:image" content={imageUrl} />
       {schemaData.map((schema, i) => (<script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>))}
@@ -369,7 +370,7 @@ const GlobalStyles = () => (
     .mf-head { text-align: center; margin-bottom: 40px; }
     .mf-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #ed8337; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; }
     .mf-eyebrow::before, .mf-eyebrow::after { content: ''; width: 24px; height: 2px; background: #ed8337; border-radius: 2px; }
-    .mf-h2 { font-size: 2.5rem; font-weight: 700; color: #0d1f2d; margin: 0 0 8px; }
+    .mf-h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); font-weight: 700; color: #0d1f2d; margin: 0 0 8px; }
     .mf-h2 span { color: #ed8337; }
     .mf-sub { font-size: 16px;
     color: #030303b0;
@@ -378,9 +379,8 @@ const GlobalStyles = () => (
     .mf-body { display: flex; align-items: center; justify-content: center; gap: 40px; max-width: 1300px; margin: 0 auto; }
     .mf-col { display: flex; flex-direction: column; gap: 35px; width: 33%; }
     .mf-item { display: flex; align-items: flex-start; gap: 10px; }
-    // .mf-item.rev { flex-direction: row-reverse; text-align: right; }
     .mf-icon-box { width: 40px; height: 40px; min-width: 40px; border-radius: 10px; background: #eef3f8; display: flex; align-items: center; justify-content: center; }
-    .mf-icon-box i { font-size: 19px; color: #004168; }
+    .mf-icon-box svg { width: 20px; height: 20px; }
     .mf-t { font-size: 16.5px; font-weight: 700; color: #0d1f2d; margin: 0 0 3px; line-height: 1.3; }
     .mf-d {     font-size: 14.5px;
     color: #291f1f;
@@ -482,11 +482,15 @@ const GlobalStyles = () => (
     .dm-faq-question .icon { font-size:1.3rem; color:var(--orange); flex-shrink:0; }
     .dm-faq-answer { padding:.2rem 1.4rem 1.1rem; font-size:.88rem; color:#5a6070; line-height:1.78;  }
 
-    @media (max-width: 680px) {
-      .mf-body { flex-direction: column; align-items: center; }
-      .mf-col { width: 100%; max-width: 320px; }
+    @media (max-width: 1024px) {
+      .mf-body { flex-direction: column; align-items: center; gap: 28px; }
+      .mf-col { width: 100%; max-width: 420px; }
       .mf-item.rev { flex-direction: row; text-align: left; }
-      .mf-phone { order: -1; }
+      .mf-phone { order: -1; width: 60%; max-width: 220px; }
+      .mf-sub { padding: 10px 0; }
+    }
+    @media (max-width: 480px) {
+      .mf-phone { width: 75%; max-width: 200px; }
     }
 
     /* ── TECHNOLOGIES MARQUEE ── */
@@ -655,12 +659,6 @@ const GlobalStyles = () => (
     overflow:hidden;
 }
 
-// .border-animation{
-//     position:absolute;
-//     inset:0;
-//     pointer-events:none;
-// }
-
 .border-animation::before{
     content:"";
     position:absolute;
@@ -686,16 +684,6 @@ const GlobalStyles = () => (
     border-radius:0 0 20px 0;
     transition:all .6s ease;
 }
-
-// .reason-card:hover .border-animation::before{
-//     width:100%;
-//     height:100%;
-// }
-
-// .reason-card:hover .border-animation::after{
-//     width:100%;
-//     height:100%;
-// }
 
 .reason-card:hover{
     transform:translateY(-8px);
@@ -755,7 +743,6 @@ const GlobalStyles = () => (
     
   /* ══ PORTFOLIO SECTION ══ */
   .pf-section {
-    // padding: 6rem 6%;
     background: #004168;
     position: relative; overflow: hidden;
   }
@@ -839,20 +826,88 @@ const GlobalStyles = () => (
     font-family:'Space Mono',monospace; font-size:.6rem; color:var(--orange);
     letter-spacing:.08em; text-transform:uppercase;
   }
-    .pf-left { position:static; }
-  } }
+
+  @media (max-width: 1024px) {
+    .pf-inner { grid-template-columns: minmax(260px, 380px) 1fr; gap: 2.4rem; padding: 4rem 5%; }
+  }
+  @media (max-width: 900px) {
+    .pf-inner { grid-template-columns: 1fr; gap: 2.2rem; padding: 3.5rem 5%; }
+    .pf-left { position: static; top: auto; }
+  }
+  @media (max-width: 640px) {
+    .pf-cols { grid-template-columns: repeat(2, 1fr); gap: .8rem; }
+    .pf-inner { padding: 3rem 5%; }
+    .pf-card img { height: 160px; }
+  }
+  @media (max-width: 420px) {
+    .pf-cols { grid-template-columns: 1fr; }
+  }
+
+  /* ══ SERVICES GRID (Our Services Section) ══ */
+  .svc-main-heading {
+    text-align: center;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+.svc-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-items: stretch;
+  grid-auto-rows: 1fr;  /* ← equal height rows */
+}
+  @media (max-width: 1024px) {
+    .svc-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+    .svc-main-heading { max-width: 640px; }
+  }
+  @media (max-width: 640px) {
+    .svc-grid { grid-template-columns: 1fr; gap: 20px; }
+    .svc-main-heading { max-width: 100%; }
+  }
   `}</style>
 );
 
+// ── Inline SVG Icon Helpers (replaces missing icon-font classes) ──
+// Used by ModernFeaturesSection (.mf-icon-box)
+// function FeatIcon({ name }) {
+//   const icons = {
+//     code: "/img/icon/feat-custom-web.webp",
+//     plug: "/img/icon/feat-api.webp",
+//     responsive: "/img/icon/feat-responsive.webp",
+//     search: "/img/icon/feat-seo.webp",
+//     rocket: "/img/icon/feat-speed.webp",
+//     server: "/img/icon/feat-server.webp",
+//   };
+//   return icons[name] ? <img src={icons[name]} alt={name} width="20" height="20" /> : null;
+// }
+
+// Used by ServicesSlider (.svs-icon-wrap)
+function ServiceIcon({ name }) {
+  const icons = {
+    search: "/img/icon/website-other-service-seo.webp",
+    ppc: "/img/icon/website-other-service-ppc.webp",
+    content: "/img/icon/website-other-service-content.webp",
+    smm: "/img/icon/website-other-service-smm.webp",
+    email: "/img/icon/website-other-service-email.webp",
+    graphic: "/img/icon/website-other-service-graphic.webp",
+    busregcom: "/img/icon/website-other-service-busregcom.webp",
+    digitaltrans:"/img/icon/website-other-service-digitaltrans.webp",
+    hrservice: "/img/icon/website-other-service-hrservice.webp",
+  };
+  return icons[name] ? <img src={icons[name]} alt={name} width="24" height="24" /> : null;
+}
+
 // ── Key Features Data ─────────────────────────────────
-const FEATURES = [
-  { icon: <img src="/img/icon/feat-structure.webp" alt="Strategic Website Structure" width="28" height="28" />, title: "Strategic Website Structure", desc: "Well-planned layouts and intuitive navigation systems crafted to enhance usability, improve engagement, and guide visitors smoothly toward meaningful actions." },
-  { icon: <img src="/img/icon/feat-responsive.webp" alt="Responsive and Adaptive Design" width="28" height="28" />, title: "Responsive & Adaptive Design", desc: "Device-optimized, mobile-first designs ensuring seamless performance and consistent user experience across desktops, tablets, and smartphones." },
-  { icon: <img src="/img/icon/feat-seo.webp" alt="Search Ready Development" width="28" height="28" />, title: "Search-Ready Development", desc: "SEO-focused coding practices, structured metadata, schema setup, and optimized architecture to strengthen search engine visibility." },
-  { icon: <img src="/img/icon/feat-performance.webp" alt="Speed and Performance Enhancement" width="28" height="28" />, title: "Speed & Performance Enhancement", desc: "Optimized frameworks, efficient database structuring, and performance tuning techniques to deliver fast-loading and stable websites." },
-  { icon: <img src="/img/icon/feat-integrations.webp" alt="Seamless System Integrations" width="28" height="28" />, title: "Seamless System Integrations", desc: "Integration with payment gateways, WhatsApp, shipping systems, analytics tools, and marketing solutions for streamlined operations." },
-  { icon: <img src="/img/icon/feat-scalability.webp" alt="Future Ready Scalability" width="28" height="28" />, title: "Future-Ready Scalability", desc: "Flexible development frameworks designed to accommodate business expansion, advanced features, increasing traffic, and evolving digital needs." },
-];
+// const FEATURES = [
+//   { icon: <img src="/icon/feat-structure.webp" alt="Strategic Website Structure" width="28" height="28" />, title: "Strategic Website Structure", desc: "Well-planned layouts and intuitive navigation systems crafted to enhance usability, improve engagement, and guide visitors smoothly toward meaningful actions." },
+//   { icon: <img src="/icon/feat-responsive.webp" alt="Responsive and Adaptive Design" width="28" height="28" />, title: "Responsive & Adaptive Design", desc: "Device-optimized, mobile-first designs ensuring seamless performance and consistent user experience across desktops, tablets, and smartphones." },
+//   { icon: <img src="/icon/feat-seo.webp" alt="Search Ready Development" width="28" height="28" />, title: "Search-Ready Development", desc: "SEO-focused coding practices, structured metadata, schema setup, and optimized architecture to strengthen search engine visibility." },
+//   { icon: <img src="/icon/feat-performance.webp" alt="Speed and Performance Enhancement" width="28" height="28" />, title: "Speed & Performance Enhancement", desc: "Optimized frameworks, efficient database structuring, and performance tuning techniques to deliver fast-loading and stable websites." },
+//   { icon: <img src="/icon/feat-integrations.webp" alt="Seamless System Integrations" width="28" height="28" />, title: "Seamless System Integrations", desc: "Integration with payment gateways, WhatsApp, shipping systems, analytics tools, and marketing solutions for streamlined operations." },
+//   { icon: <img src="/icon/feat-scalability.webp" alt="Future Ready Scalability" width="28" height="28" />, title: "Future-Ready Scalability", desc: "Flexible development frameworks designed to accommodate business expansion, advanced features, increasing traffic, and evolving digital needs." },
+// ];
 
 // ── FAQ Data ──────────────────────────────────────────
 const faqData = [
@@ -1038,7 +1093,7 @@ function HeroSection() {
  
         /* ══ MOBILE ══ */
         @media(max-width: 600px) {
-          .hero { padding: 5rem 4% 3rem; gap: 2rem; }
+          .hero { padding: 1rem 4% 3rem; gap: 2rem; }
           .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
           .hero-sub { font-size: 0.9rem; max-width: 100%; }
           .hero-img { max-width: 100%; width: 100%; }
@@ -1267,80 +1322,106 @@ function HeroContactForm() {
   );
 }
 
-
-// ── App Banner ────────────────────────────────────────
-function AppBannerSection() {
+function BuildTogetherCTASection() {
   return (
-    <section className="pg-app-section">
-      <div className="pg-app-outer">
-        <div className="pg-app-card">
-          <div className="pg-app-left">
-            <div className="pg-app-badge">
-              <div className="pg-app-badge-dot" />
-              Let's Build Together
-            </div>
-            <h2 className="pg-app-heading">
-              Ready to Grow with a <em>Web Development Company?</em><br />
-            </h2>
-            <p className="pg-app-sub">
-Our team delivers tailored Website Development Services that combine performance and scalability—ensuring your website becomes a powerful business tool. 
-            </p>
-            <div className="pg-app-btns">
-             <div className="pf-btns">
-            <a href="/portfolio" className="pf-btn">Get Free Consultation →</a>
-          </div>
+    <section style={{ padding: "4rem 5% 4rem" }}>
+      <div style={{
+        maxWidth: "1200px", margin: "0 auto",
+        borderRadius: "20px", overflow: "hidden",
+        position: "relative", 
+        minHeight: "200px",
+        display: "grid", gridTemplateColumns: "1fr auto",
+        alignItems: "center", gap: "2rem",
+        padding: "3rem 3.5rem",
+      }}>
+
+        {/* BG Image */}
+        <div style={{
+          position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0,
+          backgroundImage: "url('/img/website-development/cta.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        //   opacity: 0.15,
+        }} />
+
+        {/* Dark overlay for readability */}
+        <div style={{
+          position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1,
         
-            </div>
+        }} />
+
+        {/* BG grid pattern */}
+        <div style={{
+          position: "absolute", inset: 0, pointerEvents: "none", zIndex: 1,
+          backgroundImage: "linear-gradient(rgba(237,131,55,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(237,131,55,0.04) 1px, transparent 1px)",
+          backgroundSize: "52px 52px",
+        }} />
+
+        {/* Glow orb */}
+        <div style={{
+          position: "absolute", right: "-80px", bottom: "-80px",
+          width: "320px", height: "320px", borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(237,131,55,0.12) 0%, transparent 65%)",
+          pointerEvents: "none", zIndex: 1,
+        }} />
+
+        {/* LEFT: Content */}
+        <div style={{ position: "relative", zIndex: 2 }}>
+          <div style={{
+            display: "inline-flex", alignItems: "center", gap: "7px",
+            background: "rgba(237,131,55,0.12)",
+            border: "1px solid rgba(237,131,55,0.3)",
+            color: "#ed8337", fontSize: "0.68rem", fontWeight: 600,
+            padding: "0.3rem 1rem", borderRadius: "50px",
+            letterSpacing: "0.1em", textTransform: "uppercase",
+            marginBottom: "1rem",
+          }}>
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#ed8337", display: "inline-block" }} />
+            Let's Build Together
           </div>
-          <div className="pg-app-right">
-            <div className="pg-phone-wrapper">
-              <div className="pg-phone-frame">
-                <div className="pg-ph-notch" />
-                <div className="pg-ph-screen">
-                  <div className="pg-ph-top">
-                    <p className="pg-ph-hello">Hello,</p>
-                    <p className="pg-ph-name">Alicia Regis</p>
-                    <div className="pg-ph-tabs">
-                      <span className="pg-ph-tab">Beginner</span>
-                      <span className="pg-ph-tab active">Intermediate</span>
-                      <span className="pg-ph-tab">Advanced</span>
-                    </div>
-                  </div>
-                  <div className="pg-ph-body">
-                    <p className="pg-ph-section-label">Popular Workouts</p>
-                    <div className="pg-ph-card">
-                      <div className="pg-ph-card-img">
-                        <div className="pg-ph-card-title">Wellness<br />Workshops</div>
-                        <div className="pg-ph-play" />
-                      </div>
-                      <div className="pg-ph-pills">
-                        <span className="pg-ph-pill pg-ph-pill-g">1h 15 Min</span>
-                        <span className="pg-ph-pill pg-ph-pill-o">300 kcal</span>
-                      </div>
-                    </div>
-                    <p className="pg-ph-section-label">Today Plan</p>
-                    <div className="pg-ph-today">
-                      <div className="pg-ph-today-label">Progress</div>
-                      <div className="pg-ph-bar f w8" />
-                      <div className="pg-ph-bar f w5" />
-                      <div className="pg-ph-bar f w7" />
-                    </div>
-                  </div>
-                  <div className="pg-ph-nav">
-                    <div className="pg-ph-nav-item active">🏠</div>
-                    <div className="pg-ph-nav-item">📍</div>
-                    <div className="pg-ph-nav-item">📋</div>
-                    <div className="pg-ph-nav-item">👤</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+          <h2 style={{
+            fontFamily: "'Poppins', sans-serif",
+            fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)",
+            fontWeight: 700, color: "#fff",
+            lineHeight: 1.2, margin: "0 0 0.7rem",
+          }}>
+            Ready to Launch Your<br />
+            <em style={{ color: "#ed8337" }}>Dream Website?</em>
+          </h2>
+
+          <p style={{
+            fontSize: "0.9rem", color: "rgba(255,255,255,0.72)",
+            lineHeight: 1.75, margin: 0, maxWidth: "480px",
+          }}>
+            Partner with Coimbatore's trusted web development team. From design to deployment — we build websites that drive real business growth.
+          </p>
+  <div style={{
+          position: "relative", zIndex: 2,
+          display: "flex", flexDirection: "column",
+          alignItems: "start", gap: "0.85rem", flexShrink: 0, marginTop: "30px",
+        }}>
+          <a href="/contact" className="pg-form-btn">
+            Get Free Consultation
+            <span className="pg-form-btn-arr">→</span>
+          </a>
+   
+        </div>
+          {/* Trust badges */}
+          <div style={{ display: "flex", gap: "1.2rem", marginTop: "1.2rem", flexWrap: "wrap" }}>
+           
           </div>
         </div>
+
+        {/* RIGHT: Buttons */}
+      
+
       </div>
     </section>
   );
 }
+// ── App Banner ────────────────────────────────────────
+
 
 // ── CTA Split Section ─────────────────────────────────
 function CTASplitSection() {
@@ -1348,18 +1429,8 @@ function CTASplitSection() {
     <section className="pg-cta-section">
       <div className="pg-cta-inner">
         <div className="pg-cta-img-wrap">
-          <img src="https://placehold.co/600x450/e8f0f7/004168?text=Your+Image+Here" alt="PCS Digital Marketing Team in Coimbatore" className="pg-cta-img" />
-          <div className="pg-cta-float-badge">
-            <div className="pg-cta-badge-dot" />
-            <div>
-              <p className="pg-cta-badge-title">200+ Clients</p>
-              <p className="pg-cta-badge-sub">Across India</p>
-            </div>
-          </div>
-          <div className="pg-cta-float-stat">
-            <p className="pg-cta-stat-num">98%</p>
-            <p className="pg-cta-stat-label">Client<br />Satisfaction</p>
-          </div>
+          <img src="img/website-development/trusted-website-partner.webp" alt="PCS Digital Marketing Team in Coimbatore" className="pg-cta-img" />
+
         </div>
         <div>
           <div className="partners-header1" >
@@ -1369,14 +1440,11 @@ function CTASplitSection() {
           <h2 className="pg-cta-heading">Leading  <em>Website Development Company</em><br />in Coimbatore
           </h2>
           <p className="pg-cta-desc">
-            We are  a trusted Website Development Company in Coimbatore delivering innovative, scalable, and growth-focused digital solutions for businesses of all sizes. As a leading Website Design Company in Coimbatore, we specialize in creating responsive, user-friendly, and SEO-optimized websites that enhance brand visibility and drive measurable results.
+We are  a trusted Website Development Company in Coimbatore delivering innovative, scalable, and digital solutions for businesses of all sizes. As a leading Website Design Company in Coimbatore, we specialize in creating responsive, user-friendly, and SEO-optimized websites that enhance brand visibility and drive measurable results.
           </p>
           <p className="pg-cta-desc2">
-            From custom business websites and eCommerce Website Development to Shopify and WooCommerce solutions, our Website Development Services are designed to improve user experience, increase conversions, and support long-term business growth. We combine creativity, technology, and strategy to build websites that help businesses stand out in today's competitive digital landscape.
-          </p>
-          <p className="pg-cta-desc2">
-            Whether you're a startup, SME, or enterprise, We provide reliable Website Development Services tailored to your unique business goals.
-          </p>
+From custom business websites and eCommerce Website Development to Shopify and WooCommerce solutions, our Website Development Services are designed to improve user experience, and support long-term business growth. We combine creativity, technology, and strategy to build websites that help businesses stand out in today's competitive digital landscape.          </p>
+
         </div>
       </div>
     </section>
@@ -1397,82 +1465,60 @@ function ModernFeaturesSection() {
         <p className="mf-sub">Our website development services combine performance, security, and scalability to help businesses succeed online. Every website is built with modern technologies, SEO best practices, and user-focused experiences that drive measurable results.
         </p>
       </div>
-      <div className="mf-body">
-        <div className="mf-col">
-          <div className="mf-item">
-            <div className="mf-icon-box"><i className="ti ti-code" aria-hidden="true"></i></div>
-            <div><p className="mf-t">Custom Web Development</p><p className="mf-d">
-              We build fully customized websites tailored to your business goals, branding, and functionality needs. No templates — only scalable, secure, and performance-driven development solutions.
-            </p></div>
-          </div>
-          <div className="mf-item">
-            <div className="mf-icon-box"><i className="ti ti-plug" aria-hidden="true"></i></div>
-            <div><p className="mf-t">API Integration</p><p className="mf-d">
-              Seamless integration with third-party tools such as payment gateways, CRM systems, WhatsApp, shipping providers, and marketing platforms to automate workflows and improve efficiency.
-            </p></div>
-          </div>
-          <div className="mf-item">
-            <div className="mf-icon-box"><i className="ti ti-device-mobile" aria-hidden="true"></i></div>
-            <div><p className="mf-t">Mobile Responsiveness</p><p className="mf-d">Every website is designed to function flawlessly across all devices — desktops, tablets, and smartphones — ensuring a smooth and engaging user experience everywhere.
-            </p></div>
-          </div>
-        </div>
-        <div className="mf-phone">
-          <div className="mf-phone-outer">
-            <div className="mf-screen">
-              <div className="mf-notch"></div>
-              <div className="mf-topbar">
-                <span className="mf-tbback">‹</span>
-                <span className="mf-tbtitle">PCS Dashboard</span>
-                <div className="mf-tbmore"><div className="mf-tbdot"></div><div className="mf-tbdot"></div><div className="mf-tbdot"></div></div>
-              </div>
-              <div className="mf-card">
-                <p className="mf-cl">Active Project</p>
-                <p className="mf-cn">May 2025 — Ongoing</p>
-                <p className="mf-ctype">Web Dev — SEO Build</p>
-                <div className="mf-circles">
-                  <div className="mf-circ" style={{ background: "#ed8337" }}></div>
-                  <div className="mf-circ" style={{ background: "#004168", marginLeft: "-5px" }}></div>
-                </div>
-                <p className="mf-al">Project Value</p>
-                <p className="mf-av">₹84,500</p>
-              </div>
-              <div className="mf-sec">
-                <p className="mf-sl">Recent Activity</p>
-                <div className="mf-txn">
-                  <div className="mf-txl"><div className="mf-av2" style={{ background: "#ed8337" }}>A</div><div><p className="mf-tn">API Integrated</p><p className="mf-td">May 14</p></div></div>
-                  <span className="mf-ta mf-g">Done ✓</span>
-                </div>
-                <div className="mf-txn">
-                  <div className="mf-txl"><div className="mf-av2" style={{ background: "#004168" }}>S</div><div><p className="mf-tn">SEO Structure</p><p className="mf-td">May 12</p></div></div>
-                  <span className="mf-ta mf-g">Done ✓</span>
-                </div>
-                <div className="mf-txn">
-                  <div className="mf-txl"><div className="mf-av2" style={{ background: "#7c3aed" }}>H</div><div><p className="mf-tn">Hosting Setup</p><p className="mf-td">May 10</p></div></div>
-                  <span className="mf-ta mf-r">Live 🔴</span>
-                </div>
-              </div>
-              <div className="mf-nav"><div className="mf-nd a"></div><div className="mf-nd"></div><div className="mf-nd"></div><div className="mf-nd"></div></div>
-            </div>
-          </div>
-        </div>
-        <div className="mf-col">
-          <div className="mf-item rev">
-            <div className="mf-icon-box"><i className="ti ti-search" aria-hidden="true"></i></div>
-            <div><p className="mf-t">SEO Optimized Structure</p><p className="mf-d">Websites are built with search engine-friendly architecture, optimized URLs, meta structure, schema, and clean coding practices to improve visibility and ranking potential.
-            </p></div>
-          </div>
-          <div className="mf-item rev">
-            <div className="mf-icon-box"><i className="ti ti-rocket" aria-hidden="true"></i></div>
-            <div><p className="mf-t">Page Speed Optimization</p><p className="mf-d">We optimize website performance through clean coding, image compression, caching, and lightweight frameworks to ensure fast loading times and better user retention.</p></div>
-          </div>
-          <div className="mf-item rev">
-            <div className="mf-icon-box"><i className="ti ti-server" aria-hidden="true"></i></div>
-            <div><p className="mf-t">Hosting &amp; Maintenance</p><p className="mf-d">Reliable hosting setup with Hostinger along with ongoing website maintenance, security monitoring, backups, and updates to ensure uninterrupted business operations.
-            </p></div>
-          </div>
-        </div>
+    <div className="mf-body">
+  <div className="mf-col">
+    <div className="mf-item">
+      <div className="mf-icon-box">
+        <img src="/img/icon/feat-custom-web.webp" alt="Custom Web Development" width={"25px"}/>
       </div>
+      <div><p className="mf-t">Custom Web Development</p><p className="mf-d">
+        We build fully customized websites tailored to your business goals, branding, and functionality needs. No templates — only scalable, secure, and performance-driven development solutions.
+      </p></div>
+    </div>
+    <div className="mf-item">
+      <div className="mf-icon-box">
+        <img src="/img/icon/feat-api-intergation.webp" alt="API Integration" width={"25px"}/>
+      </div>
+      <div><p className="mf-t">API Integration</p><p className="mf-d">
+        Seamless integration with third-party tools such as payment gateways, CRM systems, WhatsApp, shipping providers, and marketing platforms to automate workflows and improve efficiency.
+      </p></div>
+    </div>
+    <div className="mf-item">
+      <div className="mf-icon-box">
+        <img src="/img/icon/feat-responsive-design.webp" alt="Mobile Responsiveness" width={"25px"}/>
+      </div>
+      <div><p className="mf-t">Mobile Responsiveness</p><p className="mf-d">Every website is designed to function flawlessly across all devices — desktops, tablets, and smartphones — ensuring a smooth and engaging user experience everywhere.
+      </p></div>
+    </div>
+  </div>
+
+  <div className="mf-phone">
+    <img src="/img/website-development/features.webp" alt="Mobile Responsiveness" style={{borderRadius: '10px'}}/>
+  </div>
+
+  <div className="mf-col">
+    <div className="mf-item rev">
+      <div className="mf-icon-box">
+        <img src="/img/icon/feat-seo-struture.webp" alt="SEO Optimized Structure" width={"25px"}/>
+      </div>
+      <div><p className="mf-t">SEO Optimized Structure</p><p className="mf-d">Websites are built with search engine-friendly architecture, optimized URLs, meta structure, schema, and clean coding practices to improve visibility and ranking potential.
+      </p></div>
+    </div>
+    <div className="mf-item rev">
+      <div className="mf-icon-box">
+        <img src="/img/icon/feat-page-speed.webp" alt="Page Speed Optimization" width={"25px"}/>
+      </div>
+      <div><p className="mf-t">Page Speed Optimization</p><p className="mf-d">We optimize website performance through clean coding, image compression, caching, and lightweight frameworks to ensure fast loading times and better user retention.</p></div>
+    </div>
+    <div className="mf-item rev">
+      <div className="mf-icon-box">
+        <img src="/img/icon/feat-server-hosting.webp" alt="Hosting and Maintenance" width={"25px"}/>
+      </div>
+      <div><p className="mf-t">Hosting &amp; Maintenance</p><p className="mf-d">Reliable hosting setup with Hostinger along with ongoing website maintenance, security monitoring, backups, and updates to ensure uninterrupted business operations.
+      </p></div>
+    </div>
+  </div>
+</div>
     </section>
   );
 }
@@ -1584,7 +1630,7 @@ function WhyChooseUsSection() {
           transition: background .28s, border-color .28s, transform .28s, box-shadow .28s;
         }
         .wcu-item:hover .wcu-item-icon {
-          background: #ed8337; border-color: #ed8337;
+          border-color: #ed8337;
           transform: scale(1.1); box-shadow: 0 6px 22px rgba(237,131,55,0.32);
         }
         .wcu-item-icon svg {
@@ -1623,18 +1669,43 @@ function WhyChooseUsSection() {
           transition: stroke .28s;
         }
         .wcu-item:hover .wcu-item-arrow svg { stroke: #fff; }
-        @media(max-width:1000px) {
-          .wcu-body { grid-template-columns: 1fr; gap: 2rem; }
-          .wcu-target-wrap { width: 100%; height: 320px; margin: 0 auto; }
-          .wcu-target-svg { left: 50%; transform: translate(-50%, -50%); }
-          .wcu-arc-svg { display: none; }
-          .wcu-arc-num { display: none; }
-          .wcu-item-connector { display: none; }
-        }
-        @media(max-width:560px) {
-          .wcu-section { padding: 5rem 5%; }
-          .wcu-target-wrap { height: 260px; }
-        }
+ @media(max-width:1000px) {
+  .wcu-body { 
+    grid-template-columns: 1fr; 
+    gap: 2rem; 
+  }
+  .wcu-target-wrap { 
+    width: 100%; 
+    height: auto;          /* ← was 320px, auto lets it size naturally */
+    min-height: 220px;
+    margin: 0 auto; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+  .wcu-target-svg { 
+    position: relative;    /* ← KEY: remove absolute */
+    left: auto;            /* ← remove -125px offset */
+    top: auto; 
+    transform: none;       /* ← remove translateY(-50%) */
+    width: 75%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .wcu-arc-svg { display: none; }
+  .wcu-arc-num { display: none; }
+  .wcu-item-connector { display: none; }
+}
+
+@media(max-width:560px) {
+  .wcu-section { padding: 4rem 5% 5rem; }
+  .wcu-target-wrap { height: 180px; }
+  .wcu-target-svg {         width: 100%;
+        margin-top: 240px; }
+}
       `}</style>
 
       <section className="wcu-section">
@@ -1685,9 +1756,9 @@ function WhyChooseUsSection() {
 
               <div className="wcu-item">
                 <div className="wcu-item-connector"></div>
-                <div className="wcu-item-icon">
-                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /><line x1="11" y1="8" x2="11" y2="14" /><line x1="8" y1="11" x2="14" y2="11" /></svg>
-                </div>
+            <div className="wcu-item-icon">
+        <img src="/img/icon/website-wcu-seo.webp" alt="Hosting and Maintenance" width={"25px"}/>
+</div>
                 <div className="wcu-item-body">
                   <div className="wcu-item-title">SEO-Optimized Website Architecture</div>
                   <div className="wcu-item-desc">As a performance-driven website development company in Coimbatore, PCS builds search-engine-friendly websites designed to rank higher, load faster, and attract qualified traffic that converts into real business opportunities.</div>
@@ -1696,9 +1767,9 @@ function WhyChooseUsSection() {
 
               <div className="wcu-item">
                 <div className="wcu-item-connector"></div>
-                <div className="wcu-item-icon">
-                  <svg viewBox="0 0 24 24"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12" /></svg>
-                </div>
+           <div className="wcu-item-icon">
+        <img src="/img/icon/website-wcu-lead.webp" alt="Hosting and Maintenance" width={"25px"}/>
+</div>
                 <div className="wcu-item-body">
                   <div className="wcu-item-title">Improved Lead Conversion Efficiency</div>
                   <div className="wcu-item-desc">Our conversion-focused website development and landing page optimization reduced cost per lead by <strong style={{ color: "#ed8337" }}>45%</strong>, generating higher-quality inquiries at a lower acquisition cost.</div>
@@ -1707,9 +1778,9 @@ function WhyChooseUsSection() {
 
               <div className="wcu-item">
                 <div className="wcu-item-connector"></div>
-                <div className="wcu-item-icon">
-                  <svg viewBox="0 0 24 24"><path d="M18 20V10" /><path d="M12 20V4" /><path d="M6 20v-6" /></svg>
-                </div>
+           <div className="wcu-item-icon">
+        <img src="/img/icon/website-wcu-google-rank.webp" alt="Hosting and Maintenance" width={"25px"}/>
+</div>
                 <div className="wcu-item-body">
                   <div className="wcu-item-title">Top 5 Google Rankings Achieved</div>
                   <div className="wcu-item-desc">Through technically sound website development and strategic keyword integration, we secured <strong style={{ color: "#ed8337" }}>Top 5</strong> search rankings, outperforming competitors with larger advertising budgets.</div>
@@ -1718,9 +1789,9 @@ function WhyChooseUsSection() {
 
               <div className="wcu-item">
                 <div className="wcu-item-connector"></div>
-                <div className="wcu-item-icon">
-                  <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-                </div>
+        <div className="wcu-item-icon">
+        <img src="/img/icon/website-wcu-bounce-rate.webp" alt="Hosting and Maintenance" width={"25px"}/>
+</div>
                 <div className="wcu-item-body">
                   <div className="wcu-item-title">Higher Engagement &amp; Lower Bounce Rate</div>
                   <div className="wcu-item-desc">By enhancing UI/UX design, improving website speed, and optimizing content flow, we reduced bounce rates from <strong style={{ color: "#ed8337" }}>80% to 35%</strong>, significantly improving visitor engagement and retention.</div>
@@ -1810,63 +1881,63 @@ const CTA_FEATURES1 = [
 // ── Services Slider Section ───────────────────────────
 const SERVICE_SLIDES = [
   {
-    icon: "fas fa-search",
+    iconKey: "search",
     tag: "01",
     title: "Search Engine Optimization (SEO)",
     desc: "Improve your search rankings with strategic keyword targeting, technical optimization, and high-quality content. Our SEO services increase organic traffic, visibility, and qualified leads for sustainable long-term digital growth.",
     highlight: "",
   },
   {
-    icon: "fas fa-bullhorn",
+    iconKey: "ppc",
     tag: "02",
     title: "Pay Per Click (PPC)",
     desc: "Drive instant visibility and high-intent traffic through performance-driven PPC campaigns. We create optimized ad strategies, compelling creatives, and data-backed targeting to maximize ROI and reduce cost per lead.",
     highlight: "45% lower cost per lead",
   },
   {
-    icon: "fas fa-share-alt",
+    iconKey: "content",
     tag: "03",
     title: "Content Marketing",
     desc: "Build authority and trust with strategic content marketing. From blogs and website copy to campaign messaging, we craft SEO-focused content that educates, engages, and converts your audience.",
     highlight: "2x engagement rate",
   },
   {
-    icon: "fas fa-code",
+    iconKey: "smm",
     tag: "04",
     title: "Social Media Marketing",
     desc: "Strengthen brand presence with data-driven social media strategies. We create engaging content, targeted campaigns, and consistent brand communication that boosts engagement, reach, and customer loyalty.",
     highlight: "50ms avg. load time",
   },
   {
-    icon: "fas fa-pen-nib",
+    iconKey: "email",
     tag: "05",
     title: "Email & WhatsApp Marketing ",
     desc: "Nurture leads and retain customers through personalized email and WhatsApp marketing campaigns. We design automation workflows, compelling newsletters, and conversion-focused messaging across both channels to drive engagement, build stronger customer relationships, and grow business effectively.",
     highlight: "60% higher retention",
   },
   {
-    icon: "fas fa-chart-line",
+    iconKey: "graphic",
     tag: "06",
     title: "Graphic Design",
     desc: "Elevate your brand identity with impactful graphic design. From logos and brand kits to social creatives and marketing materials, we create visually compelling designs that communicate professionalism and consistency.",
     highlight: "Real-time dashboards",
   },
   {
-    icon: "fas fa-chart-line",
+    iconKey: "busregcom",
     tag: "07",
     title: "Business Registration & Compliance",
     desc: "Simplify business setup and regulatory compliance with expert guidance. We handle registrations, documentation, statutory filings, and legal processes to ensure smooth, compliant operations.",
     highlight: "Real-time dashboards",
   },
   {
-    icon: "fas fa-chart-line",
+    iconKey: "digitaltrans",
     tag: "08",
     title: "Digital Transformation",
     desc: "Accelerate business growth with digital transformation strategies. We integrate automation, AI tools, analytics, and scalable systems to improve efficiency, decision-making, and long-term competitiveness.",
     highlight: "Real-time dashboards",
   },
   {
-    icon: "fas fa-chart-line",
+    iconKey: "hrservice",
     tag: "09",
     title: "Human Resource Services",
     desc: "Streamline HR operations with structured recruitment, payroll management, HR Strategy ,policy development, and compliance support. Our HR solutions help organizations scale efficiently while maintaining employee satisfaction and regulatory standards.",
@@ -2035,7 +2106,7 @@ function ServicesSlider() {
           background:rgba(237,131,55,0.2);
           transform:scale(1.08);
         }
-        .svs-icon-wrap i { font-size:22px; color:#ed8337; }
+        .svs-icon-wrap svg { width:24px; height:24px; }
 
         /* title */
         .svs-card-title {
@@ -2148,7 +2219,7 @@ function ServicesSlider() {
                   onClick={() => { if (!isActive) { i === 0 ? prev() : next(); } }}
                 >
                   <div className="svs-tag">— {card.tag}</div>
-                  <div className="svs-icon-wrap"><i className={card.icon}></i></div>
+                  <div className="svs-icon-wrap"><ServiceIcon name={card.iconKey} /></div>
                   <div className="svs-card-title">{card.title}</div>
                   <p className="svs-card-desc">{card.desc}</p>
                   <div className="svs-highlight">
@@ -2358,25 +2429,25 @@ function MilestonesCTA() {
 }
 
 const PORTFOLIO_COL1 = [
-  { img: "/img/portfolio/urcts.webp", label: "URCTS", tag: "" },
-  { img: "/img/portfolio/am.webp", label: "AM Builders", tag: "" },
-  { img: "/img/portfolio/zky.webp", label: "ZKY", tag: "" },
-  { img: "/img/portfolio/abb.webp", label: "ABB", tag: "" },
-  { img: "/img/portfolio/riya.webp", label: "Riya consultancy", tag: "" },
+  { img: "/img/portfolio/urcts.webp", label: "URCTS", tag: "", link: "https://www.urcts.in/" },
+  { img: "/img/portfolio/tgcc.webp", label: "TGCC", tag: "", link: "" },
+  { img: "/img/portfolio/zky.webp", label: "ZKY", tag: "", link: "https://zky.co.in/" },
+  { img: "/img/portfolio/abb.webp", label: "ABB", tag: "", link: "https://abbmc.in/" },
+  { img: "/img/portfolio/riya.webp", label: "Riya consultancy", tag: "", link: "https://www.riyaconsultancy.com/" },
 ];
 const PORTFOLIO_COL2 = [
-  { img: "/img/portfolio/feralroots.webp", label: "Feral Roots", tag: "" },
-  { img: "/img/portfolio/sterlocare.webp", label: "SterloCare", tag: "" },
-  { img: "/img/portfolio/sterlo.webp", label: "Sterlo", tag: "" },
-  { img: "/img/portfolio/talenttribe.webp", label: "Talent Tribe", tag: "" },
-  { img: "/img/portfolio/sterlobuild.webp", label: "SterloBuild", tag: "" },
+  { img: "/img/portfolio/feralroots.webp", label: "Feral Roots", tag: "", link: "https://feralroots.in/" },
+  { img: "/img/portfolio/sterlocare.webp", label: "SterloCare", tag: "", link: "https://sterlocare.com/" },
+  { img: "/img/portfolio/sterlo.webp", label: "Sterlo", tag: "", link: "https://sterlo.io/" },
+  { img: "/img/portfolio/talenttribe.webp", label: "Talent Tribe", tag: "", link: "https://talenttribe.in/" },
+  { img: "/img/portfolio/sterlobuild.webp", label: "SterloBuild", tag: "", link: "https://www.sterlobuild.com/" },
 ];
 const PORTFOLIO_COL3 = [
-  { img: "/img/portfolio/product1.webp", label: "", tag: "" },
-  { img: "/img/portfolio/product2.webp", label: "", tag: "" },
-  { img: "/img/portfolio/product3.webp", label: "", tag: "" },
-  { img: "/img/portfolio/product4.webp", label: "", tag: "" },
-  { img: "/img/portfolio/product5.webp", label: "", tag: "" },
+  { img: "/img/portfolio/am.webp", label: "AM Builders", tag: "", link: "" },
+  { img: "/img/portfolio/product2.webp", label: "", tag: "", link: "" },
+  { img: "/img/portfolio/product3.webp", label: "", tag: "", link: "" },
+  { img: "/img/portfolio/product4.webp", label: "", tag: "", link: "" },
+  { img: "/img/portfolio/product5.webp", label: "", tag: "", link: "" },
 ];
 
 function PortfolioColumn({ items, speed, direction }) {
@@ -2417,15 +2488,30 @@ function PortfolioColumn({ items, speed, direction }) {
       onMouseLeave={() => { pausedRef.current = false; }}
     >
       <div ref={innerRef} className="pf-col-inner">
-        {doubled.map((item, i) => (
-          <div className="pf-card" key={i}>
-            <img src={item.img} alt={item.label} loading="lazy" />
-            <div className="pf-card-overlay">
-              <div className="pf-card-label">{item.label}</div>
-              <div className="pf-card-tag">{item.tag}</div>
+        {doubled.map((item, i) => {
+          const card = (
+            <div className="pf-card">
+              <img src={item.img} alt={item.label} loading="lazy" />
+              <div className="pf-card-overlay">
+                <div className="pf-card-label">{item.label}</div>
+                <div className="pf-card-tag">{item.tag}</div>
+              </div>
             </div>
-          </div>
-        ))}
+          );
+          return item.link ? (
+            <a
+              href={item.link}
+              key={i}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pf-card-link"
+            >
+              {card}
+            </a>
+          ) : (
+            <div key={i}>{card}</div>
+          );
+        })}
       </div>
     </div>
   );
@@ -2686,19 +2772,18 @@ function TechnologiesSection() {
     { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
     { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
     { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    { name: "Tailwind CSS", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
     { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-    { name: "Shopify", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/shopify/shopify-original.svg" },
+    { name: "Shopify", logo: "img/Shopify.webp" },
   ];
   const row2 = [
     { name: "WordPress", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
-    { name: "Elementor", logo: "https://upload.wikimedia.org/wikipedia/commons/0/09/Elementor-Logo.png" },
-    { name: "WPBakery", logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/1200px-PHP-logo.svg.png" },
+    { name: "Elementor", logo: "img/Elementor.webp" },
+    { name: "WPBakery", logo: "img/WPBakery.webp" },
     { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "MongoDB", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-    { name: "Laravel", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" },
     { name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
     { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+        { name: "Shopify", logo: "img/Shopify.webp" },
+
   ];
 
   // Duplicate each row so seamless infinite scroll works
@@ -2755,81 +2840,81 @@ function TechnologiesSection() {
 function OurServicesSection() {
   const services = [
     {
-      img: "img/website-whu-choose-use.webp",
+      img: "img/website-development/website-design.webp",
       title: "Website Design",
-      desc: "Creative and user-focused website designs that strengthen your brand and improve Customer engagement.",
+      desc: "Creative website designs that strengthen your brand and improve Customer engagement.",
       features: ["Responsive Layouts", "Modern UI/UX", "Mobile Friendly"],
-      href: "#",
+      href: "/website-design",
     },
     {
-      img: "img/website-whu-choose-use.webp",
+      img: "img/website-development/static-website.webp",
       title: "Static Website Development",
       desc: "Fast, secure, and cost-effective websites ideal for startups and growing businesses",
       features: ["Fast Loading", "Secure Structure", "Easy Maintenance"],
-      href: "#",
+      href: "/static-website-development",
     },
     {
-      img: "img/website-whu-choose-use.webp",
+      img: "img/website-development/custom-website-development.webp",
       title: "Custom Website Development",
       desc: "Tailor-made web solutions built around your business requirements and growth goals.",
       features: [" Custom Features", "Scalable Architecture", "High Performance"],
-      href: "#",
+      href: "/custom-website-development",
     },
     {
-      img: "img/website-whu-choose-use.webp",
+      img: "img/website-development/woo-commerce.webp",
       title: "WooCommerce Development",
       desc: "Powerful WooCommerce stores designed for conversions and seamless shopping experiences.",
       features: [" Secure Checkout", " Product Management", "Store Optimization"],
-      href: "#",
+      href: "/woocommerce-website-development",
     },
     {
-      img: "img/website-whu-choose-use.webp",
+      img: "img/website-development/ecommerce-development.webp",
       title: "E-Commerce Development",
       desc: "Robust online stores with advanced functionality and payment integrations.",
       features: ["Shopping Cart", "Payment Gateway", "Order Management"],
-      href: "#",
+      href: "/e-commerce-website-development",
     },
     {
-      img: "img/website-whu-choose-use.webp",
+      img: "img/website-development/shopify.webp",
       title: "Shopify Development",
       desc: "Professional Shopify stores built for speed, usability, and business growth.",
       features: ["Theme Customization", "Shopify Setup", "Performance Optimization"],
-      href: "#",
+      href: "/shopify-website-development",
     },
   ];
 
   return (
-    <section style={{ padding: "70px 5% 0px" }}>
+    <section style={{ padding: "70px 5% 20px" }}>
       <div className="partners-header1" style={{ textAlign: 'center' }}>
         <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Service</h2>
       </div>
 
-      <h2 className="tech-title" style={{ textAlign: "center", padding: "0 180px" }}>
+      <h2 className="tech-title svc-main-heading">
         Professional  <span>Website Development Services</span> in Coimbatore
       </h2>
       <p style={{ textAlign: "center", maxWidth: 1200, margin: "0 auto 60px", color: "#666", lineHeight: 1.8, fontSize: "0.96rem" }}>
         We deliver scalable, high-performance website solutions from static websites to eCommerce platforms designed to enhance brand presence, user experience, and business growth.
       </p>
-      <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 30 }}>
+      <div className="svc-grid">
         {services.map((svc, i) => (
           <div
             key={i}
-            style={{
-              background: "#fff",
-              marginBottom: '8%',
-              borderRadius: 24,
-              padding: "30px 30px 0px 30px",
-              boxShadow: "0 10px 35px rgba(0,0,0,0.08)",
-              borderTop: "5px solid #ed8337",
-              display: "flex",
-              flexDirection: "column",
-              height: "90%",
-              transition: "transform 0.35s ease, box-shadow 0.35s ease",
-            }}
+            s/* REMOVE height: "90%" and add these instead: */
+style={{
+  background: "#fff",
+  borderRadius: 24,
+  padding: "30px 30px 28px 30px",
+  boxShadow: "0 10px 35px rgba(0,0,0,0.08)",
+  borderTop: "5px solid #ed8337",
+  display: "flex",
+  flexDirection: "column",
+  // REMOVE height: "90%" entirely
+  transition: "transform 0.35s ease, box-shadow 0.35s ease",
+}}
             onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 18px 40px rgba(0,0,0,0.12)"; }}
             onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 10px 35px rgba(0,0,0,0.08)"; }}
           >
-            <img src={svc.img} alt={svc.title} style={{ width: "95%", height: "30%", objectFit: "contain", margin: "0 auto 20px" }} />
+            <img src={svc.img} alt={svc.title} style={{ width: "90%",  objectFit: "contain", margin: "0 auto 20px" }} />
             <h3 style={{ color: "#004168", fontSize: 20, marginBottom: 15, fontFamily: "'Poppins', sans-serif", fontWeight: 700 }}>
               {svc.title}
             </h3>
@@ -2846,7 +2931,7 @@ function OurServicesSection() {
             </ul>
             <a
               href={svc.href}
-              style={{ display: "inline-block", width: '40%', fontSize: '14px', textAlign: "center", padding: "10px 20px", background: "#004168", color: "#fff", textDecoration: "none", borderRadius: 50, fontWeight: 600, fontFamily: "'Poppins', sans-serif", transition: "background 0.3s" }}
+              style={{ display: "inline-block", width: '42%', fontSize: '14px', textAlign: "center", padding: "10px 20px", background: "#004168", color: "#fff", textDecoration: "none", borderRadius: 50, fontWeight: 600, fontFamily: "'Poppins', sans-serif", transition: "background 0.3s" }}
               onMouseEnter={e => { e.currentTarget.style.background = "#ed8337"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "#004168"; }}
             >
@@ -2872,7 +2957,7 @@ export default function DigitalMarketingNewPage() {
       <OurServicesSection />
       <TechnologiesSection />
       <CTASplitSection />
-      <AppBannerSection />
+      <BuildTogetherCTASection />
       <PortfolioSection />
       <ModernFeaturesSection />
       <WhyChooseUsSection />
