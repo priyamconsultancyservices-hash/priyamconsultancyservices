@@ -2428,6 +2428,7 @@ function MilestonesCTA() {
   );
 }
 
+
 const PORTFOLIO_COL1 = [
   { img: "/img/portfolio/urcts.webp", label: "URCTS", tag: "", link: "https://www.urcts.in/" },
   { img: "/img/portfolio/tgcc.webp", label: "TGCC", tag: "", link: "" },
@@ -2449,6 +2450,7 @@ const PORTFOLIO_COL3 = [
   { img: "/img/portfolio/product4.webp", label: "", tag: "", link: "" },
   { img: "/img/portfolio/product5.webp", label: "", tag: "", link: "" },
 ];
+
 
 function PortfolioColumn({ items, speed, direction }) {
   const innerRef = useRef(null);
