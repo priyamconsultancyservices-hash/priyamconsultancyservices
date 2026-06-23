@@ -1402,7 +1402,7 @@ function CTASplitSection() {
     <section className="pg-cta-section">
       <div className="pg-cta-inner">
         <div className="pg-cta-img-wrap">
-          <img src="img/website-development/trusted-website-partner.webp" alt="PCS Digital Marketing Team in Coimbatore" className="pg-cta-img" />
+          <img src="/img/website-development/trusted-website-partner.webp" alt="PCS Digital Marketing Team in Coimbatore" className="pg-cta-img" />
 
         </div>
         <div>
@@ -2798,42 +2798,42 @@ function TechnologiesSection() {
 function OurServicesSection() {
   const services = [
     {
-      img: "img/website-development/website-design.webp",
+      img: "/img/website-development/website-design.webp",
       title: "Website Design",
       desc: "Creative website designs that strengthen your brand and improve Customer engagement.",
       features: ["Responsive Layouts", "Modern UI/UX", "Mobile Friendly"],
       href: "#",
     },
     {
-      img: "img/website-development/static-website.webp",
+      img: "/img/website-development/static-website.webp",
       title: "Static Website Development",
       desc: "Fast, secure, and cost-effective websites ideal for startups and growing businesses",
       features: ["Fast Loading", "Secure Structure", "Easy Maintenance"],
       href: "#",
     },
     {
-      img: "img/website-development/custom-website-development.webp",
+      img: "/img/website-development/custom-website-development.webp",
       title: "Custom Website Development",
       desc: "Tailor-made web solutions built around your business requirements and growth goals.",
       features: [" Custom Features", "Scalable Architecture", "High Performance"],
       href: "#",
     },
     {
-      img: "img/website-development/woo-commerce.webp",
+      img: "/img/website-development/woo-commerce.webp",
       title: "WooCommerce Development",
       desc: "Powerful WooCommerce stores designed for conversions and seamless shopping experiences.",
       features: [" Secure Checkout", " Product Management", "Store Optimization"],
       href: "#",
     },
     {
-      img: "img/website-development/ecommerce-development.webp",
+      img: "/img/website-development/ecommerce-development.webp",
       title: "E-Commerce Development",
       desc: "Robust online stores with advanced functionality and payment integrations.",
       features: ["Shopping Cart", "Payment Gateway", "Order Management"],
       href: "#",
     },
     {
-      img: "img/website-development/shopify.webp",
+      img: "/img/website-development/shopify.webp",
       title: "Shopify Development",
       desc: "Professional Shopify stores built for speed, usability, and business growth.",
       features: ["Theme Customization", "Shopify Setup", "Performance Optimization"],
