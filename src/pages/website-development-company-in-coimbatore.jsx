@@ -1331,7 +1331,7 @@ function CTASplitSection() {
     <section className="pg-cta-section">
       <div className="pg-cta-inner">
         <div className="pg-cta-img-wrap">
-          <img src="/img/website-development/trusted-website-partner.webp" alt="PCS Digital Marketing Team in Coimbatore" className="pg-cta-img" />
+          <img src="/img/website-development-trusted-website-partner.webp" alt="PCS Digital Marketing Team in Coimbatore" className="pg-cta-img" />
 
         </div>
         <div>
