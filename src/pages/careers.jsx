@@ -364,7 +364,7 @@ export default function CareersPage() {
                   <div className="role-badge">{isIntern ? "Internship" : "Full-time"}</div>
                   <div className="role-title">{role.title}</div>
                   <div className="role-desc">{role.desc}</div>
-                  <a className="role-apply" href={`/careers/${slug}/`}>
+                  <a className="role-apply" href={`/careers/${slug}`}>
                     <span className="apply-icon">→</span>
                     View & Apply
                   </a>

@@ -271,7 +271,7 @@ export default function SocialSidebar() {
           .sb-hover-form {
             right: 58px;
             left: unset;
-            bottom: -100px;
+            bottom: -30px;
             transform: none;
             width: 88vw;
             max-width: 320px;

@@ -160,7 +160,7 @@ export default function CaseStudy() {
             <div className="detail-cta-block">
               <h3>Ready to achieve results like Analytix Hub?</h3>
               <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
-              <a className="cs-cta" href="/contact">Get in Touch →</a>
+              <a className="cs-cta" href="/contact-us">Get in Touch →</a>
             </div>
 
           </div>

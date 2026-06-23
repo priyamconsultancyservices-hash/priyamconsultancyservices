@@ -161,7 +161,7 @@ export default function CaseStudy() {
               <h3>Ready to achieve results like StarHealth
                 ?</h3>
               <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
-              <a className="cs-cta" href="/contact">Get in Touch →</a>
+              <a className="cs-cta" href="/contact-us">Get in Touch →</a>
             </div>
 
           </div>

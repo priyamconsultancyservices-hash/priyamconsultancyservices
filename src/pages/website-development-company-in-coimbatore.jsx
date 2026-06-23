@@ -1427,7 +1427,7 @@ function BuildTogetherCTASection() {
           display: "flex", flexDirection: "column",
           alignItems: "start", gap: "0.85rem", flexShrink: 0,marginTop: "1.5rem",
         }}>
-          <a href="/contact" className="pg-form-btn">
+          <a href="/contact-us" className="pg-form-btn">
             Get Free Consultation
             <span className="pg-form-btn-arr">→</span>
           </a>
@@ -2406,12 +2406,12 @@ function MilestonesCTA() {
         <div className="ms-cta-right">
 
 
-          <a href="/contact" className="ms-cta-btn-primary">
+          <a href="/contact-us" className="ms-cta-btn-primary">
             Start Your Growth Journey
             <span className="ms-cta-btn-arr">→</span>
           </a>
 
-          <a href="/portfolio" className="ms-cta-btn-secondary">
+          <a href="/case-studies" className="ms-cta-btn-secondary">
             <span className="ms-cta-btn-ico">📊</span>
             View Results
           </a>
@@ -2878,7 +2878,7 @@ function OurServicesSection() {
   ];
 
   return (
-    <section style={{ padding: "70px 5% 20px" }}>
+    <section style={{ padding: "70px 5% 5rem" }}>
       <div className="partners-header1" style={{ textAlign: 'center' }}>
         <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Service</div>
       </div>
@@ -2949,11 +2949,11 @@ export default function DigitalMarketingNewPage() {
       <GlobalStyles />
       <HeroSection />
       <OurServicesSection />
+      <PortfolioSection />
       <TechnologiesSection />
       <CTASplitSection />
       {/* <AppBannerSection /> */}
       <BuildTogetherCTASection />   
-      <PortfolioSection />
       <ModernFeaturesSection />
       <WhyChooseUsSection />
       <TestimonialSlider />

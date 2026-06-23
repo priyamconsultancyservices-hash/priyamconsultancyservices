@@ -158,7 +158,7 @@ export default function CaseStudy() {
             <div className="detail-cta-block">
               <h3>Ready to achieve results like Tactive?</h3>
               <p>We design actionable strategies that deliver visibility, leads, and long-term business growth. </p>
-              <a className="cs-cta" href="/contact">Get in Touch →</a>
+              <a className="cs-cta" href="/contact-us">Get in Touch →</a>
             </div>
           </div>
 
@@ -169,7 +169,7 @@ export default function CaseStudy() {
             <div className="sidebar-about">
               <h3><span />About This Case Study</h3>
               <p>Client: <strong>Tactive</strong></p>
-              <p>Service: <strong>Digital Marketing</strong></p>
+              <p>Service: </p>
               <div className="sidebar-tag-row">
                 <span className="sidebar-tag">Digital Marketing</span>
               </div>
