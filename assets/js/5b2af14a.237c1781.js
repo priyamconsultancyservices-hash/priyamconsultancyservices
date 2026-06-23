@@ -1,39 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from "react";
-import Layout from '@theme/Layout';
-import Head from '@docusaurus/Head';
-import emailjs from "@emailjs/browser";
-
-const banner = "/img/digital-marketing.png";
-
-function SEOHead() {
-  const pageUrl = "https://priyamconsultancy.com/digital-marketing-company-in-coimbatore/";
-  const imageUrl = "https://www.pcsbusinesssolution.com/img/digital-marketing.png";
-  const schemaData = [
-    { "@context": "https://schema.org", "@type": "WebSite", name: "PCS Business Solution", url: "https://www.pcsbusinesssolution.com", potentialAction: { "@type": "SearchAction", target: "https://www.pcsbusinesssolution.com/search?q={search_term_string}", "query-input": "required name=search_term_string" } },
-    { "@context": "https://schema.org", "@type": "LocalBusiness", name: "PCS Business Solution", description: "PCS Business Solution offers digital marketing, business registration, HR, and Microsoft App services across India.", url: "https://www.pcsbusinesssolution.com", logo: "https://www.pcsbusinesssolution.com/img/logo.png", image: imageUrl, telephone: "+91-XXXXXXXXXX", address: { "@type": "PostalAddress", streetAddress: "Your Street Address", addressLocality: "Chennai", addressRegion: "Tamil Nadu", postalCode: "600001", addressCountry: "IN" }, openingHours: "Mo-Fr 09:00-18:00", sameAs: ["https://www.linkedin.com/company/pcs-business-solution", "https://www.facebook.com/pcsbusinesssolution"] },
-    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [{ "@type": "Question", name: "What does a Digital Marketing Company in Coimbatore do?", acceptedAnswer: { "@type": "Answer", text: "A Digital Marketing Company in Coimbatore helps businesses grow online through services like SEO, Google Ads, social media marketing, content marketing, and website optimization." } }, { "@type": "Question", name: "Why should I choose a Digital Marketing Agency in Coimbatore?", acceptedAnswer: { "@type": "Answer", text: "Choosing a Digital Marketing Agency in Coimbatore ensures local market understanding, targeted strategies, and cost-effective campaigns focused on measurable results such as leads, conversions, and ROI." } }] },
-  ];
-  return (
-    <Head>
-      <title>Website Development Company in Coimbatore | Expert Web </title>
-      <meta name="description" content="Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . " />
-      <link rel="canonical" href="https://www.priyamconsultancy.com/website-development-company-in-coimbatore/" />
-      <meta property="og:type" content="website" />
-      <meta property="og:title" content="Website Development Company in Coimbatore | Expert Web " />
-      <meta property="og:description" content="Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . " />
-      <meta property="og:url" content="https://www.priyamconsultancy.com/website-development-company-in-coimbatore/" />
-      <meta property="og:image" content={imageUrl} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Website Development Company in Coimbatore | Expert Web " />
-      <meta name="twitter:description" content="Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . " />
-      <meta name="twitter:image" content={imageUrl} />
-      {schemaData.map((schema, i) => (<script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>))}
-    </Head>
-  );
-}
-
-const GlobalStyles = () => (
-  <style>{`
+"use strict";(self.webpackChunknew_docs_pcs_website_design=self.webpackChunknew_docs_pcs_website_design||[]).push([["3988"],{4147(e,t,r){r.r(t),r.d(t,{default:()=>O});var i=r(4848),a=r(6540),n=r(1085),o=r(3572),s=r(8128);function l(){let e="https://www.pcsbusinesssolution.com/img/digital-marketing.png",t=[{"@context":"https://schema.org","@type":"WebSite",name:"PCS Business Solution",url:"https://www.pcsbusinesssolution.com",potentialAction:{"@type":"SearchAction",target:"https://www.pcsbusinesssolution.com/search?q={search_term_string}","query-input":"required name=search_term_string"}},{"@context":"https://schema.org","@type":"LocalBusiness",name:"PCS Business Solution",description:"PCS Business Solution offers digital marketing, business registration, HR, and Microsoft App services across India.",url:"https://www.pcsbusinesssolution.com",logo:"https://www.pcsbusinesssolution.com/img/logo.png",image:e,telephone:"+91-XXXXXXXXXX",address:{"@type":"PostalAddress",streetAddress:"Your Street Address",addressLocality:"Chennai",addressRegion:"Tamil Nadu",postalCode:"600001",addressCountry:"IN"},openingHours:"Mo-Fr 09:00-18:00",sameAs:["https://www.linkedin.com/company/pcs-business-solution","https://www.facebook.com/pcsbusinesssolution"]},{"@context":"https://schema.org","@type":"FAQPage",mainEntity:[{"@type":"Question",name:"What does a Digital Marketing Company in Coimbatore do?",acceptedAnswer:{"@type":"Answer",text:"A Digital Marketing Company in Coimbatore helps businesses grow online through services like SEO, Google Ads, social media marketing, content marketing, and website optimization."}},{"@type":"Question",name:"Why should I choose a Digital Marketing Agency in Coimbatore?",acceptedAnswer:{"@type":"Answer",text:"Choosing a Digital Marketing Agency in Coimbatore ensures local market understanding, targeted strategies, and cost-effective campaigns focused on measurable results such as leads, conversions, and ROI."}}]}];return(0,i.jsxs)(o.A,{children:[(0,i.jsx)("title",{children:"Website Development Company in Coimbatore | Expert Web "}),(0,i.jsx)("meta",{name:"description",content:"Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . "}),(0,i.jsx)("meta",{name:"keywords",content:"Web Development Company in Coimbatore, Digital Marketing Company Coimbatore, Digital Marketing in Coimbatore, SEO Company in Coimbatore, Recruitment Agency in Coimbatore, SEO Services in Coimbatore, Website Development Company in Coimbatore "}),(0,i.jsx)("link",{rel:"canonical",href:"https://www.priyamconsultancy.com/website-development-company-in-coimbatore/"}),(0,i.jsx)("meta",{property:"og:type",content:"website"}),(0,i.jsx)("meta",{property:"og:title",content:"Website Development Company in Coimbatore | Expert Web "}),(0,i.jsx)("meta",{property:"og:description",content:"Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . "}),(0,i.jsx)("meta",{property:"og:url",content:"https://www.priyamconsultancy.com/website-development-company-in-coimbatore/"}),(0,i.jsx)("meta",{property:"og:image",content:e}),(0,i.jsx)("meta",{name:"twitter:card",content:"summary_large_image"}),(0,i.jsx)("meta",{name:"twitter:title",content:"Website Development Company in Coimbatore | Expert Web "}),(0,i.jsx)("meta",{name:"twitter:description",content:"Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . "}),(0,i.jsx)("meta",{name:"twitter:image",content:e}),t.map((e,t)=>(0,i.jsx)("script",{type:"application/ld+json",children:JSON.stringify(e)},t))]})}let d=()=>(0,i.jsx)("style",{children:`
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap');
 
     :root {
@@ -44,7 +9,7 @@ const GlobalStyles = () => (
       --orange-l:  #f5a66b;
     }
 
-    /* ── HERO ── */
+    /* \u{2500}\u{2500} HERO \u{2500}\u{2500} */
     .pg-hero {
       min-height: 100svh;
       display: grid;
@@ -115,7 +80,7 @@ const GlobalStyles = () => (
       display: flex; align-items: center; justify-content: center;
     }
 
-    /* ── FORM CARD ── */
+    /* \u{2500}\u{2500} FORM CARD \u{2500}\u{2500} */
     .pg-form-card {
       background: #fff; border-radius: 20px;
       padding: 2.2rem 2.4rem 2.4rem;
@@ -174,7 +139,7 @@ const GlobalStyles = () => (
       display: flex; align-items: center; justify-content: center; font-size: .9rem;
     }
 
-    /* ── SERVICES SECTION ── */
+    /* \u{2500}\u{2500} SERVICES SECTION \u{2500}\u{2500} */
     .pg-svc-wrap { background: #f4f6f9; padding: 6rem 0 5rem; }
     .pg-svc-inner { max-width: 1200px; margin: 0 auto; padding: 0 5%; }
     .pg-svc-top {
@@ -262,7 +227,7 @@ const GlobalStyles = () => (
     .pg-stat-callout-label { font-size: .72rem; font-weight: 700; color: var(--orange); margin-bottom: .4rem; letter-spacing: .06em; }
     .pg-stat-callout-text { font-size: .83rem; line-height: 1.65; color: #555; }
 
-    /* ── APP BANNER ── */
+    /* \u{2500}\u{2500} APP BANNER \u{2500}\u{2500} */
     .pg-app-section {  padding: 150px 5% 5rem; }
     .pg-app-outer { max-width: 1200px; margin: 0 auto; position: relative; }
     .pg-app-card {
@@ -341,7 +306,7 @@ const GlobalStyles = () => (
     .pg-ph-nav-item { width: 26px; height: 26px; border-radius: 7px; display: flex; align-items: center; justify-content: center; font-size: 13px; }
     .pg-ph-nav-item.active { background: rgba(0,65,104,0.12); }
 
-    /* ── CTA SPLIT SECTION ── */
+    /* \u{2500}\u{2500} CTA SPLIT SECTION \u{2500}\u{2500} */
     .pg-cta-section { background: #fff; }
     .pg-cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5rem; }
     .pg-cta-img-wrap { position: relative; border-radius: 20px; overflow: visible; }
@@ -364,7 +329,7 @@ const GlobalStyles = () => (
     .pg-cta-btn-sec { color: #004168; font-family: 'Poppins', sans-serif; font-size: .9rem; font-weight: 600; text-decoration: none; border-bottom: 2px solid #ed8337; padding-bottom: 2px; transition: color .2s; }
     .pg-cta-btn-sec:hover { color: #ed8337; }
 
-    /* ── MODERN FEATURES SECTION ── */
+    /* \u{2500}\u{2500} MODERN FEATURES SECTION \u{2500}\u{2500} */
     .mf-outer { background: #fff; padding: 80px 20px; font-family: 'Poppins', Arial, sans-serif; }
     .mf-head { text-align: center; margin-bottom: 40px; }
     .mf-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #ed8337; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; }
@@ -416,7 +381,7 @@ const GlobalStyles = () => (
     .mf-nd { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.13); }
     .mf-nd.a { background: #ed8337; width: 16px; border-radius: 3px; }
 
-    /* ══ KEY FEATURES CAROUSEL ══ */
+    /* \u{2550}\u{2550} KEY FEATURES CAROUSEL \u{2550}\u{2550} */
     .kf-section { position:relative; padding:4rem 0; overflow:hidden; background:#004168; }
     .kf-section::before { content:''; position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px); background-size:55px 55px; }
     .kf-orbs { position:absolute; inset:0; pointer-events:none; z-index:0; }
@@ -465,7 +430,7 @@ const GlobalStyles = () => (
     .kf-dot.active { background:var(--orange); width:22px; border-radius:4px; }
     .kf-drag-hint { text-align:center; margin-top:.8rem; font-size:.72rem; color:rgba(255,255,255,0.25); font-family:'Space Mono',monospace; letter-spacing:.06em; padding:0 6%; }
 
-    /* ══ FAQ SECTION ══ */
+    /* \u{2550}\u{2550} FAQ SECTION \u{2550}\u{2550} */
     .dm-faq-section { background:#fff; padding:5rem 6%; }
     .dm-faq-head { text-align:center; margin-bottom:2.5rem; }
     .dm-faq-head h2 { font-family:'Poppins',sans-serif; font-size:clamp(1.8rem,3vw,2.5rem); font-weight:700; color:#011a2a; line-height:1.15; }
@@ -492,7 +457,7 @@ const GlobalStyles = () => (
       .mf-phone { width: 75%; max-width: 200px; }
     }
 
-    /* ── TECHNOLOGIES MARQUEE ── */
+    /* \u{2500}\u{2500} TECHNOLOGIES MARQUEE \u{2500}\u{2500} */
     .tech-section {
       background: #fff;
       padding: 70px 0 80px;
@@ -583,7 +548,7 @@ const GlobalStyles = () => (
       color: #0d1f2d; white-space: nowrap;
     }
 
-    /* ── RESPONSIVE ── */
+    /* \u{2500}\u{2500} RESPONSIVE \u{2500}\u{2500} */
     @media (max-width: 960px) {
       .tech-card { min-width: 150px; padding: 14px 20px; }
       .tech-title { font-size: clamp(1.5rem, 5vw, 2rem); }
@@ -740,7 +705,7 @@ const GlobalStyles = () => (
     }
 }
     
-  /* ══ PORTFOLIO SECTION ══ */
+  /* \u{2550}\u{2550} PORTFOLIO SECTION \u{2550}\u{2550} */
   .pf-section {
     background: #004168;
     position: relative; overflow: hidden;
@@ -842,7 +807,7 @@ const GlobalStyles = () => (
     .pf-cols { grid-template-columns: 1fr; }
   }
 
-  /* ══ SERVICES GRID (Our Services Section) ══ */
+  /* \u{2550}\u{2550} SERVICES GRID (Our Services Section) \u{2550}\u{2550} */
   .svc-main-heading {
     text-align: center;
     max-width: 780px;
@@ -855,7 +820,7 @@ const GlobalStyles = () => (
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   align-items: stretch;
-  grid-auto-rows: 1fr;  /* ← equal height rows */
+  grid-auto-rows: 1fr;  /* \u{2190} equal height rows */
 }
   @media (max-width: 1024px) {
     .svc-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
@@ -865,65 +830,7 @@ const GlobalStyles = () => (
     .svc-grid { grid-template-columns: 1fr; gap: 20px; }
     .svc-main-heading { max-width: 100%; }
   }
-  `}</style>
-);
-
-// ── Inline SVG Icon Helpers (replaces missing icon-font classes) ──
-// Used by ModernFeaturesSection (.mf-icon-box)
-// function FeatIcon({ name }) {
-//   const icons = {
-//     code: "/img/icon/feat-custom-web.webp",
-//     plug: "/img/icon/feat-api.webp",
-//     responsive: "/img/icon/feat-responsive.webp",
-//     search: "/img/icon/feat-seo.webp",
-//     rocket: "/img/icon/feat-speed.webp",
-//     server: "/img/icon/feat-server.webp",
-//   };
-//   return icons[name] ? <img src={icons[name]} alt={name} width="20" height="20" /> : null;
-// }
-
-// Used by ServicesSlider (.svs-icon-wrap)
-function ServiceIcon({ name }) {
-  const icons = {
-    search: "/img/icon/website-other-service-seo.webp",
-    ppc: "/img/icon/website-other-service-ppc.webp",
-    content: "/img/icon/website-other-service-content.webp",
-    smm: "/img/icon/website-other-service-smm.webp",
-    email: "/img/icon/website-other-service-email.webp",
-    graphic: "/img/icon/website-other-service-graphic.webp",
-    busregcom: "/img/icon/website-other-service-busregcom.webp",
-    digitaltrans:"/img/icon/website-other-service-digitaltrans.webp",
-    hrservice: "/img/icon/website-other-service-hrservice.webp",
-  };
-  return icons[name] ? <img src={icons[name]} alt={name} width="24" height="24" /> : null;
-}
-
-// ── Key Features Data ─────────────────────────────────
-// const FEATURES = [
-//   { icon: <img src="/icon/feat-structure.webp" alt="Strategic Website Structure" width="28" height="28" />, title: "Strategic Website Structure", desc: "Well-planned layouts and intuitive navigation systems crafted to enhance usability, improve engagement, and guide visitors smoothly toward meaningful actions." },
-//   { icon: <img src="/icon/feat-responsive.webp" alt="Responsive and Adaptive Design" width="28" height="28" />, title: "Responsive & Adaptive Design", desc: "Device-optimized, mobile-first designs ensuring seamless performance and consistent user experience across desktops, tablets, and smartphones." },
-//   { icon: <img src="/icon/feat-seo.webp" alt="Search Ready Development" width="28" height="28" />, title: "Search-Ready Development", desc: "SEO-focused coding practices, structured metadata, schema setup, and optimized architecture to strengthen search engine visibility." },
-//   { icon: <img src="/icon/feat-performance.webp" alt="Speed and Performance Enhancement" width="28" height="28" />, title: "Speed & Performance Enhancement", desc: "Optimized frameworks, efficient database structuring, and performance tuning techniques to deliver fast-loading and stable websites." },
-//   { icon: <img src="/icon/feat-integrations.webp" alt="Seamless System Integrations" width="28" height="28" />, title: "Seamless System Integrations", desc: "Integration with payment gateways, WhatsApp, shipping systems, analytics tools, and marketing solutions for streamlined operations." },
-//   { icon: <img src="/icon/feat-scalability.webp" alt="Future Ready Scalability" width="28" height="28" />, title: "Future-Ready Scalability", desc: "Flexible development frameworks designed to accommodate business expansion, advanced features, increasing traffic, and evolving digital needs." },
-// ];
-
-// ── FAQ Data ──────────────────────────────────────────
-const faqData = [
-  { q: "What is the difference between a static and dynamic website?", a: "A static website displays fixed content that remains the same for every visitor unless manually updated by a developer. A dynamic website, on the other hand, displays interactive and database-driven content that can change based on user behavior, location, or preferences. Dynamic websites are ideal for businesses that require regular updates, user logins, eCommerce functionality, or content management systems." },
-  { q: "What is a static website?", a: "A static website consists of fixed web pages built using HTML, CSS, and basic scripts. The content remains the same for all visitors and does not change unless manually edited. Static websites are suitable for small businesses, portfolios, landing pages, and informational websites that do not require frequent updates or complex functionality." },
-  { q: "What is an eCommerce website?", a: "An eCommerce website is an online platform that allows businesses to sell products or services digitally. It includes features like product listings, shopping cart, secure payment gateways, order management, and customer accounts. Platforms like WooCommerce and Shopify enable businesses to build scalable and user-friendly online stores." },
-  { q: "How to create a category page in WooCommerce?", a: "To create a category page in WooCommerce, go to Products → Categories in your WordPress dashboard and add a new category by entering the name, slug, and description. After creating it, assign relevant products to that category. If required, add the category to your website menu for easy navigation. WooCommerce automatically generates a dedicated category page that displays all products assigned to it." },
-  { q: "How to delete a Shopify store?", a: "To delete a Shopify store, log in to your Shopify admin panel and navigate to Settings → Plan. Click on Deactivate store, select a reason for closing, and confirm the deactivation. Make sure all outstanding charges and payments are cleared before proceeding, as your store cannot be closed until all dues are settled." },
-  { q: "What is WooCommerce and how does it work?", a: "WooCommerce is a powerful eCommerce plugin for WordPress that allows businesses to create and manage online stores. It enables users to add products, manage inventory, process payments, handle shipping, and track orders directly from the WordPress dashboard. WooCommerce is highly customizable, making it suitable for small businesses as well as large-scale online stores. " },
-];
-
-// ── Hero ────────────────────────────────────────────
-
-function HeroSection() {
-  return (
-    <section className="hero" id="hero">
-      <style>{`
+  `});function c({name:e}){let t={search:"/img/icon/website-other-service-seo.webp",ppc:"/img/icon/website-other-service-ppc.webp",content:"/img/icon/website-other-service-content.webp",smm:"/img/icon/website-other-service-smm.webp",email:"/img/icon/website-other-service-email.webp",graphic:"/img/icon/website-other-service-graphic.webp",busregcom:"/img/icon/website-other-service-busregcom.webp",digitaltrans:"/img/icon/website-other-service-digitaltrans.webp",hrservice:"/img/icon/website-other-service-hrservice.webp"};return t[e]?(0,i.jsx)("img",{src:t[e],alt:e,width:"24",height:"24"}):null}let p=[{q:"What is the difference between a static and dynamic website?",a:"A static website displays fixed content that remains the same for every visitor unless manually updated by a developer. A dynamic website, on the other hand, displays interactive and database-driven content that can change based on user behavior, location, or preferences. Dynamic websites are ideal for businesses that require regular updates, user logins, eCommerce functionality, or content management systems."},{q:"What is a static website?",a:"A static website consists of fixed web pages built using HTML, CSS, and basic scripts. The content remains the same for all visitors and does not change unless manually edited. Static websites are suitable for small businesses, portfolios, landing pages, and informational websites that do not require frequent updates or complex functionality."},{q:"What is an eCommerce website?",a:"An eCommerce website is an online platform that allows businesses to sell products or services digitally. It includes features like product listings, shopping cart, secure payment gateways, order management, and customer accounts. Platforms like WooCommerce and Shopify enable businesses to build scalable and user-friendly online stores."},{q:"How to create a category page in WooCommerce?",a:"To create a category page in WooCommerce, go to Products \u2192 Categories in your WordPress dashboard and add a new category by entering the name, slug, and description. After creating it, assign relevant products to that category. If required, add the category to your website menu for easy navigation. WooCommerce automatically generates a dedicated category page that displays all products assigned to it."},{q:"How to delete a Shopify store?",a:"To delete a Shopify store, log in to your Shopify admin panel and navigate to Settings \u2192 Plan. Click on Deactivate store, select a reason for closing, and confirm the deactivation. Make sure all outstanding charges and payments are cleared before proceeding, as your store cannot be closed until all dues are settled."},{q:"What is WooCommerce and how does it work?",a:"WooCommerce is a powerful eCommerce plugin for WordPress that allows businesses to create and manage online stores. It enables users to add products, manage inventory, process payments, handle shipping, and track orders directly from the WordPress dashboard. WooCommerce is highly customizable, making it suitable for small businesses as well as large-scale online stores. "}];function m(){return(0,i.jsxs)("section",{className:"hero",id:"hero",children:[(0,i.jsx)("style",{children:`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
  
         :root {
@@ -1014,7 +921,7 @@ function HeroSection() {
         }
         @keyframes fadeUp { from{ opacity:0; transform:translateY(26px); } to{ opacity:1; transform:translateY(0); } }
  
-        /* ── INLINE HERO STATS GRID ── */
+        /* \u{2500}\u{2500} INLINE HERO STATS GRID \u{2500}\u{2500} */
         .hero-stats-grid {
           margin-top: 2.2rem;
           display: grid;
@@ -1074,7 +981,7 @@ function HeroSection() {
         img.hero-img { animation: none !important; }
         .hero-img { width: 100%; object-fit: contain; display: block; }
  
-        /* ══ TABLET ══ */
+        /* \u{2550}\u{2550} TABLET \u{2550}\u{2550} */
         @media(max-width: 960px) {
           .hero {
             grid-template-columns: 1fr;
@@ -1090,7 +997,7 @@ function HeroSection() {
           .hero-stats-grid { grid-template-columns: 1fr 1fr; }
         }
  
-        /* ══ MOBILE ══ */
+        /* \u{2550}\u{2550} MOBILE \u{2550}\u{2550} */
         @media(max-width: 600px) {
           .hero { padding: 1rem 4% 3rem; gap: 2rem; }
           .hero-heading { font-size: clamp(1.7rem, 6vw, 2.2rem) !important; }
@@ -1103,29 +1010,7 @@ function HeroSection() {
           .hero-stat-value { font-size: 0.95rem; }
           .hero-stat-label { font-size: 0.68rem; }
         }
-      `}</style>
-
-      {/* LEFT CONTENT */}
-      <div className="hero-left">
-        <div className="h-badge"><div className="badge-dot" />Web Development</div>
-        <h1 className="hero-heading">
-          Best
-          <span className="hl lined" style={{ marginLeft: '12px' }}> Web Development </span>
-          Company in Coimbatore for Business Growth
-        </h1>
-        <p className="hero-sub">
-          We are a trusted Web Development Company helping businesses build responsive, scalable, and conversion-focused websites. From corporate websites to e-commerce website development, we create digital experiences that strengthen brands and drive measurable growth.
-        </p>
-        <p className="hero-sub">
-          As a Website Development Company, we deliver customized solutions designed to improve user experience, enhance online visibility, and support long-term business success.
-
-        </p>
-      </div>
-
-      {/* RIGHT CONTACT FORM */}
-      <div className="hero-right">
-        <div className="hero-form-card">
-          <style>{`
+      `}),(0,i.jsxs)("div",{className:"hero-left",children:[(0,i.jsxs)("div",{className:"h-badge",children:[(0,i.jsx)("div",{className:"badge-dot"}),"Web Development"]}),(0,i.jsxs)("h1",{className:"hero-heading",children:["Best",(0,i.jsx)("span",{className:"hl lined",style:{marginLeft:"12px"},children:" Web Development "}),"Company in Coimbatore for Business Growth"]}),(0,i.jsx)("p",{className:"hero-sub",children:"We are a trusted Web Development Company helping businesses build responsive, scalable, and conversion-focused websites. From corporate websites to e-commerce website development, we create digital experiences that strengthen brands and drive measurable growth."}),(0,i.jsx)("p",{className:"hero-sub",children:"As a Website Development Company, we deliver customized solutions designed to improve user experience, enhance online visibility, and support long-term business success."})]}),(0,i.jsx)("div",{className:"hero-right",children:(0,i.jsxs)("div",{className:"hero-form-card",children:[(0,i.jsx)("style",{children:`
             .hero-form-card {
               background: #fff;
               border-radius: 20px;
@@ -1190,338 +1075,8 @@ function HeroSection() {
             @media(max-width: 600px) {
               .hero-form-card { padding: 1.6rem 1.4rem 1.8rem; }
             }
-          `}</style>
-
-          <h2 className="hero-form-title">Your Growth, <span>Our Mission.</span></h2>
-          <p className="hero-form-sub">Fill in your details — we'll get back within 24 hours.</p>
-          <HeroContactForm />
-        </div>
-      </div>
-    </section>
-  );
-}
-function HeroContactForm() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    msg: ""
-  });
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    const templateParams = {
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      company: form.company,
-      message: form.msg,
-      url: window.location.href,
-    };
-
-    emailjs
-      .send(
-        "service_8xw6k3r",
-        "template_jarui36",
-        templateParams,
-        "XWRnXi4hK2SvmRG3q"
-      )
-      .then(() => {
-        alert("Message Sent Successfully ✅");
-        setForm({ name: "", email: "", phone: "", company: "", msg: "" });
-      })
-      .catch((error) => {
-        console.log(error);
-        alert("Failed to send ❌");
-      });
-  };
-
-  return (
-    <form onSubmit={sendEmail}>
-      <div className="hero-form-row">
-        <div className="hero-form-field">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={form.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-      </div>
-
-      <div className="hero-form-row">
-        <div className="hero-form-field">
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            value={form.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-      </div>
-
-      <div className="hero-form-row">
-        <div className="hero-form-field">
-          <div className="hero-phone-wrap">
-            <span className="hero-phone-prefix">IN +91</span>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Mobile Number"
-              value={form.phone}
-              onChange={handleChange}
-              maxLength="10"
-              pattern="[0-9]{10}"
-              required
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="hero-form-row">
-        <div className="hero-form-field">
-          <input
-            type="text"
-            name="company"
-            placeholder="Company Name"
-            value={form.company}
-            onChange={handleChange}
-          />
-        </div>
-      </div>
-
-      <div className="hero-form-row">
-        <div className="hero-form-field">
-          <textarea
-            name="msg"
-            placeholder="Your Message"
-            value={form.msg}
-            onChange={handleChange}
-          />
-        </div>
-      </div>
-
-      <div className="hero-form-footer">
-        <button type="submit" className="hero-form-btn">
-          Send Message
-          <span className="hero-form-btn-arrow">→</span>
-        </button>
-      </div>
-    </form>
-  );
-}
-
-
-// ── App Banner ────────────────────────────────────────
-
-
-// ── CTA Split Section ─────────────────────────────────
-function CTASplitSection() {
-  return (
-    <section className="pg-cta-section">
-      <div className="pg-cta-inner">
-        <div className="pg-cta-img-wrap">
-          <img src="/img/website-development/trusted-website-partner.webp" alt="PCS Digital Marketing Team in Coimbatore" className="pg-cta-img" />
-
-        </div>
-        <div>
-          <div className="partners-header1" >
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Trusted Website Partner
-            </h2>
-          </div>
-          <h2 className="pg-cta-heading">Leading  <em>Website Development Company</em><br />in Coimbatore
-          </h2>
-          <p className="pg-cta-desc">
-We are  a trusted Website Development Company in Coimbatore delivering innovative, scalable, and digital solutions for businesses of all sizes. As a leading Website Design Company in Coimbatore, we specialize in creating responsive, user-friendly, and SEO-optimized websites that enhance brand visibility and drive measurable results.
-          </p>
-          <p className="pg-cta-desc2">
-From custom business websites and eCommerce Website Development to Shopify and WooCommerce solutions, our Website Development Services are designed to improve user experience, and support long-term business growth. We combine creativity, technology, and strategy to build websites that help businesses stand out in today's competitive digital landscape.          </p>
-
-        </div>
-      </div>
-    </section>
-  );
-}
-
-
-
-function BuildTogetherCTASection() {
-  return (
-    <section style={{ padding: "4rem 5% 4rem" }}>
-      <div style={{
-        maxWidth: "1200px", margin: "0 auto",
-        borderRadius: "20px", overflow: "hidden",
-        position: "relative", background: "#004168",
-        minHeight: "200px",
-        display: "grid", gridTemplateColumns: "1fr auto",
-        alignItems: "center", gap: "2rem",
-        padding: "3rem 3.5rem",
-      }}>
-
-        {/* BG grid pattern */}
-        <div style={{
-          position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0,
-  backgroundImage: "url('/img/website-development/cta.webp')",
-          backgroundSize: "cover", backgroundPosition: "center",        
-        }} />
-
-        {/* BG image */}
-        <div style={{
-          position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0,
-          backgroundImage: "url('/img/website-development/cta.webp')",
-          backgroundSize: "cover", backgroundPosition: "center",
-          // opacity: 0.08,
-        }} />
-
-        {/* Glow orb */}
-        <div style={{
-          position: "absolute", right: "-80px", bottom: "-80px",
-          width: "320px", height: "320px", borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(237,131,55,0.12) 0%, transparent 65%)",
-          pointerEvents: "none", zIndex: 0,
-        }} />
-
-        {/* LEFT: Content */}
-        <div style={{ position: "relative", zIndex: 2 }}>
-          <div style={{
-            display: "inline-flex", alignItems: "center", gap: "7px",
-            background: "rgba(237,131,55,0.12)",
-            border: "1px solid rgba(237,131,55,0.3)",
-            color: "#ed8337", fontSize: "0.68rem", fontWeight: 600,
-            padding: "0.3rem 1rem", borderRadius: "50px",
-            letterSpacing: "0.1em", textTransform: "uppercase",
-            marginBottom: "1rem",
-          }}>
-            <span style={{ width:6, height:6, borderRadius:"50%", background:"#ed8337", display:"inline-block" }} />
-            Let's Build Together
-          </div>
-
-          <h2 style={{
-            fontFamily: "'Poppins', sans-serif",
-            fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)",
-            fontWeight: 700, color: "#fff",
-            lineHeight: 1.2, margin: "0 0 0.7rem",
-          }}>
-             Ready to Grow with a <br/><em style={{color: "#ed8337"}}>Web Development Company?</em><br />
-          </h2>
-
-          <p style={{
-            fontSize: "0.9rem", color: "rgba(255,255,255,0.72)",
-            lineHeight: 1.75, margin: 0, maxWidth: "480px",
-          }}>
-            Partner with Coimbatore's trusted web development team. From design to deployment — we build websites that drive real business growth.
-          </p>
-     <div style={{
-          position: "relative", zIndex: 2,
-          display: "flex", flexDirection: "column",
-          alignItems: "start", gap: "0.85rem", flexShrink: 0,marginTop: "1.5rem",
-        }}>
-          <a href="/contact" className="pg-form-btn">
-            Get Free Consultation
-            <span className="pg-form-btn-arr">→</span>
-          </a>
-
-        </div>
-
-        </div>
-
-        {/* RIGHT: Buttons */}
-   
-
-      </div>
-    </section>
-  );
-}
-
-
-// ── Modern Features Section ───────────────────────────
-function ModernFeaturesSection() {
-  return (
-    <section className="mf-outer">
-      <div className="mf-head">
-        <div className="partners-header1" style={{ textAlign: 'center' }}>
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Web Development Features
-          </h2>
-        </div>
-        <h2 className="mf-h2">Powerful  <span>Features Built </span>for Growth
-        </h2>
-        <p className="mf-sub">Our website development services combine performance, security, and scalability to help businesses succeed online. Every website is built with modern technologies, SEO best practices, and user-focused experiences that drive measurable results.
-        </p>
-      </div>
-    <div className="mf-body">
-  <div className="mf-col">
-    <div className="mf-item">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-custom-web.webp" alt="Custom Web Development" width={"25px"}/>
-      </div>
-      <div><p className="mf-t">Custom Web Development</p><p className="mf-d">
-        We build fully customized websites tailored to your business goals, branding, and functionality needs. No templates — only scalable, secure, and performance-driven development solutions.
-      </p></div>
-    </div>
-    <div className="mf-item">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-api-intergation.webp" alt="API Integration" width={"25px"}/>
-      </div>
-      <div><p className="mf-t">API Integration</p><p className="mf-d">
-        Seamless integration with third-party tools such as payment gateways, CRM systems, WhatsApp, shipping providers, and marketing platforms to automate workflows and improve efficiency.
-      </p></div>
-    </div>
-    <div className="mf-item">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-responsive-design.webp" alt="Mobile Responsiveness" width={"25px"}/>
-      </div>
-      <div><p className="mf-t">Mobile Responsiveness</p><p className="mf-d">Every website is designed to function flawlessly across all devices — desktops, tablets, and smartphones — ensuring a smooth and engaging user experience everywhere.
-      </p></div>
-    </div>
-  </div>
-
-  <div className="mf-phone">
-    <img src="/img/website-development/features.webp" alt="Mobile Responsiveness"/>
-  </div>
-
-  <div className="mf-col">
-    <div className="mf-item rev">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-seo-struture.webp" alt="SEO Optimized Structure" width={"25px"}/>
-      </div>
-      <div><p className="mf-t">SEO Optimized Structure</p><p className="mf-d">Websites are built with search engine-friendly architecture, optimized URLs, meta structure, schema, and clean coding practices to improve visibility and ranking potential.
-      </p></div>
-    </div>
-    <div className="mf-item rev">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-page-speed.webp" alt="Page Speed Optimization" width={"25px"}/>
-      </div>
-      <div><p className="mf-t">Page Speed Optimization</p><p className="mf-d">We optimize website performance through clean coding, image compression, caching, and lightweight frameworks to ensure fast loading times and better user retention.</p></div>
-    </div>
-    <div className="mf-item rev">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-server-hosting.webp" alt="Hosting and Maintenance" width={"25px"}/>
-      </div>
-      <div><p className="mf-t">Hosting &amp; Maintenance</p><p className="mf-d">Reliable hosting setup with Hostinger along with ongoing website maintenance, security monitoring, backups, and updates to ensure uninterrupted business operations.
-      </p></div>
-    </div>
-  </div>
-</div>
-    </section>
-  );
-}
-
-// ── Why Choose Us Section ────────────────────────────
-function WhyChooseUsSection() {
-  return (
-    <>
-      <style>{`
-        /* ══ WHY CHOOSE US — TARGET SECTION ══ */
+          `}),(0,i.jsxs)("p",{className:"hero-form-title",children:["Your Growth, ",(0,i.jsx)("span",{children:"Our Mission."})]}),(0,i.jsx)("p",{className:"hero-form-sub",children:"Fill in your details \u2014 we'll get back within 24 hours."}),(0,i.jsx)(g,{})]})})]})}function g(){let[e,t]=(0,a.useState)({name:"",email:"",phone:"",company:"",msg:""}),r=r=>{t({...e,[r.target.name]:r.target.value})};return(0,i.jsxs)("form",{onSubmit:r=>{r.preventDefault();let i={name:e.name,email:e.email,phone:e.phone,company:e.company,message:e.msg,url:window.location.href};s.Ay.send("service_8xw6k3r","template_jarui36",i,"XWRnXi4hK2SvmRG3q").then(()=>{alert("Message Sent Successfully \u2705"),t({name:"",email:"",phone:"",company:"",msg:""})}).catch(e=>{console.log(e),alert("Failed to send \u274C")})},children:[(0,i.jsx)("div",{className:"hero-form-row",children:(0,i.jsx)("div",{className:"hero-form-field",children:(0,i.jsx)("input",{type:"text",name:"name",placeholder:"Your Name",value:e.name,onChange:r,required:!0})})}),(0,i.jsx)("div",{className:"hero-form-row",children:(0,i.jsx)("div",{className:"hero-form-field",children:(0,i.jsx)("input",{type:"email",name:"email",placeholder:"Email Address",value:e.email,onChange:r,required:!0})})}),(0,i.jsx)("div",{className:"hero-form-row",children:(0,i.jsx)("div",{className:"hero-form-field",children:(0,i.jsxs)("div",{className:"hero-phone-wrap",children:[(0,i.jsx)("span",{className:"hero-phone-prefix",children:"IN +91"}),(0,i.jsx)("input",{type:"tel",name:"phone",placeholder:"Mobile Number",value:e.phone,onChange:r,maxLength:"10",pattern:"[0-9]{10}",required:!0})]})})}),(0,i.jsx)("div",{className:"hero-form-row",children:(0,i.jsx)("div",{className:"hero-form-field",children:(0,i.jsx)("input",{type:"text",name:"company",placeholder:"Company Name",value:e.company,onChange:r})})}),(0,i.jsx)("div",{className:"hero-form-row",children:(0,i.jsx)("div",{className:"hero-form-field",children:(0,i.jsx)("textarea",{name:"msg",placeholder:"Your Message",value:e.msg,onChange:r})})}),(0,i.jsx)("div",{className:"hero-form-footer",children:(0,i.jsxs)("button",{type:"submit",className:"hero-form-btn",children:["Send Message",(0,i.jsx)("span",{className:"hero-form-btn-arrow",children:"\u2192"})]})})]})}function f(){return(0,i.jsx)("section",{className:"pg-cta-section",children:(0,i.jsxs)("div",{className:"pg-cta-inner",children:[(0,i.jsx)("div",{className:"pg-cta-img-wrap",children:(0,i.jsx)("img",{src:"/img/website-development/trusted-website-partner.webp",alt:"PCS Digital Marketing Team in Coimbatore",className:"pg-cta-img"})}),(0,i.jsxs)("div",{children:[(0,i.jsx)("div",{className:"partners-header1",children:(0,i.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Trusted Website Partner"})}),(0,i.jsxs)("h2",{className:"pg-cta-heading",children:["Leading  ",(0,i.jsx)("em",{children:"Website Development Company"}),(0,i.jsx)("br",{}),"in Coimbatore"]}),(0,i.jsx)("p",{className:"pg-cta-desc",children:"We are  a trusted Website Development Company in Coimbatore delivering innovative, scalable, and digital solutions for businesses of all sizes. As a leading Website Design Company in Coimbatore, we specialize in creating responsive, user-friendly, and SEO-optimized websites that enhance brand visibility and drive measurable results."}),(0,i.jsx)("p",{className:"pg-cta-desc2",children:"From custom business websites and eCommerce Website Development to Shopify and WooCommerce solutions, our Website Development Services are designed to improve user experience, and support long-term business growth. We combine creativity, technology, and strategy to build websites that help businesses stand out in today's competitive digital landscape.          "})]})]})})}function h(){return(0,i.jsx)("section",{style:{padding:"4rem 5% 4rem"},children:(0,i.jsxs)("div",{style:{maxWidth:"1200px",margin:"0 auto",borderRadius:"20px",overflow:"hidden",position:"relative",background:"#004168",minHeight:"200px",display:"grid",gridTemplateColumns:"1fr auto",alignItems:"center",gap:"2rem",padding:"3rem 1.7rem"},children:[(0,i.jsx)("div",{style:{position:"absolute",inset:0,pointerEvents:"none",zIndex:0,backgroundImage:"url('/img/website-development/cta.webp')",backgroundSize:"cover",backgroundPosition:"center"}}),(0,i.jsx)("div",{style:{position:"absolute",inset:0,pointerEvents:"none",zIndex:0,backgroundImage:"url('/img/website-development/cta.webp')",backgroundSize:"cover",backgroundPosition:"center"}}),(0,i.jsx)("div",{style:{position:"absolute",right:"-80px",bottom:"-80px",width:"320px",height:"320px",borderRadius:"50%",background:"radial-gradient(circle, rgba(237,131,55,0.12) 0%, transparent 65%)",pointerEvents:"none",zIndex:0}}),(0,i.jsxs)("div",{style:{position:"relative",zIndex:2},children:[(0,i.jsxs)("div",{style:{display:"inline-flex",alignItems:"center",gap:"7px",background:"rgba(237,131,55,0.12)",border:"1px solid rgba(237,131,55,0.3)",color:"#ed8337",fontSize:"0.68rem",fontWeight:600,padding:"0.3rem 1rem",borderRadius:"50px",letterSpacing:"0.1em",textTransform:"uppercase",marginBottom:"1rem"},children:[(0,i.jsx)("span",{style:{width:6,height:6,borderRadius:"50%",background:"#ed8337",display:"inline-block"}}),"Let's Build Together"]}),(0,i.jsxs)("h3",{style:{fontFamily:"'Poppins', sans-serif",fontSize:"clamp(1.5rem, 2.4vw, 2.1rem)",fontWeight:700,color:"#fff",lineHeight:1.2,margin:"0 0 0.7rem"},children:["Ready to Grow with a ",(0,i.jsx)("br",{}),(0,i.jsx)("em",{style:{color:"#ed8337"},children:"Web Development Company?"}),(0,i.jsx)("br",{})]}),(0,i.jsx)("p",{style:{fontSize:"0.9rem",color:"rgba(255,255,255,0.72)",lineHeight:1.75,margin:0,maxWidth:"480px"},children:"Partner with Coimbatore's trusted web development team. From design to deployment \u2014 we build websites that drive real business growth."}),(0,i.jsx)("div",{style:{position:"relative",zIndex:2,display:"flex",flexDirection:"column",alignItems:"start",gap:"0.85rem",flexShrink:0,marginTop:"1.5rem"},children:(0,i.jsxs)("a",{href:"/contact",className:"pg-form-btn",children:["Get Free Consultation",(0,i.jsx)("span",{className:"pg-form-btn-arr",children:"\u2192"})]})})]})]})})}function x(){return(0,i.jsxs)("section",{className:"mf-outer",children:[(0,i.jsxs)("div",{className:"mf-head",children:[(0,i.jsx)("div",{className:"partners-header1",style:{textAlign:"center"},children:(0,i.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Our Web Development Features"})}),(0,i.jsxs)("h2",{className:"mf-h2",children:["Powerful  ",(0,i.jsx)("span",{children:"Features Built "}),"for Growth"]}),(0,i.jsx)("p",{className:"mf-sub",children:"Our website development services combine performance, security, and scalability to help businesses succeed online. Every website is built with modern technologies, SEO best practices, and user-focused experiences that drive measurable results."})]}),(0,i.jsxs)("div",{className:"mf-body",children:[(0,i.jsxs)("div",{className:"mf-col",children:[(0,i.jsxs)("div",{className:"mf-item",children:[(0,i.jsx)("div",{className:"mf-icon-box",children:(0,i.jsx)("img",{src:"/img/icon/feat-custom-web.webp",alt:"Custom Web Development",width:"25px"})}),(0,i.jsxs)("div",{children:[(0,i.jsx)("h3",{className:"mf-t",children:"Custom Web Development"}),(0,i.jsx)("p",{className:"mf-d",children:"We build fully customized websites tailored to your business goals, branding, and functionality needs. No templates \u2014 only scalable, secure, and performance-driven development solutions."})]})]}),(0,i.jsxs)("div",{className:"mf-item",children:[(0,i.jsx)("div",{className:"mf-icon-box",children:(0,i.jsx)("img",{src:"/img/icon/feat-api-intergation.webp",alt:"API Integration",width:"25px"})}),(0,i.jsxs)("div",{children:[(0,i.jsx)("h3",{className:"mf-t",children:"API Integration"}),(0,i.jsx)("p",{className:"mf-d",children:"Seamless integration with third-party tools such as payment gateways, CRM systems, WhatsApp, shipping providers, and marketing platforms to automate workflows and improve efficiency."})]})]}),(0,i.jsxs)("div",{className:"mf-item",children:[(0,i.jsx)("div",{className:"mf-icon-box",children:(0,i.jsx)("img",{src:"/img/icon/feat-responsive-design.webp",alt:"Mobile Responsiveness",width:"25px"})}),(0,i.jsxs)("div",{children:[(0,i.jsx)("h3",{className:"mf-t",children:"Mobile Responsiveness"}),(0,i.jsx)("p",{className:"mf-d",children:"Every website is designed to function flawlessly across all devices \u2014 desktops, tablets, and smartphones \u2014 ensuring a smooth and engaging user experience everywhere."})]})]})]}),(0,i.jsx)("div",{className:"mf-phone",children:(0,i.jsx)("img",{src:"/img/website-development/features.webp",alt:"Mobile Responsiveness"})}),(0,i.jsxs)("div",{className:"mf-col",children:[(0,i.jsxs)("div",{className:"mf-item rev",children:[(0,i.jsx)("div",{className:"mf-icon-box",children:(0,i.jsx)("img",{src:"/img/icon/feat-seo-struture.webp",alt:"SEO Optimized Structure",width:"25px"})}),(0,i.jsxs)("div",{children:[(0,i.jsx)("h3",{className:"mf-t",children:"SEO Optimized Structure"}),(0,i.jsx)("p",{className:"mf-d",children:"Websites are built with search engine-friendly architecture, optimized URLs, meta structure, schema, and clean coding practices to improve visibility and ranking potential."})]})]}),(0,i.jsxs)("div",{className:"mf-item rev",children:[(0,i.jsx)("div",{className:"mf-icon-box",children:(0,i.jsx)("img",{src:"/img/icon/feat-page-speed.webp",alt:"Page Speed Optimization",width:"25px"})}),(0,i.jsxs)("div",{children:[(0,i.jsx)("h3",{className:"mf-t",children:"Page Speed Optimization"}),(0,i.jsx)("p",{className:"mf-d",children:"We optimize website performance through clean coding, image compression, caching, and lightweight frameworks to ensure fast loading times and better user retention."})]})]}),(0,i.jsxs)("div",{className:"mf-item rev",children:[(0,i.jsx)("div",{className:"mf-icon-box",children:(0,i.jsx)("img",{src:"/img/icon/feat-server-hosting.webp",alt:"Hosting and Maintenance",width:"25px"})}),(0,i.jsxs)("div",{children:[(0,i.jsx)("h3",{className:"mf-t",children:"Hosting & Maintenance"}),(0,i.jsx)("p",{className:"mf-d",children:"Reliable hosting setup with Hostinger along with ongoing website maintenance, security monitoring, backups, and updates to ensure uninterrupted business operations."})]})]})]})]})]})}function b(){return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)("style",{children:`
+        /* \u{2550}\u{2550} WHY CHOOSE US \u{2014} TARGET SECTION \u{2550}\u{2550} */
         .wcu-section {
           position: relative;
           padding: 7rem 6% 8rem;
@@ -1669,7 +1224,7 @@ function WhyChooseUsSection() {
   }
   .wcu-target-wrap { 
     width: 100%; 
-    height: auto;          /* ← was 320px, auto lets it size naturally */
+    height: auto;          /* \u{2190} was 320px, auto lets it size naturally */
     min-height: 220px;
     margin: 0 auto; 
     display: flex;
@@ -1678,10 +1233,10 @@ function WhyChooseUsSection() {
     overflow: visible;
   }
   .wcu-target-svg { 
-    position: relative;    /* ← KEY: remove absolute */
-    left: auto;            /* ← remove -125px offset */
+    position: relative;    /* \u{2190} KEY: remove absolute */
+    left: auto;            /* \u{2190} remove -125px offset */
     top: auto; 
-    transform: none;       /* ← remove translateY(-50%) */
+    transform: none;       /* \u{2190} remove translateY(-50%) */
     width: 75%;
     max-width: 320px;
     height: auto;
@@ -1699,297 +1254,8 @@ function WhyChooseUsSection() {
   .wcu-target-svg {         width: 100%;
         margin-top: 240px; }
 }
-      `}</style>
-
-      <section className="wcu-section">
-        <div className="wcu-inner">
-
-          <div className="wcu-header" style={{ textAlign: 'center' }}>
-            <div className="partners-header1" style={{ textAlign: 'center' }}>
-              <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Excellence That Sets Us Apart
-              </h2>
-            </div>
-
-            <h2 className="wcu-heading">Why Choose us As Your <span>Website Development </span>Partner?</h2>
-          </div>
-
-          <div className="wcu-body">
-
-            {/* LEFT: Illustration */}
-            <div className="wcu-target-wrap">
-
-              {/* Dashed arc curve + connector lines */}
-              <svg className="wcu-arc-svg" viewBox="0 0 480 460" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M 300 230 C 340 230 360 80 440 70" stroke="rgba(237,131,55,0.3)" strokeWidth="1.5" strokeDasharray="6 5" fill="none" />
-                <path d="M 300 230 C 340 230 370 160 440 175" stroke="rgba(237,131,55,0.3)" strokeWidth="1.5" strokeDasharray="6 5" fill="none" />
-                <path d="M 300 230 C 340 230 370 295 440 285" stroke="rgba(237,131,55,0.3)" strokeWidth="1.5" strokeDasharray="6 5" fill="none" />
-                <path d="M 300 230 C 340 230 360 370 440 390" stroke="rgba(237,131,55,0.3)" strokeWidth="1.5" strokeDasharray="6 5" fill="none" />
-                <circle cx="440" cy="70" r="4" fill="rgba(237,131,55,0.5)" />
-                <circle cx="440" cy="175" r="4" fill="rgba(237,131,55,0.5)" />
-                <circle cx="440" cy="285" r="4" fill="rgba(237,131,55,0.5)" />
-                <circle cx="440" cy="390" r="4" fill="rgba(237,131,55,0.5)" />
-                <circle cx="300" cy="230" r="5" fill="rgba(237,131,55,0.5)" />
-              </svg>
-
-
-
-              {/* Growth / Analytics Dashboard Image */}
-              <img
-                src="/img/website-whu-choose-use.webp"
-                alt="Results Analytics Dashboard"
-                className="wcu-target-svg"
-                style={{ objectFit: "contain", borderRadius: "18px" }}
-              />
-
-            </div>
-            {/* END LEFT */}
-
-            {/* RIGHT: 4 items */}
-            <div className="wcu-items" id="wcuItemsRef">
-
-              <div className="wcu-item">
-                <div className="wcu-item-connector"></div>
-            <div className="wcu-item-icon">
-        <img src="/img/icon/website-wcu-seo.webp" alt="Hosting and Maintenance" width={"25px"}/>
-</div>
-                <div className="wcu-item-body">
-                  <div className="wcu-item-title">SEO-Optimized Website Architecture</div>
-                  <div className="wcu-item-desc">As a performance-driven website development company in Coimbatore, PCS builds search-engine-friendly websites designed to rank higher, load faster, and attract qualified traffic that converts into real business opportunities.</div>
-                </div>
-              </div>
-
-              <div className="wcu-item">
-                <div className="wcu-item-connector"></div>
-           <div className="wcu-item-icon">
-        <img src="/img/icon/website-wcu-lead.webp" alt="Hosting and Maintenance" width={"25px"}/>
-</div>
-                <div className="wcu-item-body">
-                  <div className="wcu-item-title">Improved Lead Conversion Efficiency</div>
-                  <div className="wcu-item-desc">Our conversion-focused website development and landing page optimization reduced cost per lead by <strong style={{ color: "#ed8337" }}>45%</strong>, generating higher-quality inquiries at a lower acquisition cost.</div>
-                </div>
-              </div>
-
-              <div className="wcu-item">
-                <div className="wcu-item-connector"></div>
-           <div className="wcu-item-icon">
-        <img src="/img/icon/website-wcu-google-rank.webp" alt="Hosting and Maintenance" width={"25px"}/>
-</div>
-                <div className="wcu-item-body">
-                  <div className="wcu-item-title">Top 5 Google Rankings Achieved</div>
-                  <div className="wcu-item-desc">Through technically sound website development and strategic keyword integration, we secured <strong style={{ color: "#ed8337" }}>Top 5</strong> search rankings, outperforming competitors with larger advertising budgets.</div>
-                </div>
-              </div>
-
-              <div className="wcu-item">
-                <div className="wcu-item-connector"></div>
-        <div className="wcu-item-icon">
-        <img src="/img/icon/website-wcu-bounce-rate.webp" alt="Hosting and Maintenance" width={"25px"}/>
-</div>
-                <div className="wcu-item-body">
-                  <div className="wcu-item-title">Higher Engagement &amp; Lower Bounce Rate</div>
-                  <div className="wcu-item-desc">By enhancing UI/UX design, improving website speed, and optimizing content flow, we reduced bounce rates from <strong style={{ color: "#ed8337" }}>80% to 35%</strong>, significantly improving visitor engagement and retention.</div>
-                </div>
-              </div>
-
-            </div>
-            {/* END RIGHT */}
-
-          </div>
-        </div>
-      </section>
-
-      <WCUScrollReveal />
-    </>
-  );
-}
-
-function WCUScrollReveal() {
-  useEffect(() => {
-    const items = document.querySelectorAll('.wcu-item');
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const idx = Array.from(items).indexOf(entry.target);
-          setTimeout(() => entry.target.classList.add('wcu-in'), idx * 120);
-          obs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    items.forEach(c => obs.observe(c));
-    return () => obs.disconnect();
-  }, []);
-  return null;
-}
-
-// ── FAQ Section (from doc 1) ──────────────────────────
-function FAQSection() {
-  const [active, setActive] = useState(null);
-  const toggle = (index) => setActive(active === index ? null : index);
-
-  return (
-    <section className="dm-faq-section">
-      <div className="partners-header1" style={{ textAlign: "center" }}>
-        <h2 className="partners-eyebrow" style={{ marginBottom: "20px", textAlign: "center" }}>Frequently Asked Questions</h2>
-      </div>
-      <div className="container">
-        <div className="dm-faq-head">
-          <h3>Queries That Could <span>Hold You Back</span></h3>
-        </div>
-        <div className="dm-faq-wrapper">
-          <div className="dm-faq-col">
-            {faqData.slice(0, 3).map((item, i) => (
-              <div className="dm-faq-item" key={i}>
-                <div className="dm-faq-question" onClick={() => toggle(i)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i ? "−" : "+"}</span>
-                </div>
-                {active === i && <div className="dm-faq-answer">{item.a}</div>}
-              </div>
-            ))}
-          </div>
-          <div className="dm-faq-col">
-            {faqData.slice(3, 6).map((item, i) => (
-              <div className="dm-faq-item" key={i + 3}>
-                <div className="dm-faq-question" onClick={() => toggle(i + 3)}>
-                  <span>{item.q}</span>
-                  <span className="icon">{active === i + 3 ? "−" : "+"}</span>
-                </div>
-                {active === i + 3 && <div className="dm-faq-answer">{item.a}</div>}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ── CTA Split Section 1 ───────────────────────────────
-const CTA_FEATURES1 = [
-  "ROI-focused campaigns with transparent reporting",
-  "Dedicated account manager for every client",
-  "Proven strategies across SEO, PPC & Social Media",
-];
-
-// ── Services Slider Section ───────────────────────────
-const SERVICE_SLIDES = [
-  {
-    iconKey: "search",
-    tag: "01",
-    title: "Search Engine Optimization (SEO)",
-    desc: "Improve your search rankings with strategic keyword targeting, technical optimization, and high-quality content. Our SEO services increase organic traffic, visibility, and qualified leads for sustainable long-term digital growth.",
-    highlight: "",
-  },
-  {
-    iconKey: "ppc",
-    tag: "02",
-    title: "Pay Per Click (PPC)",
-    desc: "Drive instant visibility and high-intent traffic through performance-driven PPC campaigns. We create optimized ad strategies, compelling creatives, and data-backed targeting to maximize ROI and reduce cost per lead.",
-    highlight: "45% lower cost per lead",
-  },
-  {
-    iconKey: "content",
-    tag: "03",
-    title: "Content Marketing",
-    desc: "Build authority and trust with strategic content marketing. From blogs and website copy to campaign messaging, we craft SEO-focused content that educates, engages, and converts your audience.",
-    highlight: "2x engagement rate",
-  },
-  {
-    iconKey: "smm",
-    tag: "04",
-    title: "Social Media Marketing",
-    desc: "Strengthen brand presence with data-driven social media strategies. We create engaging content, targeted campaigns, and consistent brand communication that boosts engagement, reach, and customer loyalty.",
-    highlight: "50ms avg. load time",
-  },
-  {
-    iconKey: "email",
-    tag: "05",
-    title: "Email & WhatsApp Marketing ",
-    desc: "Nurture leads and retain customers through personalized email and WhatsApp marketing campaigns. We design automation workflows, compelling newsletters, and conversion-focused messaging across both channels to drive engagement, build stronger customer relationships, and grow business effectively.",
-    highlight: "60% higher retention",
-  },
-  {
-    iconKey: "graphic",
-    tag: "06",
-    title: "Graphic Design",
-    desc: "Elevate your brand identity with impactful graphic design. From logos and brand kits to social creatives and marketing materials, we create visually compelling designs that communicate professionalism and consistency.",
-    highlight: "Real-time dashboards",
-  },
-  {
-    iconKey: "busregcom",
-    tag: "07",
-    title: "Business Registration & Compliance",
-    desc: "Simplify business setup and regulatory compliance with expert guidance. We handle registrations, documentation, statutory filings, and legal processes to ensure smooth, compliant operations.",
-    highlight: "Real-time dashboards",
-  },
-  {
-    iconKey: "digitaltrans",
-    tag: "08",
-    title: "Digital Transformation",
-    desc: "Accelerate business growth with digital transformation strategies. We integrate automation, AI tools, analytics, and scalable systems to improve efficiency, decision-making, and long-term competitiveness.",
-    highlight: "Real-time dashboards",
-  },
-  {
-    iconKey: "hrservice",
-    tag: "09",
-    title: "Human Resource Services",
-    desc: "Streamline HR operations with structured recruitment, payroll management, HR Strategy ,policy development, and compliance support. Our HR solutions help organizations scale efficiently while maintaining employee satisfaction and regulatory standards.",
-    highlight: "Real-time dashboards",
-  },
-];
-
-function ServicesSlider() {
-  const total = SERVICE_SLIDES.length;
-  const [current, setCurrent] = useState(0);
-  const [animating, setAnimating] = useState(false);
-  const [dir, setDir] = useState("next");
-  const autoRef = useRef(null);
-  const touchX = useRef(null);
-
-  const startAuto = useCallback(() => {
-    if (autoRef.current) clearInterval(autoRef.current);
-    autoRef.current = setInterval(() => {
-      setDir("next");
-      setAnimating(true);
-      setTimeout(() => { setCurrent((c) => (c + 1) % total); setAnimating(false); }, 480);
-    }, 4000);
-  }, [total]);
-
-  useEffect(() => { startAuto(); return () => clearInterval(autoRef.current); }, [startAuto]);
-
-  const goTo = (idx) => {
-    if (animating || idx === current) return;
-    setDir(idx > current ? "next" : "prev");
-    setAnimating(true);
-    setTimeout(() => { setCurrent(idx); setAnimating(false); }, 480);
-    startAuto();
-  };
-
-  const prev = () => goTo((current - 1 + total) % total);
-  const next = () => goTo((current + 1) % total);
-
-  const onTouchStart = (e) => { touchX.current = e.touches[0].clientX; };
-  const onTouchEnd = (e) => {
-    if (touchX.current === null) return;
-    const dx = e.changedTouches[0].clientX - touchX.current;
-    touchX.current = null;
-    if (Math.abs(dx) < 40) return;
-    dx < 0 ? next() : prev();
-  };
-
-  /* visible: active + 2 side cards */
-  const getCard = (offset) => SERVICE_SLIDES[(current + offset + total) % total];
-  const cards = [getCard(-1), getCard(0), getCard(1)];
-
-  const outLeft = "svs-out-left";
-  const outRight = "svs-out-right";
-  const inLeft = "svs-in-left";
-  const inRight = "svs-in-right";
-
-  return (
-    <>
-      <style>{`
-        /* ══ SERVICES SLIDER ══ */
+      `}),(0,i.jsx)("section",{className:"wcu-section",children:(0,i.jsxs)("div",{className:"wcu-inner",children:[(0,i.jsxs)("div",{className:"wcu-header",style:{textAlign:"center"},children:[(0,i.jsx)("div",{className:"partners-header1",style:{textAlign:"center"},children:(0,i.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Excellence That Sets Us Apart"})}),(0,i.jsxs)("h2",{className:"wcu-heading",children:["Why Choose us As Your ",(0,i.jsx)("span",{children:"Website Development "}),"Partner?"]})]}),(0,i.jsxs)("div",{className:"wcu-body",children:[(0,i.jsxs)("div",{className:"wcu-target-wrap",children:[(0,i.jsxs)("svg",{className:"wcu-arc-svg",viewBox:"0 0 480 460",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:[(0,i.jsx)("path",{d:"M 300 230 C 340 230 360 80 440 70",stroke:"rgba(237,131,55,0.3)",strokeWidth:"1.5",strokeDasharray:"6 5",fill:"none"}),(0,i.jsx)("path",{d:"M 300 230 C 340 230 370 160 440 175",stroke:"rgba(237,131,55,0.3)",strokeWidth:"1.5",strokeDasharray:"6 5",fill:"none"}),(0,i.jsx)("path",{d:"M 300 230 C 340 230 370 295 440 285",stroke:"rgba(237,131,55,0.3)",strokeWidth:"1.5",strokeDasharray:"6 5",fill:"none"}),(0,i.jsx)("path",{d:"M 300 230 C 340 230 360 370 440 390",stroke:"rgba(237,131,55,0.3)",strokeWidth:"1.5",strokeDasharray:"6 5",fill:"none"}),(0,i.jsx)("circle",{cx:"440",cy:"70",r:"4",fill:"rgba(237,131,55,0.5)"}),(0,i.jsx)("circle",{cx:"440",cy:"175",r:"4",fill:"rgba(237,131,55,0.5)"}),(0,i.jsx)("circle",{cx:"440",cy:"285",r:"4",fill:"rgba(237,131,55,0.5)"}),(0,i.jsx)("circle",{cx:"440",cy:"390",r:"4",fill:"rgba(237,131,55,0.5)"}),(0,i.jsx)("circle",{cx:"300",cy:"230",r:"5",fill:"rgba(237,131,55,0.5)"})]}),(0,i.jsx)("img",{src:"/img/website-whu-choose-use.webp",alt:"Results Analytics Dashboard",className:"wcu-target-svg",style:{objectFit:"contain",borderRadius:"18px"}})]}),(0,i.jsxs)("div",{className:"wcu-items",id:"wcuItemsRef",children:[(0,i.jsxs)("div",{className:"wcu-item",children:[(0,i.jsx)("div",{className:"wcu-item-connector"}),(0,i.jsx)("div",{className:"wcu-item-icon",children:(0,i.jsx)("img",{src:"/img/icon/website-wcu-seo.webp",alt:"Hosting and Maintenance",width:"25px"})}),(0,i.jsxs)("div",{className:"wcu-item-body",children:[(0,i.jsx)("h3",{className:"wcu-item-title",children:"SEO-Optimized Website Architecture"}),(0,i.jsx)("div",{className:"wcu-item-desc",children:"As a performance-driven website development company in Coimbatore, PCS builds search-engine-friendly websites designed to rank higher, load faster, and attract qualified traffic that converts into real business opportunities."})]})]}),(0,i.jsxs)("div",{className:"wcu-item",children:[(0,i.jsx)("div",{className:"wcu-item-connector"}),(0,i.jsx)("div",{className:"wcu-item-icon",children:(0,i.jsx)("img",{src:"/img/icon/website-wcu-lead.webp",alt:"Hosting and Maintenance",width:"25px"})}),(0,i.jsxs)("div",{className:"wcu-item-body",children:[(0,i.jsx)("h3",{className:"wcu-item-title",children:"Improved Lead Conversion Efficiency"}),(0,i.jsxs)("div",{className:"wcu-item-desc",children:["Our conversion-focused website development and landing page optimization reduced cost per lead by ",(0,i.jsx)("strong",{style:{color:"#ed8337"},children:"45%"}),", generating higher-quality inquiries at a lower acquisition cost."]})]})]}),(0,i.jsxs)("div",{className:"wcu-item",children:[(0,i.jsx)("div",{className:"wcu-item-connector"}),(0,i.jsx)("div",{className:"wcu-item-icon",children:(0,i.jsx)("img",{src:"/img/icon/website-wcu-google-rank.webp",alt:"Hosting and Maintenance",width:"25px"})}),(0,i.jsxs)("div",{className:"wcu-item-body",children:[(0,i.jsx)("h3",{className:"wcu-item-title",children:"Top 5 Google Rankings Achieved"}),(0,i.jsxs)("div",{className:"wcu-item-desc",children:["Through technically sound website development and strategic keyword integration, we secured ",(0,i.jsx)("strong",{style:{color:"#ed8337"},children:"Top 5"})," search rankings, outperforming competitors with larger advertising budgets."]})]})]}),(0,i.jsxs)("div",{className:"wcu-item",children:[(0,i.jsx)("div",{className:"wcu-item-connector"}),(0,i.jsx)("div",{className:"wcu-item-icon",children:(0,i.jsx)("img",{src:"/img/icon/website-wcu-bounce-rate.webp",alt:"Hosting and Maintenance",width:"25px"})}),(0,i.jsxs)("div",{className:"wcu-item-body",children:[(0,i.jsx)("h3",{className:"wcu-item-title",children:"Higher Engagement & Lower Bounce Rate"}),(0,i.jsxs)("div",{className:"wcu-item-desc",children:["By enhancing UI/UX design, improving website speed, and optimizing content flow, we reduced bounce rates from ",(0,i.jsx)("strong",{style:{color:"#ed8337"},children:"80% to 35%"}),", significantly improving visitor engagement and retention."]})]})]})]})]})]})}),(0,i.jsx)(u,{})]})}function u(){return(0,a.useEffect)(()=>{let e=document.querySelectorAll(".wcu-item"),t=new IntersectionObserver(r=>{r.forEach(r=>{r.isIntersecting&&(setTimeout(()=>r.target.classList.add("wcu-in"),120*Array.from(e).indexOf(r.target)),t.unobserve(r.target))})},{threshold:.15});return e.forEach(e=>t.observe(e)),()=>t.disconnect()},[]),null}function w(){let[e,t]=(0,a.useState)(null),r=r=>t(e===r?null:r);return(0,i.jsxs)("section",{className:"dm-faq-section",children:[(0,i.jsx)("div",{className:"partners-header1",style:{textAlign:"center"},children:(0,i.jsx)("h2",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Frequently Asked Questions"})}),(0,i.jsxs)("div",{className:"container",children:[(0,i.jsx)("div",{className:"dm-faq-head",children:(0,i.jsxs)("h3",{children:["Queries That Could ",(0,i.jsx)("span",{children:"Hold You Back"})]})}),(0,i.jsxs)("div",{className:"dm-faq-wrapper",children:[(0,i.jsx)("div",{className:"dm-faq-col",children:p.slice(0,3).map((t,a)=>(0,i.jsxs)("div",{className:"dm-faq-item",children:[(0,i.jsxs)("div",{className:"dm-faq-question",onClick:()=>r(a),children:[(0,i.jsx)("span",{children:t.q}),(0,i.jsx)("span",{className:"icon",children:e===a?"\u2212":"+"})]}),e===a&&(0,i.jsx)("div",{className:"dm-faq-answer",children:t.a})]},a))}),(0,i.jsx)("div",{className:"dm-faq-col",children:p.slice(3,6).map((t,a)=>(0,i.jsxs)("div",{className:"dm-faq-item",children:[(0,i.jsxs)("div",{className:"dm-faq-question",onClick:()=>r(a+3),children:[(0,i.jsx)("span",{children:t.q}),(0,i.jsx)("span",{className:"icon",children:e===a+3?"\u2212":"+"})]}),e===a+3&&(0,i.jsx)("div",{className:"dm-faq-answer",children:t.a})]},a+3))})]})]})]})}let v=[{iconKey:"search",tag:"01",title:"Search Engine Optimization (SEO)",desc:"Improve your search rankings with strategic keyword targeting, technical optimization, and high-quality content. Our SEO services increase organic traffic, visibility, and qualified leads for sustainable long-term digital growth.",highlight:""},{iconKey:"ppc",tag:"02",title:"Pay Per Click (PPC)",desc:"Drive instant visibility and high-intent traffic through performance-driven PPC campaigns. We create optimized ad strategies, compelling creatives, and data-backed targeting to maximize ROI and reduce cost per lead.",highlight:"45% lower cost per lead"},{iconKey:"content",tag:"03",title:"Content Marketing",desc:"Build authority and trust with strategic content marketing. From blogs and website copy to campaign messaging, we craft SEO-focused content that educates, engages, and converts your audience.",highlight:"2x engagement rate"},{iconKey:"smm",tag:"04",title:"Social Media Marketing",desc:"Strengthen brand presence with data-driven social media strategies. We create engaging content, targeted campaigns, and consistent brand communication that boosts engagement, reach, and customer loyalty.",highlight:"50ms avg. load time"},{iconKey:"email",tag:"05",title:"Email & WhatsApp Marketing ",desc:"Nurture leads and retain customers through personalized email and WhatsApp marketing campaigns. We design automation workflows, compelling newsletters, and conversion-focused messaging across both channels to drive engagement, build stronger customer relationships, and grow business effectively.",highlight:"60% higher retention"},{iconKey:"graphic",tag:"06",title:"Graphic Design",desc:"Elevate your brand identity with impactful graphic design. From logos and brand kits to social creatives and marketing materials, we create visually compelling designs that communicate professionalism and consistency.",highlight:"Real-time dashboards"},{iconKey:"busregcom",tag:"07",title:"Business Registration & Compliance",desc:"Simplify business setup and regulatory compliance with expert guidance. We handle registrations, documentation, statutory filings, and legal processes to ensure smooth, compliant operations.",highlight:"Real-time dashboards"},{iconKey:"digitaltrans",tag:"08",title:"Digital Transformation",desc:"Accelerate business growth with digital transformation strategies. We integrate automation, AI tools, analytics, and scalable systems to improve efficiency, decision-making, and long-term competitiveness.",highlight:"Real-time dashboards"},{iconKey:"hrservice",tag:"09",title:"Human Resource Services",desc:"Streamline HR operations with structured recruitment, payroll management, HR Strategy ,policy development, and compliance support. Our HR solutions help organizations scale efficiently while maintaining employee satisfaction and regulatory standards.",highlight:"Real-time dashboards"}];function y(){let e=v.length,[t,r]=(0,a.useState)(0),[n,o]=(0,a.useState)(!1),[s,l]=(0,a.useState)("next"),d=(0,a.useRef)(null),p=(0,a.useRef)(null),m=(0,a.useCallback)(()=>{d.current&&clearInterval(d.current),d.current=setInterval(()=>{l("next"),o(!0),setTimeout(()=>{r(t=>(t+1)%e),o(!1)},480)},4e3)},[e]);(0,a.useEffect)(()=>(m(),()=>clearInterval(d.current)),[m]);let g=e=>{n||e===t||(l(e>t?"next":"prev"),o(!0),setTimeout(()=>{r(e),o(!1)},480),m())},f=()=>g((t-1+e)%e),h=()=>g((t+1)%e),x=r=>v[(t+r+e)%e],b=[x(-1),x(0),x(1)];return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)("style",{children:`
+        /* \u{2550}\u{2550} SERVICES SLIDER \u{2550}\u{2550} */
         .svs-section {
           background: linear-gradient(135deg, #002a44 0%, #004168 60%, #0a5282 100%);
           padding: 80px 5% 70px;
@@ -2038,7 +1304,7 @@ function ServicesSlider() {
           gap:20px;
         }
 
-        /* ALL cards — same dark navy base */
+        /* ALL cards \u{2014} same dark navy base */
         .svs-card {
           background: rgba(255,255,255,0.05);
           border:1.5px solid rgba(237,131,55,0.2);
@@ -2058,7 +1324,7 @@ function ServicesSlider() {
         }
         .svs-card:hover::before { opacity:1; }
 
-        /* active card — brighter stand-out */
+        /* active card \u{2014} brighter stand-out */
         .svs-card.svs-active {
           flex:1.6;
           background: rgba(255,255,255,0.10);
@@ -2068,7 +1334,7 @@ function ServicesSlider() {
         }
         .svs-card.svs-active::before { opacity:1; }
 
-        /* side cards — slightly dimmed */
+        /* side cards \u{2014} slightly dimmed */
         .svs-card.svs-side {
           opacity:0.72;
           transform: translateY(4px) scale(0.98);
@@ -2109,7 +1375,7 @@ function ServicesSlider() {
         }
         .svs-active .svs-card-title { color:#ffffff; font-size:1.1rem; }
 
-        /* desc — VISIBLE on ALL cards */
+        /* desc \u{2014} VISIBLE on ALL cards */
         .svs-card-desc {
           font-size:.86rem; line-height:1.78;
           color:rgba(255,255,255,0.65);
@@ -2180,75 +1446,7 @@ function ServicesSlider() {
           .svs-card.svs-active { transform:translateY(0); flex:unset; }
           .svs-section { padding:56px 4% 48px; }
         }
-      `}</style>
-
-      <section className="svs-section">
-        <div className="svs-inner">
-
-          {/* Header */}
-          <div className="svs-header">
-            <div className="svs-eyebrow">
-              <div className="partners-header1" style={{ textAlign: 'center' }}>
-                <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Other Services
-                </h2>
-              </div>
-
-            </div>
-            <h2 className="svs-h2">Complete <span>Digital & Business </span> Solutions</h2>
-          </div>
-
-          {/* Stage */}
-          <div
-            className="svs-stage"
-            onTouchStart={onTouchStart}
-            onTouchEnd={onTouchEnd}
-          >
-            {cards.map((card, i) => {
-              const isActive = i === 1;
-              return (
-                <div
-                  key={card.tag}
-                  className={`svs-card ${isActive ? "svs-active" : "svs-side"}`}
-                  onClick={() => { if (!isActive) { i === 0 ? prev() : next(); } }}
-                >
-                  <div className="svs-tag">— {card.tag}</div>
-                  <div className="svs-icon-wrap"><ServiceIcon name={card.iconKey} /></div>
-                  <div className="svs-card-title">{card.title}</div>
-                  <p className="svs-card-desc">{card.desc}</p>
-                  <div className="svs-highlight">
-                    <span className="svs-hl-dot" />{card.highlight}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Controls */}
-          <div className="svs-controls">
-            <button className="svs-nav" onClick={prev} aria-label="Previous">‹</button>
-            <div className="svs-dots">
-              {SERVICE_SLIDES.map((_, i) => (
-                <button
-                  key={i}
-                  className={`svs-dot${i === current ? " on" : ""}`}
-                  onClick={() => goTo(i)}
-                  aria-label={`Service ${i + 1}`}
-                />
-              ))}
-            </div>
-            <button className="svs-nav" onClick={next} aria-label="Next">›</button>
-          </div>
-
-        </div>
-      </section>
-    </>
-  );
-}
-
-function MilestonesCTA() {
-  return (
-    <section className="ms-cta-section">
-      <style>{`
+      `}),(0,i.jsx)("section",{className:"svs-section",children:(0,i.jsxs)("div",{className:"svs-inner",children:[(0,i.jsxs)("div",{className:"svs-header",children:[(0,i.jsx)("div",{className:"svs-eyebrow",children:(0,i.jsx)("div",{className:"partners-header1",style:{textAlign:"center"},children:(0,i.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Other Services"})})}),(0,i.jsxs)("h2",{className:"svs-h2",children:["Complete ",(0,i.jsx)("span",{children:"Digital & Business "})," Solutions"]})]}),(0,i.jsx)("div",{className:"svs-stage",onTouchStart:e=>{p.current=e.touches[0].clientX},onTouchEnd:e=>{if(null===p.current)return;let t=e.changedTouches[0].clientX-p.current;p.current=null,40>Math.abs(t)||(t<0?h():f())},children:b.map((e,t)=>{let r=1===t;return(0,i.jsxs)("div",{className:`svs-card ${r?"svs-active":"svs-side"}`,onClick:()=>{r||(0===t?f():h())},children:[(0,i.jsxs)("div",{className:"svs-tag",children:["\u2014 ",e.tag]}),(0,i.jsx)("div",{className:"svs-icon-wrap",children:(0,i.jsx)(c,{name:e.iconKey})}),(0,i.jsx)("h3",{className:"svs-card-title",children:e.title}),(0,i.jsx)("p",{className:"svs-card-desc",children:e.desc}),(0,i.jsxs)("div",{className:"svs-highlight",children:[(0,i.jsx)("span",{className:"svs-hl-dot"}),e.highlight]})]},e.tag)})}),(0,i.jsxs)("div",{className:"svs-controls",children:[(0,i.jsx)("button",{className:"svs-nav",onClick:f,"aria-label":"Previous",children:"\u2039"}),(0,i.jsx)("div",{className:"svs-dots",children:v.map((e,r)=>(0,i.jsx)("button",{className:`svs-dot${r===t?" on":""}`,onClick:()=>g(r),"aria-label":`Service ${r+1}`},r))}),(0,i.jsx)("button",{className:"svs-nav",onClick:h,"aria-label":"Next",children:"\u203A"})]})]})})]})}function j(){return(0,i.jsxs)("section",{className:"ms-cta-section",children:[(0,i.jsx)("style",{children:`
         .ms-cta-section {
           position: relative;
           background: #ffffff;
@@ -2382,568 +1580,4 @@ function MilestonesCTA() {
           .ms-cta-btn-primary, .ms-cta-btn-secondary { width: 100%; min-width: unset; }
           .ms-cta-right { width: 100%; }
         }
-      `}</style>
-
-      <div className="ms-cta-glow-l" />
-      <div className="ms-cta-glow-r" />
-      <div className="ms-cta-line-top" />
-
-      <div className="ms-cta-inner">
-        <div className="ms-cta-left">
-          <div className="partners-header1">
-            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>
-              Case Studies</div>
-          </div>
-          <h2 className="ms-cta-title">
-            Explore <span>Proven Results Through</span><br /> Our Case Studies
-          </h2>
-          <p className="ms-cta-desc">
-            Discover our projects that demonstrate how strategy and clear execution drive measurable business success.          </p>
-        </div>
-
-        <div className="ms-cta-right">
-
-
-          <a href="/contact" className="ms-cta-btn-primary">
-            Start Your Growth Journey
-            <span className="ms-cta-btn-arr">→</span>
-          </a>
-
-          <a href="/portfolio" className="ms-cta-btn-secondary">
-            <span className="ms-cta-btn-ico">📊</span>
-            View Results
-          </a>
-        </div>
-      </div>
-
-      <div className="ms-cta-line-bottom" />
-    </section>
-  );
-}
-
-const PORTFOLIO_COL1 = [
-  { img: "/img/portfolio/urcts.webp", label: "URCTS", tag: "" },
-  { img: "/img/portfolio/am.webp", label: "AM Builders", tag: "" },
-  { img: "/img/portfolio/zky.webp", label: "ZKY", tag: "" },
-  { img: "/img/portfolio/abb.webp", label: "ABB", tag: "" },
-  { img: "/img/portfolio/riya.webp", label: "Riya consultancy", tag: "" },
-];
-const PORTFOLIO_COL2 = [
-  { img: "/img/portfolio/feralroots.webp", label: "Feral Roots", tag: "" },
-  { img: "/img/portfolio/sterlocare.webp", label: "SterloCare", tag: "" },
-  { img: "/img/portfolio/sterlo.webp", label: "Sterlo", tag: "" },
-  { img: "/img/portfolio/talenttribe.webp", label: "Talent Tribe", tag: "" },
-  { img: "/img/portfolio/sterlobuild.webp", label: "SterloBuild", tag: "" },
-];
-const PORTFOLIO_COL3 = [
-  { img: "/img/portfolio/product1.webp", label: "", tag: "" },
-  { img: "/img/portfolio/product2.webp", label: "", tag: "" },
-  { img: "/img/portfolio/product3.webp", label: "", tag: "" },
-  { img: "/img/portfolio/product4.webp", label: "", tag: "" },
-  { img: "/img/portfolio/product5.webp", label: "", tag: "" },
-];
-
-function PortfolioColumn({ items, speed, direction }) {
-  const innerRef = useRef(null);
-  const offsetRef = useRef(0);
-  const pausedRef = useRef(false);
-  const rafRef = useRef(null);
-  // duplicate for infinite loop
-  const doubled = [...items, ...items];
-
-  useEffect(() => {
-    const el = innerRef.current;
-    if (!el) return;
-    const singleH = el.scrollHeight / 2;
-
-    const animate = () => {
-      if (!pausedRef.current) {
-        offsetRef.current += speed;
-        if (direction === "up") {
-          if (offsetRef.current >= singleH) offsetRef.current -= singleH;
-          el.style.transform = `translateY(-${offsetRef.current}px)`;
-        } else {
-          if (offsetRef.current >= singleH) offsetRef.current -= singleH;
-          el.style.transform = `translateY(${offsetRef.current - singleH}px)`;
-        }
-      }
-      rafRef.current = requestAnimationFrame(animate);
-    };
-    rafRef.current = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, [speed, direction]);
-
-  return (
-    <div
-      className="pf-col"
-      style={{ height: "min(600px, 60vw)", overflow: "hidden", position: "relative" }}
-      onMouseEnter={() => { pausedRef.current = true; }}
-      onMouseLeave={() => { pausedRef.current = false; }}
-    >
-      <div ref={innerRef} className="pf-col-inner">
-        {doubled.map((item, i) => (
-          <div className="pf-card" key={i}>
-            <img src={item.img} alt={item.label} loading="lazy" />
-            <div className="pf-card-overlay">
-              <div className="pf-card-label">{item.label}</div>
-              <div className="pf-card-tag">{item.tag}</div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function PortfolioSection() {
-  return (
-    <section className="pf-section">
-      <div className="pf-inner">
-        {/* LEFT */}
-        <div className="pf-left">
-          <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Portfolio</h2>
-          </div>
-          <h3 className="pf-heading">
-            Our Work That <span><i>Speaks for Itself
-            </i></span>
-          </h3>
-          <p className="pf-desc">
-            Discover high-performing websites designed for speed, credibility, user experience, and measurable growth across diverse industries and business models.
-
-          </p>
-
-          <div className="pf-btns">
-            <a href="/portfolio" className="pf-btn">View More Projects  →</a>
-          </div>
-        </div>
-
-        {/* RIGHT — 3 auto-scroll columns */}
-        <div className="pf-cols">
-          <PortfolioColumn items={PORTFOLIO_COL1} speed={0.6} direction="up" />
-          <PortfolioColumn items={PORTFOLIO_COL2} speed={0.5} direction="down" />
-          <PortfolioColumn items={PORTFOLIO_COL3} speed={0.7} direction="up" />
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ════════════════════════════════════════════
-//  SECTION 8: TESTIMONIAL SLIDER
-// ════════════════════════════════════════════
-
-function useWindowWidth() {
-  const [width, setWidth] = useState(typeof window !== "undefined" ? window.innerWidth : 1200);
-  useEffect(() => {
-    const handler = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handler);
-    return () => window.removeEventListener("resize", handler);
-  }, []);
-  return width;
-}
-
-const testimonials = [
-  { index: 0, text: "PCS delivered a modern responsive website with SEO optimization, analytics integration, heatmap tracking, and performance monitoring. We appreciate their team's dedication, technical expertise, and timely support, which significantly improved our online visibility, website performance, and customer engagement.", name: "Mr.Ashwin", role: "Founder", badge: ["Website Development", "SEO"] },
-  { index: 1, text: "Our basic single-page website was upgraded into a professionally structured multi-page platform with enhanced SEO, GMB optimization, analytics setup, and customer activity tracking. We thank the PCS team for their commitment, quick support, and valuable contribution in strengthening our online presence.", name: "Mr.Sabarinath", role: "Founder", badge: ["Website Development", "SEO", "Local SEO"] },
-  { index: 2, text: "A fresh UI design with strong website development, improved online reach, lead capture setup, and user activity insights was successfully developed by the PCS team. Every change request was handled patiently while turning our ideas into exactly what we expected. The late-night support before launch was truly appreciated.", name: "Mr.Clement Selvam", role: "Founder", badge: ["Website Development", "SEO"] },
-  { index: 3, text: "As a growing forest-based natural products brand, we partnered with PCS to expand our store presence and online sales. PCS team developed a complete e-commerce platform with Razorpay setup, order management, inventory tracking, centralized dashboard, WhatsApp integration for smooth business operations.", name: "Mr.Karupasamy", role: "Director", badge: ["E-Commerce", "SEO", "Local SEO"] },
-  { index: 4, text: "Competing in the global market we required a website that matched international standards. With strategic content, SEO optimization, analytics integration, and performance enhancements, our digital presence was significantly strengthened. We appreciate the PCS team for their expertise, flexibility, consistent support throughout the process.", name: "Mr.Gunasekaran", role: "Founder", badge: ["SEO", "Content Marketing", "Paid Ads"] },
-];
-
-function getTestimonialPos(cardIndex, activeIndex, total, isMobile) {
-  const diff = cardIndex - activeIndex;
-  if (diff === 0) return "center";
-  if (isMobile) return diff < 0 ? "farLeft" : "farRight";
-  if (diff === -1 || diff === total - 1) return "left";
-  if (diff === 1 || diff === -(total - 1)) return "right";
-  if (diff < 0) return "farLeft";
-  return "farRight";
-}
-
-function getTestimonialPosStyles(isMobile, isTablet) {
-  const leftX = isTablet ? -220 : -300;
-  const rightX = isTablet ? 220 : 300;
-  const farLeftX = isTablet ? -380 : -490;
-  const farRightX = isTablet ? 380 : 490;
-  return {
-    center: { transform: "translateX(0) scale(1) rotateY(0deg)", opacity: 1, filter: "none", zIndex: 10, boxShadow: "0 24px 64px rgba(13,31,60,0.14)", pointerEvents: "auto" },
-    left: { transform: `translateX(${leftX}px) scale(0.85) rotateY(18deg)`, opacity: 0.55, filter: "blur(2px)", zIndex: 5, boxShadow: "none", pointerEvents: "auto" },
-    right: { transform: `translateX(${rightX}px) scale(0.85) rotateY(-18deg)`, opacity: 0.55, filter: "blur(2px)", zIndex: 5, boxShadow: "none", pointerEvents: "auto" },
-    farLeft: { transform: `translateX(${farLeftX}px) scale(0.7) rotateY(28deg)`, opacity: 0, filter: "blur(4px)", zIndex: 1, boxShadow: "none", pointerEvents: "none" },
-    farRight: { transform: `translateX(${farRightX}px) scale(0.7) rotateY(-28deg)`, opacity: 0, filter: "blur(4px)", zIndex: 1, boxShadow: "none", pointerEvents: "none" },
-  };
-}
-
-function StarIcon() {
-  return (
-    <svg width={14} height={14} viewBox="0 0 24 24" fill="#f47920" xmlns="http://www.w3.org/2000/svg" style={{ flexShrink: 0 }}>
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-    </svg>
-  );
-}
-
-function TestimonialCard({ data, pos, onClick, isMobile, isTablet, isActive }) {
-  const posStyles = getTestimonialPosStyles(isMobile, isTablet);
-  const cardWidth = isMobile
-    ? Math.min((typeof window !== "undefined" ? window.innerWidth : 360) - 40, 320)
-    : isTablet ? 300 : 340;
-  return (
-    <div
-      onClick={onClick}
-      data-active={isActive ? "true" : "false"}
-      style={{
-        position: "absolute",
-        width: cardWidth,
-        background: "#ffffff",
-        borderRadius: 20,
-        padding: isMobile ? "20px 18px" : 32,
-        cursor: "pointer",
-        transition: "all 0.55s cubic-bezier(0.4,0,0.2,1)",
-        userSelect: "none",
-        display: "flex",
-        flexDirection: "column",
-        boxSizing: "border-box",
-        top: 0,                  /* ← margin-top bug fix: top:0 + alignItems:flex-start on parent */
-        ...posStyles[pos],
-      }}
-    >
-      <div style={{ fontSize: isMobile ? 28 : 36, color: "#f47920", lineHeight: 1, fontFamily: "Georgia, serif", marginBottom: 8 }}>"</div>
-      <div style={{ fontSize: isMobile ? 11.5 : 13, color: "#3d4f6a", lineHeight: isMobile ? 1.65 : 1.75, marginBottom: isMobile ? 14 : 22, flex: 1, fontWeight: 400 }}>{data.text}</div>
-      <div style={{ height: 1, background: "#f0f2f7", marginBottom: isMobile ? 10 : 16 }} />
-      <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
-        <div style={{ fontSize: isMobile ? 13 : 15, fontWeight: 700, color: "#0d1f3c" }}>{data.name}</div>
-        <div style={{ fontSize: 11, color: "#6b7a94", lineHeight: 1.4, fontWeight: 400 }}>{data.role}</div>
-        <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginTop: 4 }}>
-          {data.badge.map((b) => (
-            <span key={b} style={{ display: "inline-block", fontSize: 9.5, fontWeight: 600, letterSpacing: "0.05em", padding: "2px 7px", borderRadius: 20, background: "rgba(244,121,32,0.1)", color: "#f47920", textTransform: "uppercase" }}>{b}</span>
-          ))}
-        </div>
-        <div style={{ display: "flex", gap: 3, marginTop: 6 }}>
-          {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function TestimonialSlider() {
-  const [current, setCurrent] = useState(2);
-  const timerRef = useRef(null);
-  const touchX = useRef(null);
-  const stageRef = useRef(null);
-  const [stageHeight, setStageHeight] = useState(380);
-  const total = testimonials.length;
-  const width = useWindowWidth();
-  const isMobile = width < 640;
-  const isTablet = width >= 640 && width < 1024;
-
-  /* ── Dynamic stage height: measure the active card after render ── */
-  useEffect(() => {
-    if (!stageRef.current) return;
-    const activeCard = stageRef.current.querySelector("[data-active='true']");
-    if (activeCard) {
-      const h = activeCard.getBoundingClientRect().height;
-      if (h > 0) setStageHeight(h + 8);  /* +8 tiny breathing room */
-    }
-  }, [current, width]);
-
-  const startAuto = () => {
-    if (timerRef.current) clearInterval(timerRef.current);
-    timerRef.current = setInterval(() => setCurrent((c) => (c + 1) % total), 3000);
-  };
-  useEffect(() => { startAuto(); return () => clearInterval(timerRef.current); }, []);
-
-  const goTo = (idx) => { setCurrent(idx); startAuto(); };
-
-  /* ── Touch swipe handlers ── */
-  const onTouchStart = (e) => { touchX.current = e.touches[0].clientX; };
-  const onTouchEnd = (e) => {
-    if (touchX.current === null) return;
-    const dx = e.changedTouches[0].clientX - touchX.current;
-    touchX.current = null;
-    if (Math.abs(dx) < 40) return;          /* ignore tiny taps */
-    if (dx < 0) goTo((current + 1) % total);
-    else goTo((current - 1 + total) % total);
-  };
-
-  return (
-    <section style={{ width: "100%", maxWidth: 1100, margin: "0 auto", padding: isMobile ? "40px 16px" : "60px 20px", fontFamily: "'Poppins', sans-serif", overflow: "hidden" }}>
-      <div className="partners-header1" style={{ marginBottom: isMobile ? 12 : 16, textAlign: "center" }}>
-        <div className="partners-eyebrow" style={{ marginBottom: "12px", textAlign: "start" }}>Client Testimonials</div>
-      </div>
-      <h2 style={{ fontSize: isMobile ? 22 : isTablet ? 28 : "clamp(28px,3vw,40px)", fontWeight: 700, color: "#0d1f3c", lineHeight: 1.25, marginBottom: isMobile ? 28 : 48, textAlign: "center" }}>
-        What Our Clients{" "}
-        <span style={{ color: "#f47920", fontStyle: "italic", fontWeight: 700 }}>Say About PCS</span>
-      </h2>
-
-      {/* Stage — alignItems:flex-start so cards grow downward, no margin-top */}
-      <div
-        ref={stageRef}
-        onTouchStart={onTouchStart}
-        onTouchEnd={onTouchEnd}
-        style={{
-          position: "relative",
-          height: stageHeight,
-          display: "flex",
-          alignItems: "flex-start",   /* ← key fix: cards anchor at top, no phantom margin */
-          justifyContent: "center",
-          perspective: 1200,
-          marginBottom: 28,
-          transition: "height 0.4s ease",
-        }}
-      >
-        {testimonials.map((t, i) => {
-          const pos = getTestimonialPos(i, current, total, isMobile);
-          return (
-            <TestimonialCard
-              key={t.index}
-              data={t}
-              pos={pos}
-              isActive={pos === "center"}
-              onClick={() => { if (i !== current) goTo(i); }}
-              isMobile={isMobile}
-              isTablet={isTablet}
-            />
-          );
-        })}
-      </div>
-
-      {/* Dots */}
-      <div style={{ display: "flex", justifyContent: "center", gap: 8, alignItems: "center" }}>
-        {testimonials.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => goTo(i)}
-            style={{
-              width: i === current ? 22 : 9,
-              height: 9,
-              borderRadius: 9,
-              padding: 0,
-              outline: "none",
-              cursor: "pointer",
-              flexShrink: 0,
-              transition: "all 0.3s ease",
-              background: i === current ? "#f47920" : "transparent",
-              border: i === current ? "none" : "1.8px solid #b0b8c9",
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Mobile swipe hint */}
-      {isMobile && (
-        <p style={{ textAlign: "center", fontSize: 11, color: "#b0b8c9", marginTop: 14, letterSpacing: "0.03em" }}>
-          ← swipe to explore →
-        </p>
-      )}
-    </section>
-  );
-}
-
-
-// ── Technologies Marquee Section ─────────────────────
-function TechnologiesSection() {
-  const row1 = [
-    { name: "HTML5", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-    { name: "CSS3", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-    { name: "JavaScript", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-    { name: "PHP", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
-    { name: "React", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    { name: "MySQL", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-    { name: "Shopify", logo: "img/Shopify.webp" },
-  ];
-  const row2 = [
-    { name: "WordPress", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
-    { name: "Elementor", logo: "img/Elementor.webp" },
-    { name: "WPBakery", logo: "img/WPBakery.webp" },
-    { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-    { name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
-    { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-        { name: "Shopify", logo: "img/Shopify.webp" },
-
-  ];
-
-  // Duplicate each row so seamless infinite scroll works
-  const doubled1 = [...row1, ...row1];
-  const doubled2 = [...row2, ...row2];
-
-  return (
-    <section className="tech-section">
-      <div className="tech-header">
-        <div className="partners-header1" style={{ textAlign: 'center' }}>
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Technology Stack
-          </h2>
-        </div>
-        <h2 className="tech-title">
-          Technologies We <span>Work With</span>
-        </h2>
-        <p className="tech-desc">
-          We leverage the world's most trusted tools and frameworks to build fast, scalable, and future-proof digital solutions for your business.
-        </p>
-      </div>
-
-      {/* Row 1 — scrolls RIGHT (left-to-right direction) */}
-      <div className="tech-track-wrap" style={{ marginBottom: 20 }}>
-        <div className="tech-row">
-          <div className="tech-row-inner row-right speed-1">
-            {doubled1.map((t, i) => (
-              <div className="tech-card" key={i}>
-                <img src={t.logo} alt={t.name} className="tech-card-logo" />
-                <span className="tech-card-name">{t.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Row 2 — scrolls LEFT (right-to-left direction) */}
-      <div className="tech-track-wrap">
-        <div className="tech-row">
-          <div className="tech-row-inner row-left speed-2">
-            {doubled2.map((t, i) => (
-              <div className="tech-card" key={i}>
-                <img src={t.logo} alt={t.name} className="tech-card-logo" />
-                <span className="tech-card-name">{t.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ── Our Services Section ──────────────────────────────
-function OurServicesSection() {
-  const services = [
-    {
-      img: "/img/website-development/website-design.webp",
-      title: "Website Design",
-      desc: "Creative website designs that strengthen your brand and improve Customer engagement.",
-      features: ["Responsive Layouts", "Modern UI/UX", "Mobile Friendly"],
-      href: "#",
-    },
-    {
-      img: "/img/website-development/static-website.webp",
-      title: "Static Website Development",
-      desc: "Fast, secure, and cost-effective websites ideal for startups and growing businesses",
-      features: ["Fast Loading", "Secure Structure", "Easy Maintenance"],
-      href: "#",
-    },
-    {
-      img: "/img/website-development/custom-website-development.webp",
-      title: "Custom Website Development",
-      desc: "Tailor-made web solutions built around your business requirements and growth goals.",
-      features: [" Custom Features", "Scalable Architecture", "High Performance"],
-      href: "#",
-    },
-    {
-      img: "/img/website-development/woo-commerce.webp",
-      title: "WooCommerce Development",
-      desc: "Powerful WooCommerce stores designed for conversions and seamless shopping experiences.",
-      features: [" Secure Checkout", " Product Management", "Store Optimization"],
-      href: "#",
-    },
-    {
-      img: "/img/website-development/ecommerce-development.webp",
-      title: "E-Commerce Development",
-      desc: "Robust online stores with advanced functionality and payment integrations.",
-      features: ["Shopping Cart", "Payment Gateway", "Order Management"],
-      href: "#",
-    },
-    {
-      img: "/img/website-development/shopify.webp",
-      title: "Shopify Development",
-      desc: "Professional Shopify stores built for speed, usability, and business growth.",
-      features: ["Theme Customization", "Shopify Setup", "Performance Optimization"],
-      href: "#",
-    },
-  ];
-
-  return (
-    <section style={{ padding: "70px 5% 0px" }}>
-      <div className="partners-header1" style={{ textAlign: 'center' }}>
-        <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Service</h2>
-      </div>
-
-      <h2 className="tech-title svc-main-heading">
-        Professional  <span>Website Development Services</span> in Coimbatore
-      </h2>
-      <p style={{ textAlign: "center", maxWidth: 1200, margin: "0 auto 60px", color: "#666", lineHeight: 1.8, fontSize: "0.96rem" }}>
-        We deliver scalable, high-performance website solutions from static websites to eCommerce platforms designed to enhance brand presence, user experience, and business growth.
-      </p>
-      <div className="svc-grid">
-        {services.map((svc, i) => (
-          <div
-            key={i}
-            s/* REMOVE height: "90%" and add these instead: */
-style={{
-  background: "#fff",
-  borderRadius: 24,
-  padding: "30px 30px 28px 30px",
-  boxShadow: "0 10px 35px rgba(0,0,0,0.08)",
-  borderTop: "5px solid #ed8337",
-  display: "flex",
-  flexDirection: "column",
-  // REMOVE height: "90%" entirely
-  transition: "transform 0.35s ease, box-shadow 0.35s ease",
-}}
-            onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 18px 40px rgba(0,0,0,0.12)"; }}
-            onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 10px 35px rgba(0,0,0,0.08)"; }}
-          >
-            <img src={svc.img} alt={svc.title} style={{ width: "100%", height: "180px", objectFit: "contain", margin: "0 auto 20px" }} />
-            <h3 style={{ color: "#004168", fontSize: 20, marginBottom: 15, fontFamily: "'Poppins', sans-serif", fontWeight: 700 }}>
-              {svc.title}
-            </h3>
-            <p style={{ color: "#666", lineHeight: 1.8, marginBottom: 20, fontSize: "0.9rem" }}>
-              {svc.desc}
-            </p>
-            <ul style={{ listStyle: "none", padding: 0, margin: "0 0 25px" }}>
-              {svc.features.map((f, j) => (
-                <li key={j} style={{ position: "relative", paddingLeft: 30, marginBottom: 12, color: "#444", lineHeight: 1.6, fontSize: "0.9rem" }}>
-                  <span style={{ position: "absolute", left: 0, top: 0, color: "#ed8337", fontWeight: "bold", fontSize: 18 }}>✓</span>
-                  {f}
-                </li>
-              ))}
-            </ul>
-            <a
-              href={svc.href}
-              style={{ display: "inline-block", width: '42%', fontSize: '14px', textAlign: "center", padding: "10px 20px", background: "#004168", color: "#fff", textDecoration: "none", borderRadius: 50, fontWeight: 600, fontFamily: "'Poppins', sans-serif", transition: "background 0.3s" }}
-              onMouseEnter={e => { e.currentTarget.style.background = "#ed8337"; }}
-              onMouseLeave={e => { e.currentTarget.style.background = "#004168"; }}
-            >
-              Learn More
-            </a>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-// ── Page Export ───────────────────────────────────────
-export default function DigitalMarketingNewPage() {
-  return (
-    <Layout
-      title="Website Development Company in Coimbatore | Expert Web "
-      description="Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . "
-    >
-      <SEOHead />
-      <GlobalStyles />
-      <HeroSection />
-      <OurServicesSection />
-      <TechnologiesSection />
-      <CTASplitSection />
-      {/* <AppBannerSection /> */}
-      <BuildTogetherCTASection />   
-      <PortfolioSection />
-      <ModernFeaturesSection />
-      <WhyChooseUsSection />
-      <TestimonialSlider />
-      <MilestonesCTA />
-      <ServicesSlider />
-      <FAQSection />
-    </Layout>
-  );
-}
+      `}),(0,i.jsx)("div",{className:"ms-cta-glow-l"}),(0,i.jsx)("div",{className:"ms-cta-glow-r"}),(0,i.jsx)("div",{className:"ms-cta-line-top"}),(0,i.jsxs)("div",{className:"ms-cta-inner",children:[(0,i.jsxs)("div",{className:"ms-cta-left",children:[(0,i.jsx)("div",{className:"partners-header1",children:(0,i.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"start"},children:"Case Studies"})}),(0,i.jsxs)("h2",{className:"ms-cta-title",children:["Explore ",(0,i.jsx)("span",{children:"Proven Results Through"}),(0,i.jsx)("br",{})," Our Case Studies"]}),(0,i.jsx)("p",{className:"ms-cta-desc",children:"Discover our projects that demonstrate how strategy and clear execution drive measurable business success.          "})]}),(0,i.jsxs)("div",{className:"ms-cta-right",children:[(0,i.jsxs)("a",{href:"/contact",className:"ms-cta-btn-primary",children:["Start Your Growth Journey",(0,i.jsx)("span",{className:"ms-cta-btn-arr",children:"\u2192"})]}),(0,i.jsxs)("a",{href:"/portfolio",className:"ms-cta-btn-secondary",children:[(0,i.jsx)("span",{className:"ms-cta-btn-ico",children:"\u{1F4CA}"}),"View Results"]})]})]}),(0,i.jsx)("div",{className:"ms-cta-line-bottom"})]})}let k=[{img:"/img/portfolio/urcts.webp",label:"URCTS",tag:"",link:"https://www.urcts.in/"},{img:"/img/portfolio/tgcc.webp",label:"TGCC",tag:"",link:""},{img:"/img/portfolio/zky.webp",label:"ZKY",tag:"",link:"https://zky.co.in/"},{img:"/img/portfolio/abb.webp",label:"ABB",tag:"",link:"https://abbmc.in/"},{img:"/img/portfolio/riya.webp",label:"Riya consultancy",tag:"",link:"https://www.riyaconsultancy.com/"}],z=[{img:"/img/portfolio/feralroots.webp",label:"Feral Roots",tag:"",link:"https://feralroots.in/"},{img:"/img/portfolio/sterlocare.webp",label:"SterloCare",tag:"",link:"https://sterlocare.com/"},{img:"/img/portfolio/sterlo.webp",label:"Sterlo",tag:"",link:"https://sterlo.io/"},{img:"/img/portfolio/talenttribe.webp",label:"Talent Tribe",tag:"",link:"https://talenttribe.in/"},{img:"/img/portfolio/sterlobuild.webp",label:"SterloBuild",tag:"",link:"https://www.sterlobuild.com/"}],N=[{img:"/img/portfolio/product1.webp",label:"",tag:"",link:""},{img:"/img/portfolio/product2.webp",label:"",tag:"",link:""},{img:"/img/portfolio/product3.webp",label:"",tag:"",link:""},{img:"/img/portfolio/product4.webp",label:"",tag:"",link:""},{img:"/img/portfolio/am.webp",label:"AM Builder",tag:"",link:""}];function S({items:e,speed:t,direction:r}){let n=(0,a.useRef)(null),o=(0,a.useRef)(0),s=(0,a.useRef)(!1),l=(0,a.useRef)(null),d=[...e,...e];return(0,a.useEffect)(()=>{let e=n.current;if(!e)return;let i=e.scrollHeight/2,a=()=>{s.current||(o.current+=t,"up"===r?(o.current>=i&&(o.current-=i),e.style.transform=`translateY(-${o.current}px)`):(o.current>=i&&(o.current-=i),e.style.transform=`translateY(${o.current-i}px)`)),l.current=requestAnimationFrame(a)};return l.current=requestAnimationFrame(a),()=>cancelAnimationFrame(l.current)},[t,r]),(0,i.jsx)("div",{className:"pf-col",style:{height:"min(600px, 60vw)",overflow:"hidden",position:"relative"},onMouseEnter:()=>{s.current=!0},onMouseLeave:()=>{s.current=!1},children:(0,i.jsx)("div",{ref:n,className:"pf-col-inner",children:d.map((e,t)=>{let r=(0,i.jsxs)("div",{className:"pf-card",children:[(0,i.jsx)("img",{src:e.img,alt:e.label,loading:"lazy"}),(0,i.jsxs)("div",{className:"pf-card-overlay",children:[(0,i.jsx)("div",{className:"pf-card-label",children:e.label}),(0,i.jsx)("div",{className:"pf-card-tag",children:e.tag})]})]});return e.link?(0,i.jsx)("a",{href:e.link,target:"_blank",rel:"noopener noreferrer",className:"pf-card-link",children:r},t):(0,i.jsx)("div",{children:r},t)})})})}function C(){return(0,i.jsx)("section",{className:"pf-section",children:(0,i.jsxs)("div",{className:"pf-inner",children:[(0,i.jsxs)("div",{className:"pf-left",children:[(0,i.jsx)("div",{className:"partners-header1",children:(0,i.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Our  Portfolio"})}),(0,i.jsxs)("h2",{className:"pf-heading",children:["Our Work That ",(0,i.jsx)("span",{children:(0,i.jsx)("i",{children:"Speaks for Itself"})})]}),(0,i.jsx)("p",{className:"pf-desc",children:"Discover high-performing websites designed for speed, credibility, user experience, and measurable growth across diverse industries and business models."}),(0,i.jsx)("div",{className:"pf-btns",children:(0,i.jsx)("a",{href:"/portfolio",className:"pf-btn",children:"View More Projects  \u2192"})})]}),(0,i.jsxs)("div",{className:"pf-cols",children:[(0,i.jsx)(S,{items:k,speed:.6,direction:"up"}),(0,i.jsx)(S,{items:z,speed:.5,direction:"down"}),(0,i.jsx)(S,{items:N,speed:.7,direction:"up"})]})]})})}let P=[{index:0,text:"PCS delivered a modern responsive website with SEO optimization, analytics integration, heatmap tracking, and performance monitoring. We appreciate their team's dedication, technical expertise, and timely support, which significantly improved our online visibility, website performance, and customer engagement.",name:"Mr.Ashwin",role:"Founder",badge:["Website Development","SEO"]},{index:1,text:"Our basic single-page website was upgraded into a professionally structured multi-page platform with enhanced SEO, GMB optimization, analytics setup, and customer activity tracking. We thank the PCS team for their commitment, quick support, and valuable contribution in strengthening our online presence.",name:"Mr.Sabarinath",role:"Founder",badge:["Website Development","SEO","Local SEO"]},{index:2,text:"A fresh UI design with strong website development, improved online reach, lead capture setup, and user activity insights was successfully developed by the PCS team. Every change request was handled patiently while turning our ideas into exactly what we expected. The late-night support before launch was truly appreciated.",name:"Mr.Clement Selvam",role:"Founder",badge:["Website Development","SEO"]},{index:3,text:"As a growing forest-based natural products brand, we partnered with PCS to expand our store presence and online sales. PCS team developed a complete e-commerce platform with Razorpay setup, order management, inventory tracking, centralized dashboard, WhatsApp integration for smooth business operations.",name:"Mr.Karupasamy",role:"Director",badge:["E-Commerce","SEO","Local SEO"]},{index:4,text:"Competing in the global market we required a website that matched international standards. With strategic content, SEO optimization, analytics integration, and performance enhancements, our digital presence was significantly strengthened. We appreciate the PCS team for their expertise, flexibility, consistent support throughout the process.",name:"Mr.Gunasekaran",role:"Founder",badge:["SEO","Content Marketing","Paid Ads"]}];function E(){return(0,i.jsx)("svg",{width:14,height:14,viewBox:"0 0 24 24",fill:"#f47920",xmlns:"http://www.w3.org/2000/svg",style:{flexShrink:0},children:(0,i.jsx)("path",{d:"M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"})})}function W({data:e,pos:t,onClick:r,isMobile:a,isTablet:n,isActive:o}){let s={center:{transform:"translateX(0) scale(1) rotateY(0deg)",opacity:1,filter:"none",zIndex:10,boxShadow:"0 24px 64px rgba(13,31,60,0.14)",pointerEvents:"auto"},left:{transform:`translateX(${n?-220:-300}px) scale(0.85) rotateY(18deg)`,opacity:.55,filter:"blur(2px)",zIndex:5,boxShadow:"none",pointerEvents:"auto"},right:{transform:`translateX(${n?220:300}px) scale(0.85) rotateY(-18deg)`,opacity:.55,filter:"blur(2px)",zIndex:5,boxShadow:"none",pointerEvents:"auto"},farLeft:{transform:`translateX(${n?-380:-490}px) scale(0.7) rotateY(28deg)`,opacity:0,filter:"blur(4px)",zIndex:1,boxShadow:"none",pointerEvents:"none"},farRight:{transform:`translateX(${n?380:490}px) scale(0.7) rotateY(-28deg)`,opacity:0,filter:"blur(4px)",zIndex:1,boxShadow:"none",pointerEvents:"none"}},l=a?Math.min(("u">typeof window?window.innerWidth:360)-40,320):n?300:340;return(0,i.jsxs)("div",{onClick:r,"data-active":o?"true":"false",style:{position:"absolute",width:l,background:"#ffffff",borderRadius:20,padding:a?"20px 18px":32,cursor:"pointer",transition:"all 0.55s cubic-bezier(0.4,0,0.2,1)",userSelect:"none",display:"flex",flexDirection:"column",boxSizing:"border-box",top:0,...s[t]},children:[(0,i.jsx)("div",{style:{fontSize:a?28:36,color:"#f47920",lineHeight:1,fontFamily:"Georgia, serif",marginBottom:8},children:'"'}),(0,i.jsx)("div",{style:{fontSize:a?11.5:13,color:"#3d4f6a",lineHeight:a?1.65:1.75,marginBottom:a?14:22,flex:1,fontWeight:400},children:e.text}),(0,i.jsx)("div",{style:{height:1,background:"#f0f2f7",marginBottom:a?10:16}}),(0,i.jsxs)("div",{style:{display:"flex",flexDirection:"column",gap:3},children:[(0,i.jsx)("div",{style:{fontSize:a?13:15,fontWeight:700,color:"#0d1f3c"},children:e.name}),(0,i.jsx)("div",{style:{fontSize:11,color:"#6b7a94",lineHeight:1.4,fontWeight:400},children:e.role}),(0,i.jsx)("div",{style:{display:"flex",flexWrap:"wrap",gap:4,marginTop:4},children:e.badge.map(e=>(0,i.jsx)("span",{style:{display:"inline-block",fontSize:9.5,fontWeight:600,letterSpacing:"0.05em",padding:"2px 7px",borderRadius:20,background:"rgba(244,121,32,0.1)",color:"#f47920",textTransform:"uppercase"},children:e},e))}),(0,i.jsx)("div",{style:{display:"flex",gap:3,marginTop:6},children:[void 0,void 0,void 0,void 0,void 0].map((e,t)=>(0,i.jsx)(E,{},t))})]})]})}function A(){let[e,t]=(0,a.useState)(2),r=(0,a.useRef)(null),n=(0,a.useRef)(null),o=(0,a.useRef)(null),[s,l]=(0,a.useState)(380),d=P.length,c=function(){let[e,t]=(0,a.useState)("u">typeof window?window.innerWidth:1200);return(0,a.useEffect)(()=>{let e=()=>t(window.innerWidth);return window.addEventListener("resize",e),()=>window.removeEventListener("resize",e)},[]),e}(),p=c<640,m=c>=640&&c<1024;(0,a.useEffect)(()=>{if(!o.current)return;let e=o.current.querySelector("[data-active='true']");if(e){let t=e.getBoundingClientRect().height;t>0&&l(t+8)}},[e,c]);let g=()=>{r.current&&clearInterval(r.current),r.current=setInterval(()=>t(e=>(e+1)%d),3e3)};(0,a.useEffect)(()=>(g(),()=>clearInterval(r.current)),[]);let f=e=>{t(e),g()};return(0,i.jsxs)("section",{style:{width:"100%",maxWidth:1100,margin:"0 auto",padding:p?"40px 16px":"60px 20px",fontFamily:"'Poppins', sans-serif",overflow:"hidden"},children:[(0,i.jsx)("div",{className:"partners-header1",style:{marginBottom:p?12:16,textAlign:"center"},children:(0,i.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"12px",textAlign:"start"},children:"Client Testimonials"})}),(0,i.jsxs)("h2",{style:{fontSize:p?22:m?28:"clamp(28px,3vw,40px)",fontWeight:700,color:"#0d1f3c",lineHeight:1.25,marginBottom:p?28:48,textAlign:"center"},children:["What Our Clients"," ",(0,i.jsx)("span",{style:{color:"#f47920",fontStyle:"italic",fontWeight:700},children:"Say About PCS"})]}),(0,i.jsx)("div",{ref:o,onTouchStart:e=>{n.current=e.touches[0].clientX},onTouchEnd:t=>{if(null===n.current)return;let r=t.changedTouches[0].clientX-n.current;n.current=null,40>Math.abs(r)||(r<0?f((e+1)%d):f((e-1+d)%d))},style:{position:"relative",height:s,display:"flex",alignItems:"flex-start",justifyContent:"center",perspective:1200,marginBottom:28,transition:"height 0.4s ease"},children:P.map((t,r)=>{let a,n=0==(a=r-e)?"center":p?a<0?"farLeft":"farRight":-1===a||a===d-1?"left":1===a||a===-(d-1)?"right":a<0?"farLeft":"farRight";return(0,i.jsx)(W,{data:t,pos:n,isActive:"center"===n,onClick:()=>{r!==e&&f(r)},isMobile:p,isTablet:m},t.index)})}),(0,i.jsx)("div",{style:{display:"flex",justifyContent:"center",gap:8,alignItems:"center"},children:P.map((t,r)=>(0,i.jsx)("button",{onClick:()=>f(r),style:{width:r===e?22:9,height:9,borderRadius:9,padding:0,outline:"none",cursor:"pointer",flexShrink:0,transition:"all 0.3s ease",background:r===e?"#f47920":"transparent",border:r===e?"none":"1.8px solid #b0b8c9"}},r))}),p&&(0,i.jsx)("p",{style:{textAlign:"center",fontSize:11,color:"#b0b8c9",marginTop:14,letterSpacing:"0.03em"},children:"\u2190 swipe to explore \u2192"})]})}function M(){let e=[{name:"HTML5",logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},{name:"CSS3",logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"},{name:"JavaScript",logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"},{name:"PHP",logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"},{name:"React",logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"},{name:"MySQL",logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"},{name:"Shopify",logo:"https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/shopify.svg"}],t=[{name:"WordPress",logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"},{name:"Elementor",logo:"https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/elementor.svg"},{name:"Node.js",logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"},{name:"Bootstrap",logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"},{name:"Git",logo:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"},{name:"Shopify",logo:"https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/shopify.svg"}],r=[...e,...e],a=[...t,...t];return(0,i.jsxs)("section",{className:"tech-section",children:[(0,i.jsxs)("div",{className:"tech-header",children:[(0,i.jsx)("div",{className:"partners-header1",style:{textAlign:"center"},children:(0,i.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Technology Stack"})}),(0,i.jsxs)("h2",{className:"tech-title",children:["Technologies We ",(0,i.jsx)("span",{children:"Work With"})]}),(0,i.jsx)("p",{className:"tech-desc",children:"We leverage the world's most trusted tools and frameworks to build fast, scalable, and future-proof digital solutions for your business."})]}),(0,i.jsx)("div",{className:"tech-track-wrap",style:{marginBottom:20},children:(0,i.jsx)("div",{className:"tech-row",children:(0,i.jsx)("div",{className:"tech-row-inner row-right speed-1",children:r.map((e,t)=>(0,i.jsxs)("div",{className:"tech-card",children:[(0,i.jsx)("img",{src:e.logo,alt:e.name,className:"tech-card-logo"}),(0,i.jsx)("span",{className:"tech-card-name",children:e.name})]},t))})})}),(0,i.jsx)("div",{className:"tech-track-wrap",children:(0,i.jsx)("div",{className:"tech-row",children:(0,i.jsx)("div",{className:"tech-row-inner row-left speed-2",children:a.map((e,t)=>(0,i.jsxs)("div",{className:"tech-card",children:[(0,i.jsx)("img",{src:e.logo,alt:e.name,className:"tech-card-logo"}),(0,i.jsx)("span",{className:"tech-card-name",children:e.name})]},t))})})})]})}function R(){return(0,i.jsxs)("section",{style:{padding:"70px 5% 20px"},children:[(0,i.jsx)("div",{className:"partners-header1",style:{textAlign:"center"},children:(0,i.jsx)("div",{className:"partners-eyebrow",style:{marginBottom:"20px",textAlign:"center"},children:"Our  Service"})}),(0,i.jsxs)("h2",{className:"tech-title svc-main-heading",children:["Professional  ",(0,i.jsx)("span",{children:"Website Development Services"})," in Coimbatore"]}),(0,i.jsx)("p",{style:{textAlign:"center",maxWidth:1200,margin:"0 auto 60px",color:"#666",lineHeight:1.8,fontSize:"0.96rem"},children:"We deliver scalable, high-performance website solutions from static websites to eCommerce platforms designed to enhance brand presence, user experience, and business growth."}),(0,i.jsx)("div",{className:"svc-grid",children:[{img:"/img/website-development/website-design.webp",title:"Website Design",desc:"Creative website designs that strengthen your brand and improve Customer engagement.",features:["Responsive Layouts","Modern UI/UX","Mobile Friendly"],href:"/website-design"},{img:"/img/website-development/static-website.webp",title:"Static Website Development",desc:"Fast, secure, and cost-effective websites ideal for startups and growing businesses",features:["Fast Loading","Secure Structure","Easy Maintenance"],href:"/static-website-development"},{img:"/img/website-development/custom-website-development.webp",title:"Custom Website Development",desc:"Tailor-made web solutions built around your business requirements and growth goals.",features:[" Custom Features","Scalable Architecture","High Performance"],href:"/custom-website-development"},{img:"/img/website-development/woo-commerce.webp",title:"WooCommerce Development",desc:"Powerful WooCommerce stores designed for conversions and seamless shopping experiences.",features:[" Secure Checkout"," Product Management","Store Optimization"],href:"/woocommerce-website-development"},{img:"/img/website-development/ecommerce-development.webp",title:"E-Commerce Development",desc:"Robust online stores with advanced functionality and payment integrations.",features:["Shopping Cart","Payment Gateway","Order Management"],href:"/e-commerce-website-development"},{img:"/img/website-development/shopify.webp",title:"Shopify Development",desc:"Professional Shopify stores built for speed, usability, and business growth.",features:["Theme Customization","Shopify Setup","Performance Optimization"],href:"/shopify-website-development"}].map((e,t)=>(0,i.jsxs)("div",{s:!0,style:{background:"#fff",borderRadius:24,padding:"30px 30px 28px 30px",boxShadow:"0 10px 35px rgba(0,0,0,0.08)",borderTop:"5px solid #ed8337",display:"flex",flexDirection:"column",transition:"transform 0.35s ease, box-shadow 0.35s ease"},onMouseEnter:e=>{e.currentTarget.style.transform="translateY(-8px)",e.currentTarget.style.boxShadow="0 18px 40px rgba(0,0,0,0.12)"},onMouseLeave:e=>{e.currentTarget.style.transform="translateY(0)",e.currentTarget.style.boxShadow="0 10px 35px rgba(0,0,0,0.08)"},children:[(0,i.jsx)("img",{src:e.img,alt:e.title,style:{width:"90%",objectFit:"contain",margin:"0 auto 20px"}}),(0,i.jsx)("h3",{style:{color:"#004168",fontSize:20,marginBottom:15,fontFamily:"'Poppins', sans-serif",fontWeight:700},children:e.title}),(0,i.jsx)("p",{style:{color:"#666",lineHeight:1.8,marginBottom:20,fontSize:"0.9rem"},children:e.desc}),(0,i.jsx)("ul",{style:{listStyle:"none",padding:0,margin:"0 0 25px"},children:e.features.map((e,t)=>(0,i.jsxs)("li",{style:{position:"relative",paddingLeft:30,marginBottom:12,color:"#444",lineHeight:1.6,fontSize:"0.9rem"},children:[(0,i.jsx)("span",{style:{position:"absolute",left:0,top:0,color:"#ed8337",fontWeight:"bold",fontSize:18},children:"\u2713"}),e]},t))}),(0,i.jsx)("a",{href:e.href,style:{display:"inline-block",width:"42%",fontSize:"14px",textAlign:"center",padding:"10px 20px",background:"#004168",color:"#fff",textDecoration:"none",borderRadius:50,fontWeight:600,fontFamily:"'Poppins', sans-serif",transition:"background 0.3s"},onMouseEnter:e=>{e.currentTarget.style.background="#ed8337"},onMouseLeave:e=>{e.currentTarget.style.background="#004168"},children:"Learn More"})]},t))})]})}function O(){return(0,i.jsxs)(n.A,{title:"Website Development Company in Coimbatore | Expert Web ",description:"Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . ",children:[(0,i.jsx)(l,{}),(0,i.jsx)(d,{}),(0,i.jsx)(m,{}),(0,i.jsx)(R,{}),(0,i.jsx)(M,{}),(0,i.jsx)(f,{}),(0,i.jsx)(h,{}),(0,i.jsx)(C,{}),(0,i.jsx)(x,{}),(0,i.jsx)(b,{}),(0,i.jsx)(A,{}),(0,i.jsx)(j,{}),(0,i.jsx)(y,{}),(0,i.jsx)(w,{})]})}}}]);

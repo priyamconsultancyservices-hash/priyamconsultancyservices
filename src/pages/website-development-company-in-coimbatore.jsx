@@ -17,6 +17,7 @@ function SEOHead() {
     <Head>
       <title>Website Development Company in Coimbatore | Expert Web </title>
       <meta name="description" content="Looking for a website development company in Coimbatore? We design responsive, SEO-friendly, high-performance websites to grow your business . " />
+      <meta name="keywords" content="Web Development Company in Coimbatore, Digital Marketing Company Coimbatore, Digital Marketing in Coimbatore, SEO Company in Coimbatore, Recruitment Agency in Coimbatore, SEO Services in Coimbatore, Website Development Company in Coimbatore " />
       <link rel="canonical" href="https://www.priyamconsultancy.com/website-development-company-in-coimbatore/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Website Development Company in Coimbatore | Expert Web " />
@@ -1192,7 +1193,7 @@ function HeroSection() {
             }
           `}</style>
 
-          <h2 className="hero-form-title">Your Growth, <span>Our Mission.</span></h2>
+          <p className="hero-form-title">Your Growth, <span>Our Mission.</span></p>
           <p className="hero-form-sub">Fill in your details — we'll get back within 24 hours.</p>
           <HeroContactForm />
         </div>
@@ -1336,8 +1337,8 @@ function CTASplitSection() {
         </div>
         <div>
           <div className="partners-header1" >
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Trusted Website Partner
-            </h2>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Trusted Website Partner
+            </div>
           </div>
           <h2 className="pg-cta-heading">Leading  <em>Website Development Company</em><br />in Coimbatore
           </h2>
@@ -1365,7 +1366,7 @@ function BuildTogetherCTASection() {
         minHeight: "200px",
         display: "grid", gridTemplateColumns: "1fr auto",
         alignItems: "center", gap: "2rem",
-        padding: "3rem 3.5rem",
+        padding: "3rem 1.7rem",
       }}>
 
         {/* BG grid pattern */}
@@ -1406,14 +1407,14 @@ function BuildTogetherCTASection() {
             Let's Build Together
           </div>
 
-          <h2 style={{
+          <h3 style={{
             fontFamily: "'Poppins', sans-serif",
             fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)",
             fontWeight: 700, color: "#fff",
             lineHeight: 1.2, margin: "0 0 0.7rem",
           }}>
              Ready to Grow with a <br/><em style={{color: "#ed8337"}}>Web Development Company?</em><br />
-          </h2>
+          </h3>
 
           <p style={{
             fontSize: "0.9rem", color: "rgba(255,255,255,0.72)",
@@ -1450,8 +1451,8 @@ function ModernFeaturesSection() {
     <section className="mf-outer">
       <div className="mf-head">
         <div className="partners-header1" style={{ textAlign: 'center' }}>
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Web Development Features
-          </h2>
+          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Web Development Features
+          </div>
         </div>
         <h2 className="mf-h2">Powerful  <span>Features Built </span>for Growth
         </h2>
@@ -1464,7 +1465,7 @@ function ModernFeaturesSection() {
       <div className="mf-icon-box">
         <img src="/img/icon/feat-custom-web.webp" alt="Custom Web Development" width={"25px"}/>
       </div>
-      <div><p className="mf-t">Custom Web Development</p><p className="mf-d">
+      <div><h3 className="mf-t">Custom Web Development</h3><p className="mf-d">
         We build fully customized websites tailored to your business goals, branding, and functionality needs. No templates — only scalable, secure, and performance-driven development solutions.
       </p></div>
     </div>
@@ -1472,7 +1473,8 @@ function ModernFeaturesSection() {
       <div className="mf-icon-box">
         <img src="/img/icon/feat-api-intergation.webp" alt="API Integration" width={"25px"}/>
       </div>
-      <div><p className="mf-t">API Integration</p><p className="mf-d">
+      <div>
+        <h3 className="mf-t">API Integration</h3><p className="mf-d">
         Seamless integration with third-party tools such as payment gateways, CRM systems, WhatsApp, shipping providers, and marketing platforms to automate workflows and improve efficiency.
       </p></div>
     </div>
@@ -1480,7 +1482,7 @@ function ModernFeaturesSection() {
       <div className="mf-icon-box">
         <img src="/img/icon/feat-responsive-design.webp" alt="Mobile Responsiveness" width={"25px"}/>
       </div>
-      <div><p className="mf-t">Mobile Responsiveness</p><p className="mf-d">Every website is designed to function flawlessly across all devices — desktops, tablets, and smartphones — ensuring a smooth and engaging user experience everywhere.
+      <div><h3 className="mf-t">Mobile Responsiveness</h3><p className="mf-d">Every website is designed to function flawlessly across all devices — desktops, tablets, and smartphones — ensuring a smooth and engaging user experience everywhere.
       </p></div>
     </div>
   </div>
@@ -1494,20 +1496,20 @@ function ModernFeaturesSection() {
       <div className="mf-icon-box">
         <img src="/img/icon/feat-seo-struture.webp" alt="SEO Optimized Structure" width={"25px"}/>
       </div>
-      <div><p className="mf-t">SEO Optimized Structure</p><p className="mf-d">Websites are built with search engine-friendly architecture, optimized URLs, meta structure, schema, and clean coding practices to improve visibility and ranking potential.
+      <div><h3 className="mf-t">SEO Optimized Structure</h3><p className="mf-d">Websites are built with search engine-friendly architecture, optimized URLs, meta structure, schema, and clean coding practices to improve visibility and ranking potential.
       </p></div>
     </div>
     <div className="mf-item rev">
       <div className="mf-icon-box">
         <img src="/img/icon/feat-page-speed.webp" alt="Page Speed Optimization" width={"25px"}/>
       </div>
-      <div><p className="mf-t">Page Speed Optimization</p><p className="mf-d">We optimize website performance through clean coding, image compression, caching, and lightweight frameworks to ensure fast loading times and better user retention.</p></div>
+      <div><h3 className="mf-t">Page Speed Optimization</h3><p className="mf-d">We optimize website performance through clean coding, image compression, caching, and lightweight frameworks to ensure fast loading times and better user retention.</p></div>
     </div>
     <div className="mf-item rev">
       <div className="mf-icon-box">
         <img src="/img/icon/feat-server-hosting.webp" alt="Hosting and Maintenance" width={"25px"}/>
       </div>
-      <div><p className="mf-t">Hosting &amp; Maintenance</p><p className="mf-d">Reliable hosting setup with Hostinger along with ongoing website maintenance, security monitoring, backups, and updates to ensure uninterrupted business operations.
+      <div><h3 className="mf-t">Hosting &amp; Maintenance</h3><p className="mf-d">Reliable hosting setup with Hostinger along with ongoing website maintenance, security monitoring, backups, and updates to ensure uninterrupted business operations.
       </p></div>
     </div>
   </div>
@@ -1706,8 +1708,8 @@ function WhyChooseUsSection() {
 
           <div className="wcu-header" style={{ textAlign: 'center' }}>
             <div className="partners-header1" style={{ textAlign: 'center' }}>
-              <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Excellence That Sets Us Apart
-              </h2>
+              <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Excellence That Sets Us Apart
+              </div>
             </div>
 
             <h2 className="wcu-heading">Why Choose us As Your <span>Website Development </span>Partner?</h2>
@@ -1753,7 +1755,7 @@ function WhyChooseUsSection() {
         <img src="/img/icon/website-wcu-seo.webp" alt="Hosting and Maintenance" width={"25px"}/>
 </div>
                 <div className="wcu-item-body">
-                  <div className="wcu-item-title">SEO-Optimized Website Architecture</div>
+                  <h3 className="wcu-item-title">SEO-Optimized Website Architecture</h3>
                   <div className="wcu-item-desc">As a performance-driven website development company in Coimbatore, PCS builds search-engine-friendly websites designed to rank higher, load faster, and attract qualified traffic that converts into real business opportunities.</div>
                 </div>
               </div>
@@ -1764,7 +1766,7 @@ function WhyChooseUsSection() {
         <img src="/img/icon/website-wcu-lead.webp" alt="Hosting and Maintenance" width={"25px"}/>
 </div>
                 <div className="wcu-item-body">
-                  <div className="wcu-item-title">Improved Lead Conversion Efficiency</div>
+                  <h3 className="wcu-item-title">Improved Lead Conversion Efficiency</h3>
                   <div className="wcu-item-desc">Our conversion-focused website development and landing page optimization reduced cost per lead by <strong style={{ color: "#ed8337" }}>45%</strong>, generating higher-quality inquiries at a lower acquisition cost.</div>
                 </div>
               </div>
@@ -1775,7 +1777,7 @@ function WhyChooseUsSection() {
         <img src="/img/icon/website-wcu-google-rank.webp" alt="Hosting and Maintenance" width={"25px"}/>
 </div>
                 <div className="wcu-item-body">
-                  <div className="wcu-item-title">Top 5 Google Rankings Achieved</div>
+                  <h3 className="wcu-item-title">Top 5 Google Rankings Achieved</h3>
                   <div className="wcu-item-desc">Through technically sound website development and strategic keyword integration, we secured <strong style={{ color: "#ed8337" }}>Top 5</strong> search rankings, outperforming competitors with larger advertising budgets.</div>
                 </div>
               </div>
@@ -1786,7 +1788,7 @@ function WhyChooseUsSection() {
         <img src="/img/icon/website-wcu-bounce-rate.webp" alt="Hosting and Maintenance" width={"25px"}/>
 </div>
                 <div className="wcu-item-body">
-                  <div className="wcu-item-title">Higher Engagement &amp; Lower Bounce Rate</div>
+                  <h3 className="wcu-item-title">Higher Engagement &amp; Lower Bounce Rate</h3>
                   <div className="wcu-item-desc">By enhancing UI/UX design, improving website speed, and optimizing content flow, we reduced bounce rates from <strong style={{ color: "#ed8337" }}>80% to 35%</strong>, significantly improving visitor engagement and retention.</div>
                 </div>
               </div>
@@ -2189,8 +2191,8 @@ function ServicesSlider() {
           <div className="svs-header">
             <div className="svs-eyebrow">
               <div className="partners-header1" style={{ textAlign: 'center' }}>
-                <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Other Services
-                </h2>
+                <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Other Services
+                </div>
               </div>
 
             </div>
@@ -2213,7 +2215,7 @@ function ServicesSlider() {
                 >
                   <div className="svs-tag">— {card.tag}</div>
                   <div className="svs-icon-wrap"><ServiceIcon name={card.iconKey} /></div>
-                  <div className="svs-card-title">{card.title}</div>
+                  <h3 className="svs-card-title">{card.title}</h3>
                   <p className="svs-card-desc">{card.desc}</p>
                   <div className="svs-highlight">
                     <span className="svs-hl-dot" />{card.highlight}
@@ -2517,12 +2519,12 @@ function PortfolioSection() {
         {/* LEFT */}
         <div className="pf-left">
           <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Portfolio</h2>
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Portfolio</div>
           </div>
-          <h3 className="pf-heading">
+          <h2 className="pf-heading">
             Our Work That <span><i>Speaks for Itself
             </i></span>
-          </h3>
+          </h2>
           <p className="pf-desc">
             Discover high-performing websites designed for speed, credibility, user experience, and measurable growth across diverse industries and business models.
 
@@ -2786,8 +2788,8 @@ function TechnologiesSection() {
     <section className="tech-section">
       <div className="tech-header">
         <div className="partners-header1" style={{ textAlign: 'center' }}>
-          <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Technology Stack
-          </h2>
+          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Technology Stack
+          </div>
         </div>
         <h2 className="tech-title">
           Technologies We <span>Work With</span>
@@ -2878,7 +2880,7 @@ function OurServicesSection() {
   return (
     <section style={{ padding: "70px 5% 20px" }}>
       <div className="partners-header1" style={{ textAlign: 'center' }}>
-        <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Service</h2>
+        <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Service</div>
       </div>
 
       <h2 className="tech-title svc-main-heading">
