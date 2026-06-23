@@ -893,7 +893,7 @@ function ServiceIcon({ name }) {
     email: "/img/icon/website-other-service-email.webp",
     graphic: "/img/icon/website-other-service-graphic.webp",
     busregcom: "/img/icon/website-other-service-busregcom.webp",
-    digitaltrans:"/img/icon/website-other-service-digitaltrans.webp",
+    digitaltrans: "/img/icon/website-other-service-digitaltrans.webp",
     hrservice: "/img/icon/website-other-service-hrservice.webp",
   };
   return icons[name] ? <img src={icons[name]} alt={name} width="24" height="24" /> : null;
@@ -1343,10 +1343,10 @@ function CTASplitSection() {
           <h2 className="pg-cta-heading">Leading  <em>Website Development Company</em><br />in Coimbatore
           </h2>
           <p className="pg-cta-desc">
-We are  a trusted Website Development Company in Coimbatore delivering innovative, scalable, and digital solutions for businesses of all sizes. As a leading Website Design Company in Coimbatore, we specialize in creating responsive, user-friendly, and SEO-optimized websites that enhance brand visibility and drive measurable results.
+            We are  a trusted Website Development Company in Coimbatore delivering innovative, scalable, and digital solutions for businesses of all sizes. As a leading Website Design Company in Coimbatore, we specialize in creating responsive, user-friendly, and SEO-optimized websites that enhance brand visibility and drive measurable results.
           </p>
           <p className="pg-cta-desc2">
-From custom business websites and eCommerce Website Development to Shopify and WooCommerce solutions, our Website Development Services are designed to improve user experience, and support long-term business growth. We combine creativity, technology, and strategy to build websites that help businesses stand out in today's competitive digital landscape.          </p>
+            From custom business websites and eCommerce Website Development to Shopify and WooCommerce solutions, our Website Development Services are designed to improve user experience, and support long-term business growth. We combine creativity, technology, and strategy to build websites that help businesses stand out in today's competitive digital landscape.          </p>
 
         </div>
       </div>
@@ -1372,8 +1372,8 @@ function BuildTogetherCTASection() {
         {/* BG grid pattern */}
         <div style={{
           position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0,
-  backgroundImage: "url('/img/website-development/cta.webp')",
-          backgroundSize: "cover", backgroundPosition: "center",        
+          backgroundImage: "url('/img/website-development/cta.webp')",
+          backgroundSize: "cover", backgroundPosition: "center",
         }} />
 
         {/* BG image */}
@@ -1403,7 +1403,7 @@ function BuildTogetherCTASection() {
             letterSpacing: "0.1em", textTransform: "uppercase",
             marginBottom: "1rem",
           }}>
-            <span style={{ width:6, height:6, borderRadius:"50%", background:"#ed8337", display:"inline-block" }} />
+            <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#ed8337", display: "inline-block" }} />
             Let's Build Together
           </div>
 
@@ -1413,7 +1413,7 @@ function BuildTogetherCTASection() {
             fontWeight: 700, color: "#fff",
             lineHeight: 1.2, margin: "0 0 0.7rem",
           }}>
-             Ready to Grow with a <br/><em style={{color: "#ed8337"}}>Web Development Company?</em><br />
+            Ready to Grow with a <br /><em style={{ color: "#ed8337" }}>Web Development Company?</em><br />
           </h3>
 
           <p style={{
@@ -1422,22 +1422,22 @@ function BuildTogetherCTASection() {
           }}>
             Partner with Coimbatore's trusted web development team. From design to deployment — we build websites that drive real business growth.
           </p>
-     <div style={{
-          position: "relative", zIndex: 2,
-          display: "flex", flexDirection: "column",
-          alignItems: "start", gap: "0.85rem", flexShrink: 0,marginTop: "1.5rem",
-        }}>
-          <a href="/contact-us" className="pg-form-btn">
-            Get Free Consultation
-            <span className="pg-form-btn-arr">→</span>
-          </a>
+          <div style={{
+            position: "relative", zIndex: 2,
+            display: "flex", flexDirection: "column",
+            alignItems: "start", gap: "0.85rem", flexShrink: 0, marginTop: "1.5rem",
+          }}>
+            <a href="/contact-us" className="pg-form-btn">
+              Get Free Consultation
+              <span className="pg-form-btn-arr">→</span>
+            </a>
 
-        </div>
+          </div>
 
         </div>
 
         {/* RIGHT: Buttons */}
-   
+
 
       </div>
     </section>
@@ -1459,61 +1459,61 @@ function ModernFeaturesSection() {
         <p className="mf-sub">Our website development services combine performance, security, and scalability to help businesses succeed online. Every website is built with modern technologies, SEO best practices, and user-focused experiences that drive measurable results.
         </p>
       </div>
-    <div className="mf-body">
-  <div className="mf-col">
-    <div className="mf-item">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-custom-web.webp" alt="Custom Web Development" width={"25px"}/>
-      </div>
-      <div><h3 className="mf-t">Custom Web Development</h3><p className="mf-d">
-        We build fully customized websites tailored to your business goals, branding, and functionality needs. No templates — only scalable, secure, and performance-driven development solutions.
-      </p></div>
-    </div>
-    <div className="mf-item">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-api-intergation.webp" alt="API Integration" width={"25px"}/>
-      </div>
-      <div>
-        <h3 className="mf-t">API Integration</h3><p className="mf-d">
-        Seamless integration with third-party tools such as payment gateways, CRM systems, WhatsApp, shipping providers, and marketing platforms to automate workflows and improve efficiency.
-      </p></div>
-    </div>
-    <div className="mf-item">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-responsive-design.webp" alt="Mobile Responsiveness" width={"25px"}/>
-      </div>
-      <div><h3 className="mf-t">Mobile Responsiveness</h3><p className="mf-d">Every website is designed to function flawlessly across all devices — desktops, tablets, and smartphones — ensuring a smooth and engaging user experience everywhere.
-      </p></div>
-    </div>
-  </div>
+      <div className="mf-body">
+        <div className="mf-col">
+          <div className="mf-item">
+            <div className="mf-icon-box">
+              <img src="/img/icon/feat-custom-web.webp" alt="Custom Web Development" width={"25px"} />
+            </div>
+            <div><h3 className="mf-t">Custom Web Development</h3><p className="mf-d">
+              We build fully customized websites tailored to your business goals, branding, and functionality needs. No templates — only scalable, secure, and performance-driven development solutions.
+            </p></div>
+          </div>
+          <div className="mf-item">
+            <div className="mf-icon-box">
+              <img src="/img/icon/feat-api-intergation.webp" alt="API Integration" width={"25px"} />
+            </div>
+            <div>
+              <h3 className="mf-t">API Integration</h3><p className="mf-d">
+                Seamless integration with third-party tools such as payment gateways, CRM systems, WhatsApp, shipping providers, and marketing platforms to automate workflows and improve efficiency.
+              </p></div>
+          </div>
+          <div className="mf-item">
+            <div className="mf-icon-box">
+              <img src="/img/icon/feat-responsive-design.webp" alt="Mobile Responsiveness" width={"25px"} />
+            </div>
+            <div><h3 className="mf-t">Mobile Responsiveness</h3><p className="mf-d">Every website is designed to function flawlessly across all devices — desktops, tablets, and smartphones — ensuring a smooth and engaging user experience everywhere.
+            </p></div>
+          </div>
+        </div>
 
-  <div className="mf-phone">
-    <img src="/img/website-development/features.webp" alt="Mobile Responsiveness"/>
-  </div>
+        <div className="mf-phone">
+          <img src="/img/website-development/features.webp" alt="Mobile Responsiveness" />
+        </div>
 
-  <div className="mf-col">
-    <div className="mf-item rev">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-seo-struture.webp" alt="SEO Optimized Structure" width={"25px"}/>
+        <div className="mf-col">
+          <div className="mf-item rev">
+            <div className="mf-icon-box">
+              <img src="/img/icon/feat-seo-struture.webp" alt="SEO Optimized Structure" width={"25px"} />
+            </div>
+            <div><h3 className="mf-t">SEO Optimized Structure</h3><p className="mf-d">Websites are built with search engine-friendly architecture, optimized URLs, meta structure, schema, and clean coding practices to improve visibility and ranking potential.
+            </p></div>
+          </div>
+          <div className="mf-item rev">
+            <div className="mf-icon-box">
+              <img src="/img/icon/feat-page-speed.webp" alt="Page Speed Optimization" width={"25px"} />
+            </div>
+            <div><h3 className="mf-t">Page Speed Optimization</h3><p className="mf-d">We optimize website performance through clean coding, image compression, caching, and lightweight frameworks to ensure fast loading times and better user retention.</p></div>
+          </div>
+          <div className="mf-item rev">
+            <div className="mf-icon-box">
+              <img src="/img/icon/feat-server-hosting.webp" alt="Hosting and Maintenance" width={"25px"} />
+            </div>
+            <div><h3 className="mf-t">Hosting &amp; Maintenance</h3><p className="mf-d">Reliable hosting setup with Hostinger along with ongoing website maintenance, security monitoring, backups, and updates to ensure uninterrupted business operations.
+            </p></div>
+          </div>
+        </div>
       </div>
-      <div><h3 className="mf-t">SEO Optimized Structure</h3><p className="mf-d">Websites are built with search engine-friendly architecture, optimized URLs, meta structure, schema, and clean coding practices to improve visibility and ranking potential.
-      </p></div>
-    </div>
-    <div className="mf-item rev">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-page-speed.webp" alt="Page Speed Optimization" width={"25px"}/>
-      </div>
-      <div><h3 className="mf-t">Page Speed Optimization</h3><p className="mf-d">We optimize website performance through clean coding, image compression, caching, and lightweight frameworks to ensure fast loading times and better user retention.</p></div>
-    </div>
-    <div className="mf-item rev">
-      <div className="mf-icon-box">
-        <img src="/img/icon/feat-server-hosting.webp" alt="Hosting and Maintenance" width={"25px"}/>
-      </div>
-      <div><h3 className="mf-t">Hosting &amp; Maintenance</h3><p className="mf-d">Reliable hosting setup with Hostinger along with ongoing website maintenance, security monitoring, backups, and updates to ensure uninterrupted business operations.
-      </p></div>
-    </div>
-  </div>
-</div>
     </section>
   );
 }
@@ -1751,9 +1751,9 @@ function WhyChooseUsSection() {
 
               <div className="wcu-item">
                 <div className="wcu-item-connector"></div>
-            <div className="wcu-item-icon">
-        <img src="/img/icon/website-wcu-seo.webp" alt="Hosting and Maintenance" width={"25px"}/>
-</div>
+                <div className="wcu-item-icon">
+                  <img src="/img/icon/website-wcu-seo.webp" alt="Hosting and Maintenance" width={"25px"} />
+                </div>
                 <div className="wcu-item-body">
                   <h3 className="wcu-item-title">SEO-Optimized Website Architecture</h3>
                   <div className="wcu-item-desc">As a performance-driven website development company in Coimbatore, PCS builds search-engine-friendly websites designed to rank higher, load faster, and attract qualified traffic that converts into real business opportunities.</div>
@@ -1762,9 +1762,9 @@ function WhyChooseUsSection() {
 
               <div className="wcu-item">
                 <div className="wcu-item-connector"></div>
-           <div className="wcu-item-icon">
-        <img src="/img/icon/website-wcu-lead.webp" alt="Hosting and Maintenance" width={"25px"}/>
-</div>
+                <div className="wcu-item-icon">
+                  <img src="/img/icon/website-wcu-lead.webp" alt="Hosting and Maintenance" width={"25px"} />
+                </div>
                 <div className="wcu-item-body">
                   <h3 className="wcu-item-title">Improved Lead Conversion Efficiency</h3>
                   <div className="wcu-item-desc">Our conversion-focused website development and landing page optimization reduced cost per lead by <strong style={{ color: "#ed8337" }}>45%</strong>, generating higher-quality inquiries at a lower acquisition cost.</div>
@@ -1773,9 +1773,9 @@ function WhyChooseUsSection() {
 
               <div className="wcu-item">
                 <div className="wcu-item-connector"></div>
-           <div className="wcu-item-icon">
-        <img src="/img/icon/website-wcu-google-rank.webp" alt="Hosting and Maintenance" width={"25px"}/>
-</div>
+                <div className="wcu-item-icon">
+                  <img src="/img/icon/website-wcu-google-rank.webp" alt="Hosting and Maintenance" width={"25px"} />
+                </div>
                 <div className="wcu-item-body">
                   <h3 className="wcu-item-title">Top 5 Google Rankings Achieved</h3>
                   <div className="wcu-item-desc">Through technically sound website development and strategic keyword integration, we secured <strong style={{ color: "#ed8337" }}>Top 5</strong> search rankings, outperforming competitors with larger advertising budgets.</div>
@@ -1784,9 +1784,9 @@ function WhyChooseUsSection() {
 
               <div className="wcu-item">
                 <div className="wcu-item-connector"></div>
-        <div className="wcu-item-icon">
-        <img src="/img/icon/website-wcu-bounce-rate.webp" alt="Hosting and Maintenance" width={"25px"}/>
-</div>
+                <div className="wcu-item-icon">
+                  <img src="/img/icon/website-wcu-bounce-rate.webp" alt="Hosting and Maintenance" width={"25px"} />
+                </div>
                 <div className="wcu-item-body">
                   <h3 className="wcu-item-title">Higher Engagement &amp; Lower Bounce Rate</h3>
                   <div className="wcu-item-desc">By enhancing UI/UX design, improving website speed, and optimizing content flow, we reduced bounce rates from <strong style={{ color: "#ed8337" }}>80% to 35%</strong>, significantly improving visitor engagement and retention.</div>
@@ -2776,7 +2776,7 @@ function TechnologiesSection() {
     { name: "Node.js", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
     { name: "Bootstrap", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
     { name: "Git", logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-        { name: "Shopify", logo: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/shopify.svg" },
+    { name: "Shopify", logo: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/shopify.svg" },
 
   ];
 
@@ -2894,21 +2894,21 @@ function OurServicesSection() {
           <div
             key={i}
             s/* REMOVE height: "90%" and add these instead: */
-style={{
-  background: "#fff",
-  borderRadius: 24,
-  padding: "30px 30px 28px 30px",
-  boxShadow: "0 10px 35px rgba(0,0,0,0.08)",
-  borderTop: "5px solid #ed8337",
-  display: "flex",
-  flexDirection: "column",
-  // REMOVE height: "90%" entirely
-  transition: "transform 0.35s ease, box-shadow 0.35s ease",
-}}
+            style={{
+              background: "#fff",
+              borderRadius: 24,
+              padding: "30px 30px 28px 30px",
+              boxShadow: "0 10px 35px rgba(0,0,0,0.08)",
+              borderTop: "5px solid #ed8337",
+              display: "flex",
+              flexDirection: "column",
+              // REMOVE height: "90%" entirely
+              transition: "transform 0.35s ease, box-shadow 0.35s ease",
+            }}
             onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 18px 40px rgba(0,0,0,0.12)"; }}
             onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 10px 35px rgba(0,0,0,0.08)"; }}
           >
-            <img src={svc.img} alt={svc.title} style={{ width: "90%",  objectFit: "contain", margin: "0 auto 20px" }} />
+            <img src={svc.img} alt={svc.title} style={{ width: "90%", objectFit: "contain", margin: "0 auto 20px" }} />
             <h3 style={{ color: "#004168", fontSize: 20, marginBottom: 15, fontFamily: "'Poppins', sans-serif", fontWeight: 700 }}>
               {svc.title}
             </h3>
@@ -2952,8 +2952,7 @@ export default function DigitalMarketingNewPage() {
       <PortfolioSection />
       <TechnologiesSection />
       <CTASplitSection />
-      {/* <AppBannerSection /> */}
-      <BuildTogetherCTASection />   
+      <BuildTogetherCTASection />
       <ModernFeaturesSection />
       <WhyChooseUsSection />
       <TestimonialSlider />
