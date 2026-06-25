@@ -28,29 +28,22 @@ const config = {
     [
       'classic',
       ({
-        docs: false, // ← docs pages disable பண்ணிட்டோம் (sitemap-லயும் வராது)
+        docs: false,
         blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+        // ✅ Preset-லயே sitemap config — இதுதான் சரியான fix
+        sitemap: {
+          filename: 'page-sitemap.xml',
+          ignorePatterns: [
+            '/docs/**',
+            '/markdown-page',
+            '/tags/**',
+            '/blog/**',
+          ],
+        },
       }),
-    ],
-  ],
-
-  // Sitemap plugin — docs இல்லாம, clean page-sitemap.xml generate பண்ணும்
-  plugins: [
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        id: 'sitemap',
-        filename: 'page-sitemap.xml', // ← sitemap.xml இல்லாம page-sitemap.xml-ஆ save ஆகும்
-        ignorePatterns: [
-          '/docs/**',
-          '/markdown-page',
-          '/tags/**',
-          '/blog/**',
-        ],
-      },
     ],
   ],
 
