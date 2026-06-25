@@ -33,16 +33,8 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-        // ✅ Preset-லயே sitemap config — இதுதான் சரியான fix
-        sitemap: {
-          filename: 'page-sitemap.xml',
-          ignorePatterns: [
-            '/docs/**',
-            '/markdown-page',
-            '/tags/**',
-            '/blog/**',
-          ],
-        },
+        sitemap: false, // ✅ Docusaurus sitemap generation முழுக்க disable
+                        // static/sitemap.xml மட்டும் serve ஆகும்
       }),
     ],
   ],
