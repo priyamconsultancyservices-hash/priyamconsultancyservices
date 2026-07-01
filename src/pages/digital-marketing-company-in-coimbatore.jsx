@@ -181,14 +181,14 @@ function SEOHead() {
 
   return (
     <Head>
-      <title>: No.1 Digital Marketing Company in Coimbatore | ROI-Driven  </title>
+      <title> No.1 Digital Marketing Company in Coimbatore | ROI-Driven  </title>
       <meta name="description" content="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. 
 
 " />
       <meta name="keywords" content="digital marketing services India, SEO services, social media marketing, PPC advertising, content marketing, email marketing, online marketing agency, digital marketing company India, PCS Business Solution" />
       <link rel="canonical" href={pageUrl} />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content=": No.1 Digital Marketing Company in Coimbatore | ROI-Driven  " />
+      <meta property="og:title" content="No.1 Digital Marketing Company in Coimbatore | ROI-Driven  " />
       <meta property="og:description" content="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. 
 
 " />
@@ -196,7 +196,7 @@ function SEOHead() {
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content=": No.1 Digital Marketing Company in Coimbatore | ROI-Driven  " />
+      <meta name="twitter:title" content="No.1 Digital Marketing Company in Coimbatore | ROI-Driven  " />
       <meta name="twitter:description" content="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. 
 
 " />
@@ -2392,7 +2392,7 @@ function FAQSection() {
 export default function DigitalMarketingLandingPage() {
   return (
     <Layout
-      title=": No.1 Digital Marketing Company in Coimbatore | ROI-Driven  "
+      title="No.1 Digital Marketing Company in Coimbatore | ROI-Driven  "
       description="Top Digital Marketing Company in Coimbatore providing SEO services, paid ads, social media marketing, and web development solutions for business growth. 
 
 "
