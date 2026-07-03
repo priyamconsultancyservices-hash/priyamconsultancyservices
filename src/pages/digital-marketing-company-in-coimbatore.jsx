@@ -111,22 +111,6 @@ function SEOHead() {
     },
     {
       "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "Digital Marketing",
-      "description": "Professional digital marketing services including SEO, Google Ads, social media marketing, content marketing, local SEO, website optimization, and performance marketing for businesses in Coimbatore.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Priyam Consultancy Services"
-      },
-      "provider": {
-        "@type": "Organization",
-        "name": "Priyam Consultancy Services",
-        "url": "https://www.priyamconsultancy.com/"
-      },
-      "url": "https://www.priyamconsultancy.com/digital-marketing-company-in-coimbatore/"
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Digital Marketing Company in Coimbatore | Priyam Consultancy Services",
       "image": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
