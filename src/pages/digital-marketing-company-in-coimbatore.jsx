@@ -46,99 +46,150 @@ function SEOHead() {
   const schemaData = [
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "PCS Business Solution",
-      "url": "https://www.pcsbusinesssolution.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.pcsbusinesssolution.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/",
+            "name": "Home"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/digital-marketing-company-in-coimbatore/",
+            "name": "Digital Marketing Company in Coimbatore"
+          }
+        }
+      ]
     },
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "Digital Marketing Services in India | PCS Business Solution",
-      "description": "Result-driven digital marketing services including SEO, social media marketing, PPC, content marketing, and email marketing to grow your business online.",
-      "image": imageUrl,
-      "author": { "@type": "Organization", "name": "PCS Business Solution" },
-      "publisher": {
-        "@type": "Organization",
-        "name": "PCS Business Solution",
-        "logo": { "@type": "ImageObject", "url": "https://www.pcsbusinesssolution.com/img/logo.png" }
-      },
-      "url": pageUrl,
-      "datePublished": "2024-01-01",
-      "dateModified": "2025-01-01"
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "PCS Business Solution",
-      "description": "PCS Business Solution offers digital marketing, business registration, HR, and Microsoft App services across India.",
-      "url": "https://www.pcsbusinesssolution.com",
-      "logo": "https://www.pcsbusinesssolution.com/img/logo.png",
-      "image": imageUrl,
-      "telephone": "+91-XXXXXXXXXX",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Your Street Address",
-        "addressLocality": "Chennai",
-        "addressRegion": "Tamil Nadu",
-        "postalCode": "600001",
-        "addressCountry": "IN"
-      },
-      "openingHours": "Mo-Fr 09:00-18:00",
+      "@type": "Organization",
+      "name": "Priyam Consultancy Services",
+      "url": "https://www.priyamconsultancy.com/",
+      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91 96774 44048",
+          "contactType": "customer support"
+        }
+      ],
       "sameAs": [
-        "https://www.linkedin.com/company/pcs-business-solution",
-        "https://www.facebook.com/pcsbusinesssolution"
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
       ]
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      "serviceType": "Digital Marketing",
-      "provider": { "@type": "Organization", "name": "PCS Business Solution" },
-      "name": "Digital Marketing Services",
-      "description": "Comprehensive digital marketing services including SEO, social media marketing, PPC advertising, content marketing, and email marketing for business growth.",
-      "url": pageUrl,
-      "areaServed": { "@type": "Country", "name": "India" },
-      "offers": {
-        "@type": "Offer",
-        "availability": "https://schema.org/InStock",
-        "priceCurrency": "INR",
-        "url": pageUrl
+      "@id": "https://www.priyamconsultancy.com/digital-marketing-company-in-coimbatore/#service",
+      "name": "Digital Marketing Services in Coimbatore",
+      "serviceType": "Digital Marketing Services",
+      "url": "https://www.priyamconsultancy.com/digital-marketing-company-in-coimbatore/",
+      "description": "Priyam Consultancy provides digital marketing services in Coimbatore including SEO, Google Ads, social media marketing, content marketing, website optimization, performance marketing, local SEO, and lead generation solutions for businesses of all sizes.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+        }
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Coimbatore"
       }
     },
     {
       "@context": "https://schema.org",
-      "@type": "ImageObject",
-      "contentUrl": imageUrl,
-      "url": pageUrl,
-      "description": "Digital Marketing Services by PCS Business Solution",
-      "name": "Digital Marketing Banner"
+      "@type": "Product",
+      "name": "Digital Marketing",
+      "description": "Professional digital marketing services including SEO, Google Ads, social media marketing, content marketing, local SEO, website optimization, and performance marketing for businesses in Coimbatore.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Priyam Consultancy Services"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/"
+      },
+      "url": "https://www.priyamconsultancy.com/digital-marketing-company-in-coimbatore/"
     },
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.pcsbusinesssolution.com" },
-        { "@type": "ListItem", "position": 2, "name": "Digital Marketing", "item": pageUrl }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Digital Marketing Services",
-      "description": "List of digital marketing services offered by PCS Business Solution",
-      "url": pageUrl,
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Search Engine Optimization (SEO)" },
-        { "@type": "ListItem", "position": 2, "name": "Social Media Marketing" },
-        { "@type": "ListItem", "position": 3, "name": "Pay-Per-Click Advertising (PPC)" },
-        { "@type": "ListItem", "position": 4, "name": "Content Marketing" },
-        { "@type": "ListItem", "position": 5, "name": "Email Marketing" },
-        { "@type": "ListItem", "position": 6, "name": "Online Reputation Management" }
+      "@type": "LocalBusiness",
+      "name": "Digital Marketing Company in Coimbatore | Priyam Consultancy Services",
+      "image": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+      "@id": "https://www.priyamconsultancy.com/digital-marketing-company-in-coimbatore/",
+      "url": "https://www.priyamconsultancy.com/digital-marketing-company-in-coimbatore/",
+      "telephone": "+91 96774 44048",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st Floor, SF.11/4, Pooja Garden, Kalapatti Road, Civil Aerodrame Post",
+        "addressLocality": "Coimbatore",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "641014",
+        "addressCountry": "India"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 11.043918,
+        "longitude": 77.038417
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Tuesday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Wednesday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Thursday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
       ]
     },
     {
@@ -147,36 +198,55 @@ function SEOHead() {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What do you mean by business registration?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Business registration is the official process of legally establishing a business entity with government authorities for recognition and lawful operations." }
+          "name": "What does a Digital Marketing Company in Coimbatore do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Digital Marketing Company in Coimbatore helps businesses grow online through services like SEO, Google Ads, social media marketing, content marketing, and website optimization. The goal is to increase visibility, generate leads, and improve sales."
+          }
         },
         {
           "@type": "Question",
-          "name": "How many types of business registration are there?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Common types include Private Limited Company, Public Limited Company, Limited Liability Partnership (LLP), One Person Company (OPC), Partnership Firm, and Sole Proprietorship." }
+          "name": "Why should I choose a Digital Marketing Agency in Coimbatore for my business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Choosing a Digital Marketing Agency in Coimbatore ensures local market understanding, targeted strategies, and cost-effective campaigns. Agencies like PCS focus on measurable results such as leads, conversions, and ROI."
+          }
         },
         {
           "@type": "Question",
-          "name": "Which is better: Ltd or LLC?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It depends on your business needs; Private Limited (Ltd) suits structured growth and investor funding, while LLC offers flexibility and limited liability protection." }
+          "name": "What are the benefits of Digital Marketing Services in Coimbatore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Digital Marketing Services in Coimbatore help businesses improve online presence, attract targeted customers, increase website traffic, and generate high-quality leads through SEO, PPC, and social media strategies."
+          }
         },
         {
           "@type": "Question",
-          "name": "Can a single person establish a business?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, a single person can register as a One Person Company (OPC) or Sole Proprietorship, depending on liability and compliance preferences." }
+          "name": "How long does it take to see results from digital marketing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Results depend on strategy and competition. SEO may take 3–6 months, while paid advertising campaigns can generate immediate leads. A combined digital strategy delivers both short-term and long-term growth."
+          }
         },
         {
           "@type": "Question",
-          "name": "Where do I go to register my business?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Business registration is done through government portals like MCA for companies, GST portal, or local state authorities, depending on the entity type." }
+          "name": "Do you provide customized digital marketing strategies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, every business is unique. A professional Digital Marketing Company in Coimbatore creates customized strategies based on your industry, target audience, competition, and business goals to ensure better performance and ROI."
+          }
         },
         {
           "@type": "Question",
-          "name": "How much time does it take in India to register a business?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Registration timelines vary by entity type, typically 5–20 working days, depending on approvals, documentation, and government processing." }
+          "name": "Why is PCS considered the best digital marketing company in Coimbatore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PCS is trusted as one of the best digital marketing companies in Coimbatore due to its result-driven approach, strong lead generation strategies, transparent reporting, and focus on measurable business growth."
+          }
         }
       ]
     }
+
   ];
 
   return (
@@ -699,8 +769,8 @@ const HERO_STATS = [
     label: "Total Ad Spend Managed",
     icon: (
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <path d="M12 6v2m0 8v2M9.5 9.5a2.5 2.5 0 0 1 5 0c0 1.5-1.5 2-2.5 2.5S9.5 14 9.5 15.5a2.5 2.5 0 0 0 5 0"/>
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v2m0 8v2M9.5 9.5a2.5 2.5 0 0 1 5 0c0 1.5-1.5 2-2.5 2.5S9.5 14 9.5 15.5a2.5 2.5 0 0 0 5 0" />
       </svg>
     ),
   },
@@ -709,9 +779,9 @@ const HERO_STATS = [
     label: "Leads Generated",
     icon: (
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
       </svg>
     ),
   },
@@ -720,9 +790,9 @@ const HERO_STATS = [
     label: "Campaigns Managed",
     icon: (
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <line x1="18" y1="20" x2="18" y2="10"/>
-        <line x1="12" y1="20" x2="12" y2="4"/>
-        <line x1="6" y1="20" x2="6" y2="14"/>
+        <line x1="18" y1="20" x2="18" y2="10" />
+        <line x1="12" y1="20" x2="12" y2="4" />
+        <line x1="6" y1="20" x2="6" y2="14" />
       </svg>
     ),
   },
@@ -731,13 +801,13 @@ const HERO_STATS = [
     label: "Average ROI Delivered",
     icon: (
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-        <polyline points="17 6 23 6 23 12"/>
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+        <polyline points="17 6 23 6 23 12" />
       </svg>
     ),
   },
 ];
- 
+
 function HeroSection() {
   return (
     <section className="hero" id="hero">
@@ -922,12 +992,12 @@ function HeroSection() {
           .hero-stat-label { font-size: 0.68rem; }
         }
       `}</style>
- 
+
       {/* LEFT CONTENT */}
       <div className="hero-left">
         <div className="h-badge"><div className="badge-dot" />Real Results. Measurable Growth</div>
         <h1 className="hero-heading">
-          #1 Best 
+          #1 Best
           <span className="hl lined" style={{ marginLeft: '12px' }}>  Digital Marketing  </span>
           Company in Coimbatore
         </h1>
@@ -935,7 +1005,7 @@ function HeroSection() {
           PCS is a results-focused Digital Marketing Company in Coimbatore helping businesses increase online visibility, attract qualified leads, and improve conversions through SEO, Performance Marketing, Social Media Marketing, and Website Development
         </p>
 
- 
+
         {/* ── INLINE STATS CARDS (Image 1 design) ── */}
         <div className="hero-stats-grid">
           {HERO_STATS.map((stat, i) => (
@@ -951,7 +1021,7 @@ function HeroSection() {
 
 
       </div>
- 
+
       {/* RIGHT CONTACT FORM */}
       <div className="hero-right">
         <div className="hero-form-card">
@@ -1021,7 +1091,7 @@ function HeroSection() {
               .hero-form-card { padding: 1.6rem 1.4rem 1.8rem; }
             }
           `}</style>
- 
+
           <h2 className="hero-form-title">Your Growth, <span>Our Mission.</span></h2>
           <p className="hero-form-sub">Fill in your details — we'll get back within 24 hours.</p>
           <HeroContactForm />
@@ -1195,15 +1265,15 @@ function WhoWeAre() {
         <div className="why-eyebrow">Who We Are</div>
         <h2>No.1 <em><i>Digital Marketing Company in Coimbatore</i></em>  for ROI-Focused Growth </h2>
         <p>
-PCS is recognized as a trusted Digital Marketing Company in Coimbatore helping businesses transform their online presence into measurable business outcomes.</p>
+          PCS is recognized as a trusted Digital Marketing Company in Coimbatore helping businesses transform their online presence into measurable business outcomes.</p>
         <p>
-Unlike agencies that focus only on clicks and impressions, our team focuses on generating qualified leads, increasing conversions, and improving customer acquisition. Every campaign is backed by detailed market research, audience insights, and performance analysis.
+          Unlike agencies that focus only on clicks and impressions, our team focuses on generating qualified leads, increasing conversions, and improving customer acquisition. Every campaign is backed by detailed market research, audience insights, and performance analysis.
         </p>
-       
-<p>Our comprehensive Digital Marketing Services in Coimbatore combine SEO, PPC advertising, content marketing, social media marketing, website development, and performance marketing under one roof.
-</p>
-<p>If you're searching for a Digital Marketing Company in Coimbatore that focuses on growth rather than vanity metrics, PCS is your ideal partner.
-</p>
+
+        <p>Our comprehensive Digital Marketing Services in Coimbatore combine SEO, PPC advertising, content marketing, social media marketing, website development, and performance marketing under one roof.
+        </p>
+        <p>If you're searching for a Digital Marketing Company in Coimbatore that focuses on growth rather than vanity metrics, PCS is your ideal partner.
+        </p>
 
       </div>
       <div className="right">
@@ -1269,8 +1339,8 @@ const infographicCards = [
 ];
 
 const infographicDesktopPositions = {
-  L1: { cardTop: 0,   diamondTop: 23  },
-  R1: { cardTop: 95,  diamondTop: 118 },
+  L1: { cardTop: 0, diamondTop: 23 },
+  R1: { cardTop: 95, diamondTop: 118 },
   L2: { cardTop: 190, diamondTop: 213 },
   R2: { cardTop: 285, diamondTop: 308 },
   L3: { cardTop: 380, diamondTop: 403 },
@@ -1294,19 +1364,19 @@ function BusinessInfographic() {
 
   return (
     <section style={{ background: "#004168", padding: isMobile ? "40px 16px" : "60px 20px", display: "flex", justifyContent: "center" }}>
-      
-      <div style={{ background: "#004168" , padding: isMobile ? "28px 18px 40px" : "44px 50px 68px 50px", width: "100%", maxWidth: 1200, boxSizing: "border-box", position: "relative" }}>
-   <div className="svc-header">
-        <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>
-Our Major Milestones</div>
-        </div>
-        <h2 className="svc-h2">Key Moments in  <span>Our Growth </span> Story.</h2>
-        <p className="svc-sub">
-Celebrating achievements that define our journey as a leading best digital marketing company in Coimbatore focused on measurable success. 
 
-</p>
-      </div>
+      <div style={{ background: "#004168", padding: isMobile ? "28px 18px 40px" : "44px 50px 68px 50px", width: "100%", maxWidth: 1200, boxSizing: "border-box", position: "relative" }}>
+        <div className="svc-header">
+          <div className="partners-header1">
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>
+              Our Major Milestones</div>
+          </div>
+          <h2 className="svc-h2">Key Moments in  <span>Our Growth </span> Story.</h2>
+          <p className="svc-sub">
+            Celebrating achievements that define our journey as a leading best digital marketing company in Coimbatore focused on measurable success.
+
+          </p>
+        </div>
         {/* MOBILE */}
         {isMobile && (
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingTop: 8 }}>
@@ -1333,9 +1403,9 @@ Celebrating achievements that define our journey as a leading best digital marke
             {/* Snake SVG — white connector line */}
             <svg style={{ position: "absolute", inset: 0, width: "100%", height: "100%", zIndex: 5, pointerEvents: "none", overflow: "visible" }}
               viewBox="0 0 1000 660" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="500,4 492,22 508,22" fill="rgba(255,255,255,0.7)"/>
+              <polygon points="500,4 492,22 508,22" fill="rgba(255,255,255,0.7)" />
               <path d="M 500,22 C 505,32 530,63 530,80 C 530,98 510,111 500,127 C 490,143 470,159 470,175 C 470,191 490,206 500,222 C 510,238 530,254 530,270 C 530,286 510,301 500,317 C 490,333 470,349 470,365 C 470,381 490,396 500,412 C 510,428 530,444 530,460 C 530,476 510,491 500,507 C 490,523 470,539 470,555 C 470,571 490,586 500,602 C 500,620 500,640 500,655"
-                stroke="rgba(255,255,255,0.7)" strokeWidth="2.5" strokeDasharray="7 5" fill="none" vectorEffect="non-scaling-stroke"/>
+                stroke="rgba(255,255,255,0.7)" strokeWidth="2.5" strokeDasharray="7 5" fill="none" vectorEffect="non-scaling-stroke" />
             </svg>
 
             {infographicCards.map((item) => {
@@ -1367,7 +1437,7 @@ Celebrating achievements that define our journey as a leading best digital marke
                     transform: "translateX(-50%)",
                   }}>
                     <div style={{
-                      width: 95, height:95, borderRadius: 18, transform: "rotate(45deg)",
+                      width: 95, height: 95, borderRadius: 18, transform: "rotate(45deg)",
                       background: "#fff", border: "3px solid #ed8337f8",
                       display: "flex", alignItems: "center", justifyContent: "center",
                       boxShadow: "0 5px 24px rgba(237,131,55,0.25)", position: "relative", flexShrink: 0,
@@ -1536,19 +1606,19 @@ function MilestonesCTA() {
 
       <div className="ms-cta-inner">
         <div className="ms-cta-left">
-             <div className="partners-header1">
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>
-Case Studies</div>
-        </div>
+          <div className="partners-header1">
+            <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>
+              Case Studies</div>
+          </div>
           <h2 className="ms-cta-title">
-            Explore <span>Proven Results Through</span><br/> Our Case Studies
+            Explore <span>Proven Results Through</span><br /> Our Case Studies
           </h2>
           <p className="ms-cta-desc">
-Discover our projects that demonstrate how strategy and clear execution drive measurable business success.          </p>
+            Discover our projects that demonstrate how strategy and clear execution drive measurable business success.          </p>
         </div>
 
         <div className="ms-cta-right">
-     
+
 
           <a href="/contact" className="ms-cta-btn-primary">
             Start Your Growth Journey
@@ -1755,7 +1825,7 @@ function ServicesSection() {
     </section>
   );
 }
- 
+
 const MILESTONES = [
   {
     pos: "left", slot: "top",
@@ -1764,7 +1834,7 @@ const MILESTONES = [
     bullets: ["Advanced AI ensures precision in every BGV verification check", "Detects fraud, impersonation, and anomalies instantly"],
     iconSvg: (
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6"/><path d="M8 11h6"/>
+        <circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /><path d="M11 8v6" /><path d="M8 11h6" />
       </svg>
     ),
   },
@@ -1775,7 +1845,7 @@ const MILESTONES = [
     bullets: ["Complete background checks for employment before onboarding", "Cut up to 40% in wrong-hire costs significantly"],
     iconSvg: (
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
+        <rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" />
       </svg>
     ),
   },
@@ -1786,7 +1856,7 @@ const MILESTONES = [
     bullets: ["ISO-certified, GDPR-ready, and fully encrypted", "Ideal for regulated industries and enterprise-grade employment background screening services"],
     iconSvg: (
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
   },
@@ -1797,7 +1867,7 @@ const MILESTONES = [
     bullets: ["Clear, easy-to-read reports with 100% actionable insights", "Supports faster decisions with reliable HR background verification"],
     iconSvg: (
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" />
       </svg>
     ),
   },
@@ -1808,7 +1878,7 @@ const MILESTONES = [
     bullets: ["90% of checks completed in under 48 hours", "Instant results for critical verifications"],
     iconSvg: (
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
       </svg>
     ),
   },
@@ -1819,7 +1889,7 @@ const MILESTONES = [
     bullets: ["Handles bulk and seasonal hiring effortlessly", "Trusted background screening service for high-volume recruitment"],
     iconSvg: (
       <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/>
+        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" /><polyline points="17 6 23 6 23 12" />
       </svg>
     ),
   },
@@ -1865,7 +1935,7 @@ function BenefitsSection() {
     <section className="tl-section">
       <div className="tl-inner">
         <div className="tl-header">
-              <div className="partners-header1">
+          <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Uniqueness </div>
           </div>
           <h2 className="tl-heading">How we <span>differ from </span> others</h2>
@@ -1875,7 +1945,7 @@ function BenefitsSection() {
         <div className="bento-grid">
           {benefits.map((b, i) => (
             <div key={i} className={`bn-cell bn-cell-${i + 1}`}>
-              <div className="bn-icon" style={{width:"44px",height:"44px",borderRadius:"12px",background:"rgba(237,131,55,0.1)",display:"flex",alignItems:"center",justifyContent:"center",flexShrink:0,marginBottom:".2rem"}}><span style={{display:"flex",alignItems:"center",justifyContent:"center"}}>{b.icon}</span></div>
+              <div className="bn-icon" style={{ width: "44px", height: "44px", borderRadius: "12px", background: "rgba(237,131,55,0.1)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginBottom: ".2rem" }}><span style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>{b.icon}</span></div>
               <div className="bn-num">{b.num}</div>
               <div className="bn-title">{b.title}</div>
               <div className="bn-desc">{b.desc}</div>
@@ -2058,19 +2128,19 @@ function UniquenessCTA() {
           <div className="uniq-cta-pills">
             <div className="uniq-cta-pill">
               <span className="uniq-cta-pill-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
               </span>
               <span className="uniq-cta-pill-text">Proven Industry Expertise</span>
             </div>
             <div className="uniq-cta-pill">
               <span className="uniq-cta-pill-icon">
-                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14 18.2 21 12 17.6 5.8 21 7 14 2 9.3 9 8.5 12 2"/></svg>
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15 8.5 22 9.3 17 14 18.2 21 12 17.6 5.8 21 7 14 2 9.3 9 8.5 12 2" /></svg>
               </span>
               <span className="uniq-cta-pill-text">Results-Driven Strategies</span>
             </div>
             <div className="uniq-cta-pill">
               <span className="uniq-cta-pill-icon">
-                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><polyline points="9 12 11 14 15 10" /></svg>
               </span>
               <span className="uniq-cta-pill-text">Transparent Performance Tracking</span>
             </div>
@@ -2087,7 +2157,7 @@ function UniquenessCTA() {
 
             <a href="tel:+919677444048" className="uniq-cta-btn-secondary">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 4.36 19.79 19.79 0 0 1 7.43 1.3 2 2 0 0 1 9.43 3.3v3a2 2 0 0 1-2 1.72 12.05 12.05 0 0 0-.7 2.81 2 2 0 0 1 .45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 4.36 19.79 19.79 0 0 1 7.43 1.3 2 2 0 0 1 9.43 3.3v3a2 2 0 0 1-2 1.72 12.05 12.05 0 0 0-.7 2.81 2 2 0 0 1 .45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
               Schedule a Call
             </a>
@@ -2144,7 +2214,7 @@ function Process() {
         </div>
         <h2 className="ppc-tp-h2">Our <em> Work Process</em></h2>
         <p className="ppc-tp-sub">
-Our streamlined process combines research, planning, execution, and optimization to deliver measurable digital marketing results and business growth.         </p>
+          Our streamlined process combines research, planning, execution, and optimization to deliver measurable digital marketing results and business growth.         </p>
       </div>
       <div className="ppc-tp-body">
         {PROCESS_STEPS.map((step, i) => <ProcessStep key={step.step} step={step} index={i} />)}
@@ -2292,8 +2362,8 @@ function HowWeWork() {
           <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Industries We Serve</div>
         </div>
         <h2 className="dm-hww-h2">Industries We Serve Through  <span><em>Digital Marketing Services </em></span> in Coimbatore </h2>
-        <p style= {{margin: '30px 0'}}>As a trusted Digital Marketing Company in Coimbatore, we create customized strategies for businesses across diverse industries. Our industry-specific expertise helps us understand customer behavior, market trends, and growth opportunities more effectively.
-</p>
+        <p style={{ margin: '30px 0' }}>As a trusted Digital Marketing Company in Coimbatore, we create customized strategies for businesses across diverse industries. Our industry-specific expertise helps us understand customer behavior, market trends, and growth opportunities more effectively.
+        </p>
       </div>
 
       <div
@@ -2318,7 +2388,7 @@ function HowWeWork() {
                     <div className="dm-card-desc">{item.desc}</div>
                     <div className="dm-card-arrow-wrap">
                       <a className="dm-card-arrow" href={item.link} aria-label={`Learn more about ${item.title}`}>
-                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
                       </a>
                     </div>
                   </div>
@@ -2405,7 +2475,7 @@ export default function DigitalMarketingLandingPage() {
       <Partners />
       <MilestonesCTA />
       <ServicesSection />
-     <BenefitsSection />
+      <BenefitsSection />
       <UniquenessCTA />
       <HowWeWork />
       <Process />

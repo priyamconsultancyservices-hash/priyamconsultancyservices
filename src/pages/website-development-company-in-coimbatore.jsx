@@ -9,9 +9,202 @@ function SEOHead() {
   const pageUrl = "https://priyamconsultancy.com/digital-marketing-company-in-coimbatore/";
   const imageUrl = "https://www.pcsbusinesssolution.com/img/digital-marketing.png";
   const schemaData = [
-    { "@context": "https://schema.org", "@type": "WebSite", name: "PCS Business Solution", url: "https://www.pcsbusinesssolution.com", potentialAction: { "@type": "SearchAction", target: "https://www.pcsbusinesssolution.com/search?q={search_term_string}", "query-input": "required name=search_term_string" } },
-    { "@context": "https://schema.org", "@type": "LocalBusiness", name: "PCS Business Solution", description: "PCS Business Solution offers digital marketing, business registration, HR, and Microsoft App services across India.", url: "https://www.pcsbusinesssolution.com", logo: "https://www.pcsbusinesssolution.com/img/logo.png", image: imageUrl, telephone: "+91-XXXXXXXXXX", address: { "@type": "PostalAddress", streetAddress: "Your Street Address", addressLocality: "Chennai", addressRegion: "Tamil Nadu", postalCode: "600001", addressCountry: "IN" }, openingHours: "Mo-Fr 09:00-18:00", sameAs: ["https://www.linkedin.com/company/pcs-business-solution", "https://www.facebook.com/pcsbusinesssolution"] },
-    { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [{ "@type": "Question", name: "What does a Digital Marketing Company in Coimbatore do?", acceptedAnswer: { "@type": "Answer", text: "A Digital Marketing Company in Coimbatore helps businesses grow online through services like SEO, Google Ads, social media marketing, content marketing, and website optimization." } }, { "@type": "Question", name: "Why should I choose a Digital Marketing Agency in Coimbatore?", acceptedAnswer: { "@type": "Answer", text: "Choosing a Digital Marketing Agency in Coimbatore ensures local market understanding, targeted strategies, and cost-effective campaigns focused on measurable results such as leads, conversions, and ROI." } }] },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/",
+            "name": "Home"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "https://www.priyamconsultancy.com/website-development-company-in-coimbatore/",
+            "name": "Website Development Company in Coimbatore"
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Priyam Consultancy Services",
+      "url": "https://www.priyamconsultancy.com/",
+      "logo": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+91 96774 44048",
+          "contactType": "customer support"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://www.priyamconsultancy.com/website-development-company-in-coimbatore/#service",
+      "name": "Website Development Services",
+      "serviceType": "Website Design and Development Services",
+      "url": "https://www.priyamconsultancy.com/website-development-company-in-coimbatore/",
+      "description": "Priyam Consultancy provides professional website development services including static website development, dynamic website development, WordPress development, WooCommerce development, Shopify development, ecommerce website development, custom web applications, website maintenance, and SEO-friendly website solutions for businesses across India.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+        }
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "India"
+      }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Website Development Services",
+      "description": "Professional website development services including static websites, dynamic websites, WordPress websites, WooCommerce stores, Shopify stores, ecommerce websites, and custom web development solution in coimbatore.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Priyam Consultancy Services"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Priyam Consultancy Services",
+        "url": "https://www.priyamconsultancy.com/"
+      },
+      "url": "https://www.priyamconsultancy.com/website-development-company-in-coimbatore/"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Website Development Company in Coimbatore | Priyam Consultancy Services",
+      "image": "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+      "@id": "https://www.priyamconsultancy.com/website-development-company-in-coimbatore/",
+      "url": "https://www.priyamconsultancy.com/website-development-company-in-coimbatore/",
+      "telephone": "+91 96774 44048",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1st Floor, SF.11/4, Pooja Garden, Kalapatti Road, Civil Aerodrame Post",
+        "addressLocality": "Coimbatore",
+        "addressRegion": "Tamil Nadu",
+        "postalCode": "641014",
+        "addressCountry": "India"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 11.043918,
+        "longitude": 77.038417
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Tuesday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Wednesday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Thursday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is the difference between a static and dynamic website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A static website displays fixed content that remains the same for every visitor unless manually updated by a developer. A dynamic website, on the other hand, displays interactive and database-driven content that can change based on user behavior, location, or preferences. Dynamic websites are ideal for businesses that require regular updates, user logins, eCommerce functionality, or content management systems."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is a static website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A static website consists of fixed web pages built using HTML, CSS, and basic scripts. The content remains the same for all visitors and does not change unless manually edited. Static websites are suitable for small businesses, portfolios, landing pages, and informational websites that do not require frequent updates or complex functionality."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is an eCommerce website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An eCommerce website is an online platform that allows businesses to sell products or services digitally. It includes features like product listings, shopping cart, secure payment gateways, order management, and customer accounts. Platforms like WooCommerce and Shopify enable businesses to build scalable and user-friendly online stores."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How to create a category page in WooCommerce?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To create a category page in WooCommerce, go to Products → Categories in your WordPress dashboard and add a new category by entering the name, slug, and description. After creating it, assign relevant products to that category. If required, add the category to your website menu for easy navigation. WooCommerce automatically generates a dedicated category page that displays all products assigned to it."
+        }
+      }, {
+        "@type": "Question",
+        "name": "How to delete a Shopify store?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To delete a Shopify store, log in to your Shopify admin panel and navigate to Settings → Plan. Click on Deactivate store, select a reason for closing, and confirm the deactivation. Make sure all outstanding charges and payments are cleared before proceeding, as your store cannot be closed until all dues are settled."
+        }
+      }, {
+        "@type": "Question",
+        "name": "What is WooCommerce and how does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WooCommerce is a powerful eCommerce plugin for WordPress that allows businesses to create and manage online stores. It enables users to add products, manage inventory, process payments, handle shipping, and track orders directly from the WordPress dashboard. WooCommerce is highly customizable, making it suitable for small businesses as well as large-scale online stores."
+        }
+      }]
+    }
+
   ];
   return (
     <Head>
