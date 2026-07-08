@@ -222,9 +222,6 @@ const GlobalStyles = () => (
       --orange-l:  #f5a66b;
     }
 
-    header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN{
-    display: none;
-}
 
     /* ── HERO ── */
     .pg-hero {
@@ -525,7 +522,7 @@ const GlobalStyles = () => (
 
     /* ── CTA SPLIT SECTION ── */
     .pg-cta-section { background: #fff; }
-    .pg-cta-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5rem; }
+    .pg-cta-inner { max-width: 1200px;     margin: 4rem auto 0; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5rem; }
     .pg-cta-img-wrap { position: relative; border-radius: 20px; overflow: visible; }
     .pg-cta-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 20px; display: block; }
     .pg-cta-float-badge { position: absolute; bottom: 1.4rem; left: 1.4rem; background: #fff; border-radius: 12px; padding: .6rem 1rem; display: flex; align-items: center; gap: .5rem; box-shadow: 0 4px 18px rgba(0,65,104,.13); }
@@ -547,7 +544,7 @@ const GlobalStyles = () => (
     .pg-cta-btn-sec:hover { color: #ed8337; }
 
     /* ── MODERN FEATURES SECTION ── */
-    .mf-outer { background: #fff; padding: 80px 20px; font-family: 'Poppins', Arial, sans-serif; }
+    .mf-outer { background: #fff; padding: 50px 20px 80px; font-family: 'Poppins', Arial, sans-serif; }
     .mf-head { text-align: center; margin-bottom: 40px; }
     .mf-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #ed8337; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; }
     .mf-eyebrow::before, .mf-eyebrow::after { content: ''; width: 24px; height: 2px; background: #ed8337; border-radius: 2px; }
@@ -1101,144 +1098,13 @@ const faqData = [
 ];
 
 
-// ── Site Header ────────────────────────────────────────
-function SiteHeader() {
-  return (
-    <header className="pcs-site-header">
-      <style>{`
-        .pcs-site-header {
-          background: #fff;
-          padding: 22px 6%;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-          position: relative;
-          z-index: 20;
-          flex-wrap: wrap;
-          gap: 14px;
-          position: sticky; top: 0;
-        }
-        .pcs-header-logo {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-        .pcs-header-logo img {
-          height: 60px;
-          width: auto;
-          display: block;
-        }
-        .pcs-header-right {
-          display: flex;
-          align-items: center;
-          gap: 50px;
-          flex-wrap: wrap;
-        }
-        .pcs-header-contact {
-          display: flex;
-          align-items: center;
-          gap: 8px;
-          text-decoration: none;
-        }
-        .pcs-header-contact-icon {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          background: #ed8337;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-        }
-        .pcs-header-contact-label {
-          font-size: 10px;
-          color: #888;
-          font-family: 'Poppins', sans-serif;
-          margin: 0;
-        }
-        .pcs-header-contact-value {
-          font-size: 13px;
-          font-weight: 600;
-          color: #022b44;
-          font-family: 'Poppins', sans-serif;
-          margin: 0;
-        }
-        .pcs-header-enquire-btn {
-          background: #ed8337;
-          color: #fff;
-          padding: 10px 22px;
-          border-radius: 50px;
-          font-size: 13px;
-          font-weight: 700;
-          font-family: 'Poppins', sans-serif;
-          text-decoration: none;
-          border: none;
-          cursor: pointer;
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          transition: background 0.2s, transform 0.18s;
-        }
-        .pcs-header-enquire-btn:hover {
-          background: #004168;
-          transform: translateY(-2px);
-          color: #fff;
-        }
-        @media(max-width: 900px) {
-          .pcs-header-right { gap: 14px; }
-          .pcs-header-contact-value { font-size: 12px; }
-        }
-        @media(max-width: 700px) {
-          .pcs-site-header { padding: 12px 5%; justify-content: center; }
-          .pcs-header-logo { width: 100%; justify-content: center; }
-          .pcs-header-right { width: 100%; justify-content: center; }
-          .pcs-header-contact { display: none; }
-        }
-      `}</style>
 
-      {/* 1. LOGO */}
-      <div className="pcs-header-logo">
-        <img src="/img/priyam-consultancy-logo.png" alt="Priyam Consultancy Services" />
-      </div>
 
-      <div className="pcs-header-right">
-        {/* 2. PHONE */}
-        <a href="tel:+919677444048" className="pcs-header-contact">
-          <div className="pcs-header-contact-icon">
-            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div>
-            <p className="pcs-header-contact-label">Call us</p>
-            <p className="pcs-header-contact-value">+91 96774 44048</p>
-          </div>
-        </a>
-
-        {/* 3. EMAIL */}
-        <a href="mailto:sales@priyamconsultancy.com" className="pcs-header-contact">
-          <div className="pcs-header-contact-icon">
-            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-          </div>
-          <div>
-            <p className="pcs-header-contact-label">Email us</p>
-            <p className="pcs-header-contact-value">sales@priyamconsultancy.com</p>
-          </div>
-        </a>
-
-        {/* 4. ENQUIRE NOW BUTTON */}
-        <a href="#get-in-touch-form" className="pcs-header-enquire-btn">
-          Enquire Now
-          <span>→</span>
-        </a>
-      </div>
-    </header>
-  );
-}
 // ── Hero ────────────────────────────────────────────
 
 function HeroSection() {
   return (
-    <section className="hero" id="hero">
+    <section className="hero" id="about" >
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
  
@@ -1742,7 +1608,7 @@ function BuildTogetherCTASection() {
             display: "flex", flexDirection: "column",
             alignItems: "start", gap: "0.85rem", flexShrink: 0, marginTop: "1.5rem",
           }}>
-            <a href="#get-in-touch-form" className="pg-form-btn">
+            <a href="#about" className="pg-form-btn">
               Get Free Consultation
               <span className="pg-form-btn-arr">→</span>
             </a>
@@ -1763,7 +1629,7 @@ function BuildTogetherCTASection() {
 // ── Modern Features Section ───────────────────────────
 function ModernFeaturesSection() {
   return (
-    <section className="mf-outer">
+    <section className="mf-outer" id="feature">
       <div className="mf-head">
         <div className="partners-header1" style={{ textAlign: 'center' }}>
           <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Web Development Features
@@ -2721,7 +2587,7 @@ function MilestonesCTA() {
         <div className="ms-cta-right">
 
 
-          <a href="#get-in-touch-form" className="ms-cta-btn-primary">
+          <a href="/contact-us" className="ms-cta-btn-primary">
             Start Your Growth Journey
             <span className="ms-cta-btn-arr">→</span>
           </a>
@@ -2824,49 +2690,9 @@ function PortfolioColumn({ items, speed, direction }) {
   );
 }
 
-// ── Contact Form Popup Modal (add this near HeroContactForm) ──
-function FormPopupModal({ open, onClose }) {
-  if (!open) return null;
+function PortfolioSection() {
   return (
-    <div
-      onClick={onClose}
-      style={{
-        position: "fixed", inset: 0, zIndex: 9999,
-        background: "rgba(1,26,42,0.65)",
-        display: "flex", alignItems: "center", justifyContent: "center",
-        padding: "20px",
-      }}
-    >
-      <div
-        onClick={(e) => e.stopPropagation()}
-        style={{ position: "relative", width: "100%", maxWidth: 480 }}
-      >
-
-        <div className="hero-form-card">
-          <button
-            onClick={onClose}
-            style={{
-              position: "absolute", top: -18, right: -5,
-              width: 36, height: 36, borderRadius: "50%",
-              background: "#ed8337", color: "#fff", border: "none",
-              fontSize: "1.1rem", cursor: "pointer", zIndex: 2,
-              boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
-            }}
-          >
-            ✕
-          </button>
-          <p className="hero-form-title">Your Growth, <span>Our Mission.</span></p>
-          <p className="hero-form-sub">Fill in your details — we'll get back within 24 hours.</p>
-          <HeroContactForm />
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function PortfolioSection({ onOpenForm }) {
-  return (
-    <section className="pf-section">
+    <section className="pf-section" id="portfolio">
       <div className="pf-inner">
         <div className="pf-left">
           <div className="partners-header1">
@@ -2880,14 +2706,9 @@ function PortfolioSection({ onOpenForm }) {
           </p>
 
           <div className="pf-btns">
-            <button
-              type="button"
-              onClick={onOpenForm}
-              className="pf-btn"
-              style={{ border: "none" }}
-            >
-              View More Projects  →
-            </button>
+            <a href="/portfolio" className="pf-btn">
+              Explore Our Work  →
+            </a>
           </div>
         </div>
 
@@ -3233,7 +3054,7 @@ function OurServicesSection() {
   ];
 
   return (
-    <section style={{ padding: "70px 5% 5rem" }}>
+    <section id="service" style={{ padding: "70px 5% 5rem" }}>
       <div className="partners-header1" style={{ textAlign: 'center' }}>
         <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Service</div>
       </div>
@@ -3278,14 +3099,14 @@ function OurServicesSection() {
                 </li>
               ))}
             </ul>
-            {/* <a
+            <a
               href={svc.href}
               style={{ display: "inline-block", width: '42%', fontSize: '14px', textAlign: "center", padding: "10px 20px", background: "#004168", color: "#fff", textDecoration: "none", borderRadius: 50, fontWeight: 600, fontFamily: "'Poppins', sans-serif", transition: "background 0.3s" }}
               onMouseEnter={e => { e.currentTarget.style.background = "#ed8337"; }}
               onMouseLeave={e => { e.currentTarget.style.background = "#004168"; }}
             >
               Learn More
-            </a> */}
+            </a>
           </div>
         ))}
       </div>
@@ -3293,471 +3114,10 @@ function OurServicesSection() {
   );
 }
 
-// ── Reasons / Portfolio-style Cards Section (exact match) ──
-const REASONS_DATA = [
-  {
-    img: "/img/case-study-tactive.webp",
-    tags: [{ label: "Perfomance Marketing", type: "orange" }, { label: "SEO", type: "navy" }],
-    title: "Feral Roots",
-    short: "Tactive Software Systems is a technology-driven company delivering dedicated construction ERP solutions . Backed by over 17 years of research an...",
-    full: "Tactive Software Systems is a technology-driven company delivering dedicated construction ERP solutions. Backed by over 17 years of research and development, we help construction firms streamline project management, resource planning, and financial tracking through purpose-built software.",
-  },
-   {
-    img: "/img/case-study-tactive.webp",
-    tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
-    title: "URCTS",
-    short: "URCTS is a global engineering solutions provider serving Oil & Gas, industrial, and infrastructure sectors with multidisciplinary expertise....",
-    full: "URCTS is a global engineering solutions provider serving Oil & Gas, industrial, and infrastructure sectors with multidisciplinary expertise. Their team delivers end-to-end engineering, procurement, and project management services across international markets.",
-  },
-  {
-    img: "/img/case-study-tactive.webp",
-    tags: [{ label: "SEO", type: "green" }, { label: "Perfomance Marketing", type: "navy" }],
-    title: "SterloCare",
-    short: "SterloCare, powered by the OREOPS Framework, delivers low-code technology solutions for web and mobile application development. Establishe...",
-    full: "SterloCare, powered by the OREOPS Framework, delivers low-code technology solutions for web and mobile application development. Established to accelerate digital transformation, they build scalable healthcare-focused applications with rapid deployment cycles.",
-  },
-  {
-    img: "/img/case-study-tactive.webp",
-    tags: [{ label: "SEO", type: "green" }, { label: "Local SEO", type: "navy" }],
-    title: "ABB Consultancy",
-    short: "ABB is a growing business consultancy offering strategic guidance and operational support to companies across Coimbatore...",
-    full: "ABB is a growing business consultancy offering strategic guidance and operational support to companies across Coimbatore. We helped them establish a strong local search presence with location-optimized content and Google Business Profile management.",
-  },
-  {
-    img: "/img/case-study-tactive.webp",
-    tags: [{ label: "Perfomance Marketing", type: "orange" }, { label: "SEO", type: "navy" }],
-    title: "Riya Consultancy Services",
-    short: "Riya Consultancy provides recruitment and HR advisory services, helping businesses find the right talent efficiently...",
-    full: "Riya Consultancy provides recruitment and HR advisory services, helping businesses find the right talent efficiently. Our digital marketing campaigns increased their qualified candidate inquiries through targeted performance marketing and SEO.",
-  },
-    {
-    img: "/img/case-study-tactive.webp",
-    tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
-    title: "Talent Tribe",
-    short: "Zky delivers innovative digital products with a strong focus on design, performance, and scalability for growing businesses...",
-    full: "Zky delivers innovative digital products with a strong focus on design, performance, and scalability for growing businesses. We partnered with them to rebuild their web platform with modern frameworks and optimized user flows.",
-  },
-];
 
-function ReasonCard({ data }) {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className="reason-card">
-      <div className="reason-card-img-wrap">
-        <img src={data.img} alt={data.title} className="reason-card-img" />
-      </div>
-
-      <div className="reason-card-body">
-        <div className="reason-card-tags">
-          {data.tags.map((t, i) => (
-            <span key={i} className={`reason-tag reason-tag-${t.type}`}>
-              <span className="reason-tag-dot" />
-              {t.label}
-            </span>
-          ))}
-        </div>
-
-        <h3 className="reason-card-title">
-          <span className="reason-user-icon">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <circle cx="12" cy="8" r="4" />
-              <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-            </svg>
-          </span>
-          {data.title}
-        </h3>
-
-        <p className={`reason-desc ${open ? "is-open" : ""}`}>
-          {open ? data.full : data.short}
-        </p>
-
-        <div className="reason-card-footer">
-          <button
-            type="button"
-            className="reason-read-more"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? "Read Less" : "Read More"}
-            <span className="reason-read-more-arr">→</span>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function ReasonsSection() {
-  return (
-    <section className="reasons-section" id="our-case-studies">
-      <style>{`
-        /* ══ REASONS / CLIENT-STYLE CARDS ══ */
-        .reasons-section {
-          padding: 80px 20px;
-          background: #f4f6f9;
-        }
-        .reasons-section .container {
-          max-width: 1300px;
-          margin: auto;
-          // text-align: center;
-        }
-        .reasons-section .section-title {
-          text-align: center;
-          font-size: 40px;
-          margin-bottom: 60px;
-          color: #0d1f2d;
-          font-family: 'Poppins', sans-serif;
-          font-weight: 700;
-        }
-        .reasons-section .cards-grid {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 30px;
-          margin-top: 3.5rem;
-        }
-
-        /* CARD SHELL */
-        .reason-card {
-          background: #fff;
-          border-radius: 20px;
-          overflow: hidden;
-          box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-          transition: transform 0.35s ease, box-shadow 0.35s ease;
-          display: flex;
-          flex-direction: column;
-        }
-        .reason-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-        }
-
-        /* IMAGE — ZOOM ON HOVER */
-        .reason-card-img-wrap {
-          width: 100%;
-          height: 250px;
-          overflow: hidden;
-          flex-shrink: 0;
-        }
-        .reason-card-img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          display: block;
-          transition: transform 0.6s ease;
-        }
-        .reason-card:hover .reason-card-img {
-          transform: scale(1.1);
-        }
-
-        /* CARD BODY */
-        .reason-card-body {
-          // padding: 24px 24px 22px;
-          display: flex;
-          flex-direction: column;
-          flex: 1;
-        }
-        .reason-card-tags {
-          display: flex; gap: 8px; flex-wrap: wrap;
-          margin: 24px 0;
-        }
-        .reason-tag {
-          display: inline-flex; align-items: center; gap: 6px;
-          font-size: 11px; font-weight: 700; letter-spacing: .03em;
-          text-transform: uppercase; padding: 5px 12px; border-radius: 50px;
-          font-family: 'Poppins', sans-serif;
-        }
-        .reason-tag-dot {
-          width: 5px; height: 5px; border-radius: 50%;
-          background: currentColor; flex-shrink: 0;
-        }
-        .reason-tag-orange { background: rgba(237,131,55,0.12); color: #ed8337; }
-        .reason-tag-navy   { background: rgba(0,65,104,0.1);   color: #004168; }
-        .reason-tag-green  { background: rgba(34,197,94,0.12); color: #16a34a; }
-
-        .reason-card-title {
-          display: flex; align-items: center; gap: 8px;
-          font-size: 18px; margin: 0 0 12px;
-          color: #004168; font-weight: 700;
-          font-family: 'Poppins', sans-serif;
-        }
-        .reason-user-icon {
-          color: #004168;
-          display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-        }
-
-        .reason-desc {
-          margin-bottom: 18px;
-          font-size: 14.5px; line-height: 1.75; color: #555;
-          flex: 1;
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          transition: all .3s ease;
-        }
-        .reason-desc.is-open {
-          -webkit-line-clamp: unset;
-          overflow: visible;
-        }
-
-        // .reason-card-footer {
-        //   padding-top: 14px;
-        //   border-top: 1px solid #eee;
-        // }
-
-        /* READ MORE — SOLID ORANGE BUTTON */
-        .reason-read-more {
-          display: inline-flex;
-    /* align-items: center; */
-    gap: 8px;
-    background: #ffffff;
-    color: #ed8337;
-    border: none;
-    /* border-radius: 50px; */
-    /* padding: .68rem 1.4rem; */
-    font-family: 'Poppins', sans-serif;
-    font-size: .85rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background .2s, transform .18s;
-        }
-        .reason-read-more:hover {
-          // background: #004168;
-          transform: translateY(-2px);
-        }
-        .reason-read-more-arr {
-          display: inline-flex; align-items: center; justify-content: center;
-          transition: transform .25s;
-        }
-        .reason-read-more:hover .reason-read-more-arr {
-          transform: translateX(3px);
-        }
-
-        @media(max-width: 992px) {
-          .reasons-section .cards-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media(max-width: 768px) {
-          .reasons-section .section-title { font-size: 30px; }
-          .reasons-section .cards-grid { grid-template-columns: 1fr; }
-        }
-      `}</style>
-
-      <div className="container">
-        <div className="partners-header1" style={{ textAlign: 'center' }}>
-          <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Case Studies
-          </div>
-        </div>
-        <h2 className="pg-cta-heading" style={{ fontSize: '2.5rem', textAlign: 'center' }}>Our  <em>Case Studies </em> </h2>
-        <div className="cards-grid">
-          {REASONS_DATA.map((r, i) => (
-            <ReasonCard key={i} data={r} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-
-// ── Footer Section ────────────────────────────────────
-function FooterSection() {
-  const services = [
-    "Website Design",
-    "Static Website Development",
-    "Custom Website Development",
-    "WooCommerce Development",
-    "WooCommerce Development",
-    "Shopify Development",
-  ];
-
-  return (
-    <footer className="pcs-footer">
-      <style>{`
-        .pcs-footer {
-          background: #0c4a6e;
-          padding: 4.5rem 6% 3rem;
-          position: relative;
-          overflow: hidden;
-        }
-        .pcs-footer::before {
-          content: '';
-          position: absolute; inset: 0; pointer-events: none;
-          background-image:
-            linear-gradient(rgba(237,131,55,0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(237,131,55,0.03) 1px, transparent 1px);
-          background-size: 52px 52px;
-        }
-        .pcs-footer-inner {
-          max-width: 1200px; margin: 0 auto; position: relative; z-index: 2;
-          display: grid;
-          grid-template-columns: 1.3fr 1fr 1fr;
-          gap: 3rem;
-        }
-        // .pcs-footer-logo-row {
-        //   display: flex; align-items: center; gap: 10px; margin-bottom: 1.3rem;
-        // }
-        .pcs-footer-logo-text {
-          font-family: 'Poppins', sans-serif;
-          font-size: 1.6rem; font-weight: 800; color: #fff; letter-spacing: .02em;
-        }
-        .pcs-footer-logo-text span { color: #ed8337; }
-        .pcs-footer-logo-sub {
-          font-family: 'Poppins', sans-serif;
-          font-size: .6rem; font-weight: 600; letter-spacing: .18em;
-          color: rgba(255,255,255,0.55); margin-top: -4px;
-        }
-        .pcs-footer-desc {
-          font-size: .88rem; line-height: 1.8; color: rgba(255,255,255,0.7);
-          max-width: 340px; font-family: 'Poppins', sans-serif;margin-top: 1.8rem;
-        }
-        .pcs-footer-heading {
-          font-family: 'Poppins', sans-serif;
-          font-size: 1.1rem; font-weight: 700; color: #fff;
-          margin-bottom: 1.4rem;
-        }
-        .pcs-footer-list {
-       list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: .8rem;
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.7);
-    font-family: 'Poppins', sans-serif;
-        }
-        .pcs-footer-list li a {
-          font-size: .88rem; color: rgba(255,255,255,0.72);
-          text-decoration: none; font-family: 'Poppins', sans-serif;
-          transition: color .2s;
-        }
-        .pcs-footer-list li a:hover { color: #ed8337; }
-        .pcs-footer-contact-item {
-          display: flex; align-items: flex-start; gap: .7rem;
-          margin-bottom: 1.1rem;
-        }
-        .pcs-footer-contact-icon {
-          width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
-          background: #ed8337; color: #fff;
-          display: flex; align-items: center; justify-content: center;
-          font-size: .8rem;
-        }
-        .pcs-footer-contact-text {
-          font-size: .86rem; line-height: 1.6; color: rgba(255,255,255,0.78);
-          font-family: 'Poppins', sans-serif;
-        }
-        .pcs-footer-contact-text a { color: rgba(255,255,255,0.78); text-decoration: none; }
-        .pcs-footer-contact-text a:hover { color: #ed8337; }
-       .pcs-footer-socials { display: flex; gap: .7rem; margin-top: 1.4rem; }
-.pcs-footer-social-btn {
-  width: 36px; height: 36px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  text-decoration: none; transition: transform .2s, opacity .2s;
-  flex-shrink: 0;
-}
-  .pcs-footer-social-btn svg { width: 16px; height: 16px; }
-
-.pcs-footer-social-btn:hover { transform: translateY(-3px); opacity: 0.9; }
-.pcs-footer-social-linkedin { background: #0A66C2; }
-.pcs-footer-social-facebook { background: #1877F2; }
-.pcs-footer-social-instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-.pcs-footer-social-x { background: #000; }
-        .pcs-footer-bottom {
-          max-width: 1200px; margin: 3rem auto 0; padding-top: 1.6rem;
-          border-top: 1px solid rgba(255,255,255,0.12);
-          text-align: center; position: relative; z-index: 2;
-        }
-        .pcs-footer-bottom p {
-          font-size: .8rem; color: rgba(255,255,255,0.5);
-          font-family: 'Poppins', sans-serif;
-        }
-        @media(max-width: 900px) {
-          .pcs-footer-inner { grid-template-columns: 1fr 1fr; gap: 2.4rem; }
-          .pcs-footer-inner > div:first-child { grid-column: 1 / -1; }
-        }
-        @media(max-width: 600px) {
-          .pcs-footer { padding: 3.5rem 6% 2.5rem; }
-          .pcs-footer-inner { grid-template-columns: 1fr; gap: 2.2rem; }
-        }
-      `}</style>
-
-      <div className="pcs-footer-inner">
-        {/* Column 1: Logo + Description */}
-        <div>
-          <div className="pcs-footer-logo-row">
-            <img src="/img/footer-logo.png" alt="PCS Logo" width="30%" />
-
-          </div>
-          <p className="pcs-footer-desc">
-            We are one of the fastest-growing full-service business solutions companies, delivering cutting-edge, result-driven strategies across digital marketing, technology, branding, and consulting to create the perfect blend of innovation and impact.
-          </p>
-
-        </div>
-
-        {/* Column 2: Our Services */}
-        <div>
-          <h4 className="pcs-footer-heading">Our Services</h4>
-          <ul className="pcs-footer-list">
-            {services.map((s, i) => (
-              // <li key={i}><a href="#">{s}</a></li>
-              <li key={i}>{s}</li>
-
-            ))}
-          </ul>
-        </div>
-
-        {/* Column 3: Contact Info */}
-        <div>
-          <h4 className="pcs-footer-heading">Contact Info</h4>
-          <div className="pcs-footer-contact-item">
-            <div className="pcs-footer-contact-icon">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
-            </div>
-            <div className="pcs-footer-contact-text">
-              <a href="tel:+919677444048">+91 96774 44048</a>
-            </div>
-          </div>
-          <div className="pcs-footer-contact-item">
-            <div className="pcs-footer-contact-icon">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
-            </div>
-            <div className="pcs-footer-contact-text">
-              <a href="https://maps.app.goo.gl/Qh3YkXsp1nktfp9k9">1st Floor, SF.11/4, Pooja Garden, Kalapatti Road, Civil Aerodrome Post, Coimbatore - 641014</a>
-            </div>
-          </div>
-          <div className="pcs-footer-contact-item">
-            <div className="pcs-footer-contact-icon">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2" /><path d="m22 7-10 6L2 7" /></svg>
-            </div>
-            <div className="pcs-footer-contact-text">
-              <a href="mailto:sales@priyamconsultancy.com">sales@priyamconsultancy.com</a>
-            </div>
-          </div>
-          <div className="pcs-footer-socials">
-            <a href="https://www.linkedin.com/company/priyam-consultancy-services/" target="_blank" rel="noopener noreferrer" className="pcs-footer-social-btn pcs-footer-social-linkedin" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="#fff"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.68H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z" /></svg>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=61577125709962" target="_blank" rel="noopener noreferrer" className="pcs-footer-social-btn pcs-footer-social-facebook" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="#fff"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z" /></svg>
-            </a>
-            <a href="https://www.instagram.com/priyam_consultancy_services/" target="_blank" rel="noopener noreferrer" className="pcs-footer-social-btn pcs-footer-social-instagram" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.8"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="3.6" /><circle cx="17.4" cy="6.6" r="0.9" fill="#fff" stroke="none" /></svg>
-            </a>
-            <a href="https://x.com/services91032" target="_blank" rel="noopener noreferrer" className="pcs-footer-social-btn pcs-footer-social-x" aria-label="X">
-              <svg viewBox="0 0 24 24" fill="#fff"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7l-5.5-7.2L4.5 22H1.4l8.1-9.3L1 2h7.2l5 6.6L18.9 2zm-1.2 18h1.7L7.4 4H5.6l12.1 16z" /></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-    </footer>
-  );
-}
 // ── Page Export ───────────────────────────────────────
 
 export default function DigitalMarketingNewPage() {
-  const [formOpen, setFormOpen] = useState(false);
-
   return (
     <Layout
       title="Website Development Company in Coimbatore | Expert Web "
@@ -3765,21 +3125,17 @@ export default function DigitalMarketingNewPage() {
     >
       <SEOHead />
       <GlobalStyles />
-      <SiteHeader />
       <HeroSection />
       <OurServicesSection />
-      <PortfolioSection onOpenForm={() => setFormOpen(true)} />
+      <PortfolioSection />
       <TechnologiesSection />
       <CTASplitSection />
       <BuildTogetherCTASection />
-      <ReasonsSection />
       <ModernFeaturesSection />
       <WhyChooseUsSection />
       <TestimonialSlider />
       <MilestonesCTA />
       <FAQSection />
-      <FooterSection />
-      <FormPopupModal open={formOpen} onClose={() => setFormOpen(false)} />
     </Layout>
   );
 }
