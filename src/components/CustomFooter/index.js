@@ -102,7 +102,9 @@ export default function CustomFooter() {
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
               </span>
-              <span>1st Floor, SF.11/4, Pooja Garden, Kalapatti Road, Civil Aerodrome Post, Coimbatore - 641014</span>
+              <a href="https://maps.app.goo.gl/Qh3YkXsp1nktfp9k9" target="_blank" rel="noreferrer" className={styles.contactLink}>
+                1st Floor, SF.11/4, Pooja Garden, Kalapatti Road, Civil Aerodrome Post, Coimbatore - 641014
+              </a>
             </div>
             <div className={styles.contactItem}>
               <span className={styles.contactIconWrap} style={{ background: '#f97316' }}>
@@ -116,16 +118,16 @@ export default function CustomFooter() {
 
             {/* Social Icons */}
             <div className={styles.socialRow}>
-              <a href="https://linkedin.com" className={`${styles.socialIcon} ${styles.socialLi}`} target="_blank" rel="noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/priyam-consultancy-services/" className={`${styles.socialIcon} ${styles.socialLi}`} target="_blank" rel="noreferrer" aria-label="LinkedIn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
-              <a href="https://facebook.com" className={`${styles.socialIcon} ${styles.socialFb}`} target="_blank" rel="noreferrer" aria-label="Facebook">
+              <a href="https://www.facebook.com/profile.php?id=61577125709962" className={`${styles.socialIcon} ${styles.socialFb}`} target="_blank" rel="noreferrer" aria-label="Facebook">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
               </a>
-              <a href="https://instagram.com" className={`${styles.socialIcon} ${styles.socialIg}`} target="_blank" rel="noreferrer" aria-label="Instagram">
+              <a href="https://www.instagram.com/priyam_consultancy_services/" className={`${styles.socialIcon} ${styles.socialIg}`} target="_blank" rel="noreferrer" aria-label="Instagram">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
               </a>
-              <a href="https://x.com" className={`${styles.socialIcon} ${styles.socialX}`} target="_blank" rel="noreferrer" aria-label="X (Twitter)">
+              <a href="https://x.com/services91032" className={`${styles.socialIcon} ${styles.socialX}`} target="_blank" rel="noreferrer" aria-label="X (Twitter)">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L2.25 2.25h6.893l4.259 5.632L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
               </a>
             </div>

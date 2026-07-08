@@ -864,6 +864,7 @@ const services = [
     tagline: "Accurate. Timely. Compliant.",
     desc: "Timely, accurate, and fully compliant, we simplify your payroll process to ensure you never miss a payout or fall short on regulations. From salary structuring to tax filings and benefits administration, we handle all the backend complexities, so you can focus on what matters most: your team and growing your business.",
     bullets: ["Payroll Processing and Accurate Calculations", "Tax Deductions and Withholdings", "Statutory Compliance and Filings"],
+  link: "/payroll-management",
   },
   {
     id: "02", icon: <img src="/img/icon/hr-services-recruitment.webp" alt="Recruitment" style={{ width: "30px", height: "30px" }} />, color: "#1A56DB",
@@ -871,6 +872,7 @@ const services = [
     tagline: "Right People. Right Roles. Right Now.",
     desc: "We go beyond resumes to find people who belong. Our recruitment services attract top talent that not only fits role but also fits your role, culture, and growth goals. Whether you’re hiring a single position or scaling your team, we ensure a seamless process that meets your vision.",
     bullets: ["Job Analysis & Positioning", "Candidate Sourcing, Screening & Shortlisting", "Interviewing & Selection Support"],
+    link: "/recruitment-services",
   },
   {
     id: "03", icon: <img src="/img/icon/hr-services-policy.webp" alt="HR Policy" style={{ width: "30px", height: "30px" }} />, color: "#FF6B2B",
@@ -878,6 +880,7 @@ const services = [
     tagline: "Build Culture. Drive Performance.",
     desc: "We align your HR strategy with your business vision by crafting clear, custom policies and tailored frameworks that drive performance, engagement, and scalability from startup to enterprise while ensuring compliance without adding unnecessary friction to your daily operations.",
     bullets: ["HR Handbook or Policies and Procedures Development", "Organizational Design & Restructuring", "HR Audits & Compliance Checks"],
+    link: "/hr-strategy-and-policy-development",
   },
 ];
 
@@ -1242,12 +1245,12 @@ function ServicesSection() {
               <li key={i} className="hr-services__bullet">{b}</li>
             ))}
           </ul>
-          <button
-            className="hr-content-btn"
-            style={{ background: '#ed8337', marginTop: '20px' }}
-          >
-            Explore More →
-          </button>
+          <a href={active ? active.link : "#"}
+  className="hr-content-btn"
+  style={{ background: '#ed8337', marginTop: '25px', display: 'inline-block', textAlign: 'center', textDecoration: 'none' }}
+>
+  Explore More →
+</a>
         </div>
       </div>
     </section>

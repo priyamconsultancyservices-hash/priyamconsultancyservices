@@ -1604,7 +1604,7 @@ function MilestonesCTA() {
         <div className="ms-cta-right">
 
 
-          <a href="/contact" className="ms-cta-btn-primary">
+          <a href="/contact-us" className="ms-cta-btn-primary">
             Start Your Growth Journey
             <span className="ms-cta-btn-arr">→</span>
           </a>
