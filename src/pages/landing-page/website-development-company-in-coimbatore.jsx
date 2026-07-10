@@ -78,22 +78,6 @@ function SEOHead() {
         },
         {
             "@context": "https://schema.org",
-            "@type": "Product",
-            "name": "Website Development",
-            "description": "Professional website development services including business websites, WordPress development, WooCommerce, Shopify, responsive web design, custom web applications, and SEO-optimized websites for businesses in Coimbatore.",
-            "brand": {
-                "@type": "Brand",
-                "name": "Priyam Consultancy Services"
-            },
-            "provider": {
-                "@type": "Organization",
-                "name": "Priyam Consultancy Services",
-                "url": "https://priyamconsultancy.com/"
-            },
-            "url": "https://priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/"
-        },
-        {
-            "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "Website Development Company in Coimbatore | Priyam Consultancy Services",
             "image": "https://priyamconsultancy.com/img/priyam-consultancy-logo.png",
