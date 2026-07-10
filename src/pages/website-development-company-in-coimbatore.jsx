@@ -2121,312 +2121,312 @@ const SERVICE_SLIDES = [
   },
 ];
 
-// function ServicesSlider() {
-//   const total = SERVICE_SLIDES.length;
-//   const [current, setCurrent] = useState(0);
-//   const [animating, setAnimating] = useState(false);
-//   const [dir, setDir] = useState("next");
-//   const autoRef = useRef(null);
-//   const touchX = useRef(null);
+function ServicesSlider() {
+  const total = SERVICE_SLIDES.length;
+  const [current, setCurrent] = useState(0);
+  const [animating, setAnimating] = useState(false);
+  const [dir, setDir] = useState("next");
+  const autoRef = useRef(null);
+  const touchX = useRef(null);
 
-//   const startAuto = useCallback(() => {
-//     if (autoRef.current) clearInterval(autoRef.current);
-//     autoRef.current = setInterval(() => {
-//       setDir("next");
-//       setAnimating(true);
-//       setTimeout(() => { setCurrent((c) => (c + 1) % total); setAnimating(false); }, 480);
-//     }, 4000);
-//   }, [total]);
+  const startAuto = useCallback(() => {
+    if (autoRef.current) clearInterval(autoRef.current);
+    autoRef.current = setInterval(() => {
+      setDir("next");
+      setAnimating(true);
+      setTimeout(() => { setCurrent((c) => (c + 1) % total); setAnimating(false); }, 480);
+    }, 4000);
+  }, [total]);
 
-//   useEffect(() => { startAuto(); return () => clearInterval(autoRef.current); }, [startAuto]);
+  useEffect(() => { startAuto(); return () => clearInterval(autoRef.current); }, [startAuto]);
 
-//   const goTo = (idx) => {
-//     if (animating || idx === current) return;
-//     setDir(idx > current ? "next" : "prev");
-//     setAnimating(true);
-//     setTimeout(() => { setCurrent(idx); setAnimating(false); }, 480);
-//     startAuto();
-//   };
+  const goTo = (idx) => {
+    if (animating || idx === current) return;
+    setDir(idx > current ? "next" : "prev");
+    setAnimating(true);
+    setTimeout(() => { setCurrent(idx); setAnimating(false); }, 480);
+    startAuto();
+  };
 
-//   const prev = () => goTo((current - 1 + total) % total);
-//   const next = () => goTo((current + 1) % total);
+  const prev = () => goTo((current - 1 + total) % total);
+  const next = () => goTo((current + 1) % total);
 
-//   const onTouchStart = (e) => { touchX.current = e.touches[0].clientX; };
-//   const onTouchEnd = (e) => {
-//     if (touchX.current === null) return;
-//     const dx = e.changedTouches[0].clientX - touchX.current;
-//     touchX.current = null;
-//     if (Math.abs(dx) < 40) return;
-//     dx < 0 ? next() : prev();
-//   };
+  const onTouchStart = (e) => { touchX.current = e.touches[0].clientX; };
+  const onTouchEnd = (e) => {
+    if (touchX.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchX.current;
+    touchX.current = null;
+    if (Math.abs(dx) < 40) return;
+    dx < 0 ? next() : prev();
+  };
 
-//   /* visible: active + 2 side cards */
-//   const getCard = (offset) => SERVICE_SLIDES[(current + offset + total) % total];
-//   const cards = [getCard(-1), getCard(0), getCard(1)];
+  /* visible: active + 2 side cards */
+  const getCard = (offset) => SERVICE_SLIDES[(current + offset + total) % total];
+  const cards = [getCard(-1), getCard(0), getCard(1)];
 
-//   const outLeft = "svs-out-left";
-//   const outRight = "svs-out-right";
-//   const inLeft = "svs-in-left";
-//   const inRight = "svs-in-right";
+  const outLeft = "svs-out-left";
+  const outRight = "svs-out-right";
+  const inLeft = "svs-in-left";
+  const inRight = "svs-in-right";
 
-//   return (
-//     <>
-//       <style>{`
-//         /* ══ SERVICES SLIDER ══ */
-//         .svs-section {
-//           background: linear-gradient(135deg, #002a44 0%, #004168 60%, #0a5282 100%);
-//           padding: 80px 5% 70px;
-//           position: relative;
-//           overflow: hidden;
-//         }
-//         .svs-section::before {
-//           content:'';
-//           position:absolute; inset:0; pointer-events:none;
-//           background-image:
-//             linear-gradient(rgba(237,131,55,0.04) 1px, transparent 1px),
-//             linear-gradient(90deg, rgba(237,131,55,0.04) 1px, transparent 1px);
-//           background-size: 56px 56px;
-//         }
-//         .svs-section::after {
-//           content:'';
-//           position:absolute; top:-200px; right:-200px;
-//           width:600px; height:600px; border-radius:50%;
-//           pointer-events:none;
-//           background:radial-gradient(circle, rgba(237,131,55,0.07) 0%, transparent 65%);
-//         }
-//         .svs-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index:2; }
+  return (
+    <>
+      <style>{`
+        /* ══ SERVICES SLIDER ══ */
+        .svs-section {
+          background: linear-gradient(135deg, #002a44 0%, #004168 60%, #0a5282 100%);
+          padding: 80px 5% 70px;
+          position: relative;
+          overflow: hidden;
+        }
+        .svs-section::before {
+          content:'';
+          position:absolute; inset:0; pointer-events:none;
+          background-image:
+            linear-gradient(rgba(237,131,55,0.04) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(237,131,55,0.04) 1px, transparent 1px);
+          background-size: 56px 56px;
+        }
+        .svs-section::after {
+          content:'';
+          position:absolute; top:-200px; right:-200px;
+          width:600px; height:600px; border-radius:50%;
+          pointer-events:none;
+          background:radial-gradient(circle, rgba(237,131,55,0.07) 0%, transparent 65%);
+        }
+        .svs-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index:2; }
 
-//         /* header */
-//         .svs-header { text-align:center; margin-bottom: 56px; }
-//         .svs-eyebrow {
-//           display:inline-flex; align-items:center; gap:8px;
-//           font-size:.72rem; font-weight:700; letter-spacing:.16em;
-//           text-transform:uppercase; color:#ed8337; margin-bottom:12px;
-//         }
-//         .svs-eyebrow-line { width:22px; height:2px; background:#ed8337; border-radius:2px; }
-//         .svs-h2 {
-//           font-family:'Poppins',sans-serif;
-//           font-size: clamp(1.9rem,3vw,2.7rem);
-//           font-weight:700; color:#ffffff; line-height:1.15;
-//         }
-//         .svs-h2 span { color:#ed8337; }
-//         .svs-sub {
-//           font-size:.96rem; color:rgba(255,255,255,0.7); line-height:1.7;
-//           max-width:520px; margin:12px auto 0;
-//         }
+        /* header */
+        .svs-header { text-align:center; margin-bottom: 56px; }
+        .svs-eyebrow {
+          display:inline-flex; align-items:center; gap:8px;
+          font-size:.72rem; font-weight:700; letter-spacing:.16em;
+          text-transform:uppercase; color:#ed8337; margin-bottom:12px;
+        }
+        .svs-eyebrow-line { width:22px; height:2px; background:#ed8337; border-radius:2px; }
+        .svs-h2 {
+          font-family:'Poppins',sans-serif;
+          font-size: clamp(1.9rem,3vw,2.7rem);
+          font-weight:700; color:#ffffff; line-height:1.15;
+        }
+        .svs-h2 span { color:#ed8337; }
+        .svs-sub {
+          font-size:.96rem; color:rgba(255,255,255,0.7); line-height:1.7;
+          max-width:520px; margin:12px auto 0;
+        }
 
-//         /* stage */
-//         .svs-stage {
-//           display:flex; align-items:stretch; justify-content:center;
-//           gap:20px;
-//         }
+        /* stage */
+        .svs-stage {
+          display:flex; align-items:stretch; justify-content:center;
+          gap:20px;
+        }
 
-//         /* ALL cards — same dark navy base */
-//         .svs-card {
-//           background: rgba(255,255,255,0.05);
-//           border:1.5px solid rgba(237,131,55,0.2);
-//           border-radius:20px;
-//           padding:36px 28px 32px;
-//           display:flex; flex-direction:column;
-//           transition: all 0.45s cubic-bezier(0.4,0,0.2,1);
-//           position:relative; overflow:hidden;
-//           cursor:pointer;
-//           flex:1;
-//         }
-//         .svs-card::before {
-//           content:'';
-//           position:absolute; top:0; left:0; right:0; height:3px;
-//           background:linear-gradient(90deg,#ed8337,#f5a66b);
-//           opacity:0; transition:opacity 0.3s;
-//         }
-//         .svs-card:hover::before { opacity:1; }
+        /* ALL cards — same dark navy base */
+        .svs-card {
+          background: rgba(255,255,255,0.05);
+          border:1.5px solid rgba(237,131,55,0.2);
+          border-radius:20px;
+          padding:36px 28px 32px;
+          display:flex; flex-direction:column;
+          transition: all 0.45s cubic-bezier(0.4,0,0.2,1);
+          position:relative; overflow:hidden;
+          cursor:pointer;
+          flex:1;
+        }
+        .svs-card::before {
+          content:'';
+          position:absolute; top:0; left:0; right:0; height:3px;
+          background:linear-gradient(90deg,#ed8337,#f5a66b);
+          opacity:0; transition:opacity 0.3s;
+        }
+        .svs-card:hover::before { opacity:1; }
 
-//         /* active card — brighter stand-out */
-//         .svs-card.svs-active {
-//           flex:1.6;
-//           background: rgba(255,255,255,0.10);
-//           border-color: rgba(237,131,55,0.55);
-//           box-shadow: 0 20px 56px rgba(0,0,0,0.35);
-//           transform: translateY(-10px);
-//         }
-//         .svs-card.svs-active::before { opacity:1; }
+        /* active card — brighter stand-out */
+        .svs-card.svs-active {
+          flex:1.6;
+          background: rgba(255,255,255,0.10);
+          border-color: rgba(237,131,55,0.55);
+          box-shadow: 0 20px 56px rgba(0,0,0,0.35);
+          transform: translateY(-10px);
+        }
+        .svs-card.svs-active::before { opacity:1; }
 
-//         /* side cards — slightly dimmed */
-//         .svs-card.svs-side {
-//           opacity:0.72;
-//           transform: translateY(4px) scale(0.98);
-//         }
-//         .svs-card.svs-side:hover {
-//           opacity:0.92;
-//           transform:translateY(0) scale(1);
-//           border-color:rgba(237,131,55,0.4);
-//         }
+        /* side cards — slightly dimmed */
+        .svs-card.svs-side {
+          opacity:0.72;
+          transform: translateY(4px) scale(0.98);
+        }
+        .svs-card.svs-side:hover {
+          opacity:0.92;
+          transform:translateY(0) scale(1);
+          border-color:rgba(237,131,55,0.4);
+        }
 
-//         /* tag */
-//         .svs-tag {
-//           font-family:'Space Mono',monospace;
-//           font-size:.6rem; font-weight:700; letter-spacing:.16em;
-//           color:rgba(237,131,55,0.6); margin-bottom:18px;
-//         }
+        /* tag */
+        .svs-tag {
+          font-family:'Space Mono',monospace;
+          font-size:.6rem; font-weight:700; letter-spacing:.16em;
+          color:rgba(237,131,55,0.6); margin-bottom:18px;
+        }
 
-//         /* icon circle */
-//         .svs-icon-wrap {
-//           width:60px; height:60px; border-radius:50%;
-//           border:2px solid #ed8337;
-//           background:rgba(237,131,55,0.1);
-//           display:flex; align-items:center; justify-content:center;
-//           margin-bottom:22px; flex-shrink:0;
-//           transition:background 0.3s, transform 0.3s;
-//         }
-//         .svs-card:hover .svs-icon-wrap {
-//           background:rgba(237,131,55,0.2);
-//           transform:scale(1.08);
-//         }
-//         .svs-icon-wrap svg { width:24px; height:24px; }
+        /* icon circle */
+        .svs-icon-wrap {
+          width:60px; height:60px; border-radius:50%;
+          border:2px solid #ed8337;
+          background:rgba(237,131,55,0.1);
+          display:flex; align-items:center; justify-content:center;
+          margin-bottom:22px; flex-shrink:0;
+          transition:background 0.3s, transform 0.3s;
+        }
+        .svs-card:hover .svs-icon-wrap {
+          background:rgba(237,131,55,0.2);
+          transform:scale(1.08);
+        }
+        .svs-icon-wrap svg { width:24px; height:24px; }
 
-//         /* title */
-//         .svs-card-title {
-//           font-family:'Poppins',sans-serif;
-//           font-size:1.05rem; font-weight:700;
-//           color:#ffffff; margin-bottom:12px; line-height:1.3;
-//         }
-//         .svs-active .svs-card-title { color:#ffffff; font-size:1.1rem; }
+        /* title */
+        .svs-card-title {
+          font-family:'Poppins',sans-serif;
+          font-size:1.05rem; font-weight:700;
+          color:#ffffff; margin-bottom:12px; line-height:1.3;
+        }
+        .svs-active .svs-card-title { color:#ffffff; font-size:1.1rem; }
 
-//         /* desc — VISIBLE on ALL cards */
-//         .svs-card-desc {
-//           font-size:.86rem; line-height:1.78;
-//           color:rgba(255,255,255,0.65);
-//           flex:1; margin-bottom:20px;
-//         }
-//         .svs-active .svs-card-desc { color:rgba(255,255,255,0.85); }
+        /* desc — VISIBLE on ALL cards */
+        .svs-card-desc {
+          font-size:.86rem; line-height:1.78;
+          color:rgba(255,255,255,0.65);
+          flex:1; margin-bottom:20px;
+        }
+        .svs-active .svs-card-desc { color:rgba(255,255,255,0.85); }
 
-//         /* highlight pill */
-//         .svs-highlight {
-//           display:inline-flex; align-items:center; gap:6px;
-//           background:rgba(237,131,55,0.12);
-//           border:1px solid rgba(237,131,55,0.3);
-//           border-radius:50px;
-//           padding:5px 14px;
-//           font-size:.75rem; font-weight:700;
-//           color:#ed8337; width:fit-content;
-//           letter-spacing:.03em;
-//           display: none;
-//         }
-//         .svs-active .svs-highlight {
-//           background:rgba(237,131,55,0.2);
-//           border-color:rgba(237,131,55,0.5);
-//           display: none;
-//         }
-//         .svs-hl-dot {
-//           width:6px; height:6px; border-radius:50%;
-//           background:#ed8337;
-//           animation:svs-pulse 1.6s infinite;
-//         }
-//         @keyframes svs-pulse {
-//           0%,100%{ opacity:1; transform:scale(1); }
-//           50%    { opacity:.4; transform:scale(1.5); }
-//         }
+        /* highlight pill */
+        .svs-highlight {
+          display:inline-flex; align-items:center; gap:6px;
+          background:rgba(237,131,55,0.12);
+          border:1px solid rgba(237,131,55,0.3);
+          border-radius:50px;
+          padding:5px 14px;
+          font-size:.75rem; font-weight:700;
+          color:#ed8337; width:fit-content;
+          letter-spacing:.03em;
+          display: none;
+        }
+        .svs-active .svs-highlight {
+          background:rgba(237,131,55,0.2);
+          border-color:rgba(237,131,55,0.5);
+          display: none;
+        }
+        .svs-hl-dot {
+          width:6px; height:6px; border-radius:50%;
+          background:#ed8337;
+          animation:svs-pulse 1.6s infinite;
+        }
+        @keyframes svs-pulse {
+          0%,100%{ opacity:1; transform:scale(1); }
+          50%    { opacity:.4; transform:scale(1.5); }
+        }
 
-//         /* controls */
-//         .svs-controls {
-//           display:flex; align-items:center; justify-content:center;
-//           gap:16px; margin-top:44px;
-//         }
-//         .svs-nav {
-//           width:46px; height:46px; border-radius:50%;
-//           border:1.5px solid rgba(237,131,55,0.4);
-//           background:transparent; color:#ed8337;
-//           font-size:22px; line-height:1;
-//           cursor:pointer;
-//           display:flex; align-items:center; justify-content:center;
-//           transition:all 0.22s;
-//         }
-//         .svs-nav:hover { background:#ed8337; color:#fff; border-color:#ed8337; transform:scale(1.1); }
-//         .svs-dots { display:flex; gap:8px; align-items:center; }
-//         .svs-dot {
-//           width:9px; height:9px; border-radius:50%;
-//           border:1.8px solid rgba(255,255,255,0.25);
-//           background:transparent;
-//           padding:0; cursor:pointer;
-//           transition:all 0.3s;
-//         }
-//         .svs-dot.on { width:26px; border-radius:9px; background:#ed8337; border-color:#ed8337; }
+        /* controls */
+        .svs-controls {
+          display:flex; align-items:center; justify-content:center;
+          gap:16px; margin-top:44px;
+        }
+        .svs-nav {
+          width:46px; height:46px; border-radius:50%;
+          border:1.5px solid rgba(237,131,55,0.4);
+          background:transparent; color:#ed8337;
+          font-size:22px; line-height:1;
+          cursor:pointer;
+          display:flex; align-items:center; justify-content:center;
+          transition:all 0.22s;
+        }
+        .svs-nav:hover { background:#ed8337; color:#fff; border-color:#ed8337; transform:scale(1.1); }
+        .svs-dots { display:flex; gap:8px; align-items:center; }
+        .svs-dot {
+          width:9px; height:9px; border-radius:50%;
+          border:1.8px solid rgba(255,255,255,0.25);
+          background:transparent;
+          padding:0; cursor:pointer;
+          transition:all 0.3s;
+        }
+        .svs-dot.on { width:26px; border-radius:9px; background:#ed8337; border-color:#ed8337; }
 
-//         /* responsive */
-//         @media(max-width:860px) {
-//           .svs-stage { gap:14px; }
-//           .svs-card.svs-side { flex:0.85; }
-//         }
-//         @media(max-width:600px) {
-//           .svs-stage { flex-direction:column; }
-//           .svs-card.svs-side { display:none; }
-//           .svs-card.svs-active { transform:translateY(0); flex:unset; }
-//           .svs-section { padding:56px 4% 48px; }
-//         }
-//       `}</style>
+        /* responsive */
+        @media(max-width:860px) {
+          .svs-stage { gap:14px; }
+          .svs-card.svs-side { flex:0.85; }
+        }
+        @media(max-width:600px) {
+          .svs-stage { flex-direction:column; }
+          .svs-card.svs-side { display:none; }
+          .svs-card.svs-active { transform:translateY(0); flex:unset; }
+          .svs-section { padding:56px 4% 48px; }
+        }
+      `}</style>
 
-//       <section className="svs-section">
-//         <div className="svs-inner">
+      <section className="svs-section">
+        <div className="svs-inner">
 
-//           {/* Header */}
-//           <div className="svs-header">
-//             <div className="svs-eyebrow">
-//               <div className="partners-header1" style={{ textAlign: 'center' }}>
-//                 <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Other Services
-//                 </div>
-//               </div>
+          {/* Header */}
+          <div className="svs-header">
+            <div className="svs-eyebrow">
+              <div className="partners-header1" style={{ textAlign: 'center' }}>
+                <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Other Services
+                </div>
+              </div>
 
-//             </div>
-//             <h2 className="svs-h2">Complete <span>Digital & Business </span> Solutions</h2>
-//           </div>
+            </div>
+            <h2 className="svs-h2">Complete <span>Digital & Business </span> Solutions</h2>
+          </div>
 
-//           {/* Stage */}
-//           <div
-//             className="svs-stage"
-//             onTouchStart={onTouchStart}
-//             onTouchEnd={onTouchEnd}
-//           >
-//             {cards.map((card, i) => {
-//               const isActive = i === 1;
-//               return (
-//                 <div
-//                   key={card.tag}
-//                   className={`svs-card ${isActive ? "svs-active" : "svs-side"}`}
-//                   onClick={() => { if (!isActive) { i === 0 ? prev() : next(); } }}
-//                 >
-//                   <div className="svs-tag">— {card.tag}</div>
-//                   <div className="svs-icon-wrap"><ServiceIcon name={card.iconKey} /></div>
-//                   <h3 className="svs-card-title">{card.title}</h3>
-//                   <p className="svs-card-desc">{card.desc}</p>
-//                   <div className="svs-highlight">
-//                     <span className="svs-hl-dot" />{card.highlight}
-//                   </div>
-//                 </div>
-//               );
-//             })}
-//           </div>
+          {/* Stage */}
+          <div
+            className="svs-stage"
+            onTouchStart={onTouchStart}
+            onTouchEnd={onTouchEnd}
+          >
+            {cards.map((card, i) => {
+              const isActive = i === 1;
+              return (
+                <div
+                  key={card.tag}
+                  className={`svs-card ${isActive ? "svs-active" : "svs-side"}`}
+                  onClick={() => { if (!isActive) { i === 0 ? prev() : next(); } }}
+                >
+                  <div className="svs-tag">— {card.tag}</div>
+                  <div className="svs-icon-wrap"><ServiceIcon name={card.iconKey} /></div>
+                  <h3 className="svs-card-title">{card.title}</h3>
+                  <p className="svs-card-desc">{card.desc}</p>
+                  <div className="svs-highlight">
+                    <span className="svs-hl-dot" />{card.highlight}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
 
-//           {/* Controls */}
-//           <div className="svs-controls">
-//             <button className="svs-nav" onClick={prev} aria-label="Previous">‹</button>
-//             <div className="svs-dots">
-//               {SERVICE_SLIDES.map((_, i) => (
-//                 <button
-//                   key={i}
-//                   className={`svs-dot${i === current ? " on" : ""}`}
-//                   onClick={() => goTo(i)}
-//                   aria-label={`Service ${i + 1}`}
-//                 />
-//               ))}
-//             </div>
-//             <button className="svs-nav" onClick={next} aria-label="Next">›</button>
-//           </div>
+          {/* Controls */}
+          <div className="svs-controls">
+            <button className="svs-nav" onClick={prev} aria-label="Previous">‹</button>
+            <div className="svs-dots">
+              {SERVICE_SLIDES.map((_, i) => (
+                <button
+                  key={i}
+                  className={`svs-dot${i === current ? " on" : ""}`}
+                  onClick={() => goTo(i)}
+                  aria-label={`Service ${i + 1}`}
+                />
+              ))}
+            </div>
+            <button className="svs-nav" onClick={next} aria-label="Next">›</button>
+          </div>
 
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
+        </div>
+      </section>
+    </>
+  );
+}
 
 function MilestonesCTA() {
   return (
@@ -3135,6 +3135,7 @@ export default function DigitalMarketingNewPage() {
       <WhyChooseUsSection />
       <TestimonialSlider />
       <MilestonesCTA />
+      <ServicesSlider />
       <FAQSection />
     </Layout>
   );
