@@ -2,7 +2,7 @@ import { useState } from "react";
 import CTASection from "../components/HomePage/CTA";
 import emailjs from "@emailjs/browser";
 import Layout from '@theme/Layout';
-const banner = "/img/accounting.png";
+const banner = "/img/accounting.webp";
 import Head from '@docusaurus/Head';
 import BlogSection from "../components/BlogSection";
 

@@ -4,7 +4,7 @@ import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-const banner = "/img/microsoft-app.png";
+const banner = "/img/microsoft-app.webp";
 
 /* ═══════════════════════════════════════════════════
    SEO META & SCHEMA

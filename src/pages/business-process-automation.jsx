@@ -4,7 +4,7 @@ import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-const banner = "/img/business-process-automation.png";
+const banner = "/img/business-process-automation.webp";
 
 // ─── CSS-in-JSX styles injected once ───────────────────────────────────────
 const GLOBAL_CSS = `

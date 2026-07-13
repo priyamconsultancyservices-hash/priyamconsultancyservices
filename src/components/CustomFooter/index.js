@@ -49,7 +49,7 @@ export default function CustomFooter() {
           <div className={styles.brandCol}>
             <a href="/" className={styles.logo}>
               <img
-                src="/img/footer-logo.png"
+                src="/img/footer-logo.webp"
                 alt="Priyam Consultancy Services"
                 className={styles.logoImg}
               />

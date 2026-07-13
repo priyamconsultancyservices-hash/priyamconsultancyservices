@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import Layout from '@theme/Layout';
-const banner = "/img/contact-us.png";
+const banner = "/img/contact-us.webp";
 import Head from '@docusaurus/Head';
 
 

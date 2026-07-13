@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-const banner = "/img/custom-web-and-mobile-app.png";
+const banner = "/img/custom-web-and-mobile-app.webp";
 import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';

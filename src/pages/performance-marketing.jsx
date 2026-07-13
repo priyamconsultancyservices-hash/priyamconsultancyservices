@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import BlogSection from "../components/BlogSection";
 import CTASection from "../components/HomePage/CTA";
-const banner = "/img/performance-marketing.png";
+const banner = "/img/performance-marketing.webp";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 
