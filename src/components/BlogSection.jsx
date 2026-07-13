@@ -1,8 +1,7 @@
 // BlogSection.jsx
 import { useEffect, useState } from "react";
 
-const RSS_URL = "https://www.priyamconsultancy.com/blog/feed/";
-const PROXY = `https://corsproxy.io/?${encodeURIComponent(RSS_URL)}`;
+const API_URL = "https://www.priyamconsultancy.com/blog/wp-json/wp/v2/posts?_embed&per_page=3";
 
 export default function BlogSection() {
   const [posts, setPosts] = useState([]);
@@ -10,53 +9,30 @@ export default function BlogSection() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(PROXY)
+    fetch(API_URL)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
-        return r.text();
+        return r.json();
       })
-      .then((xmlText) => {
-        const parser = new DOMParser();
-        const xml = parser.parseFromString(xmlText, "text/xml");
-        const items = Array.from(xml.querySelectorAll("item")).slice(0, 3);
-
-        const parsed = items.map((item) => {
-          // ── Image extraction ──
-          // 1. <enclosure>
-          const enclosure = item.querySelector("enclosure");
-          // 2. <media:content>
-          const mediaContent = item.getElementsByTagNameNS("http://search.yahoo.com/mrss/", "content")[0];
-          // 3. <media:thumbnail>
-          const mediaThumbnail = item.getElementsByTagNameNS("http://search.yahoo.com/mrss/", "thumbnail")[0];
-          // 4. <content:encoded> உள்ளே முதல் <img src>
-          const contentEncoded = item.getElementsByTagNameNS("http://purl.org/rss/1.0/modules/content/", "encoded")[0];
-          const contentHtml = contentEncoded?.textContent || "";
-          const contentImgMatch = contentHtml.match(/<img[^>]+src=["']([^"']+)["']/i);
-          // 5. <description> உள்ளே <img src>
-          const descRaw = item.querySelector("description")?.textContent || "";
-          const descImgMatch = descRaw.match(/<img[^>]+src=["']([^"']+)["']/i);
-
+      .then((data) => {
+        const parsed = data.map((post) => {
           const thumbnail =
-            enclosure?.getAttribute("url") ||
-            mediaContent?.getAttribute("url") ||
-            mediaThumbnail?.getAttribute("url") ||
-            contentImgMatch?.[1] ||
-            descImgMatch?.[1] ||
-            null;
+            post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
 
-          // ── Excerpt — content:encoded இல்லன்னா description ──
-          const rawText = contentHtml || descRaw;
-          const cleanText = rawText.replace(/<[^>]*>/g, "").replace(/&[^;]+;/g, " ").trim();
+          const cleanText = (post.excerpt?.rendered || "")
+            .replace(/<[^>]*>/g, "")
+            .replace(/&[^;]+;/g, " ")
+            .trim();
           const excerpt = cleanText.length > 340 ? cleanText.slice(0, 340) + "..." : cleanText;
 
-          // ── Link ──
-          const linkEl = item.getElementsByTagName("link")[0];
-          const link = linkEl?.textContent?.trim() || item.querySelector("guid")?.textContent || "#";
+          const cleanTitle = (post.title?.rendered || "Untitled")
+            .replace(/&[^;]+;/g, " ")
+            .trim();
 
           return {
-            guid: item.querySelector("guid")?.textContent || Math.random().toString(),
-            title: item.querySelector("title")?.textContent?.trim() || "Untitled",
-            link,
+            guid: post.id,
+            title: cleanTitle,
+            link: post.link,
             thumbnail,
             excerpt,
           };
@@ -86,7 +62,6 @@ export default function BlogSection() {
         {/* Card Grid */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1.5rem" }} className="blog-grid">
           {posts.map((post) => (
-            // ── முழு card-உம் clickable ──
             <a
               key={post.guid}
               href={post.link}
@@ -141,17 +116,6 @@ export default function BlogSection() {
             </a>
           ))}
         </div>
-
-        {/* View All */}
-        {/* {!loading && !error && (
-          <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-            <a href="https://www.priyamconsultancy.com/blog/" target="_blank" rel="noreferrer" style={{
-              display: "inline-block", border: "2px solid #1a2744", color: "#1a2744",
-              padding: "0.75rem 2rem", borderRadius: "999px", textDecoration: "none",
-              fontWeight: 600, fontSize: "0.95rem",
-            }}>View All Blogs →</a>
-          </div>
-        )} */}
 
       </div>
 
