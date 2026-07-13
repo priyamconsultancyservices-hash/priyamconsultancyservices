@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
+import BlogSection from "../components/BlogSection";
+
 const banner = "/img/recriutment-services.png";
 const pageUrl = "https://www.priyamconsultancy.com/recruitment-services/";
 const imageUrl = "https://www.priyamconsultancy.com/img/recriutment-services.png";
@@ -792,7 +794,7 @@ margin: 30px auto;
 }
 
 
-.faq-section { padding: 40px 0px 80px 0px; }
+.faq-section { padding: 40px 0px 0px; }
 
 /* ─── STEP FLOW SECTION ─────────────────────────────────── */
 .sf-section {
@@ -2034,6 +2036,7 @@ export default function HRConsultancy() {
         <TabServiceSection />
         <StepFlowSection />
         <FAQSection />
+        <BlogSection />
         <CTASection />
       </div>
     </Layout>

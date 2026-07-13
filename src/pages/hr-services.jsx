@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
+import BlogSection from "../components/BlogSection";
+
 const banner = "/img/hr-services.png";
 
 /* ═══════════════════════════════════════════════════
@@ -654,7 +656,7 @@ h3.hr-h2 {font-size:2.5rem;}
 .circ-left-bottom .cs-desc { margin-left: auto; }
 
 /* ─── FAQ ─────────────────────────────────────────── */
-.faq-section { padding: 5rem 6%; background: #fff; }
+.faq-section { padding: 5rem 6% 0; background: #fff; }
 .faq-head { text-align: center; margin-bottom: 3rem; }
 .faq-head h2 { font-family: var(--font); font-size: clamp(1.6rem, 2.8vw, 2.3rem); font-weight: 700; color: #0D1117; }
 .faq-head h2 span { color: var(--hr-orange); }
@@ -1456,6 +1458,7 @@ export default function HRConsultancy() {
         <BenefitsSection />
         <ProcessSection />
         <FAQSection />
+        <BlogSection />
         <CTASection />
       </div>
     </Layout>

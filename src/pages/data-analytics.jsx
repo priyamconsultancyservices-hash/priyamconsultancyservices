@@ -762,6 +762,7 @@ h2.partners-eyebrow {
     font-size: 2.5rem;
     color: black;
 }
+     .faq-section {padding: 80px 5% 40px;}
 `;
 
 // ─── Data ───────────────────────────────────────────────────────────────────
@@ -1565,8 +1566,8 @@ export default function DigitalMarketing() {
         <ServicesSection />
         <ProcessSection />
         <HowWeWorkSection />
-        <BlogSection />
         <FAQSection />
+        <BlogSection />
         <CTASection />
       </div>
     </Layout>

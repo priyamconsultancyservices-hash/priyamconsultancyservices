@@ -1,6 +1,6 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
-
+import BlogSection from "../components/BlogSection";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -789,7 +789,7 @@ margin: 30px auto;
 }
 
 
-.faq-section { padding: 40px 0px 80px 0px; }
+.faq-section { padding: 40px 0px 0px; }
 
 /* ─── STEP FLOW SECTION ─────────────────────────────────── */
 .sf-section {
@@ -1116,6 +1116,10 @@ margin: 30px auto;
       h3.hr-h2 {
     font-size: 2rem;
 }
+    .faq-head h2 {
+    font-weight:700;
+}
+
   .hero-actions {
     justify-content: flex-start;
   }
@@ -2107,6 +2111,7 @@ export default function HRConsultancy() {
         <TabServiceSection />
         <StepFlowSection />
         <FAQSection />
+        <BlogSection />
         <CTASection />
       </div>
     </Layout>

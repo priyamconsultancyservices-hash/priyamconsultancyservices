@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-
 import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
@@ -731,6 +730,7 @@ li.dropdown.mega {
     font-size: 34px;
     font-weight: 600;
    }
+     .faq-section {padding: 80px 5% 40px;}
 
     h2.partners-eyebrow {
         font-size: 0.9rem;
@@ -1553,8 +1553,8 @@ export default function DigitalMarketing() {
         <ServicesSection />
         <ProcessSection />
         <HowWeWorkSection />
-        <BlogSection />
         <FAQSection />
+        <BlogSection />
         <CTASection />
       </div>
     </Layout>

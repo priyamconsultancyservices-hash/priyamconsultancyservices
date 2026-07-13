@@ -1253,6 +1253,7 @@ function HowWeWorkSection() {
         .faq-head h2 {
           color: #000;
         }
+           .faq-section {padding: 80px 5% 40px;}
       `}</style>
       <div className="hww-bg" /><div className="hww-orb hww-orb-1" /><div className="hww-orb hww-orb-2" />
       <div style={{ position: "relative", zIndex: 2, margin: "0 auto" }}>
@@ -1565,8 +1566,8 @@ export default function DigitalMarketing() {
         <ServicesSection />
         <ProcessSection />
         <HowWeWorkSection />
-        <BlogSection />
         <FAQSection />
+        <BlogSection />
         <CTASection />
       </div>
     </Layout>

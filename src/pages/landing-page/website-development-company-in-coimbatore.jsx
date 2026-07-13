@@ -1490,7 +1490,7 @@ function HeroSection() {
                 <div className="h-badge"><div className="badge-dot" />Web Development</div>
                 <h1 className="hero-heading">
                     Best
-                    <span className="hl lined" style={{ marginLeft: '12px' }}> Web Development </span>
+                    <span className="hl lined" style={{ marginLeft: '12px' }}> Website Development </span>
                     Company in Coimbatore for Business Growth
                 </h1>
                 <p className="hero-sub">

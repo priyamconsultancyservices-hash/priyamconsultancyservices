@@ -749,7 +749,7 @@ const GLOBAL_CSS = `
   }
 
   /* ── FAQ SECTION ── */
-  .faq-section { background: #fff; padding: 5rem 6%; }
+  .faq-section { background: #fff; padding: 5rem 6% 0; }
   0
   .faq-head { text-align: center; margin-bottom: 2.5rem; }
   .faq-head h2 { font-family:'Poppins',sans-serif; font-size: clamp(1.8rem,3vw,2.5rem); font-weight: 700; color: #011a2a; line-height: 1.15; }
@@ -1941,10 +1941,9 @@ export default function PCSWebsite() {
       <PortfolioSection />
       <ProcessSection />
       <KeyFeaturesSection />
-      <BlogSection />
       <FAQSection />
+      <BlogSection />
       <CTASection />
-
       </>
     </Layout>
   );

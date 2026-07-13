@@ -667,7 +667,6 @@ const styles = `
 
     /* ── FAQ SECTION ── */
     .faq-wrapper { grid-template-columns: 1fr 1fr !important; gap: 1rem !important; }
-    .faq-section { padding: 3rem 4% 4rem !important; }
 
     /* ── GENERAL ── */
     .pcs-wi5-heading, .pcs-offer-heading { font-size: clamp(1.5rem, 2.5vw, 2rem) !important; }
@@ -830,7 +829,6 @@ h3.faq-h3 {font-size:2.5rem;color:#000;}
     .pcs-fb-title { font-size: clamp(1.4rem, 5vw, 2rem) !important; }
 
     /* ── FAQ SECTION ── */
-    .faq-section { padding: 0 5% 60px !important; }
     .faq-wrapper { grid-template-columns: 1fr !important; gap: 0 !important; }
     .faq-head h2 { font-size: clamp(1.4rem, 5vw, 2rem) !important; }
     .faq-question { font-size: 0.92rem !important; padding: 1rem 1.2rem !important; }
@@ -1296,12 +1294,9 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
         </div>
       </section>
 
-     {/* blog section */}
-      <BlogSection />
-
 
       {/* faq section */}
-          <section className="faq-section" style={{padding: '0 0 80px 0'}}>
+          <section className="faq-section" style={{padding: '80px 0 0'}}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
         <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
@@ -1349,6 +1344,9 @@ As an experienced website design company, we focus on UI/UX, responsiveness, SEO
         </div>
       </div>
     </section>
+
+  {/* blog section */}
+      <BlogSection />
 
 
     {/* cta section */}

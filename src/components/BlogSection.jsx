@@ -23,7 +23,7 @@ export default function BlogSection() {
             .replace(/<[^>]*>/g, "")
             .replace(/&[^;]+;/g, " ")
             .trim();
-          const excerpt = cleanText.length > 340 ? cleanText.slice(0, 340) + "..." : cleanText;
+          const excerpt = cleanText.length > 200 ? cleanText.slice(0, 200) + "..." : cleanText;
 
           const cleanTitle = (post.title?.rendered || "Untitled")
             .replace(/&[^;]+;/g, " ")

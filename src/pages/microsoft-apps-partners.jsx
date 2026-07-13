@@ -1010,7 +1010,7 @@ export default function SEOServicePage() {
       <SEOServicesSection />
       <ProcessSection />
       <GetStartedSection />
-      {/* <BlogCTAWrapper /> */}
+      <BlogSection />
       <CTASection />
     </Layout>
   );

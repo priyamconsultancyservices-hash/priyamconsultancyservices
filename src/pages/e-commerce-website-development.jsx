@@ -1289,12 +1289,9 @@ export default function PCSWebsite() {
           </div>
         </section>
 
-        {/* blog section */}
-        <BlogSection />
-
 
         {/* faq section */}
-        <section className="faq-section" style={{ padding: '0 0 80px 0' }}>
+        <section className="faq-section" style={{ padding: '80px 0 0' }}>
           <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
             <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
           </div>
@@ -1342,6 +1339,9 @@ export default function PCSWebsite() {
             </div>
           </div>
         </section>
+
+       {/* blog section */}
+        <BlogSection />
 
 
         {/* cta section */}

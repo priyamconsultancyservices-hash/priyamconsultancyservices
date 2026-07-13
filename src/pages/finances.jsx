@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import Layout from '@theme/Layout';
 const banner = "/img/finances.png";
 import Head from '@docusaurus/Head';
+import BlogSection from "../components/BlogSection";
 
 
 
@@ -315,6 +316,7 @@ function HeroSection() {
           .faq-question { font-size:0.88rem; gap:0.6rem; align-items:flex-start; }
           .faq-question .icon { flex-shrink:0; font-size:1.1rem; color:#ed8337; }
           .faq-answer { font-size:0.82rem; line-height:1.65; margin-top:0.5rem; }
+           .faq-section {padding: 80px 5% 0;}
 
           /* hww */
           .hww-flow { grid-template-columns: 1fr !important; }
@@ -997,6 +999,7 @@ export default function BusinessRegistrationPage() {
       <SessionChangeSection />
       <HowWeWorkSection />
       <FAQSection />
+      <BlogSection />
       <CTASection />
     </Layout>
   );

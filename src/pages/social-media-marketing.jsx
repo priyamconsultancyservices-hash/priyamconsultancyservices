@@ -251,7 +251,7 @@ h3.faq-h3 {
 
   /* ── FAQ MOBILE ── */
   .container {width:100%;}
-  .faq-section { padding:4rem 6%; overflow:hidden; }
+  .faq-section { padding:4rem 6% 0; overflow:hidden; }
   .faq-wrapper { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
   .faq-item { border-radius:12px; overflow:hidden; margin-bottom:1rem; background:#fff; }
   .faq-question { display:flex; justify-content:space-between; align-items:center; padding:1rem 1.4rem; cursor:pointer; font-family:'Poppins',sans-serif; font-size:.92rem; font-weight:600; color:#0d1f2d; gap:.8rem; }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import CTASection from "../components/HomePage/CTA";
 import emailjs from "@emailjs/browser";
-// import BlogSection from "../components/BlogSection";
+import BlogSection from "../components/BlogSection";
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -988,7 +988,7 @@ html { scroll-behavior: smooth; }
 
 /* faq section */
 .container {width:100%;}
-        .faq-section{ padding:4rem 6%; }
+        .faq-section{ padding:4rem 6% 0; }
         .faq-wrapper{ display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
         .faq-item{  border-radius:12px; overflow:hidden; margin-bottom:1rem; background:#fff;  }
         .faq-question{ display:flex; justify-content:space-between; align-items:flex-start; padding:1.1rem 1.4rem; cursor:pointer; font-family:'Poppins',sans-serif; font-size:.95rem; font-weight:600; color:#0d1f2d; gap:1rem; }
@@ -1698,8 +1698,8 @@ export default function PCSPage() {
         <ServicesSection />
         <ProcessSection />
         <WhySection />
-        {/* <BlogSection /> */}
         <FAQSection />
+        <BlogSection />
         <CTASection />
       </div>
     </Layout>
