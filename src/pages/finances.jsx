@@ -316,7 +316,7 @@ function HeroSection() {
           .faq-question { font-size:0.88rem; gap:0.6rem; align-items:flex-start; }
           .faq-question .icon { flex-shrink:0; font-size:1.1rem; color:#ed8337; }
           .faq-answer { font-size:0.82rem; line-height:1.65; margin-top:0.5rem; }
-           .faq-section {padding: 80px 5% 0;}
+
 
           /* hww */
           .hww-flow { grid-template-columns: 1fr !important; }
@@ -935,11 +935,11 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section">
+    <section className="faq-section" style={{padding: '80px 0 0'}}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
         <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
-      <div className="container">
+      <div className="container" style={{width: '100%'}}>
         {/* TITLE */}
         <div className="faq-head">
           <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>

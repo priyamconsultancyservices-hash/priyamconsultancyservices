@@ -867,7 +867,7 @@ function FAQSection() {
   const [active, setActive] = useState(null);
   const toggle = (index) => setActive(active === index ? null : index);
   return (
-    <section className="faq-section">
+    <section className="faq-section" style={{padding: '80px 0 0'}}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
         <h4 className="partners-eyebrow">Frequently Asked Questions</h4>
       </div>
@@ -1094,13 +1094,13 @@ const breadcrumbSchema =
         <title>Performance Marketing Companies | Performance Marketing Services</title>
         <meta name="description" content="Looking for top performance marketing companies? We offer result-driven performance marketing services including PPC, social media ads, and lead generation." />
         <meta name="keywords" content="PPC Marketing, PPC Advertising Company, Pay-Per-Click, pay per click advertising, PPC Management, PPC Advertising Agency, PPC services, PPC campaign" />
-        <link rel="canonical" href="https://www.priyamconsultancy.com/performance-marketing" />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/performance-marketing/" />
 
         {/* Open Graph */}
         <meta property="og:title" content="Performance Marketing Companies | Performance Marketing Services" />
         <meta property="og:description" content="Looking for top performance marketing companies? We offer result-driven performance marketing services including PPC, social media ads, and lead generation." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/performance-marketing" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/performance-marketing/" />
         <meta property="og:image" content="https://www.priyamconsultancy.com/img/performance-marketing.png" />
 
         {/* Twitter Card */}

@@ -564,19 +564,19 @@ export default function DigitalTransformationPage() {
   return (
     <Layout>
       <Head>
-        <title>Digital Transformation Services Company in India | Digital Transformation  </title>
-        <meta name="description" content="Top digital transformation services company in India helping businesses adopt automation, AI, cloud, and data-driven solutions for growth and innovation. Explorer now! " />
+        <title>Digital Transformation Services Company in India | PCS  </title>
+        <meta name="description" content="Top digital transformation services company in India helping businesses adopt automation, AI, cloud, and data-driven solutions for growth and innovation." />
 
         <meta name="keywords" content="Digital Transformation Agency, Digital Transformation Consulting, Digital Transformation Company, Digital Transformation Services, Digital Transformation Technologies, Digital Transformation Strategies, Digital Transformation Solutions, Digital Transformation Company in India, Digital Transformation Services In India" />
         <link rel="canonical" href="https://www.priyamconsultancy.com/digital-transformation/" />
-        <meta property="og:title" content="Digital Transformation Services Company in India | Digital Transformation " />
-        <meta property="og:description" content="Top digital transformation services company in India helping businesses adopt automation, AI, cloud, and data-driven solutions for growth and innovation. Explorer now! " />
+        <meta property="og:title" content="Digital Transformation Services Company in India | PCS " />
+        <meta property="og:description" content="Top digital transformation services company in India helping businesses adopt automation, AI, cloud, and data-driven solutions for growth and innovation." />
         <meta property="og:url" content="https://www.priyamconsultancy.com/digital-transformation/" />
         <meta property="og:image" content="https://www.priyamconsultancy.com/img/digital-transformation.png" />
         <meta property="og:type" content="website" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Digital Transformation Services Company in India | Digital Transformation " />
-        <meta name="twitter:description" content="Top digital transformation services company in India helping businesses adopt automation, AI, cloud, and data-driven solutions for growth and innovation. Explorer now! " />
+        <meta name="twitter:title" content="Digital Transformation Services Company in India | PCS " />
+        <meta name="twitter:description" content="Top digital transformation services company in India helping businesses adopt automation, AI, cloud, and data-driven solutions for growth and innovation." />
         <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/digital-transformation.png" />
         {schemaData.map((schema, i) => (
           <script key={i} type="application/ld+json">{JSON.stringify(schema)}</script>
@@ -759,7 +759,7 @@ export default function DigitalTransformationPage() {
           <div style={{ textAlign: "center", marginBottom: "12px" }}>
             <h2 className="partners-eyebrow">Frequently Asked Questions</h2>
           </div>
-          <div className="container">
+          <div className="container" style={{width: '100%'}}>
             <div className="faq-head">
               <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>
             </div>

@@ -730,7 +730,6 @@ li.dropdown.mega {
     font-size: 34px;
     font-weight: 600;
    }
-     .faq-section {padding: 80px 5% 40px;}
 
     h2.partners-eyebrow {
         font-size: 0.9rem;
@@ -1288,7 +1287,7 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section" style={{ background: '#fff' }}>
+    <section className="faq-section" style={{ background: '#fff', padding: '80px 0 0' }}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
         <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>

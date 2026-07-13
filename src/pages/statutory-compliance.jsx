@@ -937,7 +937,7 @@ function HowWeWorkSection() {
           font-size: 2.5rem;
           color: #000;
       }
-           .faq-section {padding: 80px 5% 40px;}
+           .faq-section {padding: 80px 5% 0px;}
       `}</style>
       <div className="hww-bg" /><div className="hww-orb hww-orb-1" /><div className="hww-orb hww-orb-2" />
       <div style={{ position: "relative", zIndex: 2, margin: "0 auto" }}>
@@ -993,7 +993,7 @@ function FAQSection() {
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
         <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
-      <div className="container">
+      <div className="container" style={{width: '100%'}}>
         {/* TITLE */}
         <div className="faq-head">
           <h3 className="faq-h3">Queries That Could <span>Hold You Back</span></h3>

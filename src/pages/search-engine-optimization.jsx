@@ -315,7 +315,7 @@ h3.faq-h3 {
 
   /* ── FAQ MOBILE ── */
   .container {width:100%; }
-  .faq-section { padding:4rem 6% 0px; overflow:hidden; }
+  .faq-section { padding:4rem 6% 0; overflow:hidden; }
   .faq-wrapper { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
   .faq-item {  border-radius:12px; overflow:hidden; margin-bottom:1rem; background:#fff; }
   .faq-question { display:flex; justify-content:space-between; align-items:flex-start; padding:1rem 1.4rem; cursor:pointer; font-family:'Poppins',sans-serif; font-size:.92rem; font-weight:600; color:#0d1f2d; gap:.8rem; }
@@ -971,7 +971,7 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section">
+    <section className="faq-section" style={{padding: '80px 0 0'}}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
         <h4 className="partners-eyebrow" >Frequently Asked Questions</h4>
       </div>

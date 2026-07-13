@@ -1759,7 +1759,7 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section">
+    <section className="faq-section" style={{padding: '80px 0 0'}}>
      <div className="partners-header1" style={{  textAlign: 'center' }}>
             <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Frequently Asked Questions</h2>
           </div>

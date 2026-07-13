@@ -1446,8 +1446,8 @@ function Home() {
 
       {/* ✅ Meta Keywords & JSON-LD Schemas */}
       <head>
-        <title> Priyam Consultancy Services | Digital Marketing, HR & Business Solutions</title>
-        <meta name="description" content="We are the No.1 website development and digital marketing agency in India, offering SEO, social media marketing, and HR solutions to help businesses grow faster." />
+        <title> Priyam Consultancy Services | Digital Marketing,HR & Web Dev</title>
+        <meta name="description" content="We are the No.1 website development and digital marketing agency in India, offering SEO, social media marketing, & HR solutions to help businesses grow faster." />
         <link rel="canonical" href="https://www.priyamconsultancy.com/" />
         <meta name="keywords" content="Digital Marketing, Digital Marketing Agency, Digital Marketing Services, Digital Transformation, Digital Transformation Consulting, Digital Transformation Company, HR Services, HR Slutions, HR Consultant, HR Consultancy Services, HR Service Provider, Business Registration, HRMS Solutions, Corporate Compliance, CFO Services" />
 

@@ -762,7 +762,6 @@ h2.partners-eyebrow {
     font-size: 2.5rem;
     color: black;
 }
-     .faq-section {padding: 80px 5% 40px;}
 `;
 
 // ─── Data ───────────────────────────────────────────────────────────────────
@@ -1306,7 +1305,7 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section" style={{ background: '#fff' }}>
+    <section className="faq-section"  style={{ background: '#fff', padding: '80px 0 0' }}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
         <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
@@ -1376,8 +1375,8 @@ export default function DigitalMarketing() {
   return (
     <Layout>
       <Head>
-        <title>Data Analytics | Turn Data Into Actionable Insights</title>
-        <meta name="description" content="PCS provides expert Data Analytics services including custom dashboards, BI implementation, predictive analytics, and real-time visualization to transform your data into actionable insights." />
+        <title>Data Analytics Services | Data Analytics Company in Coimbatore </title>
+        <meta name="description" content="PCS offers Data Analytics services including BI dashboards, predictive analytics, and real-time insights to help businesses make smarter decisions. " />
         <meta name="keywords" content="Data Analytics Services, Data Analytics Company, Data Analytics Solutions, Data Analytics Services and Solutions, Data Analytics Consulting, Data Analytics Consulting Services, Data Analytics Consulting Solutions, Data Analytics Services and Solutions, Data Analytics Service providers, Data Consulting Services " />
 
         {/* Breadcrumb Schema */}

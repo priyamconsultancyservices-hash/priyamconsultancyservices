@@ -12,7 +12,7 @@ function SEOHead() {
     <Head>
       <title>Get in Touch with Priyam Consultancy | Contact Us </title>
       <meta name="description" content="Get professional support for business registration, compliance management, website development, HR solutions, and digital marketing. Contact PCS today." />
-      <meta name="keywords" content="" />
+      <meta name="keywords" content="Priyam Consultancy Services, Contact Us" />
       <link rel="canonical" href="https://www.priyamconsultancy.com/contact-us/" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Get in Touch with Priyam Consultancy | Contact Us " />

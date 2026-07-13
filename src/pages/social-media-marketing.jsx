@@ -696,7 +696,7 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section">
+    <section className="faq-section" style={{padding: '80px 0 0'}}>
       <div className="partners-header2" style={{ textAlign: 'center', marginTop: '20px' }}>
         <h2 className="partners-eyebrow" >Frequently Asked Questions</h2>
       </div>
@@ -965,7 +965,7 @@ export default function PcsSmmPage() {
         />
         <link
           rel="canonical"
-          href="https://www.priyamconsultancy.com/social-media-marketing"
+          href="https://www.priyamconsultancy.com/social-media-marketing/"
         />
  
         {/* Open Graph */}
