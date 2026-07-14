@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-const banner = "/img/2.webp";
+const banner = "/img/textile.webp";
 
 // EmailJS will be loaded via CDN in the component
 

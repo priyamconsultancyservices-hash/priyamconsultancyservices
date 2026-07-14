@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
-const banner = "/img/ecommerce-banner.png";
+const banner = "/img/ecommerce-banner.webp";
 import Head from '@docusaurus/Head';
 
 

@@ -4,7 +4,7 @@ import BlogSection from "../components/BlogSection";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-const banner = "/img/seo.png";
+const banner = "/img/seo.webp";
 
 // ─── CSS-in-JS via a single <style> block injected once ───────────────────────
 const STYLES = `

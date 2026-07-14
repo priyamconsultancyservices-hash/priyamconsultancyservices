@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CTASection from "../components/HomePage/CTA";
 import Link from '@docusaurus/Link';
-const banner = "/img/inversment.png";
+const banner = "/img/inversment.webp";
 import emailjs from "@emailjs/browser";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';

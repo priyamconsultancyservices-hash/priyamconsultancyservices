@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 const TechImg = "/img/Technology-logos.gif";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
-const banner = "/img/website-development.png";
+const banner = "/img/website-development.webp";
 import Head from '@docusaurus/Head';
 
 

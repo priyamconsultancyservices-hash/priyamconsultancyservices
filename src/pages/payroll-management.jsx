@@ -4,7 +4,7 @@ import BlogSection from "../components/BlogSection";
 import CTASection from "../components/HomePage/CTA";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
-const banner = "/img/payroll-services.png";
+const banner = "/img/payroll-services.webp";
 
 const pageUrl = "https://www.priyamconsultancy.com/payroll-management/";
 const imageUrl = "https://www.priyamconsultancy.com/img/payroll-services.png";

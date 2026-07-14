@@ -3,7 +3,7 @@ import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
-const banner = "/img/custom-website-development.png";
+const banner = "/img/custom-website-development.webp";
 import Head from '@docusaurus/Head';
 
 function SEOHead() {

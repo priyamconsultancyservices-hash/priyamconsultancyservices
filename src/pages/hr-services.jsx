@@ -5,7 +5,7 @@ import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import BlogSection from "../components/BlogSection";
 
-const banner = "/img/hr-services.png";
+const banner = "/img/hr-services.webp";
 
 /* ═══════════════════════════════════════════════════
    SEO META & SCHEMA

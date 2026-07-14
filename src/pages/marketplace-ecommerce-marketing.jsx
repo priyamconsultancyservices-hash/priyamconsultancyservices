@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import BlogSection from "../components/BlogSection";
 import CTASection from "../components/HomePage/CTA";
-const banner = "/img/marketplace-ecommerce-marketing.png";
+const banner = "/img/marketplace-ecommerce-marketing.webp";
 import ServiceSection from "../components/MarketplaceEcommerenceService/ServiceSection";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';

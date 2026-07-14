@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import CTASection from "../components/HomePage/CTA";
-const banner = "/img/busniess-registration.png";
+const banner = "/img/busniess-registration.webp";
 import emailjs from "@emailjs/browser";
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';

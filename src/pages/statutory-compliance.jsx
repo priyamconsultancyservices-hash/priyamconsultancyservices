@@ -2,7 +2,7 @@ import { useState } from "react";
 import CTASection from "../components/HomePage/CTA";
 import Link from '@docusaurus/Link';
 import emailjs from "@emailjs/browser";
-const banner = "/img/statutory-compliance.png";
+const banner = "/img/statutory-compliance.webp";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import BlogSection from "../components/BlogSection";

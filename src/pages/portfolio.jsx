@@ -1,6 +1,6 @@
 import Layout from "@theme/Layout";
 
-const banner = "/img/portfolio.png";
+const banner = "/img/portfolio.webp";
 const feralroots = "/img/feral-roots-site.webp";
 const urcts = "/img/urctc-site.webp";
 const zky = "/img/zky-site.webp";

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import CTASection from "../components/HomePage/CTA";
-const banner = "/img/static-website.png";
+const banner = "/img/static-website.webp";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';

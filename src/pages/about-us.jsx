@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import Layout from '@theme/Layout';
-const banner = "/img/approach.png";
-const bannerImg = "/img/about-us.png";
-const vision = "/img/vision.png";
-const mission = "/img/mission.png";
+const banner = "/img/approach.webp";
+const bannerImg = "/img/about-us.webp";
+const vision = "/img/vision.webp";
+const mission = "/img/mission.webp";
 
 const microsoft = "/img/microsoft-app-partner.jpeg";
 const sterlo = "/img/sterlo-partner.webp";
