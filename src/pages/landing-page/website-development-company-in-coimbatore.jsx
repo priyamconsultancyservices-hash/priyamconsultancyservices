@@ -197,11 +197,11 @@ function SEOHead() {
             <title>Best Website Development Company in Coimbatore | PCS </title>
             <meta name="description" content="Break away from ordinary business websites. Priyam Consultancy Services develops next-generation, SEO-optimized websites that help Coimbatore brands stand out." />
             <meta name="keywords" content="Web Development Company in Coimbatore, Digital Marketing Company Coimbatore, Digital Marketing in Coimbatore, SEO Company in Coimbatore, Recruitment Agency in Coimbatore, SEO Services in Coimbatore, Website Development Company in Coimbatore " />
-            <link rel="canonical" href="https://www.priyamconsultancy.com/website-development-company-in-coimbatore/" />
+            <link rel="canonical" href="https://www.priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/" />
             <meta property="og:type" content="website" />
             <meta property="og:title" content="Best Website Development Company in Coimbatore | PCS " />
             <meta property="og:description" content="Break away from ordinary business websites. Priyam Consultancy Services develops next-generation, SEO-optimized websites that help Coimbatore brands stand out." />
-            <meta property="og:url" content="https://www.priyamconsultancy.com/website-development-company-in-coimbatore/" />
+            <meta property="og:url" content="https://www.priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/" />
             <meta property="og:image" content={imageUrl} />
             <meta name="twitter:card" content="summary_large_image" />
             <meta name="twitter:title" content="Best Website Development Company in Coimbatore | PCS " />
