@@ -1,12 +1,11 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import CTASection from "../components/HomePage/CTA";
-import emailjs from "@emailjs/browser"; 
+import emailjs from "@emailjs/browser";
 const TechImg = "/img/Technology-logos.gif";
 import BlogSection from "../components/BlogSection";
 import Layout from '@theme/Layout';
 const banner = "/img/website-development.webp";
 import Head from '@docusaurus/Head';
-import '../css/pages-common.css';
 
 
 function SEOHead() {
@@ -220,667 +219,35 @@ function SEOHead() {
 }
 
 
-/* ══════════════════════════════════════
-   GLOBAL STYLES
-══════════════════════════════════════ */
-const GLOBAL_CSS = `
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800;900&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap");
-
-  :root {
-    --navy: #022b44; --navy-deep: #011a2a; --navy-mid: #0a3652;
-    --orange: #ed8337; --orange-light: #f5a66b;
-  }
-
-  body { overflow-x: hidden; }
-
- .container {
- width:100%;
- }
-  /* ── HERO BADGE ── */
-  .badge {
-    display:inline-flex; align-items:center; gap:.5rem;
-    background:rgba(237,131,55,0.1); border:1px solid rgba(237,131,55,0.28);
-    color:var(--orange); font-size:0.72rem; font-weight:700;
-    padding:.38rem 1rem; border-radius:50px; letter-spacing:.09em; text-transform:uppercase;
-    margin-bottom:1.4rem; animation:fadeUp .6s ease both;
-  }
-
-  /* ══ HERO BANNER (Website Dev) ══ */
-  .wd-hero {
-    min-height:100vh; display:grid; grid-template-columns:1fr 1fr;
-    align-items:center; gap:2rem; padding:4rem 6% 4rem;
-    position:relative; box-sizing:border-box; overflow:hidden; background:#004168;
-  }
-
-  .wd-hero-sub { margin-top:1.4rem; font-size:1rem; line-height:1.78; color:rgba(255,255,255,0.85); max-width:100%; animation:fadeUp .7s .16s ease both; }
-
-  /* Hero right image */
-  .wd-hero-img { height:470px; object-fit:contain; max-width:100%; border-radius:16px; }
-
-  /* ══ OUR APPROACH SECTION ══ */
-
-  .wd-ap-heading { font-family:"Poppins",sans-serif; font-size:clamp(1.8rem,2.8vw,2.5rem); line-height:1.12; margin-bottom:1.2rem; font-weight:700;color:#000; }
-
-  .wd-ap-intro { font-size:1rem; line-height:1.8;  margin-bottom:1.4rem; color:#000; }
-
-  h3.faq-h3 {font-size:2.5rem; color:#000;}
-  /* ══ SERVICES ACCORDION ══ */
-  .svc-section {
-    position:relative; overflow:hidden;
-    background:#004168;
-    padding:7rem 6% 8rem;
-  }
-  .svc-section::before { content:""; position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px); background-size:60px 60px; }
-  .svc-section::after { content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 50% 60% at 90% 10%,rgba(237,131,55,0.09) 0%,transparent 60%),radial-gradient(ellipse 45% 55% at 5% 90%,rgba(96,165,250,0.07) 0%,transparent 55%); }
-  .svc-layout { position:relative; z-index:2;  margin:0 auto; display:grid; grid-template-columns:1fr 1.1fr; gap:5rem; align-items:start; }
-  .svc-right-col { position:sticky; top:110px; }
-  .svc-eyebrow { display:inline-flex; align-items:center; gap:.55rem; font-family:"Space Mono",monospace; font-size:.7rem; font-weight:700; color:var(--orange); letter-spacing:.13em; text-transform:uppercase; margin-bottom:1.1rem; }
-  .svc-eyebrow-line { width:24px; height:2px; background:var(--orange); border-radius:2px; }
-  .svc-heading { font-family:"Poppins",sans-serif; font-size:clamp(2rem,3vw,3rem); font-weight:600; line-height:1.1;  color:#fff; margin-bottom:1rem; }
-  .svc-heading .accent { color:var(--orange); }
-  .svc-sub { font-size:.97rem; color:#ffffffe3; line-height:1.78; margin-bottom:2.2rem; max-width:440px; }
-  .svc-count-row { display:flex; gap:1rem; margin-bottom:2.4rem; flex-wrap:wrap; }
-  .svc-count-pill { display:flex; flex-direction:column; align-items:center; background:rgba(255,255,255,0.05); border-radius:14px; padding:.8rem 1.4rem; border:1px solid rgba(255,255,255,0.1); backdrop-filter:blur(10px); }
-  .svc-count-num { font-family:"Poppins",sans-serif; font-size:1.8rem; font-weight:800; color:var(--orange); line-height:1; }
-  .svc-count-lbl { font-size:.72rem; color:rgba(255,255,255,0.4); margin-top:.2rem; font-weight:600; letter-spacing:.04em; }
-  .svc-cta-btn { display:inline-flex; align-items:center; gap:.5rem; background:var(--orange); color:#fff; padding:.88rem 2rem; border-radius:50px; font-family:"Poppins",sans-serif; font-size:.92rem; font-weight:700; text-decoration:none; transition:all .22s; box-shadow:0 4px 20px rgba(237,131,55,.3); }
-  .svc-cta-btn:hover { background:var(--orange-light); transform:translateY(-2px); box-shadow:0 8px 28px rgba(237,131,55,.45); }
-  .svc-accordion { display:flex; flex-direction:column; gap:.75rem; }
-  .acc-item { border-radius:18px; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.04); backdrop-filter:blur(12px); overflow:hidden; transition:border-color .3s,box-shadow .3s,background .3s; }
-  .acc-item.open { border-color:rgba(237,131,55,0.35); background:linear-gradient(145deg, rgba(10, 54, 82, 0.55), rgb(76 186 235 / 23%)); box-shadow:0 8px 40px rgba(0,0,0,0.3),0 0 0 1px rgba(237,131,55,0.1); }
-  .acc-header { display:flex; align-items:center; gap:1.2rem; padding:1.15rem 1.5rem; cursor:pointer; user-select:none; position:relative; }
-  .acc-num { font-family:"Space Mono",monospace; font-size:.68rem; font-weight:700; color:rgba(255,255,255,0.25); letter-spacing:.1em; min-width:28px; transition:color .3s; }
-  .acc-item.open .acc-num { color:var(--orange); }
-  .acc-icon { width:42px; height:42px; border-radius:12px; flex-shrink:0; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; font-size:1.1rem; transition:background .3s,border-color .3s,transform .4s cubic-bezier(.34,1.3,.64,1); }
-  .acc-item.open .acc-icon { background:rgba(237,131,55,0.18); border-color:rgba(237,131,55,0.3); transform:scale(1.08) rotate(-5deg); }
-  .acc-title { font-family:"Poppins",sans-serif; font-size:.98rem; font-weight:700; color:rgba(255,255,255,0.75); flex:1; transition:color .3s; }
-  .acc-item.open .acc-title { color: #ed8337; }
-  .acc-item.open  { opacity:1; }
-  .acc-arrow { width:28px; height:28px; border-radius:50%; flex-shrink:0; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); display:flex; align-items:center; justify-content:center; font-size:.75rem; color:rgba(255,255,255,0.4); transition:transform .4s cubic-bezier(.34,1.3,.64,1),background .3s,color .3s,border-color .3s; }
-  .acc-item.open .acc-arrow { transform:rotate(180deg); background:rgba(237,131,55,0.2); border-color:rgba(237,131,55,0.3); color:var(--orange); }
-  .acc-body { max-height:0; overflow:hidden; transition:max-height .48s cubic-bezier(.4,0,.2,1),padding .3s; padding:0 1.5rem; }
-  .acc-item.open .acc-body { max-height:240px; padding-bottom:1.5rem; }
-  .acc-divider { height:1px; background:linear-gradient(90deg,rgba(237,131,55,0.3),rgba(237,131,55,0)); margin-bottom:1.1rem; }
-  .acc-desc { font-family:"Poppins",sans-serif; font-size:.91rem; line-height:2.1; color:rgb(255, 255, 255); padding-left:calc(28px + 42px + 1.2rem + 1.2rem); }
-
-  /* ══ PROCESS — FIXED ══ */
-  .proc-section { position:relative; padding:7rem 6% 8rem; background:#ffffff; overflow:hidden; }
-  .proc-section::before { content:""; position:absolute; inset:0; pointer-events:none; background-image:radial-gradient(circle,rgba(2,43,68,0.07) 1px,transparent 1px); background-size:28px 28px; z-index:0; }
-  .proc-section::after { content:""; position:absolute; inset:0; pointer-events:none; background:radial-gradient(ellipse 55% 45% at 15% 10%,rgba(237,131,55,0.06) 0%,transparent 65%),radial-gradient(ellipse 50% 50% at 85% 90%,rgba(2,43,68,0.05) 0%,transparent 60%); z-index:0; }
-  .proc-inner { position:relative; z-index:2; max-width:1240px; margin:0 auto; }
-  .proc-header { text-align:center; margin-bottom:4rem; }
-  .proc-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-size:.74rem; font-weight:700; color:var(--orange); letter-spacing:.12em; text-transform:uppercase; margin-bottom:1rem; }
-  .proc-eyebrow-line { width:26px; height:2px; background:var(--orange); border-radius:2px; }
-  .proc-heading { font-family:"Poppins",sans-serif; font-size:clamp(2rem,3vw,2.6rem); font-weight:600; line-height:1.1; color:#000; margin-bottom:1rem; }
-  .proc-heading span { color:var(--orange); }
-  .proc-sub { font-size:.97rem; color:#000; margin:0 auto; line-height:1.78; }
-
-  /* ── Process 3-col layout ── */
-  .proc-cols { display:grid; grid-template-columns:1fr 300px 1fr; gap:4rem; align-items:stretch; }
-  .proc-mockup-wrap { align-self:center; }
-
-  /* ── Process cards — FIXED sizes & alignment ── */
-  .proc-points { display:flex; flex-direction:column; gap:1.2rem; justify-content:space-between; height:100%; }
-
-  .proc-point {
-    display:flex; align-items:flex-start; gap:.9rem;
-    padding:1rem 1.1rem; border-radius:14px;
-    border:1px solid rgba(2,43,68,0.08); background:#fff;
-    box-shadow:0 2px 12px rgba(0,0,0,0.05);
-    transition:transform .28s,box-shadow .28s,border-color .28s;
-    cursor:default; width:100%;
-  }
-  .proc-point:hover { transform:translateY(-3px); box-shadow:0 8px 28px rgba(237,131,55,0.12); border-color:rgba(237,131,55,0.3); }
-
-  /* left column — icon on right, text on left */
-  .proc-points.left { width:100%; }
-  .proc-points.left .proc-point { flex-direction:row-reverse; text-align:right; }
-  .proc-points.left .proc-point-text { align-items:flex-end; }
-
-  /* right column — icon on left, text on right */
-  .proc-points.right .proc-point { flex-direction:row; text-align:left; }
-  .proc-points.right .proc-point-text { align-items:flex-start; }
-
-  .proc-icon {
-    flex-shrink:0; width:38px; height:38px; min-width:38px;
-    border-radius:10px; background:rgba(237,131,55,0.1);
-    color:var(--orange); display:flex; align-items:center;
-    justify-content:center; font-size:1rem; transition:background .28s;
-  }
-  .proc-point:hover .proc-icon { background:#ed833736; }
-
-  .proc-point-text { display:flex; flex-direction:column; flex:1; min-width:0; }
-  .proc-pt-num { font-family:"Space Mono",monospace; font-size:.6rem; font-weight:700; color:var(--orange); letter-spacing:.08em; text-transform:uppercase; margin-bottom:.2rem; }
-  .proc-pt-title { font-family:"Poppins",sans-serif; font-size:1.1rem; font-weight:700; color:#0d1f2d; margin-bottom:.18rem; line-height:1.3; }
-  .proc-pt-desc { font-size:.89rem; line-height:1.6; font-family:"Poppins"; color:#000000d9; }
-
-  /* center mockup */
-  .proc-mockup-wrap { display:flex; flex-direction:column; align-items:center; justify-content:center; position:relative; }
-  .proc-mockup-wrap::before { content:""; position:absolute; width:240px; height:240px; border-radius:50%; background:radial-gradient(circle,rgba(237,131,55,0.12) 0%,transparent 70%); animation:proc-glow 3s ease-in-out infinite; z-index:0; }
-  @keyframes proc-glow{0%,100%{transform:scale(1);opacity:.7;}50%{transform:scale(1.2);opacity:1;}}
-  .proc-screen { position:relative; z-index:2; width:260px; background:#0d1f2d; border-radius:16px; border:2px solid rgba(237,131,55,0.3); box-shadow:0 24px 64px rgba(0,0,0,0.22),0 0 0 6px rgba(237,131,55,0.06); overflow:hidden; }
-  .proc-browser-bar { background:#1a2d3e; padding:.5rem .85rem; display:flex; align-items:center; gap:.4rem; border-bottom:1px solid rgba(237,131,55,0.15); }
-  .pb-dot { width:8px; height:8px; border-radius:50%; }
-  .pb-d1{background:#ff5f57;} .pb-d2{background:#ffbd2e;} .pb-d3{background:#28c840;}
-  .proc-url-bar { flex:1; margin-left:.5rem; background:rgba(255,255,255,0.06); border-radius:5px; padding:.22rem .7rem; font-family:"Space Mono",monospace; font-size:.56rem; color:rgba(255,255,255,0.4); }
-  .proc-site-body { padding:.7rem; }
-  .ps-hero { background:linear-gradient(135deg,#022b44,#0a3652); border-radius:8px; padding:.7rem .85rem; margin-bottom:.6rem; position:relative; overflow:hidden; }
-  .ps-hero::after { content:""; position:absolute; right:-20px; top:-20px; width:80px; height:80px; border-radius:50%; background:rgba(237,131,55,0.2); animation:proc-glow 2.5s ease-in-out infinite; }
-  .ps-hero-tag { font-family:"Space Mono",monospace; font-size:.48rem; color:var(--orange); letter-spacing:.1em; text-transform:uppercase; margin-bottom:.3rem; }
-  .ps-hero-h { font-family:"Poppins",sans-serif; font-size:.65rem; font-weight:800; color:#fff; line-height:1.3; margin-bottom:.4rem; }
-  .ps-hero-btn { display:inline-block; background:var(--orange); color:#022b44; font-family:"Poppins",sans-serif; font-size:.48rem; font-weight:700; padding:.22rem .55rem; border-radius:10px; }
-  .ps-nav { display:flex; align-items:center; gap:.35rem; margin-bottom:.6rem; padding:.3rem .4rem; background:#f7f9fc; border-radius:6px; }
-  .ps-nav-logo { width:18px; height:18px; border-radius:4px; background:var(--orange); font-family:"Poppins",sans-serif; font-size:.45rem; font-weight:800; color:#022b44; display:flex; align-items:center; justify-content:center; }
-  .ps-nav-links { display:flex; gap:.3rem; margin-left:.3rem; }
-  .ps-nav-link { width:22px; height:4px; border-radius:2px; background:rgba(2,43,68,0.15); }
-  .ps-nav-link.active { background:var(--orange); }
-  .ps-nav-btn-sm { margin-left:auto; background:var(--orange); border-radius:4px; padding:.15rem .35rem; font-family:"Space Mono",monospace; font-size:.45rem; color:#022b44; font-weight:700; }
-  .ps-cards { display:grid; grid-template-columns:1fr 1fr 1fr; gap:.45rem; margin-bottom:.6rem; }
-  .ps-card { background:#fff; border-radius:7px; padding:.5rem .5rem; border:1px solid rgba(2,43,68,0.08); }
-  .ps-card-icon { width:20px; height:20px; border-radius:5px; background:rgba(237,131,55,0.12); display:flex; align-items:center; justify-content:center; font-size:.6rem; margin-bottom:.3rem; }
-  .ps-card-line { height:3px; border-radius:2px; margin-bottom:.2rem; }
-  .ps-card-line.w100{width:100%;background:rgba(2,43,68,0.12);} .ps-card-line.w70{width:70%;background:rgba(2,43,68,0.08);}
-  .proc-badge { position:absolute; background:#fff; border-radius:8px; padding:.38rem .85rem; font-size:.62rem; font-family:"Space Mono",monospace; font-weight:700; color:var(--orange); border:1px solid rgba(237,131,55,0.2); box-shadow:0 4px 18px rgba(0,0,0,0.1); white-space:nowrap; z-index:10; }
-  .pb-tl{top:-18px;left:-30px;animation:float1 3s ease-in-out infinite;}
-  .pb-tr{top:-18px;right:-30px;animation:float2 3.4s .5s ease-in-out infinite;}
-  .pb-bl{bottom:10px;left:-40px;animation:float1 2.8s 1s ease-in-out infinite;}
-  .pb-br{bottom:10px;right:-40px;animation:float2 3.1s .3s ease-in-out infinite;}
-    .proc-points.left .proc-point{flex-direction:row;text-align:left;}
-    .proc-points.left .proc-point-text{align-items:flex-start;}
-    .proc-mockup-wrap{margin:2rem 0;}
-  }
-
-  /* ══ KEY FEATURES CAROUSEL — FIXED CENTER ALIGN ══ */
-  .kf-section { position:relative; padding:4rem 0 6rem; overflow:hidden; background:#004168; }
-  .kf-section::before { content:""; position:absolute; inset:0; pointer-events:none; background-image:linear-gradient(rgba(255,255,255,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.025) 1px,transparent 1px); background-size:55px 55px; }
-  .kf-orbs { position:absolute; inset:0; pointer-events:none; z-index:0; }
-  .kf-orb { position:absolute; border-radius:50%; filter:blur(80px); animation:kf-orb-drift 8s ease-in-out infinite alternate; }
-  .kf-orb-1 { width:420px; height:420px; top:-80px; left:-60px; background:radial-gradient(circle,rgba(237,131,55,0.18) 0%,transparent 70%); }
-  .kf-orb-2 { width:360px; height:360px; bottom:-60px; right:-40px; background:radial-gradient(circle,rgba(96,165,250,0.14) 0%,transparent 70%); animation-delay:-3s; }
-  .kf-orb-3 { width:280px; height:280px; top:40%; left:40%; background:radial-gradient(circle,rgba(167,139,250,0.1) 0%,transparent 70%); animation-delay:-5s; }
-  @keyframes kf-orb-drift{from{transform:translate(0,0) scale(1);}to{transform:translate(30px,20px) scale(1.1);}}
-
-  .kf-inner { position:relative; z-index:2; width:100%; overflow:hidden;     background: #004168;
-    padding: 4rem; }
-
-  /* header centered */
-  .kf-header { text-align:center; margin-bottom:1.8rem; padding:0 6%; }
-  .kf-eyebrow { display:inline-flex; align-items:center; gap:.5rem; font-family:"Space Mono",monospace; font-size:.72rem; font-weight:700; color:var(--orange); letter-spacing:.13em; text-transform:uppercase; margin-bottom:1rem; }
-  .kf-eyebrow-line { width:24px; height:2px; background:var(--orange); border-radius:2px; }
-  .kf-title { font-family:"Poppins",sans-serif; font-size:clamp(2.2rem,3.4vw,3.4rem); font-weight:600; line-height:1.1; color:#fff; margin-bottom:1rem; }
-  .kf-title span { color:var(--orange); }
-  .kf-sub { font-size:.89rem; line-height:1.76; color:#fff; font-family:"Poppins"; }
-
-  /* carousel: full width, cards centered via transform */
-  .kf-carousel-wrap {
-    position:relative;
-    width:100%;
-    height:400px;
-    overflow:visible;
-  }
-
-  .kf-card {
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translateX(-50%) translateY(-50%);
-    width:340px;
-    border-radius:26px;
-    padding:2.2rem 1.8rem 1.8rem;
-    display:flex; flex-direction:column; gap:1.1rem;
-    background: linear-gradient(145deg, rgba(10, 54, 82, 0.55), rgb(76 186 235 / 23%));
-    backdrop-filter:blur(22px) saturate(180%);
-    border:1px solid rgba(255,255,255,0.14);
-    box-shadow:0 8px 40px rgba(0,0,0,0.45),inset 0 1px 0 rgba(255,255,255,0.16);
-    cursor:grab; user-select:none;
-    transition:transform 0.55s cubic-bezier(.34,1.3,.64,1),opacity 0.45s ease,box-shadow 0.4s ease,border-color 0.3s ease,filter 0.45s ease;
-    overflow:hidden; transform-origin:center center;
-    filter: blur(2px) brightness(0.7);
-  }
-  .kf-card.is-active { filter: blur(0px) brightness(1); }
-  .kf-card:active { cursor:grabbing; }
-  .kf-card::before { content:""; position:absolute; top:0; left:10%; right:10%; height:1px; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.38),transparent); }
-  .kf-card::after { content:""; position:absolute; width:200px; height:200px; border-radius:50%; background:radial-gradient(circle,rgba(237,131,55,0.15) 0%,transparent 70%); top:-80px; right:-60px; pointer-events:none; }
-  .kf-icon-wrap { flex-shrink:0; width:56px; height:56px; border-radius:16px; background:linear-gradient(135deg,rgba(237,131,55,0.22) 0%,rgba(237,131,55,0.06) 100%); border:1px solid rgba(237,131,55,0.3); display:flex; align-items:center; justify-content:center; font-size:1.6rem; box-shadow:0 4px 18px rgba(237,131,55,0.18),inset 0 1px 0 rgba(255,255,255,0.15); transition:transform .4s cubic-bezier(.34,1.3,.64,1); }
-  .kf-card.is-active .kf-icon-wrap { transform:scale(1.08) rotate(-5deg); }
-  .kf-card-body { position:relative; z-index:1; flex:1; }
-  .kf-card-title { font-family:"Poppins",sans-serif; font-size:1.05rem; font-weight:700; color: #ed8337; margin-bottom:.45rem; line-height:1.3; }
-  .kf-card-desc { font-size:.89rem; line-height:1.76; color:#fff; font-family:"Poppins"; }
-  .kf-card-accent { height:2px; border-radius:2px; margin-top:1rem; background:linear-gradient(90deg,var(--orange),rgba(237,131,55,0)); transition:width .6s ease .1s; }
-
-  /* nav & dots — centered */
-  .kf-nav { display:flex; justify-content:center; align-items:center; gap:1.2rem; margin-top:2.4rem; padding:0 6%; }
-  .kf-nav-btn { width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14); backdrop-filter:blur(10px); color:#fff; font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all .25s; }
-  .kf-nav-btn:hover { background:var(--orange); border-color:var(--orange); transform:scale(1.1); }
-  .kf-dots { display:flex; gap:.5rem; align-items:center; }
-  .kf-dot { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.2); border:none; padding:0; cursor:pointer; transition:all .3s; }
-  .kf-dot.active { background:var(--orange); width:22px; border-radius:4px; }
-  .kf-drag-hint { text-align:center; margin-top:.8rem; font-size:.72rem; color:rgba(255,255,255,0.25); font-family:"Space Mono",monospace; letter-spacing:.06em; padding:0 6%; }
-
-  /* ══ WHY CHOOSE US SECTION ══ */
-  .wcu-section {
-    padding: 4rem 6%; background: #fff; position: relative; overflow: hidden;
-  }
-  .wcu-section::before {
-    content:""; position:absolute; top:-120px; right:-120px; width:420px; height:420px;
-    border-radius:50%; background:radial-gradient(circle, rgba(237,131,55,0.07) 0%, transparent 70%);
-    pointer-events:none;
-  }
-  .wcu-inner {
-    margin: 0 auto;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
-  }
-  /* LEFT IMAGE SIDE */
-  .wcu-img-col { position: relative; }
-  .wcu-img-frame {
-    position: relative; border-radius: 24px; overflow: hidden;
-  }
-  .wcu-img-frame img {
-    width: 100%; object-fit: cover; display: block;
-  }
-  /* RIGHT TEXT SIDE */
-  .wcu-text-col { padding-bottom: 1.5rem; }
-  .wcu-eyebrow {
-    display: inline-flex; align-items: center; gap: .55rem;
-    font-family:"Space Mono",monospace; font-size:.7rem; font-weight:700;
-    color: var(--orange); letter-spacing:.13em; text-transform:uppercase;
-    margin-bottom: 1rem;
-  }
-  .wcu-eyebrow-line { width:24px; height:2px; background:var(--orange); border-radius:2px; }
-  .wcu-heading {
-    font-family:"Poppins",sans-serif; font-size:clamp(1.8rem,2.8vw,2.2rem);
-    font-weight:600; line-height:1.12; color:#000; margin-bottom:1rem;
-  }
-  .wcu-heading span { color: var(--orange); }
-  .wcu-desc {
-    font-size:1rem; line-height:1.82; color:#4a5568; margin-bottom:1rem;
-  }
-
-  }
-
-  /* ══ PORTFOLIO SECTION ══ */
-  .pf-section {
-    padding: 6rem 6%;
-    background: #004168;
-    position: relative; overflow: hidden;
-  }
-  .pf-section::before {
-    content:""; position:absolute; inset:0; pointer-events:none;
-    background-image:linear-gradient(rgba(237,131,55,0.03) 1px,transparent 1px),
-                     linear-gradient(90deg,rgba(237,131,55,0.03) 1px,transparent 1px);
-    background-size:55px 55px;
-  }
-  .pf-section::after {
-    content:""; position:absolute; top:-200px; right:-200px; width:600px; height:600px;
-    border-radius:50%; pointer-events:none;
-    background:radial-gradient(circle, rgba(237,131,55,0.07) 0%, transparent 65%);
-  }
-  .pf-inner {
-   margin:0 auto; position:relative; z-index:2;
-    display:grid; grid-template-columns:minmax(280px, 450px) 1fr; gap:4rem; align-items:start;
-        background: #004168;
-    padding: 5rem 4rem;
-  }
-
-  /* LEFT TEXT */
-  .pf-left { position:sticky; top:6rem; }
-  .pf-eyebrow {
-    display:inline-flex; align-items:center; gap:.55rem;
-    font-family:"Space Mono",monospace; font-size:.68rem; font-weight:700;
-    color:var(--orange); letter-spacing:.14em; text-transform:uppercase; margin-bottom:1.2rem;
-  }
-  .pf-eyebrow-line { width:22px; height:2px; background:var(--orange); border-radius:2px; }
-  .pf-heading {
-    font-family:"Poppins",sans-serif; font-size:clamp(2rem,3vw,2.8rem);
-    font-weight:600; line-height:1.1; color:#fff; margin-bottom:1.2rem;
-  }
-  .pf-heading span { color:var(--orange); }
-  .pf-desc { font-size:.97rem; line-height:1.82; color:rgba(255, 255, 255, 0.92); margin-bottom:2.2rem; }
-  .pf-btn {
-    display:inline-flex; align-items:center; gap:.55rem;
-    background:var(--orange); color:#fff; padding:.88rem 2rem; border-radius:50px;
-    font-family:"Poppins",sans-serif; font-size:.9rem; font-weight:700;
-    text-decoration:none; border:none; cursor:pointer;
-    box-shadow:0 4px 24px rgba(237,131,55,.35); transition:all .22s;
-  }
-  .pf-btn:hover { background:var(--orange-light); transform:translateY(-2px); box-shadow:0 8px 32px rgba(237,131,55,.45); }
-  .pf-btns { display:flex; flex-direction:column; align-items:flex-start; gap:.5rem; }
-  /* RIGHT COLUMNS */
-  .pf-cols {
-    display:grid; grid-template-columns:repeat(3, 1fr); gap:1.1rem; align-items:start;
-  }
-  .pf-col { display:flex; flex-direction:column; gap:1.1rem; overflow:hidden; }
-  /* scroll animation */
-  .pf-col-inner {
-    display:flex; flex-direction:column; gap:1.1rem;
-    transition: transform 0.1s linear;
-  }
-  /* individual card */
-  .pf-card {
-    border-radius:16px; overflow:hidden; position:relative; cursor:pointer;
-    border:1.5px solid rgba(255,255,255,0.07);
-    box-shadow:0 4px 20px rgba(0,0,0,0.35);
-    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
-    flex-shrink:0;
-  }
-  .pf-card:hover { transform:scale(1.03); box-shadow:0 12px 40px rgba(0,0,0,.55); border-color:rgba(237,131,55,0.5); }
-  .pf-card img {
-    width:100%; height:200px; object-fit:cover; display:block;
-    transition:transform .4s ease;
-  }
-  .pf-card:hover img { transform:scale(1.06); }
-  .pf-card-overlay {
-    position:absolute; inset:0;
-    background:linear-gradient(180deg, transparent 40%, rgba(2,27,43,0.92) 100%);
-    opacity:0; transition:opacity .3s ease;
-    display:flex; flex-direction:column; justify-content:flex-end; padding:1rem 1.1rem;
-  }
-  .pf-card:hover .pf-card-overlay { opacity:1; }
-  .pf-card-label {
-    font-family:"Poppins",sans-serif; font-size:.78rem; font-weight:700; color:#fff;
-    margin-bottom:.2rem;
-  }
-  .pf-card-tag {
-    font-family:"Space Mono",monospace; font-size:.6rem; color:var(--orange);
-    letter-spacing:.08em; text-transform:uppercase;
-  }
-    .pf-left { position:static; }
-  } }
-  /* ══════════════════════════════════════════════
-     FULLY RESPONSIVE — Mobile / Tablet / Desktop
-     Mobile  : ≤ 540px
-     Tablet  : 541px – 900px
-     Desktop : > 900px  (defaults above)
-  ══════════════════════════════════════════════ */
-
-  /* ── HERO BANNER ── */
-
-    .wd-hero-content  { order: 1; align-items: flex-start; }
-    .wd-hero-img { width:100%; }
-    .wd-hero-actions { justify-content: flex-start; }
-    .badge { margin: 0 0 1.2rem; }
-    .wd-hero-heading { text-align: start; }
-  }
-  @keyframes wd-line-in-c { to { transform: translateX(-50%) scaleX(1); } }
-  @media (max-width: 540px) {
-    .wd-hero { padding: 5.5rem 4% 3rem; gap: 1.2rem; }
-    .wd-hero-heading { font-size: clamp(1.7rem, 7vw, 2.2rem); }
-    .wd-hero-sub { font-size: 0.93rem; }
-    .wd-btn-fill { padding: 0.75rem 1.5rem; font-size: 0.85rem; width: 100%; justify-content: center; }
-  }
-
-  /* ── OUR APPROACH (content + form) ── */
-  @media (max-width: 900px) {
-    .wd-approach { padding: 3.5rem 5%; }
-    .wd-ap-inner {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-    .wd-ap-form-wrap { max-width: 100%; }
-    .wd-ap-heading { font-size: clamp(1.5rem, 4vw, 2rem); }
-  }
-  @media (max-width: 540px) {
-    .wd-approach { padding: 3rem 4%; }
-    .wd-ap-form-card { padding: 2rem 1.4rem; }
-    .wd-fl-row { grid-template-columns: 1fr; }
-    .wd-form-title { font-size: 1.4rem; }
-  }
-
-  /* ── WHAT WE OFFER — ORBIT ── */
-  @media (max-width: 900px) {
-    .pcs-offer-section { padding: 4rem 5% 5rem; }
-    .pcs-offer-body { grid-template-columns: 1fr; gap: 2.5rem; }
-    .pcs-offer-left { justify-content: center; }
-    .pcs-orbit-wrap { width: 320px; height: 320px; }
-    .pcs-orbit-center { width: 90px; height: 90px; }
-    .pcs-orbit-center-name { font-size: 1.1rem; }
-    .pcs-orbit-node-box { width: 78px; height: 78px; gap: 6px; }
-    .pcs-orbit-node-emoji { font-size: 1.2rem; }
-    .pcs-orbit-node-lbl { font-size: .6rem; }
-    .pcs-offer-heading { margin-bottom: 3rem; }
-  }
-  @media (max-width: 540px) {
-    .pcs-offer-section { padding: 3rem 4% 4rem; }
-    .pcs-orbit-wrap { width: 260px; height: 260px; }
-    .pcs-orbit-center { width: 76px; height: 76px; }
-    .pcs-orbit-center-name { font-size: 0.95rem; }
-    .pcs-orbit-node-box { width: 62px; height: 62px; padding: 4px; }
-    .pcs-orbit-node-emoji { font-size: 1rem; }
-    .pcs-orbit-node-lbl { font-size: .52rem; }
-  }
-
-  /* ── WHAT'S INCLUDED — ACCORDION ── */
-  @media (max-width: 900px) {
-    .pcs-wi5-section { padding: 4rem 5% 5rem; }
-    .pcs-wi5-tab-content { grid-template-columns: 1fr; padding-left: 2rem; gap: 1rem; }
-    .pcs-wi5-tab-head { gap: 1rem; padding: 1.2rem 1.4rem; }
-  }
-  @media (max-width: 540px) {
-    .pcs-wi5-section { padding: 3rem 4% 4rem; }
-    .pcs-wi5-tab-num { width: 42px; height: 42px; }
-    .pcs-wi5-tab-icon { width: 34px; height: 34px; font-size: 1rem; }
-    .pcs-wi5-tab-title { font-size: 0.88rem; }
-    .pcs-wi5-tab-content { padding-left: 1rem; }
-    .pcs-wi5-tab-head { padding: 1rem; gap: 0.7rem; }
-  }
-
-  /* ── OUR PROCESS ── */
-  @media (max-width: 900px) {
-    .pcs-proc-section { padding: 4rem 5%; }
-    .pcs-proc-track { padding-left: 0.5rem; }
-  }
-  @media (max-width: 540px) {
-    .pcs-proc-section { padding: 3rem 4%; }
-    .pcs-proc-card { flex-direction: column; gap: 0.8rem; padding: 1.2rem; }
-    .pcs-proc-card-icon { width: 42px; height: 42px; font-size: 1.3rem; }
-    .pcs-proc-step { gap: 1rem; }
-    .pcs-proc-num-wrap { width: 44px; height: 44px; }
-    .pcs-proc-card-title { font-size: 0.95rem; }
-    .pcs-proc-card-desc { font-size: 0.85rem; }
-  }
-
-  /* ── FEATURES / WHY — 4 BOX GRID ── */
-  @media (max-width: 900px) {
-    .pcs-fb-section { padding: 4rem 5%; }
-    .pcs-fb-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto;
-    }
-    .pcs-fb-grid > div:nth-child(2) {
-      grid-column: 1 / -1;
-      grid-row: auto;
-      order: -1;
-      margin-bottom: 1rem;
-    }
-    .pcs-fb-vline, .pcs-fb-hline { display: none; }
-    .pcs-fb-box { border-radius: 14px !important; border: 1.5px solid rgba(0,65,104,0.13) !important; margin: 0.4rem; }
-  }
-  @media (max-width: 540px) {
-    .pcs-fb-section { padding: 3rem 4%; }
-    .pcs-fb-grid {
-      grid-template-columns: 1fr;
-    }
-    .pcs-fb-grid > div:nth-child(2) {
-      grid-column: 1;
-    }
-    .pcs-fb-title { font-size: clamp(1.4rem, 5vw, 1.9rem); }
-    .pcs-fb-box { padding: 1.6rem 1.4rem; margin: 0.3rem 0; }
-  }
-
-  /* ── FAQ SECTION ── */
-  .faq-section { background: #fff; padding: 5rem 6% 0; }
-  0
-  .faq-head { text-align: center; margin-bottom: 2.5rem; }
-  .faq-head h2 { font-family:"Poppins",sans-serif; font-size: clamp(1.8rem,3vw,2.5rem); font-weight: 700; color: #011a2a; line-height: 1.15; }
-  .faq-head h2 span { color: var(--orange); font-style: italic; }
-  .faq-wrapper { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-  .faq-col { display: flex; flex-direction: column; gap: 1rem; }
-  .faq-item { border-radius: 14px; overflow: hidden; transition: border-color .22s; }
-  .faq-item:hover { border-color: rgba(237,131,55,0.4); }
-  .faq-question { display: flex; justify-content: space-between; align-items: center; padding: 1.1rem 1.4rem; cursor: pointer; font-family:"Poppins",sans-serif; font-size: .92rem; font-weight: 600; color: #011a2a; gap: 1rem; user-select: none; }
-  .faq-question .icon { font-size: 1.3rem; color: var(--orange); flex-shrink: 0; }
-  .faq-answer { padding: .2rem 1.4rem 1.1rem; font-size: .88rem; color: #5a6070; line-height: 1.78; border-top: 1px solid rgba(0,0,0,0.05); }
-
-  @media (max-width: 900px) {
-    .faq-wrapper { grid-template-columns: 1fr !important; gap: 0.8rem !important; }
-    .faq-section { padding: 4rem 5% 3rem !important; }
-    .faq-head { margin-bottom: 2rem; }
-  }
-  @media (max-width: 540px) {
-    .faq-section { padding: 3rem 4% 2.5rem !important; }
-    .faq-head h2 { font-size: clamp(1.4rem, 5vw, 1.9rem); }
-    .faq-question { font-size: 0.86rem; padding: 1rem 1.1rem; gap: 0.7rem; }
-    .faq-answer { font-size: 0.84rem; padding: 0.5rem 1.1rem 1rem; }
-    .faq-col { gap: 0.7rem; }
-    .faq-item { border-radius: 10px; }
-  }
-  @media (max-width: 400px) {
-    .faq-section { padding: 2.5rem 4% 2rem !important; }
-    .faq-question { font-size: 0.82rem; padding: 0.9rem 1rem; }
-  }
-
-  /* ── SECTION APPROACH / INNER TEXT ── */
-  @media (max-width: 900px) {
-    section#approach { padding-top: 3rem; }
-  }
-
-  /* ── GENERAL UTILITY ── */
-  @media (max-width: 540px) {
-    .partners-header1, .partners-header2 { padding: 0 1rem; }
-    .partners-eyebrow { font-size: 0.68rem; }
-    .pcs-proc-header h2, .pcs-proc-title { font-size: clamp(1.4rem, 5vw, 2rem); }
-    .pcs-wi5-heading, .pcs-offer-heading, .wd-ap-heading { font-size: clamp(1.4rem, 5vw, 1.9rem) !important; }
-  }
-
-  /* ── SERVICES ACCORDION ── */
-  @media (max-width: 900px) {
-    .svc-section { padding: 4rem 5% 5rem; }
-    .svc-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-    .svc-right-col { position: static; top: auto; }
-    .svc-heading { font-size: clamp(1.6rem, 5vw, 2.2rem); }
-    .svc-sub { max-width: 100%; }
-    .svc-count-row { gap: 0.75rem; flex-wrap: wrap; }
-    .acc-desc { padding-left: 0; }
-    .acc-item.open .acc-body { max-height: 400px; }
-  }
-  @media (max-width: 540px) {
-    .svc-section { padding: 3rem 4% 4rem; }
-    .svc-heading { font-size: clamp(1.4rem, 6vw, 1.9rem); }
-    .svc-count-row { gap: 0.5rem; }
-    .svc-count-pill { padding: 0.6rem 1rem; }
-    .svc-count-num { font-size: 1.4rem; }
-    .svc-count-lbl { font-size: 0.65rem; }
-    .acc-header { padding: 1rem; gap: 0.8rem; }
-    .acc-num { min-width: 20px; font-size: 0.6rem; }
-    .acc-icon { width: 34px; height: 34px; font-size: 0.95rem; }
-    .acc-title { font-size: 0.86rem; }
-    .acc-arrow { width: 24px; height: 24px; }
-    .acc-desc { font-size: 0.85rem; line-height: 1.75; }
-    .acc-item.open .acc-body { max-height: 500px; padding-bottom: 1.2rem; }
-    .svc-cta-btn { width: 100%; justify-content: center; }
-  }
-
-  /* ── WHY CHOOSE US ── */
-  @media (max-width: 900px) {
-    .wcu-section { padding: 4rem 5%; }
-    .wcu-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-    .wcu-img-col { max-width: 520px; margin: 0 auto; width: 100%; }
-  }
-  @media (max-width: 540px) {
-    .wcu-section { padding: 3rem 4%; }
-    .wcu-heading { font-size: clamp(1.4rem, 5vw, 1.9rem); }
-  }
-
-  /* ── KEY FEATURES CAROUSEL ── */
-  @media (max-width: 900px) {
-    .kf-section { padding: 3rem 0 4rem; }
-    .kf-inner { padding: 2rem; }
-    .kf-carousel-wrap { height: 360px; }
-    .kf-card { width: 290px; }
-    .kf-title { font-size: clamp(1.6rem, 5vw, 2.4rem); }
-  }
-  @media (max-width: 540px) {
-    .kf-inner { padding: 1.5rem 1rem; }
-    .kf-carousel-wrap { height: 320px; }
-    .kf-card { width: 260px; padding: 1.6rem 1.4rem 1.4rem; }
-    .kf-title { font-size: clamp(1.4rem, 5vw, 1.9rem); }
-    .kf-card-title { font-size: 0.95rem; }
-    .kf-card-desc { font-size: 0.82rem; }
-  }
-
-  /* ── PORTFOLIO SECTION ── */
-  @media (max-width: 1100px) {
-    .pf-inner { grid-template-columns: 1fr; gap: 2.5rem; padding: 3rem 2rem; }
-    .pf-left { position: static; top: auto; }
-    .pf-cols { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 900px) {
-    .pf-section { padding: 4rem 5%; }
-    .pf-inner { padding: 2rem 1.5rem; }
-    .pf-heading { font-size: clamp(1.6rem, 5vw, 2.2rem); }
-  }
-  @media (max-width: 540px) {
-    .pf-section { padding: 3rem 4%; }
-    .pf-inner { padding: 1.5rem 1rem; }
-    .pf-cols { grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .pf-heading { font-size: clamp(1.4rem, 5vw, 1.9rem); }
-    .pf-desc { font-size: 0.88rem; }
-    .pf-col { height: 400px !important; }
-  }
-
-  /* ── PROCESS SECTION ── */
-  @media (max-width: 1000px) {
-    .proc-cols { grid-template-columns: 1fr; gap: 2rem; }
-    .proc-mockup-wrap { order: -1; margin: 1rem auto; }
-    .proc-points.left .proc-point { flex-direction: row; text-align: left; }
-    .proc-points.left .proc-point-text { align-items: flex-start; }
-    .proc-screen { width: 220px; }
-    .pb-tl, .pb-tr, .pb-bl, .pb-br { display: none; }
-  }
-  @media (max-width: 900px) {
-    .proc-section { padding: 4rem 5%; margin: 0 !important; }
-    .proc-heading { font-size: clamp(1.6rem, 5vw, 2.2rem); }
-  }
-  @media (max-width: 540px) {
-    .proc-section { padding: 3rem 4%; }
-    .proc-heading { font-size: clamp(1.4rem, 5vw, 1.9rem); }
-    .proc-point { padding: 0.8rem; gap: 0.7rem; }
-    .proc-icon { width: 32px; height: 32px; min-width: 32px; font-size: 0.85rem; }
-    .proc-pt-title { font-size: 0.95rem; }
-    .proc-pt-desc { font-size: 0.82rem; }
-    .proc-screen { width: 180px; }
-  }
-`;
-
 /* ══════ DATA ══════ */
 const SERVICES = [
-  { num:"01", icon:<img src="/img/icon/svc-website-design.webp" alt="Website Design" width="30" height="30" />, title:"Website Design", tag:"Design", tagColor:"#ed8337", fill:92, desc:"Create visually compelling, user-focused website designs that enhance brand identity and engagement. We combine modern aesthetics, intuitive navigation, and strategic layouts to deliver impactful digital experiences that build credibility and customer trust." },
-  { num:"02", icon:<img src="/img/icon/svc-static-website.webp" alt="Static Website Development" width="30" height="30" />, title:"Static Website Development", tag:"Fast", tagColor:"#ed8337", fill:88, desc:"Develop fast, secure static websites designed for performance and simplicity. Ideal for startups and growing businesses, our solutions ensure reliability, easy maintenance, and professional online presence across all devices." },
-  { num:"03", icon:<img src="/img/icon/svc-custom-website.webp" alt="Custom Website Development" width="30" height="30" />, title:"Custom Website Development", tag:"Custom", tagColor:"#ed8337", fill:95, desc:"Build fully customized websites tailored to your business requirements and workflows. Our development approach ensures scalability, seamless integrations, flexibility, and complete control, delivering solutions aligned with long-term growth objectives." },
-  { num:"04", icon:<img src="/img/icon/svc-woocommerce.webp" alt="WooCommerce Development" width="30" height="30" />, title:"WooCommerce Development", tag:"eCommerce", tagColor:"#ed8337", fill:90, desc:"Develop scalable WooCommerce stores with secure payments and flexible customization. We focus on optimized performance, structured product management, and conversion-driven design to support consistent ecommerce growth." },
-  { num:"05", icon:<img src="/img/icon/svc-ecommerce.webp" alt="Custom E-Commerce Development" width="30" height="30" />, title:"Custom E-Commerce Development", tag:"Scale", tagColor:"#ed8337", fill:87, desc:"Create conversion-focused ecommerce websites optimized for speed, security, and usability. Our scalable platforms feature structured architecture, seamless checkout systems, and performance enhancements to maximize engagement and sales." },
-  { num:"06", icon:<img src="/img/icon/svc-shopify.webp" alt="Shopify Website Development" width="30" height="30" />, title:"Shopify Website Development", tag:"Shopify", tagColor:"#ed8337", fill:93, desc:"Design high-performing Shopify stores built for growth and automation. From store setup to customization and SEO optimization, we deliver secure, mobile-responsive solutions that enhance user experience and scalability." },
+  { num: "01", icon: <img src="/img/icon/svc-website-design.webp" alt="Website Design" width="30" height="30" />, title: "Website Design", tag: "Design", tagColor: "#ed8337", fill: 92, desc: "Create visually compelling, user-focused website designs that enhance brand identity and engagement. We combine modern aesthetics, intuitive navigation, and strategic layouts to deliver impactful digital experiences that build credibility and customer trust." },
+  { num: "02", icon: <img src="/img/icon/svc-static-website.webp" alt="Static Website Development" width="30" height="30" />, title: "Static Website Development", tag: "Fast", tagColor: "#ed8337", fill: 88, desc: "Develop fast, secure static websites designed for performance and simplicity. Ideal for startups and growing businesses, our solutions ensure reliability, easy maintenance, and professional online presence across all devices." },
+  { num: "03", icon: <img src="/img/icon/svc-custom-website.webp" alt="Custom Website Development" width="30" height="30" />, title: "Custom Website Development", tag: "Custom", tagColor: "#ed8337", fill: 95, desc: "Build fully customized websites tailored to your business requirements and workflows. Our development approach ensures scalability, seamless integrations, flexibility, and complete control, delivering solutions aligned with long-term growth objectives." },
+  { num: "04", icon: <img src="/img/icon/svc-woocommerce.webp" alt="WooCommerce Development" width="30" height="30" />, title: "WooCommerce Development", tag: "eCommerce", tagColor: "#ed8337", fill: 90, desc: "Develop scalable WooCommerce stores with secure payments and flexible customization. We focus on optimized performance, structured product management, and conversion-driven design to support consistent ecommerce growth." },
+  { num: "05", icon: <img src="/img/icon/svc-ecommerce.webp" alt="Custom E-Commerce Development" width="30" height="30" />, title: "Custom E-Commerce Development", tag: "Scale", tagColor: "#ed8337", fill: 87, desc: "Create conversion-focused ecommerce websites optimized for speed, security, and usability. Our scalable platforms feature structured architecture, seamless checkout systems, and performance enhancements to maximize engagement and sales." },
+  { num: "06", icon: <img src="/img/icon/svc-shopify.webp" alt="Shopify Website Development" width="30" height="30" />, title: "Shopify Website Development", tag: "Shopify", tagColor: "#ed8337", fill: 93, desc: "Design high-performing Shopify stores built for growth and automation. From store setup to customization and SEO optimization, we deliver secure, mobile-responsive solutions that enhance user experience and scalability." },
 ];
 
 const FEATURES = [
-  { icon:<img src="/img/icon/feat-structure.webp" alt="Strategic Website Structure" width="28" height="28" />, title:"Strategic Website Structure", desc:"Well-planned layouts and intuitive navigation systems crafted to enhance usability, improve engagement, and guide visitors smoothly toward meaningful actions." },
-  { icon:<img src="/img/icon/feat-responsive.webp" alt="Responsive and Adaptive Design" width="28" height="28" />, title:"Responsive & Adaptive Design", desc:"Device-optimized, mobile-first designs ensuring seamless performance and consistent user experience across desktops, tablets, and smartphones." },
-  { icon:<img src="/img/icon/feat-seo.webp" alt="Search Ready Development" width="28" height="28" />, title:"Search-Ready Development", desc:"SEO-focused coding practices, structured metadata, schema setup, and optimized architecture to strengthen search engine visibility." },
-  { icon:<img src="/img/icon/feat-performance.webp" alt="Speed and Performance Enhancement" width="28" height="28" />, title:"Speed & Performance Enhancement", desc:"Optimized frameworks, efficient database structuring, and performance tuning techniques to deliver fast-loading and stable websites." },
-  { icon:<img src="/img/icon/feat-integrations.webp" alt="Seamless System Integrations" width="28" height="28" />, title:"Seamless System Integrations", desc:"Integration with payment gateways, WhatsApp, shipping systems, analytics tools, and marketing solutions for streamlined operations." },
-  { icon:<img src="/img/icon/feat-scalability.webp" alt="Future Ready Scalability" width="28" height="28" />, title:"Future-Ready Scalability", desc:"Flexible development frameworks designed to accommodate business expansion, advanced features, increasing traffic, and evolving digital needs." },
+  { icon: <img src="/img/icon/feat-structure.webp" alt="Strategic Website Structure" width="28" height="28" />, title: "Strategic Website Structure", desc: "Well-planned layouts and intuitive navigation systems crafted to enhance usability, improve engagement, and guide visitors smoothly toward meaningful actions." },
+  { icon: <img src="/img/icon/feat-responsive.webp" alt="Responsive and Adaptive Design" width="28" height="28" />, title: "Responsive & Adaptive Design", desc: "Device-optimized, mobile-first designs ensuring seamless performance and consistent user experience across desktops, tablets, and smartphones." },
+  { icon: <img src="/img/icon/feat-seo.webp" alt="Search Ready Development" width="28" height="28" />, title: "Search-Ready Development", desc: "SEO-focused coding practices, structured metadata, schema setup, and optimized architecture to strengthen search engine visibility." },
+  { icon: <img src="/img/icon/feat-performance.webp" alt="Speed and Performance Enhancement" width="28" height="28" />, title: "Speed & Performance Enhancement", desc: "Optimized frameworks, efficient database structuring, and performance tuning techniques to deliver fast-loading and stable websites." },
+  { icon: <img src="/img/icon/feat-integrations.webp" alt="Seamless System Integrations" width="28" height="28" />, title: "Seamless System Integrations", desc: "Integration with payment gateways, WhatsApp, shipping systems, analytics tools, and marketing solutions for streamlined operations." },
+  { icon: <img src="/img/icon/feat-scalability.webp" alt="Future Ready Scalability" width="28" height="28" />, title: "Future-Ready Scalability", desc: "Flexible development frameworks designed to accommodate business expansion, advanced features, increasing traffic, and evolving digital needs." },
 ];
 
 const PROCESS_LEFT = [
-  { num:"Step 01", icon:<img src="/img/icon/website-discover.webp" alt="Discover" width="24" height="24" />, title:"Discover", desc:"We understand your brand, goals, audience, competitors, and preferences to build a strategic foundation aligned with business objectives." },
-  { num:"Step 02", icon:<img src="/img/icon/proc-plan-structure.webp" alt="Plan and Structure" width="24" height="24" />, title:"Plan & Structure", desc:"We create sitemaps, define functionalities, finalize technology stack, and establish timelines ensuring clarity before development begins." },
-  { num:"Step 03", icon:<img src="/img/icon/proc-design-prototype.webp" alt="Design and Prototype" width="24" height="24" />, title:"Design & Prototype", desc:"Our designers craft intuitive interfaces and interactive prototypes, allowing you to review visual direction before development." },
+  { num: "Step 01", icon: <img src="/img/icon/website-discover.webp" alt="Discover" width="24" height="24" />, title: "Discover", desc: "We understand your brand, goals, audience, competitors, and preferences to build a strategic foundation aligned with business objectives." },
+  { num: "Step 02", icon: <img src="/img/icon/proc-plan-structure.webp" alt="Plan and Structure" width="24" height="24" />, title: "Plan & Structure", desc: "We create sitemaps, define functionalities, finalize technology stack, and establish timelines ensuring clarity before development begins." },
+  { num: "Step 03", icon: <img src="/img/icon/proc-design-prototype.webp" alt="Design and Prototype" width="24" height="24" />, title: "Design & Prototype", desc: "Our designers craft intuitive interfaces and interactive prototypes, allowing you to review visual direction before development." },
 ];
 
 const PROCESS_RIGHT = [
-  { num:"Step 04", icon:<img src="/img/icon/proc-develop-integrate.webp" alt="Develop and Integrate" width="24" height="24" />, title:"Develop & Integrate", desc:"We convert designs into responsive code, integrating CMS, analytics, databases, and essential third-party tools." },
-  { num:"Step 05", icon:<img src="/img/icon/proc-test-optimize.webp" alt="Test and Optimize" width="24" height="24" />, title:"Test & Optimize", desc:"We conduct thorough testing across devices, browsers, speed performance, and functionality to ensure reliability." },
-  { num:"Step 06", icon:<img src="/img/icon/proc-launch-support.webp" alt="Launch and Support" width="24" height="24" />, title:"Launch & Support", desc:"After final approval, we launch confidently and provide ongoing support, updates, and performance monitoring." },
+  { num: "Step 04", icon: <img src="/img/icon/proc-develop-integrate.webp" alt="Develop and Integrate" width="24" height="24" />, title: "Develop & Integrate", desc: "We convert designs into responsive code, integrating CMS, analytics, databases, and essential third-party tools." },
+  { num: "Step 05", icon: <img src="/img/icon/proc-test-optimize.webp" alt="Test and Optimize" width="24" height="24" />, title: "Test & Optimize", desc: "We conduct thorough testing across devices, browsers, speed performance, and functionality to ensure reliability." },
+  { num: "Step 06", icon: <img src="/img/icon/proc-launch-support.webp" alt="Launch and Support" width="24" height="24" />, title: "Launch & Support", desc: "After final approval, we launch confidently and provide ongoing support, updates, and performance monitoring." },
 ];
 
 /* ══════ SECTION 1A: HERO BANNER ══════ */
@@ -891,25 +258,25 @@ function HeroBanner() {
       <div className="wd-hero-bg-grid" />
 
       {/* LEFT */}
-      <div className="wd-hero-content" style={{position:"relative",zIndex:2,display:"flex",flexDirection:"column"}}>
+      <div style={{ position: "relative", zIndex: 2, display: "flex", flexDirection: "column" }}>
         <div className="badge"><div className="badge-dot" />Website Development</div>
         <h1 className="wd-hero-heading">
           Performance Driven
-          <span className="orange lined">Website Development </span>from Concept to Code 
+          <span className="orange lined"> Website Development</span> from Concept to Code
         </h1>
         <p className="wd-hero-sub">
-At PCS, we deliver strategic website development services that combine design, performance, and scalability to help businesses grow online. As a trusted website development agency in Coimbatore , we ensure high-value solutions optimized for cost efficiency.
+          At PCS, we deliver strategic website development services that combine design, performance, and scalability to help businesses grow online. As a trusted website development agency in Coimbatore , we ensure high-value solutions optimized for cost efficiency.
         </p>
         <div className="wd-hero-actions">
-          <a className="wd-btn-fill" href="/contact-us">Get a Free Quote <span className="wd-btn-arrow">›</span></a>
+          <a className="wd-btn-fill" href="/contact-us">Connect Now<span className="wd-btn-arrow">›</span></a>
         </div>
       </div>
 
-      {/* RIGHT — hero image */}
-      <div className="wd-hero-img-wrap" style={{position:"relative",zIndex:2,display:"flex",alignItems:"center",justifyContent:"center",animation:"fadeUp .9s .15s ease both"}}>
+      {/* RIGHT — banner image */}
+      <div style={{ position: "relative", zIndex: 2, display: "flex", alignItems: "center", justifyContent: "center", animation: "fadeUp .9s .15s ease both" }}>
         <img
           src={banner}
-          alt="Website Development Services"
+          alt=" Website Development Banner"
           className="wd-hero-img"
         />
       </div>
@@ -981,16 +348,14 @@ function ApproachSection() {
           </div>
           <h2 className="ap-heading">Smart, Scalable, and <span> Stunning Websites</span> Built for Results</h2>
           <p className="ap-intro">
-Your website is more than a digital storefront — it represents your brand, credibility, and customer experience around the clock. We follow a strategy-first approach focused on usability, structure, scalability, and long-term business growth.
-
+            Your website is more than a digital storefront — it represents your brand, credibility, and customer experience around the clock. We follow a strategy-first approach focused on usability, structure, scalability, and long-term business growth.
           </p>
           <p className="ap-intro">
-Every website element is thoughtfully planned to align with your business objectives, audience expectations, and brand positioning. Our development process prioritizes seamless functionality, responsive performance, and creating strong digital foundations that support growth.
+            Every website element is thoughtfully planned to align with your business objectives, audience expectations, and brand positioning. Our development process prioritizes seamless functionality, responsive performance, and creating strong digital foundations that support growth.
           </p>
-  <p className="ap-intro">
-    Whether launching a startup website, revamping an outdated platform, or building a complex system, we focus on speed, reliability, and user experience. Every website is designed to perform smoothly across devices and platforms.
-
-  </p>
+          <p className="ap-intro">
+            Whether launching a startup website, revamping an outdated platform, or building a complex system, we focus on speed, reliability, and user experience. Every website is designed to perform smoothly across devices and platforms.
+          </p>
         </div>
 
         {/* RIGHT FORM */}
@@ -1088,7 +453,6 @@ Every website element is thoughtfully planned to align with your business object
                     placeholder="Tell us about your business needs..."
                     value={form.msg}
                     onChange={handleChange}
-
                   />
                 </div>
               </div>
@@ -1098,7 +462,6 @@ Every website element is thoughtfully planned to align with your business object
                 Get Free Consultation
                 <span className="ap-submit-arrow">›</span>
               </button>
-
             </form>
             {/* ✅ FORM END */}
           </div>
@@ -1116,13 +479,13 @@ function ServicesSection() {
     <section className="svc-section">
       <div className="svc-layout">
         <div className="svc-right-col">
-  <div className="partners-header1">
+          <div className="partners-header1">
             <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Website Development Services
-</h2>
+            </h2>
           </div>          <h3 className="svc-heading">Not Just Websites. <span className="accent"><i>Growth-Driven</i></span> Digital Experiences.</h3>
           <p className="svc-sub">
-We create websites that go beyond pretty pages. They’re fast, intuitive, optimized, and built for long-term impact.
-</p>
+            We create websites that go beyond pretty pages. They’re fast, intuitive, optimized, and built for long-term impact.
+          </p>
 
           <a href="/contact-us" className="svc-cta-btn">Get a Free Consultation &nbsp;→</a>
         </div>
@@ -1139,7 +502,7 @@ We create websites that go beyond pretty pages. They’re fast, intuitive, optim
                   <div className="acc-arrow">▼</div>
                 </div>
                 <div className="acc-body">
-                  <div className="acc-divider" style={{background:`linear-gradient(90deg,${s.tagColor}4d,transparent)`}}></div>
+                  <div className="acc-divider" style={{ background: `linear-gradient(90deg,${s.tagColor}4d,transparent)` }}></div>
                   <div className="acc-desc">{s.desc}</div>
                   {/* <div className="acc-bar-wrap">
                     <div className="acc-bar-track">
@@ -1159,7 +522,7 @@ We create websites that go beyond pretty pages. They’re fast, intuitive, optim
 
 /* ══════ SECTION 2B: WHY CHOOSE US ══════ */
 function WhyChooseUsSection() {
-  
+
   return (
     <section className="wcu-section">
       <div className="wcu-inner">
@@ -1171,12 +534,11 @@ function WhyChooseUsSection() {
               alt="Web development team working"
             />
           </div>
-
         </div>
 
         {/* RIGHT — TEXT */}
         <div className="wcu-text-col">
-        <div className="h2artners-header1">
+          <div className="h2artners-header1">
             <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Why Choose Us</h2>
           </div>
           <h3 className="wcu-heading">
@@ -1184,14 +546,13 @@ function WhyChooseUsSection() {
             <span><i> Website Development Company</i> </span> Delivering Growth-Driven Digital Solutions
           </h3>
           <p className="wcu-desc">
-We develop strategic, high-performance websites designed to enhance brand visibility and support measurable business growth. Our solutions combine modern design, structured architecture, and scalable technology tailored to diverse industries and operational requirements.
+            We develop strategic, high-performance websites designed to enhance brand visibility and support measurable business growth. Our solutions combine modern design, structured architecture, and scalable technology tailored to diverse industries and operational requirements.
           </p>
-   <p className="wcu-desc">
-Our approach begins with understanding your brand identity, target audience, competitors, and long-term objectives. This research-driven foundation allows us to create websites that reflect your vision while supporting usability, engagement, and performance.
+          <p className="wcu-desc">
+            Our approach begins with understanding your brand identity, target audience, competitors, and long-term objectives. This research-driven foundation allows us to create websites that reflect your vision while supporting usability, engagement, and performance.
           </p>
-
-             <p className="wcu-desc">
-Every website is built with SEO best practices, mobile responsiveness, speed optimization, and secure coding standards. The result is a reliable, user-focused digital platform that strengthens credibility and drives sustainable online growth.
+          <p className="wcu-desc">
+            Every website is built with SEO best practices, mobile responsiveness, speed optimization, and secure coding standards. The result is a reliable, user-focused digital platform that strengthens credibility and drives sustainable online growth.
           </p>
         </div>
       </div>
@@ -1205,14 +566,13 @@ function ProcessSection() {
     <section className="proc-section">
       <div className="proc-inner">
         <div className="proc-header">
-      <div className="partners-header1">
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Proven Website Development Process</h2>
+          <div className="partners-header1" style={{ textAlign: 'center' }}>
+            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center', color: '#ed8337' }}>Our Proven Website Development Process</h2>
           </div>
           <h3 className="proc-heading">Planned for Performance. <span><i>Built for Scale.</i></span> Launched with Confidence.</h3>
           <p className="proc-sub">
-           We follow a transparent, step-by-step process to ensure your site is built efficiently, beautifully, and exactly as you envisioned.
-
-</p>
+            We follow a transparent, step-by-step process to ensure your site is built efficiently, beautifully, and exactly as you envisioned.
+          </p>
         </div>
 
         <div className="proc-cols">
@@ -1260,7 +620,7 @@ function ProcessSection() {
                   <div className="ps-hero-btn">Explore More →</div>
                 </div>
                 <div className="ps-cards">
-                  {["🏗️","📱","🔍"].map((ic,i) => (
+                  {["🏗️", "📱", "🔍"].map((ic, i) => (
                     <div key={i} className="ps-card">
                       <div className="ps-card-icon">{ic}</div>
                       <div className="ps-card-line w100"></div>
@@ -1271,7 +631,7 @@ function ProcessSection() {
 
               </div>
             </div>
-            <div style={{position:"absolute",bottom:"60px",left:"50%",width:"10px",height:"10px",borderRadius:"50%",background:"var(--orange)",border:"2px solid #fff",boxShadow:"0 2px 8px rgba(237,131,55,0.5)",animation:"float1 2s ease-in-out infinite",zIndex:15}}></div>
+            <div style={{ position: "absolute", bottom: "60px", left: "50%", width: "10px", height: "10px", borderRadius: "50%", background: "var(--orange)", border: "2px solid #fff", boxShadow: "0 2px 8px rgba(237,131,55,0.5)", animation: "float1 2s ease-in-out infinite", zIndex: 15 }}></div>
           </div>
 
           {/* RIGHT */}
@@ -1394,9 +754,9 @@ function KeyFeaturesSection() {
       </div>
       <div className="kf-inner">
         <div className="kf-header">
-  <div className="partners-header1">
+          <div className="partners-header1" style={{ textAlign: 'center' }}>
             <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Uniqueness
-</h2>
+            </h2>
           </div>          <h3 className="kf-title">Key <span>Features</span></h3>
           <p className="kf-sub">Everything we build is engineered for performance, growth, and lasting digital impact.</p>
         </div>
@@ -1456,10 +816,10 @@ function FAQSection() {
     setActive(active === index ? null : index);
   };
   return (
-    <section className="faq-section" style={{padding: '80px 0 0'}}>
-     <div className="partners-header1" style={{  textAlign: 'center' }}>
-            <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Frequently Asked Questions</h2>
-          </div>
+    <section className="faq-section" style={{ padding: '80px 0 0' }}>
+      <div className="partners-header1" style={{ textAlign: 'center' }}>
+        <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Frequently Asked Questions</h2>
+      </div>
       <div className="container">
         {/* TITLE */}
         <div className="faq-head">
@@ -1509,25 +869,25 @@ function FAQSection() {
 
 /* ══════ SECTION 2C: PORTFOLIO ══════ */
 const PORTFOLIO_COL1 = [
-  { img:"/img/portfolio/urcts.webp", label:"URCTS", tag:"" },
-  { img:"/img/portfolio/am.webp", label:"AM Builders", tag:"" },
-  { img:"/img/portfolio/zky.webp", label:"ZKY", tag:"" },
-  { img:"/img/portfolio/abb.webp", label:"ABB", tag:"" },
-  { img:"/img/portfolio/riya.webp", label:"Riya consultancy", tag:"" },
+  { img: "/img/portfolio/urcts.webp", label: "URCTS", tag: "" },
+  { img: "/img/portfolio/am.webp", label: "AM Builders", tag: "" },
+  { img: "/img/portfolio/zky.webp", label: "ZKY", tag: "" },
+  { img: "/img/portfolio/abb.webp", label: "ABB", tag: "" },
+  { img: "/img/portfolio/riya.webp", label: "Riya consultancy", tag: "" },
 ];
 const PORTFOLIO_COL2 = [
-  { img:"/img/portfolio/feralroots.webp", label:"Feral Roots", tag:"" },
-  { img:"/img/portfolio/sterlocare.webp", label:"SterloCare", tag:"" },
-  { img:"/img/portfolio/sterlo.webp", label:"Sterlo", tag:"" },
-  { img:"/img/portfolio/talenttribe.webp", label:"Talent Tribe", tag:"" },
-  { img:"/img/portfolio/sterlobuild.webp", label:"SterloBuild", tag:"" },
+  { img: "/img/portfolio/feralroots.webp", label: "Feral Roots", tag: "" },
+  { img: "/img/portfolio/sterlocare.webp", label: "SterloCare", tag: "" },
+  { img: "/img/portfolio/sterlo.webp", label: "Sterlo", tag: "" },
+  { img: "/img/portfolio/talenttribe.webp", label: "Talent Tribe", tag: "" },
+  { img: "/img/portfolio/sterlobuild.webp", label: "SterloBuild", tag: "" },
 ];
 const PORTFOLIO_COL3 = [
-  { img:"/img/portfolio/product1.webp", label:"", tag:"" },
-  { img:"/img/portfolio/product2.webp", label:"", tag:"" },
-  { img:"/img/portfolio/product3.webp", label:"", tag:"" },
-  { img:"/img/portfolio/product4.webp", label:"", tag:"" },
-  { img:"/img/portfolio/product5.webp", label:"", tag:"" },
+  { img: "/img/portfolio/product1.webp", label: "", tag: "" },
+  { img: "/img/portfolio/product2.webp", label: "", tag: "" },
+  { img: "/img/portfolio/product3.webp", label: "", tag: "" },
+  { img: "/img/portfolio/product4.webp", label: "", tag: "" },
+  { img: "/img/portfolio/product5.webp", label: "", tag: "" },
 ];
 
 function PortfolioColumn({ items, speed, direction }) {
@@ -1584,21 +944,19 @@ function PortfolioColumn({ items, speed, direction }) {
 
 function PortfolioSection() {
   return (
-    <section className="pf-section">
+    <section className="pf-section" style={{ padding: '0' }}>
       <div className="pf-inner">
         {/* LEFT */}
         <div className="pf-left">
-       <div className="partners-header1">
+          <div className="partners-header1">
             <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Portfolio</h2>
           </div>
           <h3 className="pf-heading">
             Proven Website <span><i>Solutions Across</i></span> Industries
           </h3>
           <p className="pf-desc">
-Review performance-driven websites developed with strategic architecture, intuitive design, and measurable results.
-
+            Review performance-driven websites developed with strategic architecture, intuitive design, and measurable results.
           </p>
-
           <div className="pf-btns">
             <a href="/portfolio" className="pf-btn">View All Projects →</a>
           </div>
@@ -1617,30 +975,20 @@ Review performance-driven websites developed with strategic architecture, intuit
 
 /* ══════ ROOT APP ══════ */
 export default function PCSWebsite() {
-  useEffect(() => {
-    const style = document.createElement("style");
-    style.textContent = GLOBAL_CSS;
-    document.head.appendChild(style);
-    return () => document.head.removeChild(style);
-  }, []);
-
-
-  
   return (
     <Layout>
-      
       <>
-      <SEOHead />
-      <HeroBanner />
-      <ApproachSection />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <PortfolioSection />
-      <ProcessSection />
-      <KeyFeaturesSection />
-      <FAQSection />
-      <BlogSection />
-      <CTASection />
+        <SEOHead />
+        <HeroBanner />
+        <ApproachSection />
+        <ServicesSection />
+        <WhyChooseUsSection />
+        <PortfolioSection />
+        <ProcessSection />
+        <KeyFeaturesSection />
+        <FAQSection />
+        <BlogSection />
+        <CTASection />
       </>
     </Layout>
   );
