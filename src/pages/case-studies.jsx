@@ -1,5 +1,5 @@
 import Layout from '@theme/Layout';
-const banner = "/img/case-study.png";
+const banner = "/img/case-study.webp";
 import Head from '@docusaurus/Head';
 
 

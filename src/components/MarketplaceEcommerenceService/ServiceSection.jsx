@@ -153,7 +153,7 @@ export default function ServicesWithTabs() {
 
       {/* 1. Eyebrow + Title + Description — static, never changes */}
       <div className="smm-svc-hdr">
-        <div className="partners-header1">
+        <div className="partners-header1" style={{ textAlign: 'center' }}>
           <h2 className="partners-eyebrow" style={{ marginBottom: "20px", textAlign: "start" }}>
             Our Specialized Email Marketing Services
           </h2>
