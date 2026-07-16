@@ -719,7 +719,7 @@ export default function PCSAboutUs() {
       <section className="pcs-trust-section">
         <div className="pcs-trust-inner">
           <div className="pcs-trust-head pcs-reveal">
-      <div className="partners-header1">
+      <div className="partners-header1" style={{ textAlign: 'center' }}>
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Why Businesses Trust Us</div>
           </div>            <h2 className="pcs-trust-title">We Don't Just Deliver Services.<span><i> We Deliver Results.</i></span></h2>
             <p className="pcs-trust-sub">At PCS, every partnership is built on trust and performance. Our holistic approach ensures measurable results across compliance, HR, finance, and digital transformation.</p>

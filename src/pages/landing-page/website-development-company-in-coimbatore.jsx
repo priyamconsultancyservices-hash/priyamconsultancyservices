@@ -2386,7 +2386,7 @@ function FormPopupModal({ open, onClose }) {
 
 function PortfolioSection({ onOpenForm }) {
     return (
-        <section className="pf-section" id="portfolio">
+        <section className="pf-section" id="portfolio" style={{padding: '0'}}>
             <div className="pf-inner">
                 <div className="pf-left">
                     <div className="partners-header1">

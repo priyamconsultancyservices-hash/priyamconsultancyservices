@@ -3,6 +3,8 @@ import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
 
+
+
 // ════════════════════════════════════════════
 //  DATA
 // ════════════════════════════════════════════
@@ -208,6 +210,9 @@ function TechnicalSeoGuide() {
       </Head>
 
       <style>{`
+ main {
+    background: #fff;
+}
         .tseo-mono{font-family:'JetBrains Mono',monospace;}
         .tseo-breadcrumb{ padding:30px 24px; font-size:13px; color:var(--muted,#6B7A94);}
         .tseo-breadcrumb a{color:var(--muted,#6B7A94); border-bottom:1px dotted transparent;}
@@ -426,7 +431,7 @@ function TechnicalSeoGuide() {
                 <span>Reviewed by SEO Editorial Team</span>
               </div>
               <div className="tseo-hero-img" style={{ padding: 0 }}>
-              <img src="/img/portfolio.png" />
+              <img src="/img/portfolio.webp" />
               </div>
             </div>
 
