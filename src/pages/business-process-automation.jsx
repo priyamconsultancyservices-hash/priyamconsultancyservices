@@ -190,136 +190,73 @@ function ApproachSection() {
   return (
     <section className="approach" id="approach">
 
-      <div className="ap-inner">
+      <div className="ap2-inner">
 
         {/* LEFT CONTENT */}
         <div className="ap-left">
           <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
-          <h2 className="ap-heading">Business  <span>Process Automation</span></h2>
+          <h2 className="ap2-heading">Business  <span>Process Automation</span></h2>
           <p className="ap-intro">
             PCS follows a consultative and technology-driven approach to Business Process Automation focused on improving operational efficiency, scalability, and long-term business performance.
-
           </p>
           <p className="ap-intro">
             We work closely with teams to assess workflows, identify bottlenecks, and design structured automation strategies aligned with business objectives and operational requirements.
-
           </p>
           <p className="ap-intro">
             From implementation to continuous optimization, PCS builds integrated and data-driven workflows that reduce manual effort, improve accuracy, and strengthen process consistency across departments.
-
           </p>
         </div>
-
         {/* RIGHT FORM */}
-        <div className="ap-form-wrap">
-          <div className="ap-form-card">
-            <div className="form-card-eyebrow">
-              <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
+        <div className="ap2-form-wrap">
+          <div className="ap2-form-card">
+            <div className="ap2-form-eyebrow">
+              <span className="ap2-form-eyebrow-line" />Your Growth, Our Mission<span className="ap2-form-eyebrow-line" />
             </div>
-            <div className="form-card-title">
-              Get Your <span>Free</span> Quote
-            </div>
-
-            {/* ✅ FORM START */}
+            <div className="ap2-form-title">Get Your <span>Free</span> SEO Audit</div>
             <form onSubmit={sendEmail}>
-
-              <div className="fl-row">
-
-                <div className="fl-group">
-                  <label className="fl-label">Your Name</label>
+              <div className="ap2-fl-row">
+                <div className="ap2-fl-group">
+                  <label className="ap2-fl-label">Your Name</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon">👤</span>
-                    <input
-                      className="fl-input"
-                      type="text"
-                      name="name"
-                      placeholder="Full name"
-                      value={form.name}
-                      onChange={handleChange}
-                      required
-                    />
+                    <span className="ap2-fl-icon">👤</span>
+                    <input className="ap2-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
                   </div>
                 </div>
-
-                <div className="fl-group">
-                  <label className="fl-label">Company</label>
+                <div className="ap2-fl-group">
+                  <label className="ap2-fl-label">Company</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon">🏢</span>
-                    <input
-                      className="fl-input"
-                      type="text"
-                      name="company"
-                      placeholder="Company name"
-                      value={form.company}
-                      onChange={handleChange}
-                    />
+                    <span className="ap2-fl-icon">🏢</span>
+                    <input className="ap2-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
                   </div>
                 </div>
-
               </div>
-
-              <div className="fl-group">
-                <label className="fl-label">Email Address</label>
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Email Address</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon">✉️</span>
-                  <input
-                    className="fl-input"
-                    type="email"
-                    name="email"
-                    placeholder="your@email.com"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                  />
+                  <span className="ap2-fl-icon">✉️</span>
+                  <input className="ap2-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
                 </div>
               </div>
-
-              <div className="fl-group">
-                <label className="fl-label">Mobile Number</label>
-                <div className="phone-row">
-                  <div className="phone-flag">
-                    <span className="phone-flag-icon">📞</span>
-
-                  </div>
-                  <input
-                    className="fl-input"
-                    type="tel"
-                    name="phone"
-                    placeholder="Mobile number"
-                    value={form.phone}
-                    onChange={handleChange}
-                    maxLength="10"
-                    pattern="[0-9]{10}"
-                    required
-                  />
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Mobile Number</label>
+                <div className="ap2-phone-row">
+                  <div className="ap2-phone-flag"><span>📞</span></div>
+                  <input className="ap2-fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
                 </div>
               </div>
-
-              <div className="fl-group textarea-group">
-                <label className="fl-label">Message</label>
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Message</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
-                  <textarea
-                    className="fl-textarea"
-                    name="msg"
-                    placeholder="Tell us about your business needs..."
-                    value={form.msg}
-                    onChange={handleChange}
-
-                  />
+                  <span className="ap2-fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
+                  <textarea className="ap2-fl-textarea" name="msg" placeholder="Tell us about your SEO goals..." value={form.msg} onChange={handleChange} />
                 </div>
               </div>
-
-              {/* ✅ SUBMIT BUTTON */}
-              <button type="submit" className="ap-submit">
-                Get Free Consultation
-                <span className="ap-submit-arrow">›</span>
+              <button type="submit" className="ap2-submit">
+                Get Free SEO Audit <span className="ap2-submit-arrow">›</span>
               </button>
-
             </form>
-            {/* ✅ FORM END */}
           </div>
         </div>
       </div>
@@ -334,7 +271,7 @@ function ServicesSection() {
       <div className="dm-svc-blob dm-svc-blob-1"></div>
       <div className="dm-svc-blob dm-svc-blob-2"></div>
       <div className="dm-svc-hdr">
-        <div className="partners-header1"  style={{ textAlign: 'center' }}>
+        <div className="partners-header1" style={{ textAlign: 'center' }}>
           <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Specialized Business Process Automation Services</h2>
         </div>
         <h3 className="partners-h3-title">Every Task Automated.  <em style={{ color: '#ed8337' }}><i>Every Process Optimized.</i></em></h3>
@@ -366,7 +303,7 @@ function ProcessSection() {
   return (
     <section className="dm-proc-section" id="process">
       <div className="dm-proc-hdr">
-        <div className="partners-header1"  style={{ textAlign: 'center' }}>
+        <div className="partners-header1" style={{ textAlign: 'center' }}>
           <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center', color: '#ed8337' }}>Our Automation Execution Process</h2>
         </div>
         <h3 className="partners-h3-process">Structured,  <em style={{ color: '#ed8337' }}><i>Intelligent, </i></em> and Reliable Automation</h3>
@@ -421,7 +358,7 @@ function HowWeWorkSection() {
       <div className="hww-bg" /><div className="hww-orb hww-orb-1" /><div className="hww-orb hww-orb-2" />
       <div style={{ position: "relative", zIndex: 2, margin: "0 auto" }}>
         <div style={{ textAlign: "center", marginBottom: "72px" }}>
-          <div className="partners-header1"  style={{ textAlign: 'center' }}>
+          <div className="partners-header1" style={{ textAlign: 'center' }}>
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Why PCS?
             </div>
 

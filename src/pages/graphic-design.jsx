@@ -89,29 +89,64 @@ function Hero() {
 
 // ─── Approach + Form ──────────────────────────────────────────────────────────
 function ApproachSection() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
+   const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    msg: ""
+  });
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
+  // ✅ EMAIL SEND FUNCTION
   const sendEmail = (e) => {
     e.preventDefault();
+
     const templateParams = {
-      name: form.name, email: form.email, phone: form.phone,
-      company: form.company, message: form.msg, url: window.location.href,
+      name: form.name,
+      email: form.email,
+      phone: form.phone,
+      company: form.company,
+      message: form.msg,
+
+      url: window.location.href,
     };
-    emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
-      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name: "", email: "", phone: "", company: "", msg: "" }); })
-      .catch((error) => { console.log(error); alert("Failed to send ❌"); });
+
+    emailjs
+      .send(
+        "service_8xw6k3r",   // 🔴 replace
+        "template_jarui36",  // 🔴 replace
+        templateParams,
+        "XWRnXi4hK2SvmRG3q"    // 🔴 replace
+      )
+      .then(() => {
+        alert("Message Sent Successfully ✅");
+
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          company: "",
+          msg: ""
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("Failed to send ❌");
+      });
   };
 
   return (
     <section className="approach" id="approach">
-      <div className="ap-inner">
+      <div className="ap2-inner">
         <div className="ap-left">
           <div className="partners-header1">
             <h2 className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</h2>
           </div>
-          <h3 className="ap-heading">Creative Designs that <span>Speak Your Brand</span> </h3>
+          <h3 className="ap2-heading">Creative Designs that <span>Speak Your Brand</span> </h3>
           <p className="ap-intro">
             Looking to elevate your visual identity and strengthen brand perception across digital platforms? PCS delivers purpose-driven graphic design solutions focused on clear communication, strong branding, and meaningful audience engagement.
 
@@ -125,52 +160,52 @@ function ApproachSection() {
 
           </p>
         </div>
-        <div className="ap-form-wrap">
-          <div className="ap-form-card">
-            <div className="form-card-eyebrow">
-              <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
+         <div className="ap2-form-wrap">
+          <div className="ap2-form-card">
+            <div className="ap2-form-eyebrow">
+              <span className="ap2-form-eyebrow-line" />Your Growth, Our Mission<span className="ap2-form-eyebrow-line" />
             </div>
-            <div className="form-card-title">Get Your <span>Free</span> Quote</div>
+            <div className="ap2-form-title">Get Your <span>Free</span> SEO Audit</div>
             <form onSubmit={sendEmail}>
-              <div className="fl-row">
-                <div className="fl-group">
-                  <label className="fl-label">Your Name</label>
+              <div className="ap2-fl-row">
+                <div className="ap2-fl-group">
+                  <label className="ap2-fl-label">Your Name</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon">👤</span>
-                    <input className="fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
+                    <span className="ap2-fl-icon">👤</span>
+                    <input className="ap2-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
                   </div>
                 </div>
-                <div className="fl-group">
-                  <label className="fl-label">Company</label>
+                <div className="ap2-fl-group">
+                  <label className="ap2-fl-label">Company</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon">🏢</span>
-                    <input className="fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
+                    <span className="ap2-fl-icon">🏢</span>
+                    <input className="ap2-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
                   </div>
                 </div>
               </div>
-              <div className="fl-group">
-                <label className="fl-label">Email Address</label>
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Email Address</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon">✉️</span>
-                  <input className="fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
+                  <span className="ap2-fl-icon">✉️</span>
+                  <input className="ap2-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
                 </div>
               </div>
-              <div className="fl-group">
-                <label className="fl-label">Mobile Number</label>
-                <div className="phone-row">
-                  <div className="phone-flag"><span>📞</span></div>
-                  <input className="fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Mobile Number</label>
+                <div className="ap2-phone-row">
+                  <div className="ap2-phone-flag"><span>📞</span></div>
+                  <input className="ap2-fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
                 </div>
               </div>
-              <div className="fl-group textarea-group">
-                <label className="fl-label">Message</label>
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Message</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
-                  <textarea className="fl-textarea" name="msg" placeholder="Tell us about your social media goals..." value={form.msg} onChange={handleChange} />
+                  <span className="ap2-fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
+                  <textarea className="ap2-fl-textarea" name="msg" placeholder="Tell us about your SEO goals..." value={form.msg} onChange={handleChange} />
                 </div>
               </div>
-              <button type="submit" className="ap-submit">
-                Get Free Consultation <span className="ap-submit-arrow">›</span>
+              <button type="submit" className="ap2-submit">
+                Get Free SEO Audit <span className="ap2-submit-arrow">›</span>
               </button>
             </form>
           </div>

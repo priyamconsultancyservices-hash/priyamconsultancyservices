@@ -433,118 +433,69 @@ function ApproachSection() {
 
   return (
     <section className="approach" id="approach">
-      <style>{`
-        .approach { position:relative; padding:4rem 6%; overflow:hidden;background: white }
-        .ap-inner { position:relative; z-index:2; margin:0 auto; display:grid; grid-template-columns:1fr 0.7fr; gap:4rem; align-items:center; }
-        .ap-heading { font-family:'Poppins',sans-serif; font-size:clamp(2rem,3vw,2.6rem); line-height:1.12; color:#000; margin-bottom:1.2rem; }
-        .ap-heading span { color:var(--orange); }
-        .ap-intro { font-size:1rem; line-height:1.8; color:#5a6a7a; margin-bottom:2rem; }
-        .ap-form-wrap { position:relative; max-width:450px; }
-        .ap-form-wrap::before { content:''; position:absolute; inset:-2px; background:linear-gradient(135deg,rgba(237,131,55,0.55),rgba(237,131,55,0.1),rgba(237,131,55,0.55)); border-radius:26px; z-index:0; }
-        .ap-form-card { position:relative; z-index:1; background:#004168; border-radius:24px; padding:2.8rem 2.6rem; box-shadow:0 24px 60px rgba(0,0,0,0.5),0 0 40px rgba(237,131,55,0.06); border:1px solid rgba(237,131,55,0.18); text-align:center; }
-        .form-card-eyebrow { display:inline-flex; align-items:center; gap:8px; font-family:'Poppins',sans-serif; font-size:0.6rem; font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:var(--orange); margin-bottom:0.8rem; }
-        .form-card-eyebrow-line { width:22px; height:1px; background:var(--orange); }
-        .form-card-title { font-family:'Poppins',sans-serif; font-size:1.7rem; font-weight:800; color:#fff; line-height:1.15; margin-bottom:2.4rem; }
-        .form-card-title span { color:var(--orange); }
-        .fl-row { display:grid; grid-template-columns:1fr 1fr; gap:0.85rem; }
-        .fl-group { position:relative; margin-bottom:1rem; }
-        .fl-label { display:block; font-family:'Poppins',sans-serif; font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--orange); margin-bottom:0.4rem; text-align:start; }
-        .fl-input,.fl-textarea { width:100%; padding:0.82rem 1rem; border:1.5px solid rgba(237,131,55,0.2); border-radius:10px; font-family:'Poppins',sans-serif; font-size:0.88rem; color:#fff; background:rgba(255,255,255,0.04); outline:none; appearance:none; transition:border-color 0.22s,background 0.22s,box-shadow 0.22s; }
-        .fl-input::placeholder,.fl-textarea::placeholder { color:rgba(255,255,255,0.3); }
-        .fl-input:focus,.fl-textarea:focus { border-color:var(--orange); background:rgba(237,131,55,0.06); box-shadow:0 0 0 3px rgba(237,131,55,0.1); }
-        .fl-icon { position:absolute; left:0.85rem; top:50%; transform:translateY(-50%); font-size:0.95rem; opacity:0.5; pointer-events:none; }
-        .fl-group.textarea-group .fl-icon { top:0.9rem; transform:none; }
-        .fl-textarea { min-height:88px; resize:none; padding-top:0.82rem; padding-left:1rem; }
-        .phone-row { display:flex; border:1.5px solid rgba(237,131,55,0.2); border-radius:10px; overflow:hidden; background:rgba(255,255,255,0.04); transition:border-color 0.22s,box-shadow 0.22s; }
-        .phone-row:focus-within { border-color:var(--orange); box-shadow:0 0 0 3px rgba(237,131,55,0.1); }
-        .phone-flag { display:flex; align-items:center; gap:0.3rem; padding:0 0.85rem; font-size:0.82rem; font-weight:700; color:#fff; border-right:1.5px solid rgba(237,131,55,0.2); white-space:nowrap; background:rgba(237,131,55,0.08); cursor:default; flex-shrink:0; }
-        .phone-flag-icon { font-size:0.9rem; opacity:0.7; }
-        .phone-row .fl-input { border:none; border-radius:0; background:transparent; box-shadow:none; padding:0.82rem 1rem; }
-        .phone-row .fl-input:focus { box-shadow:none; }
-        .ap-submit { width:100%; background:linear-gradient(135deg,#ed8337,#f5a66b); color:#fff; border:none; padding:1rem 1.5rem; border-radius:12px; font-family:'Poppins',sans-serif; font-size:0.97rem; font-weight:500; cursor:pointer; letter-spacing:0.02em; display:flex; align-items:center; justify-content:center; gap:0.6rem; transition:transform 0.2s,box-shadow 0.2s; }
-        .ap-submit:hover { transform:translateY(-2px); box-shadow:0 12px 36px rgba(237,131,55,0.5); }
-        .ap-submit-arrow { display:inline-flex; align-items:center; justify-content:center; width:24px; height:24px; border-radius:50%; background:rgba(2,43,68,0.25); font-size:0.9rem; }
-        @media (max-width: 768px) {
-          .approach { padding:3rem 5% 3.5rem; }
-          .ap-inner { grid-template-columns:1fr !important; gap:2rem !important; }
-          .ap-form-wrap { max-width:100% !important; width:100%; }
-          .ap-heading { font-size:clamp(1.6rem,6vw,2.2rem) !important; }
-          .ap-intro { font-size:0.9rem; margin-bottom:1.2rem; }
-          .fl-row { grid-template-columns:1fr !important; gap:0 !important; }
-          .ap-form-card { padding:2rem 1.4rem !important; }
-          .form-card-title { font-size:1.35rem !important; margin-bottom:1.6rem !important; }
-          .fl-input, .fl-textarea { font-size:0.85rem; }
-        }
-      `}</style>
 
-      <div className="ap-inner">
-
+      <div className="ap2-inner">
         {/* LEFT CONTENT */}
         <div className="ap-left">
           <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
-          <h2 className="ap-heading">Human-Centered <span>Hiring</span> That Aligns With Business Goals</h2>
+          <h2 className="ap2-heading">Human-Centered <span>Hiring</span> That Aligns With Business Goals</h2>
           <p className="ap-intro">
             From a recruitment service provider to a true partner in growth, PCS supports organizations in building strong, high-performing teams. Our experienced recruitment professionals understand evolving workforce demands and industry expectations. We focus on identifying talent that aligns with both functional needs and long-term vision. Every hiring strategy is structured to deliver quality, speed, and cultural fit. Our goal is to transform recruitment into a competitive advantage.
-
-
           </p>
           <p className="ap-intro">
             We achieve this through customized and proven recruitment solutions backed by deep market expertise. Our extensive talent networks allow us to access the right candidates across industries and functions. Each Recruitment Consultancy engagement is tailored to your unique business requirements.
-
-
           </p>
-
         </div>
 
         {/* RIGHT FORM */}
-        <div className="ap-form-wrap">
-          <div className="ap-form-card">
-            <div className="form-card-eyebrow">
-              <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
+      <div className="ap2-form-wrap">
+          <div className="ap2-form-card">
+            <div className="ap2-form-eyebrow">
+              <span className="ap2-form-eyebrow-line" />Your Growth, Our Mission<span className="ap2-form-eyebrow-line" />
             </div>
-            <div className="form-card-title">Get Your <span>Free</span> Quote</div>
+            <div className="ap2-form-title">Get Your <span>Free</span> SEO Audit</div>
             <form onSubmit={sendEmail}>
-              <div className="fl-row">
-                <div className="fl-group">
-                  <label className="fl-label">Your Name</label>
+              <div className="ap2-fl-row">
+                <div className="ap2-fl-group">
+                  <label className="ap2-fl-label">Your Name</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon">👤</span>
-                    <input className="fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
+                    <span className="ap2-fl-icon">👤</span>
+                    <input className="ap2-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
                   </div>
                 </div>
-                <div className="fl-group">
-                  <label className="fl-label">Company</label>
+                <div className="ap2-fl-group">
+                  <label className="ap2-fl-label">Company</label>
                   <div style={{ position: "relative" }}>
-                    <span className="fl-icon">🏢</span>
-                    <input className="fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
+                    <span className="ap2-fl-icon">🏢</span>
+                    <input className="ap2-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
                   </div>
                 </div>
               </div>
-              <div className="fl-group">
-                <label className="fl-label">Email Address</label>
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Email Address</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon">✉️</span>
-                  <input className="fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
+                  <span className="ap2-fl-icon">✉️</span>
+                  <input className="ap2-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
                 </div>
               </div>
-              <div className="fl-group">
-                <label className="fl-label">Mobile Number</label>
-                <div className="phone-row">
-                  <div className="phone-flag"><span>📞</span></div>
-                  <input className="fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Mobile Number</label>
+                <div className="ap2-phone-row">
+                  <div className="ap2-phone-flag"><span>📞</span></div>
+                  <input className="ap2-fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
                 </div>
               </div>
-              <div className="fl-group textarea-group">
-                <label className="fl-label">Message</label>
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Message</label>
                 <div style={{ position: "relative" }}>
-                  <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
-                  <textarea className="fl-textarea" name="msg" placeholder="Tell us about your social media goals..." value={form.msg} onChange={handleChange} />
+                  <span className="ap2-fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
+                  <textarea className="ap2-fl-textarea" name="msg" placeholder="Tell us about your SEO goals..." value={form.msg} onChange={handleChange} />
                 </div>
               </div>
-              <button type="submit" className="ap-submit">
-                Get Free Consultation <span className="ap-submit-arrow">›</span>
+              <button type="submit" className="ap2-submit">
+                Get Free SEO Audit <span className="ap2-submit-arrow">›</span>
               </button>
             </form>
           </div>

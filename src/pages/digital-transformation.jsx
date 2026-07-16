@@ -330,12 +330,12 @@ export default function DigitalTransformationPage() {
 
         {/* ══ SECTION 2 — APPROACH + FORM ══ */}
         <section className="approach" id="approach">
-          <div className="ap-inner">
+          <div className="ap2-inner">
             <div className="ap-left">
               <div className="partners-header1" >
                 <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>Our Approach in</div>
               </div>
-              <h2 className="ap-heading">Digital <span>Transformation</span> Services</h2>
+              <h2 className="ap2-heading">Digital <span>Transformation</span> Services</h2>
               <p className="ap-intro">
                 Modern businesses rely on speed, operational efficiency, and data-driven decision-making to remain competitive and achieve sustainable growth in rapidly evolving digital environments.
               </p>
@@ -345,56 +345,56 @@ export default function DigitalTransformationPage() {
               <p className="ap-intro">From automation to analytics and custom applications, we manage technical execution while helping businesses stay agile, innovative, and future-ready in changing market conditions.
               </p>
             </div>
-            <div className="ap-form-wrap">
-              <div className="ap-form-card">
-                <div className="form-card-eyebrow">
-                  <span className="form-card-eyebrow-line" />Your Growth, Our Mission<span className="form-card-eyebrow-line" />
-                </div>
-                <div className="form-card-title">Get Your <span>Free</span> Quote</div>
-                <form onSubmit={sendEmail}>
-                  <div className="fl-row">
-                    <div className="fl-group">
-                      <label className="fl-label">Your Name</label>
-                      <div style={{ position: "relative" }}>
-                        <span className="fl-icon">👤</span>
-                        <input className="fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
-                      </div>
-                    </div>
-                    <div className="fl-group">
-                      <label className="fl-label">Company</label>
-                      <div style={{ position: "relative" }}>
-                        <span className="fl-icon">🏢</span>
-                        <input className="fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="fl-group">
-                    <label className="fl-label">Email Address</label>
-                    <div style={{ position: "relative" }}>
-                      <span className="fl-icon">✉️</span>
-                      <input className="fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
-                    </div>
-                  </div>
-                  <div className="fl-group">
-                    <label className="fl-label">Mobile Number</label>
-                    <div className="phone-row">
-                      <div className="phone-flag"><span className="phone-flag-icon">📞</span></div>
-                      <input className="fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
-                    </div>
-                  </div>
-                  <div className="fl-group textarea-group">
-                    <label className="fl-label">Message</label>
-                    <div style={{ position: "relative" }}>
-                      <span className="fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
-                      <textarea className="fl-textarea" name="msg" placeholder="Tell us about your business needs..." value={form.msg} onChange={handleChange} />
-                    </div>
-                  </div>
-                  <button type="submit" className="ap-submit">
-                    Get Free Consultation <span className="ap-submit-arrow">›</span>
-                  </button>
-                </form>
-              </div>
+             <div className="ap2-form-wrap">
+          <div className="ap2-form-card">
+            <div className="ap2-form-eyebrow">
+              <span className="ap2-form-eyebrow-line" />Your Growth, Our Mission<span className="ap2-form-eyebrow-line" />
             </div>
+            <div className="ap2-form-title">Get Your <span>Free</span> SEO Audit</div>
+            <form onSubmit={sendEmail}>
+              <div className="ap2-fl-row">
+                <div className="ap2-fl-group">
+                  <label className="ap2-fl-label">Your Name</label>
+                  <div style={{ position: "relative" }}>
+                    <span className="ap2-fl-icon">👤</span>
+                    <input className="ap2-fl-input" type="text" name="name" placeholder="Full name" value={form.name} onChange={handleChange} required />
+                  </div>
+                </div>
+                <div className="ap2-fl-group">
+                  <label className="ap2-fl-label">Company</label>
+                  <div style={{ position: "relative" }}>
+                    <span className="ap2-fl-icon">🏢</span>
+                    <input className="ap2-fl-input" type="text" name="company" placeholder="Company name" value={form.company} onChange={handleChange} />
+                  </div>
+                </div>
+              </div>
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Email Address</label>
+                <div style={{ position: "relative" }}>
+                  <span className="ap2-fl-icon">✉️</span>
+                  <input className="ap2-fl-input" type="email" name="email" placeholder="your@email.com" value={form.email} onChange={handleChange} required />
+                </div>
+              </div>
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Mobile Number</label>
+                <div className="ap2-phone-row">
+                  <div className="ap2-phone-flag"><span>📞</span></div>
+                  <input className="ap2-fl-input" type="tel" name="phone" placeholder="Mobile number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
+                </div>
+              </div>
+              <div className="ap2-fl-group">
+                <label className="ap2-fl-label">Message</label>
+                <div style={{ position: "relative" }}>
+                  <span className="ap2-fl-icon" style={{ top: "0.9rem", transform: "none" }}>💬</span>
+                  <textarea className="ap2-fl-textarea" name="msg" placeholder="Tell us about your SEO goals..." value={form.msg} onChange={handleChange} />
+                </div>
+              </div>
+              <button type="submit" className="ap2-submit">
+                Get Free SEO Audit <span className="ap2-submit-arrow">›</span>
+              </button>
+            </form>
+          </div>
+        </div>
           </div>
         </section>
 
