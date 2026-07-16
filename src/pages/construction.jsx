@@ -739,6 +739,12 @@ export default function HealthcarePCS() {
       description="Grow your construction business with expertise in digital marketing, website development, and HR solutions. Generate quality leads and build a stronger brand."
     >
       <SEOHead />
+            <style>{`
+      main {
+background: #004168;
+}
+
+      `}</style>
       <HeroSection />
       <ApproachSection />
       <WhyPCSSection />

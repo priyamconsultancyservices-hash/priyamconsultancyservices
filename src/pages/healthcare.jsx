@@ -745,6 +745,9 @@ export default function HealthcarePCS() {
     >
       <SEOHead />
       <style>{`
+      main {
+background: #004168;
+}
 /* Page-specific overrides — healthcare differs from the other 7 industry pages here */
 .pcs-inner { max-width:1200px; }
 .pcs-lead { margin:0 auto; }

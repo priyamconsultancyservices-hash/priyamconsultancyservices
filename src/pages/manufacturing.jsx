@@ -743,6 +743,9 @@ export default function HealthcarePCS() {
     >
       <SEOHead />
       <style>{`
+      main {
+background: #004168;
+}
 /* Page-specific overrides — manufacturing differs from the other 7 industry pages here */
 .hero-content-left { padding: 0; }
 @media(max-width:480px){

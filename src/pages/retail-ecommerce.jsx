@@ -744,6 +744,12 @@ export default function HealthcarePCS() {
       description="Drive your retail business with retail digital marketing, ecommerce website development, and HR solutions. Increase sales, attract customers, and scale faster. "
     >
       <SEOHead />
+            <style>{`
+      main {
+background: #004168;
+}
+
+      `}</style>
       <HeroSection />
       <ApproachSection />
       <WhyPCSSection />

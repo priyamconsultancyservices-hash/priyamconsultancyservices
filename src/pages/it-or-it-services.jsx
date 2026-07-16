@@ -746,6 +746,9 @@ export default function HealthcarePCS() {
     >
       <SEOHead />
       <style>{`
+      main {
+background: #004168;
+}
 /* Page-specific overrides — it-or-it-services differs from the other 7 industry pages here */
 .hero { min-height: 100vh; padding: 8rem 6% 4rem; }
       `}</style>

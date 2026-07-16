@@ -970,7 +970,7 @@ function HomeInsight() {
             From Insights to Impact
           </div>
         </div>
-        <h3 className="insights-h3">Smart Strategy. Fast Execution. <em style={{ color: "var(--orange)" }}><i>Continuous Growth.</i></em></h3>
+        <h3 className="insights-h3" style={{color: '#000'}}>Smart Strategy. Fast Execution. <em style={{ color: "var(--orange)" }}><i>Continuous Growth.</i></em></h3>
       </div>
       <div className="ins-cards ins-reveal" ref={cardsRef} style={{ transitionDelay: "0.1s" }}>
         {INSIGHT_CARDS.map((c, i) => (

@@ -6,6 +6,8 @@ import Head from '@docusaurus/Head';
 import '../css/industries.css';
 const banner = "/img/textile.webp";
 
+
+
 // EmailJS will be loaded via CDN in the component
 
 /* ═══════════════════════════════════════════════════
@@ -760,6 +762,9 @@ export default function HealthcarePCS() {
 }
 @media(max-width:900px){
   .seo-hero-section { min-height:45svh !important; }
+}
+  main {
+background: #004168;
 }
       `}</style>
       <HeroSection />
