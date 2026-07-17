@@ -1775,7 +1775,7 @@ function CTASplitSection() {
 
 function BuildTogetherCTASection() {
     return (
-        <section style={{ padding: "4rem 5% 4rem" }}>
+        <section style={{ padding: "4rem 5% 4rem", background: '#fff' }}>
             <div style={{
                 maxWidth: "1200px", margin: "0 auto",
                 borderRadius: "20px", overflow: "hidden",
@@ -2560,7 +2560,7 @@ function TestimonialSlider() {
     };
 
     return (
-        <section style={{ width: "100%", maxWidth: 1100, margin: "0 auto", padding: isMobile ? "40px 16px" : "60px 20px", fontFamily: "'Poppins', sans-serif", overflow: "hidden" }}>
+        <section style={{ width: "100%", margin: "0 auto", padding: isMobile ? "40px 16px" : "60px 20px", fontFamily: "'Poppins', sans-serif", overflow: "hidden" , background: '#fff'}}>
             <div className="partners-header1" style={{ marginBottom: isMobile ? 12 : 16, textAlign: "center" }}>
                 <div className="partners-eyebrow" style={{ marginBottom: "12px", textAlign: "start" }}>Client Testimonials</div>
             </div>
@@ -2753,7 +2753,7 @@ function OurServicesSection() {
     ];
 
     return (
-        <section id="service" style={{ padding: "70px 5% 5rem" }}>
+        <section id="service" style={{ padding: "70px 5% 5rem", background: '#fff' }} >
             <div className="partners-header1" style={{ textAlign: 'center' }}>
                 <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Service</div>
             </div>
@@ -2772,7 +2772,7 @@ function OurServicesSection() {
                         style={{
                             background: "#fff",
                             borderRadius: 24,
-                            padding: "30px 30px 28px 30px",
+                            padding: "30px 30px 2px 30px",
                             boxShadow: "0 10px 35px rgba(0,0,0,0.08)",
                             borderTop: "5px solid #ed8337",
                             display: "flex",
