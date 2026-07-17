@@ -963,7 +963,7 @@ function HomeInsight() {
   useReveal(cardsRef);
 
   return (
-    <section className="insights-section">
+    <section className="insights-section" style={{background: '#fff'}}>
       <div className="ins-hd ins-reveal" ref={headerRef} style={{ transitionDelay: "0s" }}>
         <div className="partners-header1" style={{ textAlign: "center" }}>
           <div className="partners-eyebrow" style={{ marginBottom: "12px", textAlign: "start" }}>
@@ -1651,6 +1651,12 @@ function Home() {
           }
         `}</script>
       </head>
+   <style>{`
+      main {
+background: #fff;
+}
+
+      `}</style>
       {/* 1. Banner */}
       <PCSBanner />
       {/* 2. Partners Logo Scroll */}

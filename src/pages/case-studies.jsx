@@ -1,305 +1,7 @@
 import Layout from '@theme/Layout';
 const banner = "/img/case-study.webp";
 import Head from '@docusaurus/Head';
-
-
-const styles = `
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-  :root {
-    --navy: #004168;
-    --navy-deep: #002a44;
-    --navy-mid: #0a5282;
-    --orange: #ed8337;
-    --orange-light: #f5a66b;
-    --green: #34d399;
-  }
-
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-
-  .cs-wrap {
-    font-family: 'Poppins', sans-serif;
-    background: #f0f4f8;
-    color: #0d1f2d;
-    overflow-x: hidden;
-  }
-
-  .banner {
-    position: relative;
-    min-height: 340px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: var(--navy);
-    padding: 5rem 4rem;
-  }
-  .banner::before {
-    content: '';
-    position: absolute; inset: 0; pointer-events: none; z-index: 0;
-    background:
-      radial-gradient(ellipse 70% 80% at 80% 40%, rgba(237,131,55,0.13) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 60% at 10% 80%, rgba(10,54,82,0.6) 0%, transparent 55%);
-  }
-  .banner::after {
-    content: '';
-    position: absolute; inset: 0; pointer-events: none; z-index: 0;
-    background-image:
-      linear-gradient(rgba(237,131,55,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(237,131,55,0.05) 1px, transparent 1px);
-    background-size: 52px 52px;
-  }
-
-  .banner-split {
-    position: relative;
-    z-index: 2;
-    max-width: 1350px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-  }
-  .banner-inner {
-    flex: 1 1 0;
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 1.1rem;
-  }
-  .banner-img-wrap {
-    flex: 0 0 auto;
-    width: 46%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    animation: fadeUp 0.8s 0.25s ease both;
-  }
-  .banner-img-wrap img {
-    width: 90%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 16px;
-    display: block;
-    filter: drop-shadow(0 8px 40px rgba(0,0,0,0.3));
-  }
-
-  @media (max-width: 900px) {
-    .banner { padding: 44px 32px; }
-    .banner-split { gap: 28px; }
-    .banner-img-wrap { width: 44%; }
-  }
-  @media (max-width: 640px) {
-    .banner { padding: 70px 20px 44px; }
-    .banner-split { flex-direction: column; align-items: flex-start; gap: 28px; }
-    .banner-inner { width: 100%; }
-    .banner-img-wrap { width: 100%; max-width: 100%; justify-content: center; }
-    .banner-img-wrap img { max-height: 220px; object-fit: contain; }
-  }
-
-  .banner-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    background: rgba(237,131,55,0.12);
-    border: 1px solid rgba(237,131,55,0.32);
-    color: var(--orange);
-    font-size: .7rem;
-    font-weight: 700;
-    padding: .38rem 1.1rem;
-    border-radius: 50px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    animation: fadeUp .5s ease both;
-  }
-  .eyebrow-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: var(--orange);
-    animation: pulse-dot 1.6s infinite;
-  }
-  @keyframes pulse-dot {
-    0%,100%{opacity:1;transform:scale(1)}
-    50%{opacity:.4;transform:scale(1.5)}
-  }
-  .banner-title {
-    font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 700;
-    line-height: 1.1;
-    color: #fff;
-    animation: fadeUp .6s .08s ease both;
-  }
-  .banner-title span {
-    color: var(--orange);
-    position: relative;
-    display: inline-block;
-  }
-  .banner-title span::after {
-    content: '';
-    position: absolute;
-    left: 0; bottom: -4px;
-    width: 100%; height: 3px;
-    background: linear-gradient(90deg, var(--orange), var(--orange-light));
-    border-radius: 2px;
-  }
-  .banner-subtitle {
-    font-size: .97rem;
-    line-height: 1.8;
-    color: rgb(255,255,255);
-    max-width: 540px;
-    animation: fadeUp .65s .16s ease both;
-  }
-  .banner-cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--orange);
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding: 14px 28px;
-    border-radius: 50px;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
-    animation: fadeUp 0.7s 0.26s ease both;
-    box-shadow: 0 4px 20px rgba(237,131,55,0.35);
-  }
-  .banner-cta-btn:hover {
-    background: var(--orange-light);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 28px rgba(237,131,55,0.45);
-  }
-  .banner-cta-btn svg {
-    width: 18px; height: 18px;
-    stroke: #fff; fill: none;
-    stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
-    flex-shrink: 0;
-  }
-  @keyframes fadeUp {
-    from{opacity:0;transform:translateY(24px)}
-    to{opacity:1;transform:translateY(0)}
-  }
-
-  .cards-section { max-width: 1380px; margin: 0 auto; padding: 3rem 4% 5rem; }
-
-  .cards-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  /* ── card is now an <a> tag ── */
-  .cs-card {
-    background: #ffffff;
-    border: 1.5px solid rgba(237,131,55,0.12);
-    border-radius: 20px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform .32s, box-shadow .32s;
-    box-shadow: 0 4px 20px rgba(237,131,55,0.08);
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-  }
-  .cs-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 48px rgba(0,0,0,0.12);
-  }
-  .cs-thumb {
-    width: 100%;
-    aspect-ratio: 16/9;
-    overflow: hidden;
-    flex-shrink: 0;
-  }
-  .cs-thumb img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform .4s ease;
-  }
-  .cs-card:hover .cs-thumb img { transform: scale(1.06); }
-
-  .cs-body {
-    padding: 1.2rem 1.3rem 1.3rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: .6rem;
-  }
-
-  /* Badges */
-  .cat-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: .4rem;
-    padding: .25rem .75rem;
-    border-radius: 6px;
-    font-size: .62rem;
-    font-weight: 700;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    width: fit-content;
-  }
-  .cat-badge .dot { width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.8; }
-  .bdg-dm  { background:rgba(237,131,55,0.15); color:var(--orange-light); border:1px solid rgba(237,131,55,0.3); }
-  .bdg-seo { background:rgba(52,211,153,0.12); color:#6ee7b7; border:1px solid rgba(52,211,153,0.25); }
-  .bdg-smm { background:rgba(129,140,248,0.15); color:#a5b4fc; border:1px solid rgba(129,140,248,0.28); }
-  .bdg-ppc { background:rgba(252,165,165,0.15); color:#fca5a5; border:1px solid rgba(252,165,165,0.28); }
-  .badges-row { display:flex;flex-wrap:wrap;gap:.4rem; }
-  .bdg-tag { background:rgba(0,65,104,0.08);color:var(--navy-mid);border:1px solid rgba(0,65,104,0.18); }
-
-  .cs-overview { font-size:.88rem;color:#4a5568;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin:0; }
-  .cs-client {
-    font-size: .89rem;
-    font-weight: 600;
-    color: var(--navy-mid);
-    display: flex;
-    align-items: center;
-    gap: .35rem;
-    letter-spacing: .01em;
-  }
-  .cs-client::before {
-    content: '';
-    display: inline-block;
-    width: 14px; height: 14px;
-    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a5282' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/svg%3E") center/contain no-repeat;
-    flex-shrink: 0;
-    opacity: 0.75;
-  }
-  .cs-divider { width:100%;height:1px;background:rgba(0,65,104,0.08); }
-
-  .cs-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: .45rem;
-    padding: .5rem 1.1rem;
-    border: none;
-    border-radius: 50px;
-    font-size: .76rem;
-    font-weight: 600;
-    color: #fff;
-    background: var(--orange);
-    cursor: pointer;
-    transition: all .22s;
-    width: fit-content;
-    box-shadow: 0 2px 10px rgba(237,131,55,0.3);
-    font-family: 'Poppins', sans-serif;
-  }
-  .cs-cta:hover { background:var(--orange-light); box-shadow:0 4px 16px rgba(237,131,55,0.45); }
-  .cs-cta .arrow { transition:transform .22s;display:inline-block; }
-  .cs-cta:hover .arrow { transform:translateX(5px); }
-
-  @media(max-width:1100px) { .cards-grid { grid-template-columns:repeat(3,1fr); } }
-  @media(max-width:720px)  { .cards-grid { grid-template-columns:repeat(2,1fr); } }
-  @media(max-width:460px)  { .cards-grid { grid-template-columns:1fr; } }
-`;
+import "../css/common.css";
 
 const cards = [
   { id: 1, image: "/img/case-study-tactive.webp", badge: "bdg-dm", label: "Perfomance Marketing", tags: ["SEO"], client: "Tactive Software Systems", slug: "tactive", title: "From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand", overview: "Tactive Software Systems is a technology-driven company delivering dedicated construction ERP solutions . Backed by over 17 years of research and development and supported by the industry expertise of URC Constructions, Tactive helps construction businesses streamline operations and make data-driven decisions." },
@@ -387,23 +89,22 @@ export default function CaseStudyCards() {
       </Head>
 
       <div className="cs-wrap">
-        <style>{styles}</style>
 
-        <section className="banner">
-          <div className="banner-split">
-            <div className="banner-inner">
-              <div className="banner-eyebrow">
-                <div className="eyebrow-dot" />
+        <section className="sc-banner">
+          <div className="sc-banner-inner">
+            <div className="sc-banner-left">
+              <div className="sc-banner-eyebrow">
+                <span className="sc-banner-dot" />
                 Real Results
               </div>
-              <h1 className="banner-title">
-                Our <span>Case Studies</span><br />Speak For Themselves
+              <h1 className="sc-banner-title">
+                Our <span className="sc-highlight">Case Studies</span><br />Speak For Themselves
               </h1>
-              <p className="banner-subtitle">
+              <p className="sc-banner-subtitle">
                 Our case studies reflect real work, clear thinking, and results that matter. Each engagement is built around what the client actually needs — whether that is a brand, a website, a marketing strategy, or a combination of all three — executed with precision and delivered with purpose.
               </p>
               <button
-                className="banner-cta-btn"
+                className="sc-banner-cta"
                 onClick={() => document.querySelector('.cards-section')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Explore Case Studies
@@ -413,7 +114,7 @@ export default function CaseStudyCards() {
                 </svg>
               </button>
             </div>
-            <div className="banner-img-wrap">
+            <div className="sc-banner-right">
               <img src={banner} alt="Case Studies" />
             </div>
           </div>

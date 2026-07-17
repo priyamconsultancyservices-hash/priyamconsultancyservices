@@ -489,7 +489,7 @@ const SC_STEPS = [
 
 function SessionChangeSection() {
   return (
-    <section style={{ position: "relative", overflow: "hidden", padding: "90px 0 100px" }}>      <div className="sc-bg" /><div className="sc-orb sc-orb-a" /><div className="sc-orb sc-orb-b" />
+    <section style={{ position: "relative", overflow: "hidden", padding: "90px 0 100px", background:'#fff'}}>      <div className="sc-bg" /><div className="sc-orb sc-orb-a" /><div className="sc-orb sc-orb-b" />
       <div className="sc-inner">
         <div style={{ textAlign: "center", marginBottom: "90px" }}>
           <div className="partners-header1" style={{ textAlign: 'center' }}>

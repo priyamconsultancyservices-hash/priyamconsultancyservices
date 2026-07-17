@@ -368,7 +368,7 @@ As an experienced website design company , we create modern, responsive website 
     </section>
 
       {/* SECTION 2: OUR APPROACH */}
-     <section className="wd-approach" id="approach">
+     <section className="wd-approach" id="approach" style={{background: '#fff'}}>
       <div className="wd-ap-inner">
 
         {/* LEFT CONTENT */}

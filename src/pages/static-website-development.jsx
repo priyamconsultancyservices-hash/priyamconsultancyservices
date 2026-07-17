@@ -372,7 +372,7 @@ export default function PCSWebsite() {
         </section>
 
         {/* SECTION 2: OUR APPROACH */}
-        <section className="wd-approach" id="approach">
+        <section className="wd-approach" id="approach" style={{background: '#fff'}}>
           <div className="wd-ap-inner">
 
             {/* LEFT CONTENT */}

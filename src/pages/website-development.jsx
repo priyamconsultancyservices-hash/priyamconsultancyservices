@@ -506,7 +506,7 @@ function WhyChooseUsSection() {
 /* ══════ SECTION 3: PROCESS — FIXED ══════ */
 function ProcessSection() {
   return (
-    <section className="proc-section">
+    <section className="proc-section" style={{padding: "7rem 6% 8rem ", background:'#fff'}}>
       <div className="proc-inner">
         <div className="proc-header">
           <div className="partners-header1" style={{ textAlign: 'center' }}>
