@@ -1539,7 +1539,7 @@ function CTASplitSection() {
 
 function BuildTogetherCTASection() {
   return (
-    <section style={{ padding: "4rem 5% 4rem" }}>
+    <section style={{ padding: "4rem 5% 4rem", background: '#fff' }}>
       <div style={{
         maxWidth: "1200px", margin: "0 auto",
         borderRadius: "20px", overflow: "hidden",
@@ -1717,7 +1717,7 @@ function WhyChooseUsSection() {
                             linear-gradient(90deg,rgba(237,131,55,0.04) 1px,transparent 1px);
           background-size: 60px 60px;
         }
-        .wcu-inner {
+        .wcu-inner-1 {
           position: relative; z-index: 2;
           max-width: 1160px; margin: 0 auto;
         }
@@ -1885,7 +1885,7 @@ function WhyChooseUsSection() {
       `}</style>
 
       <section className="wcu-section">
-        <div className="wcu-inner">
+        <div className="wcu-inner-1">
 
           <div className="wcu-header" style={{ textAlign: 'center' }}>
             <div className="partners-header1" style={{ textAlign: 'center' }}>
@@ -2692,7 +2692,7 @@ function PortfolioColumn({ items, speed, direction }) {
 
 function PortfolioSection() {
   return (
-    <section className="pf-section" id="portfolio">
+    <section className="pf-section" id="portfolio" style={{ padding: '0px' }}>
       <div className="pf-inner">
         <div className="pf-left">
           <div className="partners-header1">
@@ -2861,7 +2861,7 @@ function TestimonialSlider() {
   };
 
   return (
-    <section style={{ width: "100%", maxWidth: 1100, margin: "0 auto", padding: isMobile ? "40px 16px" : "60px 20px", fontFamily: "'Poppins', sans-serif", overflow: "hidden" }}>
+    <section style={{background: '#fff', width: "100%", margin: "0 auto", padding: isMobile ? "40px 16px" : "60px 20px", fontFamily: "'Poppins', sans-serif", overflow: "hidden" }}>
       <div className="partners-header1" style={{ marginBottom: isMobile ? 12 : 16, textAlign: "center" }}>
         <div className="partners-eyebrow" style={{ marginBottom: "12px", textAlign: "start" }}>Client Testimonials</div>
       </div>
@@ -3054,7 +3054,7 @@ function OurServicesSection() {
   ];
 
   return (
-    <section id="service" style={{ padding: "70px 5% 5rem" }}>
+    <section id="service" style={{ padding: "70px 5% 5rem", background:'#fff' }}>
       <div className="partners-header1" style={{ textAlign: 'center' }}>
         <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Service</div>
       </div>
