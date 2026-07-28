@@ -212,7 +212,13 @@ function SEOHead() {
     );
 }
 
-
+const GlobalStyles = () => (
+    <style>{`
+     header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN{
+    display: none;
+} 
+`}</style>
+);
 // Used by ServicesSlider (.svs-icon-wrap)
 function ServiceIcon({ name }) {
     const icons = {
@@ -1956,6 +1962,8 @@ export default function DigitalMarketingNewPage() {
             description="Break away from ordinary business websites. Priyam Consultancy Services develops next-generation, SEO-optimized websites that help Coimbatore brands stand out."
         >
             <SEOHead />
+                    <GlobalStyles />
+
             <SiteHeader />
             <HeroSection />
             <TrustedClientsSection />

@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
+import Head from '@docusaurus/Head';
 import CTASection from "../components/HomePage/CTA";
 import Link from "@docusaurus/Link";                        // ✅ CHANGED
-import Layout from "@theme/Layout";                         // ✅ ADDED
+import Layout from '@theme/Layout';
 import "../css/home.css";                                   // ✅ CHANGED (Home.css → src/css/home.css)
 // ════════════════════════════════════════════
 //  IMAGES → static/img/ folder-ல் வையுங்கள்
@@ -1445,7 +1446,7 @@ function Home() {
     <Layout>
 
       {/* ✅ Meta Keywords & JSON-LD Schemas */}
-      <head>
+      <Head>
         <title> Priyam Consultancy Services | Digital Marketing,HR & Web Dev</title>
         <meta name="description" content="We are the No.1 website development and digital marketing agency in India, offering SEO, social media marketing, & HR solutions to help businesses grow faster." />
         <link rel="canonical" href="https://www.priyamconsultancy.com/" />
@@ -1650,7 +1651,7 @@ function Home() {
             ]
           }
         `}</script>
-      </head>
+      </Head>
    <style>{`
       main {
 background: #fff;
