@@ -27,20 +27,64 @@ function SEOHead() {
     </Head>
   );
 }
+function ServiceDropdown({ value, onChange }) {
+  const [open, setOpen] = useState(false);
+  const wrapRef = useRef(null);
 
+  const services = [
+    "Website Design",
+    "Static Website Development",
+    "Custom Website Development",
+    "WooCommerce Website Development",
+    "Shopify Website Development",
+    "E-Commerce Website Development",
+  ];
+
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (wrapRef.current && !wrapRef.current.contains(e.target)) setOpen(false);
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div className="cf-custom-select" ref={wrapRef}>
+      <div className="cf-custom-select-trigger" onClick={() => setOpen(!open)}>
+        <span className={value ? "cf-cs-value" : "cf-cs-placeholder"}>
+          {value || "Select a Service"}
+        </span>
+        <span className={`cf-cs-arrow ${open ? "cf-cs-arrow-open" : ""}`}>▾</span>
+      </div>
+      {open && (
+        <ul className="cf-custom-select-list">
+          {services.map((s) => (
+            <li
+              key={s}
+              className={`cf-custom-select-item ${value === s ? "cf-cs-item-selected" : ""}`}
+              onClick={() => { onChange(s); setOpen(false); }}
+            >
+              {s}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", msg: "" });
+const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", service: "", msg: "" });
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-  const sendEmail = (e) => {
-    e.preventDefault();
-    const templateParams = {
-      name: form.name, email: form.email, phone: form.phone,
-      company: form.company, message: form.msg, url: window.location.href,
-    };
-    emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
-      .then(() => { alert("Message Sent Successfully ✅"); setForm({ name:"", email:"", phone:"", company:"", msg:"" }); })
-      .catch((error) => { console.log(error); alert("Failed to send ❌"); });
+const sendEmail = (e) => {
+  e.preventDefault();
+  const templateParams = {
+    name: form.name, email: form.email, phone: form.phone,
+    company: form.company, service: form.service, message: form.msg, url: window.location.href,
   };
+  emailjs.send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
+    .then(() => { alert("Message Sent Successfully ✅"); setForm({ name:"", email:"", phone:"", company:"", service:"", msg:"" }); })
+    .catch((error) => { console.log(error); alert("Failed to send ❌"); });
+};
   const canvasRef = useRef(null);
   const sectionRef = useRef(null);
 
@@ -234,6 +278,15 @@ Whether you have a question, need support, or want to explore how we can collabo
                   </div>
                 </div>
 
+{/* Row 3: Service Dropdown - full width single row */}
+<div className="cf-row">
+  <div className="cf-field cf-field-full">
+    <ServiceDropdown
+      value={form.service}
+      onChange={(val) => setForm({ ...form, service: val })}
+    />
+  </div>
+</div>
                 {/* Message */}
                 <div className="cf-field">
                   <textarea name="msg" placeholder="Your Message" value={form.msg} onChange={handleChange} />

@@ -2,14 +2,15 @@ import React from 'react';
 import styles from './styles.module.css';
 
 export default function CustomFooter() {
-  const services1 = [
+   const services1 = [
     { label: 'Business Registration and Compliance', href: '/business-registration-compliance' },
-    { label: 'Business Registration', href: '/business-registrations' },
-    { label: 'Company Valuations', href: '/company-valuations-and-investment-support' },
-    { label: 'Statutory Compliance', href: '/statutory-compliance' },
-    { label: 'Virtual CFO Services', href: '/virtual-cfo-services' },
-    { label: 'Accounting', href: '/accounting' },
-    { label: 'Finances', href: '/finances' },
+    { label: 'Website Development', href: '/website-development' },
+    { label: 'Website Design', href: '/website-design' },
+    { label: 'Static Websites Development', href: '/static-website-development' },
+    { label: 'Custom Websites Development', href: '/custom-website-development' },
+    { label: 'WooCommerce Websites Development', href: '/woocommerce-website-development' },
+    { label: 'Shopify Websites Development', href: '/shopify-website-development' },
+    { label: 'Ecommerce Websites Development', href: '/e-commerce-website-development' },
     { label: 'Digital Transformation', href: '/digital-transformation' },
     { label: 'Business Process Automation', href: '/business-process-automation' },
     { label: 'Custom Web & Mobile Applications', href: '/web-and-mobile-application' },
@@ -18,11 +19,11 @@ export default function CustomFooter() {
 
   const services2 = [
     { label: 'Digital Marketing', href: '/digital-marketing' },
-    { label: 'SEO', href: '/seo' },
-    { label: 'PPC', href: '/performance-marketing' },
-    { label: 'SMM', href: '/social-media' },
+    { label: 'SEO', href: '/search-engine-optimization' },
+    { label: 'Performance Marketing', href: '/performance-marketing' },
+    { label: 'SMM', href: '/social-media-marketing' },
     { label: 'Content Marketing', href: '/content-marketing' },
-    { label: 'Email Marketing', href: '/email-marketing' },
+    { label: 'Marketplace Ecommerce Marketing', href: '/marketplace-ecommerce-marketing' },
     { label: 'Website Development', href: '/website-development' },
     { label: 'Graphic Design', href: '/graphic-design' },
     { label: 'HR Services', href: '/hr-services' },
