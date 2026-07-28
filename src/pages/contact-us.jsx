@@ -237,10 +237,10 @@ Whether you have a question, need support, or want to explore how we can collabo
 
               <div className="pcs-cs-social">
                 <span className="pcs-cs-social-label">Follow</span>
-                <a className="pcs-cs-social-btn" href="#">in</a>
-                <a className="pcs-cs-social-btn" href="#">f</a>
-                <a className="pcs-cs-social-btn" href="#">ig</a>
-                <a className="pcs-cs-social-btn" href="#">𝕏</a>
+                <a className="pcs-cs-social-btn" href="https://www.linkedin.com/company/priyam-consultancy-services/">in</a>
+                <a className="pcs-cs-social-btn" href="https://www.facebook.com/people/Priyam-Consultancy-Services/61577125709962/">f</a>
+                <a className="pcs-cs-social-btn" href="https://www.instagram.com/priyam_consultancy_services/">ig</a>
+                <a className="pcs-cs-social-btn" href="https://x.com/services91032">𝕏</a>
               </div>
 
               <div className="pcs-cs-quote-deco">
