@@ -624,6 +624,47 @@ function Partners() {
   );
 }
 
+
+const CLIENT_MARQUEE_LOGOS = [
+    { name: "Tactive", img: "/img/landing-page/client-slide-1.webp" },
+    { name: "URCTS", img: "/img/landing-page/client-slide-2.webp" },
+    { name: "ZKY", img: "/img/landing-page/client-slide-3.webp" },
+    { name: "Analytix Hub", img: "/img/landing-page/client-slide-4.webp" },
+    { name: "Baltimore Health Analytics", img: "/img/landing-page/client-slide-5.webp" },
+    { name: "Sterlo", img: "/img/landing-page/client-slide-6.webp" },
+    { name: "SterloBuild", img: "/img/landing-page/client-slide-7.webp" },
+    { name: "SterloCare", img: "/img/landing-page/client-slide-8.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-9.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-10.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-11.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-12.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-13.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-14.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-15.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-16.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-17.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-18.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-19.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-20.webp" },
+];
+
+function ClientLogosMarquee() {
+    const doubled = [...CLIENT_MARQUEE_LOGOS, ...CLIENT_MARQUEE_LOGOS];
+
+    return (
+        <div className="clm-track-wrap">
+            <div className="clm-row">
+                <div className="clm-row-inner">
+                    {doubled.map((client, i) => (
+                        <div className="clm-item" key={i}>
+                            <img src={client.img} alt={client.name} loading="lazy" />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
 // ════════════════════════════════════════════
 //  SECTION 3: WHO WE ARE
 // ════════════════════════════════════════════
@@ -1660,8 +1701,9 @@ background: #fff;
       `}</style>
       {/* 1. Banner */}
       <PCSBanner />
+      <ClientLogosMarquee/>
       {/* 2. Partners Logo Scroll */}
-      <Partners />
+      {/* <Partners /> */}
       {/* 3. Who We Are */}
       <WhoWeAre />
       {/* 4. Our Services */}

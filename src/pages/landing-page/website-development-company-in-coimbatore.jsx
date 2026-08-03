@@ -237,13 +237,20 @@ function ServiceIcon({ name }) {
 
 // ── FAQ Data ──────────────────────────────────────────
 const faqData = [
-    { q: "What does a website development company do?", a: "A website development company plans and designs. Builds a website from the ground up." },
-    { q: "How is a static website different from a dynamic one?", a: "A static website shows the content to every visitor, while a dynamic website pulls content from a database and can change based on the visitor." },
-    { q: "How do I know if I'm hiring the website development company for my project?", a: "Ask for case studies request references. Confirm they can support your site after launch. " },
+    { q: "How will my new website help me beat my local competitors?", a: "A professionally designed website improves your online visibility, builds credibility, and attracts qualified leads — turning more visitors into paying customers and giving your business a real edge over competitors still relying on outdated sites." },
+    { q: "Can you guarantee my website will rank on the first page of Google?", a: " No one can honestly guarantee first-page rankings — and you should be cautious of anyone who does. What we can promise is an SEO-friendly website built on proven optimization practices that significantly improve your chances of ranking higher over time." },
+    { q: "How do you design a website that generates more customer enquiries?", a: "We focus on clear navigation, persuasive content, fast loading speeds, and strong calls-to-action — every element is built to guide a visitor toward contacting or buying from you, not just look good." },
 
-    { q: "What should I look for in a website development service?", a: "Look for a provider that offers communication, a portfolio of real results, transparent pricing and post-launch support." },
-    { q: "How long does website design and development usually take?", a: "Timelines vary by scope. A simple static site can be completed in a couple of weeks, while a custom or e-commerce build takes several weeks to a few months." },
-    { q: "What makes an e-commerce development company from a general web developer?", a: "An e-commerce development company specializes in the systems for online selling, such as secure checkout and payment gateway integration." },
+    { q: "Why should I choose a website development company in Coimbatore?", a: "A local team understands your target audience, your competitors, and the regional market — which means better communication, faster turnaround, and a website built around how your actual customers think and search." },
+    { q: "Can I meet your team in person to discuss my project?", a: "Yes — we welcome in-person meetings at our Coimbatore office, and offer virtual consultations too if that's easier for your schedule." },
+    { q: "Will I be able to update my website without technical knowledge?", a: "Yes. We build every website on an easy-to-use content management system, so you can update text, images, products, and blog posts yourself — no coding required." },
+
+    { q: "Is every website you build mobile-friendly?", a: "Every site we build is fully responsive across smartphones, tablets, and desktops — since most of your customers will likely find you on mobile first." },
+    { q: "Can my website be upgraded with new features later?", a: "Yes — our websites are built with scalability in mind, so adding new pages, features, payment systems, or integrations down the line is straightforward, not a rebuild." },
+    { q: "What support do you provide after my website goes live?", a: "We don't disappear after launch. You get ongoing technical support, security updates, performance monitoring, and bug fixes to keep your website running smoothly." },
+    { q: "How do you keep my website secure and fast?", a: "We use SSL certificates, secure coding practices, regular updates, optimized images, and caching to protect your site and keep load times fast — both of which matter for trust and for Google rankings." },
+
+
 ];
 
 
@@ -339,80 +346,20 @@ function HeroSection() {
             {/* LEFT CONTENT */}
             <div className="hero-left">
                 <div className="h-badge"><div className="badge-dot" />Web Development</div>
-                <h1 className="hero-heading">
-                    Trusted
-                    <span className="hl lined" > Website Development </span>
-                    Company in Coimbatore Delivering Real Growth
-                </h1>
-                <p className="hero-sub">
-                    We design and build fast, mobile-ready websites that help you get found, get leads, and grow — without the jargon, delays, or guesswork. From business websites to full online stores, every site we build is tailored to your industry and made to work for your business, not just look good.
+                   <h1 className="pf-heading" style={{    margin: "2.5rem 0 0"}}> 
+                         Trusted <span><i>Website Development Company in Coimbatore</i></span> Delivering Real Growth
+                    </h1>
+                
+                <p className="hero-sub1">
+We design and build fast, mobile-ready websites that help you get found, get leads, and grow — without delays . From business websites to online stores, every site is tailored to your industry and built to bring real results, not just look good. 
                 </p>
 
-                <div className="hero-stats-grid">
-                    <div className="hero-stat-card">
-                        <div className="hero-stat-icon-box">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <polyline points="16 18 22 12 16 6" />
-                                <polyline points="8 6 2 12 8 18" />
-                            </svg>
-                        </div>
-                        <div className="hero-stat-text">
-                            <span className="hero-stat-value">15+</span>
-                            <span className="hero-stat-label">Technologies & Platforms</span>
-                        </div>
-                    </div>
-
-                    <div className="hero-stat-card">
-                        <div className="hero-stat-icon-box">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                            </svg>
-                        </div>
-                        <div className="hero-stat-text">
-                            <span className="hero-stat-value">98%</span>
-                            <span className="hero-stat-label">Client Satisfaction</span>
-                        </div>
-                    </div>
-
-                    <div className="hero-stat-card">
-                        <div className="hero-stat-icon-box">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <rect x="3" y="7" width="18" height="13" rx="2" />
-                                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-                            </svg>
-                        </div>
-                        <div className="hero-stat-text">
-                            <span className="hero-stat-value">10+</span>
-                            <span className="hero-stat-label">Industries Served</span>
-                        </div>
-                    </div>
-
-                    <div className="hero-stat-card">
-                        <div className="hero-stat-icon-box">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
-                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
-                            </svg>
-                        </div>
-                        <div className="hero-stat-text">
-                            <span className="hero-stat-value">30-Day</span>
-                            <span className="hero-stat-label">Free Support</span>
-                        </div>
-                    </div>
-
-                    <div className="hero-stat-card">
-                        <div className="hero-stat-icon-box">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ed8337" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <circle cx="12" cy="12" r="3" />
-                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                            </svg>
-                        </div>
-                        <div className="hero-stat-text">
-                            <span className="hero-stat-value">100%</span>
-                            <span className="hero-stat-label">Customisable Designs</span>
-                        </div>
-                    </div>
-                </div>
+                <div className="hero-img-grid">
+    <img src="/img/landing-page/hero-img-1.webp" alt="Website Development Coimbatore" className="hero-img-1" />
+    <img src="/img/landing-page/hero-img-2.webp" alt="Web Design Coimbatore" className="hero-img-2" />
+    <img src="/img/landing-page/hero-img-3.webp" alt="Digital Solutions Coimbatore" className="hero-img-3" />
+</div>
+               
             </div>
 
             {/* RIGHT CONTACT FORM */}
@@ -546,35 +493,59 @@ function HeroContactForm() {
     );
 }
 
-// ── CTA Split Section ─────────────────────────────────
-function CTASplitSection() {
+
+const CLIENT_MARQUEE_LOGOS = [
+    { name: "Tactive", img: "/img/landing-page/client-slide-1.webp" },
+    { name: "URCTS", img: "/img/landing-page/client-slide-2.webp" },
+    { name: "ZKY", img: "/img/landing-page/client-slide-3.webp" },
+    { name: "Analytix Hub", img: "/img/landing-page/client-slide-4.webp" },
+    { name: "Baltimore Health Analytics", img: "/img/landing-page/client-slide-5.webp" },
+    { name: "Sterlo", img: "/img/landing-page/client-slide-6.webp" },
+    { name: "SterloBuild", img: "/img/landing-page/client-slide-7.webp" },
+    { name: "SterloCare", img: "/img/landing-page/client-slide-8.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-9.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-10.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-11.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-12.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-13.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-14.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-15.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-16.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-17.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-18.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-19.webp" },
+    { name: "Microsoft", img: "/img/landing-page/client-slide-20.webp" },
+];
+
+function ClientLogosMarquee() {
+    const doubled = [...CLIENT_MARQUEE_LOGOS, ...CLIENT_MARQUEE_LOGOS];
+
     return (
-        <section className="pg-cta-section">
-            <div className="pg-cta-inner">
-                <div className="pg-cta-img-wrap">
-                    <img src="/img/landing-page/trusted-partners.webp" alt="PCS Digital Marketing Team in Coimbatore" className="pg-cta-img" />
-
-                </div>
-                <div>
-                    <div className="partners-header1" >
-                        <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Trusted Website Partner
+        <div className="clm-track-wrap">
+            <div className="clm-row">
+                <div className="clm-row-inner">
+                    {doubled.map((client, i) => (
+                        <div className="clm-item" key={i}>
+                            <img src={client.img} alt={client.name} loading="lazy" />
                         </div>
-                    </div>
-                    <h2 className="pg-cta-heading">Why We Are Recognized as the   <em>Best Website Development Company in Coimbatore</em>
-                    </h2>
-                    <p className="pg-cta-desc">
-                        We have built our reputation one project at a time. We treat every client's website like it is our business. From a website to a full e-commerce development, our focus is on usable design, clean code and measurable outcomes.
-
-                    </p>
-                    <p className="pg-cta-desc2">
-                        Businesses partner with us because we combine strategy with execution. We do not just build a good-looking site but one that is structured to load quickly and convert.
-
-                    </p>
+                    ))}
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
+
+
+const CTA_LOGOS = [
+    { name: "Sterlo", img: "/img/landing-page/cta-logo-1.webp", url: "https://sterlo.com" },
+    { name: "SterloCare", img: "/img/landing-page/cta-logo-2.webp", url: "https://sterlocare.com" },
+    { name: "SterloBuild", img: "/img/landing-page/cta-logo-3.webp", url: "https://sterlobuild.com" },
+    { name: "Talent Tribe", img: "/img/landing-page/cta-logo-4.webp", url: "https://talenttribe.in" },
+    { name: "ZKY", img: "/img/landing-page/cta-logo-5.webp", url: "https://zky.co.in" },
+    { name: "Riya Consultancy", img: "/img/landing-page/cta-logo-6.webp", url: "https://riyaconsultancy.com" },
+    { name: "Star Health Finance", img: "/img/landing-page/cta-logo-7.webp", url: "" },
+    { name: "Feral Roots", img: "/img/landing-page/cta-logo-8.webp", url: "https://feralroots.in" },
+];
 
 function BuildTogetherCTASection() {
     return (
@@ -636,23 +607,31 @@ function BuildTogetherCTASection() {
                         Get a Free Consultation With Our <br /><em style={{ color: "#ed8337" }}>Website Development Team</em><br />
                     </h2>
 
-                    <p style={{
-                        fontSize: "0.9rem", color: "rgba(255,255,255,0.72)",
-                        lineHeight: 1.75, margin: 0, maxWidth: "480px",
-                    }}>
-                        Tell us about your project. We will plan the right approach. We will discuss the platform, timeline and budget before any work begins.
-                    </p>
-                    <div style={{
-                        position: "relative", zIndex: 2,
-                        display: "flex", flexDirection: "column",
-                        alignItems: "start", gap: "0.85rem", flexShrink: 0, marginTop: "1.5rem",
-                    }}>
-                        <a href="#about" className="pg-form-btn">
-                            Book a Free Consultation
-                            <span className="pg-form-btn-arr">→</span>
-                        </a>
+                   <p style={{
+    fontSize: "0.9rem", color: "rgba(255,255,255,0.72)",
+    lineHeight: 1.75, margin: 0, maxWidth: "480px",
+}}>
+    Tell us about your project. We will plan the right approach. We will discuss the platform, timeline and budget before any work begins.
+</p>
 
-                    </div>
+{/* LOGOS ROW */}
+<div className="cta-logos-row">
+    {CTA_LOGOS.map((logo, i) => (
+        <img key={i} src={logo.img} alt={logo.name} className="cta-logo-item" loading="lazy" />
+    ))}
+</div>
+
+<div style={{
+    position: "relative", zIndex: 2,
+    display: "flex", flexDirection: "column",
+    alignItems: "start", gap: "0.85rem", flexShrink: 0, marginTop: "1.5rem",
+}}>
+    <a href="#about" className="pg-form-btn">
+        Book a Free Consultation
+        <span className="pg-form-btn-arr">→</span>
+    </a>
+
+</div>
 
                 </div>
 
@@ -773,16 +752,13 @@ function FAQSection() {
 
     return (
         <section className="dm-faq-section">
-            <div className="partners-header1" style={{ textAlign: "center" }}>
-                <h2 className="partners-eyebrow" style={{ marginBottom: "20px", textAlign: "center" }}>Frequently Asked Questions</h2>
-            </div>
             <div className="container" style={{ width: '100%' }}>
                 <div className="dm-faq-head">
-                    <h3>Queries That Could <span>Hold You Back</span></h3>
+                    <h2>Frequently Asked <span>Questions</span></h2>
                 </div>
                 <div className="dm-faq-wrapper">
                     <div className="dm-faq-col">
-                        {faqData.slice(0, 3).map((item, i) => (
+                        {faqData.slice(0, 5).map((item, i) => (
                             <div className="dm-faq-item" key={i}>
                                 <div className="dm-faq-question" onClick={() => toggle(i)}>
                                     <span>{item.q}</span>
@@ -793,13 +769,13 @@ function FAQSection() {
                         ))}
                     </div>
                     <div className="dm-faq-col">
-                        {faqData.slice(3, 6).map((item, i) => (
-                            <div className="dm-faq-item" key={i + 3}>
-                                <div className="dm-faq-question" onClick={() => toggle(i + 3)}>
+                        {faqData.slice(5, 10).map((item, i) => (
+                            <div className="dm-faq-item" key={i + 5}>
+                                <div className="dm-faq-question" onClick={() => toggle(i + 5)}>
                                     <span>{item.q}</span>
-                                    <span className="icon">{active === i + 3 ? "−" : "+"}</span>
+                                    <span className="icon">{active === i + 5 ? "−" : "+"}</span>
                                 </div>
-                                {active === i + 3 && <div className="dm-faq-answer">{item.a}</div>}
+                                {active === i + 5 && <div className="dm-faq-answer">{item.a}</div>}
                             </div>
                         ))}
                     </div>
@@ -884,137 +860,95 @@ const SERVICE_SLIDES = [
 ];
 
 
-function MilestonesCTA() {
-    return (
-        <section className="ms-cta-section">
 
+// const PORTFOLIO_COL1 = [
+//     { img: "/img/portfolio/urcts.webp", label: "URCTS", tag: "", link: "https://www.urcts.in/" },
+//     { img: "/img/portfolio/tgcc.webp", label: "TGCC", tag: "", link: "" },
+//     { img: "/img/portfolio/zky.webp", label: "ZKY", tag: "", link: "https://zky.co.in/" },
+//     { img: "/img/portfolio/abb.webp", label: "ABB", tag: "", link: "https://abbmc.in/" },
+//     { img: "/img/portfolio/riya.webp", label: "Riya consultancy", tag: "", link: "https://www.riyaconsultancy.com/" },
+// ];
+// const PORTFOLIO_COL2 = [
+//     { img: "/img/portfolio/feralroots.webp", label: "Feral Roots", tag: "", link: "https://feralroots.in/" },
+//     { img: "/img/portfolio/sterlocare.webp", label: "SterloCare", tag: "", link: "https://sterlocare.com/" },
+//     { img: "/img/portfolio/sterlo.webp", label: "Sterlo", tag: "", link: "https://sterlo.io/" },
+//     { img: "/img/portfolio/talenttribe.webp", label: "Talent Tribe", tag: "", link: "https://talenttribe.in/" },
+//     { img: "/img/portfolio/sterlobuild.webp", label: "SterloBuild", tag: "", link: "https://www.sterlobuild.com/" },
+// ];
+// const PORTFOLIO_COL3 = [
+//     { img: "/img/portfolio/product1.webp", label: "", tag: "", link: "" },
+//     { img: "/img/portfolio/product2.webp", label: "", tag: "", link: "" },
+//     { img: "/img/portfolio/product3.webp", label: "", tag: "", link: "" },
+//     { img: "/img/portfolio/product4.webp", label: "", tag: "", link: "" },
+//     { img: "/img/portfolio/am.webp", label: "AM Builder", tag: "", link: "" },
+// ];
 
-            <div className="ms-cta-glow-l" />
-            <div className="ms-cta-glow-r" />
-            <div className="ms-cta-line-top" />
+// function PortfolioColumn({ items, speed, direction }) {
+//     const innerRef = useRef(null);
+//     const offsetRef = useRef(0);
+//     const pausedRef = useRef(false);
+//     const rafRef = useRef(null);
+//     // duplicate for infinite loop
+//     const doubled = [...items, ...items];
 
-            <div className="ms-cta-inner">
-                <div className="ms-cta-left">
-                    <div className="partners-header1">
-                        <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'start' }}>
-                            READY TO GROW ONLINE?
-                        </div>
-                    </div>
-                    <h2 className="ms-cta-title">
-                        Turn Your  <span>Business Idea Into </span><br />  a Website That Works
+//     useEffect(() => {
+//         const el = innerRef.current;
+//         if (!el) return;
+//         const singleH = el.scrollHeight / 2;
 
-                    </h2>
-                    <p className="ms-cta-desc">
-                        Whether you need a corporate website, e-commerce store, or custom web solution, our team can help you build a fast, responsive, and SEO-ready website designed around your business goals.
-                    </p>
-                </div>
+//         const animate = () => {
+//             if (!pausedRef.current) {
+//                 offsetRef.current += speed;
+//                 if (direction === "up") {
+//                     if (offsetRef.current >= singleH) offsetRef.current -= singleH;
+//                     el.style.transform = `translateY(-${offsetRef.current}px)`;
+//                 } else {
+//                     if (offsetRef.current >= singleH) offsetRef.current -= singleH;
+//                     el.style.transform = `translateY(${offsetRef.current - singleH}px)`;
+//                 }
+//             }
+//             rafRef.current = requestAnimationFrame(animate);
+//         };
+//         rafRef.current = requestAnimationFrame(animate);
+//         return () => cancelAnimationFrame(rafRef.current);
+//     }, [speed, direction]);
 
-                <div className="ms-cta-right">
-
-
-                    <a href="#about" className="ms-cta-btn-primary">
-                        Discuss Your Project
-
-                        <span className="ms-cta-btn-arr">→</span>
-                    </a>
-
-
-                </div>
-            </div>
-
-            <div className="ms-cta-line-bottom" />
-        </section>
-    );
-}
-
-const PORTFOLIO_COL1 = [
-    { img: "/img/portfolio/urcts.webp", label: "URCTS", tag: "", link: "https://www.urcts.in/" },
-    { img: "/img/portfolio/tgcc.webp", label: "TGCC", tag: "", link: "" },
-    { img: "/img/portfolio/zky.webp", label: "ZKY", tag: "", link: "https://zky.co.in/" },
-    { img: "/img/portfolio/abb.webp", label: "ABB", tag: "", link: "https://abbmc.in/" },
-    { img: "/img/portfolio/riya.webp", label: "Riya consultancy", tag: "", link: "https://www.riyaconsultancy.com/" },
-];
-const PORTFOLIO_COL2 = [
-    { img: "/img/portfolio/feralroots.webp", label: "Feral Roots", tag: "", link: "https://feralroots.in/" },
-    { img: "/img/portfolio/sterlocare.webp", label: "SterloCare", tag: "", link: "https://sterlocare.com/" },
-    { img: "/img/portfolio/sterlo.webp", label: "Sterlo", tag: "", link: "https://sterlo.io/" },
-    { img: "/img/portfolio/talenttribe.webp", label: "Talent Tribe", tag: "", link: "https://talenttribe.in/" },
-    { img: "/img/portfolio/sterlobuild.webp", label: "SterloBuild", tag: "", link: "https://www.sterlobuild.com/" },
-];
-const PORTFOLIO_COL3 = [
-    { img: "/img/portfolio/product1.webp", label: "", tag: "", link: "" },
-    { img: "/img/portfolio/product2.webp", label: "", tag: "", link: "" },
-    { img: "/img/portfolio/product3.webp", label: "", tag: "", link: "" },
-    { img: "/img/portfolio/product4.webp", label: "", tag: "", link: "" },
-    { img: "/img/portfolio/am.webp", label: "AM Builder", tag: "", link: "" },
-];
-
-function PortfolioColumn({ items, speed, direction }) {
-    const innerRef = useRef(null);
-    const offsetRef = useRef(0);
-    const pausedRef = useRef(false);
-    const rafRef = useRef(null);
-    // duplicate for infinite loop
-    const doubled = [...items, ...items];
-
-    useEffect(() => {
-        const el = innerRef.current;
-        if (!el) return;
-        const singleH = el.scrollHeight / 2;
-
-        const animate = () => {
-            if (!pausedRef.current) {
-                offsetRef.current += speed;
-                if (direction === "up") {
-                    if (offsetRef.current >= singleH) offsetRef.current -= singleH;
-                    el.style.transform = `translateY(-${offsetRef.current}px)`;
-                } else {
-                    if (offsetRef.current >= singleH) offsetRef.current -= singleH;
-                    el.style.transform = `translateY(${offsetRef.current - singleH}px)`;
-                }
-            }
-            rafRef.current = requestAnimationFrame(animate);
-        };
-        rafRef.current = requestAnimationFrame(animate);
-        return () => cancelAnimationFrame(rafRef.current);
-    }, [speed, direction]);
-
-    return (
-        <div
-            className="pf-col"
-            style={{ height: "min(600px, 60vw)", overflow: "hidden", position: "relative" }}
-            onMouseEnter={() => { pausedRef.current = true; }}
-            onMouseLeave={() => { pausedRef.current = false; }}
-        >
-            <div ref={innerRef} className="pf-col-inner">
-                {doubled.map((item, i) => {
-                    const card = (
-                        <div className="pf-card">
-                            <img src={item.img} alt={item.label} loading="lazy" />
-                            <div className="pf-card-overlay">
-                                <div className="pf-card-label">{item.label}</div>
-                                <div className="pf-card-tag">{item.tag}</div>
-                            </div>
-                        </div>
-                    );
-                    return item.link ? (
-                        <a
-                            href={item.link}
-                            key={i}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="pf-card-link"
-                        >
-                            {card}
-                        </a>
-                    ) : (
-                        <div key={i}>{card}</div>
-                    );
-                })}
-            </div>
-        </div>
-    );
-}
+//     return (
+//         <div
+//             className="pf-col"
+//             style={{ height: "min(600px, 60vw)", overflow: "hidden", position: "relative" }}
+//             onMouseEnter={() => { pausedRef.current = true; }}
+//             onMouseLeave={() => { pausedRef.current = false; }}
+//         >
+//             <div ref={innerRef} className="pf-col-inner">
+//                 {doubled.map((item, i) => {
+//                     const card = (
+//                         <div className="pf-card">
+//                             <img src={item.img} alt={item.label} loading="lazy" />
+//                             <div className="pf-card-overlay">
+//                                 <div className="pf-card-label">{item.label}</div>
+//                                 <div className="pf-card-tag">{item.tag}</div>
+//                             </div>
+//                         </div>
+//                     );
+//                     return item.link ? (
+//                         <a
+//                             href={item.link}
+//                             key={i}
+//                             target="_blank"
+//                             rel="noopener noreferrer"
+//                             className="pf-card-link"
+//                         >
+//                             {card}
+//                         </a>
+//                     ) : (
+//                         <div key={i}>{card}</div>
+//                     );
+//                 })}
+//             </div>
+//         </div>
+//     );
+// }
 
 
 const INDUSTRIES_LIST = [
@@ -1068,95 +1002,112 @@ function FormPopupModal({ open, onClose }) {
     );
 }
 
-function PortfolioSection({ onOpenForm }) {
-    return (
+// function PortfolioSection({ onOpenForm }) {
+//     return (
 
-        <section className="pf-section" id="portfolio" style={{ padding: '0' }}>
+//         <section className="pf-section" id="portfolio" style={{ padding: '0' }}>
 
 
 
-            <div className="pf-inner">
-                <div className="pf-left">
-                    <div className="partners-header1">
-                        <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Portfolio</div>
-                    </div>
-                    <h2 className="pf-heading">
-                        Websites We've Built That <span><i>Are Already Driving Results</i></span>
-                    </h2>
-                    <p className="pf-desc">
-                        Discover our latest website projects showcasing thoughtful design, seamless user experiences, and modern development across diverse industries.
-                    </p>
-                    <h2 className="ind-heading">
-                        Industries We <span>Serve</span>
-                    </h2>
-                    <div className="ind-grid">
-                        {INDUSTRIES_LIST.map((industry, i) => (
-                            <div className="ind-item" key={i}>
-                                <div className="ind-icon">{String(i + 1).padStart(2, "0")}</div>
-                                <div className="ind-label">{industry}</div>
-                            </div>
-                        ))}
-                    </div>
-                    <div className="pf-btns">
-                        <button
-                            type="button"
-                            onClick={onOpenForm}
-                            className="pf-btn"
-                            style={{ border: "none" }}
-                        >
-                            Start Your Project  →
-                        </button>
-                    </div>
-                </div>
+//             <div className="pf-inner">
+//                 <div className="pf-left">
+//                     <div className="partners-header1">
+//                         <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Portfolio</div>
+//                     </div>
+//                     <h2 className="pf-heading">
+//                         Websites We've Built That <span><i>Are Already Driving Results</i></span>
+//                     </h2>
+//                     <p className="pf-desc">
+//                         Discover our latest website projects showcasing thoughtful design, seamless user experiences, and modern development across diverse industries.
+//                     </p>
+//                     <h2 className="ind-heading">
+//                         Industries We <span>Serve</span>
+//                     </h2>
+//                     <div className="ind-grid">
+//                         {INDUSTRIES_LIST.map((industry, i) => (
+//                             <div className="ind-item" key={i}>
+//                                 <div className="ind-icon">{String(i + 1).padStart(2, "0")}</div>
+//                                 <div className="ind-label">{industry}</div>
+//                             </div>
+//                         ))}
+//                     </div>
+//                     <div className="pf-btns">
+//                         <button
+//                             type="button"
+//                             onClick={onOpenForm}
+//                             className="pf-btn"
+//                             style={{ border: "none" }}
+//                         >
+//                             Start Your Project  →
+//                         </button>
+//                     </div>
+//                 </div>
 
-                <div className="pf-cols">
-                    <PortfolioColumn items={PORTFOLIO_COL1} speed={0.6} direction="up" />
-                    <PortfolioColumn items={PORTFOLIO_COL2} speed={0.5} direction="down" />
-                    <PortfolioColumn items={PORTFOLIO_COL3} speed={0.7} direction="up" />
-                </div>
-            </div>
-        </section>
-    );
-}
+//                 <div className="pf-cols">
+//                     <PortfolioColumn items={PORTFOLIO_COL1} speed={0.6} direction="up" />
+//                     <PortfolioColumn items={PORTFOLIO_COL2} speed={0.5} direction="down" />
+//                     <PortfolioColumn items={PORTFOLIO_COL3} speed={0.7} direction="up" />
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
 
 // ── Trusted By / Client Logos Section ─────────────────
 const CLIENT_LOGOS = [
-    { name: "Strelocare", img: "/img/landing-page/clients/client-1.webp" },
-    { name: "Indane", img: "/img/landing-page/clients/client-2.webp" },
-    { name: "Mahindra Water Utilities", img: "/img/landing-page/clients/client-3.webp" },
-    { name: "AJK", img: "/img/landing-page/clients/client-4.webp" },
-    { name: "Shanthi Gears", img: "/img/landing-page/clients/client-5.webp" },
-    { name: "Native Indian Organics", img: "/img/landing-page/clients/client-6.webp" },
-    { name: "EloraGems", img: "/img/landing-page/clients/client-7.webp" },
-    { name: "SNS", img: "/img/landing-page/clients/client-8.webp" },
-    { name: "Medwin Hospital", img: "/img/landing-page/clients/client-9.webp" },
-    { name: "Vijay Park Inn Hotel", img: "/img/landing-page/clients/client-10.webp" },
-    { name: "Colourfuller", img: "/img/landing-page/clients/client-11.webp" },
-    { name: "Five Fingers Exports", img: "/img/landing-page/clients/client-12.webp" },
+    { name: "SterloBuild", img: "/img/landing-page/client-logo-1.webp" },
+    { name: "Talent Tribe", img: "/img/landing-page/client-logo-2.webp" },
+    { name: "Star Health Finance", img: "/img/landing-page/client-logo-3.webp" },
+    { name: "Riya Consultancy", img: "/img/landing-page/client-logo-4.webp" },
+    { name: "ZKY", img: "/img/landing-page/client-logo-5.webp" },
+    { name: "Sterlo", img: "/img/landing-page/client-logo-6.webp" },
+    { name: "SterloCare", img: "/img/landing-page/client-logo-7.webp" },
 ];
 
-function TrustedClientsSection() {
+function TrustedClientsSlider() {
+    const cols = 4;
+    const row1 = CLIENT_LOGOS.slice(0, cols);
+    const row2 = CLIENT_LOGOS.slice(cols);
+
     return (
-        <section className="tc-section">
-            {/* <style>{`
-        
-      `}</style> */}
-
-            <div className="partners-header1" style={{ textAlign: 'center' }}>
-                <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Clients</div>
-            </div>
-
-            <h2 className="tech-title svc-main-heading" style={{ marginBottom: '50px' }}>
-                <span>Trusted By Established </span> Leaders and Innovative Startups
-            </h2>
-            <div className="tc-inner">
-                <div className="tc-grid">
-                    {CLIENT_LOGOS.map((client, i) => (
+        <div className="tc-slider-wrap">
+            <div className="tc-fixed-grid">
+                <div className="tc-fixed-row">
+                    {row1.map((client, i) => (
                         <div className="tc-cell" key={i}>
                             <img src={client.img} alt={client.name} loading="lazy" />
                         </div>
                     ))}
                 </div>
+                {row2.length > 0 && (
+                    <div className="tc-fixed-row tc-fixed-row-last">
+                        {row2.map((client, i) => (
+                            <div className="tc-cell" key={i}>
+                                <img src={client.img} alt={client.name} loading="lazy" />
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+}
+
+function TrustedClientsSection() {
+    return (
+        <section className="tc-section">
+            <div className="partners-header1" style={{ textAlign: 'center' }}>
+                <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Clients</div>
+            </div>
+
+            <h2 className="tech-title svc-main-heading" > 
+                <span>Best </span> Website Development Company in Coimbatore 
+            </h2>
+ <p className="tech-desc1">
+We at Priyam Consultancy Services are a trusted website development company in Coimbatore, offering complete website design and development services that are affordable, high-quality, and result-oriented. As a leading website development service provider, we build custom web solutions focused on performance, usability, and speed. We specialize in mobile-responsive websites, WordPress and CMS-based development, ecommerce website development, custom static and dynamic websites, portal development, and SEO-ready website structures. As a recognized website design company in Coimbatore, our focus stays on SEO-optimized website design, conversion-friendly layouts, and landing pages that turn visitors into customers, making us a trusted choice for businesses looking for the best website development company. 
+                </p>
+            <div className="tc-inner">
+                <TrustedClientsSlider />
             </div>
         </section>
     );
@@ -1173,11 +1124,11 @@ function useWindowWidth() {
 }
 
 const testimonials = [
-    { index: 0, text: "PCS delivered a modern responsive website with SEO optimization, analytics integration, heatmap tracking, and performance monitoring. We appreciate their team's dedication, technical expertise, and timely support, which significantly improved our online visibility, website performance, and customer engagement.", name: "Mr.Ashwin", role: "Founder", badge: ["Website Development", "SEO"] },
-    { index: 1, text: "Our basic single-page website was upgraded into a professionally structured multi-page platform with enhanced SEO, GMB optimization, analytics setup, and customer activity tracking. We thank the PCS team for their commitment, quick support, and valuable contribution in strengthening our online presence.", name: "Mr.Sabarinath", role: "Founder", badge: ["Website Development", "SEO", "Local SEO"] },
-    { index: 2, text: "A fresh UI design with strong website development, improved online reach, lead capture setup, and user activity insights was successfully developed by the PCS team. Every change request was handled patiently while turning our ideas into exactly what we expected. The late-night support before launch was truly appreciated.", name: "Mr.Clement Selvam", role: "Founder", badge: ["Website Development", "SEO"] },
-    { index: 3, text: "As a growing forest-based natural products brand, we partnered with PCS to expand our store presence and online sales. PCS team developed a complete e-commerce platform with Razorpay setup, order management, inventory tracking, centralized dashboard, WhatsApp integration for smooth business operations.", name: "Mr.Karupasamy", role: "Director", badge: ["E-Commerce", "SEO", "Local SEO"] },
-    { index: 4, text: "Competing in the global market we required a website that matched international standards. With strategic content, SEO optimization, analytics integration, and performance enhancements, our digital presence was significantly strengthened. We appreciate the PCS team for their expertise, flexibility, consistent support throughout the process.", name: "Mr.Gunasekaran", role: "Founder", badge: ["SEO", "Content Marketing", "Paid Ads"] },
+    { index: 0, text: "PCS delivered a modern responsive website with SEO optimization, analytics integration, heatmap tracking, and performance monitoring. We appreciate their team's dedication, technical expertise, and timely support, which significantly improved our online visibility, website performance, and customer engagement.", name: "Mr.Ashwin", role: "Founder", badge: ["Website Development", "SEO"], color: "#004168", logo: "/img/landing-page/testi-logo-5.webp" },
+    { index: 1, text: "Our basic single-page website was upgraded into a professionally structured multi-page platform with enhanced SEO, GMB optimization, analytics setup, and customer activity tracking. We thank the PCS team for their commitment, quick support, and valuable contribution in strengthening our online presence.", name: "Mr.Sabarinath", role: "Founder", badge: ["Website Development", "SEO", "Local SEO"], color: "#ed8337", logo: "/img/landing-page/testi-logo-4.webp" },
+    { index: 2, text: "A fresh UI design with strong website development, improved online reach, lead capture setup, and user activity insights was successfully developed by the PCS team. Every change request was handled patiently while turning our ideas into exactly what we expected. The late-night support before launch was truly appreciated.", name: "Mr.Clement Selvam", role: "Founder", badge: ["Website Development", "SEO"], color: "#16a34a", logo: "/img/landing-page/testi-logo-3.webp" },
+    { index: 3, text: "As a growing forest-based natural products brand, we partnered with PCS to expand our store presence and online sales. PCS team developed a complete e-commerce platform with Razorpay setup, order management, inventory tracking, centralized dashboard, WhatsApp integration for smooth business operations.", name: "Mr.Karupasamy", role: "Director", badge: ["E-Commerce", "SEO", "Local SEO"], color: "#0a3652", logo: "/img/landing-page/testi-logo-1.webp" },
+    { index: 4, text: "Competing in the global market we required a website that matched international standards. With strategic content, SEO optimization, analytics integration, and performance enhancements, our digital presence was significantly strengthened. We appreciate the PCS team for their expertise, flexibility, consistent support throughout the process.", name: "Mr.Gunasekaran", role: "Founder", badge: ["SEO", "Content Marketing", "Paid Ads"], color: "#f47920", logo: "/img/landing-page/testi-logo-2.webp" },
 ];
 
 function getTestimonialPos(cardIndex, activeIndex, total, isMobile) {
@@ -1240,18 +1191,26 @@ function TestimonialCard({ data, pos, onClick, isMobile, isTablet, isActive }) {
             <div style={{ fontSize: isMobile ? 28 : 36, color: "#f47920", lineHeight: 1, fontFamily: "Georgia, serif", marginBottom: 8 }}>"</div>
             <div style={{ fontSize: isMobile ? 11.5 : 13, color: "#3d4f6a", lineHeight: isMobile ? 1.65 : 1.75, marginBottom: isMobile ? 14 : 22, flex: 1, fontWeight: 400 }}>{data.text}</div>
             <div style={{ height: 1, background: "#f0f2f7", marginBottom: isMobile ? 10 : 16 }} />
-            <div style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+
+<div style={{ display: "flex", alignItems: "center", gap: 10, justifyContent: "space-between" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: 1 }}>
                 <div style={{ fontSize: isMobile ? 13 : 15, fontWeight: 700, color: "#0d1f3c" }}>{data.name}</div>
                 <div style={{ fontSize: 11, color: "#6b7a94", lineHeight: 1.4, fontWeight: 400 }}>{data.role}</div>
-                <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginTop: 4 }}>
-                    {data.badge.map((b) => (
-                        <span key={b} style={{ display: "inline-block", fontSize: 9.5, fontWeight: 600, letterSpacing: "0.05em", padding: "2px 7px", borderRadius: 20, background: "rgba(244,121,32,0.1)", color: "#f47920", textTransform: "uppercase" }}>{b}</span>
-                    ))}
-                </div>
-                <div style={{ display: "flex", gap: 3, marginTop: 6 }}>
-                    {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
-                </div>
             </div>
+
+            {data.logo && (
+                <img
+                    src={data.logo}
+                    alt={`${data.name} company logo`}
+                    style={{
+                        height: isMobile ? 24 : 30,
+                        maxWidth: isMobile ? 60 : 80,
+                        objectFit: "contain",
+                        flexShrink: 0,
+                    }}
+                />
+            )}
+        </div>
         </div>
     );
 }
@@ -1550,123 +1509,366 @@ function OurServicesSection() {
 }
 
 // ── Reasons / Portfolio-style Cards Section (exact match) ──
-const REASONS_DATA = [
-    {
-        img: "/img/case-study-feral.webp",
-        tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
-        title: "Feral Roots",
-        short: "Priyam Consultancy Services transformed Feral Roots into a thriving online business with a custom eCommerce website featuring secure online",
-        full: "Priyam Consultancy Services transformed Feral Roots into a thriving online business with a custom eCommerce website featuring secure online payments, order tracking, SEO for higher search visibility, and Google Business Profile optimization to increase local reach and customer enquiries.",
-    },
-    {
-        img: "/img/case-study-urtc.webp",
-        tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
-        title: "URCTS",
-        short: "Priyam Consultancy Services developed a premium, SEO-optimized website for URCTS featuring immersive 3D banners, comprehensive service ",
-        full: "Priyam Consultancy Services developed a premium, SEO-optimized website for URCTS featuring immersive 3D banners, comprehensive service presentation and complete SEO implementation with keyword-focused content, strengthening brand credibility, improving visibility, enhancing user engagement, supporting global business growth.",
-    },
-    {
-        img: "/img/case-study-tgcc.webp",
-        tags: [{ label: "SEO", type: "green" }, { label: "Website Development", type: "navy" }],
-        title: "TGCC",
-        short: "TGCC partnered with Priyam Consultancy Services to launch a premium website reflecting its training excellence. Using AI-powered visuals, strategic SEO,",
-        full: "TGCC partnered with Priyam Consultancy Services to launch a premium website reflecting its training excellence. Using AI-powered visuals, strategic SEO, and modern design, the website was successfully delivered within 20 days, increasing training enquiries and credibility.",
-    },
-    {
-        img: "/img/case-study-abb.webp",
-        tags: [{ label: "Website Development", type: "navy" }, { label: "Content", type: "green" }],
-        title: "ABB Consultancy",
-        short: "Priyam Consultancy Services redesigned ABB's website with a premium, service-focused design, keyword-rich SEO content, and a refined user ",
-        full: "Priyam Consultancy Services redesigned ABB's website with a premium, service-focused design, keyword-rich SEO content, and a refined user experience, strengthening brand credibility, improving search visibility, and creating a professional digital presence aligned with business goals successfully.",
-    },
-    {
-        img: "/img/case-study-riya.webp",
-        tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
-        title: "Riya Consultancy Services",
-        short: "With limited local visibility, RIYA partnered with Priyam Consultancy Services to redesign its website using competitor analysis, targeted SEO, and social",
-        full: "With limited local visibility, RIYA partnered with Priyam Consultancy Services to redesign its website using competitor analysis, targeted SEO, and social media marketing, helping the brand reach more local prospects, improve search visibility, and generate quality business enquiries.",
-    },
-    {
-        img: "/img/case-study-talent-tribe.webp",
-        tags: [{ label: "Website Development", type: "orange" }],
-        title: "Talent Tribe",
-        short: "Using AI-assisted design and custom website development, Priyam Consultancy Services built a premium website for Talent Tribe to strengthen its",
-        full: "Using AI-assisted design and custom website development, Priyam Consultancy Services built a premium website for Talent Tribe to strengthen its brand, improve online visibility, enhance usability, support SEO, and create a strong foundation for future business enquiries.",
-    },
+// const REASONS_DATA = [
+//     {
+//         img: "/img/case-study-feral.webp",
+//         tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
+//         title: "Feral Roots",
+//         short: "Priyam Consultancy Services transformed Feral Roots into a thriving online business with a custom eCommerce website featuring secure online",
+//         full: "Priyam Consultancy Services transformed Feral Roots into a thriving online business with a custom eCommerce website featuring secure online payments, order tracking, SEO for higher search visibility, and Google Business Profile optimization to increase local reach and customer enquiries.",
+//     },
+//     {
+//         img: "/img/case-study-urtc.webp",
+//         tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
+//         title: "URCTS",
+//         short: "Priyam Consultancy Services developed a premium, SEO-optimized website for URCTS featuring immersive 3D banners, comprehensive service ",
+//         full: "Priyam Consultancy Services developed a premium, SEO-optimized website for URCTS featuring immersive 3D banners, comprehensive service presentation and complete SEO implementation with keyword-focused content, strengthening brand credibility, improving visibility, enhancing user engagement, supporting global business growth.",
+//     },
+//     {
+//         img: "/img/case-study-tgcc.webp",
+//         tags: [{ label: "SEO", type: "green" }, { label: "Website Development", type: "navy" }],
+//         title: "TGCC",
+//         short: "TGCC partnered with Priyam Consultancy Services to launch a premium website reflecting its training excellence. Using AI-powered visuals, strategic SEO,",
+//         full: "TGCC partnered with Priyam Consultancy Services to launch a premium website reflecting its training excellence. Using AI-powered visuals, strategic SEO, and modern design, the website was successfully delivered within 20 days, increasing training enquiries and credibility.",
+//     },
+//     {
+//         img: "/img/case-study-abb.webp",
+//         tags: [{ label: "Website Development", type: "navy" }, { label: "Content", type: "green" }],
+//         title: "ABB Consultancy",
+//         short: "Priyam Consultancy Services redesigned ABB's website with a premium, service-focused design, keyword-rich SEO content, and a refined user ",
+//         full: "Priyam Consultancy Services redesigned ABB's website with a premium, service-focused design, keyword-rich SEO content, and a refined user experience, strengthening brand credibility, improving search visibility, and creating a professional digital presence aligned with business goals successfully.",
+//     },
+//     {
+//         img: "/img/case-study-riya.webp",
+//         tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
+//         title: "Riya Consultancy Services",
+//         short: "With limited local visibility, RIYA partnered with Priyam Consultancy Services to redesign its website using competitor analysis, targeted SEO, and social",
+//         full: "With limited local visibility, RIYA partnered with Priyam Consultancy Services to redesign its website using competitor analysis, targeted SEO, and social media marketing, helping the brand reach more local prospects, improve search visibility, and generate quality business enquiries.",
+//     },
+//     {
+//         img: "/img/case-study-talent-tribe.webp",
+//         tags: [{ label: "Website Development", type: "orange" }],
+//         title: "Talent Tribe",
+//         short: "Using AI-assisted design and custom website development, Priyam Consultancy Services built a premium website for Talent Tribe to strengthen its",
+//         full: "Using AI-assisted design and custom website development, Priyam Consultancy Services built a premium website for Talent Tribe to strengthen its brand, improve online visibility, enhance usability, support SEO, and create a strong foundation for future business enquiries.",
+//     },
+//     {
+//         img: "/img/portfolio/sterlocare.webp",
+//         tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
+//         title: "SterloCare",
+//         short: "Priyam Consultancy Services built a clean, service-focused website for SterloCare with structured content, on-page SEO, and a user-friendly ",
+//         full: "Priyam Consultancy Services built a clean, service-focused website for SterloCare with structured content, on-page SEO, and a user-friendly enquiry flow, helping the brand present its services clearly, rank better for relevant local searches, and convert more visitors into genuine leads.",
+//     },
+//     {
+//         img: "/img/portfolio/zky.webp",
+//         tags: [{ label: "Website Development", type: "navy" }, { label: "SEO", type: "green" }],
+//         title: "ZKY",
+//         short: "Priyam Consultancy Services delivered a modern, brand-focused website for ZKY with optimized page structure, fast load times, and SEO ",
+//         full: "Priyam Consultancy Services delivered a modern, brand-focused website for ZKY with optimized page structure, fast load times, and SEO fundamentals in place, giving the business a stronger digital identity, better search visibility, and a smoother path for customer enquiries.",
+//     },
+//     {
+//         img: "/img/portfolio/am.webp",
+//         tags: [{ label: "Website Development", type: "orange" }],
+//         title: "AM Builders",
+//         short: "Priyam Consultancy Services created a professional portfolio website for AM Builders to showcase completed projects, services, and client ",
+//         full: "Priyam Consultancy Services created a professional portfolio website for AM Builders to showcase completed projects, services, and client trust, with a clean layout and clear calls to action that help the business convert website visitors into serious project enquiries.",
+//     },
+// ];
+
+// function ReasonCard({ data }) {
+//     const [open, setOpen] = useState(false);
+//     return (
+//         <div className="reason-card">
+//             <div className="reason-card-img-wrap">
+//                 <img src={data.img} alt={data.title} className="reason-card-img" />
+//             </div>
+
+//             <div className="reason-card-body">
+//                 <div className="reason-card-tags">
+//                     {data.tags.map((t, i) => (
+//                         <span key={i} className={`reason-tag reason-tag-${t.type}`}>
+//                             <span className="reason-tag-dot" />
+//                             {t.label}
+//                         </span>
+//                     ))}
+//                 </div>
+
+//                 <h3 className="reason-card-title">
+//                     <span className="reason-user-icon">
+//                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+//                             <circle cx="12" cy="8" r="4" />
+//                             <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
+//                         </svg>
+//                     </span>
+//                     {data.title}
+//                 </h3>
+
+//                 <p className={`reason-desc ${open ? "is-open" : ""}`}>
+//                     {open ? data.full : data.short}
+//                 </p>
+
+//                 <div className="reason-card-footer">
+//                     <button
+//                         type="button"
+//                         className="reason-read-more"
+//                         onClick={() => setOpen(!open)}
+//                     >
+//                         {open ? "Read Less" : "Read More"}
+//                         <span className="reason-read-more-arr">→</span>
+//                     </button>
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
+
+// function ReasonsSection() {
+//     return (
+//         <section className="reasons-section" id="our-case-studies">
+
+
+//             <div className="container">
+//                 <div className="partners-header1" style={{ textAlign: 'center' }}>
+//                     <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Case Studies
+//                     </div>
+//                 </div>
+//                 <h2 className="pg-cta-heading" style={{ textAlign: 'center' }}>  <em>Success Stories </em> That Drive Growth
+//                 </h2>
+//                 <p style={{ textAlign: "center", maxWidth: 1000, margin: "20px auto 60px", color: "#666", lineHeight: 1.8, fontSize: "0.96rem" }}>
+//                     Explore how we help businesses across industries improve online visibility, generate leads, and drive growth through customized website solutions.
+//                 </p>
+//                 <div className="cards-grid">
+//                     {REASONS_DATA.map((r, i) => (
+//                         <ReasonCard key={i} data={r} />
+//                     ))}
+//                 </div>
+//             </div>
+//         </section>
+//     );
+// }
+
+// ── Portfolio Grid Data — replace img/link with your real ones ──
+const PORTFOLIO_GRID_ITEMS = [
+    { img: "/img/landing-page/protfoilo-1.webp", category: "E - Commerce", title: "Feral Roots ", link: "" },
+    { img: "/img/landing-page/protfoilo-2.webp", category: "HR Background Verification ", title: "ZKY", link: "" },
+    { img: "/img/landing-page/protfoilo-3.webp", category: "Enterprise SaaS / No-Code-Low-Code Platform ", title: "Sterlo", link: "" },
+    { img: "/img/landing-page/protfoilo-4.webp", category: "Digital Transformation ", title: "ABB ", link: "" },
+    { img: "/img/landing-page/protfoilo-5.webp", category: "Design & Construction ", title: "URCTS ", link: "" },
+    { img: "/img/landing-page/protfoilo-6.webp", category: "Accounting ", title: "RIYA ", link: "" },
+    { img: "/img/landing-page/protfoilo-7.webp", category: "Healthcare", title: "SterloCare ", link: "" },
+    { img: "/img/landing-page/protfoilo-8.webp", category: "HR Consultancy ", title: "TalentTribe ", link: "" },
+
 ];
 
-function ReasonCard({ data }) {
-    const [open, setOpen] = useState(false);
+function PortfolioSection() {
+    const width = useWindowWidth();
+    const isMobile = width < 768;
+
     return (
-        <div className="reason-card">
-            <div className="reason-card-img-wrap">
-                <img src={data.img} alt={data.title} className="reason-card-img" />
-            </div>
+        <section className="pf-grid-section" id="portfolio">
+            <div className="pf-grid-inner">
+                <div
+                    className="pf-grid-header"
+                    style={{
+                        display: "flex",
+                        flexDirection: isMobile ? "column" : "row",
+                        justifyContent: "space-between",
+                        alignItems: isMobile ? "flex-start" : "center",
+                        gap: isMobile ? "24px" : "3rem",
+                        flexWrap: "wrap",
+                    }}
+                >
+                    {/* LEFT: eyebrow + heading + desc */}
+                    <div style={{ flex: "1 1 500px", textAlign: "left", width: "100%", maxWidth: '650px' }}>
+                        <div
+                            className="partners-eyebrow"
+                            style={{ marginBottom: isMobile ? "12px" : "20px", textAlign: "left" }}
+                        >
+                            Our Portfolio
+                        </div>
 
-            <div className="reason-card-body">
-                <div className="reason-card-tags">
-                    {data.tags.map((t, i) => (
-                        <span key={i} className={`reason-tag reason-tag-${t.type}`}>
-                            <span className="reason-tag-dot" />
-                            {t.label}
-                        </span>
-                    ))}
-                </div>
+                        <h2
+                            className="pf-grid-heading"
+                            style={{
+                                textAlign: "left",
+                                fontSize: isMobile ? "1.6rem" : undefined,
+                                lineHeight: isMobile ? 1.3 : undefined,
+                            }}
+                        >
+                            <span className="navy">Websites We've Built That</span>{" "}
+                            <span className="orange">Are Already Driving Results</span>
+                        </h2>
 
-                <h3 className="reason-card-title">
-                    <span className="reason-user-icon">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <circle cx="12" cy="8" r="4" />
-                            <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                        </svg>
-                    </span>
-                    {data.title}
-                </h3>
-
-                <p className={`reason-desc ${open ? "is-open" : ""}`}>
-                    {open ? data.full : data.short}
-                </p>
-
-                <div className="reason-card-footer">
-                    <button
-                        type="button"
-                        className="reason-read-more"
-                        onClick={() => setOpen(!open)}
-                    >
-                        {open ? "Read Less" : "Read More"}
-                        <span className="reason-read-more-arr">→</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-function ReasonsSection() {
-    return (
-        <section className="reasons-section" id="our-case-studies">
-
-
-            <div className="container">
-                <div className="partners-header1" style={{ textAlign: 'center' }}>
-                    <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Case Studies
+                        <p
+                            className="pf-grid-desc"
+                            style={{
+                                textAlign: "left",
+                                maxWidth: isMobile ? "100%" : "560px",
+                                fontSize: isMobile ? "0.9rem" : undefined,
+                            }}
+                        >
+                            Discover our latest website projects showcasing thoughtful design,
+                            seamless user experiences, and modern development across diverse
+                            industries.
+                        </p>
                     </div>
+
+                    {/* RIGHT: button */}
+                    <a
+                        href="#get-in-touch-form"
+                        className="pf-grid-viewmore-btn"
+                        style={{
+                            flexShrink: 0,
+                            display: "inline-flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "10px",
+                            background: "#ed8337",
+                            color: "#fff",
+                            fontWeight: 600,
+                            padding: isMobile ? "12px 24px" : "14px 28px",
+                            borderRadius: "50px",
+                            textDecoration: "none",
+                            whiteSpace: "nowrap",
+                            width: isMobile ? "100%" : "auto",
+                            fontSize: isMobile ? "0.9rem" : undefined,
+                        }}
+                    >
+                        View More
+                        <span className="pf-grid-viewmore-arr">→</span>
+                    </a>
                 </div>
-                <h2 className="pg-cta-heading" style={{ textAlign: 'center' }}>  <em>Success Stories </em> That Drive Growth
-                </h2>
-                <p style={{ textAlign: "center", maxWidth: 1000, margin: "20px auto 60px", color: "#666", lineHeight: 1.8, fontSize: "0.96rem" }}>
-                    Explore how we help businesses across industries improve online visibility, generate leads, and drive growth through customized website solutions.
-                </p>
-                <div className="cards-grid">
-                    {REASONS_DATA.map((r, i) => (
-                        <ReasonCard key={i} data={r} />
-                    ))}
+
+                <div
+                    className="pf-grid-cards"
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: isMobile ? "1fr" : undefined,
+                        gap: isMobile ? "16px" : undefined,
+                        marginTop: isMobile ? "24px" : undefined,
+                    }}
+                >
+                    {PORTFOLIO_GRID_ITEMS.map((item, i) => {
+                        const Card = (
+                            <>
+                                <div className="pf-grid-card-img-wrap">
+                                    <img src={item.img} alt={item.title} loading="lazy" />
+                                </div>
+                                <div className="pf-grid-card-category">{item.category}</div>
+                                <div className="pf-grid-card-title">{item.title}</div>
+                            </>
+                        );
+                        return item.link ? (
+                            <a href={item.link} target="_blank" rel="noopener noreferrer" className="pf-grid-card" key={i}>
+                                {Card}
+                            </a>
+                        ) : (
+                            <div className="pf-grid-card" key={i}>{Card}</div>
+                        );
+                    })}
                 </div>
             </div>
         </section>
     );
 }
 
+
+// ── Industries We Cater To ──────────────────────────
+const INDUSTRIES_CATER_DATA = [
+    { img: "/img/landing-page/industries-1.webp", label: "Textile " },
+    { img: "/img/landing-page/industries-2.webp", label: "Manufacturing " },
+    { img: "/img/landing-page/industries-3.webp", label: "Healthcare " },
+    { img: "/img/landing-page/industries-4.webp", label: "Tourism & Hospitality" },
+    { img: "/img/landing-page/industries-5.webp", label: "Construction " },
+    { img: "/img/landing-page/industries-6.webp", label: "IT / IT Services" },
+    { img: "/img/landing-page/industries-7.webp", label: "Retail & E-Commerce" },
+    { img: "/img/landing-page/industries-8.webp", label: "Banking" },
+    { img: "/img/landing-page/industries-9.webp", label: "Financial & Insurance" },
+
+];
+
+function IndustriesCaterSection() {
+    const innerRef = useRef(null);
+    const offsetRef = useRef(0);
+    const pausedRef = useRef(false);
+    const rafRef = useRef(null);
+    const speed = 0.6; // px per frame
+
+    const doubled = [...INDUSTRIES_CATER_DATA, ...INDUSTRIES_CATER_DATA];
+
+    useEffect(() => {
+        const el = innerRef.current;
+        if (!el) return;
+        const singleWidth = el.scrollWidth / 2;
+
+        const animate = () => {
+            if (!pausedRef.current) {
+                offsetRef.current += speed;
+                if (offsetRef.current >= singleWidth) offsetRef.current -= singleWidth;
+                el.style.transform = `translateX(-${offsetRef.current}px)`;
+            }
+            rafRef.current = requestAnimationFrame(animate);
+        };
+        rafRef.current = requestAnimationFrame(animate);
+        return () => cancelAnimationFrame(rafRef.current);
+    }, []);
+
+    const nudge = (dir) => {
+        const el = innerRef.current;
+        if (!el) return;
+        const singleWidth = el.scrollWidth / 2;
+        const card = el.querySelector(".ind-cater-card");
+        const step = card ? card.offsetWidth + 20 : 280;
+
+        offsetRef.current += dir * step;
+        if (offsetRef.current >= singleWidth) offsetRef.current -= singleWidth;
+        if (offsetRef.current < 0) offsetRef.current += singleWidth;
+        el.style.transform = `translateX(-${offsetRef.current}px)`;
+    };
+
+    return (
+        <section className="ind-cater-section">
+            <div className="ind-cater-inner">
+                {/* LEFT TEXT */}
+                <div className="ind-cater-left">
+                    <h2 className="ind-cater-heading">
+                        Industries <span>We Serve 
+</span> 
+                    </h2>
+                    <p className="ind-cater-desc">
+Website Development Solutions Built for Your Industry, Not a Generic Template                     </p>
+                </div>
+
+                {/* RIGHT AUTO-SLIDING CARDS */}
+                <div className="ind-cater-right">
+                    <div
+                        className="ind-cater-track"
+                        onMouseEnter={() => { pausedRef.current = true; }}
+                        onMouseLeave={() => { pausedRef.current = false; }}
+                        onTouchStart={() => { pausedRef.current = true; }}
+                        onTouchEnd={() => { pausedRef.current = false; }}
+                    >
+                        <div className="ind-cater-track-inner" ref={innerRef}>
+                            {doubled.map((item, i) => (
+                                <div className="ind-cater-card" key={i}>
+                                    <img src={item.img} alt={item.label} loading="lazy" />
+                                    <div className="ind-cater-overlay" />
+                                    <div className="ind-cater-pill">{item.label}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* NAV ARROWS */}
+                    <div className="ind-cater-nav">
+                        <button type="button" className="ind-cater-nav-btn" onClick={() => nudge(-1)} aria-label="Previous">‹</button>
+                        <button type="button" className="ind-cater-nav-btn" onClick={() => nudge(1)} aria-label="Next">›</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}
 
 // ── Footer Section ────────────────────────────────────
 function FooterSection() {
@@ -1966,16 +2168,20 @@ export default function DigitalMarketingNewPage() {
 
             <SiteHeader />
             <HeroSection />
+            <ClientLogosMarquee />
             <TrustedClientsSection />
             <OurServicesSection />
-            <PortfolioSection onOpenForm={() => setFormOpen(true)} />
+            {/* <PortfolioSection onOpenForm={() => setFormOpen(true)} /> */}
+            <PortfolioSection />
+            <IndustriesCaterSection />
+
             <TechnologiesSection />
-            <ReasonsSection />
-            <CTASplitSection />
+            {/* <ReasonsSection /> */}
+            {/* <CTASplitSection /> */}
             <BuildTogetherCTASection />
             <ModernFeaturesSection />
             <TestimonialSlider />
-            <MilestonesCTA />
+            {/* <MilestonesCTA /> */}
             <FAQSection />
             <FooterSection />
             <FormPopupModal open={formOpen} onClose={() => setFormOpen(false)} />

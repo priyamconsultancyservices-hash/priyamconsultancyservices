@@ -17,9 +17,9 @@ const sterlobuildportfiolo = "/img/sterlobuild-portfiolo.webp";
    Portfolio data
 ───────────────────────────────────────── */
 const PROJECTS = [
-  { id: 1, url: "https://fetalroots.com",          domain: "fetalroots.com",       image: feralroots },
-  { id: 2, url: "https://urcts.com",               domain: "urcts.com",            image: urcts },
-  { id: 3, url: "https://zky.ai",                  domain: "zky.ai",               image: zky },
+  { id: 1, url: "https://feralroots.in/",          domain: "feralroots.in",       image: feralroots },
+  { id: 2, url: "https://www.urcts.in/",               domain: "urcts.in",            image: urcts },
+  { id: 3, url: "https://zky.co.in/",                  domain: "zky.co.in",               image: zky },
   { id: 4, url: "https://abbmc.in/",               domain: "abbmc.in",             image: abb },
   { id: 5, url: "https://riyaconsultancy.com",     domain: "riyaconsultancy.com",  image: riya },
   { id: 6, url: "https://talenttribe.in/",         domain: "talenttribe.in",       image: TalentTribe },
