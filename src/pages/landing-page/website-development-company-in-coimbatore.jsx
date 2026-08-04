@@ -261,8 +261,11 @@ function SiteHeader() {
         { label: "About", href: "#about" },
         { label: "Service", href: "#service" },
         { label: "Portfolio", href: "#portfolio" },
-        { label: "Case Study", href: "#our-case-studies" },
-        { label: "Features", href: "#feature" },
+        { label: "Technologies", href: "#technologies" },
+         { label: "Features", href: "#feature" },
+        { label: "Industries ", href: "#industries" },
+        { label: "Testimonials", href: "#testimonials" },
+       
     ];
 
     return (
@@ -1256,7 +1259,7 @@ function TestimonialSlider() {
     };
 
     return (
-        <section style={{ width: "100%", margin: "0 auto", padding: isMobile ? "40px 16px" : "60px 20px", fontFamily: "'Poppins', sans-serif", overflow: "hidden", background: '#fff' }}>
+        <section style={{ width: "100%", margin: "0 auto", padding: isMobile ? "40px 16px" : "60px 20px", fontFamily: "'Poppins', sans-serif", overflow: "hidden", background: '#fff' }} id="testimonials">
             <div className="partners-header1" style={{ marginBottom: isMobile ? 12 : 16, textAlign: "center" }}>
                 <div className="partners-eyebrow" style={{ marginBottom: "12px", textAlign: "start" }}>Client Testimonials</div>
             </div>
@@ -1355,7 +1358,7 @@ function TechnologiesSection() {
     const doubled2 = [...row2, ...row2];
 
     return (
-        <section className="tech-section">
+        <section className="tech-section" id="technologies" >
             <div className="tech-header">
                 <div className="partners-header1" style={{ textAlign: 'center' }}>
                     <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Technology Stack
@@ -1649,14 +1652,14 @@ function OurServicesSection() {
 
 // ── Portfolio Grid Data — replace img/link with your real ones ──
 const PORTFOLIO_GRID_ITEMS = [
-    { img: "/img/landing-page/protfoilo-1.webp", category: "E - Commerce", title: "Feral Roots India Pvt Ltd", link: "" },
-    { img: "/img/landing-page/protfoilo-2.webp", category: "HR Background Verification ", title: "ZKY Technology ", link: "" },
+    { img: "/img/landing-page/protfoilo-1.webp", category: "E - Commerce", title: "Feral Roots ", link: "" },
+    { img: "/img/landing-page/protfoilo-2.webp", category: "HR Background Verification ", title: "ZKY Technologies ", link: "" },
     { img: "/img/landing-page/protfoilo-3.webp", category: "Enterprise SaaS / No-Code-Low-Code Platform ", title: "Sterlo", link: "" },
     { img: "/img/landing-page/protfoilo-4.webp", category: "Digital Transformation ", title: "ABB Management Consulting ", link: "" },
-    { img: "/img/landing-page/protfoilo-5.webp", category: "Design & Construction ", title: "URCTS ", link: "" },
-    { img: "/img/landing-page/protfoilo-6.webp", category: "Accounting ", title: "RIYA Consultancy ", link: "" },
+    { img: "/img/landing-page/protfoilo-5.webp", category: "Design & Construction ", title: "URC Technology Services", link: "" },
+    { img: "/img/landing-page/protfoilo-6.webp", category: "Accounting ", title: "RIYA Consultancy  ", link: "" },
     { img: "/img/landing-page/protfoilo-7.webp", category: "Healthcare", title: "SterloCare ", link: "" },
-    { img: "/img/landing-page/protfoilo-8.webp", category: "HR Consultancy ", title: "TalentTribe ", link: "" },
+    { img: "/img/landing-page/protfoilo-8.webp", category: "HR Consultancy ", title: "Talent Tribe ", link: "" },
 
 ];
 
@@ -1827,7 +1830,7 @@ function IndustriesCaterSection() {
     };
 
     return (
-        <section className="ind-cater-section">
+        <section className="ind-cater-section" id="industries">
             <div className="ind-cater-inner">
                 {/* LEFT TEXT */}
                 <div className="ind-cater-left">
