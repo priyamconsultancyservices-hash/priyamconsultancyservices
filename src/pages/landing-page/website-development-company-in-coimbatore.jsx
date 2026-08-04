@@ -1097,7 +1097,7 @@ function TrustedClientsSection() {
     return (
         <section className="tc-section">
             <div className="partners-header1" style={{ textAlign: 'center' }}>
-                <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Clients</div>
+                <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>WEBSITE DEVELOPMENT</div>
             </div>
 
             <h2 className="tech-title svc-main-heading" > 
@@ -1649,12 +1649,12 @@ function OurServicesSection() {
 
 // ── Portfolio Grid Data — replace img/link with your real ones ──
 const PORTFOLIO_GRID_ITEMS = [
-    { img: "/img/landing-page/protfoilo-1.webp", category: "E - Commerce", title: "Feral Roots ", link: "" },
-    { img: "/img/landing-page/protfoilo-2.webp", category: "HR Background Verification ", title: "ZKY", link: "" },
+    { img: "/img/landing-page/protfoilo-1.webp", category: "E - Commerce", title: "Feral Roots India Pvt Ltd", link: "" },
+    { img: "/img/landing-page/protfoilo-2.webp", category: "HR Background Verification ", title: "ZKY Technology ", link: "" },
     { img: "/img/landing-page/protfoilo-3.webp", category: "Enterprise SaaS / No-Code-Low-Code Platform ", title: "Sterlo", link: "" },
-    { img: "/img/landing-page/protfoilo-4.webp", category: "Digital Transformation ", title: "ABB ", link: "" },
+    { img: "/img/landing-page/protfoilo-4.webp", category: "Digital Transformation ", title: "ABB Management Consulting ", link: "" },
     { img: "/img/landing-page/protfoilo-5.webp", category: "Design & Construction ", title: "URCTS ", link: "" },
-    { img: "/img/landing-page/protfoilo-6.webp", category: "Accounting ", title: "RIYA ", link: "" },
+    { img: "/img/landing-page/protfoilo-6.webp", category: "Accounting ", title: "RIYA Consultancy ", link: "" },
     { img: "/img/landing-page/protfoilo-7.webp", category: "Healthcare", title: "SterloCare ", link: "" },
     { img: "/img/landing-page/protfoilo-8.webp", category: "HR Consultancy ", title: "TalentTribe ", link: "" },
 
@@ -1780,8 +1780,8 @@ const INDUSTRIES_CATER_DATA = [
     { img: "/img/landing-page/industries-3.webp", label: "Healthcare " },
     { img: "/img/landing-page/industries-4.webp", label: "Tourism & Hospitality" },
     { img: "/img/landing-page/industries-5.webp", label: "Construction " },
-    { img: "/img/landing-page/industries-6.webp", label: "IT / IT Services" },
-    { img: "/img/landing-page/industries-7.webp", label: "Retail & E-Commerce" },
+    { img: "/img/landing-page/industries-7.webp", label: "IT / IT Services" },
+    { img: "/img/landing-page/industries-6.webp", label: "Retail & E-Commerce" },
     { img: "/img/landing-page/industries-8.webp", label: "Banking" },
     { img: "/img/landing-page/industries-9.webp", label: "Financial & Insurance" },
 
@@ -2173,13 +2173,13 @@ export default function DigitalMarketingNewPage() {
             <OurServicesSection />
             {/* <PortfolioSection onOpenForm={() => setFormOpen(true)} /> */}
             <PortfolioSection />
-            <IndustriesCaterSection />
-
             <TechnologiesSection />
             {/* <ReasonsSection /> */}
             {/* <CTASplitSection /> */}
-            <BuildTogetherCTASection />
+            <BuildTogetherCTASection />           
+
             <ModernFeaturesSection />
+ <IndustriesCaterSection />
             <TestimonialSlider />
             {/* <MilestonesCTA /> */}
             <FAQSection />

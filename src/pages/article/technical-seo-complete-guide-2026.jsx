@@ -3,8 +3,6 @@ import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
 
-
-
 // ════════════════════════════════════════════
 //  DATA
 // ════════════════════════════════════════════
@@ -12,11 +10,11 @@ import Link from "@docusaurus/Link";
 const TOC_ITEMS = [
   { id: "intro", num: "00", label: "Introduction" },
   { id: "takeaways", num: "01", label: "Key Takeaways" },
-  { id: "what-is", num: "02", label: "What Is Technical SEO?" },
-  { id: "why-matters", num: "03", label: "Why It Matters" },
-  { id: "benefits", num: "04", label: "Benefits" },
-  { id: "core-guide", num: "05", label: "Core Guide" },
-  { id: "best-practices", num: "06", label: "Best Practices" },
+  { id: "what-is", num: "02", label: "What Is SEO for Small Business?" },
+  { id: "why-matters", num: "03", label: "Why It Matters in India" },
+  { id: "benefits", num: "04", label: "Why SEO Works Differently in India" },
+  { id: "core-guide", num: "05", label: "10 Proven Strategies" },
+  { id: "best-practices", num: "06", label: "Quick-Win Best Practices" },
   { id: "mistakes", num: "07", label: "Common Mistakes" },
   { id: "stats", num: "08", label: "Stats & Research" },
   { id: "tools", num: "09", label: "Tools & Resources" },
@@ -25,46 +23,112 @@ const TOC_ITEMS = [
 ];
 
 const BENEFITS = [
-  { ico: "01", title: "Higher crawl efficiency", desc: "Search engines spend their budget on pages that matter, not redirect chains and duplicates." },
-  { ico: "02", title: "Faster page experience", desc: "Improved Core Web Vitals correlate with lower bounce rates and higher conversion." },
-  { ico: "03", title: "Cleaner indexation", desc: "Fewer thin, duplicate, or orphaned pages competing against your priority content." },
-  { ico: "04", title: "Stronger EEAT signals", desc: "Secure, stable, well-structured sites support trust signals search engines weigh heavily." },
+  { ico: "01", title: "Mobile is the default", desc: "Over 70% of Indian internet users browse primarily on smartphones — mobile SEO isn't optional, it's survival." },
+  { ico: "02", title: "Tier-2 & tier-3 are booming", desc: "Smaller cities are the fastest-growing segments for internet adoption, with rural users growing rapidly year on year." },
+  { ico: "03", title: "Google owns the market", desc: "Google drives the overwhelming majority of organic search traffic in India, so ranking there is non-negotiable." },
+  { ico: "04", title: "Voice search is rising", desc: "Voice search in Hindi and regional languages is growing fastest in smaller cities — most competitors are still ignoring it." },
 ];
 
 const PRACTICES = [
-  { num: "01", title: "Keep crawl depth under 4 clicks", desc: "Any page more than four clicks from the homepage is statistically less likely to be crawled regularly." },
-  { num: "02", title: "Serve a clean, single canonical per page", desc: "Inconsistent canonical signals split ranking authority across duplicate URLs." },
-  { num: "03", title: "Defer non-critical JavaScript", desc: "Render-blocking scripts are the single most common cause of poor LCP scores we see in audits." },
-  { num: "04", title: "Maintain an accurate XML sitemap", desc: "Only include canonical, indexable, 200-status URLs — stale sitemaps actively mislead crawlers." },
-  { num: "05", title: "Run a technical audit quarterly", desc: "Sites accumulate technical debt continuously; an annual cadence lets issues compound unnoticed." },
+  { num: "01", title: "Keep your Google Business Profile active", desc: "Post updates weekly and respond to every review within 24 hours — Google rewards active, complete profiles." },
+  { num: "02", title: "Go long-tail and local with keywords", desc: "\"Web designer Salem\" ranks faster and converts better than a broad, unqualified term like \"web designer India.\"" },
+  { num: "03", title: "Keep title tags under 60 characters", desc: "Include your primary keyword naturally in the title tag, H1, and the first 100 words of the page." },
+  { num: "04", title: "Get your site under 2 seconds", desc: "Compress images, enable caching and GZIP, and use a CDN — bounce rates rise sharply past the 2-second mark." },
+  { num: "05", title: "Publish consistently, not occasionally", desc: "Aim for at least 1,000 words per article, published a minimum of twice a month, each answering a real reader question." },
 ];
 
 const MISTAKES = [
-  { b: "Blocking key resources in robots.txt", rest: "— CSS and JS files blocked from crawling prevent Google from rendering pages correctly." },
-  { b: "Mixing redirect types inconsistently", rest: "— chaining 302s instead of single 301s dilutes link equity and slows crawling." },
-  { b: "Ignoring mobile rendering differences", rest: "— content hidden on mobile may not be indexed under mobile-first indexing." },
-  { b: "Treating a one-time audit as \"done\"", rest: "— technical debt resumes accumulating the moment the audit ends." },
+  { b: "Inconsistent business details across directories", rest: "— even small differences like \"Road\" vs \"Rd\" or +91 vs 0 confuse Google and hurt local rankings." },
+  { b: "Ignoring mobile-first indexing", rest: "— Google indexes the mobile version of your site first, so a non-mobile-friendly site simply won't rank." },
+  { b: "Not responding to reviews", rest: "— potential customers read how you handle complaints just as carefully as they read the complaints themselves." },
+  { b: "Treating SEO as a one-time task", rest: "— SEO strategies compound over months; businesses that start today are simply in a stronger position six months from now." },
 ];
 
 const STATS = [
-  { num: "53%", label: "of mobile visitors abandon pages that take longer than 3 seconds to load" },
-  { num: "68%", label: "of online experiences begin with a search engine query" },
-  { num: "4.6x", label: "more crawl requests on sites with clean internal linking structures" },
+  { num: "14.6%", label: "close rate for SEO leads, versus just 1.7% for outbound methods like print or direct mail" },
+  { num: "950M+", label: "internet users in India, one of the fastest-growing digital markets in the world" },
+  { num: "~75%", label: "of India's search market is mobile — mobile-first design is now the dominant ranking driver" },
 ];
 
 const TOOLS = [
-  { tool: "Google Search Console", best: "Indexation, crawl stats, Core Web Vitals", tier: "Free" },
-  { tool: "Screaming Frog", best: "Full-site technical crawls", tier: "Free / Paid" },
-  { tool: "PageSpeed Insights", best: "Field & lab performance data", tier: "Free" },
-  { tool: "Sitebulb", best: "Visual crawl audits & hints", tier: "Paid" },
-  { tool: "Schema Markup Validator", best: "Structured data validation", tier: "Free" },
+  { tool: "Google Business Profile", best: "Local map-pack visibility, reviews, posts", tier: "Free" },
+  { tool: "Google Keyword Planner", best: "Search volume & competition data", tier: "Free" },
+  { tool: "Ubersuggest", best: "Competitor keywords & content ideas", tier: "Free / Paid" },
+  { tool: "AnswerThePublic", best: "Question-based keyword discovery", tier: "Free" },
+  { tool: "Google Search Console", best: "Sitemap, indexing & crawl error alerts", tier: "Free" },
+  { tool: "JustDial / Sulekha / IndiaMART", best: "Local citations & backlinks", tier: "Free" },
 ];
 
 const FAQS = [
-  { q: "How often should I run a technical SEO audit?", a: "Quarterly for most active sites. High-velocity content sites or frequently redesigned sites benefit from monthly spot-checks on crawl and indexation." },
-  { q: "Does technical SEO affect rankings directly?", a: "Yes, partially. Core Web Vitals are a confirmed ranking factor, and crawl/indexation issues can prevent pages from ranking at all, regardless of content quality." },
-  { q: "What's the difference between technical and on-page SEO?", a: "Technical SEO governs crawlability, speed, and infrastructure. On-page SEO governs content relevance, keyword targeting, and page-level signals like titles and headers." },
-  { q: "Can I do technical SEO without a developer?", a: "Basic fixes — sitemaps, meta tags, redirects — are manageable without a developer. Rendering, server config, and Core Web Vitals work typically require engineering support." },
+  {
+    q: "How long does SEO take to show results for a small business in India?",
+    a: "SEO is not a magic switch — it's a compounding asset. Every blog post, review, and backlink stacks over time, so a business that starts its SEO strategies today will be in a fundamentally stronger position within a few months than one that waits.",
+  },
+  {
+    q: "What's the real difference between SEO and Google Ads?",
+    a: "Google Ads is renting visibility — the moment you stop paying, it disappears. SEO is owning it: every rupee spent on real SEO strategies keeps working for months after you spend it.",
+  },
+  {
+    q: "Is a Google Business Profile really worth optimising?",
+    a: "Yes — it's the single highest-ROI first step for local SEO and it's completely free. It's what shows up in the map pack when someone nearby searches for exactly what you offer.",
+  },
+  {
+    q: "Do backlinks still matter for a small business website?",
+    a: "Very much so. Most web pages online have zero backlinks, meaning most competitors aren't doing this at all — even five to ten quality backlinks from relevant Indian sites can make a measurable ranking difference.",
+  },
+];
+
+const STRATEGIES = [
+  {
+    num: "01",
+    title: "Claim and Optimise Your Local Google Business Profile",
+    desc: "Claim and verify your listing at business.google.com, fill every field, upload at least 10 high-quality photos, list your services with pricing, post weekly updates, and respond to every review within 24 hours.",
+  },
+  {
+    num: "02",
+    title: "Do Keyword Research the Right Way",
+    desc: "Use Google Keyword Planner, Ubersuggest, AnswerThePublic, and Google's own autocomplete and \"People Also Ask\" results to find long-tail, city-specific phrases your customers actually type.",
+  },
+  {
+    num: "03",
+    title: "Optimise Every Page with On-Page SEO",
+    desc: "Nail your title tag, meta description, H1, subheadings, first 100 words, URL slug, and image alt text — clarity for Google, kept natural for the reader.",
+  },
+  {
+    num: "04",
+    title: "Make Your Website Mobile-Friendly and Fast",
+    desc: "Test with PageSpeed Insights, compress every image, use solid hosting, enable caching and GZIP, and serve through a CDN — Google indexes your mobile site first.",
+  },
+  {
+    num: "05",
+    title: "Create Helpful Content That Answers Real Questions",
+    desc: "Publish how-to guides, comparisons, FAQ pages, local service pages, and case studies — a minimum of 1,000 words, at least twice a month.",
+  },
+  {
+    num: "06",
+    title: "Build Local Citations on Indian Directories",
+    desc: "List your business on JustDial, Sulekha, IndiaMART, and sector-specific directories, keeping your name, address, and phone number exactly identical everywhere.",
+  },
+  {
+    num: "07",
+    title: "Get Google Reviews — and Respond to Every One",
+    desc: "Send follow-up review links after every successful project, add a \"Review Us on Google\" button to your site, and reply to positive and negative reviews alike.",
+  },
+  {
+    num: "08",
+    title: "Fix Your Website's Technical SEO",
+    desc: "Resolve broken links, submit an XML sitemap, install HTTPS, canonicalise duplicate content, and add schema markup — most fixes don't require a developer.",
+  },
+  {
+    num: "09",
+    title: "Build Internal Links Between Your Pages",
+    desc: "Link every new article to two or three existing pages so authority spreads and every page stays reachable within three clicks of your homepage.",
+  },
+  {
+    num: "10",
+    title: "Earn Backlinks from Other Websites",
+    desc: "Guest post on industry blogs, list on directories, pursue local PR, fix broken links with your own content, and create shareable data or tools that earn links naturally.",
+  },
 ];
 
 // Related Articles are pulled live from the PCS WordPress blog (title + featured image),
@@ -73,21 +137,19 @@ const RELATED_ARTICLES_API =
   "https://www.priyamconsultancy.com/blog/wp-json/wp/v2/posts?_embed&per_page=4";
 
 // Popular Articles = your own site pages (not blog posts). Edit this list to match
-// whichever 10 pages you want featured here — label is the text shown, href is the page link.
+// whichever pages you want featured here — label is the text shown, href is the page link.
 const ARTICLES = [
   {
-    title: "Technical SEO: The Complete Guide for 2026",
-    href: "/article/technical-seo-complete-guide-2026",
-    date: "2026-06-14",
+    title: "SEO for Small Businesses in India: 10 Proven Strategies That Actually Work",
+    href: "/article/seo-for-small-businesses-india",
+    date: "2026-08-04",
   },
-  // { title: "Your Next Article Title", href: "/article/your-next-article-slug", date: "2026-07-20" },
+  { title: "Technical SEO: The Complete Guide for 2026", href: "/article/technical-seo-complete-guide-2026", date: "2026-06-14" },
 ];
 
 const RECENT_ARTICLES = [...ARTICLES]
   .sort((a, b) => new Date(b.date) - new Date(a.date))
   .slice(0, 4);
-
-
 
 const HUB_LINKS = [
   { label: "Digital Marketing", href: "/digital-marketing" },
@@ -100,21 +162,20 @@ const HUB_LINKS = [
   { label: "Graphic Design", href: "/graphic-design" },
 ];
 
-
 const JSON_LD_ARTICLE = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: "Technical SEO: The Complete Guide for 2026",
+  headline: "SEO for Small Businesses in India: 10 Proven Strategies That Actually Work",
   description:
-    "A complete, practitioner-grade guide to technical SEO — what it is, why it matters, and how to audit and fix the issues that hold sites back.",
+    "A practical, India-specific guide to SEO for small businesses — Google Business Profile, keyword research, on-page and technical SEO, local citations, reviews, and link building.",
   author: { "@type": "Person", name: "Rhea Menon", jobTitle: "Senior SEO Strategist" },
   publisher: {
     "@type": "Organization",
     name: "Priyam Consultancy Services",
     logo: { "@type": "ImageObject", url: "https://priyamconsultancy.com/img/priyam-consultancy-logo.png" },
   },
-  dateModified: "2026-06-12",
-  mainEntityOfPage: "https://priyamconsultancy.com/article/technical-seo-complete-guide-2026",
+  dateModified: "2026-08-04",
+  mainEntityOfPage: "https://priyamconsultancy.com/article/seo-for-small-businesses-india",
 };
 
 // ════════════════════════════════════════════
@@ -139,7 +200,7 @@ function FaqItem({ q, a, isOpen, onToggle }) {
 //  MAIN PAGE
 // ════════════════════════════════════════════
 
-function TechnicalSeoGuide() {
+function SeoSmallBusinessIndiaGuide() {
   const [activeSection, setActiveSection] = useState("intro");
   const [progress, setProgress] = useState(0);
   const [openFaq, setOpenFaq] = useState(0);
@@ -194,17 +255,17 @@ function TechnicalSeoGuide() {
 
   return (
     <Layout
-      title="Technical SEO: The Complete Guide for 2026"
-      description="A complete, practitioner-grade guide to technical SEO — what it is, why it matters, and how to audit and fix the issues that hold sites back. By Priyam Consultancy Services."
+      title="SEO for Small Businesses in India: 10 Proven Strategies That Actually Work"
+      description="A practical, India-specific guide to SEO for small businesses — Google Business Profile, keyword research, on-page and technical SEO, local citations, reviews, and link building. By Priyam Consultancy Services."
     >
       <Head>
-        <link rel="canonical" href="https://priyamconsultancy.com/article/technical-seo-complete-guide-2026" />
-        <meta property="og:title" content="Technical SEO: The Complete Guide for 2026 | Priyam Consultancy Services" />
+        <link rel="canonical" href="https://priyamconsultancy.com/article/seo-for-small-businesses-india" />
+        <meta property="og:title" content="SEO for Small Businesses in India: 10 Proven Strategies That Actually Work | Priyam Consultancy Services" />
         <meta
           property="og:description"
-          content="A complete, practitioner-grade guide to technical SEO — what it is, why it matters, and how to audit and fix the issues that hold sites back."
+          content="A practical, India-specific guide to SEO for small businesses — Google Business Profile, keyword research, on-page and technical SEO, local citations, reviews, and link building."
         />
-        <meta property="og:url" content="https://priyamconsultancy.com/article/technical-seo-complete-guide-2026" />
+        <meta property="og:url" content="https://priyamconsultancy.com/article/seo-for-small-businesses-india" />
         <meta property="og:site_name" content="Priyam Consultancy Services" />
         <script type="application/ld+json">{JSON.stringify(JSON_LD_ARTICLE)}</script>
       </Head>
@@ -309,6 +370,12 @@ function TechnicalSeoGuide() {
         .tseo-tools-table td{ padding:12px 12px; border-bottom:1px solid #F0E0D0; color:#2B362F;}
         .tseo-tools-table tr:last-child td{ border-bottom:none;}
 
+        .tseo-strategy-list{ display:grid; gap:14px; margin:18px 0;}
+        .tseo-strategy-item{ display:grid; grid-template-columns:40px 1fr; gap:14px; padding:16px 0; border-bottom:1px solid #F0E0D0;}
+        .tseo-strategy-item .num{ font-family:'JetBrains Mono',monospace; color:#ED8337; font-weight:700; font-size:15px;}
+        .tseo-strategy-item h3{ font-size:17px; margin:0 0 6px; font-weight:600;}
+        .tseo-strategy-item p{ margin:0; font-size:14.5px; color:#6B7A94;}
+
         .tseo-faq-item{ border-bottom:1px solid #F0E0D0; }
         .tseo-faq-q{ width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:18px 0; font-size:16px; font-weight:600; color:#0D1F3C; display:flex; justify-content:space-between; align-items:center; gap:12px;}
         .tseo-plus{ font-family:'JetBrains Mono',monospace; color:#ED8337; font-size:18px; transition:transform .2s ease; flex-shrink:0;}
@@ -382,9 +449,9 @@ function TechnicalSeoGuide() {
         <span className="sep">/</span>
         <Link to="/blog">Resources</Link>
         <span className="sep">/</span>
-        <Link to="/seo">Technical SEO</Link>
+        <Link to="/seo">SEO</Link>
         <span className="sep">/</span>
-        <span>Complete Guide</span>
+        <span>Small Business Guide</span>
       </nav>
 
       <div className="tseo-page">
@@ -413,11 +480,11 @@ function TechnicalSeoGuide() {
         <main className="tseo-content">
           <article>
             <div className="tseo-hero">
-              <span className="tseo-eyebrow">Technical SEO · Updated Guide</span>
-              <h1>Technical SEO: The Complete Guide for 2026</h1>
+              <span className="tseo-eyebrow">SEO · Small Business Guide</span>
+              <h1>SEO for Small Businesses in India: 10 Proven Strategies That Actually Work</h1>
               <p className="tseo-dek">
-                Everything you need to audit, fix, and maintain the technical foundation search engines rely on to
-                crawl, render, and rank your site.
+                Picture this. A potential customer in your city opens Google and types exactly what your business offers. Your competitor's website appears. Yours does not. That customer calls your competitor, pays your competitor, and never even knows you exist.
+
               </p>
               <div className="tseo-meta-row">
                 <div className="tseo-author">
@@ -425,81 +492,70 @@ function TechnicalSeoGuide() {
                   Rhea Menon, Senior SEO Strategist
                 </div>
                 <span className="tseo-meta-dot" />
-                <span>Last updated: June 14, 2026</span>
+                <span>Last updated: August 4, 2026</span>
                 <span className="tseo-meta-dot" />
-              
                 <span>Reviewed by SEO Editorial Team</span>
               </div>
               <div className="tseo-hero-img" style={{ padding: 0 }}>
-              <img src="/img/portfolio.webp" />
+                <img src="/img/portfolio.webp" />
               </div>
             </div>
 
             <section id="intro">
               <p>
-                Most ranking conversations focus on content and links. But none of that matters if search engines
-                can't crawl, render, or index your pages in the first place. <strong>Technical SEO</strong> is the
-                layer underneath everything else — the plumbing that determines whether your best content ever gets
-                a chance to compete.
+                This is happening right now — every single day — to thousands of small businesses across India.
               </p>
               <p>
-                This guide breaks down what technical SEO actually covers, why it has an outsized impact on
-                rankings, and the exact audit process we use with clients before any content or link-building work
-                begins. If you manage a site of any size, treat this as a reference you'll return to, not a
-                one-time read.
+                India has crossed 950 million internet users and is one of the fastest-growing digital markets in the world. Google dominates search here — meaning if you are not ranking on Google, you are simply not being found. SEO for small businesses is the single highest-return investment you can make online to change that — and this article breaks it down into 12 clear, proven strategies built for the Indian market.
               </p>
+              <p>No jargon. No empty promises. Just what actually works.</p>
+              <p><em>SEO leads have a 14.6% close rate — compared to just 1.7% for outbound methods like print or direct mail. — HubSpot</em></p>
             </section>
 
             <div className="tseo-takeaways" id="takeaways">
               <h3>Key Takeaways</h3>
               <ul>
-                <li>
-                  Technical SEO controls whether search engines can crawl, render, and index your site at all —
-                  it's a prerequisite, not an optional layer.
-                </li>
-                <li>Core Web Vitals, crawl budget, and structured data are the three areas with the highest ROI for most mid-size sites.</li>
-                <li>A technical audit should run quarterly, not once a year — site changes accumulate technical debt quickly.</li>
-                <li>Render-blocking JavaScript and duplicate content are the two most common issues we find in client audits.</li>
-                <li>Fixing technical issues typically shows ranking movement faster than content or link campaigns — often within 4–8 weeks.</li>
+                <li>SEO leads close at 14.6%, compared to just 1.7% for outbound methods like print or direct mail.</li>
+                <li>Google Ads is renting visibility; SEO is owning it — the effect keeps compounding after you stop actively investing.</li>
+                <li>Over 70% of Indian internet users are mobile-first, so mobile speed and Core Web Vitals drive most of your organic visibility.</li>
+                <li>Your Google Business Profile is the single highest-ROI first step for local SEO, and it's completely free.</li>
+                <li>SEO compounds — a business that starts today will be in a fundamentally stronger position six months from now than one that waits.</li>
               </ul>
             </div>
 
             <section id="what-is">
-              <h2><span className="tseo-h2-index">02</span>What Is Technical SEO?</h2>
+              <h2><span className="tseo-h2-index">02</span>What Is SEO for Small Business?</h2>
               <p>
-                Technical SEO is the practice of optimizing a website's infrastructure so search engines can
-                efficiently <strong>crawl, render, and index</strong> its pages, and so users get a fast, stable
-                experience once they arrive. It sits apart from on-page SEO (content, keywords) and off-page SEO
-                (links, citations) — it's the foundation those two layers are built on.
+                SEO for small businesses means making your website visible on Google when potential customers
+                search for your products or services — without paying for ads. The overwhelming majority of
+                clicks on Google go to organic results, not paid ads, and that visibility disappears the moment
+                you stop paying for ads but keeps compounding with real SEO strategies.
               </p>
               <p>
-                In practice, technical SEO spans site architecture, crawl management, page speed, mobile usability,
-                structured data, security, and rendering behavior for JavaScript-heavy frameworks. For a broader
-                view of how this fits into the discipline as a whole, see our{" "}
+                For a broader view of how this connects to related channels, see our{" "}
                 <Link className="tseo-inline-link" to="/seo">SEO services</Link> overview.
               </p>
             </section>
 
             <section id="why-matters">
-              <h2><span className="tseo-h2-index">03</span>Why Technical SEO Matters</h2>
+              <h2><span className="tseo-h2-index">03</span>Why It Matters in India</h2>
               <p>
-                Search engines operate under finite resources. Googlebot allocates a <strong>crawl budget</strong>{" "}
-                to every site, and rendering JavaScript costs significantly more compute than parsing static HTML.
-                When your site wastes that budget on broken redirects, duplicate URLs, or bloated scripts,
-                important pages get crawled less often — or not at all.
+                India's digital economy is growing at a pace unlike any other market in the world, fuelled by
+                internet penetration, mobile usage, and an exploding e-commerce ecosystem. Your customers are
+                already online and already searching — the only question is whether they find you or your
+                competitor.
               </p>
               <p>
-                Beyond crawling, technical health is now a direct ranking input. Core Web Vitals are part of
-                Google's page experience signals, and sites with poor load performance see measurably lower
-                engagement and conversion, independent of rankings. Technical SEO is where{" "}
-                <Link className="tseo-inline-link" to="/seo">Local SEO</Link>,{" "}
-                <Link className="tseo-inline-link" to="/content-marketing">Content Marketing</Link>, and content
-                strategy all converge — weak infrastructure caps the ceiling on every other channel.
+                A significant share of all Google searches in India carry local intent, meaning people are
+                actively searching for businesses and services near them, right now. This is where{" "}
+                <Link className="tseo-inline-link" to="/seo">Local SEO</Link> and{" "}
+                <Link className="tseo-inline-link" to="/content-marketing">Content Marketing</Link> converge —
+                weak local visibility caps the ceiling on every other channel.
               </p>
             </section>
 
             <section id="benefits">
-              <h2><span className="tseo-h2-index">04</span>Benefits of Strong Technical SEO</h2>
+              <h2><span className="tseo-h2-index">04</span>Why SEO Works Differently in India</h2>
               <div className="tseo-benefit-grid">
                 {BENEFITS.map((b) => (
                   <div className="tseo-benefit-card" key={b.ico}>
@@ -512,39 +568,22 @@ function TechnicalSeoGuide() {
             </section>
 
             <section id="core-guide">
-              <h2><span className="tseo-h2-index">05</span>The Core Guide: Running a Technical SEO Audit</h2>
-              <h3>Step 1 — Crawl the site</h3>
-              <p>
-                Start with a full crawl using a tool like Screaming Frog or Sitebulb. Export status codes,
-                indexability, canonical tags, and response times for every URL. This becomes your baseline.
-              </p>
-              <h3>Step 2 — Check indexation against crawl</h3>
-              <p>
-                Compare the URLs Google has indexed (via Search Console) against the URLs your crawl found. Large
-                gaps in either direction signal either wasted crawl budget or content Google can't access.
-              </p>
-              <h3>Step 3 — Audit Core Web Vitals</h3>
-              <p>
-                Pull field data from CrUX or PageSpeed Insights for your highest-traffic templates. Prioritize
-                Largest Contentful Paint and Interaction to Next Paint — both have outsized effects on
-                user-perceived speed.
-              </p>
-              <h3>Step 4 — Review structured data</h3>
-              <p>
-                Validate schema markup across key templates. Errors here can disqualify pages from rich results
-                entirely, silently costing click-through rate.
-              </p>
-              <h3>Step 5 — Map internal linking</h3>
-              <p>
-                Identify orphaned pages and overly deep click-depth pages. A strong internal linking structure,
-                like the one supporting this guide, distributes authority to priority pages and reinforces topical
-                relationships for crawlers. Learn more in our{" "}
-                <Link className="tseo-inline-link" to="/seo">SEO</Link> guide.
-              </p>
+              <h2><span className="tseo-h2-index">05</span>10 Proven Strategies That Actually Work</h2>
+              <div className="tseo-strategy-list">
+                {STRATEGIES.map((s) => (
+                  <div className="tseo-strategy-item" key={s.num}>
+                    <div className="num">{s.num}</div>
+                    <div>
+                      <h3>{s.title}</h3>
+                      <p>{s.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </section>
 
             <section id="best-practices">
-              <h2><span className="tseo-h2-index">06</span>Best Practices</h2>
+              <h2><span className="tseo-h2-index">06</span>Quick-Win Best Practices</h2>
               <div className="tseo-practice-list">
                 {PRACTICES.map((p) => (
                   <div className="tseo-practice-item" key={p.num}>
@@ -573,18 +612,18 @@ function TechnicalSeoGuide() {
             </section>
 
             <div className="tseo-expert-box">
-              <div className="tseo-avatar">VK</div>
+              <div className="tseo-avatar">RM</div>
               <div>
                 <blockquote>
-                  "The fastest ranking gains I've seen in fifteen years of SEO work have almost always come from
-                  fixing crawl and rendering issues — not from writing more content."
+                  Every rupee you spend on real SEO strategies keeps working for months after you spend it. Every
+                  rupee on ads disappears the moment you stop paying.
                 </blockquote>
-                <div className="who">Vikram Kapoor — Technical SEO Lead, 15+ years in enterprise SEO</div>
+                <div className="who">Rhea Menon — Senior SEO Strategist, Priyam Consultancy Services</div>
               </div>
             </div>
 
             <section id="stats">
-              <h2><span className="tseo-h2-index">08</span>Statistics &amp; Research</h2>
+              <h2><span className="tseo-h2-index">08</span>Stats &amp; Research</h2>
               <div className="tseo-stat-grid">
                 {STATS.map((s) => (
                   <div className="tseo-stat-card" key={s.num}>
@@ -593,10 +632,7 @@ function TechnicalSeoGuide() {
                   </div>
                 ))}
               </div>
-              <p className="tseo-stat-source">
-                Figures are illustrative benchmarks based on aggregated industry research; replace with sourced,
-                cited statistics from Google, industry studies, or first-party data before publishing.
-              </p>
+              <p className="tseo-stat-source">Sources: HubSpot; StatCounter / IAMAI, 2025.</p>
             </section>
 
             <section id="tools">
@@ -641,20 +677,19 @@ function TechnicalSeoGuide() {
             <div className="tseo-conclusion-box" id="conclusion">
               <h2 style={{ marginBottom: "12px" }}>Conclusion</h2>
               <p>
-                Technical SEO is not a one-time checklist — it's ongoing infrastructure work that determines
-                whether everything else you do in SEO has a chance to work. Start with crawl and indexation, fix
-                the highest-impact Core Web Vitals issues, and build a quarterly audit cadence into your workflow.
-                The sites that treat technical health as a habit consistently outperform the ones that treat it as
-                a launch-day task.
+                SEO for small businesses in India is not a magic switch — but it is the closest thing to a
+                compounding business asset you can build online. Every blog post you publish, every Google review
+                you earn, every backlink you build — they stack. They compound. Start with one strategy this week.
+                Just one.
               </p>
             </div>
 
             <div className="tseo-cta-banner" id="cta">
               <div>
-                <h3>Need a technical SEO audit?</h3>
+                <h3>Not sure where to start?</h3>
                 <p>
-                  Get a free, no-obligation consultation from Priyam Consultancy Services and a prioritized list of
-                  the issues holding your site back.
+                  Priyam Consultancy Services offers a free consultation for website SEO analysis — no jargon, no
+                  pressure. We'll tell you exactly what it would take to start ranking.
                 </p>
               </div>
               <Link className="tseo-cta-btn" to="/contact-us">
@@ -668,10 +703,9 @@ function TechnicalSeoGuide() {
                 <h4>Rhea Menon</h4>
                 <div className="role">Senior SEO Strategist, Priyam Consultancy Services</div>
                 <p>
-                  Rhea leads technical SEO programs for enterprise and mid-market clients at Priyam Consultancy
-                  Services, specializing in crawl optimization, Core Web Vitals, and large-scale site migrations.
-                  She holds certifications in Google Analytics and Search Console, and contributes regularly to the
-                  PCS Resource Center.
+                  Rhea leads SEO programs for small and mid-market clients at Priyam Consultancy Services,
+                  specialising in local SEO, keyword strategy, and content that ranks. She holds certifications in
+                  Google Analytics and Search Console, and contributes regularly to the PCS Resource Center.
                 </p>
               </div>
             </div>
@@ -712,15 +746,15 @@ function TechnicalSeoGuide() {
             ))}
           </div>
 
-     <div className="tseo-rail-card">
-  <div className="tseo-rail-title">Popular Articles</div>
-  {RECENT_ARTICLES.map((p, i) => (
-    <div className="tseo-popular-row" key={p.href}>
-      <span className="rank">{String(i + 1).padStart(2, "0")}</span>
-      <Link to={p.href}>{p.title}</Link>
-    </div>
-  ))}
-</div>
+          <div className="tseo-rail-card">
+            <div className="tseo-rail-title">Popular Articles</div>
+            {RECENT_ARTICLES.map((p, i) => (
+              <div className="tseo-popular-row" key={p.href}>
+                <span className="rank">{String(i + 1).padStart(2, "0")}</span>
+                <Link to={p.href}>{p.title}</Link>
+              </div>
+            ))}
+          </div>
 
           <div className="tseo-rail-card tseo-rail-cta">
             <h4>Need professional SEO services?</h4>
@@ -739,4 +773,4 @@ function TechnicalSeoGuide() {
   );
 }
 
-export default TechnicalSeoGuide;
+export default SeoSmallBusinessIndiaGuide;

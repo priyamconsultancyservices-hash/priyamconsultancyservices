@@ -94,7 +94,7 @@ p, li, a, span { font-family: 'Poppins', sans-serif; }
   gap: 3rem;
   padding: 3rem 6% 2rem;
   position: relative;
-  overflow: hidden;
+  overflow: visible;   /* was: hidden */
 }
 .hero::before {
   content: '';
@@ -172,7 +172,7 @@ p, li, a, span { font-family: 'Poppins', sans-serif; }
 .btn-fill:hover { background: #f5a66b; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(237,131,55,0.42); }
 
 .hero-right {
-  position: relative; z-index: 2;
+  position: relative; z-index: 2; overflow: visible;
   display: flex; align-items: center; justify-content: center;
   animation: fadeUp .85s .1s ease both;
 }
