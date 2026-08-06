@@ -57,6 +57,74 @@ const HUB_LINKS = [
     { label: "Graphic Design", href: "/graphic-design" },
 ];
 
+const JSON_LD_BREADCRUMB = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        {
+            "@type": "ListItem",
+            position: 1,
+            item: { "@id": "https://priyamconsultancy.com/", name: "Home" },
+        },
+        {
+            "@type": "ListItem",
+            position: 2,
+            item: { "@id": "https://priyamconsultancy.com/article/", name: "Articles" },
+        },
+        {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+                "@id": "https://priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
+                name: "SEO Strategies for Small Businesses in India",
+            },
+        },
+    ],
+};
+
+const JSON_LD_WEBPAGE = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
+    url: "https://priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
+    name: "SEO Strategies for Small Businesses in India",
+    description:
+        "Learn proven SEO strategies for small businesses in India to improve search rankings, attract qualified traffic, generate leads, and grow your business online with practical optimization techniques.",
+    inLanguage: "en-IN",
+    isPartOf: {
+        "@type": "WebSite",
+        name: "Priyam Consultancy Services",
+        url: "https://priyamconsultancy.com/",
+    },
+    publisher: {
+        "@type": "Organization",
+        name: "Priyam Consultancy Services",
+        logo: { "@type": "ImageObject", url: "https://priyamconsultancy.com/img/priyam-consultancy-logo.png" },
+    },
+};
+
+const JSON_LD_ORGANIZATION = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Priyam Consultancy Services",
+    url: "https://priyamconsultancy.com/",
+    logo: "https://priyamconsultancy.com/img/priyam-consultancy-logo.png",
+    contactPoint: [
+        {
+            "@type": "ContactPoint",
+            telephone: "+91 96774 44048",
+            contactType: "customer support",
+        },
+    ],
+    sameAs: [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6",
+    ],
+};
+
 const JSON_LD_ARTICLE = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -70,7 +138,7 @@ const JSON_LD_ARTICLE = {
         logo: { "@type": "ImageObject", url: "https://priyamconsultancy.com/img/priyam-consultancy-logo.png" },
     },
     dateModified: "2026-08-04",
-    mainEntityOfPage: "https://priyamconsultancy.com/article/seo-for-small-businesses-india",
+    mainEntityOfPage: "https://priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
 };
 
 // ════════════════════════════════════════════
@@ -164,6 +232,26 @@ function SeoSmallBusinessIndiaGuide() {
                 <meta property="og:site_name" content="Priyam Consultancy Services" />
                 <script type="application/ld+json">{JSON.stringify(JSON_LD_ARTICLE)}</script>
             </Head>
+            {/* Breadcrumb Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD_BREADCRUMB) }}
+            />
+            {/* WebPage Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD_WEBPAGE) }}
+            />
+            {/* Organization Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD_ORGANIZATION) }}
+            />
+            {/* Article Schema */}
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD_ARTICLE) }}
+            />
 
             <style>{`
  main {
@@ -447,10 +535,10 @@ function SeoSmallBusinessIndiaGuide() {
                         <section id="strategy-1">
                             <h4>Strategy 1: Claim and Optimise Your Local Google Business Profile</h4>
                             <p>
-                            This is the single highest-ROI first step for local SEO for small business — and it is completely free. Your Google Business Profile is what shows up in the map pack when someone searches "digital marketing agency near me" or "web developer in Salem."
+                                This is the single highest-ROI first step for local SEO for small business — and it is completely free. Your Google Business Profile is what shows up in the map pack when someone searches "digital marketing agency near me" or "web developer in Salem."
                             </p>
                             <p>
-                             How to optimise it:
+                                How to optimise it:
                             </p>
                             <ul>
                                 <li>Claim and verify your listing at business.google.com</li>
@@ -465,15 +553,15 @@ function SeoSmallBusinessIndiaGuide() {
 
                         <section id="strategy-2">
                             <h4>Strategy 2: Do Keyword Research the Right Way</h4>
-                           <p>Every effective SEO strategy begins with keyword research for SEO. This means finding the exact words and phrases your potential customers type into Google — and then building your website content around them.</p>
-                           <p>Keyword research for SEO tools to use, all with free versions:</p>
-                           <ul>
-                            <li><strong>Google Keyword Planner</strong> — shows search volume and competition</li>
-                            <li><strong>Ubersuggest</strong> — shows competitor keywords and content ideas</li>
-                            <li><strong>AnswerThePublic</strong> — shows questions people ask around your topic</li>
-                            <li><strong>Google Search itself</strong> — study the autocomplete suggestions and "People Also Ask" section</li>
-                           </ul>
-                           <p>For Indian SEO for small businesses, focus on long-tail keywords — specific four-to-six word phrases with lower competition. "Affordable SEO packages for small business in Chennai" converts far better than just "SEO." Always add your city. "Web designer Salem" ranks faster and brings more relevant traffic than "web designer India."</p>
+                            <p>Every effective SEO strategy begins with keyword research for SEO. This means finding the exact words and phrases your potential customers type into Google — and then building your website content around them.</p>
+                            <p>Keyword research for SEO tools to use, all with free versions:</p>
+                            <ul>
+                                <li><strong>Google Keyword Planner</strong> — shows search volume and competition</li>
+                                <li><strong>Ubersuggest</strong> — shows competitor keywords and content ideas</li>
+                                <li><strong>AnswerThePublic</strong> — shows questions people ask around your topic</li>
+                                <li><strong>Google Search itself</strong> — study the autocomplete suggestions and "People Also Ask" section</li>
+                            </ul>
+                            <p>For Indian SEO for small businesses, focus on long-tail keywords — specific four-to-six word phrases with lower competition. "Affordable SEO packages for small business in Chennai" converts far better than just "SEO." Always add your city. "Web designer Salem" ranks faster and brings more relevant traffic than "web designer India."</p>
                         </section>
 
                         <section id="strategy-3">
@@ -490,13 +578,13 @@ function SeoSmallBusinessIndiaGuide() {
                                 <li><strong>Image Alt Text </strong> — describe every image using relevant keywords</li>
                             </ul>
                             <p>Nearly all page-one results on Google use their primary keyword in the title or H1. On-page SEO is not about stuffing keywords everywhere — it is about making it crystal clear to Google what your page is about while keeping it natural for the reader.</p>
-                    
+
                         </section>
 
                         <section id="strategy-4">
                             <h4>Strategy 4: Make Your Website Mobile-Friendly and Fast</h4>
-                           <p>Page speed optimisation is not a technical nicety — it is a direct ranking factor. Bounce rates rise sharply when a website takes more than two seconds to load. For Indian users on mobile data connections, slow pages mean lost customers before you even get a chance to speak to them.</p>
-                           <p>Google now indexes the mobile version of your site first — known as mobile-first indexing. If your site is not mobile-friendly, you will not rank</p>
+                            <p>Page speed optimisation is not a technical nicety — it is a direct ranking factor. Bounce rates rise sharply when a website takes more than two seconds to load. For Indian users on mobile data connections, slow pages mean lost customers before you even get a chance to speak to them.</p>
+                            <p>Google now indexes the mobile version of your site first — known as mobile-first indexing. If your site is not mobile-friendly, you will not rank</p>
                             <p>Page speed optimisation steps you can take today:</p>
                             <ul>
                                 <li>Test your site at PageSpeed Insights — aim for a score above 70 on mobile</li>
@@ -523,10 +611,10 @@ function SeoSmallBusinessIndiaGuide() {
                             <p>Aim for a minimum of 1,000 words per article, publish at least twice a month consistently, and always answer the specific question your reader is asking — not a watered-down version of it.</p>
                         </section>
 
-            
+
                         <section id="strategy-6">
                             <h4>Strategy 6: Build Local Citations on Indian Directories</h4>
-                           <p>Local citations are mentions of your business name, address, and phone number on other websites. For local SEO for small business, they are a critical trust signal that tells Google your business is real and where it operates.</p>
+                            <p>Local citations are mentions of your business name, address, and phone number on other websites. For local SEO for small business, they are a critical trust signal that tells Google your business is real and where it operates.</p>
                             <p>Key Indian directories to list your business on:</p>
                             <ul>
                                 <li><strong>JustDial</strong> — India's largest local search platform</li>
@@ -547,12 +635,12 @@ function SeoSmallBusinessIndiaGuide() {
                                 <li>Ask at the right moment — right after a successful project delivery</li>
                                 <li>Create a short QR code linking to your review page and display it at your office</li>
                             </ul>
-                            <p>Always respond to every review — positive and negative. Potential customers read how you handle complaints just as carefully as they read the complaints themselves.             </p>          
+                            <p>Always respond to every review — positive and negative. Potential customers read how you handle complaints just as carefully as they read the complaints themselves.             </p>
                         </section>
 
                         <section id="strategy-8">
                             <h5>Strategy 8: Fix Your Website's Technical SEO</h5>
-                           <p>Understanding technical SEO vs on-page SEO is essential for any small business owner investing in search. On-page SEO is what your visitors see — content, headings, and meta tags. Technical SEO is what Google sees underneath — your site speed, crawlability, sitemap, security certificate, and structured data.</p>
+                            <p>Understanding technical SEO vs on-page SEO is essential for any small business owner investing in search. On-page SEO is what your visitors see — content, headings, and meta tags. Technical SEO is what Google sees underneath — your site speed, crawlability, sitemap, security certificate, and structured data.</p>
                             <p>Common technical SEO issues that hurt small business rankings:</p>
                             <ul>
                                 <li>Broken links (404 errors) — test with Screaming Frog, free up to 500 pages</li>
@@ -565,16 +653,16 @@ function SeoSmallBusinessIndiaGuide() {
                             <p>Technical SEO does not require a developer for most fixes. Google Search Console will show you the most critical issues on your site within 48 hours of verification.</p>
                         </section>
 
-                          <section id="strategy-9">
+                        <section id="strategy-9">
                             <h5>Strategy 9: Build Internal Links Between Your Pages</h5>
-                           <p>Internal linking is one of the most underused SEO strategies for small business websites — and one of the easiest to implement with zero cost. Every new article you publish should link to at least two or three existing pages on your site.</p>
+                            <p>Internal linking is one of the most underused SEO strategies for small business websites — and one of the easiest to implement with zero cost. Every new article you publish should link to at least two or three existing pages on your site.</p>
                             <p>This matters for website SEO analysis because internal links spread authority from high-performing pages to pages that need a ranking boost, help Google understand your site structure, and keep visitors on your site longer — all of which reduce bounce rate and signal quality to Google.</p>
                             <p>Rule of thumb: every page on your site should be reachable within three clicks from your homepage.</p>
                         </section>
 
-                          <section id="strategy-10">
+                        <section id="strategy-10">
                             <h5>Strategy 10: Earn Backlinks from Other Websites</h5>
-                           <p>Backlinks — links from other websites pointing to yours — remain one of Google's most powerful ranking signals. A single link from a reputable Indian publication can move your ranking more than dozens of minor on-page optimisations.</p>
+                            <p>Backlinks — links from other websites pointing to yours — remain one of Google's most powerful ranking signals. A single link from a reputable Indian publication can move your ranking more than dozens of minor on-page optimisations.</p>
                             <p>Link building strategies for Indian small businesses:</p>
                             <ul>
                                 <li>Guest posting — write a valuable article for an industry blog in exchange for a backlink</li>
@@ -586,10 +674,10 @@ function SeoSmallBusinessIndiaGuide() {
                             <p>The majority of web pages online have zero backlinks — meaning most of your competitors are not doing this at all. Even five to ten quality backlinks from relevant Indian sites can make a measurable ranking difference.</p>
                         </section>
 
-                        <div  id="conclusion">
+                        <div id="conclusion">
                             <h3 style={{ marginBottom: "12px" }}>Conclusion</h3>
                             <p>
-                               SEO for small businesses in India is not a magic switch — but it is the closest thing to a compounding business asset you can build online
+                                SEO for small businesses in India is not a magic switch — but it is the closest thing to a compounding business asset you can build online
                             </p>
                             <p>Every blog post you publish, every Google review you earn, every backlink you build — they stack. They compound. A business that starts its SEO strategies today will be in a fundamentally stronger position six months from now than one that waits.</p>
                             <p>The 12 strategies in this guide — from keyword research for SEO and on-page SEO to technical SEO, link building strategies, and local SEO for small business — are the same approaches that help Indian businesses rank on page one. Start with one strategy this week. Just one.</p>
