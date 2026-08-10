@@ -1,9 +1,10 @@
 User-agent: Bingbot
 Allow: /
+
 User-agent: *
 Allow: /
 Disallow: /search/
 Disallow: /cgi-bin/
 Disallow: /tmp/
 
-Sitemap: https://www.priyamconsultancy.com/sitemap-index.xml
+Sitemap: https://www.priyamconsultancy.com/sitemap-index.xml 
