@@ -1,0 +1,203 @@
+[33mcommit 6a32dd20e2dda4af3fd0e38c0b3bd120b03df0bf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: PCS <priyamconsultancyservices@gmail.com>
+Date:   Mon Aug 10 15:55:52 2026 +0530
+
+    daily update
+
+ 404.html                                                |   2 [32m+[m[31m-[m
+ Kalani Products Price.xlsx                              | Bin [31m11058[m -> [32m0[m bytes
+ about-us/index.html                                     |   2 [32m+[m[31m-[m
+ accounting/index.html                                   |   2 [32m+[m[31m-[m
+ .../index.html                                          |   2 [32m+[m[31m-[m
+ article/technical-seo-complete-guide-2026/index.html    |   2 [32m+[m[31m-[m
+ banking-financial-and-insurance-services/index.html     |   2 [32m+[m[31m-[m
+ business-process-automation/index.html                  |   2 [32m+[m[31m-[m
+ business-registration-compliance/index.html             |   2 [32m+[m[31m-[m
+ business-registrations/index.html                       |   2 [32m+[m[31m-[m
+ careers/content-writer-intern/index.html                |   2 [32m+[m[31m-[m
+ careers/content-writer/index.html                       |   2 [32m+[m[31m-[m
+ careers/digital-marketing-analyst/index.html            |   2 [32m+[m[31m-[m
+ careers/digital-marketing-intern/index.html             |   2 [32m+[m[31m-[m
+ careers/graphic-designer-intern/index.html              |   2 [32m+[m[31m-[m
+ careers/graphic-designer/index.html                     |   2 [32m+[m[31m-[m
+ careers/hr-executive-intern/index.html                  |   2 [32m+[m[31m-[m
+ careers/hr-executive/index.html                         |   2 [32m+[m[31m-[m
+ careers/index.html                                      |   2 [32m+[m[31m-[m
+ careers/video-editor-intern/index.html                  |   2 [32m+[m[31m-[m
+ careers/video-editor/index.html                         |   2 [32m+[m[31m-[m
+ careers/web-developer-intern/index.html                 |   2 [32m+[m[31m-[m
+ careers/website-developer/index.html                    |   2 [32m+[m[31m-[m
+ case-studies/abb/index.html                             |   2 [32m+[m[31m-[m
+ case-studies/ainqa/index.html                           |   2 [32m+[m[31m-[m
+ case-studies/am-builder/index.html                      |   2 [32m+[m[31m-[m
+ case-studies/analytixhub/index.html                     |   2 [32m+[m[31m-[m
+ case-studies/baltimore-health-analytics/index.html      |   2 [32m+[m[31m-[m
+ case-studies/cure-tek-manufacturing/index.html          |   2 [32m+[m[31m-[m
+ case-studies/ey-chiquita/index.html                     |   2 [32m+[m[31m-[m
+ case-studies/feral-roots/index.html                     |   2 [32m+[m[31m-[m
+ case-studies/index.html                                 |   2 [32m+[m[31m-[m
+ case-studies/naturals/index.html                        |   2 [32m+[m[31m-[m
+ case-studies/riya-consultancy/index.html                |   2 [32m+[m[31m-[m
+ case-studies/starhealth/index.html                      |   2 [32m+[m[31m-[m
+ case-studies/sterlo/index.html                          |   2 [32m+[m[31m-[m
+ case-studies/sterlobuild/index.html                     |   2 [32m+[m[31m-[m
+ case-studies/sterlocare/index.html                      |   2 [32m+[m[31m-[m
+ case-studies/tactive/index.html                         |   2 [32m+[m[31m-[m
+ case-studies/talent-tribe/index.html                    |   2 [32m+[m[31m-[m
+ case-studies/urcts/index.html                           |   2 [32m+[m[31m-[m
+ case-studies/website-devlopement-page/index.html        |   2 [32m+[m[31m-[m
+ case-studies/zky/index.html                             |   2 [32m+[m[31m-[m
+ company-valuations-and-investment-support/index.html    |   2 [32m+[m[31m-[m
+ construction/index.html                                 |   2 [32m+[m[31m-[m
+ contact-us/index.html                                   |   2 [32m+[m[31m-[m
+ content-marketing/index.html                            |   2 [32m+[m[31m-[m
+ custom-website-development/index.html                   |   2 [32m+[m[31m-[m
+ data-analytics/index.html                               |   2 [32m+[m[31m-[m
+ digital-marketing-company-in-coimbatore/index.html      |   2 [32m+[m[31m-[m
+ digital-marketing/index.html                            |   2 [32m+[m[31m-[m
+ digital-transformation/index.html                       |   2 [32m+[m[31m-[m
+ e-commerce-website-development/index.html               |   2 [32m+[m[31m-[m
+ finances/index.html                                     |   2 [32m+[m[31m-[m
+ graphic-design/index.html                               |   2 [32m+[m[31m-[m
+ healthcare/index.html                                   |   2 [32m+[m[31m-[m
+ hr-services/index.html                                  |   2 [32m+[m[31m-[m
+ hr-strategy-and-policy-development/index.html           |   2 [32m+[m[31m-[m
+ index.html                                              |   2 [32m+[m[31m-[m
+ it-or-it-services/index.html                            |   2 [32m+[m[31m-[m
+ .../index.html                                          |   2 [32m+[m[31m-[m
+ manufacturing/index.html                                |   2 [32m+[m[31m-[m
+ markdown-page/index.html                                |   2 [32m+[m[31m-[m
+ marketplace-ecommerce-marketing/index.html              |   2 [32m+[m[31m-[m
+ microsoft-apps-partners/index.html                      |   2 [32m+[m[31m-[m
+ odoo-partners/index.html                                |   2 [32m+[m[31m-[m
+ payroll-management/index.html                           |   2 [32m+[m[31m-[m
+ performance-marketing/index.html                        |   2 [32m+[m[31m-[m
+ portfolio/index.html                                    |   2 [32m+[m[31m-[m
+ privacy-policy/index.html                               |   2 [32m+[m[31m-[m
+ recruitment-services/index.html                         |   2 [32m+[m[31m-[m
+ retail-ecommerce/index.html                             |   2 [32m+[m[31m-[m
+ robots.txt                                              |   3 [32m++[m[31m-[m
+ search-engine-optimization/index.html                   |   2 [32m+[m[31m-[m
+ shopify-website-development/index.html                  |   2 [32m+[m[31m-[m
+ social-media-marketing/index.html                       |   2 [32m+[m[31m-[m
+ static-website-development/index.html                   |   2 [32m+[m[31m-[m
+ static/robots.txt                                       |   8 [32m++++++[m[31m--[m
+ statutory-compliance/index.html                         |   2 [32m+[m[31m-[m
+ sterlo-build-partners/index.html                        |   2 [32m+[m[31m-[m
+ sterlo-care-partners/index.html                         |   2 [32m+[m[31m-[m
+ sterlo-partners/index.html                              |   2 [32m+[m[31m-[m
+ terms-and-conditions/index.html                         |   2 [32m+[m[31m-[m
+ textile/index.html                                      |   2 [32m+[m[31m-[m
+ tourism-and-hospitality/index.html                      |   2 [32m+[m[31m-[m
+ virtual-cfo-services/index.html                         |   2 [32m+[m[31m-[m
+ web-and-mobile-application/index.html                   |   2 [32m+[m[31m-[m
+ website-design/index.html                               |   2 [32m+[m[31m-[m
+ website-development-company-in-coimbatore/index.html    |   2 [32m+[m[31m-[m
+ website-development/index.html                          |   2 [32m+[m[31m-[m
+ woocommerce-website-development/index.html              |   2 [32m+[m[31m-[m
+ 91 files changed, 96 insertions(+), 91 deletions(-)
+
+[33mcommit 1fd927b494fd11a1ca793c711f8a6d936f9552ce[m
+Author: PCS <priyamconsultancyservices@gmail.com>
+Date:   Mon Aug 10 15:31:02 2026 +0530
+
+    update robots.txt
+
+ robots.txt | 5 [32m++++[m[31m-[m
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+[33mcommit 6e0652aab5aec3152216620b4a5a89bc5a6fbddf[m
+Author: PCS <priyamconsultancyservices@gmail.com>
+Date:   Mon Aug 10 13:20:55 2026 +0530
+
+    daily update
+
+ 404.html                                                          | 2 [32m+[m[31m-[m
+ about-us/index.html                                               | 2 [32m+[m[31m-[m
+ accounting/index.html                                             | 2 [32m+[m[31m-[m
+ article/seo-strategies-for-small-businesses-india/index.html      | 2 [32m+[m[31m-[m
+ article/technical-seo-complete-guide-2026/index.html              | 2 [32m+[m[31m-[m
+ banking-financial-and-insurance-services/index.html               | 2 [32m+[m[31m-[m
+ business-process-automation/index.html                            | 2 [32m+[m[31m-[m
+ business-registration-compliance/index.html                       | 2 [32m+[m[31m-[m
+ business-registrations/index.html                                 | 2 [32m+[m[31m-[m
+ careers/content-writer-intern/index.html                          | 2 [32m+[m[31m-[m
+ careers/content-writer/index.html                                 | 2 [32m+[m[31m-[m
+ careers/digital-marketing-analyst/index.html                      | 2 [32m+[m[31m-[m
+ careers/digital-marketing-intern/index.html                       | 2 [32m+[m[31m-[m
+ careers/graphic-designer-intern/index.html                        | 2 [32m+[m[31m-[m
+ careers/graphic-designer/index.html                               | 2 [32m+[m[31m-[m
+ careers/hr-executive-intern/index.html                            | 2 [32m+[m[31m-[m
+ careers/hr-executive/index.html                                   | 2 [32m+[m[31m-[m
+ careers/index.html                                                | 2 [32m+[m[31m-[m
+ careers/video-editor-intern/index.html                            | 2 [32m+[m[31m-[m
+ careers/video-editor/index.html                                   | 2 [32m+[m[31m-[m
+ careers/web-developer-intern/index.html                           | 2 [32m+[m[31m-[m
+ careers/website-developer/index.html                              | 2 [32m+[m[31m-[m
+ case-studies/abb/index.html                                       | 2 [32m+[m[31m-[m
+ case-studies/ainqa/index.html                                     | 2 [32m+[m[31m-[m
+ case-studies/am-builder/index.html                                | 2 [32m+[m[31m-[m
+ case-studies/analytixhub/index.html                               | 2 [32m+[m[31m-[m
+ case-studies/baltimore-health-analytics/index.html                | 2 [32m+[m[31m-[m
+ case-studies/cure-tek-manufacturing/index.html                    | 2 [32m+[m[31m-[m
+ case-studies/ey-chiquita/index.html                               | 2 [32m+[m[31m-[m
+ case-studies/feral-roots/index.html                               | 2 [32m+[m[31m-[m
+ case-studies/index.html                                           | 2 [32m+[m[31m-[m
+ case-studies/naturals/index.html                                  | 2 [32m+[m[31m-[m
+ case-studies/riya-consultancy/index.html                          | 2 [32m+[m[31m-[m
+ case-studies/starhealth/index.html                                | 2 [32m+[m[31m-[m
+ case-studies/sterlo/index.html                                    | 2 [32m+[m[31m-[m
+ case-studies/sterlobuild/index.html                               | 2 [32m+[m[31m-[m
+ case-studies/sterlocare/index.html                                | 2 [32m+[m[31m-[m
+ case-studies/tactive/index.html                                   | 2 [32m+[m[31m-[m
+ case-studies/talent-tribe/index.html                              | 2 [32m+[m[31m-[m
+ case-studies/urcts/index.html                                     | 2 [32m+[m[31m-[m
+ case-studies/website-devlopement-page/index.html                  | 2 [32m+[m[31m-[m
+ case-studies/zky/index.html                                       | 2 [32m+[m[31m-[m
+ company-valuations-and-investment-support/index.html              | 2 [32m+[m[31m-[m
+ construction/index.html                                           | 2 [32m+[m[31m-[m
+ contact-us/index.html                                             | 2 [32m+[m[31m-[m
+ content-marketing/index.html                                      | 2 [32m+[m[31m-[m
+ custom-website-development/index.html                             | 2 [32m+[m[31m-[m
+ data-analytics/index.html                                         | 2 [32m+[m[31m-[m
+ digital-marketing-company-in-coimbatore/index.html                | 2 [32m+[m[31m-[m
+ digital-marketing/index.html                                      | 2 [32m+[m[31m-[m
+ digital-transformation/index.html                                 | 2 [32m+[m[31m-[m
+ e-commerce-website-development/index.html                         | 2 [32m+[m[31m-[m
+ finances/index.html                                               | 2 [32m+[m[31m-[m
+ graphic-design/index.html                                         | 2 [32m+[m[31m-[m
+ healthcare/index.html                                             | 2 [32m+[m[31m-[m
+ hr-services/index.html                                            | 2 [32m+[m[31m-[m
+ hr-strategy-and-policy-development/index.html                     | 2 [32m+[m[31m-[m
+ index.html                                                        | 2 [32m+[m[31m-[m
+ it-or-it-services/index.html                                      | 2 [32m+[m[31m-[m
+ landing-page/website-development-company-in-coimbatore/index.html | 2 [32m+[m[31m-[m
+ manufacturing/index.html                                          | 2 [32m+[m[31m-[m
+ markdown-page/index.html                                          | 2 [32m+[m[31m-[m
+ marketplace-ecommerce-marketing/index.html                        | 2 [32m+[m[31m-[m
+ microsoft-apps-partners/index.html                                | 2 [32m+[m[31m-[m
+ odoo-partners/index.html                                          | 2 [32m+[m[31m-[m
+ payroll-management/index.html                                     | 2 [32m+[m[31m-[m
+ performance-marketing/index.html                                  | 2 [32m+[m[31m-[m
+ portfolio/index.html                                              | 2 [32m+[m[31m-[m
+ privacy-policy/index.html                                         | 2 [32m+[m[31m-[m
+ recruitment-services/index.html                                   | 2 [32m+[m[31m-[m
+ retail-ecommerce/index.html                                       | 2 [32m+[m[31m-[m
+ search-engine-optimization/index.html                             | 2 [32m+[m[31m-[m
+ shopify-website-development/index.html                            | 2 [32m+[m[31m-[m
+ social-media-marketing/index.html                                 | 2 [32m+[m[31m-[m
+ static-website-development/index.html                             | 2 [32m+[m[31m-[m
+ statutory-compliance/index.html                                   | 2 [32m+[m[31m-[m
+ sterlo-build-partners/index.html                                  | 2 [32m+[m[31m-[m
+ sterlo-care-partners/index.html                                   | 2 [32m+[m[31m-[m
+ sterlo-partners/index.html                                        | 2 [32m+[m[31m-[m
+ terms-and-conditions/index.html                                   | 2 [32m+[m[31m-[m
+ textile/index.html                                                | 2 [32m+[m[31m-[m
+ tourism-and-hospitality/index.html                                | 2 [32m+[m[31m-[m
+ virtual-cfo-services/index.html                                   | 2 [32m+[m[31m-[m
+ web-and-mobile-application/index.html                             | 2 [32m+[m[31m-[m
+ website-design/index.html                                         | 2 [32m+[m[31m-[m
+ website-development-company-in-coimbatore/index.html              | 2 [32m+[m[31m-[m
+ website-development/index.html                                    | 2 [32m+[m[31m-[m
+ woocommerce-website-development/index.html                        | 2 [32m+[m[31m-[m
+ 88 files changed, 88 insertions(+), 88 deletions(-)

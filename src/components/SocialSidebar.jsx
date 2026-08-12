@@ -19,7 +19,7 @@ const QuoteIcon = () => (
 );
 
 const PHONE_NUMBER = "+919677444048";
-const WHATSAPP_URL = `https://wa.me/${PHONE_NUMBER}`;
+const WHATSAPP_URL = `https://wa.me/919677444048`;
 
 const EMAILJS_CONFIG = {
   serviceId:  "service_8xw6k3r",

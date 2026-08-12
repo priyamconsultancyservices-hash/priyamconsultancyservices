@@ -217,6 +217,13 @@ const GlobalStyles = () => (
      header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN{
     display: none;
 } 
+
+ .sb-quote {
+    display: none !important;
+     }
+    .sb-wrap  {
+    top:50%!important;
+    }
 `}</style>
 );
 // Used by ServicesSlider (.svs-icon-wrap)
@@ -253,129 +260,75 @@ const faqData = [
 
 ];
 
-
 // ── Site Header ────────────────────────────────────────
 function SiteHeader() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const navLinks = [
-        { label: "About", href: "#about" },
-        { label: "Service", href: "#service" },
-        { label: "Portfolio", href: "#portfolio" },
-        { label: "Technologies", href: "#technologies" },
-         { label: "Features", href: "#feature" },
-        { label: "Industries ", href: "#industries" },
-        { label: "Testimonials", href: "#testimonials" },
-       
-    ];
-
     return (
         <header className="pcs-site-header-wrap">
-
-
             <div className="pcs-site-header">
-                {/* LOGO */}
                 <div className="pcs-header-logo">
                     <img src="/img/priyam-consultancy-logo.png" alt="Priyam Consultancy Services" />
                 </div>
 
-                {/* DESKTOP NAV */}
-                <ul className="pcs-header-nav">
-                    {navLinks.map((item, i) => (
-                        <li key={i}><a href={item.href}>{item.label}</a></li>
-                    ))}
-                </ul>
+                <div className="pcs-header-right">
+                    <a href="tel:+919677444048" className="pcs-header-call">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#ed8337" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <span>+91 96774 44048</span>
+                    </a>
 
-                {/* ENQUIRE BUTTON — always visible */}
-                <a href="#about" className="pcs-header-enquire-btn">
-                    Enquire Now
-                    <span>→</span>
-                </a>
-
-                {/* HAMBURGER / CLOSE TOGGLE — mobile only */}
-                <button
-                    type="button"
-                    className={`pcs-header-toggle${menuOpen ? " open" : ""}`}
-                    aria-label={menuOpen ? "Close menu" : "Open menu"}
-                    onClick={() => setMenuOpen((o) => !o)}
-                >
-                    <span /><span /><span />
-                </button>
+                    <a href="#contact" className="pcs-header-enquire-btn">
+                        Enquire Now
+                        <span>→</span>
+                    </a>
+                </div>
             </div>
-
-            {/* FULL-WIDTH DROPDOWN — mobile only */}
-            <div className={`pcs-mobile-dropdown${menuOpen ? " open" : ""}`}>
-                <ul className="pcs-mobile-links">
-                    {navLinks.map((item, i) => (
-                        <li key={i}>
-                            <a
-                                href={item.href}
-                                className={i === 0 ? "active" : ""}
-                                onClick={() => setMenuOpen(false)}
-                            >
-                                {item.label}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div className="pcs-mobile-bar" />
         </header>
     );
 }
 
 // ── Hero ────────────────────────────────────────────
-
 function HeroSection() {
     return (
-        <section className="hero" id="about" >
-            {/* <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
- 
-        :root {
-          --navy:      #004168;
-          --navy-deep: #011a2a;
-          --navy-mid:  #0a3652;
-          --orange:    #ed8337;
-          --orange-l:  #f5a66b;
-          --dim:       rgba(255,255,255,0.45);
-        }
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; color: #fff; overflow-x: hidden; }
- 
-       
-      `}</style> */}
-
+        <section className="hero" id="about">
             {/* LEFT CONTENT */}
             <div className="hero-left">
                 <div className="h-badge"><div className="badge-dot" />Web Development</div>
-                   <h1 className="pf-heading" style={{    margin: "2.5rem 0 0"}}> 
-                         Trusted <span><i>Website Development Company in Coimbatore</i></span> Delivering Real Growth
-                    </h1>
-                
+                <h1 className="pf-heading" style={{ margin: "2.5rem 0 0" }}>
+                    Trusted <span><i>Website Development Company </i></span>in Coimbatore
+                </h1>
+
                 <p className="hero-sub1">
-We design and build fast, mobile-ready websites that help you get found, get leads, and grow — without delays . From business websites to online stores, every site is tailored to your industry and built to bring real results, not just look good. 
+                    We design and build fast, mobile-ready websites that help you get found, get leads, and grow — without delays. From business websites to online stores, every site is tailored to your industry and built to bring real results, not just look good.
                 </p>
 
-                <div className="hero-img-grid">
-    <img src="/img/landing-page/hero-img-1.webp" alt="Website Development Coimbatore" className="hero-img-1" />
-    <img src="/img/landing-page/hero-img-2.webp" alt="Web Design Coimbatore" className="hero-img-2" />
-    <img src="/img/landing-page/hero-img-3.webp" alt="Digital Solutions Coimbatore" className="hero-img-3" />
+      <div className="hero-cta-row">
+    <a href="tel:+919677444048" className="hero-cta-fill">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        Call Now — Free Consultation
+    </a>
+    <a href="#get-in-touch-form" className="hero-cta-outline">
+        Get an Instant Estimate
+    </a>
 </div>
-               
+
+
+                <div className="hero-img-grid">
+                    <img src="/img/landing-page/hero-img-1.webp" alt="Website Development Coimbatore" className="hero-img-1" />
+                    <img src="/img/landing-page/hero-img-2.webp" alt="Web Design Coimbatore" className="hero-img-2" />
+                    <img src="/img/landing-page/hero-img-3.webp" alt="Digital Solutions Coimbatore" className="hero-img-3" />
+                </div>
             </div>
 
-            {/* RIGHT CONTACT FORM */}
-            <div className="hero-right" id="get-in-touch-form">
-                <div className="hero-form-card">
-                    {/* <style>{`
-          
-          `}</style> */}
-
-                    <p className="hero-form-title">Your Growth, <span>Our Mission.</span></p>
-                    <p className="hero-form-sub">Fill in your details — we'll get back within 24 hours.</p>
-                    <HeroContactForm />
-                </div>
+            {/* RIGHT: dummy image (form removed from here) */}
+            <div className="hero-right">
+                <img
+                    src="/img/landing-page/banner.webp"
+                    alt="Website Development Coimbatore"
+                    className="hero-img"
+                />
             </div>
         </section>
     );
@@ -419,7 +372,8 @@ function HeroContactForm() {
 
     return (
         <form onSubmit={sendEmail}>
-            <div className="hero-form-row">
+            {/* Row 1: Name + Mobile */}
+            <div className="hero-form-row hero-form-row-2col">
                 <div className="hero-form-field">
                     <input
                         type="text"
@@ -430,22 +384,6 @@ function HeroContactForm() {
                         required
                     />
                 </div>
-            </div>
-
-            <div className="hero-form-row">
-                <div className="hero-form-field">
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email Address"
-                        value={form.email}
-                        onChange={handleChange}
-                        required
-                    />
-                </div>
-            </div>
-
-            <div className="hero-form-row">
                 <div className="hero-form-field">
                     <div className="hero-phone-wrap">
                         <span className="hero-phone-prefix">IN +91</span>
@@ -463,7 +401,18 @@ function HeroContactForm() {
                 </div>
             </div>
 
-            <div className="hero-form-row">
+            {/* Row 2: Email + Company */}
+            <div className="hero-form-row hero-form-row-2col">
+                <div className="hero-form-field">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address"
+                        value={form.email}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
                 <div className="hero-form-field">
                     <input
                         type="text"
@@ -475,6 +424,7 @@ function HeroContactForm() {
                 </div>
             </div>
 
+            {/* Row 3: Message (full width) */}
             <div className="hero-form-row">
                 <div className="hero-form-field">
                     <textarea
@@ -495,7 +445,6 @@ function HeroContactForm() {
         </form>
     );
 }
-
 
 const CLIENT_MARQUEE_LOGOS = [
     { name: "Tactive", img: "/img/landing-page/client-slide-1.webp" },
@@ -537,7 +486,6 @@ function ClientLogosMarquee() {
         </div>
     );
 }
-
 
 const CTA_LOGOS = [
     { name: "Sterlo", img: "/img/landing-page/cta-logo-1.webp", url: "https://sterlo.com" },
@@ -603,44 +551,39 @@ function BuildTogetherCTASection() {
 
                     <h2 style={{
                         fontFamily: "'Poppins', sans-serif",
-                        fontSize: "clamp(1.55rem, 2.4vw, 2.1rem)",
+                        fontSize: "clamp(1.48rem, 2.4vw, 2.1rem)",
                         fontWeight: 700, color: "#fff",
                         lineHeight: 1.2, margin: "0 0 0.7rem",
                     }}>
                         Get a Free Consultation With Our <br /><em style={{ color: "#ed8337" }}>Website Development Team</em><br />
                     </h2>
 
-                   <p style={{
-    fontSize: "0.9rem", color: "rgba(255,255,255,0.72)",
-    lineHeight: 1.75, margin: 0, maxWidth: "480px",
-}}>
-    Tell us about your project. We will plan the right approach. We will discuss the platform, timeline and budget before any work begins.
-</p>
+                    <p style={{
+                        fontSize: "0.9rem", color: "rgba(255,255,255,0.72)",
+                        lineHeight: 1.75, margin: 0, maxWidth: "480px",
+                    }}>
+                        Tell us about your project. We will plan the right approach. We will discuss the platform, timeline and budget before any work begins.
+                    </p>
 
-{/* LOGOS ROW */}
-<div className="cta-logos-row">
-    {CTA_LOGOS.map((logo, i) => (
-        <img key={i} src={logo.img} alt={logo.name} className="cta-logo-item" loading="lazy" />
-    ))}
-</div>
+                    {/* LOGOS ROW */}
+                    <div className="cta-logos-row">
+                        {CTA_LOGOS.map((logo, i) => (
+                            <img key={i} src={logo.img} alt={logo.name} className="cta-logo-item" loading="lazy" />
+                        ))}
+                    </div>
 
-<div style={{
-    position: "relative", zIndex: 2,
-    display: "flex", flexDirection: "column",
-    alignItems: "start", gap: "0.85rem", flexShrink: 0, marginTop: "1.5rem",
-}}>
-    <a href="#about" className="pg-form-btn">
-        Book a Free Consultation
-        <span className="pg-form-btn-arr">→</span>
-    </a>
-
-</div>
-
+                    <div style={{
+                        position: "relative", zIndex: 2,
+                        display: "flex", flexDirection: "column",
+                        alignItems: "start", gap: "0.85rem", flexShrink: 0, marginTop: "1.5rem",
+                    }}>
+                        <a href="#about" className="pg-form-btn">
+                            Book a Free Consultation
+                            <span className="pg-form-btn-arr">→</span>
+                        </a>
+                    </div>
                 </div>
-
                 {/* RIGHT: Buttons */}
-
-
             </div>
         </section>
     );
@@ -724,7 +667,6 @@ function ModernFeaturesSection() {
         </section>
     );
 }
-
 
 function WCUScrollReveal() {
     useEffect(() => {
@@ -863,97 +805,6 @@ const SERVICE_SLIDES = [
 ];
 
 
-
-// const PORTFOLIO_COL1 = [
-//     { img: "/img/portfolio/urcts.webp", label: "URCTS", tag: "", link: "https://www.urcts.in/" },
-//     { img: "/img/portfolio/tgcc.webp", label: "TGCC", tag: "", link: "" },
-//     { img: "/img/portfolio/zky.webp", label: "ZKY", tag: "", link: "https://zky.co.in/" },
-//     { img: "/img/portfolio/abb.webp", label: "ABB", tag: "", link: "https://abbmc.in/" },
-//     { img: "/img/portfolio/riya.webp", label: "Riya consultancy", tag: "", link: "https://www.riyaconsultancy.com/" },
-// ];
-// const PORTFOLIO_COL2 = [
-//     { img: "/img/portfolio/feralroots.webp", label: "Feral Roots", tag: "", link: "https://feralroots.in/" },
-//     { img: "/img/portfolio/sterlocare.webp", label: "SterloCare", tag: "", link: "https://sterlocare.com/" },
-//     { img: "/img/portfolio/sterlo.webp", label: "Sterlo", tag: "", link: "https://sterlo.io/" },
-//     { img: "/img/portfolio/talenttribe.webp", label: "Talent Tribe", tag: "", link: "https://talenttribe.in/" },
-//     { img: "/img/portfolio/sterlobuild.webp", label: "SterloBuild", tag: "", link: "https://www.sterlobuild.com/" },
-// ];
-// const PORTFOLIO_COL3 = [
-//     { img: "/img/portfolio/product1.webp", label: "", tag: "", link: "" },
-//     { img: "/img/portfolio/product2.webp", label: "", tag: "", link: "" },
-//     { img: "/img/portfolio/product3.webp", label: "", tag: "", link: "" },
-//     { img: "/img/portfolio/product4.webp", label: "", tag: "", link: "" },
-//     { img: "/img/portfolio/am.webp", label: "AM Builder", tag: "", link: "" },
-// ];
-
-// function PortfolioColumn({ items, speed, direction }) {
-//     const innerRef = useRef(null);
-//     const offsetRef = useRef(0);
-//     const pausedRef = useRef(false);
-//     const rafRef = useRef(null);
-//     // duplicate for infinite loop
-//     const doubled = [...items, ...items];
-
-//     useEffect(() => {
-//         const el = innerRef.current;
-//         if (!el) return;
-//         const singleH = el.scrollHeight / 2;
-
-//         const animate = () => {
-//             if (!pausedRef.current) {
-//                 offsetRef.current += speed;
-//                 if (direction === "up") {
-//                     if (offsetRef.current >= singleH) offsetRef.current -= singleH;
-//                     el.style.transform = `translateY(-${offsetRef.current}px)`;
-//                 } else {
-//                     if (offsetRef.current >= singleH) offsetRef.current -= singleH;
-//                     el.style.transform = `translateY(${offsetRef.current - singleH}px)`;
-//                 }
-//             }
-//             rafRef.current = requestAnimationFrame(animate);
-//         };
-//         rafRef.current = requestAnimationFrame(animate);
-//         return () => cancelAnimationFrame(rafRef.current);
-//     }, [speed, direction]);
-
-//     return (
-//         <div
-//             className="pf-col"
-//             style={{ height: "min(600px, 60vw)", overflow: "hidden", position: "relative" }}
-//             onMouseEnter={() => { pausedRef.current = true; }}
-//             onMouseLeave={() => { pausedRef.current = false; }}
-//         >
-//             <div ref={innerRef} className="pf-col-inner">
-//                 {doubled.map((item, i) => {
-//                     const card = (
-//                         <div className="pf-card">
-//                             <img src={item.img} alt={item.label} loading="lazy" />
-//                             <div className="pf-card-overlay">
-//                                 <div className="pf-card-label">{item.label}</div>
-//                                 <div className="pf-card-tag">{item.tag}</div>
-//                             </div>
-//                         </div>
-//                     );
-//                     return item.link ? (
-//                         <a
-//                             href={item.link}
-//                             key={i}
-//                             target="_blank"
-//                             rel="noopener noreferrer"
-//                             className="pf-card-link"
-//                         >
-//                             {card}
-//                         </a>
-//                     ) : (
-//                         <div key={i}>{card}</div>
-//                     );
-//                 })}
-//             </div>
-//         </div>
-//     );
-// }
-
-
 const INDUSTRIES_LIST = [
     "Textile",
     "Manufacturing",
@@ -965,106 +816,16 @@ const INDUSTRIES_LIST = [
     "Banking, Financial & Insurance",
 ];
 
-// ── Contact Form Popup Modal (add this near HeroContactForm) ──
-function FormPopupModal({ open, onClose }) {
-    if (!open) return null;
-    return (
-        <div
-            onClick={onClose}
-            style={{
-                position: "fixed", inset: 0, zIndex: 9999,
-                background: "rgba(1,26,42,0.65)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                padding: "20px",
-            }}
-        >
-            <div
-                onClick={(e) => e.stopPropagation()}
-                style={{ position: "relative", width: "100%", maxWidth: 480 }}
-            >
-
-                <div className="hero-form-card">
-                    <button
-                        onClick={onClose}
-                        style={{
-                            position: "absolute", top: -18, right: -5,
-                            width: 36, height: 36, borderRadius: "50%",
-                            background: "#ed8337", color: "#fff", border: "none",
-                            fontSize: "1.1rem", cursor: "pointer", zIndex: 2,
-                            boxShadow: "0 4px 14px rgba(0,0,0,0.25)",
-                        }}
-                    >
-                        ✕
-                    </button>
-                    <p className="hero-form-title">Your Growth, <span>Our Mission.</span></p>
-                    <p className="hero-form-sub">Fill in your details — we'll get back within 24 hours.</p>
-                    <HeroContactForm />
-                </div>
-            </div>
-        </div>
-    );
-}
-
-// function PortfolioSection({ onOpenForm }) {
-//     return (
-
-//         <section className="pf-section" id="portfolio" style={{ padding: '0' }}>
-
-
-
-//             <div className="pf-inner">
-//                 <div className="pf-left">
-//                     <div className="partners-header1">
-//                         <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Portfolio</div>
-//                     </div>
-//                     <h2 className="pf-heading">
-//                         Websites We've Built That <span><i>Are Already Driving Results</i></span>
-//                     </h2>
-//                     <p className="pf-desc">
-//                         Discover our latest website projects showcasing thoughtful design, seamless user experiences, and modern development across diverse industries.
-//                     </p>
-//                     <h2 className="ind-heading">
-//                         Industries We <span>Serve</span>
-//                     </h2>
-//                     <div className="ind-grid">
-//                         {INDUSTRIES_LIST.map((industry, i) => (
-//                             <div className="ind-item" key={i}>
-//                                 <div className="ind-icon">{String(i + 1).padStart(2, "0")}</div>
-//                                 <div className="ind-label">{industry}</div>
-//                             </div>
-//                         ))}
-//                     </div>
-//                     <div className="pf-btns">
-//                         <button
-//                             type="button"
-//                             onClick={onOpenForm}
-//                             className="pf-btn"
-//                             style={{ border: "none" }}
-//                         >
-//                             Start Your Project  →
-//                         </button>
-//                     </div>
-//                 </div>
-
-//                 <div className="pf-cols">
-//                     <PortfolioColumn items={PORTFOLIO_COL1} speed={0.6} direction="up" />
-//                     <PortfolioColumn items={PORTFOLIO_COL2} speed={0.5} direction="down" />
-//                     <PortfolioColumn items={PORTFOLIO_COL3} speed={0.7} direction="up" />
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// }
-
 // ── Trusted By / Client Logos Section ─────────────────
 const CLIENT_LOGOS = [
     { name: "SterloBuild", img: "/img/landing-page/client-logo-1.webp" },
     { name: "Talent Tribe", img: "/img/landing-page/client-logo-2.webp" },
     { name: "Star Health Finance", img: "/img/landing-page/client-logo-3.webp" },
-    { name: "Riya Consultancy", img: "/img/landing-page/client-logo-4.webp" },
+    { name: "Riya Consultancy", img: "/img/landing-page/client-logo-10.webp" },
     { name: "ZKY", img: "/img/landing-page/client-logo-5.webp" },
     { name: "Sterlo", img: "/img/landing-page/client-logo-6.webp" },
     { name: "SterloCare", img: "/img/landing-page/client-logo-7.webp" },
+    { name: "SterloCare", img: "/img/landing-page/client-logo-8.webp" },
 ];
 
 function TrustedClientsSlider() {
@@ -1103,12 +864,12 @@ function TrustedClientsSection() {
                 <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>WEBSITE DEVELOPMENT</div>
             </div>
 
-            <h2 className="tech-title svc-main-heading" > 
-                <span>Best </span> Website Development Company in Coimbatore 
+            <h2 className="tech-title svc-main-heading" >
+                <span>Best </span> Website Development Company in Coimbatore
             </h2>
- <p className="tech-desc1">
-We at Priyam Consultancy Services are a trusted website development company in Coimbatore, offering complete website design and development services that are affordable, high-quality, and result-oriented. As a leading website development service provider, we build custom web solutions focused on performance, usability, and speed. We specialize in mobile-responsive websites, WordPress and CMS-based development, ecommerce website development, custom static and dynamic websites, portal development, and SEO-ready website structures. As a recognized website design company in Coimbatore, our focus stays on SEO-optimized website design, conversion-friendly layouts, and landing pages that turn visitors into customers, making us a trusted choice for businesses looking for the best website development company. 
-                </p>
+            <p className="tech-desc1">
+                We at Priyam Consultancy Services are a trusted website development company in Coimbatore, offering complete website design and development services that are affordable, high-quality, and result-oriented. As a leading website development service provider, we build custom web solutions focused on performance, usability, and speed. We specialize in mobile-responsive websites, WordPress and CMS-based development, ecommerce website development, custom static and dynamic websites, portal development, and SEO-ready website structures. As a recognized website design company in Coimbatore, our focus stays on SEO-optimized website design, conversion-friendly layouts, and landing pages that turn visitors into customers, making us a trusted choice for businesses looking for the best website development company.
+            </p>
             <div className="tc-inner">
                 <TrustedClientsSlider />
             </div>
@@ -1195,25 +956,25 @@ function TestimonialCard({ data, pos, onClick, isMobile, isTablet, isActive }) {
             <div style={{ fontSize: isMobile ? 11.5 : 13, color: "#3d4f6a", lineHeight: isMobile ? 1.65 : 1.75, marginBottom: isMobile ? 14 : 22, flex: 1, fontWeight: 400 }}>{data.text}</div>
             <div style={{ height: 1, background: "#f0f2f7", marginBottom: isMobile ? 10 : 16 }} />
 
-<div style={{ display: "flex", alignItems: "center", gap: 10, justifyContent: "space-between" }}>
-            <div style={{ display: "flex", flexDirection: "column", gap: 1 }}>
-                <div style={{ fontSize: isMobile ? 13 : 15, fontWeight: 700, color: "#0d1f3c" }}>{data.name}</div>
-                <div style={{ fontSize: 11, color: "#6b7a94", lineHeight: 1.4, fontWeight: 400 }}>{data.role}</div>
-            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, justifyContent: "space-between" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 1 }}>
+                    <div style={{ fontSize: isMobile ? 13 : 15, fontWeight: 700, color: "#0d1f3c" }}>{data.name}</div>
+                    <div style={{ fontSize: 11, color: "#6b7a94", lineHeight: 1.4, fontWeight: 400 }}>{data.role}</div>
+                </div>
 
-            {data.logo && (
-                <img
-                    src={data.logo}
-                    alt={`${data.name} company logo`}
-                    style={{
-                        height: isMobile ? 24 : 30,
-                        maxWidth: isMobile ? 60 : 80,
-                        objectFit: "contain",
-                        flexShrink: 0,
-                    }}
-                />
-            )}
-        </div>
+                {data.logo && (
+                    <img
+                        src={data.logo}
+                        alt={`${data.name} company logo`}
+                        style={{
+                            height: isMobile ? 24 : 30,
+                            maxWidth: isMobile ? 60 : 80,
+                            objectFit: "contain",
+                            flexShrink: 0,
+                        }}
+                    />
+                )}
+            </div>
         </div>
     );
 }
@@ -1409,23 +1170,26 @@ function OurServicesSection() {
         {
             img: "/img/landing-page/static-website.webp",
             title: "Website Design",
-            desc: "Professional website designs that strengthen your brand and turn visitors to customers",
+            desc: "Website designs that strengthen your brand and turn visitors into loyal customers through engaging experiences and strategic design.",
             features: ["Premium UI/UX Layouts", "User-Friendly Designs", "Modern visuals with custom icons and buttons"],
             href: "/website-design",
+            price: "₹7,500",
         },
         {
             img: "/img/landing-page/website-design.webp",
             title: "Static Website Development",
-            desc: "Affordable single-page websites with essential SEO setup, built to help startups and growing businesses",
+            desc: "Affordable single-page websites with essential SEO, designed to help startups and growing businesses attract customers and build credibility online.",
             features: ["Standard Design Template", "Fast Loading Page", "Mobile Responsive"],
             href: "/static-website-development",
+            price: "₹7,500",
         },
         {
             img: "/img/landing-page/custom-website-development.webp",
             title: "Custom Website Development",
-            desc: "Get a customized website tailored to your business, industry, and specific requirements, designed to support your business growth ",
+            desc: "Get a customized website tailored to your business, industry, and specific requirements, designed to support your business growth",
             features: ["Custom Features & Third-Party Integration", "User-friendly website flow", "High-performance & SEO-ready"],
             href: "/custom-website-development",
+            price: "₹15,000",
         },
         {
             img: "/img/landing-page/woo-commerce.webp",
@@ -1433,20 +1197,23 @@ function OurServicesSection() {
             desc: "High-performing WooCommerce stores designed to attract more customers, increase online sales, and simplify the buying process.",
             features: ["Inventory & Order Tracking", "Payment Gateway Integration", "Store & Product Management"],
             href: "/woocommerce-website-development",
+            price: "₹20,000",
         },
         {
             img: "/img/landing-page/ecommerce-development.webp",
-            title: "E-Commerce Development",
-            desc: "Scalable Shopify Stores Built to Increase Sales and Support Long-Term Business Growth ",
+            title: "Custom E-Commerce Development",
+            desc: "Complete E-commerce Features Built to Improve Shopping Experiences, Drive More Sales, and Grow Your Online Business.",
             features: ["Shopify store & product setup", "Payment and Shipping Integration", "SEO Ready and Mobile Responsive"],
             href: "/e-commerce-website-development",
+            price: "₹25,000",
         },
         {
             img: "/img/landing-page/shopify.webp",
             title: "Shopify Development",
-            desc: "Complete E-commerce Features Built to Improve Shopping Experiences, Drive More Sales, and Grow Your Online Business",
+            desc: "Scalable Shopify stores built to increase sales, enhance customer experiences, and support sustainable long-term business growth. ",
             features: ["Custom Product & Category Setup", "Customer Login & Account Management", "Shopping Cart & Easy Checkout Process"],
             href: "/shopify-website-development",
+            price: "₹22,000",
         },
     ];
 
@@ -1482,13 +1249,13 @@ function OurServicesSection() {
                         onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 10px 35px rgba(0,0,0,0.08)"; }}
                     >
                         <img src={svc.img} alt={svc.title} style={{ width: "90%", objectFit: "contain", margin: "0 auto 20px" }} />
-                        <h3 style={{ color: "#004168", fontSize: 20, marginBottom: 15, fontFamily: "'Poppins', sans-serif", fontWeight: 700 }}>
+                        <h3 style={{ color: "#004168", fontSize: 18, marginBottom: 15, fontFamily: "'Poppins', sans-serif", fontWeight: 700 }}>
                             {svc.title}
                         </h3>
                         <p style={{ color: "#666", lineHeight: 1.8, marginBottom: 20, fontSize: "0.9rem" }}>
                             {svc.desc}
                         </p>
-                        <ul style={{ listStyle: "none", padding: 0, margin: "0 0 25px" }}>
+                        <ul style={{ listStyle: "none", padding: 0, margin: "0 0 20px" }}>
                             {svc.features.map((f, j) => (
                                 <li key={j} style={{ position: "relative", paddingLeft: 30, marginBottom: 12, color: "#444", lineHeight: 1.6, fontSize: "0.9rem" }}>
                                     <span style={{ position: "absolute", left: 0, top: 0, color: "#ed8337", fontWeight: "bold", fontSize: 18 }}>✓</span>
@@ -1496,6 +1263,15 @@ function OurServicesSection() {
                                 </li>
                             ))}
                         </ul>
+
+                        <div className="svc-card-price-row">
+                            <span className="svc-card-price">
+                                From <strong>{svc.price}</strong>
+                            </span>
+                            <a href="tel:+919677444048" className="svc-card-call">
+                                Call <span>→</span>
+                            </a>
+                        </div>
                         {/* <a
               href={svc.href}
               style={{ display: "inline-block", width: '42%', fontSize: '14px', textAlign: "center", padding: "10px 20px", background: "#004168", color: "#fff", textDecoration: "none", borderRadius: 50, fontWeight: 600, fontFamily: "'Poppins', sans-serif", transition: "background 0.3s" }}
@@ -1510,145 +1286,6 @@ function OurServicesSection() {
         </section>
     );
 }
-
-// ── Reasons / Portfolio-style Cards Section (exact match) ──
-// const REASONS_DATA = [
-//     {
-//         img: "/img/case-study-feral.webp",
-//         tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
-//         title: "Feral Roots",
-//         short: "Priyam Consultancy Services transformed Feral Roots into a thriving online business with a custom eCommerce website featuring secure online",
-//         full: "Priyam Consultancy Services transformed Feral Roots into a thriving online business with a custom eCommerce website featuring secure online payments, order tracking, SEO for higher search visibility, and Google Business Profile optimization to increase local reach and customer enquiries.",
-//     },
-//     {
-//         img: "/img/case-study-urtc.webp",
-//         tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
-//         title: "URCTS",
-//         short: "Priyam Consultancy Services developed a premium, SEO-optimized website for URCTS featuring immersive 3D banners, comprehensive service ",
-//         full: "Priyam Consultancy Services developed a premium, SEO-optimized website for URCTS featuring immersive 3D banners, comprehensive service presentation and complete SEO implementation with keyword-focused content, strengthening brand credibility, improving visibility, enhancing user engagement, supporting global business growth.",
-//     },
-//     {
-//         img: "/img/case-study-tgcc.webp",
-//         tags: [{ label: "SEO", type: "green" }, { label: "Website Development", type: "navy" }],
-//         title: "TGCC",
-//         short: "TGCC partnered with Priyam Consultancy Services to launch a premium website reflecting its training excellence. Using AI-powered visuals, strategic SEO,",
-//         full: "TGCC partnered with Priyam Consultancy Services to launch a premium website reflecting its training excellence. Using AI-powered visuals, strategic SEO, and modern design, the website was successfully delivered within 20 days, increasing training enquiries and credibility.",
-//     },
-//     {
-//         img: "/img/case-study-abb.webp",
-//         tags: [{ label: "Website Development", type: "navy" }, { label: "Content", type: "green" }],
-//         title: "ABB Consultancy",
-//         short: "Priyam Consultancy Services redesigned ABB's website with a premium, service-focused design, keyword-rich SEO content, and a refined user ",
-//         full: "Priyam Consultancy Services redesigned ABB's website with a premium, service-focused design, keyword-rich SEO content, and a refined user experience, strengthening brand credibility, improving search visibility, and creating a professional digital presence aligned with business goals successfully.",
-//     },
-//     {
-//         img: "/img/case-study-riya.webp",
-//         tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
-//         title: "Riya Consultancy Services",
-//         short: "With limited local visibility, RIYA partnered with Priyam Consultancy Services to redesign its website using competitor analysis, targeted SEO, and social",
-//         full: "With limited local visibility, RIYA partnered with Priyam Consultancy Services to redesign its website using competitor analysis, targeted SEO, and social media marketing, helping the brand reach more local prospects, improve search visibility, and generate quality business enquiries.",
-//     },
-//     {
-//         img: "/img/case-study-talent-tribe.webp",
-//         tags: [{ label: "Website Development", type: "orange" }],
-//         title: "Talent Tribe",
-//         short: "Using AI-assisted design and custom website development, Priyam Consultancy Services built a premium website for Talent Tribe to strengthen its",
-//         full: "Using AI-assisted design and custom website development, Priyam Consultancy Services built a premium website for Talent Tribe to strengthen its brand, improve online visibility, enhance usability, support SEO, and create a strong foundation for future business enquiries.",
-//     },
-//     {
-//         img: "/img/portfolio/sterlocare.webp",
-//         tags: [{ label: "Website Development", type: "orange" }, { label: "SEO", type: "navy" }],
-//         title: "SterloCare",
-//         short: "Priyam Consultancy Services built a clean, service-focused website for SterloCare with structured content, on-page SEO, and a user-friendly ",
-//         full: "Priyam Consultancy Services built a clean, service-focused website for SterloCare with structured content, on-page SEO, and a user-friendly enquiry flow, helping the brand present its services clearly, rank better for relevant local searches, and convert more visitors into genuine leads.",
-//     },
-//     {
-//         img: "/img/portfolio/zky.webp",
-//         tags: [{ label: "Website Development", type: "navy" }, { label: "SEO", type: "green" }],
-//         title: "ZKY",
-//         short: "Priyam Consultancy Services delivered a modern, brand-focused website for ZKY with optimized page structure, fast load times, and SEO ",
-//         full: "Priyam Consultancy Services delivered a modern, brand-focused website for ZKY with optimized page structure, fast load times, and SEO fundamentals in place, giving the business a stronger digital identity, better search visibility, and a smoother path for customer enquiries.",
-//     },
-//     {
-//         img: "/img/portfolio/am.webp",
-//         tags: [{ label: "Website Development", type: "orange" }],
-//         title: "AM Builders",
-//         short: "Priyam Consultancy Services created a professional portfolio website for AM Builders to showcase completed projects, services, and client ",
-//         full: "Priyam Consultancy Services created a professional portfolio website for AM Builders to showcase completed projects, services, and client trust, with a clean layout and clear calls to action that help the business convert website visitors into serious project enquiries.",
-//     },
-// ];
-
-// function ReasonCard({ data }) {
-//     const [open, setOpen] = useState(false);
-//     return (
-//         <div className="reason-card">
-//             <div className="reason-card-img-wrap">
-//                 <img src={data.img} alt={data.title} className="reason-card-img" />
-//             </div>
-
-//             <div className="reason-card-body">
-//                 <div className="reason-card-tags">
-//                     {data.tags.map((t, i) => (
-//                         <span key={i} className={`reason-tag reason-tag-${t.type}`}>
-//                             <span className="reason-tag-dot" />
-//                             {t.label}
-//                         </span>
-//                     ))}
-//                 </div>
-
-//                 <h3 className="reason-card-title">
-//                     <span className="reason-user-icon">
-//                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-//                             <circle cx="12" cy="8" r="4" />
-//                             <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-//                         </svg>
-//                     </span>
-//                     {data.title}
-//                 </h3>
-
-//                 <p className={`reason-desc ${open ? "is-open" : ""}`}>
-//                     {open ? data.full : data.short}
-//                 </p>
-
-//                 <div className="reason-card-footer">
-//                     <button
-//                         type="button"
-//                         className="reason-read-more"
-//                         onClick={() => setOpen(!open)}
-//                     >
-//                         {open ? "Read Less" : "Read More"}
-//                         <span className="reason-read-more-arr">→</span>
-//                     </button>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-// function ReasonsSection() {
-//     return (
-//         <section className="reasons-section" id="our-case-studies">
-
-
-//             <div className="container">
-//                 <div className="partners-header1" style={{ textAlign: 'center' }}>
-//                     <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Case Studies
-//                     </div>
-//                 </div>
-//                 <h2 className="pg-cta-heading" style={{ textAlign: 'center' }}>  <em>Success Stories </em> That Drive Growth
-//                 </h2>
-//                 <p style={{ textAlign: "center", maxWidth: 1000, margin: "20px auto 60px", color: "#666", lineHeight: 1.8, fontSize: "0.96rem" }}>
-//                     Explore how we help businesses across industries improve online visibility, generate leads, and drive growth through customized website solutions.
-//                 </p>
-//                 <div className="cards-grid">
-//                     {REASONS_DATA.map((r, i) => (
-//                         <ReasonCard key={i} data={r} />
-//                     ))}
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// }
 
 // ── Portfolio Grid Data — replace img/link with your real ones ──
 const PORTFOLIO_GRID_ITEMS = [
@@ -1682,12 +1319,12 @@ function PortfolioSection() {
                     }}
                 >
                     {/* LEFT: eyebrow + heading + desc */}
-                    <div style={{ flex: "1 1 500px", textAlign: "left", width: "100%", maxWidth: '650px' }}>
+                    <div style={{ textAlign: "left", width: "100%", maxWidth: '650px' }}>
                         <div
                             className="partners-eyebrow"
                             style={{ marginBottom: isMobile ? "12px" : "20px", textAlign: "left" }}
                         >
-                            Our Portfolio
+                            Our Recent Work
                         </div>
 
                         <h2
@@ -1775,99 +1412,157 @@ function PortfolioSection() {
     );
 }
 
-
-// ── Industries We Cater To ──────────────────────────
-const INDUSTRIES_CATER_DATA = [
-    { img: "/img/landing-page/industries-1.webp", label: "Textile " },
-    { img: "/img/landing-page/industries-2.webp", label: "Manufacturing " },
-    { img: "/img/landing-page/industries-3.webp", label: "Healthcare " },
-    { img: "/img/landing-page/industries-4.webp", label: "Tourism & Hospitality" },
-    { img: "/img/landing-page/industries-5.webp", label: "Construction " },
-    { img: "/img/landing-page/industries-7.webp", label: "IT / IT Services" },
-    { img: "/img/landing-page/industries-6.webp", label: "Retail & E-Commerce" },
-    { img: "/img/landing-page/industries-8.webp", label: "Banking" },
-    { img: "/img/landing-page/industries-9.webp", label: "Financial & Insurance" },
-
-];
-
-function IndustriesCaterSection() {
-    const innerRef = useRef(null);
-    const offsetRef = useRef(0);
-    const pausedRef = useRef(false);
-    const rafRef = useRef(null);
-    const speed = 0.6; // px per frame
-
-    const doubled = [...INDUSTRIES_CATER_DATA, ...INDUSTRIES_CATER_DATA];
-
+function useCtaCanvas(canvasRef) {
     useEffect(() => {
-        const el = innerRef.current;
-        if (!el) return;
-        const singleWidth = el.scrollWidth / 2;
+        const canvas = canvasRef.current;
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        const ORANGE = "#ed8337";
+        let W, H, particles = [], raf;
 
-        const animate = () => {
-            if (!pausedRef.current) {
-                offsetRef.current += speed;
-                if (offsetRef.current >= singleWidth) offsetRef.current -= singleWidth;
-                el.style.transform = `translateX(-${offsetRef.current}px)`;
-            }
-            rafRef.current = requestAnimationFrame(animate);
+        function resize() {
+            W = canvas.width = canvas.parentElement.offsetWidth;
+            H = canvas.height = canvas.parentElement.offsetHeight;
+        }
+
+        function Particle() { this.reset(); }
+        Particle.prototype.reset = function () {
+            this.x = Math.random() * W;
+            this.y = Math.random() * H;
+            this.r = Math.random() * 2.2 + 0.6;
+            this.type = Math.random() < 0.55 ? "dot" : Math.random() < 0.5 ? "ring" : "plus";
+            this.speed = Math.random() * 0.35 + 0.08;
+            this.dir = Math.random() * Math.PI * 2;
+            this.alpha = Math.random() * 0.45 + 0.1;
+            this.pulse = Math.random() * Math.PI * 2;
+            this.pulseSpeed = Math.random() * 0.018 + 0.008;
+            this.size = Math.random() * 4 + 2;
         };
-        rafRef.current = requestAnimationFrame(animate);
-        return () => cancelAnimationFrame(rafRef.current);
+        Particle.prototype.update = function () {
+            this.x += Math.cos(this.dir) * this.speed;
+            this.y += Math.sin(this.dir) * this.speed;
+            this.pulse += this.pulseSpeed;
+            this.dir += (Math.random() - 0.5) * 0.015;
+            if (this.x < -20) this.x = W + 20;
+            if (this.x > W + 20) this.x = -20;
+            if (this.y < -20) this.y = H + 20;
+            if (this.y > H + 20) this.y = -20;
+        };
+        Particle.prototype.draw = function () {
+            const a = this.alpha * (0.7 + 0.3 * Math.sin(this.pulse));
+            ctx.save();
+            ctx.globalAlpha = a;
+            ctx.strokeStyle = ctx.fillStyle = ORANGE;
+            ctx.lineWidth = 1;
+            if (this.type === "dot") {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.r + Math.sin(this.pulse) * 0.4, 0, Math.PI * 2);
+                ctx.fill();
+            } else if (this.type === "ring") {
+                const rr = this.size * (0.9 + 0.15 * Math.sin(this.pulse));
+                ctx.beginPath(); ctx.arc(this.x, this.y, rr, 0, Math.PI * 2); ctx.stroke();
+            } else {
+                const s = this.size * (0.9 + 0.1 * Math.sin(this.pulse));
+                ctx.beginPath();
+                ctx.moveTo(this.x - s, this.y); ctx.lineTo(this.x + s, this.y);
+                ctx.moveTo(this.x, this.y - s); ctx.lineTo(this.x, this.y + s);
+                ctx.stroke();
+            }
+            ctx.restore();
+        };
+
+        function drawLines() {
+            const dots = particles.filter(p => p.type === "dot");
+            for (let i = 0; i < dots.length; i++) {
+                for (let j = i + 1; j < dots.length; j++) {
+                    const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 110) {
+                        ctx.save();
+                        ctx.globalAlpha = (1 - dist / 110) * 0.12;
+                        ctx.strokeStyle = ORANGE; ctx.lineWidth = 0.7;
+                        ctx.beginPath(); ctx.moveTo(dots[i].x, dots[i].y); ctx.lineTo(dots[j].x, dots[j].y); ctx.stroke();
+                        ctx.restore();
+                    }
+                }
+            }
+        }
+
+        function init() {
+            resize();
+            particles = [];
+            const count = Math.floor((W * H) / 9000);
+            for (let i = 0; i < Math.max(count, 28); i++) particles.push(new Particle());
+        }
+
+        function loop() {
+            ctx.clearRect(0, 0, W, H);
+            drawLines();
+            particles.forEach(p => { p.update(); p.draw(); });
+            raf = requestAnimationFrame(loop);
+        }
+
+        window.addEventListener("resize", resize);
+        init();
+        loop();
+
+        return () => { cancelAnimationFrame(raf); window.removeEventListener("resize", resize); };
     }, []);
+}
 
-    const nudge = (dir) => {
-        const el = innerRef.current;
-        if (!el) return;
-        const singleWidth = el.scrollWidth / 2;
-        const card = el.querySelector(".ind-cater-card");
-        const step = card ? card.offsetWidth + 20 : 280;
-
-        offsetRef.current += dir * step;
-        if (offsetRef.current >= singleWidth) offsetRef.current -= singleWidth;
-        if (offsetRef.current < 0) offsetRef.current += singleWidth;
-        el.style.transform = `translateX(-${offsetRef.current}px)`;
-    };
+function CallCTASection() {
+    const canvasRef = useRef(null);
+    useCtaCanvas(canvasRef);
 
     return (
-        <section className="ind-cater-section" id="industries">
-            <div className="ind-cater-inner">
-                {/* LEFT TEXT */}
-                <div className="ind-cater-left">
-                    <h2 className="ind-cater-heading">
-                        Industries <span>We Serve 
-</span> 
-                    </h2>
-                    <p className="ind-cater-desc">
-Website Development Solutions Built for Your Industry, Not a Generic Template                     </p>
+        <section className="call-cta-section">
+            <canvas ref={canvasRef} className="call-cta-particles" />
+
+            <div className="call-cta-inner">
+                <div className="partners-header1" style={{ textAlign: 'center' }}>
+                    <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>One Call Changes Everything</div>
                 </div>
 
-                {/* RIGHT AUTO-SLIDING CARDS */}
-                <div className="ind-cater-right">
-                    <div
-                        className="ind-cater-track"
-                        onMouseEnter={() => { pausedRef.current = true; }}
-                        onMouseLeave={() => { pausedRef.current = false; }}
-                        onTouchStart={() => { pausedRef.current = true; }}
-                        onTouchEnd={() => { pausedRef.current = false; }}
-                    >
-                        <div className="ind-cater-track-inner" ref={innerRef}>
-                            {doubled.map((item, i) => (
-                                <div className="ind-cater-card" key={i}>
-                                    <img src={item.img} alt={item.label} loading="lazy" />
-                                    <div className="ind-cater-overlay" />
-                                    <div className="ind-cater-pill">{item.label}</div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
+                <h2 className="call-cta-heading">
+                    Ready To Grow? <span>Give Us A Call.</span>
+                </h2>
 
-                    {/* NAV ARROWS */}
-                    <div className="ind-cater-nav">
-                        <button type="button" className="ind-cater-nav-btn" onClick={() => nudge(-1)} aria-label="Previous">‹</button>
-                        <button type="button" className="ind-cater-nav-btn" onClick={() => nudge(1)} aria-label="Next">›</button>
-                    </div>
-                </div>
+                <p className="call-cta-sub">
+                   A quick call is all it takes to get your project moving forward.
+                </p>
+
+                <a href="tel:+919677444048" className="call-cta-phone">
+                    <span className="call-cta-phone-icon">
+                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </span>
+                    <span className="call-cta-phone-number">
+                        <span className="tone-1">+91 </span>
+                        <span className="tone-2">96774</span>{" "}
+                        <span className="tone-3">44048</span>
+                    </span>
+                </a>
+
+               <div className="call-cta-btns">
+    <a href="tel:+919677444048" className="call-cta-btn-fill">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        Call Now
+    </a>
+    <a
+        href="https://wa.me/919677444048"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="call-cta-btn-outline"
+    >
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.79 14.13c-.24.68-1.19 1.25-1.94 1.41-.52.11-1.2.2-3.48-.75-2.92-1.21-4.8-4.17-4.95-4.36-.14-.19-1.19-1.58-1.19-3.02s.75-2.15 1.02-2.44c.24-.27.52-.34.7-.34h.5c.16 0 .38-.03.59.45.24.56.79 1.94.86 2.08.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.29.29-.12.57.16.28.73 1.2 1.57 1.95 1.08.96 1.99 1.26 2.27 1.4.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.06.12.06.68-.18 1.36z"/>
+        </svg>
+        WhatsApp Us
+    </a>
+</div>
             </div>
         </section>
     );
@@ -1875,45 +1570,20 @@ Website Development Solutions Built for Your Industry, Not a Generic Template   
 
 // ── Footer Section ────────────────────────────────────
 function FooterSection() {
-    const services = [
-        "Website Design",
-        "Static Website Development",
-        "Custom Website Development",
-        "WooCommerce Development",
-        "E-Commerce Development",
-        "Shopify Development",
-    ];
-
     return (
-        <footer className="pcs-footer">
-
-
+        <footer className="pcs-footer" id="contact">
             <div className="pcs-footer-inner">
                 {/* Column 1: Logo + Description */}
                 <div>
                     <div className="pcs-footer-logo-row">
                         <img src="/img/footer-logo.png" alt="PCS Logo" width="30%" />
-
                     </div>
                     <p className="pcs-footer-desc">
                         We are one of the fastest-growing full-service business solutions companies, delivering cutting-edge, result-driven strategies across digital marketing, technology, branding, and consulting to create the perfect blend of innovation and impact.
                     </p>
-
                 </div>
 
-                {/* Column 2: Our Services */}
-                <div>
-                    <h4 className="pcs-footer-heading">Our Services</h4>
-                    <ul className="pcs-footer-list">
-                        {services.map((s, i) => (
-                            // <li key={i}><a href="#">{s}</a></li>
-                            <li key={i}>{s}</li>
-
-                        ))}
-                    </ul>
-                </div>
-
-                {/* Column 3: Contact Info */}
+                {/* Column 2: Contact Info */}
                 <div>
                     <h4 className="pcs-footer-heading">Contact Info</h4>
                     <div className="pcs-footer-contact-item">
@@ -1955,13 +1625,19 @@ function FooterSection() {
                         </a>
                     </div>
                 </div>
+
+                {/* Column 3: Contact Form */}
+                <div className="pcs-footer-form-col" id="get-in-touch-form">
+                    <div className="hero-form-card">
+                        <p className="hero-form-title">Your Growth, <span>Our Mission.</span></p>
+                        <p className="hero-form-sub">Fill in your details — we'll get back within 24 hours.</p>
+                        <HeroContactForm />
+                    </div>
+                </div>
             </div>
-
-
         </footer>
     );
 }
-
 
 // ── Scroll-Triggered Stepper Popup Form ──
 const STEPPER_SERVICES = [
@@ -1971,193 +1647,8 @@ const STEPPER_SERVICES = [
     { key: "branding", icon: "💡", label: "Website Revamp & SEO" },
 ];
 
-function StepperPopupForm() {
-    const [visible, setVisible] = useState(false);
-    const [closed, setClosed] = useState(false);
-    const [step, setStep] = useState(1);
-    const [selectedService, setSelectedService] = useState(null);
-    const [form, setForm] = useState({ name: "", company: "", phone: "" });
-    const timerRef = useRef(null);
-    const triggeredRef = useRef(false);
 
-    useEffect(() => {
-        const onScroll = () => {
-            if (triggeredRef.current || closed) return;
-            if (!timerRef.current) {
-                timerRef.current = setTimeout(() => {
-                    if (!triggeredRef.current && !closed) {
-                        setVisible(true);
-                        triggeredRef.current = true;
-                    }
-                }, 3500);
-            }
-        };
-        window.addEventListener("scroll", onScroll, { passive: true });
-        return () => {
-            window.removeEventListener("scroll", onScroll);
-            if (timerRef.current) clearTimeout(timerRef.current);
-        };
-    }, [closed]);
-    const handleClose = () => {
-        setVisible(false);
-        setClosed(true);
-        if (timerRef.current) clearTimeout(timerRef.current);
-    };
-
-    const handleSelectService = (svc) => {
-        setSelectedService(svc);
-        setStep(2);
-    };
-
-    const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const templateParams = {
-            name: form.name,
-            company: form.company,
-            phone: form.phone,
-            email: form.email,
-            message: form.msg,
-            service: selectedService?.label || "",
-            url: window.location.href,
-        };
-        emailjs
-            .send("service_8xw6k3r", "template_jarui36", templateParams, "XWRnXi4hK2SvmRG3q")
-            .then(() => {
-                alert("Message Sent Successfully ✅");
-                setForm({ name: "", company: "", phone: "", email: "", msg: "" });
-                setSelectedService(null);
-                setStep(1);
-                handleClose();
-            })
-            .catch((err) => {
-                console.log(err);
-                alert("Failed to send ❌");
-            });
-    };
-    if (!visible) return null;
-
-    return (
-        <div className="stepper-popup-overlay" onClick={handleClose}>
-
-
-            <div className="stepper-popup-card" onClick={(e) => e.stopPropagation()}>
-                <button className="stepper-popup-close" onClick={handleClose}>✕</button>
-
-                <div className="stepper-popup-left">
-                    <div className="stepper-left-icon">📋</div>
-                    <div className="stepper-left-title">
-                        {step === 1 ? "Select Service" : "Your Details"}
-                    </div>
-                    <div className="stepper-left-desc">
-                        {step === 1
-                            ? "Please select a service for which you want to schedule an appointment"
-                            : "Almost done! Share your contact details so our team can reach you."}
-                    </div>
-                    <div>
-                        <div className="stepper-left-questions">Questions?</div>
-                        <div style={{ fontSize: ".8rem" }}>
-                            Call: <a href="tel:+919677444048">+91 96774 44048</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="stepper-popup-right">
-                    {step === 1 && (
-                        <>
-                            <div className="stepper-right-title">Service Selection</div>
-                            <div className="stepper-svc-list">
-                                {STEPPER_SERVICES.map((svc) => (
-                                    <div
-                                        key={svc.key}
-                                        className="stepper-svc-item"
-                                        onClick={() => handleSelectService(svc)}
-                                    >
-                                        {/* <span className="stepper-svc-icon">{svc.icon}</span> */}
-                                        {svc.label}
-                                    </div>
-                                ))}
-                            </div>
-                        </>
-                    )}
-
-                    {step === 2 && (
-                        <form onSubmit={handleSubmit}>
-                            <button type="button" className="stepper-back-btn" onClick={() => setStep(1)}>
-                                ← Back
-                            </button>
-
-                            <div className="stepper-form-row">
-                                <div className="stepper-form-field">
-                                    <label>Name</label>
-                                    <input
-                                        type="text" name="name" placeholder="Your Name"
-                                        value={form.name} onChange={handleChange} required
-                                    />
-                                </div>
-                                <div className="stepper-form-field">
-                                    <label>Phone Number</label>
-                                    <input
-                                        type="tel" name="phone" placeholder="Mobile Number"
-                                        value={form.phone} onChange={handleChange}
-                                        maxLength="10" pattern="[0-9]{10}" required
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="stepper-form-row">
-                                <div className="stepper-form-field">
-                                    <label>Email Address</label>
-                                    <input
-                                        type="email" name="email" placeholder="Email Address"
-                                        value={form.email} onChange={handleChange} required
-                                    />
-                                </div>
-                                <div className="stepper-form-field">
-                                    <label>Company Name</label>
-                                    <input
-                                        type="text" name="company" placeholder="Company Name"
-                                        value={form.company} onChange={handleChange} required
-                                    />
-                                </div>
-                            </div>
-
-                            <div className="stepper-form-field">
-                                <label>Service</label>
-                                <select
-                                    value={selectedService?.key || ""}
-                                    onChange={(e) => {
-                                        const svc = STEPPER_SERVICES.find(s => s.key === e.target.value);
-                                        setSelectedService(svc);
-                                    }}
-                                    required
-                                >
-                                    {STEPPER_SERVICES.map((svc) => (
-                                        <option key={svc.key} value={svc.key}>{svc.label}</option>
-                                    ))}
-                                </select>
-                            </div>
-
-                            <div className="stepper-form-field">
-                                <label>Message</label>
-                                <textarea
-                                    name="msg" placeholder="Your Message"
-                                    value={form.msg} onChange={handleChange}
-                                    rows="3"
-                                />
-                            </div>
-
-                            <button type="submit" className="stepper-submit-btn">Submit</button>
-                        </form>
-                    )}
-                </div>
-            </div>
-        </div>
-    );
-}
 // ── Page Export ───────────────────────────────────────
-
 export default function DigitalMarketingNewPage() {
     const [formOpen, setFormOpen] = useState(false);
 
@@ -2167,28 +1658,20 @@ export default function DigitalMarketingNewPage() {
             description="Break away from ordinary business websites. Priyam Consultancy Services develops next-generation, SEO-optimized websites that help Coimbatore brands stand out."
         >
             <SEOHead />
-                    <GlobalStyles />
-
+            <GlobalStyles />
             <SiteHeader />
             <HeroSection />
             <ClientLogosMarquee />
             <TrustedClientsSection />
             <OurServicesSection />
-            {/* <PortfolioSection onOpenForm={() => setFormOpen(true)} /> */}
             <PortfolioSection />
+            <BuildTogetherCTASection />
             <TechnologiesSection />
-            {/* <ReasonsSection /> */}
-            {/* <CTASplitSection /> */}
-            <BuildTogetherCTASection />           
-
             <ModernFeaturesSection />
- <IndustriesCaterSection />
             <TestimonialSlider />
-            {/* <MilestonesCTA /> */}
             <FAQSection />
+            <CallCTASection />
             <FooterSection />
-            <FormPopupModal open={formOpen} onClose={() => setFormOpen(false)} />
-            <StepperPopupForm />
         </Layout>
     );
 }
