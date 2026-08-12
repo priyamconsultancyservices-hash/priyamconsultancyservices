@@ -334,8 +334,74 @@ function HeroSection() {
     );
 }
 
+// ── Custom Service Dropdown ────────────────────────────
+const SERVICE_OPTIONS = [
+    "Website Design",
+    "Static Website Development",
+    "Custom Website Development",
+    "WooCommerce Development",
+    "Custom E-Commerce Development",
+    "Shopify Development",
+    "Other",
+];
+
+function ServiceDropdown({ value, onChange }) {
+    const [open, setOpen] = useState(false);
+    const wrapRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (wrapRef.current && !wrapRef.current.contains(e.target)) {
+                setOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    const selectOption = (opt) => {
+        onChange({ target: { name: "service", value: opt } });
+        setOpen(false);
+    };
+
+    return (
+        <div className="svc-dd-wrap" ref={wrapRef}>
+            <div
+                className={`svc-dd-control ${open ? "open" : ""}`}
+                onClick={() => setOpen((o) => !o)}
+            >
+                <span className={value ? "svc-dd-value" : "svc-dd-placeholder"}>
+                    {value || "Select a Service"}
+                </span>
+                <span className="svc-dd-arrow">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </span>
+            </div>
+
+            {open && (
+                <ul className="svc-dd-menu">
+                    {SERVICE_OPTIONS.map((opt) => (
+                        <li
+                            key={opt}
+                            className={`svc-dd-item ${value === opt ? "active" : ""}`}
+                            onClick={() => selectOption(opt)}
+                        >
+                            {opt}
+                        </li>
+                    ))}
+                </ul>
+            )}
+
+            {/* hidden input keeps form.service in sync + enables native required validation */}
+            <input type="hidden" name="service" value={value} required />
+        </div>
+    );
+}
+
 function HeroContactForm() {
-    const [form, setForm] = useState({ name: "", company: "", phone: "", email: "", msg: "" });
+    const [form, setForm] = useState({ name: "", company: "", phone: "", email: "", service: "", msg: "" });
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -349,6 +415,7 @@ function HeroContactForm() {
             email: form.email,
             phone: form.phone,
             company: form.company,
+            service: form.service,
             message: form.msg,
             url: window.location.href,
         };
@@ -362,7 +429,7 @@ function HeroContactForm() {
             )
             .then(() => {
                 alert("Message Sent Successfully ✅");
-                setForm({ name: "", email: "", phone: "", company: "", msg: "" });
+                setForm({ name: "", email: "", phone: "", company: "", service: "", msg: "" });
             })
             .catch((error) => {
                 console.log(error);
@@ -424,7 +491,17 @@ function HeroContactForm() {
                 </div>
             </div>
 
-            {/* Row 3: Message (full width) */}
+            {/* Row 3: Service (full width row, custom dropdown) */}
+            <div className="hero-form-row">
+                <div className="hero-form-field">
+                    <ServiceDropdown
+                        value={form.service}
+                        onChange={handleChange}
+                    />
+                </div>
+            </div>
+
+            {/* Row 4: Message (full width) */}
             <div className="hero-form-row">
                 <div className="hero-form-field">
                     <textarea
@@ -1233,7 +1310,6 @@ function OurServicesSection() {
                 {services.map((svc, i) => (
                     <div
                         key={i}
-                        s/* REMOVE height: "90%" and add these instead: */
                         style={{
                             background: "#fff",
                             borderRadius: 24,
@@ -1242,7 +1318,6 @@ function OurServicesSection() {
                             borderTop: "5px solid #ed8337",
                             display: "flex",
                             flexDirection: "column",
-                            // REMOVE height: "90%" entirely
                             transition: "transform 0.35s ease, box-shadow 0.35s ease",
                         }}
                         onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-8px)"; e.currentTarget.style.boxShadow = "0 18px 40px rgba(0,0,0,0.12)"; }}
@@ -1272,14 +1347,6 @@ function OurServicesSection() {
                                 Call <span>→</span>
                             </a>
                         </div>
-                        {/* <a
-              href={svc.href}
-              style={{ display: "inline-block", width: '42%', fontSize: '14px', textAlign: "center", padding: "10px 20px", background: "#004168", color: "#fff", textDecoration: "none", borderRadius: 50, fontWeight: 600, fontFamily: "'Poppins', sans-serif", transition: "background 0.3s" }}
-              onMouseEnter={e => { e.currentTarget.style.background = "#ed8337"; }}
-              onMouseLeave={e => { e.currentTarget.style.background = "#004168"; }}
-            >
-              Learn More
-            </a> */}
                     </div>
                 ))}
             </div>
