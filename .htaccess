@@ -1,4 +1,4 @@
-# priyamconsultancy.com - URL Redirects
+<!-- # priyamconsultancy.com - URL Redirects
 # Generated from redirect mapping sheet
 
 # --- 301 Permanent Redirects ---
@@ -26,7 +26,7 @@ Redirect 301 /blog/recruitment-and-selection-strategies/ https://www.priyamconsu
 Redirect 301 /microsoft-apps-partners/ https://www.priyamconsultancy.com/microsoft-app/
 Redirect 301 /case-studies/zky/ https://www.priyamconsultancy.com/case-studies/zky-2.netlify.app
 Redirect 301 /sterlo-care-partners/ https://www.priyamconsultancy.com/sterlo-care/
-Redirect 301 /blog/ https://www.priyamconsultancy.com/blogs/
+<!-- Redirect 301 /blog/ https://www.priyamconsultancy.com/blogs/ -->
 Redirect 301 /odoo-partners/ https://www.priyamconsultancy.com/odoo/
 Redirect 301 /careers/hr-executive/ https://www.priyamconsultancy.com/career/hr-executive/
 Redirect 301 /careers/content-writer-intern/ https://www.priyamconsultancy.com/career/content-writer-intern/
@@ -38,4 +38,4 @@ Redirect gone /Digital
 # --- PENDING - NOT INCLUDED (needs clarification, see notes below) ---
 # 1. /digital-marketing-agency-in-chennai/  -> old URL missing
 # 2. /digital-marketing-agency-chennai/     -> old URL missing
-# 3. /search-engine-optimization/ conflict: /seo  vs  /search-engine-optimization/page/2/
+# 3. /search-engine-optimization/ conflict: /seo  vs  /search-engine-optimization/page/2/ -->
