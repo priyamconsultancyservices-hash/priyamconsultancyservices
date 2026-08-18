@@ -273,7 +273,7 @@ function SiteHeader() {
                     </a>
 
                     <a href="#contact" className="pcs-header-enquire-btn">
-                        Build Your Website Today
+                        Build Your Website
                         <span>→</span>
                     </a>
                 </div>
@@ -649,7 +649,7 @@ function BuildTogetherCTASection() {
                         display: "flex", flexDirection: "column",
                         alignItems: "start", gap: "0.85rem", flexShrink: 0, marginTop: "1.5rem",
                     }}>
-                        <a href="#about" className="pg-form-btn">
+                        <a href="#get-in-touch-form" className="pg-form-btn">
                             Book a Free Consultation
                             <span className="pg-form-btn-arr">→</span>
                         </a>
@@ -1609,10 +1609,14 @@ We'll recommend the right website type, features and approximate investment base
                 </a>
 
                <div className="call-cta-btns">
-    <a href="tel:+919677444048" className="call-cta-btn-fill">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-        </svg>
+    <a href="#get-in-touch-form" className="call-cta-btn-fill">
+       <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+  <path d="M15 2v5h5" />
+  <path d="M10 9H8" />
+  <path d="M16 13H8" />
+  <path d="M16 17H8" />
+</svg>
        Get Your Website Started Today
     </a>
     <a
