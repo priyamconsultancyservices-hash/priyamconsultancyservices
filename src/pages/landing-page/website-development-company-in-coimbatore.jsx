@@ -218,12 +218,7 @@ const GlobalStyles = () => (
     display: none;
 } 
 
- .sb-quote {
-    display: none !important;
-     }
-    .sb-wrap  {
-    top:50%!important;
-    }
+
 `}</style>
 );
 // Used by ServicesSlider (.svs-icon-wrap)
@@ -278,7 +273,7 @@ function SiteHeader() {
                     </a>
 
                     <a href="#contact" className="pcs-header-enquire-btn">
-                        Enquire Now
+                        Build Your Website Today
                         <span>→</span>
                     </a>
                 </div>
@@ -310,7 +305,7 @@ function HeroSection() {
         Call Now — Free Consultation
     </a>
     <a href="#get-in-touch-form" className="hero-cta-outline">
-        Get an Instant Estimate
+       Get a Custom Website Quote 
     </a>
 </div>
 
@@ -1297,11 +1292,11 @@ function OurServicesSection() {
     return (
         <section id="service" style={{ padding: "70px 5% 5rem", background: '#fff' }} >
             <div className="partners-header1" style={{ textAlign: 'center' }}>
-                <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our  Service</div>
+                <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>What We  Build</div>
             </div>
 
             <h2 className="tech-title svc-main-heading">
-                <span>Website Development Services</span> That Fit Your Business Goals
+                <span>What Kind of Website Does </span> Your Business Need?
             </h2>
             <p style={{ textAlign: "center", maxWidth: 1200, margin: "20px auto 60px", color: "#666", lineHeight: 1.8, fontSize: "0.96rem" }}>
                 Every business is different. Every website we make is different too. We offer services, each one designed to fit your budget, timeline and growth targets.
@@ -1441,7 +1436,7 @@ function PortfolioSection() {
                             fontSize: isMobile ? "0.9rem" : undefined,
                         }}
                     >
-                        View More
+                        Launch Your Website 
                         <span className="pf-grid-viewmore-arr">→</span>
                     </a>
                 </div>
@@ -1587,15 +1582,17 @@ function CallCTASection() {
 
             <div className="call-cta-inner">
                 <div className="partners-header1" style={{ textAlign: 'center' }}>
-                    <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>One Call Changes Everything</div>
+                    <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Not Sure Which Website You Need? </div>
                 </div>
 
                 <h2 className="call-cta-heading">
-                    Ready To Grow? <span>Give Us A Call.</span>
+                  Tell Us About  <span>Your Business
+</span>
                 </h2>
 
                 <p className="call-cta-sub">
-                   A quick call is all it takes to get your project moving forward.
+
+We'll recommend the right website type, features and approximate investment based on your actual requirements.
                 </p>
 
                 <a href="tel:+919677444048" className="call-cta-phone">
@@ -1616,7 +1613,7 @@ function CallCTASection() {
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
         </svg>
-        Call Now
+       Get Your Website Started Today
     </a>
     <a
         href="https://wa.me/919677444048"
