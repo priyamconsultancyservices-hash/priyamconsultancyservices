@@ -13,6 +13,13 @@ Redirect 301 /case-studies/feralroots/ https://www.priyamconsultancy.com/case-st
 Redirect 301 /social-media/ https://www.priyamconsultancy.com/social-media-marketing/
 Redirect 301 /business-registration/ https://www.priyamconsultancy.com/business-registrations/
 
+
+Redirect 301 /seo/ https://www.priyamconsultancy.com/search-engine-optimization/
+Redirect 301 /search-engine-optimization/page/2/  https://www.priyamconsultancy.com/search-engine-optimization/
+
+
+
+
 Redirect 301 /blog/tag/digital-marketing-company-coimbatore/feed/page/2/ https://www.priyamconsultancy.com/blog/how-to-choose-digital-marketing-company-in-coimbatore/
 
 Redirect 301 /career/website-developer/ https://www.priyamconsultancy.com/careers/website-developer/
@@ -28,12 +35,13 @@ Redirect 301 /career/hr-executive/ https://www.priyamconsultancy.com/careers/hr-
 Redirect 301 /career/content-writer-intern/ https://www.priyamconsultancy.com/careers/content-writer-intern/
 
 
-Redirect 301 /blog/recruitment-and-selection-strategies/ https://www.priyamconsultancy.com/blogs/recruitment-and-selection-strategies/
-Redirect 301 /microsoft-apps/ https://www.priyamconsultancy.com/microsoft-apps-partners/
+Redirect 301 /blogs/recruitment-and-selection-strategies/ https://www.priyamconsultancy.com/blog/recruitment-and-selection-strategies/
+Redirect 301 /microsoft-app/ https://www.priyamconsultancy.com/microsoft-apps-partners/#
+
 
 Redirect 301 /case-studies/zky-2.netlify.app/ https://www.priyamconsultancy.com/case-studies/zky
 Redirect 301 /sterlo-care/ https://www.priyamconsultancy.com/sterlo-care-partners/
-<!-- Redirect 301 /blog/ https://www.priyamconsultancy.com/blogs/ -->
+Redirect 301 /blogs/ https://www.priyamconsultancy.com/blog/
 Redirect 301 /odoo/ https://www.priyamconsultancy.com/odoo-partners/
 
 
