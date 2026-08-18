@@ -64,18 +64,18 @@ const JSON_LD_BREADCRUMB = {
         {
             "@type": "ListItem",
             position: 1,
-            item: { "@id": "https://priyamconsultancy.com/", name: "Home" },
+            item: { "@id": "https://www.priyamconsultancy.com/", name: "Home" },
         },
         {
             "@type": "ListItem",
             position: 2,
-            item: { "@id": "https://priyamconsultancy.com/article/", name: "Articles" },
+            item: { "@id": "https://www.priyamconsultancy.com/article/", name: "Articles" },
         },
         {
             "@type": "ListItem",
             position: 3,
             item: {
-                "@id": "https://priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
+                "@id": "https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
                 name: "SEO Strategies for Small Businesses in India",
             },
         },
@@ -85,8 +85,8 @@ const JSON_LD_BREADCRUMB = {
 const JSON_LD_WEBPAGE = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
-    url: "https://priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
+    "@id": "https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
+    url: "https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
     name: "SEO Strategies for Small Businesses in India",
     description:
         "Learn proven SEO strategies for small businesses in India to improve search rankings, attract qualified traffic, generate leads, and grow your business online with practical optimization techniques.",
@@ -94,12 +94,12 @@ const JSON_LD_WEBPAGE = {
     isPartOf: {
         "@type": "WebSite",
         name: "Priyam Consultancy Services",
-        url: "https://priyamconsultancy.com/",
+        url: "https://www.priyamconsultancy.com/",
     },
     publisher: {
         "@type": "Organization",
         name: "Priyam Consultancy Services",
-        logo: { "@type": "ImageObject", url: "https://priyamconsultancy.com/img/priyam-consultancy-logo.png" },
+        logo: { "@type": "ImageObject", url: "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png" },
     },
 };
 
@@ -107,8 +107,8 @@ const JSON_LD_ORGANIZATION = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Priyam Consultancy Services",
-    url: "https://priyamconsultancy.com/",
-    logo: "https://priyamconsultancy.com/img/priyam-consultancy-logo.png",
+    url: "https://www.priyamconsultancy.com/",
+    logo: "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
     contactPoint: [
         {
             "@type": "ContactPoint",
@@ -135,10 +135,10 @@ const JSON_LD_ARTICLE = {
     publisher: {
         "@type": "Organization",
         name: "Priyam Consultancy Services",
-        logo: { "@type": "ImageObject", url: "https://priyamconsultancy.com/img/priyam-consultancy-logo.png" },
+        logo: { "@type": "ImageObject", url: "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png" },
     },
     dateModified: "2026-08-04",
-    mainEntityOfPage: "https://priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
+    mainEntityOfPage: "https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
 };
 
 // ════════════════════════════════════════════
@@ -222,16 +222,36 @@ function SeoSmallBusinessIndiaGuide() {
             description="Discover practical SEO tips for small businesses in India, including local SEO, keyword research, technical SEO, and Google Business Profile optimization."
         >
             <Head>
-                <link rel="canonical" href="https://priyamconsultancy.com/article/seo-strategies-for-small-businesses-india" />
+                <title>SEO for Small Businesses in India: 10 Proven Strategies </title>
+                <meta
+                    name="description"
+                    content="Discover practical SEO tips for small businesses in India, including local SEO, keyword research, technical SEO, and Google Business Profile optimization."
+                />
+                <meta
+                    name="keywords"
+                    content="SEO for Small Businesses ,technical SEO,local SEO, SEO  Strategies,"
+                />
+                <link rel="canonical" href="https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india/" />
+
+                <meta property="og:type" content="article" />
                 <meta property="og:title" content="SEO for Small Businesses in India: 10 Proven Strategies" />
                 <meta
                     property="og:description"
                     content="Discover practical SEO tips for small businesses in India, including local SEO, keyword research, technical SEO, and Google Business Profile optimization."
                 />
-                <meta property="og:url" content="https://priyamconsultancy.com/article/seo-strategies-for-small-businesses-india" />
+                <meta property="og:url" content="https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india/" />
                 <meta property="og:site_name" content="Priyam Consultancy Services" />
-                <script type="application/ld+json">{JSON.stringify(JSON_LD_ARTICLE)}</script>
+                <meta property="og:image" content="https://www.priyamconsultancy.com/img/article/seo-for-small-business-in-india.webp" />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="SEO for Small Businesses in India: 10 Proven Strategies" />
+                <meta
+                    name="twitter:description"
+                    content="Discover practical SEO tips for small businesses in India, including local SEO, keyword research, technical SEO, and Google Business Profile optimization."
+                />
+                <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/article/seo-for-small-business-in-india.webp" />
             </Head>
+
             {/* Breadcrumb Schema */}
             <script
                 type="application/ld+json"
@@ -374,7 +394,7 @@ function SeoSmallBusinessIndiaGuide() {
 
         .tseo-conclusion-box{ background:#FFF0E6; border-radius:14px; padding:26px 28px; }
 
-        .tseo-cta-banner{ background:linear-gradient(120deg,#ED8337,#0D1F3C 110%); color:#FFFDFB; border-radius:14px; padding:36px 34px; margin:48px 0; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+        .tseo-cta-banner{ background:linear-gradient(120deg, #004168, #0D1F3C 110%); color:#FFFDFB; border-radius:14px; padding:36px 34px; margin:48px 0; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
         .tseo-cta-banner h3{ color:#fff; font-size:22px; margin-bottom:8px;}
         .tseo-cta-banner p{ color:#D9E6DE; font-size:14.5px; margin:0; max-width:420px;}
         .tseo-cta-btn{ background:#ED8337; color:#2A1000; font-weight:700; padding:13px 24px; border-radius:10px; font-size:14px; white-space:nowrap; letter-spacing:.01em; transition:transform .15s ease; display:inline-block;}
@@ -475,16 +495,6 @@ function SeoSmallBusinessIndiaGuide() {
                                 Picture this. A potential customer in your city opens Google and types exactly what your business offers. Your competitor's website appears. Yours does not. That customer calls your competitor, pays your competitor, and never even knows you exist.
 
                             </p>
-                            {/* <div className="tseo-meta-row">
-                                <div className="tseo-author">
-                                    <div className="tseo-avatar">RM</div>
-                                    Rhea Menon, Senior SEO Strategist
-                                </div>
-                                <span className="tseo-meta-dot" />
-                                <span>Last updated: August 4, 2026</span>
-                                <span className="tseo-meta-dot" />
-                                <span>Reviewed by SEO Editorial Team</span>
-                            </div> */}
                             <div className="tseo-hero-img" style={{ padding: 0 }}>
                                 <img src="/img/article/seo-for-small-business-in-india.webp" />
                             </div>
@@ -686,29 +696,15 @@ function SeoSmallBusinessIndiaGuide() {
 
                         <div className="tseo-cta-banner" id="cta">
                             <div>
-                                <h3>Not sure where to start?</h3>
+                                <h3>Ready to Start Ranking on Google?</h3>
                                 <p>
-                                    Priyam Consultancy Services offers a free consultation for website SEO analysis — no jargon, no
-                                    pressure. We'll tell you exactly what it would take to start ranking.
+                                   Priyam Consultancy Services offers a free SEO consultation — no pressure. We'll review your website and tell you exactly what it takes to rank higher.
                                 </p>
                             </div>
                             <Link className="tseo-cta-btn" to="/contact-us">
                                 Get a Free SEO Consultation →
                             </Link>
                         </div>
-
-                        {/* <div className="tseo-author-bio">
-                            <div className="tseo-avatar">RM</div>
-                            <div>
-                                <h4>Rhea Menon</h4>
-                                <div className="role">Senior SEO Strategist, Priyam Consultancy Services</div>
-                                <p>
-                                    Rhea leads SEO programs for small and mid-market clients at Priyam Consultancy Services,
-                                    specialising in local SEO, keyword strategy, and content that ranks. She holds certifications in
-                                    Google Analytics and Search Console, and contributes regularly to the PCS Resource Center.
-                                </p>
-                            </div>
-                        </div> */}
                     </article>
                 </main>
 
@@ -725,6 +721,17 @@ function SeoSmallBusinessIndiaGuide() {
                         </div>
                     </div>
 
+                    <div className="tseo-rail-card tseo-rail-cta">
+                        <h4>Not Sure What Your Business Needs?</h4>
+                        <p>
+                          Get a free consultation and a custom roadmap from our team at Priyam Consultancy Services — no commitment required.
+                        </p>
+                        <Link className="tseo-cta-btn" to="/contact-us">
+                          Talk to Our Team 
+                        </Link>
+                        <div className="trust">20+ Industries Served</div>
+                    </div>
+                    
                     <div className="tseo-rail-card">
                         <div className="tseo-rail-title">Related Blogs</div>
                         {relatedLoading && <p className="tseo-rail-status">Loading...</p>}
@@ -756,17 +763,6 @@ function SeoSmallBusinessIndiaGuide() {
                         ))}
                     </div>
 
-                    <div className="tseo-rail-card tseo-rail-cta">
-                        <h4>Need professional SEO services?</h4>
-                        <p>
-                            Get a free SEO consultation and a custom roadmap from our team at Priyam Consultancy Services — no
-                            commitment required.
-                        </p>
-                        <Link className="tseo-cta-btn" to="/contact-us">
-                            Get a Free SEO Consultation
-                        </Link>
-                        <div className="trust">Trusted by 200+ growth teams · Coimbatore</div>
-                    </div>
                 </aside>
             </div>
         </Layout>
