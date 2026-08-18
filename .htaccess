@@ -1,35 +1,41 @@
-<!-- # priyamconsultancy.com - URL Redirects
+# priyamconsultancy.com - URL Redirects
 # Generated from redirect mapping sheet
 
 # --- 301 Permanent Redirects ---
-Redirect 301 /case-studies/abb/ https://www.priyamconsultancy.com/case-studies/abbmc/
-Redirect 301 /sterlo-build-partners/ https://www.priyamconsultancy.com/sterlo-build/
-Redirect 301 /retail-ecommerce/ https://www.priyamconsultancy.com/retail-and-e-commerce/
-Redirect 301 /digital-marketing/ https://www.priyamconsultancy.com/tag/digital-marketing/
-Redirect 301 /digital-marketing-company-in-coimbatore/ https://www.priyamconsultancy.com/landing-page/digital-marketing-company-in-coimbatore/
-Redirect 301 /contact-us/ https://www.priyamconsultancy.com/contact
-Redirect 301 /performance-marketing/ https://www.priyamconsultancy.com/ppc-marketing/
-Redirect 301 /case-studies/feral-roots/ https://www.priyamconsultancy.com/case-studies/feralroots/
-Redirect 301 /social-media-marketing/ https://www.priyamconsultancy.com/social-media
-Redirect 301 /business-registrations/ https://www.priyamconsultancy.com/business-registration
-Redirect 301 /blog/how-to-choose-digital-marketing-company-in-coimbatore/ https://www.priyamconsultancy.com/blog/tag/digital-marketing-company-coimbatore/feed/page/2/
-Redirect 301 /careers/website-developer/ https://www.priyamconsultancy.com/career/website-developer/
-Redirect 301 /careers/web-developer-intern/ https://www.priyamconsultancy.com/career/web-developer-intern/
-Redirect 301 /careers/digital-marketing-analyst/ https://www.priyamconsultancy.com/career/digital-marketing-analyst/
-Redirect 301 /careers/content-writer/ https://www.priyamconsultancy.com/career/content-writer/
-Redirect 301 /careers/graphic-designer/ https://www.priyamconsultancy.com/career/graphic-designer/
-Redirect 301 /careers/digital-marketing-intern/ https://www.priyamconsultancy.com/career/digital-marketing-intern/
-Redirect 301 /careers/video-editor/ https://www.priyamconsultancy.com/career/video-editor/
-Redirect 301 /careers/hr-executive-intern/ https://www.priyamconsultancy.com/career/hr-executive-intern/
-Redirect 301 /careers/video-editor-intern/ https://www.priyamconsultancy.com/career/video-editor-intern/
+Redirect 301 /case-studies/abbmc/ https://www.priyamconsultancy.com/case-studies/abb/
+Redirect 301 /sterlo-build/ https://www.priyamconsultancy.com/sterlo-build-partners/
+Redirect 301 /retail-and-e-commerce/ https://www.priyamconsultancy.com/retail-ecommerce/
+Redirect 301 /tag/digital-marketing/ https://www.priyamconsultancy.com/digital-marketing/
+Redirect 301 /landing-page/digital-marketing-company-in-coimbatore/ https://www.priyamconsultancy.com/digital-marketing-company-in-coimbatore/
+Redirect 301 /contact/ https://www.priyamconsultancy.com/contact-us/
+Redirect 301 /ppc-marketing/ https://www.priyamconsultancy.com/performance-marketing/
+Redirect 301 /case-studies/feralroots/ https://www.priyamconsultancy.com/case-studies/feral-roots/
+Redirect 301 /social-media/ https://www.priyamconsultancy.com/social-media-marketing/
+Redirect 301 /business-registration/ https://www.priyamconsultancy.com/business-registrations/
+
+Redirect 301 /blog/tag/digital-marketing-company-coimbatore/feed/page/2/ https://www.priyamconsultancy.com/blog/how-to-choose-digital-marketing-company-in-coimbatore/
+
+Redirect 301 /career/website-developer/ https://www.priyamconsultancy.com/careers/website-developer/
+Redirect 301 /career/web-developer-intern/ https://www.priyamconsultancy.com/careers/web-developer-intern/
+Redirect 301 /career/digital-marketing-analyst/ https://www.priyamconsultancy.com/careers/digital-marketing-analyst/
+Redirect 301 /career/content-writer/ https://www.priyamconsultancy.com/careers/content-writer/
+Redirect 301 /career/graphic-designer/ https://www.priyamconsultancy.com/careers/graphic-designer/
+Redirect 301 /career/digital-marketing-intern/ https://www.priyamconsultancy.com/careers/digital-marketing-intern/
+Redirect 301 /career/video-editor/ https://www.priyamconsultancy.com/careers/video-editor/
+Redirect 301 /career/hr-executive-intern/ https://www.priyamconsultancy.com/careers/hr-executive-intern/
+Redirect 301 /career/video-editor-intern/ https://www.priyamconsultancy.com/careers/video-editor-intern/
+Redirect 301 /career/hr-executive/ https://www.priyamconsultancy.com/careers/hr-executive/
+Redirect 301 /career/content-writer-intern/ https://www.priyamconsultancy.com/careers/content-writer-intern/
+
+
 Redirect 301 /blog/recruitment-and-selection-strategies/ https://www.priyamconsultancy.com/blogs/recruitment-and-selection-strategies/
-Redirect 301 /microsoft-apps-partners/ https://www.priyamconsultancy.com/microsoft-app/
-Redirect 301 /case-studies/zky/ https://www.priyamconsultancy.com/case-studies/zky-2.netlify.app
-Redirect 301 /sterlo-care-partners/ https://www.priyamconsultancy.com/sterlo-care/
+Redirect 301 /microsoft-apps/ https://www.priyamconsultancy.com/microsoft-apps-partners/
+
+Redirect 301 /case-studies/zky-2.netlify.app/ https://www.priyamconsultancy.com/case-studies/zky
+Redirect 301 /sterlo-care/ https://www.priyamconsultancy.com/sterlo-care-partners/
 <!-- Redirect 301 /blog/ https://www.priyamconsultancy.com/blogs/ -->
-Redirect 301 /odoo-partners/ https://www.priyamconsultancy.com/odoo/
-Redirect 301 /careers/hr-executive/ https://www.priyamconsultancy.com/career/hr-executive/
-Redirect 301 /careers/content-writer-intern/ https://www.priyamconsultancy.com/career/content-writer-intern/
+Redirect 301 /odoo/ https://www.priyamconsultancy.com/odoo-partners/
+
 
 # --- 410 Gone (permanently removed pages, no redirect) ---
 Redirect gone /email-marketing/
@@ -38,4 +44,4 @@ Redirect gone /Digital
 # --- PENDING - NOT INCLUDED (needs clarification, see notes below) ---
 # 1. /digital-marketing-agency-in-chennai/  -> old URL missing
 # 2. /digital-marketing-agency-chennai/     -> old URL missing
-# 3. /search-engine-optimization/ conflict: /seo  vs  /search-engine-optimization/page/2/ -->
+# 3. /search-engine-optimization/ conflict: /seo  vs  /search-engine-optimization/page/2/
