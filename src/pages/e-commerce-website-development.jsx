@@ -8,7 +8,7 @@ import Head from '@docusaurus/Head';
 
 
 function SEOHead() {
-  const pageUrl = "https://www.priyamconsultancy.com/e-commerce-website-development";
+  const pageUrl = "https://www.priyamconsultancy.com/e-commerce-website-development/";
   const imageUrl = "https://www.priyamconsultancy.com/img/static-website.png";
 
   return (
@@ -17,13 +17,13 @@ function SEOHead() {
       <title>Ecommerce Website Development Company in Coimbatore   </title>
       <meta name="description" content="Ecommerce website development services to build secure, and user-friendly online stores that boost sales, improve customer experience. " />
       <meta name="keywords" content="ecommerce website development, ecommerce website, e commerce website company in coimbatore, B2B ecommerce website, ecommerce website development agency, custom ecommerce website development, custom ecommerce website development india, ecommerce SEO services, ecommerce website maintenance services" />
-      <link rel="canonical" href="https://www.priyamconsultancy.com/e-commerce-website-development" />
+      <link rel="canonical" href="https://www.priyamconsultancy.com/e-commerce-website-development/" />
 
       {/* ── Open Graph ── */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content="Ecommerce Website Development Company in Coimbatore   " />
       <meta property="og:description" content="Ecommerce website development services to build secure, and user-friendly online stores that boost sales, improve customer experience. " />
-      <meta property="og:url" content="https://www.priyamconsultancy.com/e-commerce-website-development" />
+      <meta property="og:url" content="https://www.priyamconsultancy.com/e-commerce-website-development/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
 

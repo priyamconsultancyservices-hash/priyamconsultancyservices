@@ -12,14 +12,27 @@ Redirect 301 /ppc-marketing/ https://www.priyamconsultancy.com/performance-marke
 Redirect 301 /case-studies/feralroots/ https://www.priyamconsultancy.com/case-studies/feral-roots/
 Redirect 301 /social-media/ https://www.priyamconsultancy.com/social-media-marketing/
 Redirect 301 /business-registration/ https://www.priyamconsultancy.com/business-registrations/
-
-
 Redirect 301 /seo/ https://www.priyamconsultancy.com/search-engine-optimization/
 Redirect 301 /search-engine-optimization/page/2/  https://www.priyamconsultancy.com/search-engine-optimization/
-
-
-
-
+Redirect 301 /search-engine-optimization/page/4/ https://www.priyamconsultancy.com/search-engine-optimization/
+Redirect 301 /search-engine-optimization/page/3/ https://www.priyamconsultancy.com/search-engine-optimization/
+Redirect 301 /graphic-design/page/3/ https://www.priyamconsultancy.com/graphic-design/
+Redirect 301 /graphic-design/page/2/ https://www.priyamconsultancy.com/graphic-design/
+Redirect 301 /ppc-marketing/page/2/ https://www.priyamconsultancy.com/performance-marketing/
+Redirect 301 /ppc-marketing/page/3/ https://www.priyamconsultancy.com/performance-marketing/
+Redirect 301 /ppc-marketing/page/4/ https://www.priyamconsultancy.com/performance-marketing/
+Redirect 301 /content-marketing/page/3/ https://www.priyamconsultancy.com/content-marketing/
+Redirect 301 /hr-strategy-and-policy-development/page/3/ https://www.priyamconsultancy.com/hr-strategy-and-policy-development/
+Redirect 301 /hr-strategy-and-policy-development/page/2/ https://www.priyamconsultancy.com/hr-strategy-and-policy-development/
+Redirect 301 /hr-strategy-and-policy-development/page/3/ https://www.priyamconsultancy.com/hr-strategy-and-policy-development/
+Redirect 301 /hr-services/page/2/ https://www.priyamconsultancy.com/hr-services/
+Redirect 301 /recruitment-services/page/3/ https://www.priyamconsultancy.com/recruitment-services/
+Redirect 301 /recruitment-services/page/2/ https://www.priyamconsultancy.com/recruitment-services/
+Redirect 301 /content-marketing/page/4/ https://www.priyamconsultancy.com/content-marketing/
+Redirect 301 /payroll-management/page/2/ https://www.priyamconsultancy.com/payroll-management/
+Redirect 301 /payroll-management/page/3/ https://www.priyamconsultancy.com/payroll-management/
+Redirect 301 /blog/author/pcsblog_admin/ https://www.priyamconsultancy.com/blog/
+Redirect 301 //landing-page/wp-json/ https://www.priyamconsultancy.com/
 Redirect 301 /blog/tag/digital-marketing-company-coimbatore/feed/page/2/ https://www.priyamconsultancy.com/blog/how-to-choose-digital-marketing-company-in-coimbatore/
 
 Redirect 301 /career/website-developer/ https://www.priyamconsultancy.com/careers/website-developer/
@@ -36,9 +49,8 @@ Redirect 301 /career/content-writer-intern/ https://www.priyamconsultancy.com/ca
 
 
 Redirect 301 /blogs/recruitment-and-selection-strategies/ https://www.priyamconsultancy.com/blog/recruitment-and-selection-strategies/
-Redirect 301 /microsoft-app/ https://www.priyamconsultancy.com/microsoft-apps-partners/#
 
-
+Redirect 301 /microsoft-app/ https://www.priyamconsultancy.com/microsoft-apps-partners/
 Redirect 301 /case-studies/zky-2.netlify.app/ https://www.priyamconsultancy.com/case-studies/zky
 Redirect 301 /sterlo-care/ https://www.priyamconsultancy.com/sterlo-care-partners/
 Redirect 301 /blogs/ https://www.priyamconsultancy.com/blog/

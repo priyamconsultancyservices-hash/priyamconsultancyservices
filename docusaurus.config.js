@@ -5,7 +5,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Priyam Consultancy Services | Digital Marketing,HR & Web Dev',
   tagline: 'Priyam Consultancy Services | Digital Marketing,HR & Web Dev',
-  favicon: 'img/pcs-fav-icon.webp',
+  favicon: 'img/fav-icon.png',
 
   future: {
     v4: true,

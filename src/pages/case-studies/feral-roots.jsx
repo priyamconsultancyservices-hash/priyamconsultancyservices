@@ -85,11 +85,11 @@ export default function CaseStudy() {
       <Head>
         <title>Feral Roots SEO & E-Commerce Success Story | PCS</title>
         <meta name="description" content="We created a scalable SEO friendly e-commerce website that increased local discoverability, customer engagement, online visibility, & business growth for Feral Roots." />
-        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/feralroots/" />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/case-studies/feral-roots/" />
         <meta property="og:title" content="Feral Roots SEO & E-Commerce Success Story | PCS" />
         <meta property="og:description" content="We created a scalable SEO friendly e-commerce website that increased local discoverability, customer engagement, online visibility, & business growth for Feral Roots." />
         <meta property="og:image" content="https://picsum.photos/seed/13/1200/630" />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/feralroots/" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/case-studies/feral-roots/" />
       </Head>
       <style>{styles}</style>
 
