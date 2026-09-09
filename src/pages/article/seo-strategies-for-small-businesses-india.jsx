@@ -35,9 +35,14 @@ const RELATED_ARTICLES_API =
 // Popular Articles = your own site pages (not blog posts). Edit this list to match
 // whichever pages you want featured here — label is the text shown, href is the page link.
 const ARTICLES = [
-    {
-        title: "SEO for Small Businesses in India: 10 Proven Strategies That Actually Work",
-        href: "/article/seo-strategies-for-small-businesses-india",
+    // {
+    //     title: "SEO for Small Businesses in India: 10 Proven Strategies That Actually Work",
+    //     href: "/article/technical-seo-complete-guide-2026",
+    //     date: "2026-08-04",
+    // },
+      {
+        title: "What Is Recruitment in HR? Definition, Types, Process & Everything You Need to Know",
+        href: "/article/recruitment-agencies-in-coimbatore",
         date: "2026-08-04",
     },
 ];
