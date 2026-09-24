@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 import Link from "@docusaurus/Link";
-
+ 
 // ════════════════════════════════════════════
 //  DATA
 // ════════════════════════════════════════════
@@ -169,16 +169,37 @@ function WebsiteDevelopmentCostIndia() {
       title=" Website Development Cost in India (2026): Pricing Guide "
       description="Explore website development costs in India in 2026, from business websites to Shopify, WooCommerce and custom e-commerce platforms, with real price ranges."
     >
+     
       <Head>
-        <link rel="canonical" href="https://www.priyamconsultancy.com/article/website-development-cost-india" />
-        <meta property="og:title" content=" Website Development Cost in India (2026): Pricing Guide  " />
-        <meta name="keywords" content="website development cost in india, cost of e commerce website development in india​, website development rates in india,website development rates in india, Website Development Company in Coimbatore.  " />
+        <title>Website Development Cost in India (2026): Pricing Guide</title>
+        <meta
+          name="description"
+          content="Explore website development costs in India in 2026, from business websites to Shopify, WooCommerce and custom e-commerce platforms, with real price ranges."
+        />
+        <meta
+          name="keywords"
+          content="website development cost in india, cost of e commerce website development in india, website development rates in india, website development company in coimbatore"
+        />
+        <link rel="canonical" href="https://www.priyamconsultancy.com/article/website-development-cost-in-india" />
+
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Website Development Cost in India (2026): Pricing Guide" />
         <meta
           property="og:description"
           content="Explore website development costs in India in 2026, from business websites to Shopify, WooCommerce and custom e-commerce platforms, with real price ranges."
         />
-        <meta property="og:url" content="https://www.priyamconsultancy.com/article/website-development-cost-india" />
+        <meta property="og:url" content="https://www.priyamconsultancy.com/article/website-development-cost-in-india" />
         <meta property="og:site_name" content="Priyam Consultancy Services" />
+        <meta property="og:image" content="https://www.priyamconsultancy.com/img/article/article-website-development-cost.webp" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Website Development Cost in India (2026): Pricing Guide" />
+        <meta
+          name="twitter:description"
+          content="Explore website development costs in India in 2026, from business websites to Shopify, WooCommerce and custom e-commerce platforms, with real price ranges."
+        />
+        <meta name="twitter:image" content="https://www.priyamconsultancy.com/img/article/article-website-development-cost.webp" />
+
         <script type="application/ld+json">{`
 {
  "@context":"https://schema.org",
@@ -187,26 +208,20 @@ function WebsiteDevelopmentCostIndia() {
    {
      "@type":"ListItem",
      "position":1,
-     "item":{
-       "@id":"https://priyamconsultancy.com/",
-       "name":"Home"
-     }
+     "name":"Home",
+     "item":"https://www.priyamconsultancy.com/"
    },
    {
      "@type":"ListItem",
      "position":2,
-     "item":{
-       "@id":"https://priyamconsultancy.com/article/",
-       "name":"Articles"
-     }
+     "name":"Articles",
+     "item":"https://www.priyamconsultancy.com/article/"
    },
    {
      "@type":"ListItem",
      "position":3,
-     "item":{
-       "@id":"https://www.priyamconsultancy.com/article/website-development-cost-in-india ",
-       "name":"SEO Strategies for Small Businesses in India"
-     }
+     "name":"Website Development Cost in India (2026)",
+     "item":"https://www.priyamconsultancy.com/article/website-development-cost-in-india"
    }
  ]
 }
@@ -217,8 +232,8 @@ function WebsiteDevelopmentCostIndia() {
  "@context":"https://schema.org",
  "@type":"Organization",
  "name":"Priyam Consultancy Services",
- "url":"https://priyamconsultancy.com/",
- "logo":"https://priyamconsultancy.com/img/priyam-consultancy-logo.png",
+ "url":"https://www.priyamconsultancy.com/",
+ "logo":"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
  "contactPoint":[
    {
      "@type":"ContactPoint",
