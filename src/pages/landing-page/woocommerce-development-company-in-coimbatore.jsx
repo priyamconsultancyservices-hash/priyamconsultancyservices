@@ -39,6 +39,10 @@ const GlobalStyles = () => (
       --fw-radius-m:16px;
       --fw-radius-l:24px;
     }
+      
+   header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN{
+    display: none;
+} 
     .fw-page{ font-family:'Inter', sans-serif; color:var(--fw-navy-deep); background:var(--fw-white); overflow-x:hidden; }
     .fw-page h1,.fw-page h2,.fw-page h3,.fw-page .fw-disp{ font-family:'Poppins', sans-serif; font-weight:700; letter-spacing:-0.01em; margin:0; }
     .fw-page section[id]{ scroll-margin-top:90px; }
@@ -564,6 +568,63 @@ function ServiceDropdown({ value, onChange }) {
     );
 }
 
+function PricingDropdown({ value, onChange }) {
+    const [open, setOpen] = useState(false);
+    const wrapRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (wrapRef.current && !wrapRef.current.contains(e.target)) {
+                setOpen(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+    const selected = FIT_CARDS.find((f) => f.key === value);
+    const label = selected ? `${selected.title} — ${selected.price}` : "";
+
+    const selectOption = (key) => {
+        onChange({ target: { name: "plan", value: key } });
+        setOpen(false);
+    };
+
+    return (
+        <div className="svc-dd-wrap" ref={wrapRef}>
+            <div
+                className={`svc-dd-control ${open ? "open" : ""}`}
+                onClick={() => setOpen((o) => !o)}
+            >
+                <span className={value ? "svc-dd-value" : "svc-dd-placeholder"}>
+                    {label || "Select a Pricing Plan"}
+                </span>
+                <span className="svc-dd-arrow">
+                    <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1 1l5 5 5-5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                </span>
+            </div>
+
+            {open && (
+                <ul className="svc-dd-menu">
+                    {FIT_CARDS.map((f) => (
+                        <li
+                            key={f.key}
+                            className={`svc-dd-item ${value === f.key ? "active" : ""}`}
+                            onClick={() => selectOption(f.key)}
+                        >
+                            {f.title} — {f.price}
+                        </li>
+                    ))}
+                </ul>
+            )}
+
+            <input type="hidden" name="plan" value={value} required />
+        </div>
+    );
+}
+
 function HeroContactForm() {
     const [form, setForm] = useState({ name: "", company: "", phone: "", email: "", service: "", plan: "", msg: "" });
 
@@ -654,20 +715,21 @@ function HeroContactForm() {
                 </div>
             </div>
 
-            <div className="hero-form-row hero-form-row-2col">
+            <div className="hero-form-row">
                 <div className="hero-form-field">
                     <ServiceDropdown
                         value={form.service}
                         onChange={handleChange}
                     />
                 </div>
+            </div>
+
+            <div className="hero-form-row">
                 <div className="hero-form-field">
-                    <select name="plan" value={form.plan} onChange={handleChange} required>
-                        <option value="">Select a Pricing Plan</option>
-                        {FIT_CARDS.map((f) => (
-                            <option key={f.key} value={f.key}>{f.title} — {f.price}</option>
-                        ))}
-                    </select>
+                    <PricingDropdown
+                        value={form.plan}
+                        onChange={handleChange}
+                    />
                 </div>
             </div>
 
@@ -934,6 +996,7 @@ export default function WebsiteQuizLandingPage() {
     const [planLocked, setPlanLocked] = useState(false);
     const [leadForm, setLeadForm] = useState({ name: "", email: "", phone: "" });
     const [submitted, setSubmitted] = useState(false);
+    const [sendError, setSendError] = useState(false);
     const overviewRef = useRef(null);
 
     const copy = selectedType ? PERSONALIZE_MAP[selectedType] : null;
@@ -979,8 +1042,6 @@ export default function WebsiteQuizLandingPage() {
         setModalOpen(true);
     };
 
-    const [sendError, setSendError] = useState(false);
-
     const submitLead = (e) => {
         e.preventDefault();
         setSendError(false);
@@ -994,7 +1055,7 @@ export default function WebsiteQuizLandingPage() {
             company: "",
             service: websiteType,
             plan: `${modalPlan || "Not selected"}${price ? " (" + price + ")" : ""}`,
-            message: "Submitted via the website quiz blueprint tracker.",
+            message: "",
             url: window.location.href,
         };
 
