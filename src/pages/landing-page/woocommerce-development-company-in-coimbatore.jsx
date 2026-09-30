@@ -46,10 +46,10 @@ const GlobalStyles = () => (
     .fw-page{ font-family:'Inter', sans-serif; color:var(--fw-navy-deep); background:var(--fw-white); overflow-x:hidden; }
     .fw-page h1,.fw-page h2,.fw-page h3,.fw-page .fw-disp{ font-family:'Poppins', sans-serif; font-weight:700; letter-spacing:-0.01em; margin:0; }
     .fw-page section[id]{ scroll-margin-top:90px; }
-    .fw-wrap{ max-width:1180px; margin:0 auto; padding:0 24px; }
+    .fw-wrap{ max-width:1350px; margin:0 auto; padding:0 24px; }
     @media(max-width:640px){ .fw-wrap{ padding:0 18px; } }
     .fw-eyebrow{
-      font-size:12px; letter-spacing:0.12em; text-transform:uppercase; font-weight:700;
+      font-size:15px; letter-spacing:0.12em; text-transform:uppercase; font-weight:700;
       color:var(--fw-orange); display:inline-flex; align-items:center; gap:8px; margin-bottom:16px;
     }
     .fw-eyebrow::before{ content:''; width:6px; height:6px; border-radius:50%; background:var(--fw-orange); display:inline-block; }
@@ -74,9 +74,9 @@ const GlobalStyles = () => (
     .fw-navy-section .fw-fit-card{ background:#fff; }
     .fw-navy-section .fw-fit-card.hi::before{ background:var(--fw-orange); }
     .fw-text-mid{ color:var(--fw-text-mid); }
-    .fw-head{ text-align:center; max-width:680px; margin:0 auto 44px; }
+    .fw-head{ text-align:center;  margin:0 auto 44px; }
     .fw-head h2{ font-size:clamp(24px,3vw,36px); line-height:1.25; margin:6px 0 12px; }
-    .fw-head h2 span{ color:var(--fw-orange); font-style:italic; }
+    .fw-head h2 span{ color:var(--fw-orange);  }
 
     /* ---- HERO ---- */
     .fw-hero{ padding:56px 0 60px; background:#004168; }
@@ -101,18 +101,33 @@ const GlobalStyles = () => (
     .fw-hero-actions{ display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:30px; }
     .fw-hero-hint{ font-size:13px; color:rgba(255,255,255,0.6); }
     .fw-build-on-label{ display:block; font-size:11px; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px; font-weight:700; }
-    .fw-build-on-grid{ display:flex; flex-wrap:wrap; gap:10px; }
-    .fw-build-on-cell{ display:flex; align-items:center; gap:8px; padding:9px 14px; border-radius:999px; background:#fff; border:1px solid var(--fw-line); transition:all .2s ease; }
-    .fw-build-on-cell:hover{ transform:translateY(-2px); border-color:var(--fw-orange-soft); }
-    .fw-build-on-dot{ width:22px; height:22px; border-radius:6px; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:800; color:#fff; flex-shrink:0; overflow:hidden; }
-    .fw-build-on-dot.has-img{ background:#f2f4f8 !important; padding:3px; box-sizing:border-box; }
-    .fw-build-on-dot img{ width:100%; height:100%; object-fit:contain; display:block; }
-    .fw-build-on-cell span.label{ font-weight:600; font-size:12.5px; color:var(--fw-navy-deep); white-space:nowrap; }
     .fw-hero-img-wrap{ position:relative; }
-    .fw-hero-img-wrap img{ width:100%; height:auto; aspect-ratio:4/3.1; object-fit:cover; border-radius:20px; box-shadow:0 30px 70px -30px rgba(0,0,0,0.45); }
+    .fw-hero-img-wrap img{ width:100%; height:auto; aspect-ratio:4/3.1; object-fit:cover;  }
+    /* ---- BUILD ON (5-column grid, white logo tile with border) ---- */
+.fw-build-on-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
+@media(max-width:480px){ .fw-build-on-grid{ grid-template-columns:repeat(2,1fr); } }
+
+.fw-build-on-cell{
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  gap:10px; padding:16px 8px; border-radius:14px;
+  background:#fff; border:1px solid var(--fw-line);
+  transition:all .2s ease; text-align:center;
+}
+.fw-build-on-cell:hover{ transform:translateY(-3px); border-color:var(--fw-orange-soft); box-shadow:0 12px 26px -14px rgba(0,0,0,0.35); }
+
+.fw-build-on-dot{
+  width:46px; height:46px; border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:14px; font-weight:800; color:#fff; flex-shrink:0; overflow:hidden;
+  border:1px solid var(--fw-line); box-sizing:border-box;
+}
+.fw-build-on-dot.has-img{ background:#fff !important; padding:8px; }
+.fw-build-on-dot img{ width:100%; height:100%; object-fit:contain; display:block; }
+
+.fw-build-on-cell span.label{ font-weight:600; font-size:12.5px; color:var(--fw-navy-deep); white-space:normal; line-height:1.3; }
 
     /* ---- CLIENTS MARQUEE ---- */
-    .fw-clients-label{ text-align:center; font-size:12px; color:var(--fw-text-lo); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:20px; font-weight:700; }
+    .fw-clients-label{ text-align:center; font-size:35px; color:#000;  margin-bottom:40px; font-weight:600;FONT-FAMILY: 'Poppins', sans-serif; }
     .fw-marquee{ overflow:hidden; }
     .fw-marquee-track{ display:flex; gap:40px; width:max-content; animation:fw-scroll 32s linear infinite; }
     @keyframes fw-scroll{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
@@ -125,15 +140,15 @@ const GlobalStyles = () => (
     .fw-overview-stats{ display:flex; justify-content:center; gap:56px; margin-top:40px; flex-wrap:wrap; }
     .fw-ov-stat{ text-align:center; }
     .fw-ov-stat .n{ font-family:'Poppins',sans-serif; font-weight:700; font-size:32px; color:var(--fw-orange); }
-    .fw-ov-stat .l{ font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--fw-text-lo); margin-top:4px; font-weight:600; }
+    .fw-ov-stat .l{ font-size:12.5px; letter-spacing:0.08em; text-transform:uppercase; color:#000; margin-top:4px; font-weight:600; }
 
     /* ---- STACK ---- */
     .fw-stack-flow{ max-width:760px; margin:0 auto; position:relative; }
     .fw-stack-flow::before{ content:''; position:absolute; left:29px; top:20px; bottom:20px; width:1px; background:repeating-linear-gradient(to bottom, var(--fw-line) 0 6px, transparent 6px 12px); }
     .fw-stack-node{ display:flex; gap:22px; padding:26px 0; position:relative; transition:opacity .3s ease, padding .3s ease; }
     .fw-stack-node .marker{ flex-shrink:0; width:60px; height:60px; border-radius:50%; background:#fff; border:1px solid var(--fw-line); display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:700; color:var(--fw-orange); z-index:2; }
-    .fw-stack-node .body h3{ font-size:19px; margin-bottom:8px; color:var(--fw-navy-deep); }
-    .fw-stack-node .body p{ font-size:13.5px; color:var(--fw-text-mid); line-height:1.7; margin:0; }
+    .fw-stack-node .body h3{ font-size:20.59px; margin-bottom:8px; color:var(--fw-navy-deep); }
+    .fw-stack-node .body p{ font-size:14.5px; color:var(--fw-text-mid); line-height:1.7; margin:0;    padding: 14px 0; }
     .fw-tech-grid{ display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
     .fw-tech-tile{ display:flex; flex-direction:column; align-items:center; gap:8px; width:78px; padding:12px 8px 10px; border:1px solid var(--fw-line); border-radius:12px; background:#fff; }
     .fw-tech-tile .ic{ width:30px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:10.5px; font-weight:800; color:#fff; overflow:hidden; flex-shrink:0; }
@@ -155,7 +170,7 @@ const GlobalStyles = () => (
 
     /* ---- SHOWCASE ---- */
     .fw-cat-row{ display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:36px; }
-    .fw-cat-btn{ padding:9px 18px; border-radius:999px; border:1px solid var(--fw-line); background:#fff; font-size:13px; font-weight:600; color:var(--fw-text-mid); cursor:pointer; transition:all .2s ease; }
+    .fw-cat-btn{ padding:10px 25px; border-radius:999px; border:1px solid var(--fw-line); background:#fff; font-size:14px; font-weight:600; color:#000; cursor:pointer; transition:all .2s ease;font-family: 'Poppins', sans-serif; }
     .fw-cat-btn.on{ background:var(--fw-navy); border-color:var(--fw-navy); color:#fff; }
     .fw-showcase-grid{ display:grid; grid-template-columns:1.2fr 1fr; gap:36px; align-items:center; }
     @media(max-width:900px){ .fw-showcase-grid{ grid-template-columns:1fr; } }
@@ -167,10 +182,14 @@ const GlobalStyles = () => (
     .fw-browser-body{ min-height:280px; padding:0; overflow:hidden; background:var(--fw-paper); }
     .fw-browser-body img{ width:100%; height:100%; min-height:280px; object-fit:cover; display:block; }
     .fw-showcase-meta-card{ background:#fff; border:1px solid var(--fw-line); border-radius:var(--fw-radius-l); padding:30px 28px; box-shadow:0 24px 54px -30px rgba(0,65,104,0.3); }
-    .fw-m-industry{ font-size:11px; letter-spacing:0.1em; color:var(--fw-orange); font-weight:700; margin-bottom:10px; }
+    .fw-m-industry{ font-size:12px; letter-spacing:0.1em; color:var(--fw-orange); font-weight:700; margin-bottom:10px;    font-family: 'Poppins'; }
     .fw-showcase-meta h3{ font-size:22px; margin-bottom:8px; color:var(--fw-navy-deep); }
-    .fw-m-type{ font-size:13px; color:var(--fw-text-mid); margin-bottom:16px; font-weight:600; }
-    .fw-func-list div{ position:relative; padding-left:22px; margin-bottom:10px; font-size:13.5px; color:var(--fw-navy-deep); }
+    .fw-m-type{font-size: 17px;
+    color: #ed8337;
+    margin: 15px 0;
+    font-family: 'Poppins';
+    font-weight: 600;}
+    .fw-func-list div{ position:relative; padding-left:22px; margin-bottom:10px; font-size:14.5px; color:var(--fw-navy-deep);    font-family: 'Poppins'; }
     .fw-func-list div::before{ content:'✓'; position:absolute; left:0; color:var(--fw-orange); font-weight:800; }
 
     /* ---- FIT CARDS ---- */
@@ -185,14 +204,14 @@ const GlobalStyles = () => (
     .fw-fit-card.hi{ border-top-color:var(--fw-orange); box-shadow:0 0 0 1px var(--fw-orange), 0 20px 44px -20px rgba(237,131,55,0.5); }
     .fw-fit-card.hi::before{ content:'RECOMMENDED'; position:absolute; top:-11px; right:20px; background:var(--fw-navy); color:#fff; font-size:10px; font-weight:700; letter-spacing:0.08em; padding:4px 10px; border-radius:999px; }
     .fw-fit-card h3{ font-size:18.5px; margin:0; color:var(--fw-navy-deep); }
-    .fw-fit-desc{ font-size:13.5px; color:var(--fw-text-mid); line-height:1.55; margin:0; }
+    .fw-fit-desc{ font-size:14.5px; color:var(--fw-text-mid); line-height:1.55; margin:0; }
     .fw-fit-list{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:9px; }
-    .fw-fit-list li{ position:relative; padding-left:20px; font-size:13px; color:var(--fw-text-mid); }
+    .fw-fit-list li{ position:relative; padding-left:20px; font-size:14.5px; color:var(--fw-text-mid); }
     .fw-fit-list li::before{ content:'✓'; position:absolute; left:0; color:var(--fw-green); font-weight:700; }
     .fw-fit-foot{ display:flex; align-items:center; justify-content:space-between; padding-top:14px; border-top:1px dashed var(--fw-line); margin-top:auto; }
     .fw-fit-price{ font-size:12.5px; color:var(--fw-navy-deep); }
     .fw-fit-price b{ color:var(--fw-orange); font-size:14px; }
-    .fw-fit-cta{ font-size:12.5px; font-weight:700; color:var(--fw-orange); cursor:pointer; background:none; border:none; padding:0; }
+    .fw-fit-cta{ font-size:12.5px; font-weight:700; color:var(--fw-orange); font-family: 'Poppins', sans-serif; cursor:pointer; background:none; border:none; padding:0; }
 
     /* ---- JOURNEY ---- */
     .fw-journey-scroll{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
@@ -200,32 +219,50 @@ const GlobalStyles = () => (
     @media(max-width:560px){ .fw-journey-scroll{ grid-template-columns:1fr; } }
     .fw-jp-card{ border:1px solid var(--fw-line); border-radius:var(--fw-radius-m); padding:22px 20px; background:#fff; }
     .fw-jp-num{ font-size:11px; color:var(--fw-orange); font-weight:700; display:block; margin-bottom:8px; }
-    .fw-jp-card h3{ font-size:15.5px; margin-bottom:8px; color:var(--fw-navy-deep); }
-    .fw-jp-card p{ font-size:12.5px; color:var(--fw-text-mid); line-height:1.6; }
+    .fw-jp-card h3{ font-size:16px; margin-bottom:8px; color:var(--fw-navy-deep); }
+    .fw-jp-card p{ font-size:14px; color:#0000009c; line-height:1.6; }
     .fw-jp-banner{ margin-top:32px; display:flex; align-items:center; gap:16px; background:var(--fw-navy); color:#fff; border-radius:var(--fw-radius-m); padding:20px 26px; font-size:14.5px; }
     .fw-jp-banner b{ color:var(--fw-orange-soft); }
 
     /* ---- FAQ ---- */
-    .fw-faq-list{ max-width:820px; margin:0 auto; }
+    .fw-faq-list{ max-width:1000px; margin:0 auto; }
     .fw-faq-item{ border-bottom:1px solid var(--fw-line); padding:18px 0; transition:all .2s ease; }
     .fw-faq-item.hi{ background:rgba(237,131,55,0.05); border-radius:12px; padding:18px 16px; }
     .fw-faq-q{ display:flex; justify-content:space-between; align-items:center; cursor:pointer; font-weight:600; font-size:15px; color:var(--fw-navy-deep); }
     .fw-faq-q .plus{ color:var(--fw-orange); font-size:20px; font-weight:400; }
-    .fw-faq-a{ font-size:13.5px; color:var(--fw-text-mid); line-height:1.7; margin-top:12px; }
+    .fw-faq-a{ font-size: 15px;
+    color: #000000;
+    line-height: 1.7;
+    font-family: 'Poppins';
+    margin-top: 12px;}
 
-    /* ---- TESTIMONIALS ---- */
-    .fw-testi-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
-    @media(max-width:980px){ .fw-testi-grid{ grid-template-columns:1fr 1fr; } }
-    @media(max-width:560px){ .fw-testi-grid{ grid-template-columns:1fr; } }
-    .fw-testi-card{ border:1px solid var(--fw-line); border-radius:var(--fw-radius-m); padding:22px 20px; background:#fff; transition:all .25s ease; opacity:1; }
-    .fw-testi-grid.filtered .fw-testi-card{ opacity:0.35; }
-    .fw-testi-grid.filtered .fw-testi-card.hi{ opacity:1; border-color:var(--fw-orange); box-shadow:0 18px 40px -20px rgba(237,131,55,0.5); }
+    /* ---- TESTIMONIALS SLIDER ---- */
+    .fw-testi-slider{ position:relative; }
+    .fw-testi-track{
+      display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory;
+      scroll-behavior:smooth; scrollbar-width:none; padding:8px 2px 14px;
+    }
+    .fw-testi-track::-webkit-scrollbar{ display:none; }
+    .fw-testi-card{
+      flex:0 0 calc((100% - 36px) / 3); scroll-snap-align:start;
+      border:1px solid var(--fw-line); border-radius:var(--fw-radius-m);
+      padding:22px 20px; background:#fff; transition:all .25s ease; margin: 0 0 4px 7px;
+    }
+    @media(max-width:980px){ .fw-testi-card{ flex:0 0 calc((100% - 18px) / 2); } }
+    @media(max-width:560px){ .fw-testi-card{ flex:0 0 100%; } }
+    .fw-testi-card.hi{ border-color:var(--fw-orange); box-shadow:0 18px 40px -20px rgba(237,131,55,0.5); }
     .fw-testi-stars{ color:var(--fw-orange); letter-spacing:2px; margin-bottom:12px; font-size:13px; }
-    .fw-testi-quote{ font-size:13px; color:var(--fw-navy-deep); line-height:1.7; margin-bottom:18px; min-height:100px; }
+    .fw-testi-quote{ font-size:14.5px; color:var(--fw-navy-deep); line-height:1.7; margin-bottom:18px; min-height:100px; }
     .fw-testi-foot{ display:flex; align-items:center; gap:10px; padding-top:14px; border-top:1px solid var(--fw-line); }
     .fw-testi-avatar{ width:34px; height:34px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:800; color:#fff; flex-shrink:0; }
-    .fw-testi-name{ font-size:13px; font-weight:700; color:var(--fw-navy-deep); }
-    .fw-testi-role{ font-size:11px; color:var(--fw-text-lo); }
+    .fw-testi-name{ font-size:14px; font-weight:600; color:var(--fw-navy-deep);font-family: 'Poppins', sans-serif; }
+    .fw-testi-role{ font-size:12px; color:#000000;font-family: 'Poppins', sans-serif; }
+    .fw-testi-controls{ display:flex; justify-content:center; align-items:center; gap:14px; margin-top:22px; }
+    .fw-testi-arrow{
+      width:42px; height:42px; border-radius:50%; border:1px solid var(--fw-line);
+      background:#fff; color:var(--fw-navy); font-size:18px; cursor:pointer; transition:all .2s ease;
+    }
+    .fw-testi-arrow:hover{ background:var(--fw-orange); border-color:var(--fw-orange); color:#fff; }
 
     /* ---- FINAL CTA ---- */
     .fw-final-cta{ background:var(--fw-navy-deep); color:#fff; text-align:center; border-radius:28px; margin:0 5%; padding:64px 24px; }
@@ -275,10 +312,10 @@ const GlobalStyles = () => (
    ============================================================ */
 
 const HERO_CHOICES = [
-    { value: "Static Website", tag: "01", desc: "Fast, affordable single-page sites — live in about a week, built for startups." },
-    { value: "Dynamic Website", tag: "02", desc: "Multi-page, editable sites built to look credible and convert enquiries." },
-    { value: "Ecommerce Website", tag: "03", desc: "Full online stores — catalog, cart, and payments set up to actually sell." },
-    { value: "Custom Website", tag: "04", desc: "Bespoke builds with dashboards, integrations, and workflows tailored to you." },
+    { value: "Static Website", tag: "01", desc: "Fast, affordable single-page site. For a business that just needs to be found online, fast." },
+    { value: "Dynamic Website", tag: "02", desc: "Multi-page site with database-driven content that's built to scale and update easily." },
+    { value: "Ecommerce Website", tag: "03", desc: "Full online store — catalog, cart, and payments — set up to actually sell." },
+    { value: "Custom Website", tag: "04", desc: "Bespoke builds with custom integrations and workflows, tailored to how your business runs." },
 ];
 
 const BUILD_ON = [
@@ -288,7 +325,9 @@ const BUILD_ON = [
     { name: "Meta", short: "M", color: "#0467DF", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/meta.svg" },
     { name: "WordPress", short: "W", color: "#21759B", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
     { name: "Razorpay", short: "R", color: "#0C2451", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/razorpay.svg" },
-    { name: "Custom", short: "C", color: "#ed8337" },
+    { name: "Razorpay", short: "R", color: "#0C2451", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/razorpay.svg" },
+    { name: "Razorpay", short: "R", color: "#0C2451", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/razorpay.svg" },
+
 ];
 
 const CLIENT_MARQUEE_LOGOS = [
@@ -309,7 +348,7 @@ const CLIENT_MARQUEE_LOGOS = [
 const STACK_NODES = [
     {
         key: "template", num: "01", title: "Template",
-        desc: "Proven, pre-built layouts customised with your brand — the quickest way to a clean, working site.",
+        desc: " Proven, pre-built layouts customised with your brand — the quickest way to a clean, working static website.",
         tags: [
             { label: "Elementor", ic: "E", bg: "#5750E8", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/elementor.svg" },
             { label: "WordPress", ic: "W", bg: "#21759B", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
@@ -319,7 +358,7 @@ const STACK_NODES = [
     },
     {
         key: "design", num: "02", title: "Design",
-        desc: "Interfaces drafted in Figma, refined for how people actually read and scroll.",
+        desc: "Interfaces drafted in Figma as part of our website design and development process, refined for how people actually read and scroll.",
         tags: [
             { label: "Figma", ic: "F", bg: "#0D1117", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
             { label: "UI/UX", ic: "UX", bg: "#5750E8" },
@@ -328,7 +367,7 @@ const STACK_NODES = [
     },
     {
         key: "development", num: "03", title: "Development",
-        desc: "Built on modern, fast-loading foundations — custom where a template can't keep up.",
+        desc: "Built on modern, fast-loading foundations for reliable website development — custom code where a template can't keep up, powering our dynamic and custom website builds.",
         tags: [
             { label: "HTML5", ic: "5", bg: "#E44D26", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
             { label: "CSS3", ic: "3", bg: "#264DE4", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
@@ -350,7 +389,7 @@ const STACK_NODES = [
     },
     {
         key: "ecommerce", num: "04", title: "E-Commerce",
-        desc: "Store platforms set up to actually sell — catalog, checkout, and payments in place from day one.",
+        desc: "Store platforms set up to actually sell — catalog, checkout, and payments in place from day one, built by our ecommerce development company team.",
         tags: [
             { label: "Shopify", ic: "S", bg: "#95BF47", dark: true, img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/shopify.svg" },
             { label: "WordPress", ic: "W", bg: "#21759B", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
@@ -376,12 +415,12 @@ const SHOWCASE_DATA = {
 };
 
 const FIT_CARDS = [
-    { key: "Website Design", title: "Website Design", desc: "Designs that strengthen your brand and turn visitors into customers through engaging, strategic layouts.", features: ["Premium UI/UX layouts", "User-friendly design flow", "Modern visuals & custom icons"], price: "₹7,500" },
-    { key: "Static Website", title: "Static Website", desc: "Affordable single-page sites with essential SEO — built for startups and growing businesses that need a presence fast.", features: ["Fast-loading, standard template", "Mobile responsive by default", "Live in as little as a week"], price: "₹7,500" },
-    { key: "Custom Website", title: "Custom Website", desc: "A build tailored to your business, industry, and specific requirements — designed to support real growth.", features: ["Custom features & integrations", "User flow built around your customers", "High-performance & SEO-ready"], price: "₹15,000" },
-    { key: "WooCommerce Store", title: "WooCommerce Store", desc: "High-performing WooCommerce stores built to attract more customers and simplify the buying process.", features: ["Inventory & order tracking", "Payment gateway integration", "Store & product management"], price: "₹20,000" },
-    { key: "Custom E-Commerce", title: "Custom E-Commerce", desc: "Complete e-commerce features built to improve the shopping experience and grow your online business.", features: ["Store & product setup from scratch", "Payment & shipping integration", "SEO-ready & mobile responsive"], price: "₹25,000" },
-    { key: "Shopify Store", title: "Shopify Store", desc: "Scalable Shopify stores built to increase sales and support long-term business growth with easy management.", features: ["Custom product & category setup", "Customer login & account management", "Simple cart & checkout process"], price: "₹22,000" },
+    { key: "Website Design", title: "Website Design", desc: "Creative website designs that strengthen your brand and improve Customer engagement.", features: ["Responsive Layouts", "Modern UI/UX", "Mobile Friendly"], price: "₹7,500" },
+    { key: "Static Website", title: "Static Website Development", desc: "Fast, secure, and cost-effective websites ideal for startups and growing businesses.", features: [" Fast Loading", "Secure Structure", "Easy Maintenance"], price: "₹7,500" },
+    { key: "Custom Website", title: "Custom Website Development", desc: "Tailor-made web solutions built around your business requirements and growth goals.", features: ["Custom Features", "Scalable Architecture", "High Performance"], price: "₹15,000" },
+    { key: "WooCommerce Store", title: "WooCommerce Development", desc: "Powerful WooCommerce stores designed for conversions and seamless shopping experiences.", features: ["Secure Checkout", "Product Management", "Store Optimization"], price: "₹20,000" },
+    { key: "Custom E-Commerce", title: "E-Commerce Development", desc: "Robust online stores with advanced functionality and payment integrations.", features: ["Shopping Cart", "Payment Gateway", "Order Management"], price: "₹25,000" },
+    { key: "Shopify Store", title: "Shopify Development", desc: "Professional Shopify stores built for speed, usability, and business growth.", features: ["Theme Customization", "Shopify Setup", "Performance Optimization"], price: "₹22,000" },
 ];
 
 /* Maps each pricing plan to the website type it belongs to,
@@ -396,38 +435,54 @@ const PLAN_TO_TYPE = {
 };
 
 const JOURNEY_STEPS = [
-    { num: "01", title: "Submit enquiry", desc: "One short form, or a message on WhatsApp — whichever's easier." },
-    { num: "02", title: "15-minute requirement call", desc: "We ask what matters and get to know your business — customers, competitors, goals — before we design anything." },
-    { num: "03", title: "Receive your proposal", desc: "Scope, timeline, and cost, laid out plainly." },
-    { num: "04", title: "Design begins", desc: "Work starts once you're ready — not before." },
+    { num: "01", title: "Submit enquiry", desc: "One short form, or a WhatsApp message — whichever suits you best. Share your project details and goals easily." },
+    { num: "02", title: "15-minute requirement call", desc: "We ask what matters and learn about your business, goals, content, and requirements before creating the design direction." },
+    { num: "03", title: "Receive your proposal", desc: "We prepare a proposal covering your scope, timeline, deliverables, and cost, so everything is easy to understand upfront." },
+    { num: "04", title: "Design begins", desc: "Work begins once you approve the proposal and are ready, with scope and direction guiding the process forward." },
 ];
 
 const FAQ_ITEMS = [
-    { key: "cost", q: "How much will it cost?", a: "It depends on the type of website and what it needs to do. A static site costs far less than a custom platform — we'll give you a clear number after the requirement call, not before." },
-    { key: "timeline", q: "How long will development take?", a: "A static or small business site typically takes 2–3 weeks. E-commerce and custom builds run longer, depending on features. You'll get a realistic timeline in the proposal." },
-    { key: "redesign", q: "Can you redesign my existing website?", a: "Yes. We can rebuild on your existing content and branding, or start fresh if that serves you better." },
-    { key: "selfedit", q: "Can I update the website myself?", a: "Yes — we build with an editing interface so you can update text, images, and products without touching code." },
-    { key: "whatsapp", q: "Can you integrate WhatsApp?", a: "Yes. A click-to-chat WhatsApp button is standard on most builds we do for Coimbatore businesses." },
-    { key: "payments", q: "Can you integrate payment gateways?", a: "Yes — Razorpay, PayU, Stripe, or your preferred gateway, set up and tested before launch." },
-    { key: "seo", q: "Do you provide SEO-friendly development?", a: "Every site is built on clean structure, fast load times, and proper metadata from the start — the technical groundwork search engines look for." },
+    { key: "cost", q: "How much will it cost?", a: "Pricing depends on the type of site (static, dynamic, ecommerce, or custom) and the features you need." },
+    { key: "timeline", q: "How long will development take?", a: "A static website typically takes about a week. Dynamic, custom, and ecommerce websites usually take 2–4 weeks depending on complexity." },
+    { key: "redesign", q: "Can you redesign my existing website?", a: "Yes, as a website design company in Coimbatore, we can rebuild or refresh an existing site while keeping your content, SEO rankings, and branding intact." },
+    { key: "selfedit", q: "Do you provide SEO-friendly development? ", a: "Yes. Every website we build — static, dynamic, or ecommerce — is structured for fast load times and search visibility from day one, which is why we're considered the best website development company choice for local businesses." },
 ];
 
+const TESTIMONIAL_TYPES = ["Static Website", "Dynamic Website", "Custom Website", "Ecommerce Website"];
+
 const TESTIMONIALS = [
-    { key: "Static Website", quote: "We just needed a clean, fast site up quickly — the team had it live in under a week, and it still looks sharp on mobile.", name: "Anvi Interiors", role: "Startup, Coimbatore", initials: "AI", color: "#39C88E" },
-    { key: "Custom Website", quote: "We asked for a site that could handle bulk enquiries without extra staff. They built exactly that — the enquiry form alone has cut our response time in half.", name: "Nilgiri Foods", role: "Manufacturer, Coimbatore", initials: "NF", color: "#004168" },
-    { key: "Ecommerce Website", quote: "Our online store went live in under three weeks. What stood out was how little back-and-forth it took — they understood the brief the first time.", name: "Kovai Textiles", role: "Online Store, Coimbatore", initials: "KT", color: "#95BF47" },
-    { key: "Dynamic Website", quote: "I can update prices and add new services myself now — no calls to a developer for every small change. That alone was worth the switch.", name: "Sarvam Logistics", role: "Service Business, Coimbatore", initials: "SL", color: "#ed8337" },
+    // ---------- STATIC ----------
+    { key: "Static Website", quote: "PCS completely rebuilt our online presence. Our previous website lacked modern design, SEO structure, visitor tracking, and Google visibility. The team created a clean, responsive, user-friendly website with complete SEO support, keyword optimization, visitor tracking, heatmaps, performance monitoring, and email integrations. We now have better visibility, stronger user engagement insights, and a more effective digital presence. PCS was supportive, knowledgeable, and easy to work with throughout.", name: "ABB ", role: "Startup, Coimbatore", initials: "A", color: "#39C88E" },
+    { key: "Static Website", quote: "We needed more than a website — we wanted a digital presence that reflected our consultancy and approach. PCS understood our requirements and guided us through every stage with patience and clarity. They delivered a responsive, brand-aligned website with clean structure and smooth navigation. Every suggestion was heard and implemented thoughtfully. The entire process felt collaborative, and the final result represents our brand perfectly while providing a professional experience for visitors.", name: "Riya", role: "Local Business, Coimbatore", initials: "R", color: "#16a34a" },
+    { key: "Static Website", quote: "For an HR-focused business, having a credible and professional online presence is essential. PCS built us a fully responsive website with well-structured content, clear service presentation, and a layout that immediately builds visitor trust. Their communication throughout the project was excellent — always responsive, open to feedback, and consistent with timelines. We're genuinely happy with how our digital identity has come together and appreciate the effort behind every detail.", name: "ZKY", role: "Education, Coimbatore", initials: "SD", color: "#5750E8" },
+
+    // ---------- DYNAMIC ----------
+    { key: "Dynamic Website", quote: "Taking our brand online felt overwhelming, and we weren’t sure where to begin or manage the technical side. PCS patiently guided us through everything, from branding and website setup to SEO integration and payment gateway configuration. What stood out was their genuine effort to understand our vision and bring it to life. We now have a store that truly reflects our brand, along with the confidence to grow it further. Their support made the entire process simple, seamless, and stress-free.", name: "Feral Roots", role: "Service Business, Coimbatore", initials: "F", color: "#ed8337" },
+    { key: "Dynamic Website", quote: "Earlier our  digital presence lacked the structure and SEO foundation needed to consistently reach the right audience. PCS approached the project strategically — working on product positioning, keyword-focused optimisation, user experience improvements, and overall online visibility in a way that felt deliberate and results-driven. Every change was practical and built for long-term impact rather than surface-level fixes. Their clarity, professionalism, and focused execution made the entire engagement genuinely worthwhile.", name: "Sterlo", role: "Healthcare, Coimbatore", initials: "S", color: "#0467DF" },
+    { key: "Dynamic Website", quote: "We trusted PCS with 24 years of brand reputation, and they delivered beyond expectations. From our programme structure to the flow of every page, the website truly represents who we are and what we stand for. The team was professional, communicative, and genuinely committed to getting every detail right. If you’re looking for a web development partner who understands your business and delivers on promises, PCS is the team to call. Their attention to detail made the entire experience smooth, reliable, and rewarding.", name: "Tech - Global", role: "Construction, Coimbatore", initials: "T", color: "#F2A93B" },
+
 ];
 
 const DEFAULTS = {
-    heroCta: "Find My Best Website Solution",
+    heroCta: "Find Best Solution",
     heroSub: "Pick the closest match. We'll shape the rest of this page — and your solution — around it.",
     finalCta: "Start My Website Project",
-    overviewEyebrow: "Website Development",
+    overviewEyebrow: "Website Development Service",
     overviewHeadingParts: ["Best", " website development company in Coimbatore"],
-    overviewPara: "We build and maintain websites for businesses across Coimbatore — static, custom, and e-commerce alike. Every build is planned around load speed, mobile behaviour, and search visibility from the first sketch, so the site you launch with is the same one that keeps performing months later.",
+    overviewPara: "We build and maintain websites for businesses across Coimbatore and beyond — static, custom, and ecommerce alike. Every build is planned around load speed, mobile behaviour, and search visibility from the first sketch, so the site you launch with is the same one that keeps performing months later.",
     journeyBanner: <><b>You bring the business.</b> We'll handle the website.</>,
+
+    // Find Your Fit section defaults
+    fitEyebrow: "Find Your Fit",
+    fitHeadingParts: ["Which website is ", "right for you?"],
+    fitDesc: "Six starting points. Pick what matches your business, or talk it through with us first.",
 };
+
+/*
+  Type select pannumbodhu etha section ku scroll aaganum?
+  Options: "overview" | "stack" | "showcase" | "fit"
+*/
+const REDIRECT_TARGET = "overview";
 
 const PERSONALIZE_MAP = {
     "Static Website": {
@@ -435,8 +490,11 @@ const PERSONALIZE_MAP = {
         heroCta: "Find My Static Website Plan", finalCta: "Start My Static Website",
         heroSub: "Good — a static website means less complexity, faster load times, and a lower price. Here's how we'd shape yours below.",
         overviewEyebrow: "Static Website Development",
-        overviewHeadingParts: ["Static", " website development company in Coimbatore"],
-        overviewPara: "We build static websites for Coimbatore startups and small businesses that need a fast, affordable presence online without the overhead of a custom platform. Every build is lightweight, mobile-responsive by default, and can go live in as little as a week — with the SEO groundwork already in place.",
+        overviewHeadingParts: ["Fast, affordable ", "static websites in Coimbatore"],
+        overviewPara: "We design and build static websites for startups and small businesses across Coimbatore and beyond. Every page is planned around quick load times, clean mobile display, and search visibility from the first sketch, so the site you launch with is the same one that keeps performing months later.",
+        fitEyebrow: "Static Website Plans",
+        fitHeadingParts: ["Simple pricing for your ", "static website."],
+        fitDesc: "Fast, affordable plans for a clean online presence — live in as little as a week.",
         testi: "Static Website", faq: ["cost", "timeline"],
         journeyBanner: <><b>You bring the idea.</b> We'll handle the quick, affordable build.</>,
     },
@@ -445,8 +503,11 @@ const PERSONALIZE_MAP = {
         heroCta: "Find My Dynamic Website Plan", finalCta: "Start My Dynamic Website",
         heroSub: "Good — a dynamic website builds credibility and brings in enquiries. Here's how we'd shape yours below.",
         overviewEyebrow: "Dynamic Website Development",
-        overviewHeadingParts: ["Dynamic", " website development company in Coimbatore"],
-        overviewPara: "We build dynamic websites for companies across Coimbatore that need to look credible and convert visitors into enquiries. We focus on clear messaging, fast load times, and a structure that makes it easy for customers to find what they need and get in touch.",
+        overviewHeadingParts: ["Scalable Dynamic", " websites built for growing businesses"],
+        overviewPara: "We build and maintain dynamic websites for businesses across Coimbatore and beyond that need content to update easily. Every build is planned around database structure, mobile behaviour, and search visibility from the first sketch, so the site you launch with is the same one that keeps performing months later.",
+        fitEyebrow: "Dynamic Website Plans",
+        fitHeadingParts: ["Plans that help your ", "business get enquiries."],
+        fitDesc: "Multi-page, easy-to-update websites built to look credible and convert visitors.",
         testi: "Dynamic Website", faq: ["timeline", "seo"],
         journeyBanner: <><b>You bring the business.</b> We'll handle the website that represents it.</>,
     },
@@ -455,8 +516,11 @@ const PERSONALIZE_MAP = {
         heroCta: "Find My Ecommerce Store Plan", finalCta: "Start My Ecommerce Store",
         heroSub: "Good — an ecommerce website gives you full control over your store and how you sell. Here's how we'd shape yours below.",
         overviewEyebrow: "Ecommerce Website Development",
-        overviewHeadingParts: ["Ecommerce", " website development company in Coimbatore"],
-        overviewPara: "We build ecommerce stores for Coimbatore businesses that want a self-owned, fully customisable store — on WooCommerce, Shopify, or a custom platform. Every build ships with inventory and order tracking, payment gateway integration, and a catalog structure ready to handle real order volume from day one.",
+        overviewHeadingParts: ["E-Commerce ", "websites built to sell from day one"],
+        overviewPara: "We build and maintain ecommerce websites for businesses across Coimbatore and beyond — catalog, cart, and payments alike. Every build is planned around checkout speed, mobile behaviour, and search visibility from the first sketch, so the store you launch with is the same one that keeps converting months later.",
+        fitEyebrow: "Ecommerce Store Plans",
+        fitHeadingParts: ["Pick the store that ", "sells for you."],
+        fitDesc: "WooCommerce, Shopify or a fully custom store — with payments and tracking ready from day one.",
         testi: "Ecommerce Website", faq: ["payments", "timeline"],
         journeyBanner: <><b>You bring the products.</b> We'll handle the store that sells them.</>,
     },
@@ -465,8 +529,11 @@ const PERSONALIZE_MAP = {
         heroCta: "Find My Custom Build", finalCta: "Start My Custom Project",
         heroSub: "Good — you need something beyond a template. Here's how we'd shape your custom build below.",
         overviewEyebrow: "Custom Website Development",
-        overviewHeadingParts: ["Custom", " website development company in Coimbatore"],
-        overviewPara: "We build custom websites for Coimbatore businesses whose requirements don't fit a template — booking systems, dashboards, bulk-enquiry workflows, and integrations with the tools you already use. We plan the architecture first, then build around it.",
+        overviewHeadingParts: ["Custom-built websites ", "tailored to your business"],
+        overviewPara: "We design and build custom websites for businesses across Coimbatore and beyond with unique workflows and requirements. Every build is planned around functionality, mobile behaviour, and search visibility from the first sketch, so the site you launch with is the same one that keeps performing months later.",
+        fitEyebrow: "Custom Build Plans",
+        fitHeadingParts: ["A build made around ", "your requirements."],
+        fitDesc: "For businesses that need integrations, dashboards and workflows a template can't handle.",
         testi: "Custom Website", faq: ["redesign", "selfedit"],
         journeyBanner: <><b>You bring the requirements.</b> We'll handle the custom build.</>,
     },
@@ -997,7 +1064,10 @@ export default function WebsiteQuizLandingPage() {
     const [leadForm, setLeadForm] = useState({ name: "", email: "", phone: "" });
     const [submitted, setSubmitted] = useState(false);
     const [sendError, setSendError] = useState(false);
-    const overviewRef = useRef(null);
+
+    // Testimonials slider state
+    const testiTrackRef = useRef(null);
+    const [testiPaused, setTestiPaused] = useState(false);
 
     const copy = selectedType ? PERSONALIZE_MAP[selectedType] : null;
 
@@ -1013,14 +1083,54 @@ export default function WebsiteQuizLandingPage() {
         return selectedType || "Let's find out together";
     }, [copy, selectedType]);
 
+    // ---- Testimonials: always exactly 6 cards ----
+  const visibleTestimonials = useMemo(() => {
+    const groups = TESTIMONIAL_TYPES.map((k) => TESTIMONIALS.filter((t) => t.key === k));
+    const mixed = [];
+    for (let i = 0; i < 3; i++) groups.forEach((g) => g[i] && mixed.push(g[i]));
+    return mixed.slice(0, 6);
+}, []);
+
+    const slideTesti = (dir) => {
+        const el = testiTrackRef.current;
+        if (!el) return;
+        const card = el.querySelector(".fw-testi-card");
+        if (!card) return;
+        const step = card.offsetWidth + 18;
+        const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 4;
+        if (dir > 0 && atEnd) el.scrollTo({ left: 0 });
+        else if (dir < 0 && el.scrollLeft <= 4) el.scrollTo({ left: el.scrollWidth });
+        else el.scrollBy({ left: dir * step });
+    };
+
+    // autoplay (pauses on hover)
+    useEffect(() => {
+        if (testiPaused) return;
+        const id = setInterval(() => slideTesti(1), 3000);
+        return () => clearInterval(id);
+    }, [testiPaused]);
+
+    // reset slider to start when type changes
+    useEffect(() => {
+        testiTrackRef.current?.scrollTo({ left: 0 });
+    }, [selectedType]);
+
     const handleChoice = (value) => {
         setSelectedType(value);
         const map = PERSONALIZE_MAP[value];
         if (map && map.showcase) setActiveShowcase(map.showcase);
-        setTimeout(() => {
-            overviewRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
-        }, 150);
     };
+
+    // selectedType maarina appuram, DOM update aana piragu REDIRECT_TARGET section ku scroll
+    useEffect(() => {
+        if (!selectedType) return;
+        const t = setTimeout(() => {
+            document
+                .getElementById(REDIRECT_TARGET)
+                ?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 200);
+        return () => clearTimeout(t);
+    }, [selectedType]);
 
     /*
       openLeadModal(plan)
@@ -1077,9 +1187,17 @@ export default function WebsiteQuizLandingPage() {
 
     const showcase = SHOWCASE_DATA[activeShowcase];
     const fitFiltered = !!(copy && copy.fit);
-    const testiFiltered = !!(copy && copy.testi);
     const faqHighlight = copy ? copy.faq : [];
-    const overviewHeading = copy ? copy.overviewHeadingParts : DEFAULTS.overviewHeadingParts;
+
+    // Overview section text (type-wise)
+    const overviewEyebrow = copy?.overviewEyebrow || DEFAULTS.overviewEyebrow;
+    const overviewHeading = copy?.overviewHeadingParts || DEFAULTS.overviewHeadingParts;
+    const overviewPara = copy?.overviewPara || DEFAULTS.overviewPara;
+
+    // Find Your Fit section text (type-wise)
+    const fitEyebrow = copy?.fitEyebrow || DEFAULTS.fitEyebrow;
+    const fitHeading = copy?.fitHeadingParts || DEFAULTS.fitHeadingParts;
+    const fitDesc = copy?.fitDesc || DEFAULTS.fitDesc;
 
     return (
         <Layout
@@ -1095,7 +1213,7 @@ export default function WebsiteQuizLandingPage() {
                 <section className="fw-hero" id="hero-choices">
                     <div className="fw-wrap fw-hero-grid">
                         <div>
-                            <span className="fw-loc-pill"><span className="pin" />Website Development for Businesses in Coimbatore</span>
+                            <span className="fw-loc-pill"><span className="pin" />Website Development Company in Coimbatore</span>
                             <h1>What kind of website<br />are you <em>planning?</em></h1>
                             <p className="fw-hero-sub">{copy ? copy.heroSub : DEFAULTS.heroSub}</p>
 
@@ -1124,10 +1242,10 @@ export default function WebsiteQuizLandingPage() {
                             </div>
 
                             <div>
-                                <span className="fw-build-on-label">Build on</span>
+                                <span className="fw-build-on-label">Built Using</span>
                                 <div className="fw-build-on-grid">
-                                    {BUILD_ON.map((b) => (
-                                        <div className="fw-build-on-cell" key={b.name}>
+                                    {BUILD_ON.map((b, i) => (
+                                        <div className="fw-build-on-cell" key={`${b.name}-${i}`}>
                                             <span className={`fw-build-on-dot${b.img ? " has-img" : ""}`} style={{ background: b.img ? undefined : b.color }}>
                                                 {b.img ? <img src={b.img} alt={b.name} /> : b.short}
                                             </span>
@@ -1145,15 +1263,15 @@ export default function WebsiteQuizLandingPage() {
                 </section>
 
                 {/* CLIENTS STRIP */}
-                <section style={{ padding: "34px 0", borderTop: "1px solid var(--fw-line)", borderBottom: "1px solid var(--fw-line)" }}>
+                <section style={{ padding: "50px 0", borderTop: "1px solid var(--fw-line)", borderBottom: "1px solid var(--fw-line)" }}>
                     <div className="fw-wrap">
-                        <div className="fw-clients-label">Trusted by businesses building in Coimbatore and beyond</div>
+                        <div className="fw-clients-label"><span style={{color: "rgb(237 131 55)"}}>Trusted by </span>Businesses Building in Coimbatore and Beyond</div>
                     </div>
                     <div className="fw-marquee">
                         <div className="fw-marquee-track">
                             {[...CLIENT_MARQUEE_LOGOS, ...CLIENT_MARQUEE_LOGOS].map((client, i) => (
                                 <div key={i} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-                                    <img src={client.img} alt={client.name} loading="lazy" style={{ height: 42, width: "auto", objectFit: "contain" }} />
+                                    <img src={client.img} alt={client.name} loading="lazy" style={{ height: 45, width: "auto", objectFit: "contain" }} />
                                 </div>
                             ))}
                         </div>
@@ -1161,27 +1279,27 @@ export default function WebsiteQuizLandingPage() {
                 </section>
 
                 {/* OVERVIEW */}
-                <section className="fw-section" id="overview" ref={overviewRef}>
+                <section className="fw-section" id="overview">
                     <div className="fw-wrap" style={{ textAlign: "center" }}>
-                        <span className="fw-eyebrow">{copy ? copy.overviewEyebrow : DEFAULTS.overviewEyebrow}</span>
+                        <span className="fw-eyebrow">{overviewEyebrow}</span>
                         <h2 style={{ fontSize: "clamp(24px,3.2vw,38px)", marginBottom: 18 }}>
                             <span style={{ color: "var(--fw-orange)" }}>{overviewHeading[0]}</span>{overviewHeading[1]}
                         </h2>
-                        <p className="fw-overview-para">{copy ? copy.overviewPara : DEFAULTS.overviewPara}</p>
+                        <p className="fw-overview-para">{overviewPara}</p>
                         <div className="fw-overview-stats">
-                            <div className="fw-ov-stat"><div className="n">120+</div><div className="l">Sites Shipped</div></div>
-                            <div className="fw-ov-stat"><div className="n">40+</div><div className="l">Coimbatore Businesses</div></div>
-                            <div className="fw-ov-stat"><div className="n">3 Wks</div><div className="l">Avg. Turnaround</div></div>
+                            <div className="fw-ov-stat"><div className="n">50+</div><div className="l">Projects Completed</div></div>
+                            <div className="fw-ov-stat"><div className="n">40+</div><div className="l">Happy Clients</div></div>
+                            <div className="fw-ov-stat"><div className="n">98%</div><div className="l">Client Satisfaction</div></div>
                         </div>
                     </div>
                 </section>
 
                 {/* STACK */}
-                <section className="fw-section fw-navy-section">
+                <section className="fw-section fw-navy-section" id="stack">
                     <div className="fw-wrap">
                         <div className="fw-head">
-                            <span className="fw-eyebrow">The Build</span>
-                            <h2>Your website. <span>Your stack.</span></h2>
+                            <span className="fw-eyebrow">Tech Stack</span>
+                            <h2>Your website <span>design and development. </span></h2>
                             <p className="fw-text-mid">Every layer chosen for what your business actually needs — not a fixed package.</p>
                         </div>
                         <div className={`fw-stack-flow${copy ? " personalized" : ""}`}>
@@ -1256,11 +1374,9 @@ export default function WebsiteQuizLandingPage() {
                 <section className="fw-section fw-navy-section" id="fit">
                     <div className="fw-wrap">
                         <div className="fw-head">
-                            <span className="fw-eyebrow">Find Your Fit</span>
-                            <h2>Which website is <span>right for you?</span></h2>
-                            <p className="fw-text-mid">
-                                {fitFiltered ? "Based on what you picked, here's what fits best." : "Six starting points. Pick what matches your business, or talk it through with us first."}
-                            </p>
+                            <span className="fw-eyebrow">{fitEyebrow}</span>
+                            <h2>{fitHeading[0]}<span>{fitHeading[1]}</span></h2>
+                            <p className="fw-text-mid">{fitDesc}</p>
                         </div>
                         <div className={`fw-fit-grid${fitFiltered ? " filtered" : ""}`}>
                             {FIT_CARDS.map((f) => (
@@ -1309,7 +1425,7 @@ export default function WebsiteQuizLandingPage() {
                 <section className="fw-section" style={{ background: "var(--fw-paper)" }}>
                     <div className="fw-wrap">
                         <div className="fw-head">
-                            <span className="fw-eyebrow">Before You Build</span>
+                            <span className="fw-eyebrow">Frequently Asked Questions</span>
                             <h2>Before you build a website, <span>you probably want to know…</span></h2>
                         </div>
                         <div className="fw-faq-list">
@@ -1327,26 +1443,38 @@ export default function WebsiteQuizLandingPage() {
                 </section>
 
                 {/* TESTIMONIALS */}
-                <section className="fw-section">
+                <section className="fw-section" id="testimonials">
                     <div className="fw-wrap">
                         <div className="fw-head">
                             <span className="fw-eyebrow">In Their Words</span>
                             <h2>What clients say <span>after launch.</span></h2>
                         </div>
-                        <div className={`fw-testi-grid${testiFiltered ? " filtered" : ""}`}>
-                            {TESTIMONIALS.map((t) => (
-                                <div key={t.key} className={`fw-testi-card${copy && copy.testi === t.key ? " hi" : ""}`}>
-                                    <div className="fw-testi-stars">★★★★★</div>
-                                    <p className="fw-testi-quote">"{t.quote}"</p>
-                                    <div className="fw-testi-foot">
-                                        <div className="fw-testi-avatar" style={{ background: t.color }}>{t.initials}</div>
-                                        <div>
-                                            <div className="fw-testi-name">{t.name}</div>
-                                            <div className="fw-testi-role">{t.role}</div>
+
+                        <div
+                            className="fw-testi-slider"
+                            onMouseEnter={() => setTestiPaused(true)}
+                            onMouseLeave={() => setTestiPaused(false)}
+                        >
+                            <div className="fw-testi-track" ref={testiTrackRef}>
+                                {visibleTestimonials.map((t) => (
+                                  <div key={t.name} className="fw-testi-card">
+                                        <div className="fw-testi-stars">★★★★★</div>
+                                        <p className="fw-testi-quote">"{t.quote}"</p>
+                                        <div className="fw-testi-foot">
+                                            <div className="fw-testi-avatar" style={{ background: t.color }}>{t.initials}</div>
+                                            <div>
+                                                <div className="fw-testi-name">{t.name}</div>
+                                                <div className="fw-testi-role">{t.role}</div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
+                                ))}
+                            </div>
+
+                            <div className="fw-testi-controls">
+                                <button className="fw-testi-arrow" onClick={() => slideTesti(-1)} aria-label="Previous">←</button>
+                                <button className="fw-testi-arrow" onClick={() => slideTesti(1)} aria-label="Next">→</button>
+                            </div>
                         </div>
                     </div>
                 </section>
