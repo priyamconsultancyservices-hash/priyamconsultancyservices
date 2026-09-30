@@ -10,14 +10,96 @@ import '../../css/landing-page.css';
    navy / orange visual theme and component pattern.
    ============================================================ */
 
+
 function SEOHead() {
+    const pageUrl = "https://www.priyamconsultancy.com/landing-page/website-development-services-coimbatore/";
+    const imageUrl = "https://www.priyamconsultancy.com/img/website-development.png";
+
     return (
         <Head>
-            <title>Website Development Services in Coimbatore | PCS</title>
-            <meta
-                name="description"
-                content="Static, custom, e-commerce, Shopify and WooCommerce website development in Coimbatore. Tell us what you're building and we'll show you what you actually need."
-            />
+            {/* ── Primary Meta ── */}
+            <title>Website Development Company in Coimbatore-Priyam Consultancy</title>
+            <meta name="description" content="Looking for a website development company in Coimbatore?PCS builds fast, responsive and SEO-friendly websites designed to generate leads and grow your business." />
+            <meta name="keywords" content="website development company in coimbatore,website development service,website development company,ecommerce development company" />
+            <link rel="canonical" href="https://www.priyamconsultancy.com/landing-page/website-development-services-coimbatore/" />
+
+            {/* ── Open Graph ── */}
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content="Website Development Company in Coimbatore-Priyam Consultancy" />
+            <meta property="og:description" content="Looking for a website development company in Coimbatore?PCS builds fast, responsive and SEO-friendly websites designed to generate leads and grow your business." />
+            <meta property="og:url" content="https://www.priyamconsultancy.com/landing-page/website-development-services-coimbatore/" />
+            <meta property="og:image" content={imageUrl} />
+            <meta property="og:site_name" content="PCS Business Solution" />
+
+            {/* ── Twitter Card ── */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Website Development Company in Coimbatore-Priyam Consultancy" />
+            <meta name="twitter:description" content="Looking for a website development company in Coimbatore?PCS builds fast, responsive and SEO-friendly websites designed to generate leads and grow your business." />
+            <meta name="twitter:image" content={imageUrl} />
+
+            {/* ── Breadcrumb List Schema ── */}
+            <script type="application/ld+json">{`
+        {
+       "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {
+      "@type":"ListItem",
+      "position":1,
+      "item":{
+        "@id":"https://www.priyamconsultancy.com/",
+        "name":"Home"
+      }
+    },
+    {
+      "@type":"ListItem",
+      "position":2,
+      "item":{
+        "@id":"https://www.priyamconsultancy.com/landing-page/",
+        "name":"Landing Pages"
+      }
+    },
+    {
+      "@type":"ListItem",
+      "position":3,
+      "item":{
+        "@id":"https://www.priyamconsultancy.com/landing-page/website-development-services-coimbatore/",
+        "name":"Website Development Company in Coimbatore"
+      }
+    }
+  ]
+        }
+
+
+      `}</script>
+
+            {/* ── Organization Schema ── */}
+            <script type="application/ld+json">{`
+       {
+         "@context":"https://schema.org",
+ "@type":"Organization",
+ "name":"Priyam Consultancy Services",
+ "url":"https://www.priyamconsultancy.com/",
+ "logo":"https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+ "contactPoint":[
+   {
+     "@type":"ContactPoint",
+     "telephone":"+91 96774 44048",
+     "contactType":"customer support"
+   }
+ ],
+ "sameAs":[
+   "https://www.facebook.com/profile.php?id=61577125709962",
+   "https://www.linkedin.com/company/priyam-consultancy-services/",
+   "https://www.instagram.com/priyam_consultancy_services/",
+   "https://x.com/services91032",
+   "https://g.co/kgs/rdTYdi6"
+ ]
+
+        }
+
+      `}</script>
+
         </Head>
     );
 }
@@ -53,7 +135,7 @@ const GlobalStyles = () => (
       color:var(--fw-orange); display:inline-flex; align-items:center; gap:8px; margin-bottom:16px;
     }
     .fw-eyebrow::before{ content:''; width:6px; height:6px; border-radius:50%; background:var(--fw-orange); display:inline-block; }
-    .fw-btn{ display:inline-flex; align-items:center; gap:10px; padding:15px 28px; border-radius:999px; font-weight:600; font-size:15px; border:1px solid transparent; transition:all .25s ease; }
+    .fw-btn{ display:inline-flex; align-items:center; gap:10px; padding:15px 22px; border-radius:999px; font-weight:600; font-size:14.5px; border:1px solid transparent; transition:all .25s ease; }
     .fw-btn-fill{ background:var(--fw-orange); color:#fff; box-shadow:0 10px 24px -10px rgba(237,131,55,0.7); }
     .fw-btn-fill:hover{ transform:translateY(-2px); box-shadow:0 16px 30px -10px rgba(237,131,55,0.85); }
     .fw-btn-ghost{ background:transparent; color:var(--fw-navy); border-color:var(--fw-line); }
@@ -79,7 +161,7 @@ const GlobalStyles = () => (
     .fw-head h2 span{ color:var(--fw-orange);  }
 
     /* ---- HERO ---- */
-    .fw-hero{ padding:56px 0 60px; background:#004168; }
+    .fw-hero{ padding:56px 0 60px;background: #004168;  }
     .fw-hero-grid{ display:grid; grid-template-columns:1.05fr 0.95fr; gap:48px; align-items:center; }
     @media(max-width:980px){ .fw-hero-grid{ grid-template-columns:1fr; } }
     .fw-loc-pill{ display:inline-flex; align-items:center; gap:8px; border:1px solid rgba(255,255,255,0.3); border-radius:999px; padding:8px 16px; font-size:12px; color:rgba(255,255,255,0.85); margin-bottom:22px; font-weight:600; }
@@ -102,34 +184,44 @@ const GlobalStyles = () => (
     .fw-hero-hint{ font-size:13px; color:rgba(255,255,255,0.6); }
     .fw-build-on-label{ display:block; font-size:11px; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px; font-weight:700; }
     .fw-hero-img-wrap{ position:relative; }
-    .fw-hero-img-wrap img{ width:100%; height:auto; aspect-ratio:4/3.1; object-fit:cover;  }
+    .fw-hero-img-wrap img{ width:100%; height:auto; aspect-ratio:4.5/3.1; object-fit:cover;  }
     /* ---- BUILD ON (5-column grid, white logo tile with border) ---- */
-.fw-build-on-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
-@media(max-width:480px){ .fw-build-on-grid{ grid-template-columns:repeat(2,1fr); } }
+.fw-build-on-grid{
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:16px; align-items:center;
+}
+@media(max-width:480px){ .fw-build-on-grid{ gap:8px; } }
 
 .fw-build-on-cell{
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  gap:10px; padding:16px 8px; border-radius:14px;
-  background:#fff; border:1px solid var(--fw-line);
-  transition:all .2s ease; text-align:center;
+  display:flex; align-items:center; justify-content:center;
+  padding:0; background:transparent; border:none; border-radius:0;
+  box-shadow:none; transition:transform .25s ease;
 }
-.fw-build-on-cell:hover{ transform:translateY(-3px); border-color:var(--fw-orange-soft); box-shadow:0 12px 26px -14px rgba(0,0,0,0.35); }
+.fw-build-on-cell:hover{ transform:translateY(-4px); border:none; box-shadow:none; }
 
 .fw-build-on-dot{
-  width:46px; height:46px; border-radius:12px;
+ height:46px; border-radius:12px;
   display:flex; align-items:center; justify-content:center;
   font-size:14px; font-weight:800; color:#fff; flex-shrink:0; overflow:hidden;
-  border:1px solid var(--fw-line); box-sizing:border-box;
+  box-sizing:border-box;
 }
-.fw-build-on-dot.has-img{ background:#fff !important; padding:8px; }
-.fw-build-on-dot img{ width:100%; height:100%; object-fit:contain; display:block; }
+.fw-build-on-dot,
+.fw-build-on-dot.has-img{
+  width:100%; height:auto; background:transparent !important;
+  border-radius:0; overflow:visible; display:flex;
+  align-items:center; justify-content:center;
+}
+  .fw-build-on-dot img{
+  width:100%; height:auto; max-height:170px;
+  object-fit:contain; display:block;
+}
 
-.fw-build-on-cell span.label{ font-weight:600; font-size:12.5px; color:var(--fw-navy-deep); white-space:normal; line-height:1.3; }
+.fw-build-on-cell span.label{ display:none; }
 
     /* ---- CLIENTS MARQUEE ---- */
     .fw-clients-label{ text-align:center; font-size:35px; color:#000;  margin-bottom:40px; font-weight:600;FONT-FAMILY: 'Poppins', sans-serif; }
     .fw-marquee{ overflow:hidden; }
-    .fw-marquee-track{ display:flex; gap:40px; width:max-content; animation:fw-scroll 32s linear infinite; }
+    .fw-marquee-track{ display:flex; gap:65px; width:max-content; animation:fw-scroll 32s linear infinite; }
     @keyframes fw-scroll{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
     .fw-client-logo{ display:flex; align-items:center; gap:8px; flex-shrink:0; }
     .fw-client-logo .mark{ width:28px; height:28px; border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:11px; font-weight:800; }
@@ -156,7 +248,7 @@ const GlobalStyles = () => (
     .fw-tech-tile .ic.has-img{ background:#f2f4f8 !important; padding:5px; box-sizing:border-box; }
     .fw-tech-tile .ic img{ width:100%; height:100%; object-fit:contain; display:block; }
     .fw-tech-tile .lbl{ font-size:10px; text-align:center; color:var(--fw-text-mid); font-weight:600; line-height:1.3; }
-    @media(max-width:560px){ .fw-stack-node{ gap:14px; } .fw-stack-node .marker{ width:46px; height:46px; } .fw-stack-flow::before{ left:22px; } }
+    @media(max-width:560px){.fw-clients-label {font-size:25px;} .fw-stack-node{ gap:14px; } .fw-stack-node .marker{ width:46px; height:46px; } .fw-stack-flow::before{ left:22px; } }
     /* personalized state */
     .fw-stack-flow.personalized::before{ display:none; }
     .fw-stack-flow.personalized .fw-stack-node{ display:none; opacity:0.5; padding:14px 0; }
@@ -178,9 +270,12 @@ const GlobalStyles = () => (
     .fw-browser-bar{ display:flex; align-items:center; gap:10px; padding:12px 16px; background:var(--fw-paper); border-bottom:1px solid var(--fw-line); }
     .fw-browser-bar .dots{ display:flex; gap:6px; }
     .fw-browser-bar .dots span{ width:9px; height:9px; border-radius:50%; background:var(--fw-line); }
-    .fw-browser-bar .url{ font-size:12px; color:var(--fw-text-lo); margin-left:6px; }
-    .fw-browser-body{ min-height:280px; padding:0; overflow:hidden; background:var(--fw-paper); }
-    .fw-browser-body img{ width:100%; height:100%; min-height:280px; object-fit:cover; display:block; }
+    .fw-browser-bar .url{     font-size: 14px;
+    color: #ed8337;
+    font-weight: 500;
+    margin-left: 6px;}
+.fw-browser-body{ height:360px; padding:0; overflow:hidden; background:var(--fw-paper); }
+.fw-browser-body img{ width:100%; height:100%; object-fit:cover; object-position:top; display:block; }
     .fw-showcase-meta-card{ background:#fff; border:1px solid var(--fw-line); border-radius:var(--fw-radius-l); padding:30px 28px; box-shadow:0 24px 54px -30px rgba(0,65,104,0.3); }
     .fw-m-industry{ font-size:12px; letter-spacing:0.1em; color:var(--fw-orange); font-weight:700; margin-bottom:10px;    font-family: 'Poppins'; }
     .fw-showcase-meta h3{ font-size:22px; margin-bottom:8px; color:var(--fw-navy-deep); }
@@ -191,6 +286,9 @@ const GlobalStyles = () => (
     font-weight: 600;}
     .fw-func-list div{ position:relative; padding-left:22px; margin-bottom:10px; font-size:14.5px; color:var(--fw-navy-deep);    font-family: 'Poppins'; }
     .fw-func-list div::before{ content:'✓'; position:absolute; left:0; color:var(--fw-orange); font-weight:800; }
+    @media(max-width:900px){
+  .fw-browser-body{ height:260px; }
+}
 
     /* ---- FIT CARDS ---- */
     .fw-fit-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
@@ -285,6 +383,39 @@ const GlobalStyles = () => (
     .fw-bp-cta{ display:block; text-align:center; margin-top:12px; padding:9px; border-radius:999px; background:var(--fw-orange); color:#fff; font-size:12.5px; font-weight:700; cursor:pointer; border:none; width:100%; }
     @media(max-width:640px){ .fw-blueprint{ left:16px; right:16px; width:auto; } }
 
+
+    /* ---- PARTNER BADGES ---- */
+.fw-partner-section{ padding:0 0 80px; }
+@media(max-width:768px){ .fw-partner-section{ padding:0 0 56px; } }
+.fw-partner-card{
+  background:#eef3fc; border:1px solid #dde5f3; border-radius:28px;
+  padding:44px 44px;
+}
+.fw-partner-grid{ display:grid; grid-template-columns:repeat(4,1fr); }
+.fw-partner-cell{
+  display:flex; align-items:center; justify-content:center;
+  min-height:163px; padding:24px 20px;
+  border-right:1px solid rgba(0,65,104,0.1);
+  border-bottom:1px solid rgba(0,65,104,0.1);
+}
+.fw-partner-cell:nth-child(4n){ border-right:none; }
+.fw-partner-cell:nth-child(n+5){ border-bottom:none; }
+.fw-partner-cell img{
+  max-width:100%; max-height:84px; width:auto; height:auto;
+  object-fit:contain; display:block;
+}
+@media(max-width:900px){
+  .fw-partner-card{ padding:20px 16px; border-radius:20px; }
+  .fw-partner-grid{ grid-template-columns:repeat(2,1fr); }
+  .fw-partner-cell{ min-height:120px; padding:18px 12px; border-right:1px solid rgba(0,65,104,0.1); border-bottom:1px solid rgba(0,65,104,0.1); }
+  .fw-partner-cell:nth-child(2n){ border-right:none; }
+  .fw-partner-cell:nth-child(4n){ border-right:none; }
+  .fw-partner-cell:nth-child(n+5){ border-bottom:1px solid rgba(0,65,104,0.1); }
+  .fw-partner-cell:nth-child(n+7){ border-bottom:none; }
+  .fw-partner-cell img{ max-height:60px; }
+}
+
+
     /* ---- LEAD MODAL ---- */
     .fw-lead-overlay{ position:fixed; inset:0; background:rgba(13,31,60,0.55); z-index:900; display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; pointer-events:none; transition:opacity .25s ease; }
     .fw-lead-overlay.show{ opacity:1; pointer-events:auto; }
@@ -319,31 +450,71 @@ const HERO_CHOICES = [
 ];
 
 const BUILD_ON = [
-    { name: "Shopify", short: "S", color: "#95BF47", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/shopify.svg" },
-    { name: "WooCommerce", short: "Wc", color: "#96588A", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/woocommerce.svg" },
-    { name: "Google", short: "G", color: "#4285F4", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" },
-    { name: "Meta", short: "M", color: "#0467DF", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/meta.svg" },
-    { name: "WordPress", short: "W", color: "#21759B", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
-    { name: "Razorpay", short: "R", color: "#0C2451", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/razorpay.svg" },
-    { name: "Razorpay", short: "R", color: "#0C2451", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/razorpay.svg" },
-    { name: "Razorpay", short: "R", color: "#0C2451", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/razorpay.svg" },
+    { name: "360 kovai", short: "G", color: "#4285F4", img: "/img/landing-page/hero-img-1.webp" },
+    { name: "verified agency", short: "G", color: "#4285F4", img: "/img/landing-page/hero-img-2.webp" },
+    { name: "google review", short: "G", color: "#4285F4", img: "/img/landing-page/hero-img-3.webp" },
 
+
+];
+
+const PARTNER_BADGES = [
+    { name: "Meta Business Partner", img: "/img/landing-page/meta-ad.webp" },
+    { name: "Shopify Partner", img: "/img/landing-page/shopify.webp" },
+    { name: "Microsoft Partner", img: "/img/landing-page/microsoft.webp" },
+    { name: "Odoo Official Partner", img: "/img/landing-page/odoo.webp" },
+    { name: "Google Partner", img: "/img/landing-page/google-partner.webp" },
+    { name: "Google Reviews 4.9/5", img: "/img/landing-page/google-review.webp" },
+    { name: "Verified Agency DesignRush", img: "/img/landing-page/verified-agency.webp" },
+    { name: "360 Kovai Verified Agency", img: "/img/landing-page/360-kovai.webp" },
 ];
 
 const CLIENT_MARQUEE_LOGOS = [
-    { name: "Tactive", img: "/img/landing-page/client-slide-1.webp" },
-    { name: "URCTS", img: "/img/landing-page/client-slide-2.webp" },
-    { name: "ZKY", img: "/img/landing-page/client-slide-3.webp" },
-    { name: "Analytix Hub", img: "/img/landing-page/client-slide-4.webp" },
-    { name: "Baltimore Health Analytics", img: "/img/landing-page/client-slide-5.webp" },
-    { name: "Sterlo", img: "/img/landing-page/client-slide-6.webp" },
-    { name: "SterloBuild", img: "/img/landing-page/client-slide-7.webp" },
-    { name: "SterloCare", img: "/img/landing-page/client-slide-8.webp" },
-    { name: "Client", img: "/img/landing-page/client-slide-9.webp" },
-    { name: "Client", img: "/img/landing-page/client-slide-10.webp" },
-    { name: "Client", img: "/img/landing-page/client-slide-11.webp" },
-    { name: "Client", img: "/img/landing-page/client-slide-12.webp" },
+    { name: "Tactive", img: "/img/landing-page/clients/client-slide-1.webp" },
+    { name: "URCTS", img: "/img/landing-page/clients/client-slide-2.webp" },
+    { name: "ZKY", img: "/img/landing-page/clients/client-slide-3.webp" },
+    { name: "Analytix Hub", img: "/img/landing-page/clients/client-slide-4.webp" },
+    { name: "Baltimore Health Analytics", img: "/img/landing-page/clients/client-slide-5.webp" },
+    { name: "Sterlo", img: "/img/landing-page/clients/client-slide-6.webp" },
+    { name: "SterloBuild", img: "/img/landing-page/clients/client-slide-7.webp" },
+    { name: "SterloCare", img: "/img/landing-page/clients/client-slide-8.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-9.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-10.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-11.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-12.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-13.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-14.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-15.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-16.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-17.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-18.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-19.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-20.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-21.webp" },
+    { name: "Client", img: "/img/landing-page/clients/client-slide-22.webp" },
+
 ];
+
+const svgIcon = (inner, color = "#004168") =>
+    "data:image/svg+xml;utf8," +
+    encodeURIComponent(
+        `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="${color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${inner}</svg>`
+    );
+
+const ICONS = {
+    order: svgIcon(`<path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="m7.5 4.27 9 5.15"/>`),
+    inventory: svgIcon(`<rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/>`),
+    shipment: svgIcon(`<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/>`),
+    responsive: svgIcon(`<path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"/><path d="M10 19v-3.96 3.15"/><path d="M7 19h5"/><rect width="6" height="10" x="16" y="12" rx="2"/>`),
+    rocket: svgIcon(`<path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>`),
+    payu:
+        "data:image/svg+xml;utf8," +
+        encodeURIComponent(
+            `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><text x="12" y="15" text-anchor="middle" font-family="Arial, sans-serif" font-weight="800" font-size="9" fill="#00457C">Pay<tspan fill="#A6C307">U</tspan></text></svg>`
+        ),
+    layout: svgIcon(`<rect width="7" height="9" x="3" y="3" rx="1.5"/><rect width="7" height="5" x="14" y="3" rx="1.5"/><rect width="7" height="9" x="14" y="12" rx="1.5"/><rect width="7" height="5" x="3" y="16" rx="1.5"/>`),
+
+};
+
 
 const STACK_NODES = [
     {
@@ -352,9 +523,8 @@ const STACK_NODES = [
         tags: [
             { label: "Elementor", ic: "E", bg: "#5750E8", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/elementor.svg" },
             { label: "WordPress", ic: "W", bg: "#21759B", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
-            { label: "Responsive Layouts", ic: "R", bg: "#39C88E", dark: true },
-            { label: "Quick Launch", ic: "Q", bg: "#F2A93B", dark: true },
-        ],
+            { label: "Responsive Layouts", ic: "R", img: ICONS.layout },
+            { label: "Quick Launch", ic: "Q", img: ICONS.rocket },],
     },
     {
         key: "design", num: "02", title: "Design",
@@ -362,7 +532,7 @@ const STACK_NODES = [
         tags: [
             { label: "Figma", ic: "F", bg: "#0D1117", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" },
             { label: "UI/UX", ic: "UX", bg: "#5750E8" },
-            { label: "Responsive Design", ic: "R", bg: "#39C88E", dark: true },
+            { label: "Responsive Design", ic: "R", img: ICONS.responsive }, ,
         ],
     },
     {
@@ -381,8 +551,7 @@ const STACK_NODES = [
             { label: "jQuery", ic: "jQ", bg: "#0769AD", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" },
             { label: "Next.js", ic: "N▲", bg: "#111111", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
             { label: "Python", ic: "Py", bg: "#3776AB", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-            { label: "Laravel", ic: "L", bg: "#FF2D20", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg" },
-            { label: "GitHub", ic: "gh", bg: "#24292F", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+            { label: "Laravel", ic: "L", bg: "#FF2D20", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" }, { label: "GitHub", ic: "gh", bg: "#24292F", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
             { label: "WordPress", ic: "W", bg: "#21759B", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
             { label: "Docusaurus", ic: "D", bg: "#1B1B1D", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/docusaurus.svg" },
         ],
@@ -397,21 +566,21 @@ const STACK_NODES = [
             { label: "Custom Store", ic: "C", bg: "#5750E8" },
             { label: "Razorpay", ic: "R", bg: "#072654", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/razorpay.svg" },
             { label: "Stripe", ic: "S", bg: "#635BFF", img: "https://cdnjs.cloudflare.com/ajax/libs/simple-icons/15.16.0/stripe.svg" },
-            { label: "PayU", ic: "P", bg: "#00457C" },
-            { label: "Order Tracking", ic: "O", bg: "#F2A93B", dark: true },
-            { label: "Inventory Tracking", ic: "I", bg: "#39C88E", dark: true },
-            { label: "Shipment Tracking", ic: "A", bg: "#4285F4" },
+            { label: "PayU", ic: "P", img: ICONS.payu },
+            { label: "Order Tracking", ic: "O", img: ICONS.order },
+            { label: "Inventory Tracking", ic: "I", img: ICONS.inventory },
+            { label: "Shipment Tracking", ic: "A", img: ICONS.shipment },
         ],
     },
 ];
 
 const SHOWCASE_DATA = {
-    static: { label: "Static", url: "yourbrand.in", industry: "STATIC WEBSITE", title: "Single-page brand website", type: "Static Website Development", func: ["One-page layout, live in about a week", "Built-in contact & enquiry form", "Fast-loading, mobile-first by default"], img: "/img/landing-page/static-website.webp", fit: ["Static Website", "Website Design"] },
-    business: { label: "Business", url: "yourbusiness.in", industry: "BUSINESS", title: "Lead-generating business website", type: "Dynamic Website Development", func: ["Clear service pages built to convert enquiries", "Click-to-WhatsApp & contact form on every page", "Structured for local SEO"], img: "/img/landing-page/website-design.webp", fit: ["Website Design", "Custom Website"] },
-    woocommerce: { label: "WooCommerce", url: "shopyourbrand.in", industry: "WOOCOMMERCE", title: "Self-owned WooCommerce store", type: "Ecommerce Website Development", func: ["Full catalog with variants and filters", "Razorpay checkout, tested end to end", "Inventory & order tracking built in"], img: "/img/landing-page/woo-commerce.webp", fit: ["WooCommerce Store", "Custom E-Commerce", "Shopify Store"] },
-    manufacture: { label: "Manufacture", url: "industrialworks.co.in", industry: "MANUFACTURING", title: "B2B manufacturer catalog site", type: "Custom Website Development", func: ["Product spec sheets, downloadable as PDF", "Bulk enquiry form routed to sales", "Plant & certification showcase"], img: "/img/landing-page/custom-website-development.webp", fit: ["Custom Website", "Static Website"] },
-    construction: { label: "Construction", url: "buildright.co.in", industry: "CONSTRUCTION", title: "Project-portfolio construction site", type: "Custom Website Development", func: ["Completed-project gallery with filters", "Quote-request form for new enquiries", "Timeline & capability showcase"], img: "/img/landing-page/ecommerce-development.webp", fit: ["Custom Website", "Website Design"] },
-    custom: { label: "Custom", url: "launchstack.io", industry: "CUSTOM BUILD", title: "Fully bespoke web application", type: "Custom Website Development", func: ["Custom features & third-party integrations", "Dashboards & workflows built around you", "Architecture planned before a line of code"], img: "/img/landing-page/shopify.webp", fit: ["Custom Website", "Custom E-Commerce"] },
+    static: { label: "Static", url: "https://www.sterlobuild.com/", industry: "STATIC WEBSITE", title: "Product landing page website", type: "Static Website Development", func: ["Clean, fast-loading landing page layout", "Clear \"Schedule a Demo\" call-to-action", "Mobile-first, SEO-ready by default"], img: "/img/landing-page/static-website-sterlo.webp", fit: ["Static Website", "Website Design"] },
+    business: { label: "Business", url: "https://www.greenstarexports.com/", industry: "BUSINESS", title: "Lead-generating business website", type: "Dynamic Website Development", func: ["Product pages built to convert enquiries", "Export & shipping details, clearly presented", "Structured for search and global reach"], img: "/img/landing-page/website-design-greenstar.webp", fit: ["Website Design", "Custom Website"] },
+    woocommerce: { label: "WooCommerce", url: "https://feralroots.in/", industry: "WOOCOMMERCE", title: "Online store built to sell", type: "Ecommerce Website Development", func: ["Product catalog with offers & sale pricing", "Cart, secure checkout & payment gateway", "Customer accounts & order tracking"], img: "/img/landing-page/woocommerce-feral-roots.webp", fit: ["WooCommerce Store", "Custom E-Commerce", "Shopify Store"] },
+    manufacture: { label: "Manufacture", url: "https://www.vatcommtechnologies.com/", industry: "MANUFACTURING", title: "Product-led manufacturer website", type: "Custom Website Development", func: ["Organised product catalog by category", "Industry-wise sections & brand partner showcase", "\"Request a Quote\" enquiry built in"], img: "/img/landing-page/custom-website-vatcomm.webp", fit: ["Custom Website", "Static Website"] },
+    construction: { label: "Construction", url: "https://www.urcts.in/", industry: "CONSTRUCTION", title: "Project-showcase construction website", type: "Custom Website Development", func: ["Project galleries with clear service pages", "Enquiry forms & click-to-call on every page", "Credibility built with milestones & testimonials"], img: "/img/landing-page/ecommerce-development-vriksha.webp", fit: ["Custom Website", "Website Design"] },
+    custom: { label: "Custom", url: "https://www.tgcc.com.my/", industry: "CUSTOM BUILD", title: "Feature-rich corporate training website", type: "Custom Website Development", func: ["Program listings with public & in-house categories", "Team, client & testimonial sections", "Custom enquiry flow and program calendar"], img: "/img/landing-page/custom-website-tgcc.webp", fit: ["Custom Website", "Custom E-Commerce"] },
 };
 
 const FIT_CARDS = [
@@ -1084,12 +1253,12 @@ export default function WebsiteQuizLandingPage() {
     }, [copy, selectedType]);
 
     // ---- Testimonials: always exactly 6 cards ----
-  const visibleTestimonials = useMemo(() => {
-    const groups = TESTIMONIAL_TYPES.map((k) => TESTIMONIALS.filter((t) => t.key === k));
-    const mixed = [];
-    for (let i = 0; i < 3; i++) groups.forEach((g) => g[i] && mixed.push(g[i]));
-    return mixed.slice(0, 6);
-}, []);
+    const visibleTestimonials = useMemo(() => {
+        const groups = TESTIMONIAL_TYPES.map((k) => TESTIMONIALS.filter((t) => t.key === k));
+        const mixed = [];
+        for (let i = 0; i < 3; i++) groups.forEach((g) => g[i] && mixed.push(g[i]));
+        return mixed.slice(0, 6);
+    }, []);
 
     const slideTesti = (dir) => {
         const el = testiTrackRef.current;
@@ -1242,7 +1411,7 @@ export default function WebsiteQuizLandingPage() {
                             </div>
 
                             <div>
-                                <span className="fw-build-on-label">Built Using</span>
+
                                 <div className="fw-build-on-grid">
                                     {BUILD_ON.map((b, i) => (
                                         <div className="fw-build-on-cell" key={`${b.name}-${i}`}>
@@ -1257,7 +1426,7 @@ export default function WebsiteQuizLandingPage() {
                         </div>
 
                         <div className="fw-hero-img-wrap">
-                            <img src="/img/landing-page/banner.webp" alt="Website preview" />
+                            <img src="/img/landing-page/woocommerce-development-banner.webp" alt="Website preview" />
                         </div>
                     </div>
                 </section>
@@ -1265,13 +1434,13 @@ export default function WebsiteQuizLandingPage() {
                 {/* CLIENTS STRIP */}
                 <section style={{ padding: "50px 0", borderTop: "1px solid var(--fw-line)", borderBottom: "1px solid var(--fw-line)" }}>
                     <div className="fw-wrap">
-                        <div className="fw-clients-label"><span style={{color: "rgb(237 131 55)"}}>Trusted by </span>Businesses Building in Coimbatore and Beyond</div>
+                        <div className="fw-clients-label"><span style={{ color: "rgb(237 131 55)" }}>Trusted by </span>Businesses Building in Coimbatore and Beyond</div>
                     </div>
                     <div className="fw-marquee">
                         <div className="fw-marquee-track">
                             {[...CLIENT_MARQUEE_LOGOS, ...CLIENT_MARQUEE_LOGOS].map((client, i) => (
                                 <div key={i} style={{ display: "flex", alignItems: "center", flexShrink: 0 }}>
-                                    <img src={client.img} alt={client.name} loading="lazy" style={{ height: 45, width: "auto", objectFit: "contain" }} />
+                                    <img src={client.img} alt={client.name} loading="lazy" style={{ height: 50, width: "110%", objectFit: "cover" }} />
                                 </div>
                             ))}
                         </div>
@@ -1293,6 +1462,23 @@ export default function WebsiteQuizLandingPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* PARTNER BADGES */}
+                <section className="fw-partner-section">
+                    <div className="fw-wrap">
+                        <div className="fw-partner-card">
+                            <div className="fw-partner-grid">
+                                {PARTNER_BADGES.map((p) => (
+                                    <div className="fw-partner-cell" key={p.name}>
+                                        <img src={p.img} alt={p.name} loading="lazy" />
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
 
                 {/* STACK */}
                 <section className="fw-section fw-navy-section" id="stack">
@@ -1352,11 +1538,24 @@ export default function WebsiteQuizLandingPage() {
                             <div className="fw-browser">
                                 <div className="fw-browser-bar">
                                     <div className="dots"><span /><span /><span /></div>
-                                    <div className="url">{showcase.url}</div>
+                                    <a
+                                        className="url"
+                                        href={showcase.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {showcase.url}
+                                    </a>
                                 </div>
-                                <div className="fw-browser-body">
+                                <a
+                                    className="fw-browser-body"
+                                    href={showcase.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={{ display: "block" }}
+                                >
                                     <img src={showcase.img} alt={showcase.title} />
-                                </div>
+                                </a>
                             </div>
                             <div className="fw-showcase-meta-card">
                                 <div className="fw-m-industry">{showcase.industry}</div>
@@ -1457,7 +1656,7 @@ export default function WebsiteQuizLandingPage() {
                         >
                             <div className="fw-testi-track" ref={testiTrackRef}>
                                 {visibleTestimonials.map((t) => (
-                                  <div key={t.name} className="fw-testi-card">
+                                    <div key={t.name} className="fw-testi-card">
                                         <div className="fw-testi-stars">★★★★★</div>
                                         <p className="fw-testi-quote">"{t.quote}"</p>
                                         <div className="fw-testi-foot">
@@ -1562,8 +1761,8 @@ export default function WebsiteQuizLandingPage() {
                                     <button type="submit" className="fw-lm-submit">Send Enquiry →</button>
                                     {sendError && <p className="fw-lm-note" style={{ color: "#d64545" }}>Something went wrong sending that — please try again, or call us directly at +91 96774 44048.</p>}
                                     <p className="fw-lm-note">{planLocked
-                                            ? "Website type and plan are set from your selection. Submit and we'll get back to you within a day."
-                                            : "Website type is set from what you picked above. Choose a pricing plan, then submit — we'll get back to you within a day."}</p>
+                                        ? "Website type and plan are set from your selection. Submit and we'll get back to you within a day."
+                                        : "Website type is set from what you picked above. Choose a pricing plan, then submit — we'll get back to you within a day."}</p>
                                 </form>
                             ) : (
                                 <div className="fw-lm-success">
