@@ -184,7 +184,7 @@ const GlobalStyles = () => (
     .fw-hero-hint{ font-size:13px; color:rgba(255,255,255,0.6); }
     .fw-build-on-label{ display:block; font-size:11px; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:12px; font-weight:700; }
     .fw-hero-img-wrap{ position:relative; }
-    .fw-hero-img-wrap img{ width:100%; height:auto; aspect-ratio:4.5/3.1; object-fit:cover;  }
+    // .fw-hero-img-wrap img{ width:100%; height:auto; aspect-ratio:4.5/3.1; object-fit:cover;  }
     /* ---- BUILD ON (5-column grid, white logo tile with border) ---- */
 .fw-build-on-grid{
   display:grid; grid-template-columns:repeat(4,1fr);
@@ -416,6 +416,22 @@ const GlobalStyles = () => (
 }
 
 
+.fw-badge-row{
+  display:flex; grid-template-columns:repeat(4,1fr); justify-content:center; 
+  gap:12px; align-items:center; margin-bottom:24px; 
+}
+.fw-badge{ display:flex; justify-content:center; }
+.fw-badge img{
+  width:100%; max-width:auto;    max-height: 140px; object-fit:contain; display:block;
+}
+@media(max-width:980px){
+  .fw-badge-row{ margin-top:8px; }
+}
+@media(max-width:480px){
+  .fw-badge-row{ gap:6px; }
+  .fw-badge img{ max-width:110px; }
+}
+
     /* ---- LEAD MODAL ---- */
     .fw-lead-overlay{ position:fixed; inset:0; background:rgba(13,31,60,0.55); z-index:900; display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; pointer-events:none; transition:opacity .25s ease; }
     .fw-lead-overlay.show{ opacity:1; pointer-events:auto; }
@@ -459,7 +475,7 @@ const BUILD_ON = [
 
 const PARTNER_BADGES = [
     { name: "Meta Business Partner", img: "/img/landing-page/meta-ad.webp" },
-    { name: "Shopify Partner", img: "/img/landing-page/shopify.webp" },
+    { name: "Shopify Partner", img: "/img/landing-page/client-logo-2.webp" },
     { name: "Microsoft Partner", img: "/img/landing-page/microsoft.webp" },
     { name: "Odoo Official Partner", img: "/img/landing-page/odoo.webp" },
     { name: "Google Partner", img: "/img/landing-page/google-partner.webp" },
@@ -707,6 +723,13 @@ const PERSONALIZE_MAP = {
         journeyBanner: <><b>You bring the requirements.</b> We'll handle the custom build.</>,
     },
 };
+
+
+const HERO_BADGES = [
+    { label: "4.9 Google Reviews", img: "/img/landing-page/hero-img-1.webp" },
+    { label: "15+ Technologies & Platforms", img: "/img/landing-page/hero-img-2.webp" },
+    { label: "10+ Industries Served", img: "/img/landing-page/hero-img-3.webp" },
+];
 
 /* ============================================================
    SITE HEADER
@@ -1409,25 +1432,22 @@ export default function WebsiteQuizLandingPage() {
                                     {selectedType ? `// selected: ${selectedType}` : "// select an option above"}
                                 </span>
                             </div>
-
                             <div>
-
-                                <div className="fw-build-on-grid">
-                                    {BUILD_ON.map((b, i) => (
-                                        <div className="fw-build-on-cell" key={`${b.name}-${i}`}>
-                                            <span className={`fw-build-on-dot${b.img ? " has-img" : ""}`} style={{ background: b.img ? undefined : b.color }}>
-                                                {b.img ? <img src={b.img} alt={b.name} /> : b.short}
-                                            </span>
-                                            <span className="label">{b.name}</span>
-                                        </div>
-                                    ))}
-                                </div>
                             </div>
                         </div>
 
-                        <div className="fw-hero-img-wrap">
-                            <img src="/img/landing-page/woocommerce-development-banner.webp" alt="Website preview" />
-                        </div>
+                      <div className="fw-hero-img-wrap">
+    {/* NEW: Badges above the banner image */}
+    <div className="fw-badge-row">
+        {HERO_BADGES.map((b) => (
+            <div className="fw-badge" key={b.label}>
+                <img src={b.img} alt={b.label} loading="lazy" />
+            </div>
+        ))}
+    </div>
+
+    <img src="/img/landing-page/woocommerce-development-banner.webp" alt="Website preview" />
+</div>
                     </div>
                 </section>
 
