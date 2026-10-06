@@ -438,7 +438,7 @@ function SeoSmallBusinessIndiaGuide() {
             <nav className="tseo-breadcrumb">
                 <Link to="/">Home</Link>
                 <span className="sep">/</span>
-                <Link to="/blog">Resources</Link>
+                <Link to="https://www.priyamconsultancy.com/blog/">Resources</Link>
                 <span className="sep">/</span>
                 <Link to="/hr-services">HR</Link>
                 <span className="sep">/</span>

@@ -285,7 +285,7 @@ function PerformanceMarketing() {
                 <meta name="description" content={PAGE_DESC} />
                 <meta
                     name="keywords"
-                    content="real estate crm,customer relationship management real estate,crm in real estate industry, real estate crm software,crm software for real estate industry, real estate crm software,crm software for real estate industry, best real estate crm,"
+                    content="performance marketing metrics,best performance marketing agencies,performance marketing, performance marketing agencies,performance marketing companies,performance marketing services,google ads performance marketing"
                 />
                 <link rel="canonical" href={PAGE_URL} />
 
@@ -449,7 +449,7 @@ function PerformanceMarketing() {
             <nav className="tseo-breadcrumb">
                 <Link to="/">Home</Link>
                 <span className="sep">/</span>
-                <Link to="/blog">Resources</Link>
+                <Link to="https://www.priyamconsultancy.com/blog/">Resources</Link>
                 <span className="sep">/</span>
                 <Link to="/performance-marketing">Performance Marketing</Link>
                 <span className="sep">/</span>
