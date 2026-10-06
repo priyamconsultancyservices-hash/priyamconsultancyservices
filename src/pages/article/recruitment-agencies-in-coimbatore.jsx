@@ -38,6 +38,7 @@ const ARTICLES = [
         date: "2026-08-04",
     },
   { title: "Website Development Cost in India (2026): Real Ranges by Type, Not Guesswork", href: "/article/website-development-cost-in-india", date: "2026-09-01" },
+  { title: "What Is Performance Marketing? A Complete Guide (2026)", href: "/article/what-is-performance-marketing", date: "2026-10-06" },
 
 ];
 

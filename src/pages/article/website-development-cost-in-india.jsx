@@ -91,6 +91,8 @@ const STATS = [
 const ARTICLES = [
   { title: "Website Development Cost in India (2026): Real Ranges by Type, Not Guesswork", href: "/article/website-development-cost-in-india", date: "2026-09-01" },
   { title: "SEO for Small Businesses in India: 10 Proven Strategies That Actually Work", href: "/article/seo-strategies-for-small-businesses-india", date: "2026-08-04" },
+  { title: "What Is Performance Marketing? A Complete Guide (2026)", href: "/article/what-is-performance-marketing", date: "2026-10-06" },
+
 ];
 
 const RECENT_ARTICLES = [...ARTICLES].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 4);
@@ -362,7 +364,7 @@ function WebsiteDevelopmentCostIndia() {
 #cta-final {
 background: linear-gradient(120deg, #004168, #0D1F3C 110%);
       }
-        .tseo-cta-banner{ background:linear-gradient(120deg,#ED8337,#0D1F3C 110%); color:#FFFDFB; border-radius:14px; padding:36px 34px; margin:48px 0; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+        .tseo-cta-banner{ background:linear-gradient(120deg, #004168, #0D1F3C 110%); color:#FFFDFB; border-radius:14px; padding:36px 34px; margin:48px 0; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
         .tseo-cta-banner h3{ color:#fff; font-size:22px; margin-bottom:8px;}
         .tseo-cta-banner p{ color:#D9E6DE; font-size:14.5px; margin:0; }
         .tseo-cta-btn{ background:#ED8337; color:#2A1000; font-weight:700; padding:13px 24px; border-radius:10px; font-size:14px; white-space:nowrap; letter-spacing:.01em; transition:transform .15s ease; display:inline-block;}
