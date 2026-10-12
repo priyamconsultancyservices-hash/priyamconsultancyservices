@@ -36,8 +36,9 @@ const RELATED_ARTICLES_API =
 // whichever pages you want featured here — label is the text shown, href is the page link.
 const ARTICLES = [
   { title: "Website Development Cost in India (2026): Real Ranges by Type, Not Guesswork", href: "/article/website-development-cost-in-india", date: "2026-09-01" },
-    { title: "What Is Performance Marketing? A Complete Guide (2026)", href: "/article/what-is-performance-marketing", date: "2026-10-06" },
-  { title: "Recruitment Agencies in Coimbatore: A Complete Guide for Job Seekers", href: "/article/recruitment-agencies-in-coimbatore", date: "2026-08-04" },
+    { title: "What Is Performance Marketing? A Complete Guide (2026)", href: "/article/best-performance-marketing-agencies", date: "2026-10-06" },
+    { title: "E-Commerce Website Development: A Complete Guide to Features, Platforms, and Strategies", href: "/article/ecommerce-website-development-complete-guide", date: "2026-10-09" },
+
 ];
 
 const RECENT_ARTICLES = [...ARTICLES]

@@ -186,8 +186,8 @@ const TRENDS = [
 ];
 
 const ARTICLES = [
-    { title: "What Is Performance Marketing? A Complete Guide (2026)", href: "/article/what-is-performance-marketing", date: "2026-10-06" },
     { title: "Website Development Cost in India (2026): Real Ranges by Type, Not Guesswork", href: "/article/website-development-cost-in-india", date: "2026-09-01" },
+    { title: "E-Commerce Website Development: A Complete Guide to Features, Platforms, and Strategies", href: "/article/ecommerce-website-development-complete-guide", date: "2026-10-09" },
     { title: "SEO for Small Businesses in India: 10 Proven Strategies That Actually Work", href: "/article/seo-strategies-for-small-businesses-india", date: "2026-08-04" },
 ];
 
@@ -210,8 +210,8 @@ const HUB_LINKS = [
 const PAGE_TITLE = "Best performance marketing agencies | Complete Guide";
 const PAGE_DESC =
     "Learn what performance marketing is, how it works, key channels, metrics, tracking methods, and proven strategies to improve ROI and scale campaigns.";
-const PAGE_URL = "https://www.priyamconsultancy.com/article/what-is-performance-marketing";
-const PAGE_IMG = "https://www.priyamconsultancy.com/img/article/what-is-performance-marketing.webp";
+const PAGE_URL = "https://www.priyamconsultancy.com/article/best-performance-marketing-agencies";
+const PAGE_IMG = "https://www.priyamconsultancy.com/img/article/best-performance-marketing-agencies.webp";
 
 // Reusable bold-lead bullet list
 const BoldList = ({ items }) => (
