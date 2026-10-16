@@ -63,6 +63,13 @@ const config = {
       innerHTML: `!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"XMtNyPgxjF2CW7VTrDdxFn",debug:true});`,
     },
 
+    // OpenAI Pixel - lead_created (fires on any form submit)
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `document.addEventListener('submit',function(e){if(e.target&&e.target.tagName==='FORM'&&window.oaiq){oaiq("measure","lead_created",{type:"customer_action"});}},true);`,
+    },
+
     // Facebook Pixel
     {
       tagName: 'script', attributes: {}, innerHTML: `!function(f,b,e,v,n,t,s)

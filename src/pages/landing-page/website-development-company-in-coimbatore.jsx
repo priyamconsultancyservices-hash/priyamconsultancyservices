@@ -224,7 +224,7 @@ function HeroSection() {
                     src="/img/landing-page/banner.webp"
                     alt="Website Development Coimbatore"
                     className="hero-img"
-                    fetchpriority="high"
+                    fetchPriority="high"
                     decoding="async"
                 />
             </div>

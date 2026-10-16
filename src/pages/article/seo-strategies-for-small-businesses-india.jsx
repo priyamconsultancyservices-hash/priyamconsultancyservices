@@ -35,10 +35,9 @@ const RELATED_ARTICLES_API =
 // Popular Articles = your own site pages (not blog posts). Edit this list to match
 // whichever pages you want featured here — label is the text shown, href is the page link.
 const ARTICLES = [
+    {title:"What Is Recruitment in HR? Definition, Types, Process & Everything You Need to Know", href:"/article/recruitment-agencies-in-coimbatore", date:""},
   { title: "Website Development Cost in India (2026): Real Ranges by Type, Not Guesswork", href: "/article/website-development-cost-in-india", date: "2026-09-01" },
     { title: "What Is Performance Marketing? A Complete Guide (2026)", href: "/article/best-performance-marketing-agencies", date: "2026-10-06" },
-    { title: "E-Commerce Website Development: A Complete Guide to Features, Platforms, and Strategies", href: "/article/ecommerce-website-development-complete-guide", date: "2026-10-09" },
-
 ];
 
 const RECENT_ARTICLES = [...ARTICLES]
@@ -495,7 +494,9 @@ function SeoSmallBusinessIndiaGuide() {
 
                             </p>
                             <div className="tseo-hero-img" style={{ padding: 0 }}>
-                                <img src="/img/article/seo-for-small-business-in-india.webp" />
+                                <Link href="/article/seo-strategies-for-small-businesses-india">
+                                    <img src="/img/article/seo-for-small-business-in-india.webp" />
+                                </Link>
                             </div>
                         </div>
 

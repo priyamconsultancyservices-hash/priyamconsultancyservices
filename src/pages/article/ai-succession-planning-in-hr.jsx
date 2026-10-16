@@ -95,7 +95,7 @@ const FAQS = [
 const ARTICLES = [
     { title: "Website Development Cost in India (2026): Real Ranges by Type, Not Guesswork", href: "/article/website-development-cost-in-india", date: "2026-09-01" },
     { title: "E-Commerce Website Development: A Complete Guide to Features, Platforms, and Strategies", href: "/article/ecommerce-website-development-complete-guide", date: "2026-10-09" },
-    { title: "SEO for Small Businesses in India: 10 Proven Strategies That Actually Work", href: "/article/seo-strategies-for-small-businesses-india", date: "2026-08-04" },
+    {title:"What Is Recruitment in HR? Definition, Types, Process & Everything You Need to Know", href:"/article/recruitment-agencies-in-coimbatore", date:""},
 ];
 
 const RECENT_ARTICLES = [...ARTICLES].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 4);
@@ -431,8 +431,13 @@ function AISuccessionPlanning() {
                             <h1>{PAGE_H1}</h1>
 
                             <div className="tseo-hero-img">
-                                <img src="/img/article/ai-succession-planning-hr.webp" alt="How AI makes succession planning in HR faster, fairer, and more accurate" />
-                            </div>
+  <Link href="/article/ai-succession-planning-in-hr">
+    <img
+      src="/img/article/ai-succession-planning-hr.webp"
+      alt="How AI makes succession planning in HR faster, fairer, and more accurate"
+    />
+  </Link>
+</div>
                         </div>
 
                         <section id="intro">

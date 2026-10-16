@@ -463,7 +463,9 @@ background: linear-gradient(120deg, #004168, #0D1F3C 110%);
                 With over 950 million internet users, India is one of the fastest-growing digital markets in the world — and for most businesses, that growth starts with Google search. If you're not ranking, you're simply not being found.
               </p>
               <div className="tseo-hero-img" style={{ padding: 0 }}>
-                <img src="/img/article/article-website-development-cost.webp" />
+                <Link href="/article/website-development-cost-in-india">
+                  <img src="/img/article/article-website-development-cost.webp" />
+                </Link>
               </div>
             </div>
 

@@ -478,7 +478,9 @@ function SeoSmallBusinessIndiaGuide() {
                                 Recruitment is the process of identifying a hiring need, finding the right person for it, and bringing them successfully into the business. It's easy to think of this as just "posting a job and picking someone," but in practice, it spans everything from budgeting and planning before a role is even created, to attracting and evaluating the right candidates, through to a hire settling successfully into the team. Businesses that don't have this fully covered in-house often turn to HR services or one of the established <a href="/recruitment-services/"><span  style={{color: 'rgb(237 131 55)'}}>recruitment agencies </span></a> to manage the process properly.
                             </p>
                             <div className="tseo-hero-img" style={{ padding: 0 }}>
-                                <img src="/img/article/Article3.webp" />
+                                <Link href="/article/recruitment-agencies-in-coimbatore">
+                                    <img src="/img/article/Article3.webp" />
+                                </Link>
                             </div>
                         </div>
 

@@ -186,7 +186,7 @@ const TRENDS = [
 ];
 
 const ARTICLES = [
-    { title: "Website Development Cost in India (2026): Real Ranges by Type, Not Guesswork", href: "/article/website-development-cost-in-india", date: "2026-09-01" },
+    {title:"What Is Recruitment in HR? Definition, Types, Process & Everything You Need to Know", href:"/article/recruitment-agencies-in-coimbatore", date:""},
     { title: "E-Commerce Website Development: A Complete Guide to Features, Platforms, and Strategies", href: "/article/ecommerce-website-development-complete-guide", date: "2026-10-09" },
     { title: "SEO for Small Businesses in India: 10 Proven Strategies That Actually Work", href: "/article/seo-strategies-for-small-businesses-india", date: "2026-08-04" },
 ];
@@ -486,7 +486,9 @@ function PerformanceMarketing() {
                             <h1>What Is Performance Marketing? A Complete Guide to How It Works, Channels, Metrics, and Strategies</h1>
 
                             <div className="tseo-hero-img">
-                                <img src="/img/article/what-is-performance-marketing.webp" alt="What is performance marketing" />
+                                  <Link href="/article/best-performance-marketing-agencies">
+                                        <img src="/img/article/what-is-performance-marketing.webp" alt="What is performance marketing" />
+                                </Link>
                             </div>
                         </div>
 
