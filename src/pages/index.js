@@ -646,6 +646,9 @@ const CLIENT_MARQUEE_LOGOS = [
     { name: "Microsoft", img: "/img/landing-page/client-slide-18.webp" },
     { name: "Microsoft", img: "/img/landing-page/client-slide-19.webp" },
     { name: "Microsoft", img: "/img/landing-page/client-slide-20.webp" },
+    { name: "Greenstar", img: "/img/landing-page/client-slide-22.webp" },
+    { name: "orvix", img: "/img/landing-page/orvix-logo.webp" },
+
 ];
 
 function ClientLogosMarquee() {

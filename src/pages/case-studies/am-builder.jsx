@@ -171,54 +171,54 @@ export default function CaseStudy() {
                 <span /><h3>Recent Case Studies</h3>
               </div>
               
-        <a className="recent-item" href="/case-studies/sterlocare">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/urcts">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-dm">
-              <span className="dot" />Digital Marketing
-            </div>
-            <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/feral-roots">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-seo">
-              <span className="dot" />SEO
-            </div>
-            <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
-        <a className="recent-item" href="/case-studies/am-builder">
-          <div className="recent-thumb">
-            <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
-          </div>
-          <div className="recent-info">
-            <div className="recent-badge cat-badge bdg-smm">
-              <span className="dot" />Social Media
-            </div>
-            <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
-          </div>
-          <div className="recent-arrow">→</div>
-        </a>
+              <a className="recent-item" href="/case-studies/tactive">
+                <div className="recent-thumb">
+                  <img src="/img/case-study-tactive.webp" alt="From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand" loading="lazy" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-ppc">
+                    <span className="dot" />Performance Marketing
+                  </div>
+                  <div className="recent-title">From Zero Lead Pipeline to 35 Cr+ Qualified Pipeline for a Construction Tech ERP Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/sterlo">
+                <div className="recent-thumb">
+                  <img src="/img/case-study-sterlo.webp" alt="Enterprise Lead Generation Across India and GCC for a Low Code No Code Platform" loading="lazy" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-ppc">
+                    <span className="dot" />Content Marketing
+                  </div>
+                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Low Code No Code Platform</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/analytixhub">
+                <div className="recent-thumb">
+                  <img src="/img/case-study-analytixhub.webp" alt="Fast Recruitment and On-Time Payroll Enablement for an IT Company" loading="lazy" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />Recruitment
+                  </div>
+                  <div className="recent-title">Fast Recruitment and On-Time Payroll Enablement for an IT Company</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/naturals">
+                <div className="recent-thumb">
+                  <img src="/img/case-study-natural.webp" alt="Fast Recruitment Support for a Growing Salon Brand" loading="lazy" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />Recruitment
+                  </div>
+                  <div className="recent-title">Fast Recruitment Support for a Growing Salon Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
             </div>
 
           </div>

@@ -14,6 +14,9 @@ const SOCIAL_LINKS = [
 ];
 const WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
+// Custom event name shared by the banner button and the popup
+const OPEN_DIWALI_POPUP_EVENT = "open-diwali-popup";
+
 const schemaData = [
     {
         "@context": "https://schema.org",
@@ -119,6 +122,7 @@ const GlobalStyles = () => (
      header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN{
     display: none;
 }
+button.dsb-btn { border: none; cursor: pointer; font-family: inherit; }
 .svc-card-item { transition: transform 0.35s ease, box-shadow 0.35s ease; box-shadow: 0 10px 35px rgba(0,0,0,0.08); }
 .svc-card-item:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(0,0,0,0.12); }
 .tc-section, #service, .pf-grid-section, .tech-section, .mf-outer, .dm-faq-section, .call-cta-section, .pcs-footer {
@@ -158,6 +162,48 @@ const faqData = [
     { q: "What support do you provide after my website goes live?", a: "We don't disappear after launch. You get ongoing technical support, security updates, performance monitoring, and bug fixes to keep your website running smoothly." },
     { q: "How do you keep my website secure and fast?", a: "We use SSL certificates, secure coding practices, regular updates, optimized images, and caching to protect your site and keep load times fast — both of which matter for trust and for Google rankings." },
 ];
+
+// ── Diwali Offer Banner ───────────────────────────────
+function Diya() {
+    return (
+        <svg className="dsb-diya" viewBox="0 0 48 40" width="38" height="32" aria-hidden="true">
+            <path d="M24 2c4 5 6 8 3 12-1.5 2-4.5 2-6 0-2.5-3-1-7 3-12z" fill="#ffb300" />
+            <path d="M24 7c2 3 2.5 4.5 1 6.5-1 1-2.5 1-3 0-1-1.5-.5-3.5 2-6.5z" fill="#fff3b0" />
+            <path d="M3 20h42c0 10-9 17-21 17S3 30 3 20z" fill="#f59e0b" />
+            <path d="M3 20h42" stroke="#fcd34d" strokeWidth="2" />
+        </svg>
+    );
+}
+
+function DiwaliBanner() {
+    const [show, setShow] = useState(true);
+
+    if (!show) return null;
+
+    // Tells DiwaliPopup to open (it listens for this event)
+    const openPopup = () => window.dispatchEvent(new Event(OPEN_DIWALI_POPUP_EVENT));
+
+    return (
+        <div className="dsb-bar" role="region" aria-label="Diwali offer">
+            <div className="dsb-inner">
+                <Diya />
+                <p className="dsb-text">
+                    <span className="dsb-gold">Happy Diwali </span> from{" "}
+                    <span className="dsb-gold">Priyam Consultancy Services!</span>
+                    <span className="dsb-divider">|</span>
+                    <span className="dsb-offer">
+                        Celebrate with <strong>1 Year</strong> of <strong>Free Web Hosting</strong>
+                    </span>
+                </p>
+                <span className="dsb-diya-2"><Diya /></span>
+                <button type="button" className="dsb-btn" onClick={openPopup}>
+                    Claim Diwali Offer <span>→</span>
+                </button>
+            </div>
+            <button type="button" className="dsb-close" onClick={() => setShow(false)} aria-label="Close banner">✕</button>
+        </div>
+    );
+}
 
 // ── Site Header ────────────────────────────────────────
 function SiteHeader() {
@@ -214,6 +260,7 @@ function HeroSection() {
 
                 <div className="hero-img-grid">
                     <img src="/img/landing-page/hero-img-1.webp" alt="Website Development Coimbatore" className="hero-img-1" decoding="async" />
+                    <img src="/img/landing-page/hero-img-4.webp" alt="Digital Solutions Coimbatore" className="hero-img-3" decoding="async" />
                     <img src="/img/landing-page/hero-img-2.webp" alt="Web Design Coimbatore" className="hero-img-2" decoding="async" />
                     <img src="/img/landing-page/hero-img-3.webp" alt="Digital Solutions Coimbatore" className="hero-img-3" decoding="async" />
                 </div>
@@ -416,19 +463,31 @@ function HeroContactForm() {
     );
 }
 
+// Alt text matches the brand name shown in each logo image.
+// Slides 1–8 are updated from the logo strip screenshot.
 const CLIENT_MARQUEE_LOGOS = [
-    { name: "Tactive", img: "/img/landing-page/client-slide-1.webp" },
-    { name: "URCTS", img: "/img/landing-page/client-slide-2.webp" },
-    { name: "ZKY", img: "/img/landing-page/client-slide-3.webp" },
-    { name: "Analytix Hub", img: "/img/landing-page/client-slide-4.webp" },
-    { name: "Baltimore Health Analytics", img: "/img/landing-page/client-slide-5.webp" },
+    { name: "Talent Tribe", img: "/img/landing-page/client-slide-1.webp" },
+    { name: "Star Health", img: "/img/landing-page/client-slide-2.webp" },
+    { name: "Sterlo Build", img: "/img/landing-page/client-slide-3.webp" },
+    { name: "Riya Consultancy", img: "/img/landing-page/client-slide-4.webp" },
+    { name: "ZKY", img: "/img/landing-page/client-slide-5.webp" },
     { name: "Sterlo", img: "/img/landing-page/client-slide-6.webp" },
-    { name: "SterloBuild", img: "/img/landing-page/client-slide-7.webp" },
-    { name: "SterloCare", img: "/img/landing-page/client-slide-8.webp" },
-    ...Array.from({ length: 12 }, (_, i) => ({
-        name: "Microsoft",
-        img: `/img/landing-page/client-slide-${i + 9}.webp`,
-    })),
+    { name: "Sterlo Care", img: "/img/landing-page/client-slide-7.webp" },
+    { name: "Feral Roots", img: "/img/landing-page/client-slide-8.webp" },
+    { name: "Vriksha", img: "/img/landing-page/client-slide-9.webp" },
+    { name: "Tech Global", img: "/img/landing-page/client-slide-10.webp" },
+    { name: "AM Builders", img: "/img/landing-page/client-slide-11.webp" },
+    { name: "Analytix Hub", img: "/img/landing-page/client-slide-12.webp" },
+    { name: "AB", img: "/img/landing-page/client-slide-13.webp" },
+    { name: "Tactive", img: "/img/landing-page/client-slide-14.webp" },
+    { name: "Ey Chiquita", img: "/img/landing-page/client-slide-15.webp" },
+    { name: "CureTek", img: "/img/landing-page/client-slide-16.webp" },
+    { name: "AINQA", img: "/img/landing-page/client-slide-17.webp" },
+    { name: "Vatcomm", img: "/img/landing-page/client-slide-18.webp" },
+    { name: "Naturals", img: "/img/landing-page/client-slide-19.webp" },
+    { name: "URCTS", img: "/img/landing-page/client-slide-20.webp" },
+    { name: "Greenstar", img: "/img/landing-page/greenstar-logo.webp" },
+    { name: "Orvix", img: "/img/landing-page/orvix-logo.webp" },
 ];
 
 const CLIENT_MARQUEE_DOUBLED = [...CLIENT_MARQUEE_LOGOS, ...CLIENT_MARQUEE_LOGOS];
@@ -1395,6 +1454,233 @@ function CallCTASection() {
     );
 }
 
+// ── Diwali Offer Popup ─────────────────────────────────
+// Opens automatically after 8 seconds, AND whenever the banner's
+// "Claim Diwali Offer" button is clicked (via the custom event).
+const IconUser = () => (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7z" /></svg>
+);
+const IconMail = () => (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="m3 7 9 6 9-6" /></svg>
+);
+const IconBuilding = () => (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M5 21V3h9v6h5v12h-5v-4h-4v4zm3-14h2V5H8zm0 4h2V9H8zm0 4h2v-2H8zm7 0h2v-2h-2zm0-4h2V9h-2z" /></svg>
+);
+const IconPhone = () => (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+);
+const IconService = () => (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8M12 17v4" /></svg>
+);
+const IconPlane = () => (
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M2 21 23 12 2 3v7l15 2-15 2z" /></svg>
+);
+const IconFile = () => (
+    <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /><path d="M14 3v6h6M8 13h8M8 17h5" /></svg>
+);
+
+// ── Custom dropdown (list always stays inside the card) ──
+function DwpSelect({ value, onChange, options }) {
+    const [open, setOpen] = useState(false);
+    const ref = useRef(null);
+
+    useEffect(() => {
+        if (!open) return;
+        const h = (e) => { if (ref.current && !ref.current.contains(e.target)) setOpen(false); };
+        document.addEventListener("mousedown", h);
+        document.addEventListener("touchstart", h, { passive: true });
+        return () => {
+            document.removeEventListener("mousedown", h);
+            document.removeEventListener("touchstart", h);
+        };
+    }, [open]);
+
+    return (
+        <div className="dwp-dd" ref={ref}>
+            <button
+                type="button"
+                className={`dwp-input dwp-select dwp-dd-btn ${open ? "open" : ""}`}
+                onClick={() => setOpen((o) => !o)}
+                aria-haspopup="listbox"
+                aria-expanded={open}
+            >
+                <span className={value ? "" : "dwp-dd-ph"}>{value || "Select a service"}</span>
+            </button>
+
+            {open && (
+                <ul className="dwp-dd-menu" role="listbox">
+                    {options.map((o) => (
+                        <li
+                            key={o}
+                            role="option"
+                            aria-selected={value === o}
+                            className={`dwp-dd-item ${value === o ? "active" : ""}`}
+                            onClick={() => { onChange({ target: { name: "service", value: o } }); setOpen(false); }}
+                        >
+                            {o}
+                        </li>
+                    ))}
+                </ul>
+            )}
+
+            {/* keeps the "required" validation working */}
+            <input className="dwp-dd-req" type="text" tabIndex={-1} aria-hidden="true" value={value} onChange={() => {}} required />
+        </div>
+    );
+}
+
+function DiwaliPopup() {
+    const [open, setOpen] = useState(false);
+    const [sending, setSending] = useState(false);
+    const [form, setForm] = useState({ name: "", email: "", company: "", phone: "", service: "" });
+
+    // 1) Open automatically after 8 seconds
+    useEffect(() => {
+        const t = setTimeout(() => setOpen(true), 8000);
+        return () => clearTimeout(t);
+    }, []);
+
+    // 2) Open whenever the banner's "Claim Diwali Offer" button is clicked
+    useEffect(() => {
+        const openPopup = () => setOpen(true);
+        window.addEventListener(OPEN_DIWALI_POPUP_EVENT, openPopup);
+        return () => window.removeEventListener(OPEN_DIWALI_POPUP_EVENT, openPopup);
+    }, []);
+
+    // Lock page scroll + close on ESC while popup is open
+    useEffect(() => {
+        if (!open) return;
+        const prev = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        const onKey = (e) => { if (e.key === "Escape") setOpen(false); };
+        document.addEventListener("keydown", onKey);
+        return () => {
+            document.body.style.overflow = prev;
+            document.removeEventListener("keydown", onKey);
+        };
+    }, [open]);
+
+    const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+    const submit = async (e) => {
+        e.preventDefault();
+        setSending(true);
+        try {
+            const emailjs = (await import("@emailjs/browser")).default;
+            await emailjs.send(
+                "service_8xw6k3r",
+                "template_jarui36",
+                {
+                    name: form.name,
+                    email: form.email,
+                    phone: form.phone,
+                    company: form.company,
+                    service: form.service,
+                    message: "Enquiry from Diwali Offer Popup",
+                    url: window.location.href,
+                },
+                "XWRnXi4hK2SvmRG3q"
+            );
+            alert("Message Sent Successfully ✅");
+            setForm({ name: "", email: "", company: "", phone: "", service: "" });
+            setOpen(false);
+        } catch (error) {
+            console.log(error);
+            alert("Failed to send ❌");
+        } finally {
+            setSending(false);
+        }
+    };
+
+    if (!open) return null;
+
+    return (
+        <div
+            className="dwp-overlay"
+            onClick={() => setOpen(false)}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Diwali special offer - 1 Year Free Web Hosting from Priyam Consultancy Services"
+        >
+            <div className="dwp-modal" onClick={(e) => e.stopPropagation()}>
+                <button type="button" className="dwp-close" onClick={() => setOpen(false)} aria-label="Close popup">✕</button>
+
+                <picture>
+                    <source media="(max-width: 820px), (max-height: 520px)" srcSet="/img/landing-page/diwali-offer-mobile.webp" />
+                    <img
+                        className="dwp-img"
+                        src="/img/landing-page/diwali-offer-left.webp"
+                        alt="Diwali Special Offer - 1 Year Free Web Hosting from Priyam Consultancy Services"
+                        decoding="async"
+                    />
+                </picture>
+
+                <div className="dwp-card">
+                    <form className="dwp-form" onSubmit={submit}>
+                        <div className="dwp-head">
+                            <div className="dwp-head-row">
+                                <IconFile />
+                                <h3 className="dwp-form-title">Enquiry Form</h3>
+                            </div>
+                            <div className="dwp-divider"><span>🪷</span></div>
+                        </div>
+
+                        <div className="dwp-field">
+                            <label className="dwp-label">Full name <em>*</em></label>
+                            <div className="dwp-input-wrap">
+                                <span className="dwp-ic"><IconUser /></span>
+                                <input className="dwp-input" type="text" name="name" placeholder="Enter your full name" value={form.name} onChange={handleChange} required />
+                            </div>
+                        </div>
+
+                        <div className="dwp-field">
+                            <label className="dwp-label">Email ID <em>*</em></label>
+                            <div className="dwp-input-wrap">
+                                <span className="dwp-ic"><IconMail /></span>
+                                <input className="dwp-input" type="email" name="email" placeholder="Enter your email address" value={form.email} onChange={handleChange} required />
+                            </div>
+                        </div>
+
+                        <div className="dwp-field">
+                            <label className="dwp-label">Company name</label>
+                            <div className="dwp-input-wrap">
+                                <span className="dwp-ic"><IconBuilding /></span>
+                                <input className="dwp-input" type="text" name="company" placeholder="Enter your company name" value={form.company} onChange={handleChange} />
+                            </div>
+                        </div>
+
+                        <div className="dwp-field">
+                            <label className="dwp-label">Mobile number <em>*</em></label>
+                            <div className="dwp-input-wrap">
+                                <span className="dwp-ic"><IconPhone /></span>
+                                <input className="dwp-input" type="tel" name="phone" placeholder="+91 98765 43210" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" title="Enter a 10 digit mobile number" required />
+                            </div>
+                        </div>
+
+                        <div className="dwp-field">
+                            <label className="dwp-label">Service <em>*</em></label>
+                            <div className="dwp-input-wrap">
+                                <span className="dwp-ic"><IconService /></span>
+                                <DwpSelect value={form.service} onChange={handleChange} options={SERVICE_OPTIONS} />
+                            </div>
+                        </div>
+
+                        <button type="submit" className="dwp-submit" disabled={sending}>
+                            <IconPlane />
+                            {sending ? "Sending..." : "Submit Enquiry"}
+                        </button>
+
+                        <div className="dwp-note">
+                            <span className="dwp-note-i">i</span>
+                            <p>Offer subject to package eligibility and terms. Domain registration and renewal charges are separate unless explicitly included.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
+}
+
 // ── Footer Section ────────────────────────────────────
 function FooterSection() {
     return (
@@ -1472,6 +1758,7 @@ export default function DigitalMarketingNewPage() {
         >
             <SEOHead />
             <GlobalStyles />
+            <DiwaliBanner />
             <SiteHeader />
             <HeroSection />
             <ClientLogosMarquee />
@@ -1485,6 +1772,7 @@ export default function DigitalMarketingNewPage() {
             <FAQSection />
             <CallCTASection />
             <FooterSection />
+            <DiwaliPopup />
         </Layout>
     );
 }

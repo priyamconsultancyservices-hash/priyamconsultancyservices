@@ -577,3 +577,297 @@ p.tech-desc1 { color: black; text-align: center; margin: 2rem 0 3rem; }
   .pcs-footer { padding: 3.5rem 6% 2.5rem; }
   .pcs-footer-inner { grid-template-columns: 1fr; gap: 2.2rem; }
 }
+/* ── Dussehra Banner ── */
+.dsb-bar {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(90deg, #7a0626 0%, #55073f 55%, #3d0a3a 100%);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    z-index: 1001;
+}
+.dsb-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px 56px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+.dsb-text {
+    margin: 0;
+    font-size: 0.94rem;
+    line-height: 1.4;
+    text-align: center;
+}
+.dsb-gold { color: #ffc107; font-weight: 700; }
+.dsb-divider { margin: 0 14px; opacity: 0.7; }
+.dsb-offer strong { font-weight: 700; }
+.dsb-diya { flex-shrink: 0; }
+.dsb-diya-2 { display: inline-flex; flex-shrink: 0; }
+.dsb-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffb300;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 0.86rem;
+    padding: 9px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+.dsb-btn:hover { background: #ffc233; transform: translateY(-1px); color: #1a1a1a; }
+.dsb-close {
+  display: none;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 6px;
+    line-height: 1;
+}
+
+/* Laptop / small desktop */
+@media (max-width: 1200px) {
+    .dsb-text { font-size: 0.92rem; }
+    .dsb-diya-2 { display: none; }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .dsb-inner { flex-wrap: wrap; gap: 8px 14px; padding: 10px 48px 10px 16px; }
+    .dsb-divider { display: none; }
+    .dsb-offer { display: block; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .dsb-inner { flex-direction: column; padding: 10px 40px 12px 14px; gap: 8px; }
+    .dsb-diya { display: none; }
+    .dsb-text { font-size: 0.8rem; }
+    .dsb-btn { font-size: 0.75rem; padding: 8px 18px; }
+    .dsb-close { right: 10px; top: 14px; transform: none; font-size: 1rem; }
+}
+
+/* ── Diwali Popup ── */
+.dwp-overlay, .dwp-modal {
+    --dwp-primary: #004168;
+    --dwp-primary-dark: #002b45;
+    --dwp-accent: #ed8337;
+    --dwp-accent-dark: #d46f24;
+    --dwp-note: #5b6b7a;
+    --dwp-border: #d6dde4;
+    --dwp-card-bg: rgba(255, 255, 255, 0.98);
+}
+
+.dwp-overlay {
+    position: fixed; inset: 0; z-index: 99999;
+    background: rgba(0, 20, 35, 0.7);
+    display: flex; align-items: center; justify-content: center;
+    padding: 12px;
+    animation: dwpFade 0.3s ease;
+}
+@keyframes dwpFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes dwpPop { from { opacity: 0; transform: translateY(20px) scale(0.97); } to { opacity: 1; transform: none; } }
+
+/* ── Desktop (821px+) ── */
+.dwp-modal {
+    position: relative;
+    width: min(930px, 100%, calc(92vh * 1.296));
+    aspect-ratio: 700 / 540;
+    container-type: inline-size;
+    border-radius: 22px; overflow: hidden;
+    background: #ffe3b3;
+    font-family: 'Poppins', sans-serif;
+    animation: dwpPop 0.4s ease;
+}
+@supports (height: 100dvh) {
+    .dwp-modal { width: min(930px, 100%, calc(92dvh * 1.296)); }
+}
+.dwp-img {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: left center;
+    display: block;
+}
+
+.dwp-close {
+    position: absolute; top: 2.2cqw; right: 2.2cqw; z-index: 5;
+    width: 3.4cqw; height: 3.4cqw; min-width: 28px; min-height: 28px;
+    border-radius: 50%;
+    border: 2px solid #fff; background: var(--dwp-primary); color: #fff;
+    font-size: 14px; cursor: pointer; line-height: 1; padding: 0;
+    transition: background 0.2s ease;
+}
+.dwp-close:hover { background: var(--dwp-accent); }
+
+.dwp-card {
+    position: absolute;
+    top: 3.2cqw; bottom: 3.2cqw; right: 3.2cqw;
+    width: 43.5cqw;
+    background: var(--dwp-card-bg);
+    border-radius: 2.2cqw;
+    box-shadow: 0 1cqw 3cqw rgba(0, 65, 104, 0.18);
+    padding: 1.8cqw 2.4cqw;
+    z-index: 2;
+}
+.dwp-form { height: 100%; display: flex; flex-direction: column; justify-content: space-between; }
+
+.dwp-head-row { display: flex; align-items: center; justify-content: center; gap: 1.2cqw; }
+.dwp-head-row svg { width: 3.6cqw; height: 3.6cqw; min-width: 22px; min-height: 22px; color: var(--dwp-primary); }
+.dwp-form-title { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: max(18px, 3.1cqw); font-weight: 700; color: var(--dwp-primary); }
+.dwp-divider { display: flex; align-items: center; gap: 1cqw; margin-top: 0.8cqw; }
+.dwp-divider::before, .dwp-divider::after { content: ""; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--dwp-accent), transparent); }
+.dwp-divider span { font-size: max(12px, 1.8cqw); line-height: 1; }
+
+.dwp-label { display: block; font-size: max(11px, 1.55cqw); font-weight: 600; color: var(--dwp-primary); margin: 0 0 0.6cqw; }
+.dwp-label em { color: var(--dwp-accent); font-style: normal; }
+
+.dwp-input-wrap { position: relative; }
+.dwp-ic { position: absolute; left: 1.2cqw; top: 50%; transform: translateY(-50%); display: flex; pointer-events: none; color: var(--dwp-primary); z-index: 1; }
+.dwp-ic svg { width: 1.9cqw; height: 1.9cqw; min-width: 14px; min-height: 14px; }
+.dwp-input {
+    width: 100%; box-sizing: border-box;
+    height: 4.9cqw; min-height: 34px;
+    padding: 0 1.2cqw 0 4cqw;
+    border: 1px solid var(--dwp-border); border-radius: 0.7cqw; background: #fff;
+    font-family: inherit; font-size: max(12px, 1.5cqw); color: #333; outline: none;
+}
+.dwp-input::placeholder { color: #9aa5b0; }
+.dwp-input:focus { border-color: var(--dwp-accent); box-shadow: 0 0 0 3px rgba(237, 131, 55, 0.18); }
+.dwp-select {
+    appearance: none; -webkit-appearance: none; cursor: pointer;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23004168' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 1.4cqw center;
+    padding-right: 4cqw;
+}
+
+/* Custom dropdown */
+.dwp-dd { position: relative; }
+.dwp-dd-btn { display: flex; align-items: center; text-align: left; cursor: pointer; color: #333; }
+.dwp-dd-btn span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dwp-dd-btn.open { border-color: var(--dwp-accent); box-shadow: 0 0 0 3px rgba(237, 131, 55, 0.18); }
+.dwp-dd-ph { color: #9aa5b0; }
+
+.dwp-dd-menu {
+    position: absolute; left: 0; right: 0;
+    bottom: calc(100% + 4px);
+    margin: 0; padding: 4px; list-style: none;
+    max-height: min(210px, 40vh); overflow-y: auto;
+    background: #fff;
+    border: 1px solid var(--dwp-border);
+    border-radius: 0.8cqw;
+    box-shadow: 0 10px 28px rgba(0, 65, 104, 0.22);
+    z-index: 20;
+    -webkit-overflow-scrolling: touch;
+}
+.dwp-dd-item {
+    padding: 0.9cqw 1.2cqw;
+    font-size: max(12px, 1.5cqw);
+    color: var(--dwp-primary);
+    border-radius: 0.5cqw;
+    cursor: pointer;
+}
+.dwp-dd-item:hover { background: rgba(237, 131, 55, 0.12); }
+.dwp-dd-item.active { background: var(--dwp-accent); color: #fff; }
+
+.dwp-dd-req {
+    position: absolute; left: 0; bottom: 0;
+    width: 100%; height: 1px; opacity: 0; pointer-events: none; border: 0; padding: 0;
+}
+
+.dwp-submit {
+    width: 100%; height: 5.4cqw; min-height: 40px;
+    display: flex; align-items: center; justify-content: center; gap: 1cqw;
+    border: none; border-radius: 1cqw; cursor: pointer;
+    background: linear-gradient(90deg, var(--dwp-accent), var(--dwp-accent-dark));
+    color: #fff; font-family: inherit; font-weight: 600; font-size: max(13px, 1.7cqw);
+    box-shadow: 0 0.6cqw 1.6cqw rgba(237, 131, 55, 0.35);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.dwp-submit svg { width: 1.9cqw; height: 1.9cqw; min-width: 15px; min-height: 15px; }
+.dwp-submit:hover { transform: translateY(-1px); }
+.dwp-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.dwp-note { display: flex; gap: 1cqw; align-items: flex-start; border-top: 1px solid #e3e8ed; padding-top: 1.2cqw; }
+.dwp-note p { margin: 0; font-size: max(10px, 1.2cqw); line-height: 1.5; color: var(--dwp-note); }
+.dwp-note-i {
+    flex-shrink: 0; width: 2cqw; height: 2cqw; min-width: 14px; min-height: 14px;
+    border-radius: 50%; background: var(--dwp-primary); color: #fff;
+    font-size: max(9px, 1.3cqw); font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+
+/* ── Mobile / Tablet (320px - 820px) + phone landscape ──
+   Image + form card same grid cell: card image kulla, keela paadhiyila irukkum */
+@media (max-width: 820px), (max-height: 520px) {
+    .dwp-overlay { align-items: flex-start; overflow-y: auto; padding: 10px; -webkit-overflow-scrolling: touch; }
+    .dwp-modal {
+        width: min(520px, 100%);
+        aspect-ratio: auto; height: auto;
+        container-type: normal;
+        display: grid;
+        grid-template-columns: 100%;
+        margin: auto;
+        background: linear-gradient(180deg, #fff1cf 0%, #ffd98f 100%);
+    }
+    .dwp-modal picture {
+        grid-area: 1 / 1;
+        display: block;
+        align-self: start;
+    }
+    .dwp-img {
+        position: static; inset: auto;
+        width: 100%; height: 1120px;
+        object-fit: inherit;
+        display: block;
+    }
+    .dwp-close { top: 10px; right: 10px; width: 32px; height: 32px; min-width: 32px; min-height: 32px; font-size: 14px; }
+    .dwp-card {
+        grid-area: 1 / 1;
+        align-self: end;                 /* image-oda keela paadhiyila */
+        position: absolute; width: auto; left: 0; right: 0;
+        margin: 0 14px 14px;
+        padding: 18px 16px; border-radius: 18px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 8px 24px rgba(0, 65, 104, 0.2);
+        z-index: 2;
+    }
+    .dwp-form { height: auto; gap: 12px; }
+    .dwp-head-row { gap: 10px; }
+    .dwp-head-row svg { width: 28px; height: 28px; }
+    .dwp-form-title { font-size: 1.4rem; }
+    .dwp-divider { margin-top: 6px; gap: 8px; }
+    .dwp-divider span { font-size: 1rem; }
+    .dwp-label { font-size: 0.78rem; margin-bottom: 4px; }
+    .dwp-ic { left: 12px; }
+    .dwp-ic svg { width: 16px; height: 16px; }
+    .dwp-input { height: 44px; padding: 0 12px 0 38px; font-size: 16px; border-radius: 8px; }
+    .dwp-select { padding-right: 34px; background-position: right 12px center; }
+    .dwp-dd-menu { border-radius: 10px; max-height: min(220px, 35vh); }
+    .dwp-dd-item { padding: 11px 12px; font-size: 15px; border-radius: 6px; }
+    .dwp-submit { height: 48px; font-size: 0.95rem; border-radius: 10px; gap: 8px; }
+    .dwp-submit svg { width: 18px; height: 18px; }
+    .dwp-note { padding-top: 10px; gap: 8px; }
+    .dwp-note p { font-size: 0.7rem; }
+    .dwp-note-i { width: 16px; height: 16px; font-size: 0.7rem; }
+}
+
+/* Small phones (320px - 380px) */
+@media (max-width: 380px) {
+    .dwp-overlay { padding: 6px; }
+    .dwp-card { margin: 0 8px 8px; padding: 14px 12px; }
+    .dwp-form-title { font-size: 1.2rem; }
+    .dwp-form { gap: 10px; }
+    .dwp-input { height: 42px; }
+    .dwp-dd-item { padding: 10px; font-size: 14px; }
+    .dwp-note p { font-size: 0.66rem; }
+}

@@ -180,51 +180,51 @@ export default function CaseStudy() {
               <div className="sidebar-card-header">
                 <span /><h3>Recent Case Studies</h3>
               </div>
-              <a className="recent-item" href="/case-studies/sterlocare">
+              <a className="recent-item" href="/case-studies/tgcc">
                 <div className="recent-thumb">
-                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-                </div>
-                <div className="recent-info">
-                  <div className="recent-badge cat-badge bdg-seo">
-                    <span className="dot" />SEO
-                  </div>
-                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-                </div>
-                <div className="recent-arrow">→</div>
-              </a>
-              <a className="recent-item" href="/case-studies/urcts">
-                <div className="recent-thumb">
-                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
+                  <img src="/img/case-study-tgcc.webp" alt="Elevating Malaysia's Corporate Training Leader: Tech-Global Corporate &amp; Consultancy" loading="lazy" />
                 </div>
                 <div className="recent-info">
                   <div className="recent-badge cat-badge bdg-dm">
-                    <span className="dot" />Digital Marketing
+                    <span className="dot" />Website Development
                   </div>
-                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
+                  <div className="recent-title">Elevating Malaysia's Corporate Training Leader: Tech-Global Corporate &amp; Consultancy</div>
                 </div>
                 <div className="recent-arrow">→</div>
               </a>
-              <a className="recent-item" href="/case-studies/feral-roots">
+              <a className="recent-item" href="/case-studies/vatcomm">
                 <div className="recent-thumb">
-                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
+                  <img src="/img/case-study-vatcomm.webp" alt="Building a Professional Digital Presence for VATCOMM Technologies" loading="lazy" />
                 </div>
                 <div className="recent-info">
                   <div className="recent-badge cat-badge bdg-seo">
-                    <span className="dot" />SEO
+                    <span className="dot" />Website Development
                   </div>
-                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
+                  <div className="recent-title">Building a Professional Digital Presence for VATCOMM Technologies</div>
                 </div>
                 <div className="recent-arrow">→</div>
               </a>
-              <a className="recent-item" href="/case-studies/am-builder">
+              <a className="recent-item" href="/case-studies/greenstar">
                 <div className="recent-thumb">
-                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                  <img src="/img/case-study-greenstar.webp" alt="Building a Global Digital Presence for Greenstar Exports" loading="lazy" />
                 </div>
                 <div className="recent-info">
-                  <div className="recent-badge cat-badge bdg-smm">
-                    <span className="dot" />Social Media
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Website Development
                   </div>
-                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                  <div className="recent-title">Building a Global Digital Presence for Greenstar Exports</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/vriksha">
+                <div className="recent-thumb">
+                  <img src="/img/case-study-vriksha.webp" alt="From Sitework to Web: Establishing Vriksha Builders Online" loading="lazy" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />Website Development
+                  </div>
+                  <div className="recent-title">From Sitework to Web: Establishing Vriksha Builders Online</div>
                 </div>
                 <div className="recent-arrow">→</div>
               </a>

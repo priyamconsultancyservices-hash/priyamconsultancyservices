@@ -9,8 +9,12 @@ const ambuilders = "/img/am-site.webp";
 const abb = "/img/abb-site.webp";
 const riya = "/img/riya-site.webp";
 const sterlocareportfiolo = "/img/sterlocare-portfiolo.webp";
-const TalentTribe = "/img/talent-tribe-portfiolo.webp";
+const TalentTribe = "/img/talent-tribe-protfolio.webp";
+const vriskha = "/img/vriksha-protfolio.webp";
+const vatcomm = "/img/vatcomm-protfolio.webp";
 const Sterlo = "/img/sterlo-portfiolo.webp";
+const greenstar ="/img/greenstar-protfolio.webp";
+const tgcc ="/img/tgcc-protfolio.webp";
 const sterlobuildportfiolo = "/img/sterlobuild-portfiolo.webp";
 
 /* ─────────────────────────────────────────
@@ -19,13 +23,20 @@ const sterlobuildportfiolo = "/img/sterlobuild-portfiolo.webp";
 const PROJECTS = [
   { id: 1, url: "https://feralroots.in/",          domain: "feralroots.in",       image: feralroots },
   { id: 2, url: "https://www.urcts.in/",               domain: "urcts.in",            image: urcts },
-  { id: 3, url: "https://zky.co.in/",                  domain: "zky.co.in",               image: zky },
+
+
+  { id: 7, url: "https://staging.vrikshabuilders.com/",         domain: "staging.vrikshabuilders.com",       image: vriskha},
+  { id: 8, url: "https://www.vatcommtechnologies.com/",         domain: "vatcommtechnologies.com",       image: vatcomm },
+  { id: 9, url: "https://www.greenstarexports.com/",         domain: "greenstarexports.com",       image: greenstar },
+  { id: 10, url: "https://www.tgcc.com.my/",         domain: "tgcc.com.my",       image: tgcc },
+
+    { id: 3, url: "https://zky.co.in/",                  domain: "zky.co.in",               image: zky },
   { id: 4, url: "https://abbmc.in/",               domain: "abbmc.in",             image: abb },
   { id: 5, url: "https://riyaconsultancy.com",     domain: "riyaconsultancy.com",  image: riya },
   { id: 6, url: "https://talenttribe.in/",         domain: "talenttribe.in",       image: TalentTribe },
-  { id: 7, url: "https://www.sterlo.io/",     domain: "sterlo.io",   image: Sterlo },
-  { id: 8, url: "https://www.sterlocare.com/",     domain: "sterlocare.com",   image: sterlocareportfiolo },
-  { id: 9, url: "https://www.sterlobuild.com/",     domain: "sterlobuild.com",   image: sterlobuildportfiolo },
+
+  { id: 11, url: "https://www.sterlo.io/",     domain: "sterlo.io",   image: Sterlo },
+  { id: 12, url: "https://www.sterlocare.com/",     domain: "sterlocare.com",   image: sterlocareportfiolo },
 
 ];
 

@@ -185,51 +185,51 @@ export default function CaseStudy() {
                 <span /><h3>Recent Case Studies</h3>
               </div>
 
-              <a className="recent-item" href="/case-studies/sterlocare">
+              <a className="recent-item" href="/case-studies/ainqa">
                 <div className="recent-thumb">
-                  <img src="https://picsum.photos/seed/26/200/140" alt="Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand" />
-                </div>
-                <div className="recent-info">
-                  <div className="recent-badge cat-badge bdg-seo">
-                    <span className="dot" />SEO
-                  </div>
-                  <div className="recent-title">Enterprise Lead Generation Across India and GCC for a Healthcare SaaS Brand</div>
-                </div>
-                <div className="recent-arrow">→</div>
-              </a>
-              <a className="recent-item" href="/case-studies/urcts">
-                <div className="recent-thumb">
-                  <img src="https://picsum.photos/seed/39/200/140" alt="Building a Strong Brand Identity and Digital Presence for an Engineering Firm" />
-                </div>
-                <div className="recent-info">
-                  <div className="recent-badge cat-badge bdg-dm">
-                    <span className="dot" />Digital Marketing
-                  </div>
-                  <div className="recent-title">Building a Strong Brand Identity and Digital Presence for an Engineering Firm</div>
-                </div>
-                <div className="recent-arrow">→</div>
-              </a>
-              <a className="recent-item" href="/case-studies/feral-roots">
-                <div className="recent-thumb">
-                  <img src="https://picsum.photos/seed/52/200/140" alt="From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand" />
-                </div>
-                <div className="recent-info">
-                  <div className="recent-badge cat-badge bdg-seo">
-                    <span className="dot" />SEO
-                  </div>
-                  <div className="recent-title">From Brand Study to Performance-Driven E-Commerce Growth for a Sustainable Products Brand</div>
-                </div>
-                <div className="recent-arrow">→</div>
-              </a>
-              <a className="recent-item" href="/case-studies/am-builder">
-                <div className="recent-thumb">
-                  <img src="https://picsum.photos/seed/65/200/140" alt="Strengthening Local Visibility and Brand Presence for a Construction Brand" />
+                  <img src="/img/case-study-ainqa.webp" alt="On-Time Recruitment Closure for Critical IT Roles" loading="lazy" />
                 </div>
                 <div className="recent-info">
                   <div className="recent-badge cat-badge bdg-smm">
-                    <span className="dot" />Social Media
+                    <span className="dot" />Recruitment
                   </div>
-                  <div className="recent-title">Strengthening Local Visibility and Brand Presence for a Construction Brand</div>
+                  <div className="recent-title">On-Time Recruitment Closure for Critical IT Roles</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/starhealth">
+                <div className="recent-thumb">
+                  <img src="/img/case-study-starhealth.webp" alt="Bulk Recruitment Support for a Leading Insurance Brand" loading="lazy" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-ppc">
+                    <span className="dot" />Recruitment
+                  </div>
+                  <div className="recent-title">Bulk Recruitment Support for a Leading Insurance Brand</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/baltimore-health-analytics">
+                <div className="recent-thumb">
+                  <img src="/img/case-study-baltimore.webp" alt="Recruitment Support for a US-Based Healthcare Analytics Company" loading="lazy" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-dm">
+                    <span className="dot" />Recruitment
+                  </div>
+                  <div className="recent-title">Recruitment Support for a US-Based Healthcare Analytics Company</div>
+                </div>
+                <div className="recent-arrow">→</div>
+              </a>
+              <a className="recent-item" href="/case-studies/cure-tek-manufacturing">
+                <div className="recent-thumb">
+                  <img src="/img/case-study-curetech.webp" alt="Fast Recruitment Support for a Printing &amp; Packaging Startup" loading="lazy" />
+                </div>
+                <div className="recent-info">
+                  <div className="recent-badge cat-badge bdg-seo">
+                    <span className="dot" />Recruitment
+                  </div>
+                  <div className="recent-title">Fast Recruitment Support for a Printing &amp; Packaging Startup</div>
                 </div>
                 <div className="recent-arrow">→</div>
               </a>

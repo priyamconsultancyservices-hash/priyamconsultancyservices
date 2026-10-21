@@ -1748,7 +1748,7 @@ color:#000;
   .pg-banner-sub   { font-size: 0.82rem; }
   .pg-grid    { grid-template-columns: 1fr 1fr; gap: 12px; }
   .pg-content { padding: 28px 14px 52px; }
-  .pg-view-btn { padding: 10px 18px; font-size: 0.78rem; }
+  .pg-view-btn { padding: 8px 8px; font-size: 0.78rem; }
 }
 
 @media (max-width: 380px) {
@@ -2797,4 +2797,38 @@ color:#000;
   background: #eaf3fa;
   color: #004168;
   font-weight: 500;
+}
+@media (max-width: 768px) {
+  /* Banner */
+  .sc-banner {
+    padding: 32px 16px;
+  }
+  .sc-banner-inner {
+    gap: 24px;
+  }
+
+  /* Grid section */
+  .pg-content {
+    padding: 24px 16px;
+  }
+  .pg-grid {
+    gap: 16px;
+  }
+
+  /* Card footer */
+  .pg-footer {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sc-banner {
+    padding: 24px 12px;
+  }
+  .pg-content {
+    padding: 16px 12px;
+  }
+  .pg-grid {
+    gap: 12px;
+  }
 }
