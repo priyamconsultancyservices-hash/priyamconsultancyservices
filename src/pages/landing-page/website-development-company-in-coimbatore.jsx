@@ -1624,7 +1624,7 @@ function DiwaliPopup() {
                 <button type="button" className="dwp-close" onClick={() => setOpen(false)} aria-label="Close popup">✕</button>
 
                 <picture>
-                    <source media="(max-width: 820px), (max-height: 520px)" srcSet="/img/landing-page/diwali-offer-mobile.webp" />
+                    <source media="(max-width: 820px), (max-height: 520px)" srcSet="/img/landing-page/diwali-offer-mobile-popup.webp" />
                     <img
                         className="dwp-img"
                         src="/img/landing-page/diwali-offer-left.webp"
