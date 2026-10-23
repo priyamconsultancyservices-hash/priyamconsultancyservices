@@ -1,0 +1,1371 @@
+"use strict";
+exports.ids = ["8256"];
+exports.modules = {
+1627(__unused_rspack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.r(__webpack_exports__);
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (__rspack_default_export)
+});
+/* import */ var react_jsx_runtime__rspack_import_0 = __webpack_require__(4848);
+/* import */ var react__rspack_import_1 = __webpack_require__(6540);
+/* import */ var _theme_Layout__rspack_import_2 = __webpack_require__(8328);
+/* import */ var _docusaurus_Head__rspack_import_3 = __webpack_require__(3572);
+/* import */ var _docusaurus_Link__rspack_import_4 = __webpack_require__(5310);
+
+
+
+
+
+// ════════════════════════════════════════════
+//  DATA
+// ════════════════════════════════════════════
+const TOC_ITEMS = [
+    {
+        id: "intro",
+        num: "",
+        label: "Introduction"
+    },
+    {
+        id: "what-is",
+        num: "01",
+        label: "What Is SEO and Why Does It Matter for Small Businesses in India?"
+    },
+    {
+        id: "why-seo",
+        num: "02",
+        label: "Why SEO Works Differently in the Indian Market"
+    },
+    {
+        id: "strategy-1",
+        num: "03",
+        label: "Strategy 1: Claim and Optimise Your Local Google Business Profile"
+    },
+    {
+        id: "strategy-2",
+        num: "04",
+        label: "Strategy 2: Do Keyword Research the Right Way"
+    },
+    {
+        id: "strategy-3",
+        num: "05",
+        label: "Strategy 3: Optimise Every Page with On-Page SEO"
+    },
+    {
+        id: "strategy-4",
+        num: "06",
+        label: "Strategy 4: Make Your Website Mobile-Friendly and Fast"
+    },
+    {
+        id: "strategy-5",
+        num: "07",
+        label: "Strategy 5: Create Helpful Content That Answers Real Questions"
+    },
+    {
+        id: "strategy-6",
+        num: "08",
+        label: "Strategy 6: Build Local Citations on Indian DirectoriesStats & Research"
+    },
+    {
+        id: "strategy-7",
+        num: "09",
+        label: "Strategy 7: Get Google Reviews — and Respond to Every One"
+    },
+    {
+        id: "strategy-8",
+        num: "10",
+        label: "Strategy 8: Fix Your Website's Technical SEO"
+    },
+    {
+        id: "strategy-9",
+        num: "11",
+        label: "Strategy 9: Build Internal Links Between Your Pages"
+    },
+    {
+        id: "strategy-10",
+        num: "12",
+        label: "Strategy 10: Earn Backlinks from Other Websites"
+    },
+    {
+        id: "conclusion",
+        num: "13",
+        label: "Conclusion"
+    }
+];
+// Related Articles are pulled live from the PCS WordPress blog (title + featured image),
+// same source/shape as BlogSection.jsx. Only the 4 most recent posts are shown.
+const RELATED_ARTICLES_API = "https://www.priyamconsultancy.com/blog/wp-json/wp/v2/posts?_embed&per_page=4";
+// Popular Articles = your own site pages (not blog posts). Edit this list to match
+// whichever pages you want featured here — label is the text shown, href is the page link.
+const ARTICLES = [
+    {
+        title: "What Is Recruitment in HR? Definition, Types, Process & Everything You Need to Know",
+        href: "/article/recruitment-agencies-in-coimbatore",
+        date: ""
+    },
+    {
+        title: "Website Development Cost in India (2026): Real Ranges by Type, Not Guesswork",
+        href: "/article/website-development-cost-in-india",
+        date: "2026-09-01"
+    },
+    {
+        title: "What Is Performance Marketing? A Complete Guide (2026)",
+        href: "/article/best-performance-marketing-agencies",
+        date: "2026-10-06"
+    }
+];
+const RECENT_ARTICLES = [
+    ...ARTICLES
+].sort((a, b)=>new Date(b.date) - new Date(a.date)).slice(0, 4);
+const HUB_LINKS = [
+    {
+        label: "Digital Marketing",
+        href: "/digital-marketing"
+    },
+    {
+        label: "SEO",
+        href: "/search-engine-optimization"
+    },
+    {
+        label: "Performance Marketing",
+        href: "/marketplace-ecommerce-marketing"
+    },
+    {
+        label: "Social Media Marketing",
+        href: "/social-media-marketing"
+    },
+    {
+        label: "Content Marketing",
+        href: "/content-marketing"
+    },
+    {
+        label: "Email Marketing",
+        href: "/email-marketing"
+    },
+    {
+        label: "Website Development",
+        href: "/website-development"
+    },
+    {
+        label: "Graphic Design",
+        href: "/graphic-design"
+    }
+];
+const JSON_LD_BREADCRUMB = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+        {
+            "@type": "ListItem",
+            position: 1,
+            item: {
+                "@id": "https://www.priyamconsultancy.com/",
+                name: "Home"
+            }
+        },
+        {
+            "@type": "ListItem",
+            position: 2,
+            item: {
+                "@id": "https://www.priyamconsultancy.com/article/",
+                name: "Articles"
+            }
+        },
+        {
+            "@type": "ListItem",
+            position: 3,
+            item: {
+                "@id": "https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
+                name: "SEO Strategies for Small Businesses in India"
+            }
+        }
+    ]
+};
+const JSON_LD_WEBPAGE = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
+    url: "https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india",
+    name: "SEO Strategies for Small Businesses in India",
+    description: "Learn proven SEO strategies for small businesses in India to improve search rankings, attract qualified traffic, generate leads, and grow your business online with practical optimization techniques.",
+    inLanguage: "en-IN",
+    isPartOf: {
+        "@type": "WebSite",
+        name: "Priyam Consultancy Services",
+        url: "https://www.priyamconsultancy.com/"
+    },
+    publisher: {
+        "@type": "Organization",
+        name: "Priyam Consultancy Services",
+        logo: {
+            "@type": "ImageObject",
+            url: "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+        }
+    }
+};
+const JSON_LD_ORGANIZATION = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Priyam Consultancy Services",
+    url: "https://www.priyamconsultancy.com/",
+    logo: "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+    contactPoint: [
+        {
+            "@type": "ContactPoint",
+            telephone: "+91 96774 44048",
+            contactType: "customer support"
+        }
+    ],
+    sameAs: [
+        "https://www.facebook.com/profile.php?id=61577125709962",
+        "https://www.linkedin.com/company/priyam-consultancy-services/",
+        "https://www.instagram.com/priyam_consultancy_services/",
+        "https://x.com/services91032",
+        "https://g.co/kgs/rdTYdi6"
+    ]
+};
+const JSON_LD_ARTICLE = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "SEO for Small Businesses in India: 10 Proven Strategies That Actually Work",
+    description: "A practical, India-specific guide to SEO for small businesses — Google Business Profile, keyword research, on-page and technical SEO, local citations, reviews, and link building.",
+    author: {
+        "@type": "Person",
+        name: "Rhea Menon",
+        jobTitle: "Senior SEO Strategist"
+    },
+    publisher: {
+        "@type": "Organization",
+        name: "Priyam Consultancy Services",
+        logo: {
+            "@type": "ImageObject",
+            url: "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png"
+        }
+    },
+    dateModified: "2026-08-04",
+    mainEntityOfPage: "https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india"
+};
+// ════════════════════════════════════════════
+//  FAQ ITEM
+// ════════════════════════════════════════════
+function FaqItem({ q, a, isOpen, onToggle }) {
+    return /*#__PURE__*/ _jsxs("div", {
+        className: `tseo-faq-item${isOpen ? " open" : ""}`,
+        children: [
+            /*#__PURE__*/ _jsxs("button", {
+                className: "tseo-faq-q",
+                onClick: onToggle,
+                children: [
+                    /*#__PURE__*/ _jsx("span", {
+                        children: q
+                    }),
+                    /*#__PURE__*/ _jsx("span", {
+                        className: "tseo-plus",
+                        children: "+"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ _jsx("div", {
+                className: "tseo-faq-a",
+                style: {
+                    maxHeight: isOpen ? "300px" : "0px"
+                },
+                children: /*#__PURE__*/ _jsx("p", {
+                    children: a
+                })
+            })
+        ]
+    });
+}
+// ════════════════════════════════════════════
+//  MAIN PAGE
+// ════════════════════════════════════════════
+function SeoSmallBusinessIndiaGuide() {
+    const [activeSection, setActiveSection] = (0,react__rspack_import_1.useState)("intro");
+    const [progress, setProgress] = (0,react__rspack_import_1.useState)(0);
+    const [openFaq, setOpenFaq] = (0,react__rspack_import_1.useState)(0);
+    const sectionRefs = (0,react__rspack_import_1.useRef)({});
+    // Related Articles — fetched live from the PCS WordPress blog (title + featured image only)
+    const [relatedArticles, setRelatedArticles] = (0,react__rspack_import_1.useState)([]);
+    const [relatedLoading, setRelatedLoading] = (0,react__rspack_import_1.useState)(true);
+    const [relatedError, setRelatedError] = (0,react__rspack_import_1.useState)(null);
+    (0,react__rspack_import_1.useEffect)(()=>{
+        fetch(RELATED_ARTICLES_API).then((r)=>{
+            if (!r.ok) throw new Error(`HTTP ${r.status}`);
+            return r.json();
+        }).then((data)=>{
+            const parsed = data.map((post)=>{
+                const thumbnail = post._embedded?.["wp:featuredmedia"]?.[0]?.source_url || null;
+                const cleanTitle = (post.title?.rendered || "Untitled").replace(/&[^;]+;/g, " ").trim();
+                return {
+                    id: post.id,
+                    title: cleanTitle,
+                    link: post.link,
+                    thumbnail
+                };
+            });
+            setRelatedArticles(parsed);
+            setRelatedLoading(false);
+        }).catch((err)=>{
+            setRelatedError(err.message);
+            setRelatedLoading(false);
+        });
+    }, []);
+    (0,react__rspack_import_1.useEffect)(()=>{
+        const sections = TOC_ITEMS.map((t)=>document.getElementById(t.id)).filter(Boolean);
+        function onScroll() {
+            let activeIdx = 0;
+            const scrollPos = window.scrollY + 140;
+            sections.forEach((sec, i)=>{
+                if (sec.offsetTop <= scrollPos) activeIdx = i;
+            });
+            setActiveSection(TOC_ITEMS[activeIdx]?.id);
+            const doc = document.documentElement;
+            const pct = window.scrollY / (doc.scrollHeight - window.innerHeight) * 100;
+            setProgress(Math.min(100, Math.max(0, pct)));
+        }
+        document.addEventListener("scroll", onScroll);
+        onScroll();
+        return ()=>document.removeEventListener("scroll", onScroll);
+    }, []);
+    return /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)(_theme_Layout__rspack_import_2/* ["default"] */.A, {
+        title: "SEO for Small Businesses in India: 10 Proven Strategies",
+        description: "Discover practical SEO tips for small businesses in India, including local SEO, keyword research, technical SEO, and Google Business Profile optimization.",
+        children: [
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)(_docusaurus_Head__rspack_import_3/* ["default"] */.A, {
+                children: [
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("title", {
+                        children: "SEO for Small Businesses in India: 10 Proven Strategies "
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        name: "description",
+                        content: "Discover practical SEO tips for small businesses in India, including local SEO, keyword research, technical SEO, and Google Business Profile optimization."
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        name: "keywords",
+                        content: "SEO for Small Businesses ,technical SEO,local SEO, SEO  Strategies,"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("link", {
+                        rel: "canonical",
+                        href: "https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india/"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        property: "og:type",
+                        content: "article"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        property: "og:title",
+                        content: "SEO for Small Businesses in India: 10 Proven Strategies"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        property: "og:description",
+                        content: "Discover practical SEO tips for small businesses in India, including local SEO, keyword research, technical SEO, and Google Business Profile optimization."
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        property: "og:url",
+                        content: "https://www.priyamconsultancy.com/article/seo-strategies-for-small-businesses-india/"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        property: "og:site_name",
+                        content: "Priyam Consultancy Services"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        property: "og:image",
+                        content: "https://www.priyamconsultancy.com/img/article/seo-for-small-business-in-india.webp"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        name: "twitter:card",
+                        content: "summary_large_image"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        name: "twitter:title",
+                        content: "SEO for Small Businesses in India: 10 Proven Strategies"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        name: "twitter:description",
+                        content: "Discover practical SEO tips for small businesses in India, including local SEO, keyword research, technical SEO, and Google Business Profile optimization."
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                        name: "twitter:image",
+                        content: "https://www.priyamconsultancy.com/img/article/seo-for-small-business-in-india.webp"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(JSON_LD_BREADCRUMB)
+                }
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(JSON_LD_WEBPAGE)
+                }
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(JSON_LD_ORGANIZATION)
+                }
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(JSON_LD_ARTICLE)
+                }
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("style", {
+                children: `
+ main {
+    background: #fff;
+}
+        .tseo-mono{font-family:'JetBrains Mono',monospace;}
+        .tseo-breadcrumb{ padding:30px 24px; font-size:13px; color:var(--muted,#6B7A94);}
+        .tseo-breadcrumb a{color:var(--muted,#6B7A94); border-bottom:1px dotted transparent;}
+        .tseo-breadcrumb a:hover{color:#ED8337; border-bottom-color:#ED8337;}
+        .tseo-breadcrumb .sep{margin:0 6px; color:#F0E0D0;}
+
+        .tseo-page{
+          max-width:1450px; margin:0 auto;
+          display:grid;
+          grid-template-columns:310px minmax(0,1fr) 300px;
+          gap:40px;
+          padding:24px 24px 80px;
+          align-items:start;
+          font-family:'Poppins',system-ui,sans-serif;
+          color:#0D1F3C;
+        }
+        .tseo-page a{ color:inherit; text-decoration:none; }
+        .tseo-page h1,.tseo-page h2,.tseo-page h3,.tseo-page h4, h5{ font-family:'Poppins',system-ui,sans-serif; font-weight:700; 
+    line-height: 1.35;
+    margin: 0;
+    font-size: 1.8rem;
+    color: #0D1F3C;}
+
+  .tseo-page h3,.tseo-page h4, h5{ padding-bottom:1.4rem;}
+
+        /* LEFT SIDEBAR : TOC */
+        .tseo-toc-wrap{ position:sticky; top:24px; align-self:start; max-height:calc(100vh - 48px); overflow-y:auto;}
+        .tseo-toc-label{ font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#6B7A94; font-weight:700; margin-bottom:14px; display:flex; align-items:center; gap:8px;}
+        .tseo-toc-label::before{content:""; width:14px; height:1px; background:#ED8337;}
+        .tseo-toc{ list-style:none; margin:0; padding:0; border-left:1px solid #F0E0D0; }
+        .tseo-toc li{ position:relative; }
+        .tseo-toc a{ display:flex; align-items:baseline; gap:10px; padding:7px 0 7px 16px; font-size:13.5px; color:#6B7A94; transition:color .15s ease;}
+        .tseo-toc .num{ font-family:'JetBrains Mono',monospace; font-size:11px; color:#F0E0D0; min-width:20px;}
+        .tseo-toc a:hover{ color:#0D1F3C; }
+        .tseo-toc li::before{ content:""; position:absolute; left:-1px; top:0; bottom:0; width:2px; background:transparent; transition:background .15s ease;}
+        .tseo-toc li.active::before{ background:#ED8337; }
+        .tseo-toc li.active a{ color:#ED8337; font-weight:600; }
+        .tseo-toc li.active .num{ color:#ED8337; }
+        .tseo-toc-progress{ margin-top:18px; padding-top:14px; border-top:1px solid #F0E0D0; font-size:12px; color:#6B7A94;}
+        .tseo-toc-bar{ height:3px; background:#FFF0E6; border-radius:3px; margin-top:8px; overflow:hidden;}
+        .tseo-toc-bar-fill{ height:100%; background:#ED8337; transition:width .15s linear;}
+
+        /* CENTER CONTENT */
+        .tseo-content{ max-width:760px; min-width:0; }
+        .tseo-hero{ padding:8px 0 28px; }
+        .tseo-eyebrow{ font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#ED8337; font-weight:700; margin-bottom:14px; display:inline-flex; align-items:center; gap:8px; background:#FFF4EE; padding:5px 10px; border-radius:8px;}
+        .tseo-hero h1{ font-size:40px; font-weight:700;}
+        .tseo-dek{ font-size:18px; color:#6B7A94; line-height:1.5; margin-bottom:24px;}
+        .tseo-meta-row{ display:flex; flex-wrap:wrap; align-items:center; gap:18px; font-size:13.5px; color:#6B7A94; margin-bottom:22px;}
+        .tseo-author{ display:flex; align-items:center; gap:8px; color:#0D1F3C; font-weight:600;}
+        .tseo-avatar{ width:34px; height:34px; border-radius:50%; background:#0D1F3C; color:#FFFDFB; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; flex-shrink:0;}
+        .tseo-meta-dot{ width:4px; height:4px; border-radius:50%; background:#F0E0D0;}
+        .tseo-hero-img{ width:100%; aspect-ratio:16/8; border-radius:14px; object-fit:cover;  display:flex; align-items:center; justify-content:center; color:#fff; text-align:center; font-size:15px; padding:20px;}
+
+        .tseo-takeaways{ background:#0D1F3C; color:#FFFDFB; border-radius:14px; padding:28px 30px; margin-bottom:36px;}
+        .tseo-takeaways h3{ color:#ED8337; font-size:13px; text-transform:uppercase; letter-spacing:.1em; margin-bottom:16px;}
+        .tseo-takeaways ul{ margin:0; padding:0; list-style:none; display:grid; gap:12px;}
+        .tseo-takeaways li{ display:flex; gap:12px; font-size:14.5px; line-height:1.55; color:#fff;}
+        .tseo-takeaways li::before{ content:"→"; color:#ED8337; font-weight:700; flex-shrink:0;}
+
+        .tseo-content section{ margin-bottom:48px; }
+        .tseo-content h2{ font-size:27px; font-weight:700; margin-bottom:16px; scroll-margin-top:24px; letter-spacing:-.005em;}
+        .tseo-h2-index{ font-family:'JetBrains Mono',monospace; color:#ED8337; font-size:14px; margin-right:10px; font-weight:500;}
+        .tseo-content h3{ font-size:30px; font-weight:700; margin:22px 0 10px;}
+        .tseo-content p{ font-size:15px; line-height:1.75; color:#6B7A94; margin:0 0 16px;}
+        .tseo-content ul, .tseo-content ol{ font-size:16px; line-height:1.75; color:#2B362F; padding-left:22px; margin:0 0 16px;}
+        .tseo-content li{ margin-bottom:6px; color: #6B7A94;}
+        .tseo-content strong{ color:#0D1F3C; }
+        .tseo-inline-link{ color:#ED8337; border-bottom:1px solid #FFF4EE; font-weight:500;}
+        .tseo-inline-link:hover{ border-bottom-color:#ED8337; }
+
+        .tseo-benefit-grid{ display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:20px 0 8px;}
+        .tseo-benefit-card{ border:1px solid #F0E0D0; border-radius:14px; padding:18px; background:#fff;}
+        .tseo-benefit-card .ico{ font-family:'JetBrains Mono',monospace; color:#ED8337; font-size:12px; margin-bottom:8px; font-weight:700;}
+        .tseo-benefit-card h4{ font-size:15.5px; font-weight:600; margin-bottom:6px;}
+        .tseo-benefit-card p{ font-size:13.5px; margin:0; color:#6B7A94; line-height:1.5;}
+
+        .tseo-practice-list{ display:grid; gap:14px; margin:18px 0;}
+        .tseo-practice-item{ display:grid; grid-template-columns:34px 1fr; gap:14px; padding:16px 0; border-bottom:1px solid #F0E0D0;}
+        .tseo-practice-item .num{ font-family:'JetBrains Mono',monospace; color:#ED8337; font-weight:700; font-size:14px;}
+        .tseo-practice-item h4{ font-size:16px; margin-bottom:4px; font-weight:600;}
+        .tseo-practice-item p{ margin:0; font-size:14.5px; color:#6B7A94;}
+
+        .tseo-mistake-list{ display:grid; gap:10px; margin:18px 0;}
+        .tseo-mistake-item{ display:flex; gap:12px; padding:14px 16px; background:#FBEFEA; border-left:3px solid #C2492E; border-radius:14px; font-size:14.5px; color:#3a2a23;}
+        .tseo-mistake-item b{ color:#7A2E1B; }
+
+        .tseo-expert-box{ border:1px solid #F0E0D0; border-left:4px solid #ED8337; background:#fff; border-radius:14px; padding:24px 26px; margin:26px 0; display:flex; gap:18px;}
+        .tseo-expert-box blockquote{ margin:0 0 10px; font-size:17px; line-height:1.5; font-style:italic; color:#0D1F3C;}
+        .tseo-expert-box .who{ font-size:13px; color:#6B7A94; font-weight:600;}
+
+        .tseo-stat-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:20px 0;}
+        .tseo-stat-card{ background:#FFF4EE; border-radius:14px; padding:20px 16px; text-align:left;}
+        .tseo-stat-card .num{ font-size:30px; font-weight:700; color:#ED8337; display:block; margin-bottom:4px;}
+        .tseo-stat-card .label{ font-size:12.5px; color:#2B362F; line-height:1.4;}
+        .tseo-stat-source{ font-size:12px; color:#6B7A94; margin-top:6px;}
+
+        .tseo-tools-table{ width:100%; border-collapse:collapse; margin:18px 0; font-size:14.5px;}
+        .tseo-tools-table th{ text-align:left; padding:10px 12px; background:#FFF0E6; font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:#6B7A94; font-weight:700;}
+        .tseo-tools-table td{ padding:12px 12px; border-bottom:1px solid #F0E0D0; color:#2B362F;}
+        .tseo-tools-table tr:last-child td{ border-bottom:none;}
+
+        .tseo-strategy-list{ display:grid; gap:14px; margin:18px 0;}
+        .tseo-strategy-item{ display:grid; grid-template-columns:40px 1fr; gap:14px; padding:16px 0; border-bottom:1px solid #F0E0D0;}
+        .tseo-strategy-item .num{ font-family:'JetBrains Mono',monospace; color:#ED8337; font-weight:700; font-size:15px;}
+        .tseo-strategy-item h3{ font-size:17px; margin:0 0 6px; font-weight:600;}
+        .tseo-strategy-item p{ margin:0; font-size:14.5px; color:#6B7A94;}
+
+        .tseo-faq-item{ border-bottom:1px solid #F0E0D0; }
+        .tseo-faq-q{ width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:18px 0; font-size:16px; font-weight:600; color:#0D1F3C; display:flex; justify-content:space-between; align-items:center; gap:12px;}
+        .tseo-plus{ font-family:'JetBrains Mono',monospace; color:#ED8337; font-size:18px; transition:transform .2s ease; flex-shrink:0;}
+        .tseo-faq-item.open .tseo-plus{ transform:rotate(45deg); }
+        .tseo-faq-a{ max-height:0; overflow:hidden; transition:max-height .25s ease; }
+        .tseo-faq-a p{ padding-bottom:18px; color:#6B7A94; font-size:15px; margin:0;}
+
+        .tseo-conclusion-box{ background:#FFF0E6; border-radius:14px; padding:26px 28px; }
+
+        .tseo-cta-banner{ background:linear-gradient(120deg, #004168, #0D1F3C 110%); color:#FFFDFB; border-radius:14px; padding:36px 34px; margin:48px 0; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;}
+        .tseo-cta-banner h3{ color:#fff; font-size:22px; margin-bottom:8px;}
+        .tseo-cta-banner p{ color:#D9E6DE; font-size:14.5px; margin:0; max-width:420px;}
+        .tseo-cta-btn{ background:#ED8337; color:#2A1000; font-weight:700; padding:13px 24px; border-radius:10px; font-size:14px; white-space:nowrap; letter-spacing:.01em; transition:transform .15s ease; display:inline-block;}
+        .tseo-cta-btn:hover{ transform:translateY(-1px); }
+
+        .tseo-author-bio{ display:flex; gap:18px; border-top:1px solid #F0E0D0; padding-top:30px; margin-top:8px;}
+        .tseo-author-bio .tseo-avatar{ width:56px; height:56px; font-size:18px; }
+        .tseo-author-bio h4{ font-size:16px; margin-bottom:4px;}
+        .tseo-author-bio .role{ font-size:13px; color:#ED8337; font-weight:600; margin-bottom:8px;}
+        .tseo-author-bio p{ font-size:14px; color:#6B7A94; margin:0; line-height:1.6;}
+
+        /* RIGHT SIDEBAR */
+        .tseo-rail{ position:sticky; top:24px; display:flex; flex-direction:column; gap:28px; align-self:start;}
+        .tseo-rail-card{ background:#fff; border:1px solid #F0E0D0; border-radius:14px; padding:22px;}
+        .tseo-rail-title{ font-size:12px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; color:#0D1F3C; margin-bottom:14px;}
+        .tseo-hub-grid{ display:grid; gap:4px; }
+        .tseo-hub-link{ display:flex; align-items:center; justify-content:space-between; padding:9px 10px; font-size:13.5px; border-radius:8px; color:#2B362F; font-weight:500;}
+        .tseo-hub-link:hover{ background:#FFF4EE; color:#ED8337; }
+        .tseo-hub-link .arrow{ color:#F0E0D0; font-family:'JetBrains Mono',monospace; }
+        .tseo-hub-link:hover .arrow{ color:#ED8337; }
+
+        .tseo-article-card{ display:flex; gap:12px; padding:12px 0; border-bottom:1px solid #FFF0E6;}
+        .tseo-article-card:last-child{ border-bottom:none; padding-bottom:0;}
+        .tseo-article-card .thumb{ width:56px; height:56px; flex-shrink:0; border-radius:10px; background:linear-gradient(135deg,#ED8337,#0D1F3C); overflow:hidden;}
+        .tseo-article-card .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+        .tseo-article-card .meta{ font-size:11px; color:#ED8337; font-weight:700; text-transform:uppercase; letter-spacing:.04em; margin-bottom:3px;}
+        .tseo-article-card h5{ font-size:13.5px; line-height:1.35; font-weight:600; color:#0D1F3C; margin:0;}
+        .tseo-article-card:hover h5{ color:#ED8337; }
+        .tseo-rail-status{ font-size:13px; color:#6B7A94; margin:0 0 8px; }
+        .tseo-rail-status-error{ color:#C2492E; }
+
+        .tseo-popular-row{ display:flex; align-items:baseline; gap:10px; padding:10px 0; border-bottom:1px solid #FFF0E6; font-size:13.5px;}
+        .tseo-popular-row:last-child{ border-bottom:none; }
+        .tseo-popular-row .rank{ font-family:'JetBrains Mono',monospace; color:#F0E0D0; font-weight:700; font-size:13px;}
+        .tseo-popular-row a{ font-weight:600; color:#0D1F3C; line-height:1.35; }
+        .tseo-popular-row a:hover{ color:#ED8337; }
+
+        .tseo-rail-cta{ background:#0D1F3C; color:#FFFDFB; }
+        .tseo-rail-cta h4{ font-size:18px; margin-bottom:8px; color:#fff;}
+        .tseo-rail-cta p{ font-size:13px; color:#C7CFC9; margin-bottom:16px; line-height:1.5;}
+        .tseo-rail-cta .tseo-cta-btn{ display:block; text-align:center; width:100%; box-sizing:border-box;}
+        .tseo-rail-cta .trust{ display:flex; gap:10px; margin-top:14px; font-size:11px; color:#8C9A91;}
+
+        @media (max-width:1180px){
+          .tseo-page{ grid-template-columns:1fr; }
+          .tseo-toc-wrap, .tseo-rail{ position:static; max-height:none; }
+          .tseo-rail{ order:3; }
+          .tseo-stat-grid{ grid-template-columns:1fr 1fr;}
+        }
+        @media (max-width:640px){
+          .tseo-hero h1{ font-size:30px; }
+          .tseo-benefit-grid, .tseo-stat-grid{ grid-template-columns:1fr; }
+          .tseo-cta-banner{ flex-direction:column; align-items:flex-start; }
+          .tseo-expert-box{ flex-direction:column; }
+        }
+      `
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("nav", {
+                className: "tseo-breadcrumb",
+                children: [
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)(_docusaurus_Link__rspack_import_4/* ["default"] */.A, {
+                        to: "/",
+                        children: "Home"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                        className: "sep",
+                        children: "/"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)(_docusaurus_Link__rspack_import_4/* ["default"] */.A, {
+                        to: "https://www.priyamconsultancy.com/blog/",
+                        children: "Resources"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                        className: "sep",
+                        children: "/"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)(_docusaurus_Link__rspack_import_4/* ["default"] */.A, {
+                        to: "/search-engine-optimization",
+                        children: "SEO"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                        className: "sep",
+                        children: "/"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                        children: "Small Business Guide"
+                    })
+                ]
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                className: "tseo-page",
+                children: [
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("aside", {
+                        className: "tseo-toc-wrap",
+                        children: [
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                className: "tseo-toc-label",
+                                children: "On this page"
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("ul", {
+                                className: "tseo-toc",
+                                children: TOC_ITEMS.map((item)=>/*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                        className: activeSection === item.id ? "active" : "",
+                                        children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("a", {
+                                            href: `#${item.id}`,
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                    className: "num",
+                                                    children: item.num
+                                                }),
+                                                item.label
+                                            ]
+                                        })
+                                    }, item.id))
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "tseo-toc-progress",
+                                children: [
+                                    "Reading progress",
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                        className: "tseo-toc-bar",
+                                        children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                            className: "tseo-toc-bar-fill",
+                                            style: {
+                                                width: `${progress}%`
+                                            }
+                                        })
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("main", {
+                        className: "tseo-content",
+                        children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("article", {
+                            children: [
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                    className: "tseo-hero",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                            className: "tseo-eyebrow",
+                                            children: "SEO \xb7 Small Business Guide"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h1", {
+                                            children: "SEO for Small Businesses in India: 10 Proven Strategies That Actually Work"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            className: "tseo-dek",
+                                            children: "Picture this. A potential customer in your city opens Google and types exactly what your business offers. Your competitor's website appears. Yours does not. That customer calls your competitor, pays your competitor, and never even knows you exist."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                            className: "tseo-hero-img",
+                                            style: {
+                                                padding: 0
+                                            },
+                                            children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)(_docusaurus_Link__rspack_import_4/* ["default"] */.A, {
+                                                href: "/article/seo-strategies-for-small-businesses-india",
+                                                children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("img", {
+                                                    src: "/img/article/seo-for-small-business-in-india.webp"
+                                                })
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "intro",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "This is happening right now — every single day — to thousands of small businesses across India."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "India has crossed 950 million internet users and is one of the fastest-growing digital markets in the world. Google dominates search here — meaning if you are not ranking on Google, you are simply not being found. SEO for small businesses is the single highest-return investment you can make online to change that — and this article breaks it down into 12 clear, proven strategies built for the Indian market."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "No jargon. No empty promises. Just what actually works."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("em", {
+                                                children: "SEO leads have a 14.6% close rate — compared to just 1.7% for outbound methods like print or direct mail. — HubSpot"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                    id: "what-is",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h3", {
+                                            children: "What Is SEO and Why Does It Matter for Small Businesses in India?"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "SEO for small businesses means making your website visible on Google when your potential customers search for your products or services — without paying for ads. The overwhelming majority of clicks on Google go to organic results, not paid ads. Ads get a small fraction of total clicks — and the moment you stop paying, that visibility disappears entirely."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Think of it this way: Google Ads is renting visibility. SEO is owning it. Every rupee you spend on real SEO strategies keeps working for months after you spend it. Every rupee on ads disappears the moment you stop paying."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "For Indian small businesses, this matters even more. The digital economy of India is growing at a pace unlike any other market in the world — fuelled by internet penetration, mobile usage, and an exploding e-commerce ecosystem. Your customers are already online and already searching. The only question is whether they find you or your competitor."
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "why-seo",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h2", {
+                                            children: "Why SEO Works Differently in the Indian Market"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Local SEO for small businesses in India has unique advantages that most business owners overlook. A significant share of all Google searches in India carry local intent — meaning people are actively searching for businesses and services near them, right now."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "India's market adds extra layers that global SEO guides rarely address:"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("ul", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Over 70% of Indian internet users access online content primarily through smartphones — making mobile SEO not optional, but survival"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Tier-2 and tier-3 cities are the fastest-growing segments for internet adoption, with rural users growing rapidly year on year"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Google drives the overwhelming majority of organic search traffic in India — so ranking on Google is non-negotiable"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Voice search in Hindi and regional languages is growing fastest in smaller cities — an opportunity most competitors are still ignoring"
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "SEO strategies designed for Western markets consistently miss these realities. The 12 strategies below are built around how Indian consumers actually search."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("em", {
+                                                children: "India's search market is approximately 75% mobile — mobile-first design and Core Web Vitals are the dominant drivers of organic visibility. — StatCounter / IAMAI, 2025"
+                                            })
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "strategy-1",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h4", {
+                                            children: "Strategy 1: Claim and Optimise Your Local Google Business Profile"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: 'This is the single highest-ROI first step for local SEO for small business — and it is completely free. Your Google Business Profile is what shows up in the map pack when someone searches "digital marketing agency near me" or "web developer in Salem."'
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "How to optimise it:"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("ul", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Claim and verify your listing at business.google.com"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Fill every field — business name, category, description, hours, phone, website"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Upload at least 10 high-quality photos of your office, team, and work"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Add your services with descriptions and pricing where possible"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Post updates weekly — Google rewards active profiles"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Respond to every review within 24 hours"
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Businesses with a complete and active Google Business Profile are significantly more likely to attract visitors and be considered for a purchase than those with incomplete listings."
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "strategy-2",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h4", {
+                                            children: "Strategy 2: Do Keyword Research the Right Way"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Every effective SEO strategy begins with keyword research for SEO. This means finding the exact words and phrases your potential customers type into Google — and then building your website content around them."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Keyword research for SEO tools to use, all with free versions:"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("ul", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "Google Keyword Planner"
+                                                        }),
+                                                        " — shows search volume and competition"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "Ubersuggest"
+                                                        }),
+                                                        " — shows competitor keywords and content ideas"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "AnswerThePublic"
+                                                        }),
+                                                        " — shows questions people ask around your topic"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "Google Search itself"
+                                                        }),
+                                                        ' — study the autocomplete suggestions and "People Also Ask" section'
+                                                    ]
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: 'For Indian SEO for small businesses, focus on long-tail keywords — specific four-to-six word phrases with lower competition. "Affordable SEO packages for small business in Chennai" converts far better than just "SEO." Always add your city. "Web designer Salem" ranks faster and brings more relevant traffic than "web designer India."'
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "strategy-3",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h4", {
+                                            children: "Strategy 3: Optimise Every Page with On-Page SEO"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "On-page SEO is everything you do on your own website to help Google understand what each page is about. It is the foundation of all SEO strategies — and most small business websites get it badly wrong."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "On-page SEO checklist for every page:"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("ul", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "Title Tag "
+                                                        }),
+                                                        "— include your primary keyword, keep it under 60 characters"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "Meta Description"
+                                                        }),
+                                                        " — 130–155 characters, include keyword and a clear benefit"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "H1 Heading"
+                                                        }),
+                                                        " — use H1 for the main title, H2 for subheadings, and so on"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "H2 / H3 Subheadings"
+                                                        }),
+                                                        " — break up content, include secondary keywords"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "First 100 words "
+                                                        }),
+                                                        " — use your primary keyword naturally in the opening paragraph"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "URL Slug"
+                                                        }),
+                                                        " — short and keyword-only. /seo-services-india not /page?id=1234"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "Image Alt Text "
+                                                        }),
+                                                        " — describe every image using relevant keywords"
+                                                    ]
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Nearly all page-one results on Google use their primary keyword in the title or H1. On-page SEO is not about stuffing keywords everywhere — it is about making it crystal clear to Google what your page is about while keeping it natural for the reader."
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "strategy-4",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h4", {
+                                            children: "Strategy 4: Make Your Website Mobile-Friendly and Fast"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Page speed optimisation is not a technical nicety — it is a direct ranking factor. Bounce rates rise sharply when a website takes more than two seconds to load. For Indian users on mobile data connections, slow pages mean lost customers before you even get a chance to speak to them."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Google now indexes the mobile version of your site first — known as mobile-first indexing. If your site is not mobile-friendly, you will not rank"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Page speed optimisation steps you can take today:"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("ul", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Test your site at PageSpeed Insights — aim for a score above 70 on mobile"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Compress all images using TinyPNG or ShortPixel before uploading"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Use a fast hosting provider — avoid cheap shared hosting"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Enable browser caching and GZIP compression"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Remove unnecessary plugins if you are on WordPress"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Use a CDN for faster delivery across India"
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "strategy-5",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h4", {
+                                            children: "Strategy 5: Create Helpful Content That Answers Real Questions"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Content is what fuels every other SEO strategy. Without valuable content, there is nothing for Google to rank. This is where partnering with a strong content marketing agency India can give your business a significant advantage — because content done right compounds over time."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "The most effective content types for SEO for small businesses:"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("ul", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: 'How-to guides — "How to Register a Startup in India: Step-by-Step Guide"'
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: 'Comparison articles — "SEO vs Google Ads: Which Is Better for Small Businesses?"'
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: 'FAQ pages — target Google\'s "People Also Ask" box for free extra visibility'
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Local service pages — one dedicated page per service per city you serve"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Case studies — real results from real clients — the most trust-building content you can create"
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Aim for a minimum of 1,000 words per article, publish at least twice a month consistently, and always answer the specific question your reader is asking — not a watered-down version of it."
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "strategy-6",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h4", {
+                                            children: "Strategy 6: Build Local Citations on Indian Directories"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Local citations are mentions of your business name, address, and phone number on other websites. For local SEO for small business, they are a critical trust signal that tells Google your business is real and where it operates."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Key Indian directories to list your business on:"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("ul", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "JustDial"
+                                                        }),
+                                                        " — India's largest local search platform"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "Sulekha"
+                                                        }),
+                                                        " — high traffic, especially for service businesses"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "IndiaMART"
+                                                        }),
+                                                        " — essential for B2B businesses"
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("li", {
+                                                    children: [
+                                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                            children: "IndiaBizClub, TradeIndia, ExportersIndia"
+                                                        }),
+                                                        " — sector-specific"
+                                                    ]
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Your business name, address, and phone number must be exactly identical across every listing. Even small differences — Road vs Rd, +91 vs 0 — confuse Google and hurt your local rankings."
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "strategy-7",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h2", {
+                                            children: "Strategy 7: Get Google Reviews — and Respond to Every One"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Reviews are the number two ranking factor for local SEO for small business — and they directly influence whether someone calls you or your competitor. Most consumers check reviews on multiple platforms before choosing a local business.   "
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "How to get more Google reviews without violating Google's policies:"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("ul", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Send a follow-up WhatsApp or email to every happy client with your Google review link"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: 'Add a "Review Us on Google" button to your website footer'
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Ask at the right moment — right after a successful project delivery"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Create a short QR code linking to your review page and display it at your office"
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Always respond to every review — positive and negative. Potential customers read how you handle complaints just as carefully as they read the complaints themselves.             "
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "strategy-8",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h5", {
+                                            children: "Strategy 8: Fix Your Website's Technical SEO"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Understanding technical SEO vs on-page SEO is essential for any small business owner investing in search. On-page SEO is what your visitors see — content, headings, and meta tags. Technical SEO is what Google sees underneath — your site speed, crawlability, sitemap, security certificate, and structured data."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Common technical SEO issues that hurt small business rankings:"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("ul", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Broken links (404 errors) — test with Screaming Frog, free up to 500 pages"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Missing XML sitemap — submit yours in Google Search Console"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "No HTTPS certificate — Google penalises non-secure sites"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Duplicate content — use canonical tags to resolve it"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Crawl errors — pages Google cannot access cannot be ranked"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Schema markup — structured data helps Google show rich results for your pages"
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Technical SEO does not require a developer for most fixes. Google Search Console will show you the most critical issues on your site within 48 hours of verification."
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "strategy-9",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h5", {
+                                            children: "Strategy 9: Build Internal Links Between Your Pages"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Internal linking is one of the most underused SEO strategies for small business websites — and one of the easiest to implement with zero cost. Every new article you publish should link to at least two or three existing pages on your site."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "This matters for website SEO analysis because internal links spread authority from high-performing pages to pages that need a ranking boost, help Google understand your site structure, and keep visitors on your site longer — all of which reduce bounce rate and signal quality to Google."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Rule of thumb: every page on your site should be reachable within three clicks from your homepage."
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("section", {
+                                    id: "strategy-10",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h5", {
+                                            children: "Strategy 10: Earn Backlinks from Other Websites"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Backlinks — links from other websites pointing to yours — remain one of Google's most powerful ranking signals. A single link from a reputable Indian publication can move your ranking more than dozens of minor on-page optimisations."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Link building strategies for Indian small businesses:"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("ul", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Guest posting — write a valuable article for an industry blog in exchange for a backlink"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Business directory listings — JustDial, Sulekha, IndiaMART all provide backlinks"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "PR and press releases — get featured in local news when you launch or win awards"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Broken link building — find broken links on relevant websites and offer your content as a replacement"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                    children: "Shareable assets — original data, infographics, or free tools earn natural backlinks"
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "The majority of web pages online have zero backlinks — meaning most of your competitors are not doing this at all. Even five to ten quality backlinks from relevant Indian sites can make a measurable ranking difference."
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                    id: "conclusion",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h3", {
+                                            style: {
+                                                marginBottom: "12px"
+                                            },
+                                            children: "Conclusion"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "SEO for small businesses in India is not a magic switch — but it is the closest thing to a compounding business asset you can build online"
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Every blog post you publish, every Google review you earn, every backlink you build — they stack. They compound. A business that starts its SEO strategies today will be in a fundamentally stronger position six months from now than one that waits."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "The 12 strategies in this guide — from keyword research for SEO and on-page SEO to technical SEO, link building strategies, and local SEO for small business — are the same approaches that help Indian businesses rank on page one. Start with one strategy this week. Just one."
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                            children: "Not sure where to start? Priyam Consultancy Services offers a free consultation for  website SEO analysis — no jargon, no pressure. We'll look at where your site stands today and tell you exactly what it would take to start ranking."
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                    className: "tseo-cta-banner",
+                                    id: "cta",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h3", {
+                                                    children: "Ready to Start Ranking on Google?"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                                    children: "Priyam Consultancy Services offers a free SEO consultation — no pressure. We'll review your website and tell you exactly what it takes to rank higher."
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)(_docusaurus_Link__rspack_import_4/* ["default"] */.A, {
+                                            className: "tseo-cta-btn",
+                                            to: "/contact-us",
+                                            children: "Get a Free SEO Consultation →"
+                                        })
+                                    ]
+                                })
+                            ]
+                        })
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("aside", {
+                        className: "tseo-rail",
+                        children: [
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "tseo-rail-card",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                        className: "tseo-rail-title",
+                                        children: " Digital Marketing Learning Hub"
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                        className: "tseo-hub-grid",
+                                        children: HUB_LINKS.map((l)=>/*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)(_docusaurus_Link__rspack_import_4/* ["default"] */.A, {
+                                                className: "tseo-hub-link",
+                                                to: l.href,
+                                                children: [
+                                                    l.label,
+                                                    " ",
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                        className: "arrow",
+                                                        children: "→"
+                                                    })
+                                                ]
+                                            }, l.href))
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "tseo-rail-card tseo-rail-cta",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h4", {
+                                        children: "Not Sure What Your Business Needs?"
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                        children: "Get a free consultation and a custom roadmap from our team at Priyam Consultancy Services — no commitment required."
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)(_docusaurus_Link__rspack_import_4/* ["default"] */.A, {
+                                        className: "tseo-cta-btn",
+                                        to: "/contact-us",
+                                        children: "Talk to Our Team"
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                        className: "trust",
+                                        children: "20+ Industries Served"
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "tseo-rail-card",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                        className: "tseo-rail-title",
+                                        children: "Related Blogs"
+                                    }),
+                                    relatedLoading && /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                        className: "tseo-rail-status",
+                                        children: "Loading..."
+                                    }),
+                                    relatedError && /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                        className: "tseo-rail-status tseo-rail-status-error",
+                                        children: "Couldn't load articles."
+                                    }),
+                                    !relatedLoading && !relatedError && relatedArticles.length === 0 && /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                        className: "tseo-rail-status",
+                                        children: "No related articles yet."
+                                    }),
+                                    relatedArticles.map((a)=>/*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("a", {
+                                            className: "tseo-article-card",
+                                            href: a.link,
+                                            target: "_blank",
+                                            rel: "noreferrer",
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                                    className: "thumb",
+                                                    children: a.thumbnail && /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("img", {
+                                                        src: a.thumbnail,
+                                                        alt: a.title,
+                                                        loading: "lazy"
+                                                    })
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                                    children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h5", {
+                                                        children: a.title
+                                                    })
+                                                })
+                                            ]
+                                        }, a.id))
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "tseo-rail-card",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                        className: "tseo-rail-title",
+                                        children: "Popular Articles"
+                                    }),
+                                    RECENT_ARTICLES.map((p, i)=>/*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                            className: "tseo-popular-row",
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                    className: "rank",
+                                                    children: String(i + 1).padStart(2, "0")
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)(_docusaurus_Link__rspack_import_4/* ["default"] */.A, {
+                                                    to: p.href,
+                                                    children: p.title
+                                                })
+                                            ]
+                                        }, p.href))
+                                ]
+                            })
+                        ]
+                    })
+                ]
+            })
+        ]
+    });
+}
+/* export default */ const __rspack_default_export = (SeoSmallBusinessIndiaGuide);
+
+
+},
+
+};
+;

@@ -56,6 +56,13 @@ const config = {
     // Microsoft Clarity
     { tagName: 'script', attributes: { type: 'text/javascript' }, innerHTML: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","x051212jzw");` },
 
+        // Leadfeeder (Dealfront) tracker
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: `(function(ss,ex){window.ldfdr=window.ldfdr||function(){(ldfdr._q=ldfdr._q||[]).push([].slice.call(arguments));};(function(d,s){var fs=d.getElementsByTagName(s)[0];function ce(src){var cs=d.createElement(s);cs.src=src;cs.async=1;fs.parentNode.insertBefore(cs,fs);}ce('https://sc.lfeeder.com/lftracker_v1_'+ss+(ex?'_'+ex:'')+'.js');})(document,'script');})('JMvZ8gvBAAEa2pOd');`,
+    },
+    
     // OpenAI Pixel
     {
       tagName: 'script',

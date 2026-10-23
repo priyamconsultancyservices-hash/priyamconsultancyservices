@@ -577,7 +577,8 @@ p.tech-desc1 { color: black; text-align: center; margin: 2rem 0 3rem; }
   .pcs-footer { padding: 3.5rem 6% 2.5rem; }
   .pcs-footer-inner { grid-template-columns: 1fr; gap: 2.2rem; }
 }
-/* ── Dussehra Banner ── */
+
+/* ── Diwali Banner ── */
 .dsb-bar {
     position: relative;
     width: 100%;
@@ -657,6 +658,148 @@ p.tech-desc1 { color: black; text-align: center; margin: 2rem 0 3rem; }
     .dsb-text { font-size: 0.8rem; }
     .dsb-btn { font-size: 0.75rem; padding: 8px 18px; }
     .dsb-close { right: 10px; top: 14px; transform: none; font-size: 1rem; }
+}
+
+/* ── Diwali banner LOOP animations ── */
+
+/* 1) Gold shimmer on "Happy Diwali" text */
+.dsb-bar .dsb-gold {
+    background: linear-gradient(100deg, #ffb300 0%, #ffe082 30%, #fffde7 50%, #ffe082 70%, #ffb300 100%);
+    background-size: 250% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: dsbShine 3.2s linear infinite;
+}
+@keyframes dsbShine {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -50% 0; }
+}
+
+/* 2) Diya flame flicker */
+.dsb-flame {
+    transform-box: fill-box;
+    transform-origin: 50% 100%;
+    animation: dsbFlicker 1.1s ease-in-out infinite;
+}
+.dsb-flame-inner { animation-duration: 0.8s; animation-delay: -0.3s; }
+.dsb-diya-2 .dsb-flame { animation-delay: -0.55s; }
+@keyframes dsbFlicker {
+    0%, 100% { transform: scale(1, 1) rotate(0deg); opacity: 1; }
+    25%      { transform: scale(0.92, 1.12) rotate(-3deg); opacity: 0.92; }
+    50%      { transform: scale(1.06, 0.94) rotate(2deg); opacity: 1; }
+    75%      { transform: scale(0.95, 1.08) rotate(-2deg); opacity: 0.95; }
+}
+
+/* 3) Diya glow pulse */
+.dsb-bar .dsb-diya { animation: dsbGlow 2.2s ease-in-out infinite; }
+.dsb-bar .dsb-diya-2 .dsb-diya { animation-delay: -1.1s; }
+@keyframes dsbGlow {
+    0%, 100% { filter: drop-shadow(0 0 2px rgba(255, 179, 0, 0.35)); transform: translateY(0); }
+    50%      { filter: drop-shadow(0 0 10px rgba(255, 179, 0, 0.95)); transform: translateY(-2px); }
+}
+
+/* 4) Button pulse ring + shine sweep + arrow nudge */
+.dsb-bar .dsb-btn {
+    position: relative;
+    overflow: hidden;
+    animation: dsbBtnPulse 2s ease-out infinite;
+}
+.dsb-bar .dsb-btn::after {
+    content: "";
+    position: absolute;
+    top: 0; left: -80%;
+    width: 50%; height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+    transform: skewX(-20deg);
+    animation: dsbBtnShine 2.8s ease-in-out infinite;
+    pointer-events: none;
+}
+.dsb-bar .dsb-btn span { display: inline-block; animation: dsbArrow 1.2s ease-in-out infinite; }
+@keyframes dsbBtnPulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255, 179, 0, 0.55); }
+    70%  { box-shadow: 0 0 0 12px rgba(255, 179, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 179, 0, 0); }
+}
+@keyframes dsbBtnShine {
+    0%, 55% { left: -80%; }
+    100%    { left: 140%; }
+}
+@keyframes dsbArrow {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dsb-bar .dsb-gold, .dsb-flame, .dsb-bar .dsb-diya,
+    .dsb-bar .dsb-btn, .dsb-bar .dsb-btn::after, .dsb-bar .dsb-btn span { animation: none; }
+}
+
+/* ── Diwali banner FULL BAR animation ── */
+.dsb-bar {
+    overflow: hidden;
+    background: linear-gradient(90deg, #7a0626, #55073f, #8a1030, #3d0a3a, #7a0626);
+    background-size: 300% 100%;
+    animation: dsbBarBg 8s ease-in-out infinite, dsbBarGlow 2.4s ease-in-out infinite;
+}
+.dsb-inner { position: relative; z-index: 2; }
+.dsb-close { z-index: 2; }
+
+/* 1) Gradient background move */
+@keyframes dsbBarBg {
+    0%, 100% { background-position: 0% 50%; }
+    50%      { background-position: 100% 50%; }
+}
+
+/* 2) Bottom gold glow blink */
+@keyframes dsbBarGlow {
+    0%, 100% { box-shadow: 0 2px 8px rgba(255, 179, 0, 0.15); }
+    50%      { box-shadow: 0 4px 22px rgba(255, 179, 0, 0.6); }
+}
+
+/* 3) Light sweep across the full bar (shine / scratch effect) */
+.dsb-bar::before {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0; left: -40%;
+    width: 30%;
+    background: linear-gradient(100deg, transparent 0%, rgba(255, 224, 130, 0.28) 50%, transparent 100%);
+    transform: skewX(-22deg);
+    animation: dsbBarSweep 4.5s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+@keyframes dsbBarSweep {
+    0%, 20% { left: -40%; }
+    100%    { left: 130%; }
+}
+
+/* 4) Twinkling sparkles (blink) */
+.dsb-bar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle, #fff 1.2px, transparent 2px),
+        radial-gradient(circle, #ffe082 1.5px, transparent 2.5px),
+        radial-gradient(circle, #fff 1px, transparent 2px),
+        radial-gradient(circle, #ffca28 1.4px, transparent 2.4px);
+    background-size: 140px 60px, 210px 60px, 90px 60px, 170px 60px;
+    background-position: 10px 12px, 70px 40px, 40px 28px, 120px 8px;
+    animation: dsbTwinkle 2.6s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+@keyframes dsbTwinkle {
+    0%, 100% { opacity: 0.15; }
+    30%      { opacity: 0.9; }
+    60%      { opacity: 0.3; }
+    80%      { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dsb-bar, .dsb-bar::before, .dsb-bar::after { animation: none; }
 }
 
 /* ── Diwali Popup ── */

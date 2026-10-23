@@ -1,0 +1,1240 @@
+"use strict";
+exports.ids = ["6656"];
+exports.modules = {
+5348(__unused_rspack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (JobDetailTemplate)
+});
+/* import */ var react_jsx_runtime__rspack_import_0 = __webpack_require__(4848);
+/* import */ var react__rspack_import_1 = __webpack_require__(6540);
+/* import */ var _theme_Layout__rspack_import_2 = __webpack_require__(8328);
+/* import */ var _docusaurus_Head__rspack_import_3 = __webpack_require__(3572);
+/* import */ var _site_src_components_careersData__rspack_import_4 = __webpack_require__(6763);
+
+
+
+
+
+
+/* ══════════════════════════════════════════
+   STYLES
+══════════════════════════════════════════ */ /* ══════════════════════════════════════════
+   APPLY MODAL
+══════════════════════════════════════════ */ function ApplyModal({ role, onClose }) {
+    const [form, setForm] = (0,react__rspack_import_1.useState)({
+        name: "",
+        email: "",
+        phone: "",
+        experience: "",
+        linkedin: "",
+        cover: ""
+    });
+    const [resume, setResume] = (0,react__rspack_import_1.useState)(null);
+    const [submitted, setSubmitted] = (0,react__rspack_import_1.useState)(false);
+    const [loading, setLoading] = (0,react__rspack_import_1.useState)(false);
+    const set = (k)=>(e)=>setForm((f)=>({
+                    ...f,
+                    [k]: e.target.value
+                }));
+    const handleFile = (e)=>{
+        const file = e.target.files[0];
+        if (file) setResume(file);
+    };
+    // const handleSubmit = async () => {
+    //   if (!form.name || !form.email || !form.phone) return;
+    //   setLoading(true);
+    //   try {
+    //     const formData = new FormData();
+    //     formData.append("_subject", `New Job Application — ${role.title}`);
+    //     formData.append("name", form.name);
+    //     formData.append("email", form.email);
+    //     formData.append("phone", form.phone);
+    //     formData.append("role_title", role.title);
+    //     formData.append("location", role.location);
+    //     formData.append("years_of_experience", form.experience || "Not specified");
+    //     formData.append("linkedin_profile", form.linkedin || "Not provided");
+    //     formData.append("cover_note", form.cover || "Not provided");
+    //     if (resume) formData.append("resume", resume);
+    //     const res = await fetch("https://formspree.io/f/xbdqnqre", {
+    //       method: "POST",
+    //       body: formData,
+    //       headers: { Accept: "application/json" },
+    //     });
+    //     const data = await res.json();
+    //     if (res.ok) {
+    //       setSubmitted(true);
+    //     } else {
+    //       const errMsg = data?.errors?.map((e) => e.message).join(", ") || "Something went wrong.";
+    //       alert(`Error: ${errMsg}`);
+    //     }
+    //   } catch (err) {
+    //     alert(err.message || "Network error. Please check your connection.");
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // };
+    const handleSubmit = async ()=>{
+        if (!form.name || !form.email || !form.phone) {
+            alert("Please fill all required fields.");
+            return;
+        }
+        setLoading(true);
+        try {
+            let resumeUrl = "";
+            // Upload Resume to Cloudinary
+            if (resume) {
+                const cloudData = new FormData();
+                cloudData.append("file", resume);
+                cloudData.append("upload_preset", "PCS Career");
+                const cloudRes = await fetch("https://api.cloudinary.com/v1_1/dsmzvp3ew/raw/upload", {
+                    method: "POST",
+                    body: cloudData
+                });
+                const cloudResult = await cloudRes.json();
+                if (!cloudRes.ok) {
+                    throw new Error(cloudResult?.error?.message || "Resume upload failed.");
+                }
+                resumeUrl = cloudResult.secure_url;
+            }
+            // Send Details to Formspree
+            const formData = new FormData();
+            formData.append("_subject", `New Job Application — ${role.title}`);
+            formData.append("name", form.name);
+            formData.append("email", form.email);
+            formData.append("phone", form.phone);
+            formData.append("role_title", role.title);
+            formData.append("location", role.location);
+            formData.append("years_of_experience", form.experience || "Not specified");
+            formData.append("linkedin_profile", form.linkedin || "Not provided");
+            formData.append("cover_note", form.cover || "Not provided");
+            formData.append("resume_url", resumeUrl || "Resume not uploaded");
+            const res = await fetch("https://formspree.io/f/xbdqnqre", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json"
+                }
+            });
+            const data = await res.json();
+            if (res.ok) {
+                setSubmitted(true);
+                setForm({
+                    name: "",
+                    email: "",
+                    phone: "",
+                    experience: "",
+                    linkedin: "",
+                    cover: ""
+                });
+                setResume(null);
+            } else {
+                const errMsg = data?.errors?.map((e)=>e.message).join(", ") || "Something went wrong.";
+                alert(`Error: ${errMsg}`);
+            }
+        } catch (err) {
+            alert(err.message || "Submission failed.");
+        } finally{
+            setLoading(false);
+        }
+    };
+    return /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+        className: "modal-overlay",
+        onClick: (e)=>e.target === e.currentTarget && onClose(),
+        children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+            className: "modal-box",
+            children: submitted ? /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                className: "modal-success",
+                children: [
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                        className: "success-icon",
+                        children: "✓"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                        className: "success-title",
+                        children: "Application Submitted!"
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("p", {
+                        className: "success-sub",
+                        children: [
+                            "Thank you for applying for ",
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                children: role.title
+                            }),
+                            ". Our team will review your profile and get back to you within 3–5 business days."
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("button", {
+                        className: "success-close",
+                        onClick: onClose,
+                        children: "Close"
+                    })
+                ]
+            }) : /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)(react_jsx_runtime__rspack_import_0.Fragment, {
+                children: [
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                        className: "modal-header",
+                        children: [
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("button", {
+                                className: "modal-close",
+                                onClick: onClose,
+                                children: "✕"
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                className: "modal-eyebrow",
+                                children: "Apply Now"
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                className: "modal-title",
+                                children: role.title
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "modal-subtitle",
+                                children: [
+                                    "\uD83D\uDCCD ",
+                                    role.location,
+                                    " \xa0\xb7\xa0 ",
+                                    role.title.toLowerCase().includes("intern") ? "Internship" : "Full-time",
+                                    " \xa0\xb7\xa0 ",
+                                    role.openings,
+                                    " Opening",
+                                    role.openings > 1 ? "s" : ""
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                        className: "modal-body",
+                        children: [
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "form-row",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                        className: "form-group",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("label", {
+                                                className: "form-label",
+                                                children: [
+                                                    "Full Name ",
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                        children: "*"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("input", {
+                                                className: "form-input",
+                                                placeholder: "John Doe",
+                                                value: form.name,
+                                                onChange: set("name")
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                        className: "form-group",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("label", {
+                                                className: "form-label",
+                                                children: [
+                                                    "Phone Number ",
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                        children: "*"
+                                                    })
+                                                ]
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("input", {
+                                                className: "form-input",
+                                                placeholder: "+91 98765 43210",
+                                                value: form.phone,
+                                                onChange: set("phone")
+                                            })
+                                        ]
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "form-group",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("label", {
+                                        className: "form-label",
+                                        children: [
+                                            "Email Address ",
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                children: "*"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("input", {
+                                        className: "form-input",
+                                        type: "email",
+                                        placeholder: "you@email.com",
+                                        value: form.email,
+                                        onChange: set("email")
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "form-row",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                        className: "form-group",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("label", {
+                                                className: "form-label",
+                                                children: "Years of Experience"
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("select", {
+                                                className: "form-select",
+                                                value: form.experience,
+                                                onChange: set("experience"),
+                                                children: [
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("option", {
+                                                        value: "",
+                                                        children: "Select..."
+                                                    }),
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("option", {
+                                                        children: "Fresher (0–1 yr)"
+                                                    }),
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("option", {
+                                                        children: "1–3 Years"
+                                                    }),
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("option", {
+                                                        children: "3–5 Years"
+                                                    }),
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("option", {
+                                                        children: "5–8 Years"
+                                                    }),
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("option", {
+                                                        children: "8+ Years"
+                                                    })
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                        className: "form-group",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("label", {
+                                                className: "form-label",
+                                                children: "LinkedIn Profile"
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("input", {
+                                                className: "form-input",
+                                                placeholder: "linkedin.com/in/yourname",
+                                                value: form.linkedin,
+                                                onChange: set("linkedin")
+                                            })
+                                        ]
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "form-group",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("label", {
+                                        className: "form-label",
+                                        children: [
+                                            "Upload Resume ",
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                children: "*"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                        className: "file-upload-area",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("input", {
+                                                type: "file",
+                                                accept: ".pdf,.doc,.docx",
+                                                onChange: handleFile
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                                className: "file-upload-icon",
+                                                children: "\uD83D\uDCC4"
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                                className: "file-upload-text",
+                                                children: [
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                        children: "Click to upload"
+                                                    }),
+                                                    " or drag & drop",
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("br", {}),
+                                                    "PDF, DOC, DOCX (max 5MB)"
+                                                ]
+                                            }),
+                                            resume && /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                                className: "file-name",
+                                                children: [
+                                                    "✓ ",
+                                                    resume.name
+                                                ]
+                                            })
+                                        ]
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "form-group",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("label", {
+                                        className: "form-label",
+                                        children: "Cover Note"
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("textarea", {
+                                        className: "form-textarea",
+                                        placeholder: "Tell us why you're a great fit for this role...",
+                                        value: form.cover,
+                                        onChange: set("cover")
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("button", {
+                                className: "modal-submit",
+                                onClick: handleSubmit,
+                                disabled: loading || !form.name || !form.email || !form.phone,
+                                children: loading ? resume ? "📤 Uploading Resume..." : "Submitting..." : "Submit Application →"
+                            })
+                        ]
+                    })
+                ]
+            })
+        })
+    });
+}
+/* ══════════════════════════════════════════
+   SEO HEAD
+══════════════════════════════════════════ */ function JobSEO({ role }) {
+    const slug = role.slug || role.title.toLowerCase().replace(/\s+/g, "-");
+    const canonicalUrl = `${_site_src_components_careersData__rspack_import_4/* .SITE_URL */.W6}/careers/${slug}/`;
+    const isIntern = role.title.toLowerCase().includes("intern");
+    const jobSchema = {
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        title: role.title,
+        description: role.desc,
+        datePosted: "2025-01-01",
+        validThrough: "2025-12-31",
+        employmentType: isIntern ? "INTERN" : "FULL_TIME",
+        hiringOrganization: {
+            "@type": "Organization",
+            name: "Sterlo",
+            sameAs: _site_src_components_careersData__rspack_import_4/* .SITE_URL */.W6,
+            logo: `${_site_src_components_careersData__rspack_import_4/* .SITE_URL */.W6}/img/logo.png`
+        },
+        jobLocation: {
+            "@type": "Place",
+            address: {
+                "@type": "PostalAddress",
+                addressLocality: "Coimbatore",
+                addressRegion: "Tamil Nadu",
+                addressCountry: "IN"
+            }
+        },
+        experienceRequirements: role.experience,
+        numberOfPositions: role.openings,
+        url: canonicalUrl,
+        directApply: true
+    };
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: _site_src_components_careersData__rspack_import_4/* .SITE_URL */.W6
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Careers",
+                item: `${_site_src_components_careersData__rspack_import_4/* .SITE_URL */.W6}/careers/`
+            },
+            {
+                "@type": "ListItem",
+                position: 3,
+                name: role.title,
+                item: canonicalUrl
+            }
+        ]
+    };
+    return /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)(_docusaurus_Head__rspack_import_3/* ["default"] */.A, {
+        children: [
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("title", {
+                children: [
+                    role.seo?.title || `${role.title} `,
+                    " "
+                ]
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                name: "description",
+                content: role.seo?.description || role.desc
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                name: "keywords",
+                content: role.seo?.keywords || role.title
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("link", {
+                rel: "canonical",
+                href: role.seo?.canonical || canonicalUrl
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                name: "robots",
+                content: "index, follow"
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                property: "og:type",
+                content: "article"
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                property: "og:title",
+                content: `${role.title}`
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                property: "og:description",
+                content: role.desc
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                property: "og:url",
+                content: canonicalUrl
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                property: "og:image",
+                content: `${_site_src_components_careersData__rspack_import_4/* .SITE_URL */.W6}/img/career.png`
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                property: "og:site_name",
+                content: "Sterlo"
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                name: "twitter:card",
+                content: "summary_large_image"
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                name: "twitter:title",
+                content: `${role.title} `
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("meta", {
+                name: "twitter:description",
+                content: role.desc
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("script", {
+                type: "application/ld+json",
+                children: JSON.stringify(jobSchema)
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("script", {
+                type: "application/ld+json",
+                children: JSON.stringify(breadcrumbSchema)
+            })
+        ]
+    });
+}
+/* ══════════════════════════════════════════
+   MAIN TEMPLATE — used by all 12 pages
+══════════════════════════════════════════ */ function JobDetailTemplate({ role }) {
+    const [showModal, setShowModal] = (0,react__rspack_import_1.useState)(false);
+    const isIntern = role.title.toLowerCase().includes("intern");
+    return /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)(_theme_Layout__rspack_import_2/* ["default"] */.A, {
+        children: [
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)(JobSEO, {
+                role: role
+            }),
+            showModal && /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)(ApplyModal, {
+                role: role,
+                onClose: ()=>setShowModal(false)
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("section", {
+                className: "banner",
+                children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                    className: "banner-inner",
+                    children: [
+                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                            className: "banner-eyebrow",
+                            children: [
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                    className: "eyebrow-dot"
+                                }),
+                                isIntern ? "Internship Opening" : "Open Position"
+                            ]
+                        }),
+                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h1", {
+                            className: "banner-title",
+                            children: role.title
+                        }),
+                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                            className: "banner-subtitle",
+                            children: role.desc
+                        })
+                    ]
+                })
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                className: "jd-body",
+                children: [
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                        className: "jd-content",
+                        children: [
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("a", {
+                                className: "jd-back",
+                                href: "/careers/",
+                                children: "← Back to Open Roles"
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "jd-meta-row",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                        className: "jd-meta-item",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                className: "jd-meta-label",
+                                                children: "Location"
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("span", {
+                                                className: "jd-meta-value",
+                                                children: [
+                                                    "\uD83D\uDCCD ",
+                                                    role.location
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                        className: "jd-meta-divider"
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                        className: "jd-meta-item",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                className: "jd-meta-label",
+                                                children: "Openings"
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("span", {
+                                                className: "jd-meta-value",
+                                                children: [
+                                                    role.openings,
+                                                    " Positions"
+                                                ]
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                        className: "jd-meta-divider"
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                        className: "jd-meta-item",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                className: "jd-meta-label",
+                                                children: "Type"
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                className: "jd-meta-value",
+                                                children: isIntern ? "Internship" : "Full-time"
+                                            })
+                                        ]
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                        className: "jd-meta-divider"
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                        className: "jd-meta-item",
+                                        children: [
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                className: "jd-meta-label",
+                                                children: "Experience & Qualification"
+                                            }),
+                                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                className: "jd-meta-value",
+                                                children: role.experience
+                                            })
+                                        ]
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "jd-section",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h2", {
+                                        className: "jd-section-title",
+                                        children: "Job Description"
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("ul", {
+                                        className: "jd-bullets",
+                                        children: role.jobDescription.map((item, i)=>/*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                children: item
+                                            }, i))
+                                    })
+                                ]
+                            }),
+                            /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                className: "jd-section",
+                                children: [
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("h2", {
+                                        className: "jd-section-title",
+                                        children: "Skills Required"
+                                    }),
+                                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("ul", {
+                                        className: "jd-bullets",
+                                        children: role.skills.map((item, i)=>/*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("li", {
+                                                children: item
+                                            }, i))
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                        className: "jd-sidebar",
+                        children: /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                            className: "jd-sticky-card",
+                            children: [
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                    className: "jd-sticky-role",
+                                    children: role.title
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                    className: "jd-sticky-loc",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("svg", {
+                                            viewBox: "0 0 24 24",
+                                            width: "14",
+                                            height: "14",
+                                            stroke: "currentColor",
+                                            fill: "none",
+                                            strokeWidth: "2",
+                                            strokeLinecap: "round",
+                                            strokeLinejoin: "round",
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("path", {
+                                                    d: "M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("circle", {
+                                                    cx: "12",
+                                                    cy: "10",
+                                                    r: "3"
+                                                })
+                                            ]
+                                        }),
+                                        role.location
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+                                    className: "jd-sticky-divider"
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                    className: "jd-sticky-info",
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                            className: "jd-info-row",
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                    children: "Openings"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                    children: role.openings
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                            className: "jd-info-row",
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                    children: "Type"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                    children: isIntern ? "Internship" : "Full-time"
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsxs)("div", {
+                                            className: "jd-info-row",
+                                            children: [
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("span", {
+                                                    children: "Location"
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("strong", {
+                                                    children: role.location
+                                                })
+                                            ]
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("button", {
+                                    className: "jd-apply-btn",
+                                    onClick: ()=>setShowModal(true),
+                                    children: "Apply Now →"
+                                }),
+                                /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("p", {
+                                    className: "jd-apply-note",
+                                    children: "We'll get back to you within 3–5 business days."
+                                })
+                            ]
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+}
+
+
+},
+6763(__unused_rspack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.d(__webpack_exports__, {
+  Rf: () => (hiringSteps),
+  W6: () => (SITE_URL),
+  aj: () => (openRoles),
+  iy: () => (getSlug),
+  l0: () => (getRoleBySlug)
+});
+const SITE_URL = "https://www.priyamconsultancy.com";
+const hiringSteps = [
+    {
+        title: "Profile Screening",
+        desc: "After receiving your application, our recruitment team reviews your qualifications, experience, and relevant skills to shortlist candidates who best fit the role requirements.",
+        icon: "/img/icon/hiring-step1.webp"
+    },
+    {
+        title: "Initial Interaction",
+        desc: "A preliminary discussion is arranged to learn about your professional background, key strengths, career aspirations, and overall suitability for the opportunity.",
+        icon: "/img/icon/hiring-step2.webp"
+    },
+    {
+        title: "Technical / Functional Assessment",
+        desc: "Candidates will attend a virtual discussion with the respective hiring panel, along with an assessment process designed to evaluate technical knowledge and functional expertise.",
+        icon: "/img/icon/hiring-step3.webp"
+    },
+    {
+        title: "Final Face-to-Face Discussion & Offer",
+        desc: "Shortlisted candidates will participate in a final in-person meeting covering role expectations, work culture, compensation details, and joining timeline, followed by the official offer process.",
+        icon: "/img/icon/hiring-step4.webp"
+    }
+];
+const openRoles = [
+    {
+        title: "Website Developer",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "Web Developer | Careers at Priyam Consultancy ",
+            description: "Looking for a Website Developer job? Join PCS and build innovative websites, enhance your technical skills, and grow your career in a dynamic environment.",
+            keywords: "Website Developer Jobs ,Website Developer Career, Web Developer Jobs,  Website Developer Vacancy",
+            canonical: "https://www.priyamconsultancy.com/careers/website-developer/"
+        },
+        experience: "Bachelor's degree or equivalent practical experience with 2+ years of website development experience.",
+        desc: "Design, develop, and maintain high-performance websites and web applications that deliver exceptional user experiences across desktop and mobile platforms.",
+        jobDescription: [
+            "Design, develop, and maintain high-performance websites",
+            "Optimize websites for speed, usability, and conversions",
+            "Collaborate with marketing and design teams for execution",
+            "Implement updates, enhancements, and new features",
+            "Troubleshoot technical issues and ensure smooth performance",
+            "Maintain documentation and version control",
+            "Stay updated with latest web technologies and best practices"
+        ],
+        skills: [
+            "Strong knowledge of HTML, CSS, JavaScript, Shopify, WordPress Platform",
+            "Experience in responsive and performance-focused web development",
+            "Understanding of SEO, page speed, and UX best practices",
+            "Ability to debug and optimize websites efficiently",
+            "Experience working with APIs and third-party integrations",
+            "Effective utilization of AI tools for development, testing, and optimization",
+            "Strong problem-solving and analytical thinking",
+            "Ability to work independently and in collaborative teams"
+        ]
+    },
+    {
+        title: "Digital Marketing Analyst",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "Digital Marketing Analyst Jobs | Careers at Priyam Consultancy  ",
+            description: "Join Priyam Consultancy as a Digital Marketing Analyst. Work on SEO, PPC, social media, and analytics projects while growing your digital marketing career. ",
+            keywords: "Digital Marketing Analyst Jobs,Digital Marketing Analyst Career ,Digital Marketing Jobs",
+            canonical: "https://www.priyamconsultancy.com/careers/digital-marketing-analyst/"
+        },
+        experience: "Bachelor's degree or equivalent qualification with 2+ years of experience in digital marketing analytics.",
+        desc: "Plan, execute, and optimise digital marketing campaigns across SEO, SEM, social media, and email channels to drive brand awareness, lead generation, and business growth.",
+        jobDescription: [
+            "Track and analyze digital marketing performance across organic and paid channels",
+            "Manage technical SEO, on-page SEO, off-page SEO, and local SEO initiatives",
+            "Implement and optimize AEO, GEO, Google PMAX, and Meta Andromeda strategies",
+            "Prepare detailed performance reports, dashboards, and insights",
+            "Identify trends, gaps, and optimization opportunities across campaigns",
+            "Support campaign optimization using data-backed decisions",
+            "Monitor lead quality, conversion performance, and overall ROI",
+            "Maintain structured documentation and tracking frameworks",
+            "Stay updated with evolving analytics tools, AI-driven platforms, and marketing trends"
+        ],
+        skills: [
+            "Strong understanding of SEO, AEO, GEO, paid ads, and social media performance metrics",
+            "Hands-on experience with Google Analytics, Search Console, and advertising platforms",
+            "Expertise in branding, organic lead generation, and paid campaign execution",
+            "Ability to analyze data and convert insights into actionable growth decisions",
+            "Knowledge of performance funnels, lead quality metrics, and conversion tracking",
+            "Strong experience in reporting, dashboards, and performance monitoring",
+            "Effective utilization of AI tools for analytics, forecasting, and optimization",
+            "High attention to data accuracy, detail, and insight communication"
+        ]
+    },
+    {
+        title: "Content Writer",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "Content Writer Career Opportunities | PCS  ",
+            description: " Looking for Content Writer jobs? Join PCS to create engaging content, improve SEO performance, and grow your career in digital marketing.",
+            keywords: "Content Writer Career, Content Writing Jobs, SEO Content Writer Jobs ",
+            canonical: "https://www.priyamconsultancy.com/careers/content-writer/"
+        },
+        experience: "Bachelor's degree or equivalent qualification with 2+ years of content writing experience.",
+        desc: "Create compelling, SEO-optimised content across blogs, website pages, social media, and marketing collaterals that communicates our brand voice and drives audience engagement.",
+        jobDescription: [
+            "Create high-quality content for blogs, websites, ads, and social media platforms",
+            "Plan, research, and execute content aligned with brand positioning and business goals",
+            "Align content strategy with SEO, AEO, and lead generation objectives",
+            "Collaborate closely with marketing teams on campaign-based content execution",
+            "Edit, refine, and optimize content for clarity, engagement, and performance",
+            "Conduct in-depth research to support authority-driven and insight-led content",
+            "Maintain structured content calendars, documentation, and publishing schedules",
+            "Stay updated with evolving content trends, search behavior, and AI-led discovery"
+        ],
+        skills: [
+            "Strong writing, editing, and storytelling abilities",
+            "Understanding of SEO, AEO, and content structure",
+            "Ability to research and simplify complex topics",
+            "Knowledge of brand tone and messaging consistency",
+            "Experience writing blogs, website content, and social media copies",
+            "Effective utilization of AI tools for research and optimization",
+            "Attention to detail and content quality",
+            "Ability to meet deadlines consistently"
+        ]
+    },
+    {
+        title: "Graphic Designer",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "Graphic Designer Jobs | Careers at Priyam Consultancy",
+            description: "Looking for Graphic Designer jobs? Join Priyam Consultancy to work on branding, social media creatives, websites, and marketing campaigns. ",
+            keywords: "Graphic Designer Career , Graphic Designer Jobs, SEO Content Writer Jobs",
+            canonical: "https://www.priyamconsultancy.com/careers/graphic-designer/"
+        },
+        experience: "Bachelor's degree or equivalent qualification with 2+ years of graphic design experience.",
+        desc: "Create visually compelling graphics, marketing creatives, and brand assets that communicate effectively across digital and print channels.",
+        jobDescription: [
+            "Design creatives for digital marketing and branding",
+            "Maintain visual consistency across platforms",
+            "Collaborate with marketing and content teams",
+            "Create ad creatives, banners, and social visuals",
+            "Revise designs based on feedback",
+            "Maintain organized design assets",
+            "Stay updated with design trends and tools"
+        ],
+        skills: [
+            "Strong understanding of design principles and branding",
+            "Experience with Adobe, CorelDraw, Canva",
+            "Ability to design creatives for social media, ads, and websites",
+            "Visual storytelling and layout skills",
+            "Attention to brand consistency and detail",
+            "Effective utilization of AI design tools for ideation and speed",
+            "Time management and creative problem-solving",
+            "Ability to work collaboratively with teams"
+        ]
+    },
+    {
+        title: "HR Executive",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "HR Executive Jobs | Careers at Priyam Consultancy ",
+            description: "Join Priyam Consultancy as an HR Executive and gain practical experience in recruitment, onboarding, employee engagement, and HR operations. ",
+            keywords: "HR Executive Jobs, HR Executive Jobs ,HR career",
+            canonical: "https://www.priyamconsultancy.com/careers/hr-executive/"
+        },
+        experience: "Bachelor's degree in Human Resources, Business Administration, or related field with 1+ years of HR or recruitment experience.",
+        desc: "Support end-to-end recruitment, employee engagement, and HR operations to build a strong, motivated workforce aligned with organisational goals.",
+        jobDescription: [
+            "Manage end-to-end recruitment and candidate coordination",
+            "Handle onboarding and employee documentation processes",
+            "Support employee engagement and internal communication activities",
+            "Coordinate interviews and maintain hiring records",
+            "Assist in implementing HR policies and procedures",
+            "Maintain employee databases and attendance records",
+            "Support management in day-to-day HR operations",
+            "Stay updated with HR practices and recruitment trends"
+        ],
+        skills: [
+            "Strong understanding of recruitment, onboarding, and employee coordination",
+            "Good communication and interpersonal skills",
+            "Knowledge of HR processes, policies, and documentation",
+            "Ability to manage employee records and recruitment databases",
+            "Familiarity with MS Office and HR management tools",
+            "Strong organizational and multitasking abilities",
+            "Problem-solving mindset with attention to detail",
+            "Ability to work independently and within teams"
+        ]
+    },
+    {
+        title: "Video Editor",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "Video Editor Jobs | Careers at Priyam Consultancy  ",
+            description: "Apply for Video Editor jobs at Priyam Consultancy. Create engaging video content, reels, marketing campaigns, and brand stories for diverse clients",
+            keywords: "Video Editor Career, Video Editing Jobs, Video Editor Jobs, Video Production Jobs",
+            canonical: "https://www.priyamconsultancy.com/careers/video-editor/"
+        },
+        experience: "Bachelor's degree or equivalent practical experience with 1+ years of professional video editing experience.",
+        desc: "Edit raw footage into engaging, high-quality videos aligned with brand goals by incorporating music, sound design, colour grading, and motion graphics.",
+        jobDescription: [
+            "Edit engaging videos for marketing, branding, and social media platforms",
+            "Create high-quality visual content aligned with brand guidelines",
+            "Collaborate with creative and marketing teams for campaign execution",
+            "Add motion graphics, effects, subtitles, and audio enhancements",
+            "Optimize videos for different digital platforms and formats",
+            "Manage revisions and deliver projects within deadlines",
+            "Organize project files and maintain editing workflows",
+            "Stay updated with current editing trends and creative techniques"
+        ],
+        skills: [
+            "Strong proficiency in Adobe Premiere Pro, After Effects, and video editing tools",
+            "Understanding of motion graphics, transitions, and storytelling techniques",
+            "Ability to edit content for social media, branding, and marketing campaigns",
+            "Knowledge of video formats, color correction, and audio balancing",
+            "Creativity with strong visual communication skills",
+            "Ability to manage multiple editing projects efficiently",
+            "Effective utilization of AI tools for editing and content enhancement",
+            "Attention to detail and time management skills"
+        ]
+    },
+    {
+        title: "Web Developer Intern",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "Web Developer Internship | Careers at Priyam Consultancy",
+            description: "Apply for a Web Developer Internship at Priyam Consultancy. Gain hands-on experience in website development, coding, and real-world client projects.  ",
+            keywords: "Web Developer Internship,Web Development Internship,Web Developer Intern Jobs",
+            canonical: "https://www.priyamconsultancy.com/careers/web-developer-intern/"
+        },
+        experience: "Student / Fresher pursuing or completed a relevant degree.",
+        desc: "Assist the development team in building and maintaining web applications while gaining hands-on experience in modern web technologies and real-world projects.",
+        jobDescription: [
+            "Assist in website development tasks",
+            "Support senior developers on live projects",
+            "Learn performance and SEO best practices",
+            "Debug and test website features",
+            "Maintain basic documentation",
+            "Apply learnings through hands-on execution",
+            "Continuously improve technical skills"
+        ],
+        skills: [
+            "Basic knowledge of web development fundamentals",
+            "Willingness to learn modern development practices",
+            "Interest in website performance and optimization",
+            "Basic understanding of HTML, CSS, or JavaScript",
+            "Problem-solving mindset",
+            "Effective utilization of AI tools for learning and development",
+            "Good communication skills",
+            "Ability to follow guidance and instructions"
+        ]
+    },
+    {
+        title: "Digital Marketing Intern",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "Digital Marketing Internship | Careers at Priyam Consultancy ",
+            description: " Looking for a Digital Marketing Internship? Work on real client projects and build practical skills in SEO, PPC, social media, and analytics. ",
+            keywords: "Digital Marketing Internship,Digital Marketing Intern ,Digital Marketing Internship in Coimbatore",
+            canonical: "https://www.priyamconsultancy.com/careers/digital-marketing-intern/"
+        },
+        experience: "Student / Fresher with interest in digital marketing.",
+        desc: "Support the digital marketing team in executing campaigns, creating content, and analysing performance to build practical skills in a fast-paced marketing environment.",
+        jobDescription: [
+            "Assist in SEO, AEO, GEO, ads, and social media tasks",
+            "Support campaign execution and reporting",
+            "Conduct market and keyword research",
+            "Learn analytics and performance tracking",
+            "Support content and lead generation activities",
+            "Maintain task documentation",
+            "Gain hands-on exposure to real campaigns"
+        ],
+        skills: [
+            "Basic understanding of digital marketing concepts",
+            "Interest in SEO, AEO, GEO, ads, and social media",
+            "Willingness to learn analytics and tools",
+            "Research and data interpretation skills",
+            "Good communication skills",
+            "Effective utilization of AI tools for research and reporting",
+            "Curiosity and learning mindset",
+            "Ability to work in a team"
+        ]
+    },
+    {
+        title: "Content Writer Intern",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "Content Writer Internship | Careers at Priyam Consultancy ",
+            description: "Start your content writing career with a Content Writer Internship at Priyam Consultancy and gain practical experience in digital marketing. ",
+            keywords: "Content Writer Internship,Content Writer Intern, Content Writing Internship , SEO Content Writer Internship",
+            canonical: "https://www.priyamconsultancy.com/careers/content-writer-intern/"
+        },
+        experience: "Student / Fresher with interest in writing and content creation.",
+        desc: "Assist the content team in creating well-researched, engaging written content for digital platforms while developing core writing, editing, and SEO skills.",
+        jobDescription: [
+            "Assist in writing blogs and social media content",
+            "Conduct research for content topics",
+            "Edit and refine content drafts",
+            "Learn SEO and content frameworks",
+            "Support senior writers",
+            "Maintain content schedules",
+            "Improve writing through practice and feedback"
+        ],
+        skills: [
+            "Basic writing and grammar skills",
+            "Interest in digital content and marketing",
+            "Research and learning ability",
+            "Creativity and storytelling mindset",
+            "Attention to detail",
+            "Effective utilization of AI tools for content drafting",
+            "Time management skills",
+            "Openness to feedback"
+        ]
+    },
+    {
+        title: "Graphic Designer Intern",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "Apply for a Graphic Design Internship | PCS  ",
+            description: "Looking for a Graphic Design Internship? Work on real client projects, create engaging digital designs, and build a strong creative portfolio. ",
+            keywords: "Graphic Design Internship ,Graphic Designer Intern,Graphic Design Internship",
+            canonical: "https://www.priyamconsultancy.com/careers/graphic-designer-intern/"
+        },
+        experience: "Student / Fresher with basic design knowledge.",
+        desc: "Support the design team in creating visually compelling graphics for digital and print channels while building proficiency in industry-standard design tools.",
+        jobDescription: [
+            "Assist in creating marketing creatives",
+            "Support senior designers on projects",
+            "Learn brand guidelines and workflows",
+            "Design social media and basic visuals",
+            "Revise designs based on feedback",
+            "Maintain organized design assets",
+            "Improve skills through hands-on practice"
+        ],
+        skills: [
+            "Basic understanding of design principles",
+            "Familiarity with design tools",
+            "Creativity and visual sense",
+            "Willingness to learn branding systems",
+            "Attention to detail",
+            "Effective utilization of AI design tools for ideation",
+            "Time management skills",
+            "Ability to accept feedback"
+        ]
+    },
+    {
+        title: "HR Executive Intern",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "HR Executive Internship | Careers at Priyam Consultancy ",
+            description: "Apply for an HR Internship at Priyam Consultancy. Gain hands-on experience in recruitment, onboarding, employee engagement, and HR operations. ",
+            keywords: "HR Internship,HR Executive Intern,Human Resources Internship",
+            canonical: "https://www.priyamconsultancy.com/careers/hr-executive-intern/"
+        },
+        experience: "Pursuing or recently completed a degree in Human Resources, Business Administration, or related field.",
+        desc: "Assist the HR team with recruitment coordination, employee engagement activities, and HR operations to gain practical exposure in core human resources functions.",
+        jobDescription: [
+            "Assist the HR team in recruitment and onboarding activities",
+            "Schedule interviews and coordinate with candidates",
+            "Maintain employee and recruitment records",
+            "Support internal HR operations and documentation",
+            "Help with employee engagement initiatives",
+            "Assist in preparing reports and HR-related data",
+            "Coordinate communication between teams and candidates",
+            "Learn and support daily HR administrative tasks"
+        ],
+        skills: [
+            "Good verbal and written communication skills",
+            "Basic understanding of recruitment and HR operations",
+            "Familiarity with MS Office and online recruitment platforms",
+            "Strong coordination and organizational abilities",
+            "Willingness to learn and adapt in a fast-paced environment",
+            "Attention to detail and professional attitude",
+            "Ability to manage tasks efficiently",
+            "Team collaboration and interpersonal skills"
+        ]
+    },
+    {
+        title: "Video Editor Intern",
+        location: "Coimbatore",
+        openings: 2,
+        seo: {
+            title: "Video Editing Internship | Careers at Priyam Consultancy ",
+            description: "Looking for a Video Editing Internship? Work on real client projects, create engaging video content, and build a professional creative portfolio.   ",
+            keywords: "Video Editor Intern, Video Editing Internship, Video Editing Internship",
+            canonical: "https://www.priyamconsultancy.com/careers/video-editor-intern/"
+        },
+        experience: "Pursuing or recently completed a degree in Visual Communication, Media, Multimedia, or related field.",
+        desc: "Assist the creative team in editing video content for digital platforms while developing hands-on skills in post-production, colour grading, and motion graphics.",
+        jobDescription: [
+            "Assist in editing videos for social media and marketing campaigns",
+            "Support the creative team with video production requirements",
+            "Add basic transitions, subtitles, and audio adjustments",
+            "Organize raw footage and project files efficiently",
+            "Participate in brainstorming and creative discussions",
+            "Assist with content formatting for different platforms",
+            "Learn editing workflows and content optimization techniques",
+            "Support the team in day-to-day video editing activities"
+        ],
+        skills: [
+            "Basic knowledge of Adobe Premiere Pro, After Effects, or similar editing software",
+            "Understanding of video editing principles and storytelling",
+            "Interest in social media and digital content creation",
+            "Creativity and willingness to learn new editing techniques",
+            "Basic knowledge of audio editing and transitions",
+            "Ability to manage tasks and meet deadlines",
+            "Attention to detail and visual consistency",
+            "Team collaboration and communication skills"
+        ]
+    }
+];
+function getSlug(title) {
+    return title.toLowerCase().replace(/\s+/g, "-");
+}
+function getRoleBySlug(slug) {
+    return openRoles.find((r)=>getSlug(r.title) === slug) || null;
+}
+
+
+},
+3815(__unused_rspack_module, __webpack_exports__, __webpack_require__) {
+__webpack_require__.r(__webpack_exports__);
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (Page)
+});
+/* import */ var react_jsx_runtime__rspack_import_0 = __webpack_require__(4848);
+/* import */ var _site_src_components_JobDetailTemplate__rspack_import_1 = __webpack_require__(5348);
+/* import */ var _site_src_components_careersData__rspack_import_2 = __webpack_require__(6763);
+
+
+
+const role = (0,_site_src_components_careersData__rspack_import_2/* .getRoleBySlug */.l0)("content-writer");
+function Page() {
+    if (!role) return /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)("div", {
+        children: "Role not found"
+    });
+    return /*#__PURE__*/ (0,react_jsx_runtime__rspack_import_0.jsx)(_site_src_components_JobDetailTemplate__rspack_import_1/* ["default"] */.A, {
+        role: role
+    });
+}
+
+
+},
+
+};
+;
