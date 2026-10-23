@@ -128,7 +128,7 @@ export default function CustomHeader() {
       label: 'Resources',
       dropdown: [
         { label: 'Blog',         href: 'https://www.priyamconsultancy.com/blog/',         icon: <MenuIcon name="blog-icon"         /> },
-        // { label: 'Clients', href: '/clients', icon: <MenuIcon name="clients-icon" /> },
+        { label: 'Clients', href: '/clients', icon: <MenuIcon name="clients-icon" /> },
         { label: 'Case Studies', href: '/case-studies', icon: <MenuIcon name="case-studies-icon" /> },
         { label: 'Careers',      href: '/careers',      icon: <MenuIcon name="careers-icon"      /> },
         { label: 'Portfolio',    href: '/portfolio',    icon: <MenuIcon name="portfolio-icon"    /> },

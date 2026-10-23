@@ -1,21 +1,24 @@
+import { useRef, useEffect } from "react";
 import Layout from "@theme/Layout";
 import "../css/common.css";
 
 const banner = "/img/portfolio.webp";
-const feralroots = "/img/feral-roots-site.webp";
-const urcts = "/img/urctc-site.webp";
-const zky = "/img/zky-site.webp";
-const ambuilders = "/img/am-site.webp";
-const abb = "/img/abb-site.webp";
-const riya = "/img/riya-site.webp";
-const sterlocareportfiolo = "/img/sterlocare-portfiolo.webp";
-const TalentTribe = "/img/talent-tribe-protfolio.webp";
-const vriskha = "/img/vriksha-protfolio.webp";
-const vatcomm = "/img/vatcomm-protfolio.webp";
+const feralroots = "/img/work-6.webp";
+const urcts = "/img/work-14.webp";
+const zky = "/img/work-8.webp";
+const ambuilders = "/img/work-7.webp";
+const abb = "/img/work-5.webp";
+const riya = "/img/work-10.webp";
+const sterlocareportfiolo = "/img/work-12.webp";
+const TalentTribe = "/img/work-9.webp";
+const vriskha = "/img/work-2.webp";
+const vatcomm = "/img/work-4.webp";
 const Sterlo = "/img/sterlo-portfiolo.webp";
-const greenstar ="/img/greenstar-protfolio.webp";
-const tgcc ="/img/tgcc-protfolio.webp";
-const sterlobuildportfiolo = "/img/sterlobuild-portfiolo.webp";
+const greenstar ="/img/work-3.webp";
+const sterlo ="/img/work-11.webp";
+
+const tgcc ="/img/work-1.webp";
+const sterlobuildportfiolo = "/img/work-13.webp";
 
 /* ─────────────────────────────────────────
    Portfolio data
@@ -23,6 +26,7 @@ const sterlobuildportfiolo = "/img/sterlobuild-portfiolo.webp";
 const PROJECTS = [
   { id: 1, url: "https://feralroots.in/",          domain: "feralroots.in",       image: feralroots },
   { id: 2, url: "https://www.urcts.in/",               domain: "urcts.in",            image: urcts },
+  // { id: 3, url: "https://abbmc.in/",                  domain: "abbmc.in",               image: abb },
 
 
   { id: 7, url: "https://staging.vrikshabuilders.com/",         domain: "staging.vrikshabuilders.com",       image: vriskha},
@@ -35,28 +39,79 @@ const PROJECTS = [
   { id: 5, url: "https://riyaconsultancy.com",     domain: "riyaconsultancy.com",  image: riya },
   { id: 6, url: "https://talenttribe.in/",         domain: "talenttribe.in",       image: TalentTribe },
 
-  { id: 11, url: "https://www.sterlo.io/",     domain: "sterlo.io",   image: Sterlo },
+  { id: 11, url: "https://www.sterlo.io/",     domain: "sterlo.io",   image: sterlo },
   { id: 12, url: "https://www.sterlocare.com/",     domain: "sterlocare.com",   image: sterlocareportfiolo },
 
 ];
 
 /* ─────────────────────────────────────────
-   CSS
+   CSS  (only the hover-scroll effect; rest stays in common.css)
 ───────────────────────────────────────── */
+const ScrollStyles = () => (
+  <style>{`
+/* Image window: fixed ratio, image inside scrolls on hover */
+.pg-card .pg-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  height: auto;
+  container-type: size;
+}
+.pg-card .pg-img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  object-fit: initial;
+  transform: translateY(0) !important;     /* stop any old zoom/scale hover effect */
+  transition: transform 0.8s ease;         /* scroll back to top */
+  will-change: transform;
+}
+.pg-card:hover .pg-img {
+  /* scroll to the bottom of the screenshot (fallback first, then responsive) */
+  transform: translateY(min(0px, calc(-100% + 260px))) !important;
+  transform: translateY(min(0px, calc(-100% + 100cqh))) !important;
+  transition: transform var(--dur, 6s) linear;
+}
+
+/* White background, full width (covers the dark side areas) */
+.pg-content {
+  --pg-max-width: 1400px;                 /* change this to set section max width */
+  background: #fff !important;
+  box-shadow: 0 0 0 100vmax #fff;
+  clip-path: inset(0 -100vmax);
+  width: 100%;
+  max-width: none !important;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+}
+.pg-content .pg-grid {
+  width: 100%;
+  max-width: var(--pg-max-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card is now one clickable link */
+a.pg-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pg-card .pg-img { transition: none; }
+}
+`}</style>
+);
 
 /* ─────────────────────────────────────────
    Icons
 ───────────────────────────────────────── */
-function ExternalIcon() {
-  return (
-    <svg viewBox="0 0 24 24">
-      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-      <polyline points="15 3 21 3 21 9" />
-      <line x1="10" y1="14" x2="21" y2="3" />
-    </svg>
-  );
-}
-
 function ArrowRightIcon() {
   return (
     <svg viewBox="0 0 24 24">
@@ -70,27 +125,42 @@ function ArrowRightIcon() {
    Single Card
 ───────────────────────────────────────── */
 function PortfolioCard({ project }) {
+  const imgRef = useRef(null);
+
+  // Scroll time depends on screenshot height. Higher SCROLL_SPEED = faster scroll.
+  const SCROLL_SPEED = 0.1; // px per second
+  const setDuration = () => {
+    const img = imgRef.current;
+    if (!img || !img.parentElement) return;
+    const distance = Math.max(0, img.offsetHeight - img.parentElement.clientHeight);
+    const seconds = Math.min(Math.max(distance / SCROLL_SPEED, 1.5), 6);
+    img.style.setProperty("--dur", `${seconds.toFixed(1)}s`);
+  };
+
+  useEffect(() => {
+    if (imgRef.current && imgRef.current.complete) setDuration();
+    window.addEventListener("resize", setDuration, { passive: true });
+    return () => window.removeEventListener("resize", setDuration);
+  }, []);
+
   return (
-    <div className="pg-card">
-      {/* Screenshot + hover overlay */}
+    <a
+      className="pg-card"
+      href={project.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Open ${project.domain}`}
+    >
+      {/* Screenshot (scrolls on hover) */}
       <div className="pg-img-wrap">
         <img
+          ref={imgRef}
           className="pg-img"
           src={project.image}
           alt={project.domain}
           loading="lazy"
+          onLoad={setDuration}
         />
-        <div className="pg-overlay">
-          <a
-            className="pg-view-btn"
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <ExternalIcon />
-            <span>View Site</span>
-          </a>
-        </div>
       </div>
 
       {/* Domain label */}
@@ -98,7 +168,7 @@ function PortfolioCard({ project }) {
         <div className="pg-dot" />
         <span className="pg-domain">{project.domain}</span>
       </div>
-    </div>
+    </a>
   );
 }
 
@@ -108,6 +178,7 @@ function PortfolioCard({ project }) {
 export default function PortfolioGrid() {
   return (
     <Layout>
+      <ScrollStyles />
 
       {/* Banner */}
       <section className="sc-banner">
