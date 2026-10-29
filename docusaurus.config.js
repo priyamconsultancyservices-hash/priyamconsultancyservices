@@ -6,10 +6,15 @@ const config = {
   title: 'Priyam Consultancy Services | Digital Marketing,HR & Web Dev',
   tagline: 'Priyam Consultancy Services | Digital Marketing,HR & Web Dev',
   favicon: 'img/fav-icon.png',
-
-  future: {
-    v4: true,
+future: {
+  v4: {
+    removeLegacyPostBuildHeadAttribute: true,
+    useCssCascadeLayers: true,
+    siteStorageNamespacing: true,
+    fasterByDefault: false,   // this is the one that matters
+    mdx1CompatDisabledByDefault: true,
   },
+},
 
   url: 'https://www.priyamconsultancy.com',
   baseUrl: '/',

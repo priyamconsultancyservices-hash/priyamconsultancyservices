@@ -1112,7 +1112,7 @@ const SERVICES = [
         price: "₹25,000",
     },
     {
-        img: "/img/landing-page/shopify.webp",
+        img: "/img/landing-page/shopify-dev.webp",
         title: "Shopify Development",
         desc: "Scalable Shopify stores built to increase sales, enhance customer experiences, and support sustainable long-term business growth. ",
         features: ["Custom Product & Category Setup", "Customer Login & Account Management", "Shopping Cart & Easy Checkout Process"],
