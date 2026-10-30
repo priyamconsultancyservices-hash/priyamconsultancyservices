@@ -12,6 +12,8 @@ const PAGE_TITLE = "Traditional SEO vs AI Search Optimization: Key Differences";
 const PAGE_DESC =
   "Understand traditional SEO vs AI search optimization, GEO, AI SEO, and practical strategies to improve your brand visibility on Google and ChatGPT.";
 const PAGE_IMG = "https://www.priyamconsultancy.com/img/article/article-traditional-seo-vs-ai-search-optimization.webp";
+const PAGE_KEYWORDS =
+  "Traditional SEO vs AI Search Optimization,AI search optimization,Search engine optimization trends,Generative Engine Optimization (GEO),seo optimization service,AI search visibility, AI SEO, Digital Marketing Company in Coimbatore,How to get found in ChatGPT, How to optimize for AI search";
 
 const TOC_ITEMS = [
   { id: "intro", num: "00", label: "Introduction" },
@@ -167,6 +169,79 @@ const HUB_LINKS = [
   { label: "Graphic Design", href: "/graphic-design" },
 ];
 
+// ════════════════════════════════════════════
+//  SCHEMA (JSON-LD)
+// ════════════════════════════════════════════
+
+// Breadcrumb Schema
+const BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${PAGE_URL}#breadcrumb`,
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.priyamconsultancy.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: PAGE_TITLE,
+      item: PAGE_URL,
+    },
+  ],
+};
+
+// Article Schema
+const ARTICLE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": PAGE_URL,
+  },
+  headline: PAGE_TITLE,
+  description: PAGE_DESC,
+  image: PAGE_IMG,
+  author: {
+    "@type": "Organization",
+    name: "Priyam Consultancy Services",
+    url: "https://www.linkedin.com/company/107495499/",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Priyam Consultancy Services",
+    url: "https://www.priyamconsultancy.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.priyamconsultancy.com/img/priyam-consultancy-logo.png",
+    },
+    sameAs: ["https://www.linkedin.com/company/107495499/"],
+  },
+  datePublished: "2026-10-30T09:00:00+05:30",
+  dateModified: "2026-10-30T09:00:00+05:30",
+  inLanguage: "en-IN",
+  articleSection: "Digital marketing",
+  keywords: PAGE_KEYWORDS,
+};
+
+// FAQ Schema — built from the same FAQS array shown on the page,
+// so the schema always matches the visible content.
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQS.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.a,
+    },
+  })),
+};
+
 
 // ════════════════════════════════════════════
 //  MAIN PAGE
@@ -246,10 +321,7 @@ function TraditionalSeoVsAiSearch() {
       <Head>
         <title>{PAGE_TITLE}</title>
         <meta name="description" content={PAGE_DESC} />
-        <meta
-          name="keywords"
-          content="Traditional SEO vs AI Search Optimization,AI search optimization,Search engine optimization trends,Generative Engine Optimization (GEO),seo optimization service,AI search visibility, AI SEO, Digital Marketing Company in Coimbatore,How to get found in ChatGPT, How to optimize for AI search"
-        />
+        <meta name="keywords" content={PAGE_KEYWORDS} />
         <link rel="canonical" href={PAGE_URL} />
 
         <meta property="og:type" content="article" />
@@ -264,6 +336,10 @@ function TraditionalSeoVsAiSearch() {
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={PAGE_IMG} />
 
+        {/* Structured Data (JSON-LD) */}
+        <script type="application/ld+json">{JSON.stringify(BREADCRUMB_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(ARTICLE_SCHEMA)}</script>
+        <script type="application/ld+json">{JSON.stringify(FAQ_SCHEMA)}</script>
       </Head>
 
       <style>{`
@@ -433,7 +509,7 @@ function TraditionalSeoVsAiSearch() {
             <div className="tseo-hero">
               <span className="tseo-eyebrow">SEO · AI Search Guide</span>
               <h1>Traditional SEO vs AI Search Optimization: What Changes and What Stays the Same</h1>
-           
+
               <div className="tseo-hero-img">
                 <Link href="/article/traditional-seo-vs-ai-search-optimization">
                   <img src="/img/article/traditional-seo-vs-ai-search-optimization.webp" alt="Traditional SEO vs AI Search Optimization" />
@@ -442,7 +518,7 @@ function TraditionalSeoVsAiSearch() {
             </div>
 
             <section id="intro">
-                   <p >
+              <p>
                 You search for something. Before you see a single website, a neat answer appears at the top of the page. You read it, get what you need, and leave without clicking anything.
               </p>
               <p>

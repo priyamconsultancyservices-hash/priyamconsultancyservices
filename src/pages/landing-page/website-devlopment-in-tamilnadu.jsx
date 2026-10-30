@@ -108,7 +108,7 @@ function SEOHead() {
     return (
         <Head>
             <title>Best Website Development Company in Coimbatore | PCS </title>
-                        <meta name="robots" content="noindex, nofollow" />
+            <meta name="robots" content="noindex, nofollow" />
             <meta name="description" content="Break away from ordinary business websites. Priyam Consultancy Services develops next-generation, SEO-optimized websites that help Coimbatore brands stand out." />
             <meta name="keywords" content="Web Development Company in Coimbatore, Digital Marketing Company Coimbatore, Digital Marketing in Coimbatore, SEO Company in Coimbatore, Recruitment Agency in Coimbatore, SEO Services in Coimbatore, Website Development Company in Coimbatore " />
             <link rel="canonical" href="https://www.priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/" />
@@ -145,6 +145,26 @@ const GlobalStyles = () => (
 .hero-partner-cell { background: #fff; border: 1px solid #e6ebf3; border-radius: 12px; height: 64px; display: flex; align-items: center; justify-content: center; padding: 8px 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.04); min-width: 0; }
 .hero-partner-cell img { max-width: 100%; max-height: 100%; object-fit: contain; }
 @media (max-width: 640px) { .hero-partner-grid { gap: 6px; } .hero-partner-cell { height: 46px; padding: 5px 6px; border-radius: 8px; } }
+
+/* Stats bar (below hero) */
+.sb-section { background: #fff; padding: 0 0 2.2rem; font-family: 'Poppins', sans-serif; }
+.sb-card { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border: 1px solid #e6ebf3; border-bottom: 4px solid #ed8337; border-radius: 22px; padding: 1.4rem 1rem; box-shadow: 0 14px 40px rgba(0,65,104,0.09); }
+.sb-item { display: flex; align-items: center; gap: 14px; padding: 0.4rem 1.2rem; border-left: 1px solid #e6ebf3; min-width: 0; }
+.sb-item:first-child { border-left: 0; }
+.sb-icon { flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; background: rgba(237,131,55,0.12); display: flex; align-items: center; justify-content: center; }
+.sb-value { color: #004168; font-size: 1.9rem; font-weight: 800; line-height: 1.1; }
+.sb-label { color: #6b7a94; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.4; margin-top: 2px; }
+@media (max-width: 900px) {
+  .sb-card { grid-template-columns: repeat(2, 1fr); row-gap: 1rem; }
+  .sb-item:nth-child(3) { border-left: 0; }
+}
+@media (max-width: 480px) {
+  .sb-section { padding: 0 0 1.5rem; }
+  .sb-card { padding: 1rem 0.4rem; }
+  .sb-item { flex-direction: column; text-align: center; gap: 8px; padding: 0.5rem; }
+  .sb-icon { width: 46px; height: 46px; }
+  .sb-value { font-size: 1.5rem; }
+}
 
 /* Pricing plans (3) */
 .pp-section { background: linear-gradient(180deg, #f6f9fd 0%, #ffffff 100%); padding: 4.5rem 5% 5rem; font-family: 'Poppins', sans-serif; }
@@ -365,12 +385,12 @@ const HERO_PARTNER_LOGOS = [
 ];
 
 // 4 logos in the new section below the hero
-const TRUST_STRIP_LOGOS = [
-    { name: "Google Partner",             img: "/img/landing-page/hero-img-1.webp", label: "Certified" },
-    { name: "Google Rating 4.9/5",        img: "/img/landing-page/hero-img-2.webp", label: "Client Rated" },
-    { name: "DesignRush Verified Agency", img: "/img/landing-page/hero-img-3.webp", label: "Verified" },
-    { name: "360 Kovai Verified Agency",  img: "/img/landing-page/hero-img-4.webp", label: "Local Trusted" },
-];
+// const TRUST_STRIP_LOGOS = [
+//     { name: "Google Partner",             img: "/img/landing-page/hero-img-1.webp", label: "Certified" },
+//     { name: "Google Rating 4.9/5",        img: "/img/landing-page/hero-img-2.webp", label: "Client Rated" },
+//     { name: "DesignRush Verified Agency", img: "/img/landing-page/hero-img-3.webp", label: "Verified" },
+//     { name: "360 Kovai Verified Agency",  img: "/img/landing-page/hero-img-4.webp", label: "Local Trusted" },
+// ];
 
 function TrustStripSection() {
     return (
@@ -382,7 +402,8 @@ function TrustStripSection() {
                     </div>
                     <h2 className="ts-title">Recognised by the Platforms <span>You Trust</span></h2>
                 </div>
-                <div className="ts-cards">
+                <StatsBar />
+                {/* <div className="ts-cards">
                     {TRUST_STRIP_LOGOS.map((t) => (
                         <div className="ts-card" key={t.name}>
                             <span className="ts-tag">{t.label}</span>
@@ -391,7 +412,41 @@ function TrustStripSection() {
                             </div>
                         </div>
                     ))}
-                </div>
+                </div> */}
+            </div>
+        </section>
+    );
+}
+
+// ── Stats bar (below hero) ────────────────────────────
+const STATS = [
+    { value: "4.9", label: "Google Reviews", icon: "star" },
+    { value: "10+", label: "Years of Consulting Experience", icon: "laurel" },
+    { value: "15+", label: "Technologies & Platforms", icon: "layers" },
+    { value: "10+", label: "Industries Served", icon: "building" },
+];
+
+function StatIcon({ type }) {
+    const p = { viewBox: "0 0 24 24", width: 26, height: 26, fill: "none", stroke: "#ed8337", strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true };
+    if (type === "star") return (<svg {...p}><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z" /></svg>);
+    if (type === "layers") return (<svg {...p}><path d="M12 3l9 5-9 5-9-5 9-5z" /><path d="M3 13l9 5 9-5" /><path d="M3 17.5l9 5 9-5" /></svg>);
+    if (type === "building") return (<svg {...p}><rect x="5" y="3" width="14" height="18" rx="1" /><path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1M10 21v-3h4v3" /></svg>);
+    return (<svg {...p}><path d="M7 20C3.5 17 3 11 6 6" /><path d="M17 20c3.5-3 4-9 1-14" /><path d="M6 9l-2.5-.5M5.5 13l-2.5.3M8 16.5l-2 1.2M18 9l2.5-.5M18.5 13l2.5.3M16 16.5l2 1.2" /><path d="M10 14l2 2 2-2" /></svg>);
+}
+
+function StatsBar() {
+    return (
+        <section className="sb-section" aria-label="Key numbers">
+            <div className="sb-card">
+                {STATS.map((s) => (
+                    <div className="sb-item" key={s.label}>
+                        <div className="sb-icon"><StatIcon type={s.icon} /></div>
+                        <div>
+                            <div className="sb-value">{s.value}</div>
+                            <div className="sb-label">{s.label}</div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </section>
     );
