@@ -15,23 +15,24 @@ function SEOHead() {
   return (
     <Head>
       {/* ── Primary Meta ── */}
-      <title>Professional Static Website Development Company </title>
-      <meta name="description" content="Static website development services to create simple, fast-loading, and SEO-friendly websites for better performance and user experience. " />
-      <meta name="keywords" content="Static Website Development Company in Coimbatore, Static Website Development Services, Static website design, Static website " />
+      <title>Static Website Development in Coimbatore | Priyam Consultancy </title>
+      <meta name="description" content="Need an affordable business website? Professional static website development in Coimbatore with custom designs that turn visitors into enquiries. Get a quote! " />
+      <meta name="keywords" content="Static Website Development Company in Coimbatore, Static Website Development Services, Static website design, Static website, business website" />
       <link rel="canonical" href="https://www.priyamconsultancy.com/static-website-development/" />
+      <meta name="robots" content="index, follow" />
 
       {/* ── Open Graph ── */}
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Professional Static Website Development Company " />
-      <meta property="og:description" content="Static website development services to create simple, fast-loading, and SEO-friendly websites for better performance and user experience. " />
+      <meta property="og:title" content="Static Website Development in Coimbatore | Priyam Consultancy " />
+      <meta property="og:description" content="Need an affordable business website? Professional static website development in Coimbatore with custom designs that turn visitors into enquiries. Get a quote! " />
       <meta property="og:url" content="https://www.priyamconsultancy.com/static-website-development/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
 
       {/* ── Twitter Card ── */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Professional Static Website Development Company " />
-      <meta name="twitter:description" content="Static website development services to create simple, fast-loading, and SEO-friendly websites for better performance and user experience. " />
+      <meta name="twitter:title" content="Static Website Development in Coimbatore | Priyam Consultancy " />
+      <meta name="twitter:description" content="Need an affordable business website? Professional static website development in Coimbatore with custom designs that turn visitors into enquiries. Get a quote! " />
       <meta name="twitter:image" content={imageUrl} />
 
       {/* ── Breadcrumb List Schema ── */}

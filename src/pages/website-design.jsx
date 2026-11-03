@@ -14,23 +14,24 @@ function SEOHead() {
   return (
     <Head>
       {/* ── Primary Meta ── */}
-      <title>Website Design Company | Custom & SEO-Friendly Web Design </title>
-      <meta name="description" content="Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. " />
-      <meta name="keywords" content="Website design, Website design Services, Website designers in Coimbatore, Website design company in coimbatore, Website design agency, website design company, Best website design, sample website design" />
+      <title>website design company in Coimbatore | Design & Development </title>
+      <meta name="description" content="Looking for website design & development services in Coimbatore? We turn your ideas into reality with customized website designs tailored to your business needs." />
+      <meta name="keywords" content="website design company in Coimbatore, Website design, Website design Services, Website designers in Coimbatore, Website design company in coimbatore, Website design agency, website design company, Best website design, sample website design" />
       <link rel="canonical" href="https://www.priyamconsultancy.com/website-design/" />
+      <meta name="robots" content="index, follow" />
 
       {/* ── Open Graph ── */}
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Website Design Company | Custom & SEO-Friendly Web Design " />
-      <meta property="og:description" content="Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. " />
+      <meta property="og:title" content="website design company in Coimbatore | Design & Development " />
+      <meta property="og:description" content="Looking for website design & development services in Coimbatore? We turn your ideas into reality with customized website designs tailored to your business needs." />
       <meta property="og:url" content="https://www.priyamconsultancy.com/website-design/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
 
       {/* ── Twitter Card ── */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Website Design Company | Custom & SEO-Friendly Web Design " />
-      <meta name="twitter:description" content="Professional website design company in Coimbatore offering responsive, SEO-ready, and custom website design solutions to grow your business online. " />
+      <meta name="twitter:title" content="website design company in Coimbatore | Design & Development " />
+      <meta name="twitter:description" content="Looking for website design & development services in Coimbatore? We turn your ideas into reality with customized website designs tailored to your business needs." />
       <meta name="twitter:image" content={imageUrl} />
 
       {/* ── Breadcrumb List Schema ── */}

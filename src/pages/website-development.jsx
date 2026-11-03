@@ -15,23 +15,23 @@ function SEOHead() {
   return (
     <Head>
       {/* ── Primary Meta ── */}
-      <title>Best Website Development Services in Coimbatore | Experts   </title>
-      <meta name="description" content="Professional website development services in Coimbatore. We build fast, SEO-friendly, responsive websites that boost brand presence and business growth. Visit us! " />
-      <meta name="keywords" content="Website Development, Website Development Company in Coimbatore, Web Development Services in Coimbatore, Web Development Company in Coimbatore, Website Development Services in Coimbatore, Website Design & Development in Coimbatore, Website Design Services in Coimbatore " />
+      <title>Best Website Development Company | Priyam Consultancy  </title>
+      <meta name="description" content="Looking for the best website development company? Priyam Consultancy offers professional, responsive, and customized website development services." />
+      <meta name="keywords" content="Website Development, Website Development Company in Coimbatore, Website Development Services in Coimbatore, Website Development Company in Coimbatore, Website Development Services in Coimbatore, Website Design & Development in Coimbatore, Website Design Services in Coimbatore" />
       <link rel="canonical" href="https://www.priyamconsultancy.com/website-development/" />
-
+      <meta name="robots" content="index, follow" />
       {/* ── Open Graph ── */}
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Best Website Development Services in Coimbatore | Experts   " />
-      <meta property="og:description" content="Professional website development services in Coimbatore. We build fast, SEO-friendly, responsive websites that boost brand presence and business growth. Visit us! " />
+      <meta property="og:title" content="Best Website Development Company | Priyam Consultancy  " />
+      <meta property="og:description" content="Looking for the best website development company? Priyam Consultancy offers professional, responsive, and customized website development services." />
       <meta property="og:url" content="https://www.priyamconsultancy.com/website-development/" />
       <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="PCS Business Solution" />
 
       {/* ── Twitter Card ── */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Best Website Development Services in Coimbatore | Experts   " />
-      <meta name="twitter:description" content="Professional website development services in Coimbatore. We build fast, SEO-friendly, responsive websites that boost brand presence and business growth. Visit us! " />
+      <meta name="twitter:title" content="Best Website Development Company | Priyam Consultancy  " />
+      <meta name="twitter:description" content="Looking for the best website development company? Priyam Consultancy offers professional, responsive, and customized website development services." />
       <meta name="twitter:image" content={imageUrl} />
 
       {/* ── Breadcrumb List Schema ── */}
