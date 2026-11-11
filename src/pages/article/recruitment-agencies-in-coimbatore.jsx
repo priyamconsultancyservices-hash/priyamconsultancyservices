@@ -42,20 +42,25 @@ const ARTICLES = [
   { title: "Website Development Cost in India (2026): Real Ranges by Type, Not Guesswork", href: "/article/website-development-cost-in-india", date: "2026-09-01" },
 
 ];
+const LINKS = {
+  home: "/",
+  category: "/hr-services",
+  payroll: "/payroll-outsourcing-services",
+  hr: "/hr-services",
+  recruitment: "/recruitment-services",
+  consultancy: "/hr-consultancy",
+
+};
 
 const RECENT_ARTICLES = [...ARTICLES]
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 4);
 
 const HUB_LINKS = [
-    { label: "Digital Marketing", href: "/digital-marketing" },
-    { label: "SEO", href: "/search-engine-optimization" },
-    { label: "Performance Marketing", href: "/marketplace-ecommerce-marketing" },
-    { label: "Social Media Marketing", href: "/social-media-marketing" },
-    { label: "Content Marketing", href: "/content-marketing" },
-    { label: "Email Marketing", href: "/email-marketing" },
-    { label: "Website Development", href: "/website-development" },
-    { label: "Graphic Design", href: "/graphic-design" },
+  { label: "HR Services", href: LINKS.hr },
+  { label: "Payroll Outsourcing", href: LINKS.payroll },
+  { label: "Recruitment Services", href: LINKS.recruitment },
+  { label: "HR Consultancy", href: LINKS.consultancy },
 ];
 
 const JSON_LD_BREADCRUMB = {
@@ -643,7 +648,7 @@ function SeoSmallBusinessIndiaGuide() {
                 {/* RIGHT SIDEBAR */}
                 <aside className="tseo-rail">
                     <div className="tseo-rail-card">
-                        <div className="tseo-rail-title"> Digital Marketing Learning Hub</div>
+                        <div className="tseo-rail-title"> HR Services</div>
                         <div className="tseo-hub-grid">
                             {HUB_LINKS.map((l) => (
                                 <Link className="tseo-hub-link" to={l.href} key={l.href}>

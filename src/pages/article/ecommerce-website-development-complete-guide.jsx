@@ -164,14 +164,12 @@ const RELATED_ARTICLES_API =
     "https://www.priyamconsultancy.com/blog/wp-json/wp/v2/posts?_embed&per_page=4";
 
 const HUB_LINKS = [
-    { label: "Website Development", href: "/website-development" },
-    { label: "Digital Marketing", href: "/digital-marketing" },
-    { label: "SEO", href: "/seo" },
-    { label: "PPC / Performance Marketing", href: "/performance-marketing" },
-    { label: "Social Media Marketing", href: "/social-media" },
-    { label: "Content Marketing", href: "/content-marketing" },
-    { label: "Email Marketing", href: "/email-marketing" },
-    { label: "Graphic Design", href: "/graphic-design" },
+  { label: "Website Design", href: "/website-design" },
+  { label: "Static Website Development", href: "/static-website-development" },
+  { label: "Custom Website Development", href: "/custom-website-development" },
+  { label: "WooCommerce Website Development", href: "/woocommerce-website-development" },
+  { label: "Shopify Website Development", href: "/shopify-website-development" },
+  { label: "E-Commerce Website Development", href: "/e-commerce-website-development" },
 ];
 
 const PAGE_TITLE = "Ecommerce Website Development: Features, Platforms & Tips";
@@ -677,7 +675,7 @@ function EcommerceWebsiteDevelopment() {
                 {/* RIGHT SIDEBAR */}
                 <aside className="tseo-rail">
                     <div className="tseo-rail-card">
-                        <div className="tseo-rail-title">Digital Marketing Learning Hub</div>
+                        <div className="tseo-rail-title">Website Development Services</div>
                         <div className="tseo-hub-grid">
                             {HUB_LINKS.map((l) => (
                                 <Link className="tseo-hub-link" to={l.href} key={l.href}>

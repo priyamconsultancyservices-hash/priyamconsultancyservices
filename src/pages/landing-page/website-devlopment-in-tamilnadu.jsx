@@ -117,7 +117,6 @@ function SEOHead() {
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
             <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
             <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
-            <link rel="preload" as="image" href="/img/landing-page/banner.webp" fetchpriority="high" />
             <meta property="og:type" content="website" />
             <meta property="og:title" content="Best Website Development Company in Coimbatore | PCS " />
             <meta property="og:description" content="Break away from ordinary business websites. Priyam Consultancy Services develops next-generation, SEO-optimized websites that help Coimbatore brands stand out." />
@@ -138,6 +137,36 @@ const GlobalStyles = () => (
     <style>{`
      header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN{
     display: none;
+}
+
+/* Hero background: tilted website screenshots scrolling on the right (like virtualsoftech).
+   The layer lives inside .hero-right (so it is always visible) and stretches over the whole hero. */
+.hero { overflow: hidden; }
+.hero > .hero-left { position: relative; z-index: 3; }
+.hero > .hero-right { position: relative; z-index: 2; }
+.hero-slider-box { position: absolute; top: -100vh; bottom: -100vh; left: -34vw; right: -20vw; overflow: hidden; pointer-events: none; }
+.hero-bg-tilt { position: absolute; top: -15%; left: 0; width: 100%; height: 130%; display: flex; gap: 20px; transform: rotate(14deg); }
+.hero-bg-col { flex: 1; overflow: hidden; min-width: 0; }
+.hero-bg-track { display: flex; flex-direction: column; animation: heroBgUp 65s linear infinite; will-change: transform; }
+.hero-bg-col:nth-child(even) .hero-bg-track { animation-name: heroBgDown; }
+.hero-bg-track img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 12px 30px rgba(0,0,0,0.35); background: #0a5a8c; }
+.hero-bg-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg,
+    #004168 0%,
+    #004168 20%,
+    rgba(0,65,104,0.7) 40%,
+    rgba(0,65,104,0) 70%,
+    rgba(0,65,104,0) 100%);
+}
+
+@keyframes heroBgUp { from { transform: translateY(0); } to { transform: translateY(-33.3333%); } }
+@keyframes heroBgDown { from { transform: translateY(-33.3333%); } to { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .hero-bg-track { animation: none; } }
+@media (max-width: 900px) {
+  .hero-slider-box { left: -10vw; right: -10vw; }
+  .hero-bg-tilt { gap: 14px; }
+  .hero-bg-overlay { background: rgba(0,65,104,0.82); }
 }
 
 /* Hero partner logos (6) */
@@ -230,9 +259,9 @@ const GlobalStyles = () => (
 .wk-title span { color: #ed8337; font-style: italic; }
 .wk-sub { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin: 0; }
 .wk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-.wk-card { display: block; text-decoration: none; background: #fff; border: 2px solid transparent; border-radius: 20px; padding: 14px 14px 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; }
-.wk-card:hover { border-color: #ed8337; transform: translateY(-6px); }
-.wk-frame { border-radius: 12px; overflow: hidden; border: 1px solid #e6ebf3; background: #f4f7fc; }
+.wk-card { display: block; text-decoration: none; background: #fff; border: 0; border-radius: 20px; padding: 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: box-shadow 0.3s ease, transform 0.3s ease; }
+.wk-card:hover { transform: translateY(-6px); }
+.wk-frame { border: 0; border-radius: 0; overflow: hidden; background: #f4f7fc; }
 .wk-bar { display: flex; align-items: center; gap: 6px; height: 28px; padding: 0 12px; background: #eef2f8; border-bottom: 1px solid #e6ebf3; }
 .wk-bar i { width: 8px; height: 8px; border-radius: 50%; background: #cfd6e2; display: block; }
 .wk-bar i:nth-child(1) { background: #ff6b5e; }
@@ -241,7 +270,7 @@ const GlobalStyles = () => (
 .wk-bar span { margin-left: 8px; font-size: 0.66rem; color: #7b879b; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .wk-view { height: 250px; overflow: hidden; position: relative; background: #fff; }
 .wk-view img { display: block; width: 100%; height: auto; transform: translateY(0); transition: transform 0.7s ease; will-change: transform; }
-.wk-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 6px 0; }
+.wk-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 18px 18px; }
 .wk-cat { display: block; color: #ed8337; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 3px; }
 .wk-name { color: #004168; font-size: 1.05rem; font-weight: 700; margin: 0; line-height: 1.3; }
 .wk-visit { flex-shrink: 0; color: #004168; font-size: 0.82rem; font-weight: 600; background: #eef3fa; padding: 7px 14px; border-radius: 50px; transition: background 0.3s ease, color 0.3s ease; }
@@ -266,23 +295,119 @@ const GlobalStyles = () => (
 @media (max-width: 640px) { .cl-section { padding: 2.5rem 16px 3rem; } .cl-grid { gap: 10px; } .cl-cell { width: calc((100% - 20px) / 3); height: 70px; padding: 8px 10px; border-radius: 10px; } }
 
 /* Get Started banner */
+/* Get Started banner (left: text, right: phone + 2 buttons) */
 .gs-section { background: #fff; padding: 3.5rem 5%; font-family: 'Poppins', sans-serif; }
-.gs-card { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1.5rem; background: #ed833733;  border-radius: 26px; padding: 1.6rem 2rem; box-shadow: 0 14px 40px rgba(0,65,104,0.08); }
-.gs-icon { flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, #004168, #0a5a8c); display: flex; align-items: center; justify-content: center; }
-.gs-text { flex: 1; min-width: 0; }
-.gs-title { color: #004168; font-size: 1.15rem; font-weight: 700; margin: 0 0 0.35rem; }
-.gs-desc { color: #6b7a94; font-size: 0.82rem; line-height: 1.6; margin: 0; max-width: 460px; }
-.gs-btn { flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; background: linear-gradient(90deg, #ed8337, #f59a52); color: #fff !important; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 1.7rem; border-radius: 12px; box-shadow: 0 8px 20px rgba(237,131,55,0.3); transition: transform 0.25s ease, box-shadow 0.25s ease; }
-.gs-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(237,131,55,0.4); }
-.gs-btn span { transition: transform 0.25s ease; }
-.gs-btn:hover span { transform: translateX(3px); }
-@media (max-width: 760px) {
-  .gs-section { padding: 2.5rem 16px; }
-  .gs-card { flex-direction: column; text-align: center; padding: 1.6rem 1.2rem; gap: 1rem; }
-  .gs-desc { max-width: none; }
-  .gs-btn { width: 100%; justify-content: center; box-sizing: border-box; }
+.gs-card { max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 2.5rem; background: #ed833733; border-radius: 26px; padding: 3.5rem 2.6rem; box-shadow: 0 14px 40px rgba(0,65,104,0.08); }
+.gs-phone-icon {
+  position: relative;
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #004168, #0a5a8c);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Expanding pulse rings */
+.gs-phone-icon::before,
+.gs-phone-icon::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #ed8337;
+  opacity: 0;
+  animation: gsPulse 2s ease-out infinite;
+  pointer-events: none;
+}
+.gs-phone-icon::after { animation-delay: 1s; }
+
+/* Phone icon ringing */
+.gs-phone-icon svg {
+  animation: gsRing 2s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes gsPulse {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(1.9); opacity: 0; }
+}
+
+@keyframes gsRing {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(-18deg); }
+  20% { transform: rotate(16deg); }
+  30% { transform: rotate(-14deg); }
+  40% { transform: rotate(12deg); }
+  50% { transform: rotate(-6deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gs-phone-icon::before,
+  .gs-phone-icon::after,
+  .gs-phone-icon svg { animation: none; }
+}
+.gs-left { min-width: 0; }
+.gs-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  color: #ed8337;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  border: 0;
+  background: none;
+  padding: 0;
+}
+.gs-eyebrow::before,
+.gs-eyebrow::after {
+  content: "";
+  display: block;
+  width: 46px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(237,131,55,0), #ed8337);
+}
+.gs-eyebrow::after {
+  background: linear-gradient(90deg, #ed8337, rgba(237,131,55,0));
+}
+
+@media (max-width: 480px) {
+  .gs-eyebrow { font-size: 0.72rem; gap: 8px; }
+  .gs-eyebrow::before, .gs-eyebrow::after { width: 24px; }
+}
+.gs-title { color: #004168; font-size: clamp(1.5rem, 2.6vw, 2.2rem); font-weight: 700; line-height: 1.25; margin: 0 0 0.8rem; }
+.gs-title span { color: #ed8337; }
+.gs-desc { color: #5a6577; font-size: 0.9rem; line-height: 1.7; margin: 0; max-width: 480px; }
+
+.gs-right { display: flex; flex-direction: column; align-items: center; gap: 2.2rem; min-width: 0; }
+.gs-phone { display: inline-flex; align-items: center; gap: 28px; text-decoration: none; }
+.gs-phone-icon { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, #004168, #0a5a8c); color: #fff; display: flex; align-items: center; justify-content: center; }
+.gs-phone-number { color: #004168; font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 800; line-height: 1.1; white-space: nowrap; }
+
+.gs-btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.gs-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: linear-gradient(90deg, #ed8337, #f59a52); color: #fff !important; font-weight: 600; font-size: 0.88rem; padding: 0.85rem 1.4rem; border-radius: 50px; box-shadow: 0 8px 20px rgba(237,131,55,0.3); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.gs-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(237,131,55,0.4); }
+.gs-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: transparent; color: #004168 !important; border: 1px solid rgba(0,65,104,0.3); font-weight: 600; font-size: 0.88rem; padding: 0.85rem 1.4rem; border-radius: 50px; transition: transform 0.25s ease, background 0.25s ease; }
+.gs-btn-outline:hover { transform: translateY(-2px); background: rgba(255,255,255,0.6); }
+
+@media (max-width: 900px) {
+  .gs-card { grid-template-columns: 1fr; gap: 1.8rem; padding: 1.8rem 1.4rem; text-align: center; }
+  .gs-desc { max-width: none; }
+  .gs-right { align-items: center; }
+  .gs-btns { justify-content: center; }
+}
+@media (max-width: 480px) {
+  .gs-section { padding: 2.5rem 16px; }
+  .gs-btns { flex-direction: column; width: 100%; }
+  .gs-btn, .gs-btn-outline { width: 100%; box-sizing: border-box; }
+  .gs-phone-number { font-size: 1.5rem; }
+}
 /* Trust strip (4) - dark band with floating cards */
 .ts-section { background: #fff; padding: 3.5rem 5%; position: relative; overflow: hidden; }
 .ts-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
@@ -384,14 +509,6 @@ const HERO_PARTNER_LOGOS = [
     PARTNER_LOGOS.odoo, PARTNER_LOGOS.gPartner, PARTNER_LOGOS.gRating,
 ];
 
-// 4 logos in the new section below the hero
-// const TRUST_STRIP_LOGOS = [
-//     { name: "Google Partner",             img: "/img/landing-page/hero-img-1.webp", label: "Certified" },
-//     { name: "Google Rating 4.9/5",        img: "/img/landing-page/hero-img-2.webp", label: "Client Rated" },
-//     { name: "DesignRush Verified Agency", img: "/img/landing-page/hero-img-3.webp", label: "Verified" },
-//     { name: "360 Kovai Verified Agency",  img: "/img/landing-page/hero-img-4.webp", label: "Local Trusted" },
-// ];
-
 function TrustStripSection() {
     return (
         <section className="ts-section" aria-label="Verified partners and ratings">
@@ -403,16 +520,6 @@ function TrustStripSection() {
                     <h2 className="ts-title">Recognised by the Platforms <span>You Trust</span></h2>
                 </div>
                 <StatsBar />
-                {/* <div className="ts-cards">
-                    {TRUST_STRIP_LOGOS.map((t) => (
-                        <div className="ts-card" key={t.name}>
-                            <span className="ts-tag">{t.label}</span>
-                            <div className="ts-logo-box">
-                                <img src={t.img} alt={t.name} loading="lazy" decoding="async" />
-                            </div>
-                        </div>
-                    ))}
-                </div> */}
             </div>
         </section>
     );
@@ -462,9 +569,8 @@ const PRICING_PLANS = [
         price: "₹9,999",
         popular: false,
         groups: [
-            { title: "Website", items: ["Up to 5 Pages", "Custom Design", "Mobile Responsive", "Contact Form", "WhatsApp Integration", "Google Map Integration"] },
-            { title: "Features", items: ["Social Media Integration", "Basic SEO Setup", "Basic Speed Optimization", "SSL Installation", "Basic Security", "Client Content Upload"] },
-            { title: "Support", items: ["30 Minutes Training", "1 Month Free Support"] },
+            { title: "Website", items: ["Up to 5 Pages", "Custom Design", "Mobile Responsive",  "WhatsApp Integration", "Google Map Integration"] },
+            { title: "Features", items: ["Social Media Integration", "Basic SEO Setup", "Basic Speed Optimization", "Basic Security"] },
         ],
     },
     {
@@ -475,9 +581,8 @@ const PRICING_PLANS = [
         price: "₹19,999",
         popular: true,
         groups: [
-            { title: "Website", items: ["Up to 15 Pages", "Custom Design", "Mobile Responsive", "Contact Form", "WhatsApp Integration", "Google Map Integration"] },
-            { title: "Features", items: ["Social Media Integration", "Blog Module", "SEO Setup", "Standard Speed Optimization", "SSL + Security", "Admin Panel", "Dynamic Website", "Inquiry Management", "Google Analytics", "Search Console Setup"] },
-            { title: "Support", items: ["1 Hour Training", "3 Months Free Support"] },
+            { title: "Website", items: ["Up to 15 Pages", "Custom Design", "Mobile Responsive",  "WhatsApp Integration", "Google Map Integration"] },
+            { title: "Features", items: ["Social Media Integration",  "SEO Setup", "Standard Speed Optimization", "SSL + Security", "Google Analytics"] },
         ],
     },
     {
@@ -488,9 +593,8 @@ const PRICING_PLANS = [
         price: "₹29,999",
         popular: false,
         groups: [
-            { title: "Website", items: ["Up to 25 Premium Pages", "Premium UI/UX Design", "Mobile Responsive", "Contact Form", "WhatsApp Integration", "Google Map Integration"] },
-            { title: "Features", items: ["Social Media Integration", "Advanced SEO Setup", "Advanced Speed Optimization", "Advanced Security", "Admin Panel", "Dynamic Website", "Inquiry Management", "Live Chat Integration", "Google Analytics", "Search Console Setup"] },
-            { title: "Support", items: ["2 Hours Training", "6 Months Free Support"] },
+            { title: "Website", items: ["Up to 25 Premium Pages", "Premium UI/UX Design", "Mobile Responsive", "WhatsApp Integration", "Google Map Integration"] },
+            { title: "Features", items: ["Social Media Integration", "Advanced SEO Setup", "Advanced Speed Optimization", "Advanced Security",  "Google Analytics", "Search Console Setup"] },
         ],
     },
     {
@@ -502,7 +606,6 @@ const PRICING_PLANS = [
         groups: [
             { title: "Store", items: ["Inventory & Order Tracking", "Payment Gateway Integration", "Store & Product Management", "Mobile Responsive", "WhatsApp Integration"] },
             { title: "Features", items: ["SEO Ready Structure", "Speed Optimization", "SSL + Security", "Admin Panel"] },
-            { title: "Support", items: ["Training Included", "Free Post-Launch Support"] },
         ],
     },
     {
@@ -513,8 +616,7 @@ const PRICING_PLANS = [
         popular: false,
         groups: [
             { title: "Store", items: ["Product Catalog Setup", "Payment and Shipping Integration", "Mobile Responsive", "Customer Accounts", "WhatsApp Integration"] },
-            { title: "Features", items: ["Custom Features & Integrations", "SEO Ready Structure", "Speed Optimization", "SSL + Security"] },
-            { title: "Support", items: ["Training Included", "Free Post-Launch Support"] },
+            { title: "Features", items: ["Custom Features & Integrations", "SEO Ready Structure", "Speed Optimization", "SSL + Security","Admin Panel"] },
         ],
     },
     {
@@ -526,7 +628,6 @@ const PRICING_PLANS = [
         groups: [
             { title: "Store", items: ["Custom Product & Category Setup", "Customer Login & Account Management", "Shopping Cart & Easy Checkout", "Mobile Responsive", "WhatsApp Integration"] },
             { title: "Features", items: ["SEO Ready Structure", "Speed Optimization", "Payment Gateway Setup", "Shipping Setup"] },
-            { title: "Support", items: ["Training Included", "Free Post-Launch Support"] },
         ],
     },
 ];
@@ -586,7 +687,7 @@ function PricingSection() {
                                 <div className="pp-price-main">
                                     {plan.from && <small className="pp-from">From</small>}
                                     {plan.price}
-                                    {!plan.from && <small>/year</small>}
+                                    {!plan.from && <small></small>}
                                 </div>
                             </div>
 
@@ -620,12 +721,12 @@ function PricingSection() {
 // ── Recent work (6 cards, screenshot scrolls inside card on hover) ──
 // Use tall, full-page screenshots for the scroll effect to be visible.
 const WORK_ITEMS = [
-    { img: "/img/landing-page/protfoilo-9.webp", category: "Corporate Training", title: "TGCC", domain: "tgcc.com.my", link: "https://www.tgcc.com.my/" },
-    { img: "/img/landing-page/protfoilo-11.webp", category: "Manufacturing", title: "Vatcomm Technologies", domain: "vatcommtechnologies.com", link: "https://www.vatcommtechnologies.com/" },
-    { img: "/img/landing-page/protfoilo-greenstar.webp", category: "Exports", title: "Greenstar Exports", domain: "greenstarexports.com", link: "https://www.greenstarexports.com/" },
-    { img: "/img/landing-page/protfoilo-10.webp", category: "Construction", title: "Vriksha Builders", domain: "vrikshabuilders.com", link: "https://staging.vrikshabuilders.com/" },
-    { img: "/img/landing-page/protfoilo-1.webp", category: "E-Commerce", title: "Feral Roots", domain: "feralroots.in", link: "https://feralroots.in/" },
-    { img: "/img/landing-page/protfoilo-5.webp", category: "Design & Construction", title: "URC Technology Services", domain: "urcts.in", link: "https://www.urcts.in/" },
+    { img: "/img/work-1.webp", category: "Corporate Training", title: "TGCC", domain: "tgcc.com.my" },
+    { img: "/img/work-4.webp", category: "Manufacturing", title: "Vatcomm Technologies", domain: "vatcommtechnologies.com" },
+    { img: "/img/work-3.webp", category: "Exports", title: "Greenstar Exports", domain: "greenstarexports.com" },
+    { img: "/img/work-2.webp", category: "Construction", title: "Vriksha Builders", domain: "vrikshabuilders.com" },
+    { img: "/img/work-6.webp", category: "E-Commerce", title: "Feral Roots", domain: "feralroots.in" },
+    { img: "/img/work-14.webp", category: "Design & Construction", title: "URC Technology Services", domain: "urcts.in" },
 ];
 
 // Measures the real image height and scrolls it inside the card window
@@ -638,14 +739,14 @@ function WorkCard({ w }) {
         if (!view || !img) return;
         const dist = img.offsetHeight - view.offsetHeight;
         if (dist <= 0) return; // image is not taller than the card window
-        const secs = Math.min(9, Math.max(3, dist / 300));
+        const secs = Math.min(9, Math.max(3, dist / 200));
         img.style.transition = `transform ${secs}s linear`;
         img.style.transform = `translateY(-${dist}px)`;
     };
     const reset = () => {
         const img = imgRef.current;
         if (!img) return;
-        img.style.transition = "transform 0.7s ease";
+        img.style.transition = "transform 0.5s ease";
         img.style.transform = "translateY(0)";
     };
 
@@ -700,6 +801,46 @@ function RecentWorkSection() {
     );
 }
 
+// ── Hero background slider (6 images) ─────────────────
+const HERO_BG_SLIDES = [
+    "/img/landing-page/landing-site-1.webp",
+    "/img/landing-page/landing-site-2.webp",
+    "/img/landing-page/landing-site-3.webp",
+    "/img/landing-page/landing-site-4.webp",
+    "/img/landing-page/landing-site-5.webp",
+    "/img/landing-page/landing-site-6.webp",
+    "/img/landing-page/landing-site-7.webp",
+    "/img/landing-page/landing-site-8.webp",
+    "/img/landing-page/landing-site-9.webp",
+    "/img/landing-page/landing-site-10.webp",
+    "/img/landing-page/landing-site-11.webp",
+];
+
+// 3 columns, each uses all 6 images in a different order (so columns never look identical)
+const HERO_BG_COLUMNS = [0, 2, 4,1].map((shift) =>
+    HERO_BG_SLIDES.map((_, i) => HERO_BG_SLIDES[(i + shift) % HERO_BG_SLIDES.length])
+);
+
+function HeroImageSlider() {
+    return (
+        <div className="hero-slider-box" aria-hidden="true">
+            <div className="hero-bg-tilt">
+                {HERO_BG_COLUMNS.map((col, ci) => (
+                    <div className="hero-bg-col" key={ci}>
+                        <div className="hero-bg-track">
+                            {/* list is tripled so the loop is seamless and always covers the hero */}
+                            {[...col, ...col, ...col].map((src, i) => (
+                                <img key={i} src={src} alt="" loading="eager" decoding="async" />
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <div className="hero-bg-overlay" />
+        </div>
+    );
+}
+
 // ── Hero ────────────────────────────────────────────
 function HeroSection() {
     return (
@@ -736,13 +877,7 @@ function HeroSection() {
             </div>
 
             <div className="hero-right">
-                <img
-                    src="/img/landing-page/banner.webp"
-                    alt="Website Development Coimbatore"
-                    className="hero-img"
-                    fetchPriority="high"
-                    decoding="async"
-                />
+                <HeroImageSlider />
             </div>
         </section>
     );
@@ -969,6 +1104,9 @@ const CLIENT_MARQUEE_LOGOS = [
     { name: "URCTS", img: "/img/landing-page/client-slide-20.webp" },
     { name: "Greenstar", img: "/img/landing-page/greenstar-logo.webp" },
     { name: "Orvix", img: "/img/landing-page/orvix-logo.webp" },
+        { name: "Attox", img: "/img/landing-page/client-slide-23.webp" },
+        { name: "Adhoc", img: "/img/landing-page/client-slide-24.webp" },
+
 ];
 
 // Static grid: every client is visible at once, nothing slides
@@ -994,21 +1132,56 @@ function ClientLogosGrid() {
 }
 
 // ── Get Started banner ────────────────────────────────
+// ── Get Started banner (CTA content: left text, right phone + buttons) ──
 function GetStartedBanner() {
     return (
         <section className="gs-section">
             <div className="gs-card">
-                <div className="gs-icon">
-                    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <path d="M12 3l7 3v5c0 4.5-3 8.2-7 10-4-1.8-7-5.5-7-10V6l7-3z" />
-                        <path d="m9 12 2 2 4-4" />
-                    </svg>
+                {/* LEFT: subtitle, title, description */}
+                <div className="gs-left">
+                    <div className="gs-eyebrow">Not Sure Which Website You Need?</div>
+                    <h2 className="gs-title">
+                        Tell Us About <span>Your Business</span>
+                    </h2>
+                    <p className="gs-desc">
+                        We'll recommend the right website type, features and approximate investment based on your actual requirements.
+                    </p>
                 </div>
-                <div className="gs-text">
-                    <h3 className="gs-title">Simple. Transparent. Results-Driven.</h3>
-                    <p className="gs-desc">No confusing steps. No hidden delays. Just a smooth process that gets you online and bringing in enquiries faster.</p>
+
+                {/* RIGHT: phone number + 2 buttons below */}
+                <div className="gs-right">
+                    <a href="tel:+919677444048" className="gs-phone">
+                        <span className="gs-phone-icon">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                            </svg>
+                        </span>
+                        <span className="gs-phone-number">+91 96774 44048</span>
+                    </a>
+
+                    <div className="gs-btns">
+                        <a href="#get-in-touch-form" className="gs-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
+                                <path d="M15 2v5h5" />
+                                <path d="M16 13H8" />
+                                <path d="M16 17H8" />
+                            </svg>
+                            Get Your Website Started Today
+                        </a>
+                        <a
+                            href="https://wa.me/919677444048"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="gs-btn-outline"
+                        >
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="#25D366" aria-hidden="true">
+                                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.79 14.13c-.24.68-1.19 1.25-1.94 1.41-.52.11-1.2.2-3.48-.75-2.92-1.21-4.8-4.17-4.95-4.36-.14-.19-1.19-1.58-1.19-3.02s.75-2.15 1.02-2.44c.24-.27.52-.34.7-.34h.5c.16 0 .38-.03.59.45.24.56.79 1.94.86 2.08.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.29.29-.12.57.16.28.73 1.2 1.57 1.95 1.08.96 1.99 1.26 2.27 1.4.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.06.12.06.68-.18 1.36z" />
+                            </svg>
+                            WhatsApp Us
+                        </a>
+                    </div>
                 </div>
-                <a href="#get-in-touch-form" className="gs-btn">Let's Get Started <span>→</span></a>
             </div>
         </section>
     );
@@ -1020,7 +1193,7 @@ function FAQSection() {
     const toggle = (index) => setActive(active === index ? null : index);
 
     return (
-        <section className="dm-faq-section">
+        <section className="dm-faq-section" style={{"paddingTop": "2rem"}}>
             <div className="container" style={{ width: '100%' }}>
                 <div className="dm-faq-head">
                     <h2>Frequently Asked <span>Questions</span></h2>
@@ -1519,10 +1692,11 @@ export default function DigitalMarketingNewPage() {
             <PricingSection />
             <RecentWorkSection />
             <ClientLogosGrid />
-            <GetStartedBanner />
+          
             <TestimonialSlider />
+              <GetStartedBanner />
             <FAQSection />
-            <CallCTASection />
+            {/* <CallCTASection /> */}
             <FooterSection />
         </Layout>
     );

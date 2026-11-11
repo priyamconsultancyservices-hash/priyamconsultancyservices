@@ -14,9 +14,6 @@ const SOCIAL_LINKS = [
 ];
 const WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-// Custom event name shared by the banner button and the popup
-const OPEN_DIWALI_POPUP_EVENT = "open-diwali-popup";
-
 const schemaData = [
     {
         "@context": "https://schema.org",
@@ -190,36 +187,6 @@ function Diya() {
             <path d="M3 20h42c0 10-9 17-21 17S3 30 3 20z" fill="#f59e0b" />
             <path d="M3 20h42" stroke="#fcd34d" strokeWidth="2" />
         </svg>
-    );
-}
-
-function DiwaliBanner() {
-    const [show, setShow] = useState(true);
-
-    if (!show) return null;
-
-    // Tells DiwaliPopup to open (it listens for this event)
-    const openPopup = () => window.dispatchEvent(new Event(OPEN_DIWALI_POPUP_EVENT));
-
-    return (
-        <div className="dsb-bar" role="region" aria-label="Diwali offer">
-            <div className="dsb-inner">
-                <Diya />
-                <p className="dsb-text">
-                    <span className="dsb-gold">Happy Diwali </span> from{" "}
-                    <span className="dsb-gold">Priyam Consultancy Services!</span>
-                    <span className="dsb-divider">|</span>
-                    <span className="dsb-offer">
-                        Celebrate with <strong>1 Year</strong> for <strong>Free Web Hosting</strong>
-                    </span>
-                </p>
-                <span className="dsb-diya-2"><Diya /></span>
-                <button type="button" className="dsb-btn" onClick={openPopup}>
-                    Claim Diwali Offer <span>→</span>
-                </button>
-            </div>
-            <button type="button" className="dsb-close" onClick={() => setShow(false)} aria-label="Close banner">✕</button>
-        </div>
     );
 }
 
@@ -506,6 +473,8 @@ const CLIENT_MARQUEE_LOGOS = [
     { name: "URCTS", img: "/img/landing-page/client-slide-20.webp" },
     { name: "Greenstar", img: "/img/landing-page/greenstar-logo.webp" },
     { name: "Orvix", img: "/img/landing-page/orvix-logo.webp" },
+            { name: "Attox", img: "/img/landing-page/client-slide-23.webp" },
+        { name: "Adhoc", img: "/img/landing-page/client-slide-24.webp" },
 ];
 
 const CLIENT_MARQUEE_DOUBLED = [...CLIENT_MARQUEE_LOGOS, ...CLIENT_MARQUEE_LOGOS];
@@ -1547,157 +1516,7 @@ function DwpSelect({ value, onChange, options }) {
     );
 }
 
-function DiwaliPopup() {
-    const [open, setOpen] = useState(false);
-    const [sending, setSending] = useState(false);
-    const [form, setForm] = useState({ name: "", email: "", company: "", phone: "", service: "" });
 
-    // 1) Open automatically after 8 seconds
-    useEffect(() => {
-        const t = setTimeout(() => setOpen(true), 8000);
-        return () => clearTimeout(t);
-    }, []);
-
-    // 2) Open whenever the banner's "Claim Diwali Offer" button is clicked
-    useEffect(() => {
-        const openPopup = () => setOpen(true);
-        window.addEventListener(OPEN_DIWALI_POPUP_EVENT, openPopup);
-        return () => window.removeEventListener(OPEN_DIWALI_POPUP_EVENT, openPopup);
-    }, []);
-
-    // Lock page scroll + close on ESC while popup is open
-    useEffect(() => {
-        if (!open) return;
-        const prev = document.body.style.overflow;
-        document.body.style.overflow = "hidden";
-        const onKey = (e) => { if (e.key === "Escape") setOpen(false); };
-        document.addEventListener("keydown", onKey);
-        return () => {
-            document.body.style.overflow = prev;
-            document.removeEventListener("keydown", onKey);
-        };
-    }, [open]);
-
-    const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
-
-    const submit = async (e) => {
-        e.preventDefault();
-        setSending(true);
-        try {
-            const emailjs = (await import("@emailjs/browser")).default;
-            await emailjs.send(
-                "service_8xw6k3r",
-                "template_jarui36",
-                {
-                    name: form.name,
-                    email: form.email,
-                    phone: form.phone,
-                    company: form.company,
-                    service: form.service,
-                    message: "Enquiry from Diwali Offer Popup",
-                    url: window.location.href,
-                },
-                "XWRnXi4hK2SvmRG3q"
-            );
-            alert("Message Sent Successfully ✅");
-            setForm({ name: "", email: "", company: "", phone: "", service: "" });
-            setOpen(false);
-        } catch (error) {
-            console.log(error);
-            alert("Failed to send ❌");
-        } finally {
-            setSending(false);
-        }
-    };
-
-    if (!open) return null;
-
-    return (
-        <div
-            className="dwp-overlay"
-            onClick={() => setOpen(false)}
-            role="dialog"
-            aria-modal="true"
-            aria-label="Diwali special offer - 1 Year Free Web Hosting from Priyam Consultancy Services"
-        >
-            <div className="dwp-modal" onClick={(e) => e.stopPropagation()}>
-                <button type="button" className="dwp-close" onClick={() => setOpen(false)} aria-label="Close popup">✕</button>
-
-                <picture>
-                    <source media="(max-width: 820px), (max-height: 520px)" srcSet="/img/landing-page/diwali-offer-mobile-popup.webp" />
-                    <img
-                        className="dwp-img"
-                        src="/img/landing-page/diwali-offer-left.webp"
-                        alt="Diwali Special Offer - 1 Year Free Web Hosting from Priyam Consultancy Services"
-                        decoding="async"
-                    />
-                </picture>
-
-                <div className="dwp-card">
-                    <form className="dwp-form" onSubmit={submit}>
-                        <div className="dwp-head">
-                            <div className="dwp-head-row">
-                                <IconFile />
-                                <h3 className="dwp-form-title">Enquiry Form</h3>
-                            </div>
-                            <div className="dwp-divider"><span>🪷</span></div>
-                        </div>
-
-                        <div className="dwp-field">
-                            <label className="dwp-label">Full name <em>*</em></label>
-                            <div className="dwp-input-wrap">
-                                <span className="dwp-ic"><IconUser /></span>
-                                <input className="dwp-input" type="text" name="name" placeholder="Enter your full name" value={form.name} onChange={handleChange} required />
-                            </div>
-                        </div>
-
-                        <div className="dwp-field">
-                            <label className="dwp-label">Email ID <em>*</em></label>
-                            <div className="dwp-input-wrap">
-                                <span className="dwp-ic"><IconMail /></span>
-                                <input className="dwp-input" type="email" name="email" placeholder="Enter your email address" value={form.email} onChange={handleChange} required />
-                            </div>
-                        </div>
-
-                        <div className="dwp-field">
-                            <label className="dwp-label">Company name</label>
-                            <div className="dwp-input-wrap">
-                                <span className="dwp-ic"><IconBuilding /></span>
-                                <input className="dwp-input" type="text" name="company" placeholder="Enter your company name" value={form.company} onChange={handleChange} />
-                            </div>
-                        </div>
-
-                        <div className="dwp-field">
-                            <label className="dwp-label">Mobile number <em>*</em></label>
-                            <div className="dwp-input-wrap">
-                                <span className="dwp-ic"><IconPhone /></span>
-                                <input className="dwp-input" type="tel" name="phone" placeholder="+91 98765 43210" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" title="Enter a 10 digit mobile number" required />
-                            </div>
-                        </div>
-
-                        <div className="dwp-field">
-                            <label className="dwp-label">Service <em>*</em></label>
-                            <div className="dwp-input-wrap">
-                                <span className="dwp-ic"><IconService /></span>
-                                <DwpSelect value={form.service} onChange={handleChange} options={SERVICE_OPTIONS} />
-                            </div>
-                        </div>
-
-                        <button type="submit" className="dwp-submit" disabled={sending}>
-                            <IconPlane />
-                            {sending ? "Sending..." : "Submit Enquiry"}
-                        </button>
-
-                        <div className="dwp-note">
-                            <span className="dwp-note-i">i</span>
-                            <p>Offer subject to package eligibility and terms. Domain registration and renewal charges are separate unless explicitly included.</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    );
-}
 
 // ── Footer Section ────────────────────────────────────
 function FooterSection() {
@@ -2048,8 +1867,6 @@ export default function DigitalMarketingNewPage() {
         >
             <SEOHead />
             <GlobalStyles />
-            <DiwaliCrackers />
-            <DiwaliBanner />
             <SiteHeader />
             <HeroSection />
             <ClientLogosMarquee />
@@ -2063,7 +1880,6 @@ export default function DigitalMarketingNewPage() {
             <FAQSection />
             <CallCTASection />
             <FooterSection />
-            <DiwaliPopup />
         </Layout>
     );
 }

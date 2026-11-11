@@ -648,6 +648,8 @@ const CLIENT_MARQUEE_LOGOS = [
     { name: "Microsoft", img: "/img/landing-page/client-slide-20.webp" },
     { name: "Greenstar", img: "/img/landing-page/client-slide-22.webp" },
     { name: "orvix", img: "/img/landing-page/orvix-logo.webp" },
+            { name: "Attox", img: "/img/landing-page/client-slide-23.webp" },
+        { name: "Adhoc", img: "/img/landing-page/client-slide-24.webp" },
 
 ];
 

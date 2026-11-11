@@ -98,20 +98,27 @@ const ARTICLES = [
     {title:"What Is Recruitment in HR? Definition, Types, Process & Everything You Need to Know", href:"/article/recruitment-agencies-in-coimbatore", date:""},
 ];
 
+
+const LINKS = {
+  home: "/",
+  category: "/hr-services",
+  payroll: "/payroll-outsourcing-services",
+  hr: "/hr-services",
+  recruitment: "/recruitment-services",
+  consultancy: "/hr-consultancy",
+};
+
+
 const RECENT_ARTICLES = [...ARTICLES].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 4);
 
 const RELATED_ARTICLES_API =
     "https://www.priyamconsultancy.com/blog/wp-json/wp/v2/posts?_embed&per_page=4";
 
 const HUB_LINKS = [
-    { label: "Website Development", href: "/website-development" },
-    { label: "Digital Marketing", href: "/digital-marketing" },
-    { label: "SEO", href: "/seo" },
-    { label: "PPC / Performance Marketing", href: "/performance-marketing" },
-    { label: "Social Media Marketing", href: "/social-media" },
-    { label: "Content Marketing", href: "/content-marketing" },
-    { label: "Email Marketing", href: "/email-marketing" },
-    { label: "Graphic Design", href: "/graphic-design" },
+  { label: "HR Services", href: LINKS.hr },
+  { label: "Payroll Outsourcing", href: LINKS.payroll },
+  { label: "Recruitment Services", href: LINKS.recruitment },
+  { label: "HR Consultancy", href: LINKS.consultancy },
 ];
 
 const PAGE_H1 = "How AI Makes Succession Planning in HR Faster, Fairer, and More Accurate";
@@ -602,7 +609,7 @@ function AISuccessionPlanning() {
                 {/* RIGHT SIDEBAR */}
                 <aside className="tseo-rail">
                     <div className="tseo-rail-card">
-                        <div className="tseo-rail-title">Digital Marketing Learning Hub</div>
+                        <div className="tseo-rail-title">HR Solutions for Your Business</div>
                         <div className="tseo-hub-grid">
                             {HUB_LINKS.map((l) => (
                                 <Link className="tseo-hub-link" to={l.href} key={l.href}>
