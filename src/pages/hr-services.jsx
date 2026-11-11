@@ -415,7 +415,7 @@ function ApproachSection() {
 
   return (
     <section className="approach" id="approach">
-      <div className="ap2-inner"  style={{ boxSizing: "border-box", maxWidth: "1280px", margin: "0 auto", padding: "0px 24px 40px 24px" }}>
+      <div className="ap2-inner"  style={{ boxSizing: "border-box", maxWidth: "1280px", margin: "0 auto", padding: "0px 0px 60px 0px" }}>
 
         {/* LEFT CONTENT */}
         <div className="ap-left">
