@@ -9,12 +9,12 @@ import Link from "@docusaurus/Link";
 
 const SLUG = "employee-retention-strategies";
 const PAGE_URL = `https://www.priyamconsultancy.com/article/${SLUG}`;
-const PAGE_TITLE = "The Hidden Cost of Employee Turnover: What Business Owners Should Measure";
+const PAGE_TITLE = "Employee Retention Strategies to Reduce Turnover Costs";
 const PAGE_DESC =
-  "Learn the true cost of employee turnover, the key metrics to track, and practical employee retention strategies for business owners in Coimbatore.";
+  "Discover employee retention strategies to reduce turnover costs, improve workplace morale, and track key HR metrics that help your business retain talent.";
 const PAGE_IMG = `https://www.priyamconsultancy.com/img/article/${SLUG}.webp`;
 const PAGE_KEYWORDS =
-  "Employee turnover,Cost of employee turnover,Employee retention strategies,Employee turnover rate,Staff retention strategies,Talent retention strategy,Payroll outsourcing services in Coimbatore,HR solutions in Coimbatore,HR consultancy in Coimbatore,Payroll and HR services for small businesses";
+  "employee retention strategies, retention strategies, employee turn over meaning, staff retention strategies, talent retention strategy, Cost of Employee Turnover, Employee Turnover Rate, Employee Retention in Business,payroll management services.";
 const DATE_PUBLISHED = "2026-11-11T09:00:00+05:30";
 
 // ── INTERNAL LINKS (change the paths here if any URL is different on your site) ──
@@ -216,7 +216,7 @@ function EmployeeTurnoverCost() {
         <meta name="description" content={PAGE_DESC} />
         <meta name="keywords" content={PAGE_KEYWORDS} />
         <link rel="canonical" href={PAGE_URL} />
-
+        <meta name="robots" content="index, follow"/>
         <meta property="og:type" content="article" />
         <meta property="og:title" content={PAGE_TITLE} />
         <meta property="og:description" content={PAGE_DESC} />
@@ -229,9 +229,6 @@ function EmployeeTurnoverCost() {
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={PAGE_IMG} />
 
-        <script type="application/ld+json">{JSON.stringify(BREADCRUMB_SCHEMA)}</script>
-        <script type="application/ld+json">{JSON.stringify(ARTICLE_SCHEMA)}</script>
-        <script type="application/ld+json">{JSON.stringify(FAQ_SCHEMA)}</script>
       </Head>
 
       <style>{`
@@ -665,4 +662,4 @@ function EmployeeTurnoverCost() {
   );
 }
 
-export default EmployeeTurnoverCost;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+export default EmployeeTurnoverCost;
