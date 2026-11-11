@@ -302,9 +302,12 @@ function ApproachSection() {
 
   return (
     <section className="approach" id="approach">
-      <div className="ap2-inner">
+      <div
+        className="ap2-inner"
+        style={{ boxSizing: "border-box", maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}
+      >
         {/* LEFT CONTENT */}
-        <div className="ap-left">
+        <div className="ap-left" style={{ boxSizing: "border-box", minWidth: 0 }}>
           <div className="partners-header1">
             <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Approach in</div>
           </div>
