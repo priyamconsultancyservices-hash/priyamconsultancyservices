@@ -440,7 +440,7 @@ const PRICING_PLANS = [
     {
         tag: "Starter Website",
         desc: "Get a clean, professional website for startups and small businesses going online.",
-        off: "25% OFF", was: "₹13,400", price: "₹9,999", popular: false,
+        off: "25% OFF", was: "₹13,400", price: "₹7,499", popular: false,
         groups: [
             { title: "Website", items: ["Up to 5 Pages", "Custom Design", "Mobile Responsive", "WhatsApp Integration", "Google Map Integration"] },
             { title: "Features", items: ["Social Media Integration", "Basic SEO Setup", "Basic Speed Optimization", "Basic Security"] },
@@ -449,7 +449,7 @@ const PRICING_PLANS = [
     {
         tag: "Business Website",
         desc: "Build a stronger online presence and win more enquiries for growing businesses.",
-        off: "25% OFF", was: "₹26,665", price: "₹19,999", popular: true,
+        off: "25% OFF", was: "₹25,665", price: "₹14,999", popular: true,
         groups: [
             { title: "Website", items: ["Up to 15 Pages", "Custom Design", "Mobile Responsive", "WhatsApp Integration", "Google Map Integration"] },
             { title: "Features", items: ["Social Media Integration", "SEO Setup", "Standard Speed Optimization", "SSL + Security", "Google Analytics"] },
@@ -458,7 +458,7 @@ const PRICING_PLANS = [
     {
         tag: "Premium Corporate Website",
         desc: "Present your company with a polished website built for corporate brands.",
-        off: "25% OFF", was: "₹39,999", price: "₹29,999", popular: false,
+        off: "25% OFF", was: "₹35,999", price: "₹24,999", popular: false,
         groups: [
             { title: "Website", items: ["Up to 25 Premium Pages", "Premium UI/UX Design", "Mobile Responsive", "WhatsApp Integration", "Google Map Integration"] },
             { title: "Features", items: ["Social Media Integration", "Advanced SEO Setup", "Advanced Speed Optimization", "Advanced Security", "Google Analytics", "Search Console Setup"] },
@@ -467,7 +467,7 @@ const PRICING_PLANS = [
     {
         tag: "Starter E-Commerce Development",
         desc: "Launch your first online store with a focused range and simple checkout.",
-        off: "17% OFF", was: "₹30,000", price: "₹24,999", popular: false,
+        off: "17% OFF", was: "₹30,000", price: "₹15,499", popular: false,
         groups: [
             { title: "Store", items: ["Up to 50 Products", "Product Catalog Setup", "Payment Gateway Integration", "Mobile Responsive", "WhatsApp Integration"] },
             { title: "Features", items: ["Inventory & Order Tracking", "Basic SEO Setup", "Speed Optimization", "SSL + Security", "Admin Panel"] },
@@ -476,7 +476,7 @@ const PRICING_PLANS = [
     {
         tag: "Growth E-Commerce Development",
         desc: "Scale your store with more products, checkout and stronger sales features.",
-        off: "30% OFF", was: "₹50,000", price: "₹34,999", popular: false,
+        off: "30% OFF", was: "₹35,000", price: "₹24,999", popular: false,
         groups: [
             { title: "Store", items: ["Up to 100 Products", "Product Variants Management", "Payment & Shipping Integration", "Mobile Responsive", "WhatsApp Integration"] },
             { title: "Features", items: ["Inventory & Order Tracking", "SEO Setup", "Speed Optimization", "SSL + Security", "Admin Panel"] },
@@ -485,7 +485,7 @@ const PRICING_PLANS = [
     {
         tag: "Premium E-Commerce Development",
         desc: "Run a complete online store with advanced features for large, growing catalogs.",
-        off: "33% OFF", was: "₹75,000", price: "₹49,999", popular: false,
+        off: "33% OFF", was: "₹50,000", price: "₹34,999", popular: false,
         groups: [
             { title: "Store", items: ["Up to 200 Products", "Custom Product & Category Setup", "Payment & Shipping Integration", "Mobile Responsive", "WhatsApp Integration"] },
             { title: "Features", items: ["Inventory & Order Tracking", "Advanced SEO Setup", "Advanced Speed Optimization", "Advanced Security", "Google Analytics", "Admin Panel"] },
