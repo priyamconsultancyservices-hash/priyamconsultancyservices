@@ -288,7 +288,7 @@ const processSteps = {
 const servicesTabs = [
   {
     label: "Understand & Audit",
-    icon: <img src="/img/icon/hr-policy-aduit.webp" alt="Search" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/hr-policy-aduit.webp" alt="Search" />,
     title: "Understand & Audit",
     desc: "We start by identifying your current HR policies and organizational structure, analyzing what works and where the gaps are, and evaluating how your current human resource management fits your business needs.",
     features: [],
@@ -296,7 +296,7 @@ const servicesTabs = [
   },
   {
     label: "Strategize & Customize",
-    icon: <img src="/img/icon/hr-policy-strategize.webp" alt="Plan" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/hr-policy-strategize.webp" alt="Plan" />,
     title: "Strategize & Customize",
     desc: "There are no cookie-cutter templates. Our process creates a custom HR strategy development framework, with policy blueprints tailored to your industry, size and organizational context. Everything, from workforce planning to onboarding policy, is laid out.",
     features: [],
@@ -304,7 +304,7 @@ const servicesTabs = [
   },
   {
     label: "Draft & Align",
-    icon: <img src="/img/icon/hr-policy-draft.webp" alt="Align" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/hr-policy-draft.webp" alt="Align" />,
     title: "Draft & Align",
     desc: "We develop or revise your HR policies, taking care to comply with the law, be culturally relevant, and to be operationally clear. All policies are subject to internal alignment reviews to ensure that they can be adopted across departments.",
     features: [],
@@ -312,7 +312,7 @@ const servicesTabs = [
   },
   {
     label: "Monitor & Optimize",
-    icon: <img src="/img/icon/hr-policy-monitor.webp" alt="Check" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/hr-policy-monitor.webp" alt="Check" />,
     title: "Monitor & Optimize",
     desc: "Policies have power only when communicated and executed. We support your leaders and HR staff by training them to implement the new human resource policies and strategies consistently and easily.",
     features: [],
@@ -320,7 +320,7 @@ const servicesTabs = [
   },
   {
     label: "Implement & Enable",
-    icon: <img src="/img/icon/hr-policy-implement.webp" alt="Implement" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/hr-policy-implement.webp" alt="Implement" />,
     title: "Implement & Enable",
     desc: "Execution is beyond circulation. We work with you and your HR and leadership teams to do internal rollouts, have conversations, and provide toolkits and communication plans that allow a smooth and consistent adoption.",
     features: [],
@@ -328,7 +328,7 @@ const servicesTabs = [
   },
   {
     label: "Review & Refine",
-    icon: <img src="/img/icon/hr-policy-refine.webp" alt="Refine" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/hr-policy-refine.webp" alt="Refine" />,
     title: "Review & Refine",
     desc: "Keep policies current and compliant with regular audits. Whether caused by regulations or organizational evolution, we believe in the proactive approach of updating strategies and their supporting documentation to remain ahead of risk exposure and match the workforce.",
     features: [],

@@ -289,7 +289,7 @@ const processSteps = {
 const servicesTabs = [
   {
     label: "Understand & Audit",
-    icon: <img src="/img/icon/payroll-understand-audit.webp" alt="Understand & Audit" style={{ width: "28px", height: "28px", objectFit: "contain", verticalAlign: "middle" }} />,
+    icon: <img src="/img/icon/payroll-understand-audit.webp" alt="Understand & Audit" style={{  objectFit: "contain", verticalAlign: "middle" }} />,
     rightIcon: "",
     title: "Understand & Audit",
     desc: "To begin, we will meticulously examine your current payroll system, employee data, and compliance situation. This audit gives us insight into any flags or gaps in your business. We will look at your overall payroll structure initiating with accuracy of data, statutory compliance and whether there are unnecessary inefficiencies in your workflow.",
@@ -299,7 +299,7 @@ const servicesTabs = [
   },
   {
     label: "Configure & Customize",
-    icon: <img src="/img/icon/payroll-configure-customize.webp" alt="Configure & Customize" style={{ width: "28px", height: "28px", objectFit: "contain", verticalAlign: "middle" }} />,
+    icon: <img src="/img/icon/payroll-configure-customize.webp" alt="Configure & Customize" style={{  objectFit: "contain", verticalAlign: "middle" }} />,
     rightIcon: "",
     title: "Configure & Customize",
     desc: "We don't believe in one-size-fits-all solutions. That's why we spend the time tailoring our payroll management system to fit your business perfectly. We customize salary structure, tax calculations and other compensation based on your organization's internal policies.",
@@ -309,7 +309,7 @@ const servicesTabs = [
   },
   {
     label: "Process & Disburse",
-    icon: <img src="/img/icon/payroll-process-disburse.webp" alt="Process & Disburse" style={{ width: "28px", height: "28px", objectFit: "contain", verticalAlign: "middle" }} />,
+    icon: <img src="/img/icon/payroll-process-disburse.webp" alt="Process & Disburse" style={{  objectFit: "contain", verticalAlign: "middle" }} />,
     rightIcon: "",
     title: "Process & Disburse",
     desc: "With accuracy and efficiency we will process all stages of the payroll cycle - from data entry to payout. Begins with checking data entry where we ensure that attendance and leave balances and any other elements being entered onto payroll are accurate to the day. We will calculate salaries, benefits, bonuses, and deductions according to your company policies.",
@@ -319,7 +319,7 @@ const servicesTabs = [
   },
   {
     label: "Comply & Report",
-    icon: <img src="/img/icon/payroll-comply-report.webp" alt="Comply & Report" style={{ width: "28px", height: "28px", objectFit: "contain", verticalAlign: "middle" }} />,
+    icon: <img src="/img/icon/payroll-comply-report.webp" alt="Comply & Report" style={{  objectFit: "contain", verticalAlign: "middle" }} />,
     rightIcon: "",
     title: "Comply & Report",
     desc: "Keeping up with regulations that are constantly changing can be tough, but we have got you covered! We take responsibility for all statutory filings (PF, ESI, TDS, PT, etc) and file all required documents on time. We also produce Form 16s and quarterly/year-end reports with complete documentations of all transactions.",
@@ -329,7 +329,7 @@ const servicesTabs = [
   },
   {
     label: "Monitor & Optimize",
-    icon: <img src="/img/icon/payroll-monitor-optimize.webp" alt="Monitor & Optimize" style={{ width: "28px", height: "28px", objectFit: "contain", verticalAlign: "middle" }} />,
+    icon: <img src="/img/icon/payroll-monitor-optimize.webp" alt="Monitor & Optimize" style={{  objectFit: "contain", verticalAlign: "middle" }} />,
     rightIcon: "",
     title: "Monitor & Optimize",
     desc: "We view payroll management as an ongoing journey, not a one-time task. That's why we don't stop at execution we continuously optimize. Each cycle is reviewed closely to track outcomes, spot inefficiencies, and make timely improvements that keep your payroll process sharp and dependable.",
@@ -339,7 +339,7 @@ const servicesTabs = [
   },
   {
     label: "Continuous Support & Proactive Insights",
-    icon: <img src="/img/icon/payroll-continuous-support.webp" alt="Continuous Support" style={{ width: "28px", height: "28px", objectFit: "contain", verticalAlign: "middle" }} />,
+    icon: <img src="/img/icon/payroll-continuous-support.webp" alt="Continuous Support" style={{  objectFit: "contain", verticalAlign: "middle" }} />,
     rightIcon: "",
     title: "Continuous Support & Proactive Insights",
     desc: "At PCS, payroll management is an ongoing partnership, not just processing. Our dedicated team is always available to help with questions, fix issues, or discuss anything you need. We'll also provide proactive assistance with your payroll data, helping you see trends, risks, and possible savings.",

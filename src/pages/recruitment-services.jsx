@@ -143,7 +143,7 @@ const schemaData = [
 const servicesTabs = [
   {
     label: "Discover & Define",
-    icon: <img src="/img/icon/recruitment-service-discover.webp" alt="Search" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/recruitment-service-discover.webp" alt="Search"  />,
     title: "Discover & Define",
     desc: "Before sourcing a single profile we immerse ourselves in your business. We get to understand your hiring objectives, dynamics of the team, the structure of the organization and what success looks like in the role, both technically and culturally. We go beyond job descriptions to understand the must-haves, nice-to-haves and red flags.",
     features: [],
@@ -151,7 +151,7 @@ const servicesTabs = [
   },
   {
     label: "Source & Screen",
-    icon: <img src="/img/icon/recruitment-service-source.webp" alt="Plan" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/recruitment-service-source.webp" alt="Plan"  />,
     title: "Source & Screen",
     desc: "With clear direction, we kick off our sourcing engine: a combination of corporate talent databases; AI-based tools; niche job boards; and passive candidate networks. But we do more than source resumes. For every candidate sourced, we do a structured screening on skills, attitude, and culture - so we only put the best forward.",
     features: [],
@@ -159,7 +159,7 @@ const servicesTabs = [
   },
   {
     label: "Present & Coordinate",
-    icon: <img src="/img/icon/recruitment-service-present.webp" alt="Align" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/recruitment-service-present.webp" alt="Align"  />,
     title: "Present & Coordinate",
     desc: "We do not merely share resumes – we provide complete profiles of candidates, including summary reports, assessment results and indicators for cultural alignment. We handle the entire interview coordination process from scheduling through feedback collation so that your team can focus on making the right choice rather than the admin burden.",
     features: [],
@@ -167,7 +167,7 @@ const servicesTabs = [
   },
   {
     label: "Close & Onboard",
-    icon: <img src="/img/icon/recruitment-service-close.webp" alt="Check" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/recruitment-service-close.webp" alt="Check"  />,
     title: "Close & Onboard",
     desc: "Hiring isn’t just the offer. We support negotiations, offer letters, and onboarding that keeps candidates warm and engaged. We pre-join actively manage engagement to minimize drop-offs and support the transitional phase with you and the candidate with confidence.",
     features: [],
@@ -175,7 +175,7 @@ const servicesTabs = [
   },
   {
     label: "Optimize & Support",
-    icon: <img src="/img/icon/recruitment-service-support.webp" alt="Implement" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/recruitment-service-support.webp" alt="Implement"  />,
     title: "Optimize & Support",
     desc: "At PCS, successful hiring is an ongoing partnership, not just making an offer. We support you long after acceptance, optimizing strategies to evolve with your business. We also monitor hire effectiveness, gather feedback, and offer actionable insights to continuously improve your recruitment processes.",
     features: [],
@@ -183,7 +183,7 @@ const servicesTabs = [
   },
   {
     label: "Monitor & Refine",
-    icon: <img src="/img/icon/recruitment-service-refine.webp" alt="Refine" style={{ width: "30px", height: "30px" }} />,
+    icon: <img src="/img/icon/recruitment-service-refine.webp" alt="Refine"  />,
     title: "Monitor & Refine",
     desc: "Recruiting is a fluid process, and we continually strive to keep your hiring practices at the cutting edge of what is happening in the marketplace. Through data-enhanced insights and real-time feedback loops, we consistently evaluate your recruiting efforts and identify applicable ways to refine our process to improve recruiting outcomes.",
     features: [],

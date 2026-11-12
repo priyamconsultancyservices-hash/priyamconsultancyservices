@@ -6,6 +6,8 @@ import '../../css/landing-website-development.css';
 
 // ── SEO (module scope: built once, not on every render) ──
 const imageUrl = "https://www.pcsbusinesssolution.com/img/digital-marketing.png";
+const PAGE_URL = "https://priyamconsultancy.com/landing-page/website-development-company-in-tamilnadu";
+const LOGO_URL = "https://priyamconsultancy.com/img/priyam-consultancy-logo.png";
 const SOCIAL_LINKS = [
     "https://www.facebook.com/profile.php?id=61577125709962",
     "https://www.linkedin.com/company/priyam-consultancy-services/",
@@ -13,79 +15,6 @@ const SOCIAL_LINKS = [
     "https://x.com/services91032",
     "https://g.co/kgs/rdTYdi6"
 ];
-const WEEKDAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
-const schemaData = [
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "item": { "@id": "https://priyamconsultancy.com/", "name": "Home" } },
-            { "@type": "ListItem", "position": 2, "item": { "@id": "https://priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/", "name": "Website Development Company in Coimbatore" } }
-        ]
-    },
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Priyam Consultancy Services",
-        "url": "https://priyamconsultancy.com/",
-        "logo": "https://priyamconsultancy.com/img/priyam-consultancy-logo.png",
-        "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91 96774 44048", "contactType": "customer support" }],
-        "sameAs": SOCIAL_LINKS
-    },
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "@id": "https://priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/#service",
-        "name": "Website Development Services in Coimbatore",
-        "serviceType": "Website Development Services",
-        "url": "https://priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/",
-        "description": "Priyam Consultancy Services develops SEO-optimized business websites, WordPress websites, WooCommerce stores, Shopify websites, custom web applications, responsive websites, and eCommerce solutions for businesses in Coimbatore.",
-        "provider": {
-            "@type": "Organization",
-            "name": "Priyam Consultancy Services",
-            "url": "https://priyamconsultancy.com/",
-            "logo": { "@type": "ImageObject", "url": "https://priyamconsultancy.com/img/priyam-consultancy-logo.png" }
-        },
-        "areaServed": { "@type": "City", "name": "Coimbatore" }
-    },
-    {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Website Development Company in Coimbatore | Priyam Consultancy Services",
-        "image": "https://priyamconsultancy.com/img/priyam-consultancy-logo.png",
-        "@id": "https://priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/",
-        "url": "https://priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/",
-        "telephone": "+91 96774 44048",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "1st Floor, SF.11/4, Pooja Garden, Kalapatti Road, Civil Aerodrame Post",
-            "addressLocality": "Coimbatore",
-            "addressRegion": "Tamil Nadu",
-            "postalCode": "641014",
-            "addressCountry": "India"
-        },
-        "geo": { "@type": "GeoCoordinates", "latitude": 11.043918, "longitude": 77.038417 },
-        "openingHoursSpecification": WEEKDAYS.map((d) => ({
-            "@type": "OpeningHoursSpecification", "dayOfWeek": d, "opens": "09:00", "closes": "18:00"
-        })),
-        "sameAs": SOCIAL_LINKS
-    },
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-            { "@type": "Question", "name": "What does a website development company do?", "acceptedAnswer": { "@type": "Answer", "text": "A website development company plans, designs, and builds websites from the ground up, creating responsive, user-friendly, and business-focused websites tailored to an organization's goals." } },
-            { "@type": "Question", "name": "How is a static website different from a dynamic one?", "acceptedAnswer": { "@type": "Answer", "text": "A static website displays the same content to every visitor, while a dynamic website retrieves content from a database and can change based on the visitor, user interactions, or other dynamic factors." } },
-            { "@type": "Question", "name": "What should I look for in a website development service?", "acceptedAnswer": { "@type": "Answer", "text": "Look for a provider that offers clear communication, a portfolio of successful projects, transparent pricing, technical expertise, and reliable post-launch support and maintenance." } },
-            { "@type": "Question", "name": "How long does website design and development usually take?", "acceptedAnswer": { "@type": "Answer", "text": "Project timelines vary depending on the scope and complexity. A simple static website can often be completed within a few weeks, while a custom or eCommerce website may take several weeks to a few months." } },
-            { "@type": "Question", "name": "What makes an e-commerce development company different from a general web developer?", "acceptedAnswer": { "@type": "Answer", "text": "An e-commerce development company specializes in building online stores with features such as secure checkout, payment gateway integration, inventory management, product catalogs, and order processing." } },
-            { "@type": "Question", "name": "How do I know if I'm hiring the right website development company for my project?", "acceptedAnswer": { "@type": "Answer", "text": "Ask for case studies, request client references, review previous work, evaluate their development process, and confirm they provide ongoing support and maintenance after your website is launched." } }
-        ]
-    }
-];
-
-const SCHEMA_JSON = schemaData.map((s) => JSON.stringify(s));
 
 // Leadfeeder tracking script (injected into <head>)
 const LEADFEEDER_SCRIPT = `
@@ -104,43 +33,40 @@ const LEADFEEDER_SCRIPT = `
 })('JMvZ8gvBAAEa2pOd');
 `;
 
+const SEO_TITLE = "Website Development Company in Tamil Nadu | Priyam Consultancy";
+const SEO_DESC = "Looking for a website development company in Tamil Nadu? Priyam Consultancy offers responsive, SEO-friendly websites for businesses. Get a free quote today! ";
+
 function SEOHead() {
     return (
         <Head>
-            <title>Best Website Development Company in Coimbatore | PCS </title>
-            <meta name="robots" content="noindex, nofollow" />
-            <meta name="description" content="Break away from ordinary business websites. Priyam Consultancy Services develops next-generation, SEO-optimized websites that help Coimbatore brands stand out." />
-            <meta name="keywords" content="Web Development Company in Coimbatore, Digital Marketing Company Coimbatore, Digital Marketing in Coimbatore, SEO Company in Coimbatore, Recruitment Agency in Coimbatore, SEO Services in Coimbatore, Website Development Company in Coimbatore " />
-            <link rel="canonical" href="https://www.priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/" />
+            <title>{SEO_TITLE}</title>
+            <meta name="robots" content="index, follow" />
+            <meta name="description" content={SEO_DESC} />
+            <meta name="keywords" content="website development company, Website Development Company in Tamil Nadu,Website development Services, website development, Website development india, website design company in coimbatore,Website development, Website design" />
+            <link rel="canonical" href="https://www.priyamconsultancy.com/landing-page/website-development-company-in-tamilnadu/" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
-            <link rel="preconnect" href="https://cdn.jsdelivr.net" crossOrigin="anonymous" />
-            <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" />
             <meta property="og:type" content="website" />
-            <meta property="og:title" content="Best Website Development Company in Coimbatore | PCS " />
-            <meta property="og:description" content="Break away from ordinary business websites. Priyam Consultancy Services develops next-generation, SEO-optimized websites that help Coimbatore brands stand out." />
-            <meta property="og:url" content="https://www.priyamconsultancy.com/landing-page/website-development-company-in-coimbatore/" />
+            <meta property="og:title" content={SEO_TITLE} />
+            <meta property="og:description" content={SEO_DESC} />
+            <meta property="og:url" content="https://www.priyamconsultancy.com/landing-page/website-development-company-in-tamilnadu/" />
             <meta property="og:image" content={imageUrl} />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="Best Website Development Company in Coimbatore | PCS " />
-            <meta name="twitter:description" content="Break away from ordinary business websites. Priyam Consultancy Services develops next-generation, SEO-optimized websites that help Coimbatore brands stand out." />
+            <meta name="twitter:title" content={SEO_TITLE} />
+            <meta name="twitter:description" content={SEO_DESC} />
             <meta name="twitter:image" content={imageUrl} />
-            {SCHEMA_JSON.map((json, i) => (<script key={i} type="application/ld+json">{json}</script>))}
             <script>{LEADFEEDER_SCRIPT}</script>
         </Head>
     );
 }
 
-// Hover + offscreen-render rules moved from JS handlers / inline styles into CSS
+// Page-scoped styles (only mounted on this page, so they never leak to other pages)
 const GlobalStyles = () => (
     <style>{`
-     header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN{
-    display: none;
-}
+header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN { display: none; }
 
-/* Hero background: tilted website screenshots scrolling on the right (like virtualsoftech).
-   The layer lives inside .hero-right (so it is always visible) and stretches over the whole hero. */
+/* ── Hero background: tilted website screenshots scrolling on the right ── */
 .hero { overflow: hidden; }
 .hero > .hero-left { position: relative; z-index: 3; }
 .hero > .hero-right { position: relative; z-index: 2; }
@@ -150,16 +76,7 @@ const GlobalStyles = () => (
 .hero-bg-track { display: flex; flex-direction: column; animation: heroBgUp 65s linear infinite; will-change: transform; }
 .hero-bg-col:nth-child(even) .hero-bg-track { animation-name: heroBgDown; }
 .hero-bg-track img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 12px 30px rgba(0,0,0,0.35); background: #0a5a8c; }
-.hero-bg-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(90deg,
-    #004168 0%,
-    #004168 20%,
-    rgba(0,65,104,0.7) 40%,
-    rgba(0,65,104,0) 70%,
-    rgba(0,65,104,0) 100%);
-}
-
+.hero-bg-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, #004168 0%, #004168 20%, rgba(0,65,104,0.7) 40%, rgba(0,65,104,0) 70%, rgba(0,65,104,0) 100%); }
 @keyframes heroBgUp { from { transform: translateY(0); } to { transform: translateY(-33.3333%); } }
 @keyframes heroBgDown { from { transform: translateY(-33.3333%); } to { transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .hero-bg-track { animation: none; } }
@@ -169,25 +86,48 @@ const GlobalStyles = () => (
   .hero-bg-overlay { background: rgba(0,65,104,0.82); }
 }
 
-/* Hero partner logos (6) */
+/* ── Hero partner logos ── */
 .hero-partner-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 2rem; width: 100%; }
 .hero-partner-cell { background: #fff; border: 1px solid #e6ebf3; border-radius: 12px; height: 64px; display: flex; align-items: center; justify-content: center; padding: 8px 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.04); min-width: 0; }
 .hero-partner-cell img { max-width: 100%; max-height: 100%; object-fit: contain; }
 @media (max-width: 640px) { .hero-partner-grid { gap: 6px; } .hero-partner-cell { height: 46px; padding: 5px 6px; border-radius: 8px; } }
 
-/* Stats bar (below hero) */
+/* ── Trusted & Verified section ── */
+.ts-section { background: #fff; padding: 3.5rem 5%; position: relative; overflow: hidden; }
+.ts-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.ts-head { text-align: center; margin-bottom: 2rem; }
+.ts-title { font-family: 'Poppins', sans-serif; color: #000; font-weight: 700; font-size: clamp(1.3rem, 2.4vw, 2rem); margin: 0; }
+.ts-title span { color: #ed8337; font-style: italic; }
+
+/* Eyebrow with side lines (only inside this section) */
+.ts-head .partners-header1 { text-align: center; }
+.ts-head .partners-eyebrow {
+  display: inline-flex; align-items: center; justify-content: center; gap: 14px;
+  font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 900;
+  letter-spacing: 0.14em; text-transform: uppercase; color: #ed8337;
+  background: none; border: 0; padding: 0;
+}
+.ts-head .partners-eyebrow::before,
+.ts-head .partners-eyebrow::after { content: ""; display: block; width: 46px; height: 1px; background: linear-gradient(90deg, rgba(237,131,55,0), #ed8337); }
+.ts-head .partners-eyebrow::after { background: linear-gradient(90deg, #ed8337, rgba(237,131,55,0)); }
+
+/* ── Stats bar ── */
 .sb-section { background: #fff; padding: 0 0 2.2rem; font-family: 'Poppins', sans-serif; }
 .sb-card { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border: 1px solid #e6ebf3; border-bottom: 4px solid #ed8337; border-radius: 22px; padding: 1.4rem 1rem; box-shadow: 0 14px 40px rgba(0,65,104,0.09); }
 .sb-item { display: flex; align-items: center; gap: 14px; padding: 0.4rem 1.2rem; border-left: 1px solid #e6ebf3; min-width: 0; }
 .sb-item:first-child { border-left: 0; }
 .sb-icon { flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; background: rgba(237,131,55,0.12); display: flex; align-items: center; justify-content: center; }
-.sb-value { color: #004168; font-size: 1.9rem; font-weight: 800; line-height: 1.1; }
+.sb-icon img { width: 26px; height: 26px; object-fit: contain; display: block; }
+.sb-value { color: #004168; font-size: 1.9rem; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .sb-label { color: #6b7a94; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.4; margin-top: 2px; }
 @media (max-width: 900px) {
   .sb-card { grid-template-columns: repeat(2, 1fr); row-gap: 1rem; }
   .sb-item:nth-child(3) { border-left: 0; }
 }
 @media (max-width: 480px) {
+  .ts-section { padding: 2.5rem 16px; }
+  .ts-head .partners-eyebrow { font-size: 0.72rem; gap: 8px; }
+  .ts-head .partners-eyebrow::before, .ts-head .partners-eyebrow::after { width: 24px; }
   .sb-section { padding: 0 0 1.5rem; }
   .sb-card { padding: 1rem 0.4rem; }
   .sb-item { flex-direction: column; text-align: center; gap: 8px; padding: 0.5rem; }
@@ -195,17 +135,15 @@ const GlobalStyles = () => (
   .sb-value { font-size: 1.5rem; }
 }
 
-/* Pricing plans (3) */
+/* ── Pricing plans ── */
 .pp-section { background: linear-gradient(180deg, #f6f9fd 0%, #ffffff 100%); padding: 4.5rem 5% 5rem; font-family: 'Poppins', sans-serif; }
 .pp-inner { max-width: 1200px; margin: 0 auto; }
 .pp-head { text-align: center; margin-bottom: 3.2rem; }
-.pp-eyebrow { display: inline-block; color: #ed8337; border: 1px solid rgba(237,131,55,0.4); background: rgba(237,131,55,0.1); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; padding: 0.4rem 1.1rem; border-radius: 50px; margin-bottom: 0.9rem; }
 .pp-title { color: #004168; font-weight: 700; font-size: clamp(1.4rem, 2.6vw, 2.2rem); margin: 0; }
 .pp-title span { color: #ed8337; font-style: italic; }
 .pp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px 28px; align-items: stretch; max-width: 1080px; margin: 0 auto; }
 .pp-card { position: relative; display: flex; flex-direction: column; background: #fff; border: 2px solid transparent; border-radius: 22px; padding: 1.7rem 1.5rem 1.6rem; box-shadow: 0 10px 35px rgba(0,0,0,0.07); transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.3s ease; }
 .pp-card:hover { transform: translateY(-6px); border-color: #ed8337; box-shadow: 0 18px 44px rgba(237,131,55,0.16); }
-.pp-from { margin: 0 6px 0 0 !important; }
 .pp-card-popular { border: 2px solid #ed8337; box-shadow: 0 18px 50px rgba(237,131,55,0.18); transform: translateY(-14px); }
 .pp-card-popular:hover { transform: translateY(-20px); }
 .pp-popular-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, #004168, #ed8337); color: #fff; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 16px; border-radius: 50px; white-space: nowrap; }
@@ -216,7 +154,6 @@ const GlobalStyles = () => (
 .pp-off { background: #e3f6ec; color: #16794a; font-size: 0.66rem; font-weight: 700; padding: 3px 9px; border-radius: 6px; }
 .pp-was { color: #9aa3b2; text-decoration: line-through; font-size: 0.8rem; font-weight: 500; }
 .pp-price-main { color: #004168; font-size: 2.1rem; font-weight: 800; line-height: 1.2; }
-.pp-price-main small { color: #6b7a94; font-size: 0.78rem; font-weight: 500; margin-left: 4px; }
 .pp-group { margin-bottom: 1rem; }
 .pp-group-title { display: flex; align-items: center; gap: 10px; margin-bottom: 0.65rem; }
 .pp-group-title span { color: #ed8337; font-weight: 700; font-size: 0.9rem; }
@@ -227,7 +164,7 @@ const GlobalStyles = () => (
 .pp-btn { margin-top: auto; display: block; width: 100%; border: 0; cursor: pointer; font-family: inherit; box-sizing: border-box; text-align: center; text-decoration: none; background: linear-gradient(90deg, #ed8337, #f59a52); color: #fff !important; font-weight: 600; font-size: 0.9rem; padding: 0.85rem 1rem; border-radius: 12px; box-shadow: 0 8px 20px rgba(237,131,55,0.3); transition: transform 0.25s ease, box-shadow 0.25s ease; }
 .pp-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(237,131,55,0.4); }
 .pp-card-popular .pp-btn { background: linear-gradient(90deg, #004168, #0a5a8c); box-shadow: 0 8px 20px rgba(0,65,104,0.3); }
-.pp-list + .pp-btn, .pp-group:last-of-type { margin-bottom: 1.4rem; }
+.pp-group:last-of-type { margin-bottom: 1.4rem; }
 @media (max-width: 1000px) {
   .pp-grid { grid-template-columns: 1fr; max-width: 440px; gap: 34px; }
   .pp-card-popular, .pp-card-popular:hover { transform: none; }
@@ -235,7 +172,7 @@ const GlobalStyles = () => (
 }
 @media (max-width: 480px) { .pp-section { padding: 3rem 16px 3.5rem; } .pp-price-main { font-size: 1.8rem; } }
 
-/* Plan enquiry popup */
+/* ── Plan enquiry popup ── */
 .pm-overlay { overscroll-behavior: contain; position: fixed; inset: 0; z-index: 99999; background: rgba(6,24,38,0.65); display: flex; align-items: center; justify-content: center; padding: 16px; overflow-y: auto; animation: pmFade 0.25s ease; }
 .pm-box { overscroll-behavior: contain; position: relative; width: 100%; max-width: 520px; max-height: 94vh; overflow-y: auto; background: #fff; border-radius: 20px; padding: 2rem 1.6rem 1.6rem; box-shadow: 0 30px 80px rgba(0,0,0,0.35); animation: pmPop 0.3s ease; font-family: 'Poppins', sans-serif; }
 .pm-close { position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: 50%; border: 0; background: #eef3fa; color: #004168; font-size: 1.2rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s ease, color 0.2s ease; }
@@ -249,19 +186,18 @@ const GlobalStyles = () => (
 @keyframes pmPop { from { opacity: 0; transform: translateY(14px) scale(0.97); } to { opacity: 1; transform: none; } }
 @media (max-width: 480px) { .pm-box { padding: 1.6rem 1.1rem 1.2rem; border-radius: 16px; } }
 
-/* Recent work (6) - dark blue background, screenshot scrolls inside the card on hover */
+/* ── Recent work ── */
 .wk-section { background: #0c4a6e; padding: 4.5rem 5% 5rem; font-family: 'Poppins', sans-serif; }
 .wk-inner { max-width: 1200px; margin: 0 auto; }
 .wk-head { text-align: center; margin-bottom: 3rem; }
-.wk-eyebrow { display: inline-block; color: #ed8337; border: 1px solid rgba(237,131,55,0.4); background: rgba(237,131,55,0.1); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1.1rem; border-radius: 50px; margin-bottom: 0.9rem; }
-.wk-section .partners-eyebrow { color: #ed8337;  }
+.wk-section .partners-eyebrow { color: #ed8337; }
 .wk-title { color: #fff; font-weight: 700; font-size: clamp(1.4rem, 2.6vw, 2.2rem); line-height: 1.3; margin: 0 0 0.6rem; }
 .wk-title span { color: #ed8337; font-style: italic; }
 .wk-sub { color: rgba(255,255,255,0.75); font-size: 0.95rem; margin: 0; }
 .wk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
 .wk-card { display: block; text-decoration: none; background: #fff; border: 0; border-radius: 20px; padding: 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.25); transition: box-shadow 0.3s ease, transform 0.3s ease; }
 .wk-card:hover { transform: translateY(-6px); }
-.wk-frame { border: 0; border-radius: 0; overflow: hidden; background: #f4f7fc; }
+.wk-frame { overflow: hidden; background: #f4f7fc; }
 .wk-bar { display: flex; align-items: center; gap: 6px; height: 28px; padding: 0 12px; background: #eef2f8; border-bottom: 1px solid #e6ebf3; }
 .wk-bar i { width: 8px; height: 8px; border-radius: 50%; background: #cfd6e2; display: block; }
 .wk-bar i:nth-child(1) { background: #ff6b5e; }
@@ -273,17 +209,12 @@ const GlobalStyles = () => (
 .wk-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 18px 18px; }
 .wk-cat { display: block; color: #ed8337; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 3px; }
 .wk-name { color: #004168; font-size: 1.05rem; font-weight: 700; margin: 0; line-height: 1.3; }
-.wk-visit { flex-shrink: 0; color: #004168; font-size: 0.82rem; font-weight: 600; background: #eef3fa; padding: 7px 14px; border-radius: 50px; transition: background 0.3s ease, color 0.3s ease; }
-.wk-visit b { display: inline-block; transition: transform 0.3s ease; }
-.wk-card:hover .wk-visit { background: #ed8337; color: #fff; }
-.wk-card:hover .wk-visit b { transform: translateX(3px); }
 @media (max-width: 1000px) { .wk-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 640px) { .wk-grid { grid-template-columns: 1fr; gap: 22px; } .wk-section { padding: 3rem 16px 3.5rem; } .wk-view { height: 220px; } }
 
-/* Client logos - static grid, all clients visible */
+/* ── Client logos grid ── */
 .cl-section { background: #f6f9fd; padding: 4rem 5% 4.5rem; font-family: 'Poppins', sans-serif; }
 .cl-head { text-align: center; max-width: 760px; margin: 0 auto 2.6rem; }
-.cl-eyebrow { display: inline-block; color: #ed8337; border: 1px solid rgba(237,131,55,0.4); background: rgba(237,131,55,0.1); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1.1rem; border-radius: 50px; margin-bottom: 0.9rem; }
 .cl-title { color: #004168; font-weight: 700; font-size: clamp(1.4rem, 2.6vw, 2.2rem); line-height: 1.3; margin: 0 0 0.6rem; }
 .cl-title span { color: #ed8337; font-style: italic; }
 .cl-sub { color: #666; font-size: 0.95rem; line-height: 1.7; margin: 0; }
@@ -294,141 +225,47 @@ const GlobalStyles = () => (
 @media (max-width: 1000px) { .cl-cell { width: calc((100% - 48px) / 4); } }
 @media (max-width: 640px) { .cl-section { padding: 2.5rem 16px 3rem; } .cl-grid { gap: 10px; } .cl-cell { width: calc((100% - 20px) / 3); height: 70px; padding: 8px 10px; border-radius: 10px; } }
 
-/* Get Started banner */
-/* Get Started banner (left: text, right: phone + 2 buttons) */
+/* ── Get Started banner ── */
 .gs-section { background: #fff; padding: 3.5rem 5%; font-family: 'Poppins', sans-serif; }
 .gs-card { max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 2.5rem; background: #ed833733; border-radius: 26px; padding: 3.5rem 2.6rem; box-shadow: 0 14px 40px rgba(0,65,104,0.08); }
-.gs-phone-icon {
-  position: relative;
-  flex-shrink: 0;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #004168, #0a5a8c);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Expanding pulse rings */
-.gs-phone-icon::before,
-.gs-phone-icon::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 2px solid #ed8337;
-  opacity: 0;
-  animation: gsPulse 2s ease-out infinite;
-  pointer-events: none;
-}
-.gs-phone-icon::after { animation-delay: 1s; }
-
-/* Phone icon ringing */
-.gs-phone-icon svg {
-  animation: gsRing 2s ease-in-out infinite;
-  transform-origin: 50% 50%;
-}
-
-@keyframes gsPulse {
-  0%   { transform: scale(1);   opacity: 0.7; }
-  100% { transform: scale(1.9); opacity: 0; }
-}
-
-@keyframes gsRing {
-  0%, 60%, 100% { transform: rotate(0deg); }
-  10% { transform: rotate(-18deg); }
-  20% { transform: rotate(16deg); }
-  30% { transform: rotate(-14deg); }
-  40% { transform: rotate(12deg); }
-  50% { transform: rotate(-6deg); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .gs-phone-icon::before,
-  .gs-phone-icon::after,
-  .gs-phone-icon svg { animation: none; }
-}
 .gs-left { min-width: 0; }
-.gs-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  color: #ed8337;
-  font-size: 0.85rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-  border: 0;
-  background: none;
-  padding: 0;
-}
-.gs-eyebrow::before,
-.gs-eyebrow::after {
-  content: "";
-  display: block;
-  width: 46px;
-  height: 1px;
-  background: linear-gradient(90deg, rgba(237,131,55,0), #ed8337);
-}
-.gs-eyebrow::after {
-  background: linear-gradient(90deg, #ed8337, rgba(237,131,55,0));
-}
-
-@media (max-width: 480px) {
-  .gs-eyebrow { font-size: 0.72rem; gap: 8px; }
-  .gs-eyebrow::before, .gs-eyebrow::after { width: 24px; }
-}
+.gs-eyebrow { display: inline-flex; align-items: center; gap: 14px; color: #ed8337; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem; }
+.gs-eyebrow::before, .gs-eyebrow::after { content: ""; display: block; width: 46px; height: 1px; background: linear-gradient(90deg, rgba(237,131,55,0), #ed8337); }
+.gs-eyebrow::after { background: linear-gradient(90deg, #ed8337, rgba(237,131,55,0)); }
 .gs-title { color: #004168; font-size: clamp(1.5rem, 2.6vw, 2.2rem); font-weight: 700; line-height: 1.25; margin: 0 0 0.8rem; }
 .gs-title span { color: #ed8337; }
 .gs-desc { color: #5a6577; font-size: 0.9rem; line-height: 1.7; margin: 0; max-width: 480px; }
-
 .gs-right { display: flex; flex-direction: column; align-items: center; gap: 2.2rem; min-width: 0; }
 .gs-phone { display: inline-flex; align-items: center; gap: 28px; text-decoration: none; }
-.gs-phone-icon { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, #004168, #0a5a8c); color: #fff; display: flex; align-items: center; justify-content: center; }
+.gs-phone-icon { position: relative; flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, #004168, #0a5a8c); color: #fff; display: flex; align-items: center; justify-content: center; }
+.gs-phone-icon::before, .gs-phone-icon::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #ed8337; opacity: 0; animation: gsPulse 2s ease-out infinite; pointer-events: none; }
+.gs-phone-icon::after { animation-delay: 1s; }
+.gs-phone-icon svg { animation: gsRing 2s ease-in-out infinite; transform-origin: 50% 50%; }
+@keyframes gsPulse { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.9); opacity: 0; } }
+@keyframes gsRing { 0%, 60%, 100% { transform: rotate(0deg); } 10% { transform: rotate(-18deg); } 20% { transform: rotate(16deg); } 30% { transform: rotate(-14deg); } 40% { transform: rotate(12deg); } 50% { transform: rotate(-6deg); } }
+@media (prefers-reduced-motion: reduce) { .gs-phone-icon::before, .gs-phone-icon::after, .gs-phone-icon svg { animation: none; } }
 .gs-phone-number { color: #004168; font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 800; line-height: 1.1; white-space: nowrap; }
-
 .gs-btns { display: flex; flex-wrap: wrap; gap: 12px; }
 .gs-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: linear-gradient(90deg, #ed8337, #f59a52); color: #fff !important; font-weight: 600; font-size: 0.88rem; padding: 0.85rem 1.4rem; border-radius: 50px; box-shadow: 0 8px 20px rgba(237,131,55,0.3); transition: transform 0.25s ease, box-shadow 0.25s ease; }
 .gs-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(237,131,55,0.4); }
 .gs-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: transparent; color: #004168 !important; border: 1px solid rgba(0,65,104,0.3); font-weight: 600; font-size: 0.88rem; padding: 0.85rem 1.4rem; border-radius: 50px; transition: transform 0.25s ease, background 0.25s ease; }
 .gs-btn-outline:hover { transform: translateY(-2px); background: rgba(255,255,255,0.6); }
-
 @media (max-width: 900px) {
   .gs-card { grid-template-columns: 1fr; gap: 1.8rem; padding: 1.8rem 1.4rem; text-align: center; }
   .gs-desc { max-width: none; }
-  .gs-right { align-items: center; }
   .gs-btns { justify-content: center; }
 }
 @media (max-width: 480px) {
   .gs-section { padding: 2.5rem 16px; }
+  .gs-eyebrow { font-size: 0.72rem; gap: 8px; }
+  .gs-eyebrow::before, .gs-eyebrow::after { width: 24px; }
   .gs-btns { flex-direction: column; width: 100%; }
   .gs-btn, .gs-btn-outline { width: 100%; box-sizing: border-box; }
   .gs-phone-number { font-size: 1.5rem; }
 }
-/* Trust strip (4) - dark band with floating cards */
-.ts-section { background: #fff; padding: 3.5rem 5%; position: relative; overflow: hidden; }
-.ts-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-.ts-head { text-align: center; margin-bottom: 2rem; }
-.ts-eyebrow { display: inline-block; color: #ed8337; border: 1px solid rgba(237,131,55,0.4); background: rgba(237,131,55,0.1); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 1rem; border-radius: 50px; margin-bottom: 0.9rem; }
-.ts-title { font-family: 'Poppins', sans-serif; color: #004168; font-weight: 700; font-size: clamp(1.3rem, 2.4vw, 2rem); margin: 0; }
-.ts-title span { color: #ed8337; font-style: italic; }
-.ts-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.ts-card { position: relative; background: #fff; border: 1px solid #e6ebf3; border-radius: 18px; border-bottom: 4px solid #ed8337; padding: 2.2rem 1.2rem 1.4rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.07); }
-.ts-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(0,0,0,0.13); }
-.ts-tag { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); font-size: 0.62rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #004168; background: #eef3fa; padding: 3px 10px; border-radius: 50px; white-space: nowrap; }
-.ts-logo-box { height: 140px; display: flex; align-items: center; justify-content: center; padding-top:1rem;}
-.ts-logo-box img { max-width: 85%; max-height: 100%; object-fit: contain; }
-@media (max-width: 900px) { .ts-cards { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 480px) { .ts-section { padding: 2.5rem 16px; } .ts-cards { gap: 12px; } .ts-card { padding: 2.2rem 0.8rem 1.1rem; } }
-.svc-card-item { transition: transform 0.35s ease, box-shadow 0.35s ease; box-shadow: 0 10px 35px rgba(0,0,0,0.08); }
-.svc-card-item:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(0,0,0,0.12); }
-.tc-section, #service, .pf-grid-section, .tech-section, .mf-outer, .dm-faq-section, .call-cta-section, .pcs-footer {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 800px;
-}
+
+/* Render below-the-fold sections lazily */
+.dm-faq-section, .pcs-footer { content-visibility: auto; contain-intrinsic-size: auto 800px; }
 `}</style>
 );
 
@@ -449,18 +286,13 @@ function useWindowWidth() {
 
 // ── FAQ Data ──────────────────────────────────────────
 const faqData = [
-    { q: "How will my new website help me beat my local competitors?", a: "A professionally designed website improves your online visibility, builds credibility, and attracts qualified leads — turning more visitors into paying customers and giving your business a real edge over competitors still relying on outdated sites." },
-    { q: "Can you guarantee my website will rank on the first page of Google?", a: " No one can honestly guarantee first-page rankings — and you should be cautious of anyone who does. What we can promise is an SEO-friendly website built on proven optimization practices that significantly improve your chances of ranking higher over time." },
-    { q: "How do you design a website that generates more customer enquiries?", a: "We focus on clear navigation, persuasive content, fast loading speeds, and strong calls-to-action — every element is built to guide a visitor toward contacting or buying from you, not just look good." },
+    { q: "What does a website development company in Tamil Nadu do?", a: "A website development company plans, designs, builds and launches your business website. At PCS, we handle everything from custom design and mobile-friendly layouts to SEO setup, WhatsApp and Google Maps integration, and support after launch. We work with businesses across Tamil Nadu, including Chennai, Coimbatore, Madurai, Trichy, Salem, Tiruppur and Erode." },
+    { q: "How do I choose the right website development company for my business?", a: "Look at their past work, client reviews, clear pricing and what support they give after launch. Check that they build mobile-friendly, SEO-ready sites and explain costs upfront. PCS has a 4.9 Google rating, 10+ years of experience and a portfolio across 10+ industries, so you can judge our work before you decide." },
+    { q: "What website development services does PCS offer?", a: "We offer business websites, premium corporate websites, WooCommerce stores, Shopify stores and custom e-commerce development." },
+    { q: "Do you provide website development in India outside Tamil Nadu? ", a: "Yes. We are based in Coimbatore and focus on Tamil Nadu, but we also build websites for businesses across India. We work with you by call, WhatsApp and video meeting, so you don’t need to be in the same city." },
+    { q: "Will my website help customers find my business on Google? ", a: "Yes, it can. Our website development includes an SEO-ready structure, fast loading, mobile-friendly design and Google Maps integration, so search engines can read your site and customers can find you easily. Higher plans also include Google Analytics and Search Console setup. Rankings depend on competition and Google’s algorithm, so we don’t promise a specific position." },
+    { q: "What is the difference between website design and website development?", a: "Website design is how your site looks: layout, colours, fonts and images. Website development is how it works: coding, speed, forms, security, SEO setup and integrations such as WhatsApp and Google Maps. A good website needs both, and our plans include design and development together, so you don’t need to hire two teams." },
 
-    { q: "Why should I choose a website development company in Coimbatore?", a: "A local team understands your target audience, your competitors, and the regional market — which means better communication, faster turnaround, and a website built around how your actual customers think and search." },
-    { q: "Can I meet your team in person to discuss my project?", a: "Yes — we welcome in-person meetings at our Coimbatore office, and offer virtual consultations too if that's easier for your schedule." },
-    { q: "Will I be able to update my website without technical knowledge?", a: "Yes. We build every website on an easy-to-use content management system, so you can update text, images, products, and blog posts yourself — no coding required." },
-
-    { q: "Is every website you build mobile-friendly?", a: "Every site we build is fully responsive across smartphones, tablets, and desktops — since most of your customers will likely find you on mobile first." },
-    { q: "Can my website be upgraded with new features later?", a: "Yes — our websites are built with scalability in mind, so adding new pages, features, payment systems, or integrations down the line is straightforward, not a rebuild." },
-    { q: "What support do you provide after my website goes live?", a: "We don't disappear after launch. You get ongoing technical support, security updates, performance monitoring, and bug fixes to keep your website running smoothly." },
-    { q: "How do you keep my website secure and fast?", a: "We use SSL certificates, secure coding practices, regular updates, optimized images, and caching to protect your site and keep load times fast — both of which matter for trust and for Google rankings." },
 ];
 
 // ── Site Header ────────────────────────────────────────
@@ -491,65 +323,93 @@ function SiteHeader() {
 }
 
 // ── Partner / certification logos ─────────────────────
-// Crop each logo from your screenshot and save with these file names.
 const PARTNER_LOGOS = {
-    meta:      { name: "Meta Business Partner",      img: "/img/landing-page/client-logo-1.webp" },
-    shopify:   { name: "Shopify Partner",            img: "/img/landing-page/client-logo-2.webp" },
-    microsoft: { name: "Microsoft Partner",          img: "/img/landing-page/client-logo-3.webp" },
-    odoo:      { name: "Odoo Official Partner",      img: "/img/landing-page/client-logo-10.webp" },
-    gPartner:  { name: "Google Partner",             img: "/img/landing-page/client-logo-5.webp" },
-    gRating:   { name: "Google Rating 4.9/5",        img: "/img/landing-page/client-logo-6.webp" },
-    designRush:{ name: "DesignRush Verified Agency", img: "/img/landing-page/client-logo-7.webp" },
-    kovai:     { name: "360 Kovai Verified Agency",  img: "/img/landing-page/client-logo-8.webp" },
+    meta: { name: "Meta Business Partner", img: "/img/landing-page/client-logo-1.webp" },
+    shopify: { name: "Shopify Partner", img: "/img/landing-page/client-logo-2.webp" },
+    microsoft: { name: "Microsoft Partner", img: "/img/landing-page/client-logo-3.webp" },
+    odoo: { name: "Odoo Official Partner", img: "/img/landing-page/client-logo-10.webp" },
+    gPartner: { name: "Google Partner", img: "/img/landing-page/client-logo-5.webp" },
+    gRating: { name: "Google Rating 4.9/5", img: "/img/landing-page/client-logo-6.webp" },
 };
 
 // 6 logos under the hero buttons
-const HERO_PARTNER_LOGOS = [
-    PARTNER_LOGOS.meta, PARTNER_LOGOS.shopify, PARTNER_LOGOS.microsoft,
-    PARTNER_LOGOS.odoo, PARTNER_LOGOS.gPartner, PARTNER_LOGOS.gRating,
-];
+const HERO_PARTNER_LOGOS = Object.values(PARTNER_LOGOS);
 
-function TrustStripSection() {
-    return (
-        <section className="ts-section" aria-label="Verified partners and ratings">
-            <div className="ts-inner">
-                <div className="ts-head">
-                    <div className="partners-header1" style={{ textAlign: 'center' }}>
-                        <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Trusted &amp; Verified</div>
-                    </div>
-                    <h2 className="ts-title">Recognised by the Platforms <span>You Trust</span></h2>
-                </div>
-                <StatsBar />
-            </div>
-        </section>
-    );
-}
-
-// ── Stats bar (below hero) ────────────────────────────
+// ── Stats bar ─────────────────────────────────────────
+// `img` = your icon image path. If the file is missing, the built-in SVG (`icon`) shows instead.
 const STATS = [
-    { value: "4.9", label: "Google Reviews", icon: "star" },
-    { value: "10+", label: "Years of Consulting Experience", icon: "laurel" },
-    { value: "15+", label: "Technologies & Platforms", icon: "layers" },
-    { value: "10+", label: "Industries Served", icon: "building" },
+    { value: "10+", label: "Years of Consulting Experience", icon: "laurel", img: "/img/icon/stat-experience.webp" },
+    { value: "15+", label: "Technologies & Platforms", icon: "layers", img: "/img/icon/stat-technologies.webp" },
+    { value: "10+", label: "Industries Served", icon: "building", img: "/img/icon/stat-industries.webp" },
+    { value: "98%", label: "Client Retention", icon: "heart", img: "/img/icon/stat-retention.webp" },
 ];
 
-function StatIcon({ type }) {
+function StatIcon({ type, src, label }) {
+    const [failed, setFailed] = useState(false);
+    if (src && !failed) {
+        return <img src={src} alt={label} width={26} height={26} loading="lazy" decoding="async" onError={() => setFailed(true)} />;
+    }
     const p = { viewBox: "0 0 24 24", width: 26, height: 26, fill: "none", stroke: "#ed8337", strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true };
-    if (type === "star") return (<svg {...p}><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9L12 3z" /></svg>);
+    if (type === "heart") return (<svg {...p}><path d="M12 21s-7-4.6-9.3-9A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 21.3 12C19 16.4 12 21 12 21z" /></svg>);
     if (type === "layers") return (<svg {...p}><path d="M12 3l9 5-9 5-9-5 9-5z" /><path d="M3 13l9 5 9-5" /><path d="M3 17.5l9 5 9-5" /></svg>);
     if (type === "building") return (<svg {...p}><rect x="5" y="3" width="14" height="18" rx="1" /><path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1M10 21v-3h4v3" /></svg>);
     return (<svg {...p}><path d="M7 20C3.5 17 3 11 6 6" /><path d="M17 20c3.5-3 4-9 1-14" /><path d="M6 9l-2.5-.5M5.5 13l-2.5.3M8 16.5l-2 1.2M18 9l2.5-.5M18.5 13l2.5.3M16 16.5l2 1.2" /><path d="M10 14l2 2 2-2" /></svg>);
 }
 
+// Counter: runs 0 → target while the section is visible, resets to 0 when it leaves view
+function useCountUp(target, start, duration = 1800) {
+    const [val, setVal] = useState(0);
+    useEffect(() => {
+        if (!start) { setVal(0); return; }
+        if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            setVal(target);
+            return;
+        }
+        let raf, t0;
+        const step = (t) => {
+            if (!t0) t0 = t;
+            const p = Math.min((t - t0) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3); // ease-out
+            setVal(Math.round(eased * target));
+            if (p < 1) raf = requestAnimationFrame(step);
+        };
+        raf = requestAnimationFrame(step);
+        return () => cancelAnimationFrame(raf);
+    }, [target, start, duration]);
+    return val;
+}
+
+function StatValue({ value, start }) {
+    const match = String(value).match(/^(\d+(?:\.\d+)?)(.*)$/); // "98%" → 98 + "%"
+    const num = match ? parseFloat(match[1]) : 0;
+    const suffix = match ? match[2] : "";
+    const count = useCountUp(num, start);
+    return <div className="sb-value">{count}{suffix}</div>;
+}
+
 function StatsBar() {
+    const ref = useRef(null);
+    const [started, setStarted] = useState(false);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        if (!("IntersectionObserver" in window)) { setStarted(true); return; }
+        const io = new IntersectionObserver(([entry]) => {
+            setStarted(entry.isIntersecting); // visible = count up, hidden = reset (works on scroll up & down)
+        }, { threshold: 0.35 });
+        io.observe(el);
+        return () => io.disconnect();
+    }, []);
+
     return (
-        <section className="sb-section" aria-label="Key numbers">
+        <section className="sb-section" aria-label="Key numbers" ref={ref}>
             <div className="sb-card">
                 {STATS.map((s) => (
                     <div className="sb-item" key={s.label}>
-                        <div className="sb-icon"><StatIcon type={s.icon} /></div>
+                        <div className="sb-icon"><StatIcon type={s.icon} src={s.img} label={s.label} /></div>
                         <div>
-                            <div className="sb-value">{s.value}</div>
+                            <StatValue value={s.value} start={started} />
                             <div className="sb-label">{s.label}</div>
                         </div>
                     </div>
@@ -559,75 +419,76 @@ function StatsBar() {
     );
 }
 
+function TrustStripSection() {
+    return (
+        <section className="ts-section" aria-label="Verified partners and ratings">
+            <div className="ts-inner">
+                <div className="ts-head">
+                    <div className="partners-header1">
+                        <div className="partners-eyebrow" style={{ marginBottom: '20px' }}>Trusted &amp; Verified</div>
+                    </div>
+                    <h2 className="ts-title">Recognised by the Platforms <span>You Trust</span></h2>
+                </div>
+                <StatsBar />
+            </div>
+        </section>
+    );
+}
+
 // ── Pricing plans ─────────────────────────────────────
 const PRICING_PLANS = [
     {
         tag: "Starter Website",
-        desc: "Perfect for Startups and Small Businesses",
-        off: "25% OFF",
-        was: "₹13,400",
-        price: "₹9,999",
-        popular: false,
+        desc: "Get a clean, professional website for startups and small businesses going online.",
+        off: "25% OFF", was: "₹13,400", price: "₹9,999", popular: false,
         groups: [
-            { title: "Website", items: ["Up to 5 Pages", "Custom Design", "Mobile Responsive",  "WhatsApp Integration", "Google Map Integration"] },
+            { title: "Website", items: ["Up to 5 Pages", "Custom Design", "Mobile Responsive", "WhatsApp Integration", "Google Map Integration"] },
             { title: "Features", items: ["Social Media Integration", "Basic SEO Setup", "Basic Speed Optimization", "Basic Security"] },
         ],
     },
     {
         tag: "Business Website",
-        desc: "Ideal for growing businesses and service providers",
-        off: "25% OFF",
-        was: "₹26,665",
-        price: "₹19,999",
-        popular: true,
+        desc: "Build a stronger online presence and win more enquiries for growing businesses.",
+        off: "25% OFF", was: "₹26,665", price: "₹19,999", popular: true,
         groups: [
-            { title: "Website", items: ["Up to 15 Pages", "Custom Design", "Mobile Responsive",  "WhatsApp Integration", "Google Map Integration"] },
-            { title: "Features", items: ["Social Media Integration",  "SEO Setup", "Standard Speed Optimization", "SSL + Security", "Google Analytics"] },
+            { title: "Website", items: ["Up to 15 Pages", "Custom Design", "Mobile Responsive", "WhatsApp Integration", "Google Map Integration"] },
+            { title: "Features", items: ["Social Media Integration", "SEO Setup", "Standard Speed Optimization", "SSL + Security", "Google Analytics"] },
         ],
     },
     {
         tag: "Premium Corporate Website",
-        desc: "Designed for businesses looking for a professional online presence",
-        off: "25% OFF",
-        was: "₹39,999",
-        price: "₹29,999",
-        popular: false,
+        desc: "Present your company with a polished website built for corporate brands.",
+        off: "25% OFF", was: "₹39,999", price: "₹29,999", popular: false,
         groups: [
             { title: "Website", items: ["Up to 25 Premium Pages", "Premium UI/UX Design", "Mobile Responsive", "WhatsApp Integration", "Google Map Integration"] },
-            { title: "Features", items: ["Social Media Integration", "Advanced SEO Setup", "Advanced Speed Optimization", "Advanced Security",  "Google Analytics", "Search Console Setup"] },
+            { title: "Features", items: ["Social Media Integration", "Advanced SEO Setup", "Advanced Speed Optimization", "Advanced Security", "Google Analytics", "Search Console Setup"] },
         ],
     },
     {
-        tag: "WooCommerce Development",
-        desc: "High-performing WooCommerce stores designed to attract more customers and increase online sales",
-        from: true,
-        price: "₹20,000",
-        popular: false,
+        tag: "Starter E-Commerce Development",
+        desc: "Launch your first online store with a focused range and simple checkout.",
+        off: "17% OFF", was: "₹30,000", price: "₹24,999", popular: false,
         groups: [
-            { title: "Store", items: ["Inventory & Order Tracking", "Payment Gateway Integration", "Store & Product Management", "Mobile Responsive", "WhatsApp Integration"] },
-            { title: "Features", items: ["SEO Ready Structure", "Speed Optimization", "SSL + Security", "Admin Panel"] },
+            { title: "Store", items: ["Up to 50 Products", "Product Catalog Setup", "Payment Gateway Integration", "Mobile Responsive", "WhatsApp Integration"] },
+            { title: "Features", items: ["Inventory & Order Tracking", "Basic SEO Setup", "Speed Optimization", "SSL + Security", "Admin Panel"] },
         ],
     },
     {
-        tag: "Custom E-Commerce Development",
-        desc: "Complete e-commerce features built to improve shopping experiences and grow your online business",
-        from: true,
-        price: "₹25,000",
-        popular: false,
+        tag: "Growth E-Commerce Development",
+        desc: "Scale your store with more products, checkout and stronger sales features.",
+        off: "30% OFF", was: "₹50,000", price: "₹34,999", popular: false,
         groups: [
-            { title: "Store", items: ["Product Catalog Setup", "Payment and Shipping Integration", "Mobile Responsive", "Customer Accounts", "WhatsApp Integration"] },
-            { title: "Features", items: ["Custom Features & Integrations", "SEO Ready Structure", "Speed Optimization", "SSL + Security","Admin Panel"] },
+            { title: "Store", items: ["Up to 100 Products", "Product Variants Management", "Payment & Shipping Integration", "Mobile Responsive", "WhatsApp Integration"] },
+            { title: "Features", items: ["Inventory & Order Tracking", "SEO Setup", "Speed Optimization", "SSL + Security", "Admin Panel"] },
         ],
     },
     {
-        tag: "Shopify Development",
-        desc: "Scalable Shopify stores built to increase sales and support long-term business growth",
-        from: true,
-        price: "₹22,000",
-        popular: false,
+        tag: "Premium E-Commerce Development",
+        desc: "Run a complete online store with advanced features for large, growing catalogs.",
+        off: "33% OFF", was: "₹75,000", price: "₹49,999", popular: false,
         groups: [
-            { title: "Store", items: ["Custom Product & Category Setup", "Customer Login & Account Management", "Shopping Cart & Easy Checkout", "Mobile Responsive", "WhatsApp Integration"] },
-            { title: "Features", items: ["SEO Ready Structure", "Speed Optimization", "Payment Gateway Setup", "Shipping Setup"] },
+            { title: "Store", items: ["Up to 200 Products", "Custom Product & Category Setup", "Payment & Shipping Integration", "Mobile Responsive", "WhatsApp Integration"] },
+            { title: "Features", items: ["Inventory & Order Tracking", "Advanced SEO Setup", "Advanced Speed Optimization", "Advanced Security", "Google Analytics", "Admin Panel"] },
         ],
     },
 ];
@@ -638,7 +499,6 @@ function PlanModal({ plan, onClose }) {
         const y = window.scrollY;
         const onKey = (e) => { if (e.key === "Escape") onClose(); };
         document.addEventListener("keydown", onKey);
-        // Safety: if anything moved the page while the popup was open, put it back
         return () => {
             document.removeEventListener("keydown", onKey);
             if (Math.abs(window.scrollY - y) > 2) window.scrollTo({ top: y, behavior: "instant" });
@@ -665,7 +525,7 @@ function PricingSection() {
             <div className="pp-inner">
                 <div className="pp-head">
                     <div className="partners-header1" style={{ textAlign: 'center' }}>
-                        <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Affordable Plans for Every Need</div>
+                        <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Customized Website Development Services for Every Need</div>
                     </div>
                     <h2 className="pp-title">Website Plans That Fit <span>Your Budget</span></h2>
                 </div>
@@ -684,11 +544,7 @@ function PricingSection() {
                                         <span className="pp-was">{plan.was}</span>
                                     </div>
                                 )}
-                                <div className="pp-price-main">
-                                    {plan.from && <small className="pp-from">From</small>}
-                                    {plan.price}
-                                    {!plan.from && <small></small>}
-                                </div>
+                                <div className="pp-price-main">{plan.price}</div>
                             </div>
 
                             {plan.groups.map((g) => (
@@ -708,7 +564,7 @@ function PricingSection() {
                                 </div>
                             ))}
 
-                            <button type="button" className="pp-btn" onClick={(e) => { e.preventDefault(); setSelectedPlan(plan); }}>Get Started Now</button>
+                            <button type="button" className="pp-btn" onClick={() => setSelectedPlan(plan)}>Get Started Now</button>
                         </div>
                     ))}
                 </div>
@@ -718,10 +574,9 @@ function PricingSection() {
     );
 }
 
-// ── Recent work (6 cards, screenshot scrolls inside card on hover) ──
-// Use tall, full-page screenshots for the scroll effect to be visible.
+// ── Recent work (screenshot scrolls inside card on hover) ──
 const WORK_ITEMS = [
-    { img: "/img/work-1.webp", category: "Corporate Training", title: "TGCC", domain: "tgcc.com.my" },
+    { img: "/img/work-1.webp", category: "Corporate Training", title: "Tech Global", domain: "tgcc.com.my" },
     { img: "/img/work-4.webp", category: "Manufacturing", title: "Vatcomm Technologies", domain: "vatcommtechnologies.com" },
     { img: "/img/work-3.webp", category: "Exports", title: "Greenstar Exports", domain: "greenstarexports.com" },
     { img: "/img/work-2.webp", category: "Construction", title: "Vriksha Builders", domain: "vrikshabuilders.com" },
@@ -738,7 +593,7 @@ function WorkCard({ w }) {
         const view = viewRef.current, img = imgRef.current;
         if (!view || !img) return;
         const dist = img.offsetHeight - view.offsetHeight;
-        if (dist <= 0) return; // image is not taller than the card window
+        if (dist <= 0) return;
         const secs = Math.min(9, Math.max(3, dist / 200));
         img.style.transition = `transform ${secs}s linear`;
         img.style.transform = `translateY(-${dist}px)`;
@@ -751,11 +606,8 @@ function WorkCard({ w }) {
     };
 
     return (
-        <a
+        <div
             className="wk-card"
-            href={w.link}
-            target="_blank"
-            rel="noopener noreferrer"
             onMouseEnter={play}
             onMouseLeave={reset}
             onFocus={play}
@@ -773,9 +625,8 @@ function WorkCard({ w }) {
                     <span className="wk-cat">{w.category}</span>
                     <h3 className="wk-name">{w.title}</h3>
                 </div>
-                <span className="wk-visit">Visit <b>→</b></span>
             </div>
-        </a>
+        </div>
     );
 }
 
@@ -788,7 +639,7 @@ function RecentWorkSection() {
                         <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Recent Work</div>
                     </div>
                     <h2 className="wk-title">Websites We've Built That <span>Are Already Driving Results</span></h2>
-                    <p className="wk-sub">Hover to explore, click to visit each live project.</p>
+                    <p className="wk-sub">See how we’ve helped businesses build a stronger online presence.</p>
                 </div>
 
                 <div className="wk-grid">
@@ -801,23 +652,11 @@ function RecentWorkSection() {
     );
 }
 
-// ── Hero background slider (6 images) ─────────────────
-const HERO_BG_SLIDES = [
-    "/img/landing-page/landing-site-1.webp",
-    "/img/landing-page/landing-site-2.webp",
-    "/img/landing-page/landing-site-3.webp",
-    "/img/landing-page/landing-site-4.webp",
-    "/img/landing-page/landing-site-5.webp",
-    "/img/landing-page/landing-site-6.webp",
-    "/img/landing-page/landing-site-7.webp",
-    "/img/landing-page/landing-site-8.webp",
-    "/img/landing-page/landing-site-9.webp",
-    "/img/landing-page/landing-site-10.webp",
-    "/img/landing-page/landing-site-11.webp",
-];
+// ── Hero background slider ────────────────────────────
+const HERO_BG_SLIDES = Array.from({ length: 11 }, (_, i) => `/img/landing-page/landing-site-${i + 1}.webp`);
 
-// 3 columns, each uses all 6 images in a different order (so columns never look identical)
-const HERO_BG_COLUMNS = [0, 2, 4,1].map((shift) =>
+// 4 columns, each uses all images in a different order (so columns never look identical)
+const HERO_BG_COLUMNS = [0, 2, 4, 1].map((shift) =>
     HERO_BG_SLIDES.map((_, i) => HERO_BG_SLIDES[(i + shift) % HERO_BG_SLIDES.length])
 );
 
@@ -846,13 +685,14 @@ function HeroSection() {
     return (
         <section className="hero" id="about">
             <div className="hero-left">
-                <div className="h-badge"><div className="badge-dot" />Web Development</div>
+                <div className="h-badge"><div className="badge-dot" />Websites Built to Bring You Leads
+                </div>
                 <h1 className="pf-heading" style={{ margin: "2.5rem 0 0" }}>
-                    Trusted <span><i>Website Development Company </i></span>in Coimbatore
+                    <span><i>Website Development Company in Tamil Nadu  </i></span>for Fast, Modern Websites
                 </h1>
 
                 <p className="hero-sub1">
-                    We design and build fast, mobile-ready websites that help you get found, get leads, and grow — without delays. From business websites to online stores, every site is tailored to your industry and built to bring real results, not just look good.
+                    We design and build fast, mobile-friendly websites that help your business get found, get leads and grow. From business websites to online stores, every site is built for your industry and designed to bring real enquiries, not just look good.
                 </p>
 
                 <div className="hero-cta-row">
@@ -915,10 +755,7 @@ function ServiceDropdown({ value, onChange }) {
 
     return (
         <div className="svc-dd-wrap" ref={wrapRef}>
-            <div
-                className={`svc-dd-control ${open ? "open" : ""}`}
-                onClick={() => setOpen((o) => !o)}
-            >
+            <div className={`svc-dd-control ${open ? "open" : ""}`} onClick={() => setOpen((o) => !o)}>
                 <span className={value ? "svc-dd-value" : "svc-dd-placeholder"}>
                     {value || "Select a Service"}
                 </span>
@@ -943,7 +780,7 @@ function ServiceDropdown({ value, onChange }) {
                 </ul>
             )}
 
-            <input type="hidden" name="service" value={value} required />
+            <input type="hidden" name="service" value={value} />
         </div>
     );
 }
@@ -952,7 +789,8 @@ function HeroContactForm({ lockedService = "", onSuccess }) {
     const [form, setForm] = useState({ name: "", company: "", phone: "", email: "", service: lockedService, msg: "" });
 
     const handleChange = (e) => {
-        setForm({ ...form, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setForm((f) => ({ ...f, [name]: value }));
     };
 
     const sendEmail = async (e) => {
@@ -990,51 +828,22 @@ function HeroContactForm({ lockedService = "", onSuccess }) {
         <form onSubmit={sendEmail}>
             <div className="hero-form-row hero-form-row-2col">
                 <div className="hero-form-field">
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        value={form.name}
-                        onChange={handleChange}
-                        required
-                    />
+                    <input type="text" name="name" placeholder="Your Name" value={form.name} onChange={handleChange} required />
                 </div>
                 <div className="hero-form-field">
                     <div className="hero-phone-wrap">
                         <span className="hero-phone-prefix">IN +91</span>
-                        <input
-                            type="tel"
-                            name="phone"
-                            placeholder="Mobile Number"
-                            value={form.phone}
-                            onChange={handleChange}
-                            maxLength="10"
-                            pattern="[0-9]{10}"
-                            required
-                        />
+                        <input type="tel" name="phone" placeholder="Mobile Number" value={form.phone} onChange={handleChange} maxLength="10" pattern="[0-9]{10}" required />
                     </div>
                 </div>
             </div>
 
             <div className="hero-form-row hero-form-row-2col">
                 <div className="hero-form-field">
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Email Address"
-                        value={form.email}
-                        onChange={handleChange}
-                        required
-                    />
+                    <input type="email" name="email" placeholder="Email Address" value={form.email} onChange={handleChange} required />
                 </div>
                 <div className="hero-form-field">
-                    <input
-                        type="text"
-                        name="company"
-                        placeholder="Company Name"
-                        value={form.company}
-                        onChange={handleChange}
-                    />
+                    <input type="text" name="company" placeholder="Company Name" value={form.company} onChange={handleChange} />
                 </div>
             </div>
 
@@ -1050,22 +859,14 @@ function HeroContactForm({ lockedService = "", onSuccess }) {
                             <input type="hidden" name="service" value={lockedService} />
                         </div>
                     ) : (
-                        <ServiceDropdown
-                            value={form.service}
-                            onChange={handleChange}
-                        />
+                        <ServiceDropdown value={form.service} onChange={handleChange} />
                     )}
                 </div>
             </div>
 
             <div className="hero-form-row">
                 <div className="hero-form-field">
-                    <textarea
-                        name="msg"
-                        placeholder="Your Message"
-                        value={form.msg}
-                        onChange={handleChange}
-                    />
+                    <textarea name="msg" placeholder="Your Message" value={form.msg} onChange={handleChange} />
                 </div>
             </div>
 
@@ -1079,9 +880,8 @@ function HeroContactForm({ lockedService = "", onSuccess }) {
     );
 }
 
-// Alt text matches the brand name shown in each logo image.
-// Slides 1–8 are updated from the logo strip screenshot.
-const CLIENT_MARQUEE_LOGOS = [
+// ── Client logos (static grid, every client visible) ──
+const CLIENT_LOGOS = [
     { name: "Talent Tribe", img: "/img/landing-page/client-slide-1.webp" },
     { name: "Star Health", img: "/img/landing-page/client-slide-2.webp" },
     { name: "Sterlo Build", img: "/img/landing-page/client-slide-3.webp" },
@@ -1103,13 +903,11 @@ const CLIENT_MARQUEE_LOGOS = [
     { name: "Naturals", img: "/img/landing-page/client-slide-19.webp" },
     { name: "URCTS", img: "/img/landing-page/client-slide-20.webp" },
     { name: "Greenstar", img: "/img/landing-page/greenstar-logo.webp" },
-    { name: "Orvix", img: "/img/landing-page/orvix-logo.webp" },
-        { name: "Attox", img: "/img/landing-page/client-slide-23.webp" },
-        { name: "Adhoc", img: "/img/landing-page/client-slide-24.webp" },
-
+    { name: "Orvix", img: "/img/landing-page/client-slide-25.webp" },
+    { name: "Attox", img: "/img/landing-page/client-slide-23.webp" },
+    { name: "Adhoc", img: "/img/landing-page/client-slide-24.webp" },
 ];
 
-// Static grid: every client is visible at once, nothing slides
 function ClientLogosGrid() {
     return (
         <section className="cl-section" aria-label="Our clients">
@@ -1118,10 +916,10 @@ function ClientLogosGrid() {
                     <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Clients</div>
                 </div>
                 <h2 className="cl-title">Businesses That <span>Trust Us</span></h2>
-                <p className="cl-sub">From growing startups to established brands, these are the companies we've helped build a strong and result-driven online presence.</p>
+                <p className="cl-sub">From growing startups to established brands, these are the companies we’ve helped build a strong, result-driven online presence. </p>
             </div>
             <div className="cl-grid">
-                {CLIENT_MARQUEE_LOGOS.map((client) => (
+                {CLIENT_LOGOS.map((client) => (
                     <div className="cl-cell" key={client.name}>
                         <img src={client.img} alt={client.name} loading="lazy" decoding="async" />
                     </div>
@@ -1131,24 +929,22 @@ function ClientLogosGrid() {
     );
 }
 
-// ── Get Started banner ────────────────────────────────
-// ── Get Started banner (CTA content: left text, right phone + buttons) ──
+// ── Get Started banner (left: text, right: phone + buttons) ──
 function GetStartedBanner() {
     return (
         <section className="gs-section">
             <div className="gs-card">
-                {/* LEFT: subtitle, title, description */}
                 <div className="gs-left">
                     <div className="gs-eyebrow">Not Sure Which Website You Need?</div>
                     <h2 className="gs-title">
                         Tell Us About <span>Your Business</span>
                     </h2>
                     <p className="gs-desc">
-                        We'll recommend the right website type, features and approximate investment based on your actual requirements.
+                        We will recommend the right website type, features and approximate investment based on your actual requirements.
+
                     </p>
                 </div>
 
-                {/* RIGHT: phone number + 2 buttons below */}
                 <div className="gs-right">
                     <a href="tel:+919677444048" className="gs-phone">
                         <span className="gs-phone-icon">
@@ -1169,12 +965,7 @@ function GetStartedBanner() {
                             </svg>
                             Get Your Website Started Today
                         </a>
-                        <a
-                            href="https://wa.me/919677444048"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="gs-btn-outline"
-                        >
+                        <a href="https://wa.me/919677444048" target="_blank" rel="noopener noreferrer" className="gs-btn-outline">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="#25D366" aria-hidden="true">
                                 <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.79 14.13c-.24.68-1.19 1.25-1.94 1.41-.52.11-1.2.2-3.48-.75-2.92-1.21-4.8-4.17-4.95-4.36-.14-.19-1.19-1.58-1.19-3.02s.75-2.15 1.02-2.44c.24-.27.52-.34.7-.34h.5c.16 0 .38-.03.59.45.24.56.79 1.94.86 2.08.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.29.29-.12.57.16.28.73 1.2 1.57 1.95 1.08.96 1.99 1.26 2.27 1.4.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.06.12.06.68-.18 1.36z" />
                             </svg>
@@ -1192,34 +983,31 @@ function FAQSection() {
     const [active, setActive] = useState(null);
     const toggle = (index) => setActive(active === index ? null : index);
 
+    const renderItem = (item, index) => (
+        <div className="dm-faq-item" key={index}>
+            <div className="dm-faq-question" onClick={() => toggle(index)}>
+                <span>{item.q}</span>
+                <span className="icon">{active === index ? "−" : "+"}</span>
+            </div>
+            {active === index && <div className="dm-faq-answer">{item.a}</div>}
+        </div>
+    );
+
     return (
-        <section className="dm-faq-section" style={{"paddingTop": "2rem"}}>
+        <section className="dm-faq-section" style={{ paddingTop: "2rem" }}>
             <div className="container" style={{ width: '100%' }}>
                 <div className="dm-faq-head">
                     <h2>Frequently Asked <span>Questions</span></h2>
                 </div>
                 <div className="dm-faq-wrapper">
                     <div className="dm-faq-col">
-                        {faqData.slice(0, 5).map((item, i) => (
-                            <div className="dm-faq-item" key={i}>
-                                <div className="dm-faq-question" onClick={() => toggle(i)}>
-                                    <span>{item.q}</span>
-                                    <span className="icon">{active === i ? "−" : "+"}</span>
-                                </div>
-                                {active === i && <div className="dm-faq-answer">{item.a}</div>}
-                            </div>
-                        ))}
+                        {faqData.slice(0, 3).map((item, i) => renderItem(item, i))}
                     </div>
                     <div className="dm-faq-col">
-                        {faqData.slice(5, 10).map((item, i) => (
-                            <div className="dm-faq-item" key={i + 5}>
-                                <div className="dm-faq-question" onClick={() => toggle(i + 5)}>
-                                    <span>{item.q}</span>
-                                    <span className="icon">{active === i + 5 ? "−" : "+"}</span>
-                                </div>
-                                {active === i + 5 && <div className="dm-faq-answer">{item.a}</div>}
-                            </div>
-                        ))}
+                        {faqData.slice(3, 6).map((item, i) => renderItem(item, i + 3))}
+                    </div>
+                    <div className="dm-faq-col">
+                        {faqData.slice(6, 9).map((item, i) => renderItem(item, i + 6))}
                     </div>
                 </div>
             </div>
@@ -1229,11 +1017,11 @@ function FAQSection() {
 
 // ── Testimonials ──────────────────────────────────────
 const testimonials = [
-    { index: 0, text: "PCS delivered a modern responsive website with SEO optimization, analytics integration, heatmap tracking, and performance monitoring. We appreciate their team's dedication, technical expertise, and timely support, which significantly improved our online visibility, website performance, and customer engagement.", name: "Mr.Ashwin", role: "Founder", badge: ["Website Development", "SEO"], color: "#004168", logo: "/img/landing-page/testi-logo-5.webp" },
-    { index: 1, text: "Our basic single-page website was upgraded into a professionally structured multi-page platform with enhanced SEO, GMB optimization, analytics setup, and customer activity tracking. We thank the PCS team for their commitment, quick support, and valuable contribution in strengthening our online presence.", name: "Mr.Sabarinath", role: "Founder", badge: ["Website Development", "SEO", "Local SEO"], color: "#ed8337", logo: "/img/landing-page/testi-logo-4.webp" },
-    { index: 2, text: "A fresh UI design with strong website development, improved online reach, lead capture setup, and user activity insights was successfully developed by the PCS team. Every change request was handled patiently while turning our ideas into exactly what we expected. The late-night support before launch was truly appreciated.", name: "Mr.Clement Selvam", role: "Founder", badge: ["Website Development", "SEO"], color: "#16a34a", logo: "/img/landing-page/testi-logo-3.webp" },
-    { index: 3, text: "As a growing forest-based natural products brand, we partnered with PCS to expand our store presence and online sales. PCS team developed a complete e-commerce platform with Razorpay setup, order management, inventory tracking, centralized dashboard, WhatsApp integration for smooth business operations.", name: "Mr.Karupasamy", role: "Director", badge: ["E-Commerce", "SEO", "Local SEO"], color: "#0a3652", logo: "/img/landing-page/testi-logo-1.webp" },
-    { index: 4, text: "Competing in the global market we required a website that matched international standards. With strategic content, SEO optimization, analytics integration, and performance enhancements, our digital presence was significantly strengthened. We appreciate the PCS team for their expertise, flexibility, consistent support throughout the process.", name: "Mr.Gunasekaran", role: "Founder", badge: ["SEO", "Content Marketing", "Paid Ads"], color: "#f47920", logo: "/img/landing-page/testi-logo-2.webp" },
+    { index: 0, text: "PCS delivered a modern responsive website with SEO optimization, analytics integration, heatmap tracking, and performance monitoring. We appreciate their team's dedication, technical expertise, and timely support, which significantly improved our online visibility, website performance, and customer engagement.", name: "Mr.Ashwin", role: "Founder", logo: "/img/landing-page/testi-logo-5.webp" },
+    { index: 1, text: "Our basic single-page website was upgraded into a professionally structured multi-page platform with enhanced SEO, GMB optimization, analytics setup, and customer activity tracking. We thank the PCS team for their commitment, quick support, and valuable contribution in strengthening our online presence.", name: "Mr.Sabarinath", role: "Founder", logo: "/img/landing-page/testi-logo-4.webp" },
+    { index: 2, text: "A fresh UI design with strong website development, improved online reach, lead capture setup, and user activity insights was successfully developed by the PCS team. Every change request was handled patiently while turning our ideas into exactly what we expected. The late-night support before launch was truly appreciated.", name: "Mr.Clement Selvam", role: "Founder", logo: "/img/landing-page/testi-logo-3.webp" },
+    { index: 3, text: "As a growing forest-based natural products brand, we partnered with PCS to expand our store presence and online sales. PCS team developed a complete e-commerce platform with Razorpay setup, order management, inventory tracking, centralized dashboard, WhatsApp integration for smooth business operations.", name: "Mr.Karupasamy", role: "Director", logo: "/img/landing-page/testi-logo-1.webp" },
+    { index: 4, text: "Competing in the global market we required a website that matched international standards. With strategic content, SEO optimization, analytics integration, and performance enhancements, our digital presence was significantly strengthened. We appreciate the PCS team for their expertise, flexibility, consistent support throughout the process.", name: "Mr.Gunasekaran", role: "Founder", logo: "/img/landing-page/testi-logo-2.webp" },
 ];
 
 function getTestimonialPos(cardIndex, activeIndex, total, isMobile) {
@@ -1246,7 +1034,7 @@ function getTestimonialPos(cardIndex, activeIndex, total, isMobile) {
     return "farRight";
 }
 
-function getTestimonialPosStyles(isMobile, isTablet) {
+function getTestimonialPosStyles(isTablet) {
     const leftX = isTablet ? -220 : -300;
     const rightX = isTablet ? 220 : 300;
     const farLeftX = isTablet ? -380 : -490;
@@ -1260,11 +1048,9 @@ function getTestimonialPosStyles(isMobile, isTablet) {
     };
 }
 
-function TestimonialCard({ data, pos, onClick, isMobile, isTablet, isActive }) {
-    const posStyles = getTestimonialPosStyles(isMobile, isTablet);
-    const cardWidth = isMobile
-        ? Math.min((typeof window !== "undefined" ? window.innerWidth : 360) - 40, 320)
-        : isTablet ? 300 : 340;
+function TestimonialCard({ data, pos, onClick, isMobile, isTablet, isActive, viewportWidth }) {
+    const posStyles = getTestimonialPosStyles(isTablet);
+    const cardWidth = isMobile ? Math.min(viewportWidth - 40, 320) : isTablet ? 300 : 340;
     return (
         <div
             onClick={onClick}
@@ -1302,12 +1088,7 @@ function TestimonialCard({ data, pos, onClick, isMobile, isTablet, isActive }) {
                         alt={`${data.name} company logo`}
                         loading="lazy"
                         decoding="async"
-                        style={{
-                            height: isMobile ? 24 : 30,
-                            maxWidth: isMobile ? 60 : 80,
-                            objectFit: "contain",
-                            flexShrink: 0,
-                        }}
+                        style={{ height: isMobile ? 24 : 30, maxWidth: isMobile ? 60 : 80, objectFit: "contain", flexShrink: 0 }}
                     />
                 )}
             </div>
@@ -1368,7 +1149,7 @@ function TestimonialSlider() {
     return (
         <section style={{ width: "100%", margin: "0 auto", padding: isMobile ? "40px 16px" : "60px 20px", fontFamily: "'Poppins', sans-serif", overflow: "hidden", background: '#fff' }} id="testimonials">
             <div className="partners-header1" style={{ marginBottom: isMobile ? 12 : 16, textAlign: "center" }}>
-                <div className="partners-eyebrow" style={{ marginBottom: "12px", textAlign: "start" }}>Client Testimonials</div>
+                <div className="partners-eyebrow" style={{ marginBottom: "12px", textAlign: "center" }}>Client Testimonials</div>
             </div>
             <h2 style={{ fontSize: isMobile ? 22 : isTablet ? 28 : "clamp(28px,3vw,40px)", fontWeight: 700, color: "#0d1f3c", lineHeight: 1.25, marginBottom: isMobile ? 28 : 48, textAlign: "center" }}>
                 What Our Clients{" "}
@@ -1401,6 +1182,7 @@ function TestimonialSlider() {
                             onClick={() => { if (i !== current) goTo(i); }}
                             isMobile={isMobile}
                             isTablet={isTablet}
+                            viewportWidth={width}
                         />
                     );
                 })}
@@ -1433,178 +1215,6 @@ function TestimonialSlider() {
                     ← swipe to explore →
                 </p>
             )}
-        </section>
-    );
-}
-
-// ── CTA particle canvas (runs only while visible) ─────
-function useCtaCanvas(canvasRef) {
-    useEffect(() => {
-        const canvas = canvasRef.current;
-        if (!canvas) return;
-        if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-        const ctx = canvas.getContext("2d");
-        const ORANGE = "#ed8337";
-        let W, H, particles = [], dots = [], raf, running = false;
-
-        function resize() {
-            W = canvas.width = canvas.parentElement.offsetWidth;
-            H = canvas.height = canvas.parentElement.offsetHeight;
-        }
-
-        function Particle() { this.reset(); }
-        Particle.prototype.reset = function () {
-            this.x = Math.random() * W;
-            this.y = Math.random() * H;
-            this.r = Math.random() * 2.2 + 0.6;
-            this.type = Math.random() < 0.55 ? "dot" : Math.random() < 0.5 ? "ring" : "plus";
-            this.speed = Math.random() * 0.35 + 0.08;
-            this.dir = Math.random() * Math.PI * 2;
-            this.alpha = Math.random() * 0.45 + 0.1;
-            this.pulse = Math.random() * Math.PI * 2;
-            this.pulseSpeed = Math.random() * 0.018 + 0.008;
-            this.size = Math.random() * 4 + 2;
-        };
-        Particle.prototype.update = function () {
-            this.x += Math.cos(this.dir) * this.speed;
-            this.y += Math.sin(this.dir) * this.speed;
-            this.pulse += this.pulseSpeed;
-            this.dir += (Math.random() - 0.5) * 0.015;
-            if (this.x < -20) this.x = W + 20;
-            if (this.x > W + 20) this.x = -20;
-            if (this.y < -20) this.y = H + 20;
-            if (this.y > H + 20) this.y = -20;
-        };
-        Particle.prototype.draw = function () {
-            const a = this.alpha * (0.7 + 0.3 * Math.sin(this.pulse));
-            ctx.save();
-            ctx.globalAlpha = a;
-            ctx.strokeStyle = ctx.fillStyle = ORANGE;
-            ctx.lineWidth = 1;
-            if (this.type === "dot") {
-                ctx.beginPath();
-                ctx.arc(this.x, this.y, this.r + Math.sin(this.pulse) * 0.4, 0, Math.PI * 2);
-                ctx.fill();
-            } else if (this.type === "ring") {
-                const rr = this.size * (0.9 + 0.15 * Math.sin(this.pulse));
-                ctx.beginPath(); ctx.arc(this.x, this.y, rr, 0, Math.PI * 2); ctx.stroke();
-            } else {
-                const s = this.size * (0.9 + 0.1 * Math.sin(this.pulse));
-                ctx.beginPath();
-                ctx.moveTo(this.x - s, this.y); ctx.lineTo(this.x + s, this.y);
-                ctx.moveTo(this.x, this.y - s); ctx.lineTo(this.x, this.y + s);
-                ctx.stroke();
-            }
-            ctx.restore();
-        };
-
-        function drawLines() {
-            for (let i = 0; i < dots.length; i++) {
-                for (let j = i + 1; j < dots.length; j++) {
-                    const dx = dots[i].x - dots[j].x, dy = dots[i].y - dots[j].y;
-                    const dist = Math.sqrt(dx * dx + dy * dy);
-                    if (dist < 110) {
-                        ctx.save();
-                        ctx.globalAlpha = (1 - dist / 110) * 0.12;
-                        ctx.strokeStyle = ORANGE; ctx.lineWidth = 0.7;
-                        ctx.beginPath(); ctx.moveTo(dots[i].x, dots[i].y); ctx.lineTo(dots[j].x, dots[j].y); ctx.stroke();
-                        ctx.restore();
-                    }
-                }
-            }
-        }
-
-        function init() {
-            resize();
-            particles = [];
-            const count = Math.floor((W * H) / 9000);
-            for (let i = 0; i < Math.max(count, 28); i++) particles.push(new Particle());
-            dots = particles.filter(p => p.type === "dot"); // computed once, not every frame
-        }
-
-        function loop() {
-            if (!running) return;
-            ctx.clearRect(0, 0, W, H);
-            drawLines();
-            particles.forEach(p => { p.update(); p.draw(); });
-            raf = requestAnimationFrame(loop);
-        }
-
-        function start() { if (!running) { running = true; loop(); } }
-        function stop() { running = false; cancelAnimationFrame(raf); }
-
-        window.addEventListener("resize", resize, { passive: true });
-        init();
-
-        const io = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) start(); else stop();
-        });
-        io.observe(canvas);
-
-        return () => { stop(); io.disconnect(); window.removeEventListener("resize", resize); };
-    }, []);
-}
-
-function CallCTASection() {
-    const canvasRef = useRef(null);
-    useCtaCanvas(canvasRef);
-
-    return (
-        <section className="call-cta-section">
-            <canvas ref={canvasRef} className="call-cta-particles" />
-
-            <div className="call-cta-inner">
-                <div className="partners-header1" style={{ textAlign: 'center' }}>
-                    <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Not Sure Which Website You Need? </div>
-                </div>
-
-                <h2 className="call-cta-heading">
-                    Tell Us About  <span>Your Business
-                    </span>
-                </h2>
-
-                <p className="call-cta-sub">
-
-                    We'll recommend the right website type, features and approximate investment based on your actual requirements.
-                </p>
-
-                <a href="tel:+919677444048" className="call-cta-phone">
-                    <span className="call-cta-phone-icon">
-                        <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                        </svg>
-                    </span>
-                    <span className="call-cta-phone-number">
-                        <span className="tone-1">+91 </span>
-                        <span className="tone-2">96774</span>{" "}
-                        <span className="tone-3">44048</span>
-                    </span>
-                </a>
-
-                <div className="call-cta-btns">
-                    <a href="#get-in-touch-form" className="call-cta-btn-fill">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z" />
-                            <path d="M15 2v5h5" />
-                            <path d="M10 9H8" />
-                            <path d="M16 13H8" />
-                            <path d="M16 17H8" />
-                        </svg>
-                        Get Your Website Started Today
-                    </a>
-                    <a
-                        href="https://wa.me/919677444048"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="call-cta-btn-outline"
-                    >
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.79 14.13c-.24.68-1.19 1.25-1.94 1.41-.52.11-1.2.2-3.48-.75-2.92-1.21-4.8-4.17-4.95-4.36-.14-.19-1.19-1.58-1.19-3.02s.75-2.15 1.02-2.44c.24-.27.52-.34.7-.34h.5c.16 0 .38-.03.59.45.24.56.79 1.94.86 2.08.07.14.11.31.02.5-.09.19-.14.31-.28.47-.14.16-.29.36-.42.48-.14.14-.29.29-.12.57.16.28.73 1.2 1.57 1.95 1.08.96 1.99 1.26 2.27 1.4.28.14.44.12.6-.07.16-.19.68-.79.87-1.06.19-.28.37-.23.62-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.06.12.06.68-.18 1.36z" />
-                        </svg>
-                        WhatsApp Us
-                    </a>
-                </div>
-            </div>
         </section>
     );
 }
@@ -1678,12 +1288,9 @@ function FooterSection() {
 }
 
 // ── Page Export ───────────────────────────────────────
-export default function DigitalMarketingNewPage() {
+export default function WebsiteDevelopmentLandingPage() {
     return (
-        <Layout
-            title="Best Website Development Company in Coimbatore | PCS "
-            description="Break away from ordinary business websites. Priyam Consultancy Services develops next-generation, SEO-optimized websites that help Coimbatore brands stand out."
-        >
+        <Layout title={SEO_TITLE} description={SEO_DESC}>
             <SEOHead />
             <GlobalStyles />
             <SiteHeader />
@@ -1692,11 +1299,9 @@ export default function DigitalMarketingNewPage() {
             <PricingSection />
             <RecentWorkSection />
             <ClientLogosGrid />
-          
             <TestimonialSlider />
-              <GetStartedBanner />
+            <GetStartedBanner />
             <FAQSection />
-            {/* <CallCTASection /> */}
             <FooterSection />
         </Layout>
     );

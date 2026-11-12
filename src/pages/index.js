@@ -444,13 +444,21 @@ function PCSBanner() {
             All-in-One<br />Solutions for your
             <span className="orange"> Business Journey</span>
           </h1>
-          <p className="hero-sub">
+          <p className="hero-sub" style={{ marginTop: "1px" }}>
             One partner for all your needs – business setup, finance, digital transformation, digital marketing, and HR – helping your business grow smarter and faster.
           </p>
           <p className="hero-sub">Partner with us to build, scale, and succeed in a digital-first world.</p>
-          <div className="hero-actions">
-            <a href="#" className="btn-fill">Explore Services</a>
-          </div>
+         <div className="hero-actions hero-actions-row">
+  <a href="#" className="btn-fill">Explore Services</a>
+
+  <div className="hero-badges">
+    {HERO_BADGES.map((b, i) => (
+      <div className="hero-badge-item" key={i}>
+        <img src={b.img} alt={b.name} loading="eager" decoding="async" />
+      </div>
+    ))}
+  </div>
+</div>
         </div>
 
         <div className="hero-right" style={showPillGrid ? { display: "flex", alignItems: "center", gap: "32px", justifyContent: "start" } : {}}>
@@ -584,6 +592,12 @@ function PCSBanner() {
   );
 }
 
+const HERO_BADGES = [
+  { name: "Google Rating", img: "/img/landing-page/client-logo-6.webp" },
+  { name: "Google Rating", img: "/img/landing-page/client-logo-7.webp" },
+  { name: "Google Rating", img: "/img/landing-page/client-logo-8.webp" },
+];
+
 // ════════════════════════════════════════════
 //  SECTION 2: PARTNERS (Logo Scroll)
 // ════════════════════════════════════════════
@@ -700,7 +714,104 @@ function WhoWeAre() {
     </div>
   );
 }
+// ── Stats bar (below hero) ────────────────────────────
+const STATS = [
+    { value: "10+", label: "Years of Consulting Experience", icon: "laurel",   img: "/img/icon/stat-experience.webp" },
+    { value: "15+", label: "Technologies & Platforms",       icon: "layers",   img: "/img/icon/stat-technologies.webp" },
+    { value: "10+", label: "Industries Served",              icon: "building", img: "/img/icon/stat-industries.webp" },
+    { value: "98%", label: "Client Retention",               icon: "heart",    img: "/img/icon/stat-retention.webp" },
+];
 
+function StatIcon({ type, src, label }) {
+    const [failed, setFailed] = useState(false);
+    if (src && !failed) {
+        return <img src={src} alt={label} width={26} height={26} loading="lazy" decoding="async" onError={() => setFailed(true)} />;
+    }
+    const p = { viewBox: "0 0 24 24", width: 26, height: 26, fill: "none", stroke: "#ed8337", strokeWidth: 1.8, strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true };
+    if (type === "heart") return (<svg {...p}><path d="M12 21s-7-4.6-9.3-9A5.3 5.3 0 0 1 12 6.5 5.3 5.3 0 0 1 21.3 12C19 16.4 12 21 12 21z" /></svg>);
+    if (type === "layers") return (<svg {...p}><path d="M12 3l9 5-9 5-9-5 9-5z" /><path d="M3 13l9 5 9-5" /><path d="M3 17.5l9 5 9-5" /></svg>);
+    if (type === "building") return (<svg {...p}><rect x="5" y="3" width="14" height="18" rx="1" /><path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1M10 21v-3h4v3" /></svg>);
+    return (<svg {...p}><path d="M7 20C3.5 17 3 11 6 6" /><path d="M17 20c3.5-3 4-9 1-14" /><path d="M6 9l-2.5-.5M5.5 13l-2.5.3M8 16.5l-2 1.2M18 9l2.5-.5M18.5 13l2.5.3M16 16.5l2 1.2" /><path d="M10 14l2 2 2-2" /></svg>);
+}
+
+// Counter: runs 0 → target while the section is visible, resets to 0 when it leaves view
+function useCountUp(target, start, duration = 1800) {
+    const [val, setVal] = useState(0);
+    useEffect(() => {
+        if (!start) { setVal(0); return; }
+        if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            setVal(target);
+            return;
+        }
+        let raf, t0;
+        const step = (t) => {
+            if (!t0) t0 = t;
+            const p = Math.min((t - t0) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3); // ease-out
+            setVal(Math.round(eased * target));
+            if (p < 1) raf = requestAnimationFrame(step);
+        };
+        raf = requestAnimationFrame(step);
+        return () => cancelAnimationFrame(raf);
+    }, [target, start, duration]);
+    return val;
+}
+
+function StatValue({ value, start }) {
+    const match = String(value).match(/^(\d+(?:\.\d+)?)(.*)$/); // "98%" → 98 + "%"
+    const num = match ? parseFloat(match[1]) : 0;
+    const suffix = match ? match[2] : "";
+    const count = useCountUp(num, start);
+    return <div className="sb-value">{count}{suffix}</div>;
+}
+
+function StatsBar() {
+    const ref = useRef(null);
+    const [started, setStarted] = useState(false);
+
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        if (!("IntersectionObserver" in window)) { setStarted(true); return; }
+        const io = new IntersectionObserver(([entry]) => {
+            setStarted(entry.isIntersecting); // visible = count up, hidden = reset (works on scroll up & down)
+        }, { threshold: 0.35 });
+        io.observe(el);
+        return () => io.disconnect();
+    }, []);
+
+    return (
+        <section className="sb-section" aria-label="Key numbers" ref={ref}>
+            <div className="sb-card">
+                {STATS.map((s) => (
+                    <div className="sb-item" key={s.label}>
+                        <div className="sb-icon"><StatIcon type={s.icon} src={s.img} label={s.label} /></div>
+                        <div>
+                            <StatValue value={s.value} start={started} />
+                            <div className="sb-label">{s.label}</div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
+}
+
+function TrustStripSection() {
+    return (
+        <section className="ts-section" aria-label="Verified partners and ratings">
+            <div className="ts-inner">
+                <div className="ts-head">
+                    <div className="partners-header1">
+                        <div className="partners-eyebrow" style={{ marginBottom: '20px' }}>Trusted &amp; Verified</div>
+                    </div>
+                    <h2 className="ts-title">Recognised by the Platforms <span>You Trust</span></h2>
+                </div>
+                <StatsBar />
+            </div>
+        </section>
+    );
+}
 // ════════════════════════════════════════════
 //  SECTION 4: HOME SERVICE (Tabs)
 // ════════════════════════════════════════════
@@ -721,7 +832,21 @@ const serviceTabs = [
       { num: "06", icon: IcoFinace, iconBg: "rgba(246,173,85,0.1)", title: "Finances", desc: "Banking, loans, CMA reports, audits, approvals, and complete financial support services.", link: "/finances", glow: "#ed8337" },
     ],
   },
-
+ {
+    emoji: TabWebDevelopment,
+    label: "Website Development",
+    tagline: "Visual storytelling that makes your brand impossible to forget",
+    iconBg: "rgba(168,85,247,0.1)",
+    iconBorder: "1.5px solid rgba(168,85,247,0.25)",
+    cards: [
+      { num: "01", icon: IcoWebDesign, iconBg: "rgba(168,85,247,0.1)", title: "Website Design", desc: "Create visually compelling, user-focused website designs that strengthen brand presence.", link: "/website-design", glow: "#ed8337" },
+      { num: "02", icon: IcoStaticWeb, iconBg: "rgba(237,131,55,0.1)", title: "Static Website Development", desc: "Develop fast, secure static websites ideal for professional business presence.", link: "/static-website-development", glow: "#ed8337" },
+      { num: "03", icon: IcoCustomWeb, iconBg: "rgba(99,179,237,0.1)", title: "Custom Website Development", desc: "Build fully customized websites tailored to unique business requirements and goals.", link: "/custom-website-development", glow: "#ed8337" },
+      { num: "04", icon: IcoWooCommerce, iconBg: "rgba(168,85,247,0.1)", title: "WooCommerce Website Development", desc: "Develop scalable WooCommerce stores with secure payments and flexible features.", link: "/woocommerce-website-development", glow: "#ed8337" },
+      { num: "05", icon: IcoECommerce, iconBg: "rgba(236,72,153,0.1)", title: "E-Commerce Website Development", desc: "Create conversion-focused ecommerce websites optimized for performance and scalability.", link: "/shopify-website-development", glow: "#ed8337" },
+      { num: "06", icon: IcoShopify, iconBg: "rgba(246,173,85,0.1)", title: "Shopify Website Development", desc: "Design high-performing Shopify stores built for growth and seamless selling.", link: "/e-commerce-website-development", glow: "#ed8337" },
+    ],
+  },
   {
     emoji: TabDigitalMarketing,
     label: "Digital Marketing",
@@ -737,21 +862,7 @@ const serviceTabs = [
       { num: "06", icon: IcoGraphic, iconBg: "rgba(246,173,85,0.1)", title: "Graphic Designing", desc: "Creative designs for logos, print, digital, and social media to elevate your brand identity.", link: "/graphic-design", glow: "#ed8337" },
     ],
   },
-  {
-    emoji: TabWebDevelopment,
-    label: "Website Development",
-    tagline: "Visual storytelling that makes your brand impossible to forget",
-    iconBg: "rgba(168,85,247,0.1)",
-    iconBorder: "1.5px solid rgba(168,85,247,0.25)",
-    cards: [
-      { num: "01", icon: IcoWebDesign, iconBg: "rgba(168,85,247,0.1)", title: "Website Design", desc: "Create visually compelling, user-focused website designs that strengthen brand presence.", link: "/website-design", glow: "#ed8337" },
-      { num: "02", icon: IcoStaticWeb, iconBg: "rgba(237,131,55,0.1)", title: "Static Website Development", desc: "Develop fast, secure static websites ideal for professional business presence.", link: "/static-website-development", glow: "#ed8337" },
-      { num: "03", icon: IcoCustomWeb, iconBg: "rgba(99,179,237,0.1)", title: "Custom Website Development", desc: "Build fully customized websites tailored to unique business requirements and goals.", link: "/custom-website-development", glow: "#ed8337" },
-      { num: "04", icon: IcoWooCommerce, iconBg: "rgba(168,85,247,0.1)", title: "WooCommerce Website Development", desc: "Develop scalable WooCommerce stores with secure payments and flexible features.", link: "/woocommerce-website-development", glow: "#ed8337" },
-      { num: "05", icon: IcoECommerce, iconBg: "rgba(236,72,153,0.1)", title: "E-Commerce Website Development", desc: "Create conversion-focused ecommerce websites optimized for performance and scalability.", link: "/shopify-website-development", glow: "#ed8337" },
-      { num: "06", icon: IcoShopify, iconBg: "rgba(246,173,85,0.1)", title: "Shopify Website Development", desc: "Design high-performing Shopify stores built for growth and seamless selling.", link: "/e-commerce-website-development", glow: "#ed8337" },
-    ],
-  },
+
   {
     emoji: TabHumanResource,
     label: "Human Resource",
@@ -1711,6 +1822,7 @@ background: #fff;
       {/* <Partners /> */}
       {/* 3. Who We Are */}
       <WhoWeAre />
+      <TrustStripSection />
       {/* 4. Our Services */}
       <HomeServiceSection />
       {/* 5. Why Choose Us */}

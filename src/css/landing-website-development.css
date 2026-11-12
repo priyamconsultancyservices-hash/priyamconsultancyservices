@@ -447,7 +447,7 @@ p.tech-desc1 { color: black; text-align: center; margin: 2rem 0 3rem; }
   font-weight: 600; color: #011a2a; gap: 1rem; user-select: none;
 }
 .dm-faq-question .icon { font-size: 1.3rem; color: var(--orange); flex-shrink: 0; }
-.dm-faq-answer { padding: .2rem 1.4rem 1.1rem; font-size: .88rem; color: #5a6070; line-height: 1.78; }
+.dm-faq-answer { padding: .2rem 1.4rem 1.1rem; font-size: 0.86rem; font-family: 'Poppins'; color: #5a6070; line-height: 1.78; }
 @media (max-width: 960px) {
   .dm-faq-wrapper { grid-template-columns: 1fr; gap: 0.8rem; }
   .dm-faq-section { padding: 4rem 5% 3rem; }
@@ -948,7 +948,7 @@ p.tech-desc1 { color: black; text-align: center; margin: 2rem 0 3rem; }
     border-radius: 50%; background: var(--dwp-primary); color: #fff;
     font-size: max(9px, 1.3cqw); font-weight: 700; display: flex; align-items: center; justify-content: center;
 }
-
+ 
 /* ── Mobile / Tablet (320px - 820px) + phone landscape ──
    Image + form card same grid cell: card image kulla, keela paadhiyila irukkum */
 @media (max-width: 820px), (max-height: 520px) {

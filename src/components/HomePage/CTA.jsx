@@ -108,6 +108,7 @@ function CTASection() {
   useCtaCanvas(canvasRef);
 
   return (
+    
     <section id="cta-final">
       <div className="cta-banner" style={{"--glow-x":"50%","--glow-y":"50%"}}>
         <canvas id="ctaCanvas" ref={canvasRef} />

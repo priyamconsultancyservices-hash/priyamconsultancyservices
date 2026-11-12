@@ -215,7 +215,7 @@ function SEOHead() {
 
 const services = [
   {
-    id: "01", icon: <img src="/img/icon/hr-services-payroll.webp" alt="Payroll" style={{ width: "28px", height: "28px" }} />, color: "#FF6B2B",
+    id: "01", icon: <img src="/img/icon/hr-services-payroll.webp" alt="Payroll" />, color: "#FF6B2B",
     title: "Payroll Management",
     tagline: "Accurate. Timely. Compliant.",
     desc: "Timely, accurate, and fully compliant, we simplify your payroll process to ensure you never miss a payout or fall short on regulations. From salary structuring to tax filings and benefits administration, we handle all the backend complexities, so you can focus on what matters most: your team and growing your business.",
@@ -223,7 +223,7 @@ const services = [
   link: "/payroll-management",
   },
   {
-    id: "02", icon: <img src="/img/icon/hr-services-recruitment.webp" alt="Recruitment" style={{ width: "30px", height: "30px" }} />, color: "#1A56DB",
+    id: "02", icon: <img src="/img/icon/hr-services-recruitment.webp" alt="Recruitment" />, color: "#1A56DB",
     title: "Recruitment Services",
     tagline: "Right People. Right Roles. Right Now.",
     desc: "We go beyond resumes to find people who belong. Our recruitment services attract top talent that not only fits role but also fits your role, culture, and growth goals. Whether you’re hiring a single position or scaling your team, we ensure a seamless process that meets your vision.",
@@ -231,7 +231,7 @@ const services = [
     link: "/recruitment-services",
   },
   {
-    id: "03", icon: <img src="/img/icon/hr-services-policy.webp" alt="HR Policy" style={{ width: "30px", height: "30px" }} />, color: "#FF6B2B",
+    id: "03", icon: <img src="/img/icon/hr-services-policy.webp" alt="HR Policy" />, color: "#FF6B2B",
     title: "HR Strategy & Policy Development",
     tagline: "Build Culture. Drive Performance.",
     desc: "We align your HR strategy with your business vision by crafting clear, custom policies and tailored frameworks that drive performance, engagement, and scalability from startup to enterprise while ensuring compliance without adding unnecessary friction to your daily operations.",

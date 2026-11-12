@@ -34,7 +34,8 @@ h2 { font-size: 35px; }
 h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
 p, li, a, span { font-family: 'Poppins', sans-serif; }
 
-.container { width: 90%; margin: auto; }
+.container {
+   margin: auto; }
 
 /* ── EYEBROW SHARED ── */
 .partners-eyebrow {
@@ -485,6 +486,8 @@ h3.insights-h3 {
   .who-img { width: 100%; }
 }
 
+
+
 /* ════════════════════════════════════════════
    5. HOME SERVICE (TABS)
 ════════════════════════════════════════════ */
@@ -849,3 +852,91 @@ h3.insights-h3 {
 
 /* ── INS HDR h2 COLOUR FIX ── */
 .ins-hd h2 { color: #000; }
+
+/* ── Trusted & Verified section ── */
+.ts-section { background: #fff; padding: 3.5rem 5%; position: relative; overflow: hidden; }
+.ts-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+.ts-head { text-align: center; margin-bottom: 2rem; }
+.ts-title { font-family: 'Poppins', sans-serif; color: #000; font-weight: 700; font-size: clamp(1.3rem, 2.4vw, 2rem); margin: 0; }
+.ts-title span { color: #ed8337; font-style: italic; }
+
+.sb-value { font-variant-numeric: tabular-nums; }
+
+
+/* Eyebrow with side lines (only inside this section) */
+.ts-head .partners-header1 { text-align: center; }
+.ts-head .partners-eyebrow {
+  display: inline-flex; align-items: center; justify-content: center; gap: 14px;
+  font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 900;
+  letter-spacing: 0.14em; text-transform: uppercase; color: #ed8337;
+  background: none; border: 0; padding: 0;
+}
+.ts-head .partners-eyebrow::before,
+.ts-head .partners-eyebrow::after {
+  content: ""; display: block; width: 46px; height: 1px;
+  background: linear-gradient(90deg, rgba(237,131,55,0), #ed8337);
+}
+.ts-head .partners-eyebrow::after {
+  background: linear-gradient(90deg, #ed8337, rgba(237,131,55,0));
+}
+
+/* Stats bar */
+.sb-section { background: #fff; padding: 0 0 2.2rem; font-family: 'Poppins', sans-serif; }
+.sb-card { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border: 1px solid #e6ebf3; border-bottom: 4px solid #ed8337; border-radius: 22px; padding: 1.4rem 1rem; box-shadow: 0 14px 40px rgba(0,65,104,0.09); }
+.sb-item { display: flex; align-items: center; gap: 14px; padding: 0.4rem 1.2rem; border-left: 1px solid #e6ebf3; min-width: 0; }
+.sb-item:first-child { border-left: 0; }
+.sb-icon { flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; background: rgba(237,131,55,0.12); display: flex; align-items: center; justify-content: center; }
+.sb-value { color: #004168; font-size: 1.9rem; font-weight: 800; line-height: 1.1; }
+.sb-label { color: #6b7a94; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; line-height: 1.4; margin-top: 2px; }
+
+@media (max-width: 900px) {
+  .sb-card { grid-template-columns: repeat(2, 1fr); row-gap: 1rem; }
+  .sb-item:nth-child(3) { border-left: 0; }
+}
+@media (max-width: 480px) {
+  .ts-section { padding: 2.5rem 16px; }
+  .ts-head .partners-eyebrow { font-size: 0.72rem; gap: 8px; }
+  .ts-head .partners-eyebrow::before,
+  .ts-head .partners-eyebrow::after { width: 24px; }
+  .sb-section { padding: 0 0 1.5rem; }
+  .sb-card { padding: 1rem 0.4rem; }
+  .sb-item { flex-direction: column; text-align: center; gap: 8px; padding: 0.5rem; }
+  .sb-icon { width: 46px; height: 46px; }
+  .sb-value { font-size: 1.5rem; }
+}
+/* Banner button + 3 badge images */
+.hero-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  flex-wrap: wrap;
+}
+.hero-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-badge-item {
+  background: #fff;
+  border-radius: 12px;
+  height:70px;
+  /* width: 92px; */
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+}
+.hero-badge-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .hero-actions-row { gap: 12px; }
+  .hero-badges { gap: 8px; }
+  .hero-badge-item { height: 46px; width: 74px; padding: 5px 7px; border-radius: 10px; }
+}
