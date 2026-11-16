@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, Fragment } from "react";
 import { createPortal } from "react-dom";
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
@@ -46,7 +46,7 @@ function SEOHead() {
             <link rel="canonical" href="https://www.priyamconsultancy.com/landing-page/website-development-company-in-tamilnadu/" />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@500;600;700&display=swap" />
             <meta property="og:type" content="website" />
             <meta property="og:title" content={SEO_TITLE} />
             <meta property="og:description" content={SEO_DESC} />
@@ -65,32 +65,132 @@ function SEOHead() {
 const GlobalStyles = () => (
     <style>{`
 header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN { display: none; }
+body { background: #fff; }
 
-/* ── Hero background: tilted website screenshots scrolling on the right ── */
-.hero { overflow: hidden; }
-.hero > .hero-left { position: relative; z-index: 3; }
-.hero > .hero-right { position: relative; z-index: 2; }
-.hero-slider-box { position: absolute; top: -100vh; bottom: -100vh; left: -34vw; right: -20vw; overflow: hidden; pointer-events: none; }
-.hero-bg-tilt { position: absolute; top: -15%; left: 0; width: 100%; height: 130%; display: flex; gap: 20px; transform: rotate(14deg); }
-.hero-bg-col { flex: 1; overflow: hidden; min-width: 0; }
-.hero-bg-track { display: flex; flex-direction: column; animation: heroBgUp 65s linear infinite; will-change: transform; }
-.hero-bg-col:nth-child(even) .hero-bg-track { animation-name: heroBgDown; }
-.hero-bg-track img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 12px 30px rgba(0,0,0,0.35); background: #0a5a8c; }
-.hero-bg-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, #004168 0%, #004168 20%, rgba(0,65,104,0.7) 40%, rgba(0,65,104,0) 70%, rgba(0,65,104,0) 100%); }
-@keyframes heroBgUp { from { transform: translateY(0); } to { transform: translateY(-33.3333%); } }
-@keyframes heroBgDown { from { transform: translateY(-33.3333%); } to { transform: translateY(0); } }
-@media (prefers-reduced-motion: reduce) { .hero-bg-track { animation: none; } }
-@media (max-width: 900px) {
-  .hero-slider-box { left: -10vw; right: -10vw; }
-  .hero-bg-tilt { gap: 14px; }
-  .hero-bg-overlay { background: rgba(0,65,104,0.82); }
+/* ── Banner: title + typing line + subtitle + partner logos ── */
+.vh-hero {
+  position: relative; isolation: isolate; overflow: hidden;
+  box-sizing: border-box; min-height: 90vh;
+  display: flex; align-items: center; justify-content: flex-start; text-align: left;
+  padding: 1rem 5% 1rem;
+  background: #004168;
+}
+.vh-hero-content { position: relative; z-index: 3; width: 100%; max-width: 680px; font-family: 'Barlow Condensed', 'Poppins', sans-serif; }
+
+/* Badge pill above the title */
+.vh-badge {
+  display: inline-flex; align-items: center; gap: 12px;
+  margin-bottom: 1.6rem; padding: 10px 20px;
+  font-family: 'Poppins', sans-serif; font-weight: 700;
+  font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #ed8337;
+  background: #ed83371a;
+  border: 1px solid #ed833747;
+  border-radius: 50px;
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.vh-badge-dot { flex-shrink: 0; width: 10px; height: 10px; border-radius: 50%; background: #ed8337; }
+
+.vh-hero-title {
+  margin: 0;
+  font-family: 'Barlow Condensed', 'Poppins', sans-serif;
+  font-weight: 600; font-size: clamp(2.3rem, 4.3vw, 4rem);
+  line-height: 1.1; letter-spacing: 0.01em;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.4));
+}
+.vh-hero-line1 { display: block; color: #fff; }
+
+/* caret (used by the typewriter title) */
+.vh-caret {
+  display: inline-block; width: 2px; height: 1em; margin-left: 3px;
+  vertical-align: -0.12em; background: #7cc0ff;
+  animation: vhBlink 1s steps(1) infinite;
+}
+@keyframes vhBlink { 50% { opacity: 0; } }
+
+.vh-hero-sub {
+  margin: 1.2rem 0 0;
+  font-family: 'Barlow Condensed', 'Poppins', sans-serif;
+  font-weight: 400; font-size: clamp(0.7rem, 1.6vw, 1rem);
+  letter-spacing: 0.02em; color: rgba(255,255,255,0.88);
 }
 
-/* ── Hero partner logos ── */
-.hero-partner-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 2rem; width: 100%; }
-.hero-partner-cell { background: #fff; border: 1px solid #e6ebf3; border-radius: 12px; height: 64px; display: flex; align-items: center; justify-content: center; padding: 8px 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.04); min-width: 0; }
-.hero-partner-cell img { max-width: 100%; max-height: 100%; object-fit: contain; }
-@media (max-width: 640px) { .hero-partner-grid { gap: 6px; } .hero-partner-cell { height: 46px; padding: 5px 6px; border-radius: 8px; } }
+/* Partner logos row */
+.vh-partner-grid {
+  display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px;
+  margin-top: 2.4rem; max-width: 680px;
+}
+.vh-partner-cell {
+  background: #fff; border-radius: 14px; height: 60px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 8px; box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease;
+}
+.vh-partner-cell:hover { transform: translateY(-3px); }
+.vh-partner-cell img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+
+/* screenshots layer (sits on the right side on desktop) */
+.hero-slider-box { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
+.hero-bg-tilt { position: absolute; top: -30%; left: 42%; width: 80%; height: 160%; display: flex; gap: 20px; transform: rotate(12deg); }
+.hero-bg-col { flex: 1; overflow: hidden; min-width: 0; }
+.hero-bg-col:nth-child(n+4) { display: none; }
+.hero-bg-track { display: flex; flex-direction: column; animation: heroBgUp 65s linear infinite; will-change: transform; }
+.hero-bg-col:nth-child(even) .hero-bg-track { animation-name: heroBgDown; }
+.hero-bg-track img {
+  display: block; width: 100%; height: auto; aspect-ratio: 16 / 10;
+  object-fit: cover; object-position: top; margin-bottom: 20px;
+  border-radius: 8px; background: #0a5a8c;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+/* overlay: solid on the left (for the text), fades out so the right side is clearly visible */
+.hero-bg-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(90deg, #004168 0%, #004168 38%, rgba(0,65,104,0.78) 54%, rgba(0,65,104,0.2) 72%, rgba(0,65,104,0) 100%);
+}
+@keyframes heroBgUp { from { transform: translateY(0); } to { transform: translateY(-33.3333%); } }
+@keyframes heroBgDown { from { transform: translateY(-33.3333%); } to { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .hero-bg-track { animation: none; } .vh-caret { animation: none; } }
+
+/* ── Hero page-load animation (backwards fill so hover transforms still work afterwards) ── */
+@keyframes vhFadeUp { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: none; } }
+@keyframes vhFadeRight { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: none; } }
+.vh-badge { animation: vhFadeRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+.vh-hero-title { animation: vhFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.15s backwards; }
+.vh-hero-sub { animation: vhFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.3s backwards; }
+.vh-partner-cell { animation: vhFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+.vh-partner-cell:nth-child(1) { animation-delay: 0.45s; }
+.vh-partner-cell:nth-child(2) { animation-delay: 0.53s; }
+.vh-partner-cell:nth-child(3) { animation-delay: 0.61s; }
+.vh-partner-cell:nth-child(4) { animation-delay: 0.69s; }
+.vh-partner-cell:nth-child(5) { animation-delay: 0.77s; }
+.vh-partner-cell:nth-child(6) { animation-delay: 0.85s; }
+@media (prefers-reduced-motion: reduce) {
+  .vh-badge, .vh-hero-title, .vh-hero-sub, .vh-partner-cell { animation: none; }
+}
+
+/* ── Mobile / tablet: centered layout, gradient bg, tilted blurred screenshots behind ── */
+@media (max-width: 900px) {
+  .vh-hero {
+    min-height: 0; padding: 4rem 20px 4rem;
+    justify-content: center; text-align: center;
+    background: linear-gradient(90deg, #004168, #0a5a8c);
+  }
+  .vh-hero-content { max-width: 100%; }
+  .vh-badge { font-size: 0.68rem; padding: 9px 16px; gap: 9px; margin-bottom: 1.2rem; letter-spacing: 0.05em; }
+  .vh-badge-dot { width: 8px; height: 8px; }
+  .vh-hero-title { font-size: clamp(2.2rem, 9vw, 3.4rem); }
+  .vh-hero-sub { font-size: 1rem; margin-top: 1rem; }
+  .vh-partner-grid { grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 2rem auto 0; max-width: 360px; }
+  .vh-partner-cell { height: 64px; padding: 8px 10px; border-radius: 12px; }
+
+  .hero-bg-tilt { top: -25%; left: -35%; width: 170%; height: 150%; gap: 14px; }
+  .hero-bg-track { animation-duration: 55s; }
+  .hero-bg-track img { margin-bottom: 14px; opacity: 0.55; filter: blur(1.5px) brightness(0.85); }
+  .hero-bg-overlay {
+    background: linear-gradient(90deg, rgba(0,65,104,0.85), rgba(10,90,140,0.85));
+    box-shadow: none;
+  }
+}
 
 /* ── Trusted & Verified section ── */
 .ts-section { background: #fff; padding: 3.5rem 5%; position: relative; overflow: hidden; }
@@ -130,9 +230,12 @@ header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN { display: none; 
   .ts-head .partners-eyebrow::before, .ts-head .partners-eyebrow::after { width: 24px; }
   .sb-section { padding: 0 0 1.5rem; }
   .sb-card { padding: 1rem 0.4rem; }
-  .sb-item { flex-direction: column; text-align: center; gap: 8px; padding: 0.5rem; }
+  .sb-item { flex-direction: column; text-align: center; gap: 8px; padding: 0.8rem 0.4rem; }
+  .sb-item:nth-child(n+3) { border-top: 1px solid #e6ebf3; }
+  .sb-item:nth-child(3) { border-left: 0; }
   .sb-icon { width: 46px; height: 46px; }
   .sb-value { font-size: 1.5rem; }
+  .sb-label { font-size: 0.6rem; }
 }
 
 /* ── Pricing plans ── */
@@ -142,6 +245,9 @@ header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN { display: none; 
 .pp-title { color: #004168; font-weight: 700; font-size: clamp(1.4rem, 2.6vw, 2.2rem); margin: 0; }
 .pp-title span { color: #ed8337; font-style: italic; }
 .pp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 44px 28px; align-items: stretch; max-width: 1080px; margin: 0 auto; }
+/* scroll-reveal wrapper around each card (keeps the card's own hover/popular transforms untouched) */
+.pp-cell { display: flex; min-width: 0; }
+.pp-cell > .pp-card { flex: 1; min-width: 0; }
 .pp-card { position: relative; display: flex; flex-direction: column; background: #fff; border: 2px solid transparent; border-radius: 22px; padding: 1.7rem 1.5rem 1.6rem; box-shadow: 0 10px 35px rgba(0,0,0,0.07); transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.3s ease; }
 .pp-card:hover { transform: translateY(-6px); border-color: #ed8337; box-shadow: 0 18px 44px rgba(237,131,55,0.16); }
 .pp-card-popular { border: 2px solid #ed8337; box-shadow: 0 18px 50px rgba(237,131,55,0.18); transform: translateY(-14px); }
@@ -161,7 +267,7 @@ header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN { display: none; 
 .pp-list { list-style: none; margin: 0; padding: 0; }
 .pp-list li { display: flex; align-items: center; gap: 9px; color: #444; font-size: 0.8rem; line-height: 1.4; padding: 5px 0; }
 .pp-list li svg { flex-shrink: 0; }
-.pp-btn { margin-top: auto; display: block; width: 100%; border: 0; cursor: pointer; font-family: inherit; box-sizing: border-box; text-align: center; text-decoration: none; background: linear-gradient(90deg, #ed8337, #f59a52); color: #fff !important; font-weight: 600; font-size: 0.9rem; padding: 0.85rem 1rem; border-radius: 12px; box-shadow: 0 8px 20px rgba(237,131,55,0.3); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.pp-btn { margin-top: auto; display: block; width: 100%; border: 0; cursor: pointer; font-family: inherit; box-sizing: border-box; text-align: center; text-decoration: none; background: linear-gradient(90deg, #ed8337, #f59a52); color: #fff !important; font-weight: 600; font-size: 0.9rem; padding: 0.6rem 1rem; border-radius: 12px; box-shadow: 0 8px 20px rgba(237,131,55,0.3); transition: transform 0.25s ease, box-shadow 0.25s ease; }
 .pp-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(237,131,55,0.4); }
 .pp-card-popular .pp-btn { background: linear-gradient(90deg, #004168, #0a5a8c); box-shadow: 0 8px 20px rgba(0,65,104,0.3); }
 .pp-group:last-of-type { margin-bottom: 1.4rem; }
@@ -219,15 +325,17 @@ header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN { display: none; 
 .cl-title span { color: #ed8337; font-style: italic; }
 .cl-sub { color: #666; font-size: 0.95rem; line-height: 1.7; margin: 0; }
 .cl-grid { max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
-.cl-cell { box-sizing: border-box; width: calc((100% - 80px) / 6); background: #fff; border: 2px solid #e9edf4; border-radius: 14px; height: 92px; display: flex; align-items: center; justify-content: center; padding: 14px 18px; transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; }
+/* .cl-item = scroll-reveal wrapper (holds the width), .cl-cell = the visible card */
+.cl-item { box-sizing: border-box; width: calc((100% - 80px) / 6); display: flex; }
+.cl-cell { box-sizing: border-box; width: 100%; background: #fff; border: 2px solid #e9edf4; border-radius: 14px; height: 92px; display: flex; align-items: center; justify-content: center; padding: 14px 18px; transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; }
 .cl-cell:hover { border-color: #ed833733; box-shadow: 0 10px 26px rgba(237,131,55,0.15); transform: translateY(-3px); }
 .cl-cell img { max-width: 100%; max-height: 100%; object-fit: contain; }
-@media (max-width: 1000px) { .cl-cell { width: calc((100% - 48px) / 4); } }
-@media (max-width: 640px) { .cl-section { padding: 2.5rem 16px 3rem; } .cl-grid { gap: 10px; } .cl-cell { width: calc((100% - 20px) / 3); height: 70px; padding: 8px 10px; border-radius: 10px; } }
+@media (max-width: 1000px) { .cl-item { width: calc((100% - 48px) / 4); } }
+@media (max-width: 640px) { .cl-section { padding: 2.5rem 16px 3rem; } .cl-grid { gap: 10px; } .cl-item { width: calc((100% - 20px) / 3); } .cl-cell { height: 70px; padding: 8px 10px; border-radius: 10px; } }
 
 /* ── Get Started banner ── */
 .gs-section { background: #fff; padding: 3.5rem 5%; font-family: 'Poppins', sans-serif; }
-.gs-card { max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 2.5rem; background: #ed833733; border-radius: 26px; padding: 3.5rem 2.6rem; box-shadow: 0 14px 40px rgba(0,65,104,0.08); }
+.gs-card { max-width: 1250px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 2.5rem; background: #ed833733; border-radius: 26px; padding: 3.5rem 2.6rem; box-shadow: 0 14px 40px rgba(0,65,104,0.08); overflow: hidden; }
 .gs-left { min-width: 0; }
 .gs-eyebrow { display: inline-flex; align-items: center; gap: 14px; color: #ed8337; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 1rem; }
 .gs-eyebrow::before, .gs-eyebrow::after { content: ""; display: block; width: 46px; height: 1px; background: linear-gradient(90deg, rgba(237,131,55,0), #ed8337); }
@@ -246,9 +354,9 @@ header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN { display: none; 
 @media (prefers-reduced-motion: reduce) { .gs-phone-icon::before, .gs-phone-icon::after, .gs-phone-icon svg { animation: none; } }
 .gs-phone-number { color: #004168; font-size: clamp(1.6rem, 2.8vw, 2.4rem); font-weight: 800; line-height: 1.1; white-space: nowrap; }
 .gs-btns { display: flex; flex-wrap: wrap; gap: 12px; }
-.gs-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: linear-gradient(90deg, #ed8337, #f59a52); color: #fff !important; font-weight: 600; font-size: 0.88rem; padding: 0.85rem 1.4rem; border-radius: 50px; box-shadow: 0 8px 20px rgba(237,131,55,0.3); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.gs-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: linear-gradient(90deg, #ed8337, #f59a52); color: #fff !important; font-weight: 600; font-size: 0.88rem; padding: 0.6rem 1.4rem; border-radius: 50px; box-shadow: 0 8px 20px rgba(237,131,55,0.3); transition: transform 0.25s ease, box-shadow 0.25s ease; }
 .gs-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(237,131,55,0.4); }
-.gs-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: transparent; color: #004168 !important; border: 1px solid rgba(0,65,104,0.3); font-weight: 600; font-size: 0.88rem; padding: 0.85rem 1.4rem; border-radius: 50px; transition: transform 0.25s ease, background 0.25s ease; }
+.gs-btn-outline { display: inline-flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; background: transparent; color: #004168 !important; border: 1px solid rgba(0,65,104,0.3); font-weight: 600; font-size: 0.88rem; padding: 0.6rem 1.4rem; border-radius: 50px; transition: transform 0.25s ease, background 0.25s ease; }
 .gs-btn-outline:hover { transform: translateY(-2px); background: rgba(255,255,255,0.6); }
 @media (max-width: 900px) {
   .gs-card { grid-template-columns: 1fr; gap: 1.8rem; padding: 1.8rem 1.4rem; text-align: center; }
@@ -264,8 +372,330 @@ header.headerWrapper_ROKX, .footerTop_uYEV, .footerBottom_YdiN { display: none; 
   .gs-phone-number { font-size: 1.5rem; }
 }
 
-/* Render below-the-fold sections lazily */
-.dm-faq-section, .pcs-footer { content-visibility: auto; contain-intrinsic-size: auto 800px; }
+/* ── Compact buttons (classes defined in landing-website-development.css) ── */
+.hero-form-btn { padding-top: 0.65rem !important; padding-bottom: 0.65rem !important; }
+.pcs-header-enquire-btn { padding-top: 0.5rem !important; padding-bottom: 0.5rem !important; }
+
+/* Render below-the-fold FAQ lazily (footer removed: its real height is far more than 800px on mobile, which made the page jump) */
+.dm-faq-section { content-visibility: auto; contain-intrinsic-size: auto 800px; }
+
+/* ══════════════════════════════════════════════════════
+   Scroll reveal animations (replay on scroll up & down)
+   Elements are hidden ONLY after JS adds .sr-ready to <html>,
+   so SSR / no-JS / crawlers still see all content.
+   ══════════════════════════════════════════════════════ */
+.sr { transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1); transition-delay: var(--sr-delay, 0ms); }
+.sr-ready .sr { opacity: 0; will-change: opacity, transform; }
+.sr-ready .sr-up      { transform: translateY(50px); }
+.sr-ready .sr-down    { transform: translateY(-50px); }
+.sr-ready .sr-left    { transform: translateX(-60px); }
+.sr-ready .sr-right   { transform: translateX(60px); }
+.sr-ready .sr-zoom    { transform: scale(0.88); }
+.sr-ready .sr-zoomout { transform: scale(1.12); }
+.sr-ready .sr.sr-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sr, .sr-ready .sr, .sr-ready .sr.sr-in { opacity: 1; transform: none; transition: none; }
+}
+
+/* ══════════════════════════════════════════════════════
+   Wave heading (letters wave in one-by-one, wave again on hover)
+   ══════════════════════════════════════════════════════ */
+.wv, .wv .wv-word, .wv .wv-ch { color: inherit !important; font-style: inherit !important; }
+.wv-word { display: inline-block; white-space: nowrap; }
+.wv-ch { display: inline-block; }
+.sr-ready .wv .wv-ch {
+  opacity: 0; transform: translateY(0.9em) rotate(6deg);
+  transition: opacity 0.5s ease var(--wv-d), transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) var(--wv-d);
+}
+.sr-ready .wv.wv-in .wv-ch { opacity: 1; transform: none; }
+/* hover = wave runs again */
+.wv.wv-in:hover .wv-ch { animation: wvWave 0.8s ease-in-out calc(var(--wv-d) / 3) 1; }
+@keyframes wvWave { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-0.28em); } 70% { transform: translateY(0.08em); } }
+@media (prefers-reduced-motion: reduce) {
+  .sr-ready .wv .wv-ch, .sr-ready .wv.wv-in .wv-ch { opacity: 1; transform: none; transition: none; animation: none; }
+}
+
+/* ══════════════════════════════════════════════════════
+   Section-level slide / zoom in-out
+   ══════════════════════════════════════════════════════ */
+.sec-wrap { overflow-x: clip; transition-duration: 1s; }
+.sr-ready .sec-wrap.sr-left    { transform: translateX(-90px); }
+.sr-ready .sec-wrap.sr-right   { transform: translateX(90px); }
+.sr-ready .sec-wrap.sr-zoom    { transform: scale(0.93); }
+.sr-ready .sec-wrap.sr-zoomout { transform: scale(1.07); }
+.sr-ready .sec-wrap.sr-up      { transform: translateY(60px); }
+.sr-ready .sec-wrap.sr-in      { opacity: 1; transform: none; }
+
+/* ══════════════════════════════════════════════════════
+   Hover animations
+   ══════════════════════════════════════════════════════ */
+/* stats */
+.sb-icon { transition: transform 0.4s ease, background 0.3s ease; }
+.sb-item:hover .sb-icon { transform: scale(1.15) rotate(-8deg); background: rgba(237,131,55,0.25); }
+.sb-value { transition: color 0.3s ease; }
+.sb-item:hover .sb-value { color: #ed8337; }
+
+/* partner logos (hero) */
+.vh-partner-cell:hover { transform: translateY(-5px) scale(1.06); }
+.vh-partner-cell img { transition: transform 0.3s ease; }
+.vh-partner-cell:hover img { transform: scale(1.08); }
+
+/* work cards */
+.wk-card:hover { box-shadow: 0 22px 50px rgba(0,0,0,0.4); transform: translateY(-8px) scale(1.02); }
+.wk-name { transition: color 0.3s ease; }
+.wk-card:hover .wk-name { color: #ed8337; }
+
+/* client logos */
+.cl-cell img { transition: transform 0.35s ease, filter 0.35s ease; filter: grayscale(0.6); }
+.cl-cell:hover img { transform: scale(1.12); filter: grayscale(0); }
+
+/* pricing list items */
+.pp-list li { transition: transform 0.25s ease, color 0.25s ease; }
+.pp-list li:hover { transform: translateX(6px); color: #004168; }
+.pp-plan-tag { transition: background 0.3s ease, color 0.3s ease; }
+.pp-card:hover .pp-plan-tag { background: #ed8337; color: #fff; }
+
+/* button shine sweep */
+.pp-btn, .gs-btn, .hero-form-btn, .pcs-header-enquire-btn { position: relative; overflow: hidden; }
+.pp-btn::after, .gs-btn::after, .hero-form-btn::after, .pcs-header-enquire-btn::after {
+  content: ""; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.45), transparent);
+  transform: skewX(-20deg); transition: left 0.6s ease; pointer-events: none;
+}
+.pp-btn:hover::after, .gs-btn:hover::after, .hero-form-btn:hover::after, .pcs-header-enquire-btn:hover::after { left: 130%; }
+.hero-form-btn, .pcs-header-enquire-btn { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+.hero-form-btn:hover, .pcs-header-enquire-btn:hover { transform: translateY(-2px); }
+
+/* FAQ */
+.dm-faq-item { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.dm-faq-item:hover { transform: translateX(6px); box-shadow: 0 10px 26px rgba(0,65,104,0.12); }
+.dm-faq-question .icon { transition: transform 0.3s ease, color 0.3s ease; }
+.dm-faq-question:hover .icon { transform: rotate(90deg); color: #ed8337; }
+
+/* header + footer */
+.pcs-header-call { transition: transform 0.25s ease; }
+.pcs-header-call:hover { transform: scale(1.06); }
+.pcs-header-logo img { transition: transform 0.3s ease; }
+.pcs-header-logo img:hover { transform: scale(1.05); }
+.pcs-footer-social-btn { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.pcs-footer-social-btn:hover { transform: translateY(-5px) rotate(10deg) scale(1.1); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+.pcs-footer-contact-item { transition: transform 0.3s ease; }
+.pcs-footer-contact-item:hover { transform: translateX(6px); }
+.pcs-footer-contact-icon { transition: transform 0.3s ease, background 0.3s ease; }
+.pcs-footer-contact-item:hover .pcs-footer-contact-icon { transform: scale(1.15) rotate(-10deg); }
+.pcs-footer-desc {text-align: start; margin-top: 1rem;}
+/* get-started phone */
+.gs-phone { transition: transform 0.3s ease; }
+.gs-phone:hover { transform: scale(1.05); }
+.gs-btn-outline:hover { transform: translateY(-2px) scale(1.03); }
+
+@media (prefers-reduced-motion: reduce) {
+  .sb-icon, .sb-value, .wk-card, .cl-cell img, .pp-list li, .dm-faq-item, .pcs-footer-social-btn, .gs-phone { transition: none; }
+}
+
+/* ══════════════════════════════════════════════════════
+   Banner animations replay on scroll up & down
+   (.hero-ready = JS running, .hero-live = banner is in view)
+   ══════════════════════════════════════════════════════ */
+/* turn off the one-time load animations, they are re-triggered by .hero-live below */
+.vh-hero .vh-badge, .vh-hero .vh-kicker, .vh-hero .vh-hero-title, .vh-hero .vh-hero-sub, .vh-hero .vh-partner-cell { animation: none; }
+
+/* out of view = hidden (reset), so they can animate again */
+.hero-ready:not(.hero-live) .vh-badge,
+.hero-ready:not(.hero-live) .vh-kicker,
+.hero-ready:not(.hero-live) .vh-hero-title,
+.hero-ready:not(.hero-live) .vh-hero-sub,
+.hero-ready:not(.hero-live) .vh-partner-cell { opacity: 0; }
+
+/* in view = animate */
+.hero-live .vh-badge { animation: vhFadeRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+.hero-live .vh-kicker { animation: vhFadeRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+.hero-live .vh-hero-title { animation: vhFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s backwards; }
+.hero-live .vh-hero-sub { animation: vhFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.5s backwards; }
+.hero-live .vh-partner-cell { animation: vhFadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+.hero-live .vh-partner-cell:nth-child(1) { animation-delay: 1.0s; }
+.hero-live .vh-partner-cell:nth-child(2) { animation-delay: 1.08s; }
+.hero-live .vh-partner-cell:nth-child(3) { animation-delay: 1.16s; }
+.hero-live .vh-partner-cell:nth-child(4) { animation-delay: 1.24s; }
+.hero-live .vh-partner-cell:nth-child(5) { animation-delay: 1.32s; }
+.hero-live .vh-partner-cell:nth-child(6) { animation-delay: 1.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-ready:not(.hero-live) .vh-badge,
+  .hero-ready:not(.hero-live) .vh-kicker,
+  .hero-ready:not(.hero-live) .vh-hero-title,
+  .hero-ready:not(.hero-live) .vh-hero-sub,
+  .hero-ready:not(.hero-live) .vh-partner-cell { opacity: 1; }
+  .hero-live .vh-badge, .hero-live .vh-kicker, .hero-live .vh-hero-title, .hero-live .vh-hero-sub, .hero-live .vh-partner-cell { animation: none; }
+}
+
+/* ══════════════════════════════════════════════════════
+   Title width fix + responsive
+   ══════════════════════════════════════════════════════ */
+.vh-hero-sub { font-family: 'Poppins', sans-serif; }
+.vh-hero-title { overflow-wrap: normal; }
+
+/* desktop: text stays on the left side only, so it never overlaps the screenshots */
+@media (min-width: 901px) {
+  .vh-hero-content { max-width: min(700px, 56%); }
+  .vh-hero-title {
+    font-family: 'Barlow Condensed', 'Poppins', sans-serif;
+    font-weight: 700; letter-spacing: 0.015em;
+    font-size: clamp(2rem, 3.3vw, 3.7rem);
+    line-height: 1.12;
+  }
+
+  /* solid area is a bit longer, so screenshots don't show behind the text */
+  .hero-bg-overlay {
+    background: linear-gradient(90deg, #004168 0%, #004168 46%, rgba(0,65,104,0.78) 60%, rgba(0,65,104,0.2) 76%, rgba(0,65,104,0) 100%);
+  }
+}
+
+/* tablet + mobile */
+@media (max-width: 900px) {
+  .vh-hero-title {
+    font-family: 'Barlow Condensed', 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.9rem, 8vw, 3.2rem);
+    line-height: 1.12;
+  }
+}
+
+/* small phones */
+@media (max-width: 480px) {
+  .vh-hero { padding: 3rem 16px 3.5rem; }
+  .vh-badge { font-size: 0.6rem; padding: 8px 14px; letter-spacing: 0.04em; }
+  .vh-hero-sub { font-size: 0.95rem; }
+  .vh-partner-grid { max-width: 320px; gap: 8px; }
+  .vh-partner-cell { height: 56px; padding: 6px 8px; }
+}
+
+/* ══════════════════════════════════════════════════════
+   Typewriter title: "WE BUILD" fixed + rotating words
+   Only the last word (WEBSITES) drops to the next line, never the whole phrase.
+   ══════════════════════════════════════════════════════ */
+.vh-hero-title {
+  position: relative; text-transform: uppercase;
+  max-width: 12em;          /* "WE BUILD ECOMMERCE" fits, "... WEBSITES" wraps to line 2 */
+}
+.vh-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.vh-hero-title .vh-hero-line1 { display: inline; }
+.vh-hero-title .vh-typed-wrap { display: inline; white-space: normal; }
+.vh-hero-title .vh-typed { color: #4aa3ff; -webkit-text-fill-color: #4aa3ff; }
+.vh-hero-title .vh-caret { margin-left: 4px; background: #7cc0ff; }
+
+@media (min-width: 901px) {
+  .vh-hero-content { max-width: min(820px, 58%); }
+}
+@media (max-width: 900px) {
+  .vh-hero-title { margin-left: auto; margin-right: auto; }
+}
+
+/* ══════════════════════════════════════════════════════
+   Big two-line heading: "Your Trusted / Digital Growth Partner"
+   line 1 white, line 2 gradient (theme: light grey-blue → sky blue)
+   ══════════════════════════════════════════════════════ */
+.vh-kicker {
+  margin: 0 0 1.1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700; letter-spacing: 0.005em; line-height: 1.08;
+  font-size: clamp(2.2rem, 4vw, 3.8rem);
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.4));
+}
+.vh-kicker-l1 { display: block; color: #fff; }
+.vh-kicker-l2 {
+  display: inline-block; padding-bottom: 0.1em;
+  color: transparent;
+  background: linear-gradient(90deg, #e3e9f7 0%, #9dbdf2 45%, #4aa3ff 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* typed line sits under the heading, a bit smaller than it */
+@media (min-width: 901px) {
+  .vh-kicker-l1, .vh-kicker-l2 { white-space: nowrap; }
+  .vh-hero-title { font-size: clamp(1.8rem, 3vw, 3.3rem); }
+}
+
+/* ── Tablet + mobile (centered layout) ──
+   Poppins is wide, so sizes are tuned so that:
+   - "Digital Growth Partner" stays on ONE line  (heading = exactly 2 lines)
+   - "WE BUILD BUSINESS / ECOMMERCE / INDUSTRY" fits on line 1, only "WEBSITES" drops to line 2 */
+@media (max-width: 900px) {
+  .vh-hero { padding: 3rem 20px 3.5rem; }
+  .vh-hero-content { min-width: 0; }
+  .vh-kicker { font-size: clamp(1.3rem, 6.4vw, 3.2rem); line-height: 1.12; margin-bottom: 0.9rem; }
+  .vh-hero-title {
+    font-size: clamp(1.3rem, 6vw, 2.7rem);
+    line-height: 1.18;
+    max-width: none;
+  }
+  .vh-hero-sub { font-size: clamp(0.85rem, 3.4vw, 1.05rem); }
+}
+@media (max-width: 480px) {
+  .vh-hero { padding: 2.5rem 16px 3rem; }
+  .vh-kicker { margin-bottom: 0.7rem; }
+  .vh-hero-sub { margin-top: 0.9rem; }
+  .vh-partner-grid { margin-top: 1.6rem; }
+}
+
+/* ══════════════════════════════════════════════════════
+   MOBILE FIXES (keep this block LAST so it wins over the rules above)
+   ══════════════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  /* whole sections are always visible on phones; inner cards/headings still animate */
+  .sr-ready .sec-wrap.sr,
+  .sr-ready .sec-wrap.sr-left,
+  .sr-ready .sec-wrap.sr-right,
+  .sr-ready .sec-wrap.sr-zoom,
+  .sr-ready .sec-wrap.sr-zoomout,
+  .sr-ready .sec-wrap.sr-up { opacity: 1; transform: none; }
+
+  /* no sideways slides on small screens (avoids side gaps / overflow) */
+  .sr-ready .sr-left,
+  .sr-ready .sr-right { transform: translateY(30px); }
+  .sr-ready .sr-zoom,
+  .sr-ready .sr-zoomout { transform: translateY(20px); }
+
+  /* FAQ columns stack tightly */
+  .dm-faq-wrapper { display: flex; flex-direction: column; gap: 0; }
+  .dm-faq-col { width: 100%; }
+}
+.pcs-footer-heading {     text-align: start; }
+
+/* ── Footer responsive ── */
+@media (max-width: 900px) {
+  .pcs-footer .pcs-footer-inner {
+    display: flex; flex-direction: column; gap: 2rem;
+    width: 100%; max-width: 100%; box-sizing: border-box;
+    padding: 2.5rem 20px 2rem;
+  }
+  /* every column (Reveal wrapper) takes the full width, so text is not squeezed to one side */
+  .pcs-footer .pcs-footer-inner > * { width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box; }
+
+  .pcs-footer-logo-row { display: flex; justify-content: start; }
+  .pcs-footer-logo-row img { width: 180px; max-width: 60%; height: auto;text-align: start;  }
+  .pcs-footer-desc { max-width: none; margin: 1rem 0 0; text-align: start; font-size: 0.9rem; line-height: 1.7; }
+  .pcs-footer-heading {     text-align: start; margin-bottom: 1.2rem; }
+
+  .pcs-footer-contact-item { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 1rem; }
+  .pcs-footer-contact-icon { flex-shrink: 0; }
+  .pcs-footer-contact-text { flex: 1; min-width: 0; overflow-wrap: anywhere; line-height: 1.5; }
+  .pcs-footer-socials { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.2rem; }
+  .pcs-footer-form-col { width: 100%; }
+}
+/* keep text clear of the floating call / WhatsApp / quote buttons on the right */
+@media (max-width: 600px) {
+  .pcs-footer .pcs-footer-inner { padding: 2rem 16px 1.5rem; }
+  .pcs-footer-contact-item { padding-right: 56px; }
+  .pcs-footer-desc { font-size: 0.85rem; }
+}
+/* touch screens: no "stuck" hover shift on footer links */
+@media (hover: none) {
+  .pcs-footer-contact-item:hover,
+  .pcs-footer-contact-item:hover .pcs-footer-contact-icon { transform: none; }
+}
 `}</style>
 );
 
@@ -282,6 +712,72 @@ function useWindowWidth() {
         return () => { window.removeEventListener("resize", handler); cancelAnimationFrame(raf); };
     }, []);
     return width;
+}
+
+// ── Scroll reveal: animates in when visible, resets when it leaves (works scrolling up & down) ──
+function useInView(threshold = 0.15, margin = "0px 0px -6% 0px") {
+    const ref = useRef(null);
+    const [inView, setInView] = useState(false);
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        if (!("IntersectionObserver" in window)) { setInView(true); return; }
+        const io = new IntersectionObserver(
+            ([entry]) => setInView(entry.isIntersecting),
+            { threshold, rootMargin: margin }
+        );
+        io.observe(el);
+        return () => io.disconnect();
+    }, [threshold, margin]);
+    return [ref, inView];
+}
+
+// dir: "up" | "down" | "left" | "right" | "zoom" | "zoomout"
+function Reveal({ children, dir = "up", delay = 0, className = "", as: Tag = "div", style, threshold, margin, ...rest }) {
+    const [ref, inView] = useInView(threshold, margin);
+    return (
+        <Tag
+            ref={ref}
+            className={`sr sr-${dir}${inView ? " sr-in" : ""}${className ? " " + className : ""}`}
+            style={{ "--sr-delay": `${delay}ms`, ...style }}
+            {...rest}
+        >
+            {children}
+        </Tag>
+    );
+}
+
+// ── Wave heading: letters one-by-one wave-a vandhu settle aagum, hover-la wave aagum ──
+function WaveText({ text, delay = 0, step = 35 }) {
+    const [ref, inView] = useInView(0.2);
+    let n = 0;
+    const words = text.trim().split(" ");
+    return (
+        <span ref={ref} className={`wv${inView ? " wv-in" : ""}`} aria-label={text}>
+            {words.map((w, wi) => (
+                <Fragment key={wi}>
+                    <span className="wv-word" aria-hidden="true">
+                        {[...w].map((ch, ci) => (
+                            <span className="wv-ch" key={ci} style={{ "--wv-d": `${delay + (n++) * step}ms` }}>{ch}</span>
+                        ))}
+                    </span>
+                    {wi < words.length - 1 && " "}
+                </Fragment>
+            ))}
+        </span>
+    );
+}
+
+// lead = normal text, accent = orange part
+function WaveHeading({ lead, accent, accentStyle, step = 35 }) {
+    return (
+        <>
+            <WaveText text={lead} step={step} />{" "}
+            <span style={accentStyle}>
+                <WaveText text={accent} step={step} delay={lead.length * step} />
+            </span>
+        </>
+    );
 }
 
 // ── FAQ Data ──────────────────────────────────────────
@@ -332,7 +828,7 @@ const PARTNER_LOGOS = {
     gRating: { name: "Google Rating 4.9/5", img: "/img/landing-page/client-logo-6.webp" },
 };
 
-// 6 logos under the hero buttons
+// 6 logos under the hero subtitle
 const HERO_PARTNER_LOGOS = Object.values(PARTNER_LOGOS);
 
 // ── Stats bar ─────────────────────────────────────────
@@ -405,14 +901,14 @@ function StatsBar() {
     return (
         <section className="sb-section" aria-label="Key numbers" ref={ref}>
             <div className="sb-card">
-                {STATS.map((s) => (
-                    <div className="sb-item" key={s.label}>
+                {STATS.map((s, i) => (
+                    <Reveal dir="zoom" delay={i * 120} className="sb-item" key={s.label}>
                         <div className="sb-icon"><StatIcon type={s.icon} src={s.img} label={s.label} /></div>
                         <div>
                             <StatValue value={s.value} start={started} />
                             <div className="sb-label">{s.label}</div>
                         </div>
-                    </div>
+                    </Reveal>
                 ))}
             </div>
         </section>
@@ -424,10 +920,12 @@ function TrustStripSection() {
         <section className="ts-section" aria-label="Verified partners and ratings">
             <div className="ts-inner">
                 <div className="ts-head">
-                    <div className="partners-header1">
+                    <Reveal dir="up" className="partners-header1">
                         <div className="partners-eyebrow" style={{ marginBottom: '20px' }}>Trusted &amp; Verified</div>
-                    </div>
-                    <h2 className="ts-title">Recognised by the Platforms <span>You Trust</span></h2>
+                    </Reveal>
+                    <Reveal dir="up" delay={120}>
+                        <h2 className="ts-title"><WaveHeading lead="Recognised by the Platforms" accent="You Trust" /></h2>
+                    </Reveal>
                 </div>
                 <StatsBar />
             </div>
@@ -524,48 +1022,52 @@ function PricingSection() {
         <section className="pp-section" id="pricing">
             <div className="pp-inner">
                 <div className="pp-head">
-                    <div className="partners-header1" style={{ textAlign: 'center' }}>
+                    <Reveal dir="up" className="partners-header1" style={{ textAlign: 'center' }}>
                         <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Customized Website Development Services for Every Need</div>
-                    </div>
-                    <h2 className="pp-title">Website Plans That Fit <span>Your Budget</span></h2>
+                    </Reveal>
+                    <Reveal dir="up" delay={120}>
+                        <h2 className="pp-title"><WaveHeading lead="Website Plans That Fit" accent="Your Budget" /></h2>
+                    </Reveal>
                 </div>
 
                 <div className="pp-grid">
-                    {PRICING_PLANS.map((plan) => (
-                        <div className={`pp-card${plan.popular ? " pp-card-popular" : ""}`} key={plan.tag}>
-                            {plan.popular && <span className="pp-popular-badge">Most Popular</span>}
-                            <span className="pp-plan-tag">{plan.tag}</span>
-                            <p className="pp-plan-desc">{plan.desc}</p>
+                    {PRICING_PLANS.map((plan, i) => (
+                        <Reveal dir="up" delay={(i % 3) * 140} className="pp-cell" key={plan.tag}>
+                            <div className={`pp-card${plan.popular ? " pp-card-popular" : ""}`}>
+                                {plan.popular && <span className="pp-popular-badge">Most Popular</span>}
+                                <span className="pp-plan-tag">{plan.tag}</span>
+                                <p className="pp-plan-desc">{plan.desc}</p>
 
-                            <div className="pp-price-box">
-                                {plan.off && (
-                                    <div className="pp-price-top">
-                                        <span className="pp-off">{plan.off}</span>
-                                        <span className="pp-was">{plan.was}</span>
-                                    </div>
-                                )}
-                                <div className="pp-price-main">{plan.price}</div>
-                            </div>
-
-                            {plan.groups.map((g) => (
-                                <div className="pp-group" key={g.title}>
-                                    <div className="pp-group-title"><span>{g.title}</span></div>
-                                    <ul className="pp-list">
-                                        {g.items.map((it) => (
-                                            <li key={it}>
-                                                <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true">
-                                                    <circle cx="10" cy="10" r="10" fill="#004168" />
-                                                    <path d="M5.8 10.4l2.8 2.8 5.6-5.8" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                                </svg>
-                                                {it}
-                                            </li>
-                                        ))}
-                                    </ul>
+                                <div className="pp-price-box">
+                                    {plan.off && (
+                                        <div className="pp-price-top">
+                                            <span className="pp-off">{plan.off}</span>
+                                            <span className="pp-was">{plan.was}</span>
+                                        </div>
+                                    )}
+                                    <div className="pp-price-main">{plan.price}</div>
                                 </div>
-                            ))}
 
-                            <button type="button" className="pp-btn" onClick={() => setSelectedPlan(plan)}>Get Started Now</button>
-                        </div>
+                                {plan.groups.map((g) => (
+                                    <div className="pp-group" key={g.title}>
+                                        <div className="pp-group-title"><span>{g.title}</span></div>
+                                        <ul className="pp-list">
+                                            {g.items.map((it) => (
+                                                <li key={it}>
+                                                    <svg viewBox="0 0 20 20" width="14" height="14" aria-hidden="true">
+                                                        <circle cx="10" cy="10" r="10" fill="#004168" />
+                                                        <path d="M5.8 10.4l2.8 2.8 5.6-5.8" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                                    </svg>
+                                                    {it}
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+
+                                <button type="button" className="pp-btn" onClick={() => setSelectedPlan(plan)}>Get Started Now</button>
+                            </div>
+                        </Reveal>
                     ))}
                 </div>
             </div>
@@ -635,16 +1137,22 @@ function RecentWorkSection() {
         <section className="wk-section" id="our-work">
             <div className="wk-inner">
                 <div className="wk-head">
-                    <div className="partners-header1" style={{ textAlign: 'center' }}>
+                    <Reveal dir="up" className="partners-header1" style={{ textAlign: 'center' }}>
                         <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Recent Work</div>
-                    </div>
-                    <h2 className="wk-title">Websites We've Built That <span>Are Already Driving Results</span></h2>
-                    <p className="wk-sub">See how we’ve helped businesses build a stronger online presence.</p>
+                    </Reveal>
+                    <Reveal dir="up" delay={120}>
+                        <h2 className="wk-title"><WaveHeading lead="Websites We’ve Built That" accent="Are Already Driving Results" step={25} /></h2>
+                    </Reveal>
+                    <Reveal dir="up" delay={220}>
+                        <p className="wk-sub">See how we’ve helped businesses build a stronger online presence.</p>
+                    </Reveal>
                 </div>
 
                 <div className="wk-grid">
-                    {WORK_ITEMS.map((w) => (
-                        <WorkCard key={w.title} w={w} />
+                    {WORK_ITEMS.map((w, i) => (
+                        <Reveal key={w.title} dir="up" delay={(i % 3) * 140}>
+                            <WorkCard w={w} />
+                        </Reveal>
                     ))}
                 </div>
             </div>
@@ -681,43 +1189,90 @@ function HeroImageSlider() {
 }
 
 // ── Hero ────────────────────────────────────────────
-function HeroSection() {
+// Rotating words typed after the fixed "WE BUILD"
+const TYPE_WORDS = ["BUSINESS WEBSITES", "ECOMMERCE WEBSITES", "INDUSTRY WEBSITES"];
+
+// Typewriter: types a word, holds, erases, moves to the next word, loops forever.
+// Runs only while `active` (banner in view) so it doesn't waste CPU off-screen.
+function useTypewriter(words, { type = 90, erase = 45, hold = 1500, active = true } = {}) {
+    const [text, setText] = useState("");
+    const st = useRef({ w: 0, i: 0, del: false });
+
+    useEffect(() => {
+        if (!active) return;
+        if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            setText(words[0]);
+            return;
+        }
+        let t;
+        const tick = () => {
+            const s = st.current;
+            const word = words[s.w];
+            let delay = s.del ? erase : type;
+            if (!s.del) {
+                s.i++;
+                setText(word.slice(0, s.i));
+                if (s.i === word.length) { s.del = true; delay = hold; }
+            } else {
+                s.i--;
+                setText(word.slice(0, s.i));
+                if (s.i === 0) { s.del = false; s.w = (s.w + 1) % words.length; delay = 350; }
+            }
+            t = setTimeout(tick, delay);
+        };
+        t = setTimeout(tick, 600);
+        return () => clearTimeout(t);
+    }, [active, words, type, erase, hold]);
+
+    return text;
+}
+
+// "WE BUILD" stays fixed (static, no wave), then BUSINESS / ECOMMERCE / INDUSTRY WEBSITES type in a loop
+function HeroTitle({ active }) {
+    const typed = useTypewriter(TYPE_WORDS, { active });
+    // trailing space becomes a non-breaking space so the caret never jumps alone to the next line
+    const shown = typed.replace(/ $/, "\u00A0");
+
     return (
-        <section className="hero" id="about">
-            <div className="hero-left">
-                <div className="h-badge"><div className="badge-dot" />Websites Built to Bring You Leads
+        <h1 className="vh-hero-title">
+            {/* SEO / screen readers: full text always in the DOM */}
+            <span className="vh-sr">We Build Business Websites, Ecommerce Websites, Industry Websites</span>
+
+            <span className="vh-hero-line1" aria-hidden="true">We Build</span>{" "}
+            <span className="vh-typed-wrap" aria-hidden="true">
+                <span className="vh-typed">{shown}</span>
+                <span className="vh-caret" />
+            </span>
+        </h1>
+    );
+}
+
+function HeroSection() {
+    // Banner animations replay every time the banner comes back into view (scroll up & down)
+    const [ref, inView] = useInView(0.2, "0px");
+    const [ready, setReady] = useState(false);
+    useEffect(() => { setReady(true); }, []);
+
+    return (
+        <section ref={ref} className={`vh-hero${ready ? " hero-ready" : ""}${inView ? " hero-live" : ""}`} id="about">
+            <HeroImageSlider />
+            <div className="vh-hero-content">
+                <div className="vh-kicker">
+                    <span className="vh-kicker-l1">Your Trusted</span>
+                    <span className="vh-kicker-l2">Digital Growth Partner</span>
                 </div>
-                <h1 className="pf-heading" style={{ margin: "2.5rem 0 0" }}>
-                    <span><i>Website Development Company in Tamil Nadu  </i></span>for Fast, Modern Websites
-                </h1>
 
-                <p className="hero-sub1">
-                    We design and build fast, mobile-friendly websites that help your business get found, get leads and grow. From business websites to online stores, every site is built for your industry and designed to bring real enquiries, not just look good.
-                </p>
+                <HeroTitle active={inView} />
 
-                <div className="hero-cta-row">
-                    <a href="tel:+919677444048" className="hero-cta-fill">
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                        </svg>
-                        Call Now — Free Consultation
-                    </a>
-                    <a href="#get-in-touch-form" className="hero-cta-outline">
-                        Get a Custom Website Quote
-                    </a>
-                </div>
+                <p className="vh-hero-sub">Tamil Nadu’s Expert Website Development Partner</p>
 
-                <div className="hero-partner-grid">
+                <div className="vh-partner-grid">
                     {HERO_PARTNER_LOGOS.map((p) => (
-                        <div className="hero-partner-cell" key={p.name}>
+                        <div className="vh-partner-cell" key={p.name}>
                             <img src={p.img} alt={p.name} loading="eager" decoding="async" />
                         </div>
                     ))}
                 </div>
-            </div>
-
-            <div className="hero-right">
-                <HeroImageSlider />
             </div>
         </section>
     );
@@ -912,17 +1467,23 @@ function ClientLogosGrid() {
     return (
         <section className="cl-section" aria-label="Our clients">
             <div className="cl-head">
-                <div className="partners-header1" style={{ textAlign: 'center' }}>
+                <Reveal dir="up" className="partners-header1" style={{ textAlign: 'center' }}>
                     <div className="partners-eyebrow" style={{ marginBottom: '20px', textAlign: 'center' }}>Our Clients</div>
-                </div>
-                <h2 className="cl-title">Businesses That <span>Trust Us</span></h2>
-                <p className="cl-sub">From growing startups to established brands, these are the companies we’ve helped build a strong, result-driven online presence. </p>
+                </Reveal>
+                <Reveal dir="up" delay={120}>
+                    <h2 className="cl-title"><WaveHeading lead="Businesses That" accent="Trust Us" /></h2>
+                </Reveal>
+                <Reveal dir="up" delay={220}>
+                    <p className="cl-sub">From growing startups to established brands, these are the companies we’ve helped build a strong, result-driven online presence. </p>
+                </Reveal>
             </div>
             <div className="cl-grid">
-                {CLIENT_LOGOS.map((client) => (
-                    <div className="cl-cell" key={client.name}>
-                        <img src={client.img} alt={client.name} loading="lazy" decoding="async" />
-                    </div>
+                {CLIENT_LOGOS.map((client, i) => (
+                    <Reveal dir="zoom" delay={(i % 6) * 70} className="cl-item" key={client.name}>
+                        <div className="cl-cell">
+                            <img src={client.img} alt={client.name} loading="lazy" decoding="async" />
+                        </div>
+                    </Reveal>
                 ))}
             </div>
         </section>
@@ -934,18 +1495,18 @@ function GetStartedBanner() {
     return (
         <section className="gs-section">
             <div className="gs-card">
-                <div className="gs-left">
+                <Reveal dir="left" className="gs-left">
                     <div className="gs-eyebrow">Not Sure Which Website You Need?</div>
                     <h2 className="gs-title">
-                        Tell Us About <span>Your Business</span>
+                        <WaveHeading lead="Tell Us About" accent="Your Business" />
                     </h2>
                     <p className="gs-desc">
                         We will recommend the right website type, features and approximate investment based on your actual requirements.
 
                     </p>
-                </div>
+                </Reveal>
 
-                <div className="gs-right">
+                <Reveal dir="right" delay={150} className="gs-right">
                     <a href="tel:+919677444048" className="gs-phone">
                         <span className="gs-phone-icon">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -972,7 +1533,7 @@ function GetStartedBanner() {
                             WhatsApp Us
                         </a>
                     </div>
-                </div>
+                </Reveal>
             </div>
         </section>
     );
@@ -984,21 +1545,23 @@ function FAQSection() {
     const toggle = (index) => setActive(active === index ? null : index);
 
     const renderItem = (item, index) => (
-        <div className="dm-faq-item" key={index}>
-            <div className="dm-faq-question" onClick={() => toggle(index)}>
-                <span>{item.q}</span>
-                <span className="icon">{active === index ? "−" : "+"}</span>
+        <Reveal dir="up" delay={(index % 3) * 120} key={index}>
+            <div className="dm-faq-item">
+                <div className="dm-faq-question" onClick={() => toggle(index)}>
+                    <span>{item.q}</span>
+                    <span className="icon">{active === index ? "−" : "+"}</span>
+                </div>
+                {active === index && <div className="dm-faq-answer">{item.a}</div>}
             </div>
-            {active === index && <div className="dm-faq-answer">{item.a}</div>}
-        </div>
+        </Reveal>
     );
 
     return (
         <section className="dm-faq-section" style={{ paddingTop: "2rem" }}>
             <div className="container" style={{ width: '100%' }}>
-                <div className="dm-faq-head">
-                    <h2>Frequently Asked <span>Questions</span></h2>
-                </div>
+                <Reveal dir="up" className="dm-faq-head">
+                    <h2><WaveHeading lead="Frequently Asked" accent="Questions" /></h2>
+                </Reveal>
                 <div className="dm-faq-wrapper">
                     <div className="dm-faq-col">
                         {faqData.slice(0, 3).map((item, i) => renderItem(item, i))}
@@ -1006,9 +1569,12 @@ function FAQSection() {
                     <div className="dm-faq-col">
                         {faqData.slice(3, 6).map((item, i) => renderItem(item, i + 3))}
                     </div>
-                    <div className="dm-faq-col">
-                        {faqData.slice(6, 9).map((item, i) => renderItem(item, i + 6))}
-                    </div>
+                    {/* third column only renders when there are more than 6 FAQs (no empty gap) */}
+                    {faqData.length > 6 && (
+                        <div className="dm-faq-col">
+                            {faqData.slice(6, 9).map((item, i) => renderItem(item, i + 6))}
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
@@ -1039,12 +1605,13 @@ function getTestimonialPosStyles(isTablet) {
     const rightX = isTablet ? 220 : 300;
     const farLeftX = isTablet ? -380 : -490;
     const farRightX = isTablet ? 380 : 490;
+    // visibility:"hidden" on the far cards stops their text from ghosting at the screen edges
     return {
-        center: { transform: "translateX(0) scale(1) rotateY(0deg)", opacity: 1, filter: "none", zIndex: 10, boxShadow: "0 24px 64px rgba(13,31,60,0.14)", pointerEvents: "auto" },
-        left: { transform: `translateX(${leftX}px) scale(0.85) rotateY(18deg)`, opacity: 0.55, filter: "blur(2px)", zIndex: 5, boxShadow: "none", pointerEvents: "auto" },
-        right: { transform: `translateX(${rightX}px) scale(0.85) rotateY(-18deg)`, opacity: 0.55, filter: "blur(2px)", zIndex: 5, boxShadow: "none", pointerEvents: "auto" },
-        farLeft: { transform: `translateX(${farLeftX}px) scale(0.7) rotateY(28deg)`, opacity: 0, filter: "blur(4px)", zIndex: 1, boxShadow: "none", pointerEvents: "none" },
-        farRight: { transform: `translateX(${farRightX}px) scale(0.7) rotateY(-28deg)`, opacity: 0, filter: "blur(4px)", zIndex: 1, boxShadow: "none", pointerEvents: "none" },
+        center: { transform: "translateX(0) scale(1) rotateY(0deg)", opacity: 1, visibility: "visible", filter: "none", zIndex: 10, boxShadow: "0 24px 64px rgba(13,31,60,0.14)", pointerEvents: "auto" },
+        left: { transform: `translateX(${leftX}px) scale(0.85) rotateY(18deg)`, opacity: 0.55, visibility: "visible", filter: "blur(2px)", zIndex: 5, boxShadow: "none", pointerEvents: "auto" },
+        right: { transform: `translateX(${rightX}px) scale(0.85) rotateY(-18deg)`, opacity: 0.55, visibility: "visible", filter: "blur(2px)", zIndex: 5, boxShadow: "none", pointerEvents: "auto" },
+        farLeft: { transform: `translateX(${farLeftX}px) scale(0.7) rotateY(28deg)`, opacity: 0, visibility: "hidden", filter: "blur(4px)", zIndex: 1, boxShadow: "none", pointerEvents: "none" },
+        farRight: { transform: `translateX(${farRightX}px) scale(0.7) rotateY(-28deg)`, opacity: 0, visibility: "hidden", filter: "blur(4px)", zIndex: 1, boxShadow: "none", pointerEvents: "none" },
     };
 }
 
@@ -1073,7 +1640,7 @@ function TestimonialCard({ data, pos, onClick, isMobile, isTablet, isActive, vie
             }}
         >
             <div style={{ fontSize: isMobile ? 28 : 36, color: "#f47920", lineHeight: 1, fontFamily: "Georgia, serif", marginBottom: 8 }}>"</div>
-            <div style={{ fontSize: isMobile ? 11.5 : 13, color: "#3d4f6a", lineHeight: isMobile ? 1.65 : 1.75, marginBottom: isMobile ? 14 : 22, flex: 1, fontWeight: 400 }}>{data.text}</div>
+            <div style={{ fontSize: 13, color: "#3d4f6a", lineHeight: isMobile ? 1.65 : 1.75, marginBottom: isMobile ? 14 : 22, flex: 1, fontWeight: 400 }}>{data.text}</div>
             <div style={{ height: 1, background: "#f0f2f7", marginBottom: isMobile ? 10 : 16 }} />
 
             <div style={{ display: "flex", alignItems: "center", gap: 10, justifyContent: "space-between" }}>
@@ -1148,45 +1715,48 @@ function TestimonialSlider() {
 
     return (
         <section style={{ width: "100%", margin: "0 auto", padding: isMobile ? "40px 16px" : "60px 20px", fontFamily: "'Poppins', sans-serif", overflow: "hidden", background: '#fff' }} id="testimonials">
-            <div className="partners-header1" style={{ marginBottom: isMobile ? 12 : 16, textAlign: "center" }}>
+            <Reveal dir="up" className="partners-header1" style={{ marginBottom: isMobile ? 12 : 16, textAlign: "center" }}>
                 <div className="partners-eyebrow" style={{ marginBottom: "12px", textAlign: "center" }}>Client Testimonials</div>
-            </div>
-            <h2 style={{ fontSize: isMobile ? 22 : isTablet ? 28 : "clamp(28px,3vw,40px)", fontWeight: 700, color: "#0d1f3c", lineHeight: 1.25, marginBottom: isMobile ? 28 : 48, textAlign: "center" }}>
-                What Our Clients{" "}
-                <span style={{ color: "#f47920", fontStyle: "italic", fontWeight: 700 }}>Say About PCS</span>
-            </h2>
+            </Reveal>
+            <Reveal dir="up" delay={120}>
+                <h2 style={{ fontSize: isMobile ? 22 : isTablet ? 28 : "clamp(28px,3vw,40px)", fontWeight: 700, color: "#0d1f3c", lineHeight: 1.25, marginBottom: isMobile ? 28 : 48, textAlign: "center" }}>
+                    <WaveHeading lead="What Our Clients" accent="Say About PCS" accentStyle={{ color: "#f47920", fontStyle: "italic", fontWeight: 700 }} />
+                </h2>
+            </Reveal>
 
-            <div
-                ref={stageRef}
-                onTouchStart={onTouchStart}
-                onTouchEnd={onTouchEnd}
-                style={{
-                    position: "relative",
-                    height: stageHeight,
-                    display: "flex",
-                    alignItems: "flex-start",
-                    justifyContent: "center",
-                    perspective: 1200,
-                    marginBottom: 28,
-                    transition: "height 0.4s ease",
-                }}
-            >
-                {testimonials.map((t, i) => {
-                    const pos = getTestimonialPos(i, current, total, isMobile);
-                    return (
-                        <TestimonialCard
-                            key={t.index}
-                            data={t}
-                            pos={pos}
-                            isActive={pos === "center"}
-                            onClick={() => { if (i !== current) goTo(i); }}
-                            isMobile={isMobile}
-                            isTablet={isTablet}
-                            viewportWidth={width}
-                        />
-                    );
-                })}
-            </div>
+            <Reveal dir="zoom" delay={200}>
+                <div
+                    ref={stageRef}
+                    onTouchStart={onTouchStart}
+                    onTouchEnd={onTouchEnd}
+                    style={{
+                        position: "relative",
+                        height: stageHeight,
+                        display: "flex",
+                        alignItems: "flex-start",
+                        justifyContent: "center",
+                        perspective: 1200,
+                        marginBottom: 28,
+                        transition: "height 0.4s ease",
+                    }}
+                >
+                    {testimonials.map((t, i) => {
+                        const pos = getTestimonialPos(i, current, total, isMobile);
+                        return (
+                            <TestimonialCard
+                                key={t.index}
+                                data={t}
+                                pos={pos}
+                                isActive={pos === "center"}
+                                onClick={() => { if (i !== current) goTo(i); }}
+                                isMobile={isMobile}
+                                isTablet={isTablet}
+                                viewportWidth={width}
+                            />
+                        );
+                    })}
+                </div>
+            </Reveal>
 
             <div style={{ display: "flex", justifyContent: "center", gap: 8, alignItems: "center", paddingTop: "40px" }}>
                 {testimonials.map((_, i) => (
@@ -1220,20 +1790,33 @@ function TestimonialSlider() {
 }
 
 // ── Footer Section ────────────────────────────────────
+// Footer columns sit at the very bottom of the page, so they use a looser observer (no bottom margin)
 function FooterSection() {
     return (
         <footer className="pcs-footer" id="contact">
             <div className="pcs-footer-inner">
-                <div>
+                <Reveal dir="up" threshold={0.05} margin="0px">
                     <div className="pcs-footer-logo-row">
-                        <img src="/img/footer-logo.png" alt="PCS Logo" width="30%" loading="lazy" decoding="async" />
+                        <img
+                            src="/img/footer-logo.png"
+                            alt="PCS Logo"
+                            width="30%"
+                            loading="lazy"
+                            decoding="async"
+                            onError={(e) => {
+                                // footer-logo.png missing → fall back to the header logo (made white for the dark footer)
+                                e.currentTarget.onerror = null;
+                                e.currentTarget.src = "/img/priyam-consultancy-logo.png";
+                              
+                            }}
+                        />
                     </div>
                     <p className="pcs-footer-desc">
                         We are one of the fastest-growing full-service business solutions companies, delivering cutting-edge, result-driven strategies across digital marketing, technology, branding, and consulting to create the perfect blend of innovation and impact.
                     </p>
-                </div>
+                </Reveal>
 
-                <div>
+                <Reveal dir="up" delay={150} threshold={0.05} margin="0px">
                     <h4 className="pcs-footer-heading">Contact Info</h4>
                     <div className="pcs-footer-contact-item">
                         <div className="pcs-footer-contact-icon">
@@ -1273,15 +1856,15 @@ function FooterSection() {
                             <svg viewBox="0 0 24 24" fill="#fff"><path d="M18.9 2H22l-7.6 8.7L23.3 22h-7l-5.5-7.2L4.5 22H1.4l8.1-9.3L1 2h7.2l5 6.6L18.9 2zm-1.2 18h1.7L7.4 4H5.6l12.1 16z" /></svg>
                         </a>
                     </div>
-                </div>
+                </Reveal>
 
-                <div className="pcs-footer-form-col" id="get-in-touch-form">
+                <Reveal dir="up" delay={300} threshold={0.05} margin="0px" className="pcs-footer-form-col" id="get-in-touch-form">
                     <div className="hero-form-card">
                         <p className="hero-form-title">Your Growth, <span>Our Mission.</span></p>
                         <p className="hero-form-sub">Fill in your details — we'll get back within 24 hours.</p>
                         <HeroContactForm />
                     </div>
-                </div>
+                </Reveal>
             </div>
         </footer>
     );
@@ -1289,20 +1872,27 @@ function FooterSection() {
 
 // ── Page Export ───────────────────────────────────────
 export default function WebsiteDevelopmentLandingPage() {
+    // Wrapper div-la class podrom (Docusaurus <html> class-a reset pannum, so adhu safe illa)
+    const [ready, setReady] = useState(false);
+    useEffect(() => { setReady(true); }, []);
+
     return (
         <Layout title={SEO_TITLE} description={SEO_DESC}>
             <SEOHead />
             <GlobalStyles />
             <SiteHeader />
             <HeroSection />
-            <TrustStripSection />
-            <PricingSection />
-            <RecentWorkSection />
-            <ClientLogosGrid />
-            <TestimonialSlider />
-            <GetStartedBanner />
-            <FAQSection />
-            <FooterSection />
+
+            <div className={ready ? "sr-ready" : ""}>
+                <Reveal dir="zoom"    className="sec-wrap" threshold={0.08}><TrustStripSection /></Reveal>
+                <Reveal dir="left"    className="sec-wrap" threshold={0.08}><PricingSection /></Reveal>
+                <Reveal dir="right"   className="sec-wrap" threshold={0.08}><RecentWorkSection /></Reveal>
+                <Reveal dir="zoomout" className="sec-wrap" threshold={0.08}><ClientLogosGrid /></Reveal>
+                <Reveal dir="left"    className="sec-wrap" threshold={0.08}><TestimonialSlider /></Reveal>
+                <Reveal dir="right"   className="sec-wrap" threshold={0.08}><GetStartedBanner /></Reveal>
+                <Reveal dir="zoom"    className="sec-wrap" threshold={0.05}><FAQSection /></Reveal>
+                <Reveal dir="up"      className="sec-wrap" threshold={0.03} margin="0px"><FooterSection /></Reveal>
+            </div>
         </Layout>
     );
 }

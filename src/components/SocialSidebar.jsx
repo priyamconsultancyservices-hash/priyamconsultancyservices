@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 /* ── Icons ── */
@@ -32,12 +32,23 @@ export default function SocialSidebar() {
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending]     = useState(false);
   const [form, setForm] = useState({ name:"", email:"", phone:"", company:"", message:"" });
-  const hoverTimeout = useRef(null);
+  const wrapperRef = useRef(null);
 
-  const handleQuoteEnter = () => { clearTimeout(hoverTimeout.current); setShowForm(true); };
-  const handleQuoteLeave = () => { hoverTimeout.current = setTimeout(() => setShowForm(false), 300); };
-  const handleFormEnter  = () => clearTimeout(hoverTimeout.current);
-  const handleFormLeave  = () => { hoverTimeout.current = setTimeout(() => setShowForm(false), 300); };
+  /* Form ku veliya click / tap panna close aaganum */
+  useEffect(() => {
+    if (!showForm) return;
+    const handleOutside = (e) => {
+      if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
+        setShowForm(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOutside);
+    document.addEventListener("touchstart", handleOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleOutside);
+      document.removeEventListener("touchstart", handleOutside);
+    };
+  }, [showForm]);
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
@@ -172,7 +183,7 @@ export default function SocialSidebar() {
           text-transform: uppercase;
         }
 
-        /* ── Hover form — appears LEFT of quote button ── */
+        /* ── Form — appears LEFT of quote button ── */
         .sb-hover-form {
           position: absolute;
           right: 58px;
@@ -279,7 +290,7 @@ export default function SocialSidebar() {
         }
       `}</style>
 
-      {/* ════ Sidebar / Bottom bar ════ */}
+      {/* ════ Sidebar ════ */}
       <div className="sb-wrap">
 
         {/* 1. Call button */}
@@ -304,15 +315,12 @@ export default function SocialSidebar() {
           <span className="sb-tip">WhatsApp</span>
         </a>
 
-        {/* 3. Request Quote — hover shows form (desktop) / tap (mobile) */}
-        <div
-          className="sb-quote-wrapper"
-          onMouseEnter={handleQuoteEnter}
-          onMouseLeave={handleQuoteLeave}
-        >
+        {/* 3. Request Quote — hover (desktop) / tap (mobile) opens; close only with × or by clicking outside */}
+        <div className="sb-quote-wrapper" ref={wrapperRef}>
           <button
             className="sb-quote"
-            onClick={() => setShowForm(v => !v)}
+            onMouseEnter={() => setShowForm(true)}
+            onClick={() => setShowForm(true)}
             aria-label="Request Quote"
           >
             <QuoteIcon />
@@ -320,11 +328,7 @@ export default function SocialSidebar() {
           </button>
 
           {showForm && (
-            <div
-              className="sb-hover-form"
-              onMouseEnter={handleFormEnter}
-              onMouseLeave={handleFormLeave}
-            >
+            <div className="sb-hover-form">
               <button className="sb-close" onClick={() => setShowForm(false)} aria-label="Close">×</button>
 
               <div style={{ display:"inline-flex", alignItems:"center", gap:"6px", fontSize:"0.58rem", fontWeight:700, letterSpacing:"0.14em", textTransform:"uppercase", color:"#004168", background:"rgba(0,65,104,0.06)", border:"1px solid rgba(0,65,104,0.12)", padding:"0.25rem 0.7rem", borderRadius:"4px", marginBottom:"8px" }}>Free Quote</div>
