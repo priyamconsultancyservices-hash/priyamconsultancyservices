@@ -380,7 +380,7 @@ body { background: #fff; }
 .dm-faq-section { content-visibility: auto; contain-intrinsic-size: auto 800px; }
 
 /* ══════════════════════════════════════════════════════
-   Scroll reveal animations (replay on scroll up & down)
+   Scroll reveal animations (play ONCE, then stay visible)
    Elements are hidden ONLY after JS adds .sr-ready to <html>,
    so SSR / no-JS / crawlers still see all content.
    ══════════════════════════════════════════════════════ */
@@ -417,15 +417,10 @@ body { background: #fff; }
 }
 
 /* ══════════════════════════════════════════════════════
-   Section-level slide / zoom in-out
+   Section wrapper (NO slide / zoom animation now, sections are always visible.
+   Only the inner headings / cards animate once.)
    ══════════════════════════════════════════════════════ */
-.sec-wrap { overflow-x: clip; transition-duration: 1s; }
-.sr-ready .sec-wrap.sr-left    { transform: translateX(-90px); }
-.sr-ready .sec-wrap.sr-right   { transform: translateX(90px); }
-.sr-ready .sec-wrap.sr-zoom    { transform: scale(0.93); }
-.sr-ready .sec-wrap.sr-zoomout { transform: scale(1.07); }
-.sr-ready .sec-wrap.sr-up      { transform: translateY(60px); }
-.sr-ready .sec-wrap.sr-in      { opacity: 1; transform: none; }
+.sec-wrap { overflow-x: clip; }
 
 /* ══════════════════════════════════════════════════════
    Hover animations
@@ -495,20 +490,20 @@ body { background: #fff; }
 }
 
 /* ══════════════════════════════════════════════════════
-   Banner animations replay on scroll up & down
-   (.hero-ready = JS running, .hero-live = banner is in view)
+   Banner animations (play ONCE when the banner is first seen)
+   (.hero-ready = JS running, .hero-live = banner has been seen)
    ══════════════════════════════════════════════════════ */
-/* turn off the one-time load animations, they are re-triggered by .hero-live below */
+/* turn off the one-time load animations, they are triggered by .hero-live below */
 .vh-hero .vh-badge, .vh-hero .vh-kicker, .vh-hero .vh-hero-title, .vh-hero .vh-hero-sub, .vh-hero .vh-partner-cell { animation: none; }
 
-/* out of view = hidden (reset), so they can animate again */
+/* before first view = hidden, so they can animate in */
 .hero-ready:not(.hero-live) .vh-badge,
 .hero-ready:not(.hero-live) .vh-kicker,
 .hero-ready:not(.hero-live) .vh-hero-title,
 .hero-ready:not(.hero-live) .vh-hero-sub,
 .hero-ready:not(.hero-live) .vh-partner-cell { opacity: 0; }
 
-/* in view = animate */
+/* seen = animate (once) */
 .hero-live .vh-badge { animation: vhFadeRight 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
 .hero-live .vh-kicker { animation: vhFadeRight 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
 .hero-live .vh-hero-title { animation: vhFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s backwards; }
@@ -644,14 +639,6 @@ body { background: #fff; }
    MOBILE FIXES (keep this block LAST so it wins over the rules above)
    ══════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
-  /* whole sections are always visible on phones; inner cards/headings still animate */
-  .sr-ready .sec-wrap.sr,
-  .sr-ready .sec-wrap.sr-left,
-  .sr-ready .sec-wrap.sr-right,
-  .sr-ready .sec-wrap.sr-zoom,
-  .sr-ready .sec-wrap.sr-zoomout,
-  .sr-ready .sec-wrap.sr-up { opacity: 1; transform: none; }
-
   /* no sideways slides on small screens (avoids side gaps / overflow) */
   .sr-ready .sr-left,
   .sr-ready .sr-right { transform: translateY(30px); }
@@ -714,7 +701,7 @@ function useWindowWidth() {
     return width;
 }
 
-// ── Scroll reveal: animates in when visible, resets when it leaves (works scrolling up & down) ──
+// ── Scroll reveal: animates ONCE when first visible, never resets (page refresh = animates again) ──
 function useInView(threshold = 0.15, margin = "0px 0px -6% 0px") {
     const ref = useRef(null);
     const [inView, setInView] = useState(false);
@@ -723,7 +710,16 @@ function useInView(threshold = 0.15, margin = "0px 0px -6% 0px") {
         if (!el) return;
         if (!("IntersectionObserver" in window)) { setInView(true); return; }
         const io = new IntersectionObserver(
-            ([entry]) => setInView(entry.isIntersecting),
+            ([entry]) => {
+                // Animate only when it enters from the BOTTOM (normal scroll down).
+                // If it is already ABOVE the viewport (page restored mid-way / user scrolled up),
+                // mark it as shown silently, so scrolling bottom → top never plays animations.
+                const isAbove = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+                if (entry.isIntersecting || isAbove) {
+                    setInView(true);
+                    io.disconnect(); // once shown, stop watching → no replay on scroll up/down
+                }
+            },
             { threshold, rootMargin: margin }
         );
         io.observe(el);
@@ -852,7 +848,7 @@ function StatIcon({ type, src, label }) {
     return (<svg {...p}><path d="M7 20C3.5 17 3 11 6 6" /><path d="M17 20c3.5-3 4-9 1-14" /><path d="M6 9l-2.5-.5M5.5 13l-2.5.3M8 16.5l-2 1.2M18 9l2.5-.5M18.5 13l2.5.3M16 16.5l2 1.2" /><path d="M10 14l2 2 2-2" /></svg>);
 }
 
-// Counter: runs 0 → target while the section is visible, resets to 0 when it leaves view
+// Counter: runs 0 → target once when the section is first seen, then stays at the final value
 function useCountUp(target, start, duration = 1800) {
     const [val, setVal] = useState(0);
     useEffect(() => {
@@ -892,7 +888,11 @@ function StatsBar() {
         if (!el) return;
         if (!("IntersectionObserver" in window)) { setStarted(true); return; }
         const io = new IntersectionObserver(([entry]) => {
-            setStarted(entry.isIntersecting); // visible = count up, hidden = reset (works on scroll up & down)
+            const isAbove = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+            if (entry.isIntersecting || isAbove) {
+                setStarted(true); // count up once only
+                io.disconnect();
+            }
         }, { threshold: 0.35 });
         io.observe(el);
         return () => io.disconnect();
@@ -1193,7 +1193,8 @@ function HeroImageSlider() {
 const TYPE_WORDS = ["BUSINESS WEBSITES", "ECOMMERCE WEBSITES", "INDUSTRY WEBSITES"];
 
 // Typewriter: types a word, holds, erases, moves to the next word, loops forever.
-// Runs only while `active` (banner in view) so it doesn't waste CPU off-screen.
+// `active` flips to true ONCE (first time the banner is seen) and never goes back to false,
+// so scrolling up/down never stops or restarts it.
 function useTypewriter(words, { type = 90, erase = 45, hold = 1500, active = true } = {}) {
     const [text, setText] = useState("");
     const st = useRef({ w: 0, i: 0, del: false });
@@ -1248,13 +1249,17 @@ function HeroTitle({ active }) {
 }
 
 function HeroSection() {
-    // Banner animations replay every time the banner comes back into view (scroll up & down)
-    const [ref, inView] = useInView(0.2, "0px");
+    // Banner entrance animation plays ONCE (first time the banner is seen)
+    const [ref, seen] = useInView(0.2, "0px");
     const [ready, setReady] = useState(false);
     useEffect(() => { setReady(true); }, []);
 
+    // Typewriter starts once when the banner is first seen, then keeps running.
+    // No live observer anymore → scrolling up/down never stops or restarts it.
+    const typing = seen;
+
     return (
-        <section ref={ref} className={`vh-hero${ready ? " hero-ready" : ""}${inView ? " hero-live" : ""}`} id="about">
+        <section ref={ref} className={`vh-hero${ready ? " hero-ready" : ""}${seen ? " hero-live" : ""}`} id="about">
             <HeroImageSlider />
             <div className="vh-hero-content">
                 <div className="vh-kicker">
@@ -1262,7 +1267,7 @@ function HeroSection() {
                     <span className="vh-kicker-l2">Digital Growth Partner</span>
                 </div>
 
-                <HeroTitle active={inView} />
+                <HeroTitle active={typing} />
 
                 <p className="vh-hero-sub">Tamil Nadu’s Expert Website Development Partner</p>
 
@@ -1876,6 +1881,8 @@ export default function WebsiteDevelopmentLandingPage() {
     const [ready, setReady] = useState(false);
     useEffect(() => { setReady(true); }, []);
 
+    // Sections are plain wrappers now (no slide / zoom per section).
+    // Inner headings & cards still animate ONCE via <Reveal> inside each section.
     return (
         <Layout title={SEO_TITLE} description={SEO_DESC}>
             <SEOHead />
@@ -1884,14 +1891,14 @@ export default function WebsiteDevelopmentLandingPage() {
             <HeroSection />
 
             <div className={ready ? "sr-ready" : ""}>
-                <Reveal dir="zoom"    className="sec-wrap" threshold={0.08}><TrustStripSection /></Reveal>
-                <Reveal dir="left"    className="sec-wrap" threshold={0.08}><PricingSection /></Reveal>
-                <Reveal dir="right"   className="sec-wrap" threshold={0.08}><RecentWorkSection /></Reveal>
-                <Reveal dir="zoomout" className="sec-wrap" threshold={0.08}><ClientLogosGrid /></Reveal>
-                <Reveal dir="left"    className="sec-wrap" threshold={0.08}><TestimonialSlider /></Reveal>
-                <Reveal dir="right"   className="sec-wrap" threshold={0.08}><GetStartedBanner /></Reveal>
-                <Reveal dir="zoom"    className="sec-wrap" threshold={0.05}><FAQSection /></Reveal>
-                <Reveal dir="up"      className="sec-wrap" threshold={0.03} margin="0px"><FooterSection /></Reveal>
+                <div className="sec-wrap"><TrustStripSection /></div>
+                <div className="sec-wrap"><PricingSection /></div>
+                <div className="sec-wrap"><RecentWorkSection /></div>
+                <div className="sec-wrap"><ClientLogosGrid /></div>
+                <div className="sec-wrap"><TestimonialSlider /></div>
+                <div className="sec-wrap"><GetStartedBanner /></div>
+                <div className="sec-wrap"><FAQSection /></div>
+                <div className="sec-wrap"><FooterSection /></div>
             </div>
         </Layout>
     );
