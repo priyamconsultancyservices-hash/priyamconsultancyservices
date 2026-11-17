@@ -44,6 +44,12 @@ future: {
   ],
 
   headTags: [
+    // non-www -> www redirect
+{
+  tagName: 'script',
+  attributes: {},
+  innerHTML: `if (location.hostname === 'priyamconsultancy.com') { location.replace('https://www.priyamconsultancy.com' + location.pathname + location.search + location.hash); }`,
+},
     { tagName: 'meta', attributes: { name: 'google-site-verification', content: 'IO1HxUgZHVz1o7825OKmXZQ_8thaMc5cf0rPfMeFApE' } },
     { tagName: 'meta', attributes: { name: 'msvalidate.01', content: '749C3853DFE8CA5697D84B7714BA8D5D' } },
 
