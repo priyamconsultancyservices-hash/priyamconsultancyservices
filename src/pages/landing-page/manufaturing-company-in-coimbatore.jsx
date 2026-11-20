@@ -88,6 +88,8 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
 .pcs-mfg nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:72px}
 .pcs-mfg .mfg-logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-family:var(--f-head),sans-serif;font-weight:700;font-size:20px}
 .pcs-mfg .mfg-logo span{width:36px;height:36px;border-radius:8px;background:var(--accent);display:grid;place-items:center;font-size:18px}
+.pcs-mfg .mfg-logo img{display:block;height:44px;width:auto;max-width:100%;object-fit:contain}
+.pcs-mfg footer .mfg-logo img{height:50px}
 .pcs-mfg .mfg-menu{display:flex;align-items:center;gap:28px;list-style:none;padding:0}
 .pcs-mfg .mfg-menu a:not(.mfg-btn){color:var(--soft);text-decoration:none;font-size:15px;font-weight:500;position:relative}
 .pcs-mfg .mfg-menu a:not(.mfg-btn):after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--accent-light);transition:width .3s}
@@ -560,128 +562,122 @@ function HeroImageSlider() {
 export default function ManufacturingLandingPage() {
     // All the original page scripts (menu, reveal, orbit, coverflow, slider, process) run once after mount
     useEffect(() => {
-        const root = document.querySelector('.pcs-mfg');
-        root.classList.add('js');
-        const T = [], L = [], OBS = [];
-        const setTimeout = (f, d) => { const id = window.setTimeout(f, d); T.push(id); return id; };
-        const setInterval = (f, d) => { const id = window.setInterval(f, d); T.push(id); return id; };
-        const addEventListener = (t, f, o) => { window.addEventListener(t, f, o); L.push([t, f, o]); };
-        const IO = class extends window.IntersectionObserver { constructor(...a) { super(...a); OBS.push(this); } };
-        document.querySelectorAll('#orb .mfg-onode').forEach((n) => n.remove());
+      const root = document.querySelector('.pcs-mfg');
+      root.classList.add('js');
+      const T = [], L = [], OBS = [];
+      const setTimeout = (f, d) => { const id = window.setTimeout(f, d); T.push(id); return id; };
+      const setInterval = (f, d) => { const id = window.setInterval(f, d); T.push(id); return id; };
+      const addEventListener = (t, f, o) => { window.addEventListener(t, f, o); L.push([t, f, o]); };
+      const IO = class extends window.IntersectionObserver { constructor(...a) { super(...a); OBS.push(this); } };
+      document.querySelectorAll('#orb .mfg-onode').forEach((n) => n.remove());
 
-        const $ = s => document.querySelector(s);
-        const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
+      const $=s=>document.querySelector(s);
+      const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+      
+      // header + menu
+      addEventListener('scroll',()=>$('#hd').classList.toggle('mfg-sc',scrollY>20),{passive:true});
+      $('#burger').onclick=()=>{const o=$('#menu').classList.toggle('mfg-o');$('#burger').setAttribute('aria-expanded',o)};
+      document.querySelectorAll('.mfg-menu a').forEach(a=>a.addEventListener('click',()=>$('#menu').classList.remove('mfg-o')));
+      
+      // scroll reveal
+      const io=new IO(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('mfg-in');io.unobserve(e.target)}}),{threshold:.15});
+      document.querySelectorAll('.mfg-rv').forEach(el=>io.observe(el));
+      document.querySelectorAll('.mfg-plist li').forEach((s,i)=>{s.classList.add('mfg-rv');s.style.transitionDelay=(i*.08)+'s';io.observe(s)});
+      
+      // form
+      $('#enq').addEventListener('submit',e=>{e.preventDefault();$('#ok').classList.add('mfg-show')});
+      
+      // ===== Solution: 8 services, orbit + list =====
+      const ICON={
+       logo:'<path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/>',
+       web:'<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/>',
+       seo:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11l2 2 4-4"/>',
+       gbp:'<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+       ai:'<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h4"/>',
+       bro:'<path d="M4 4h10l6 6v10H4z"/><path d="M14 4v6h6M8 14h8M8 17h5"/>',
+       card:'<rect x="2" y="6" width="20" height="13" rx="2"/><path d="M6 11h5M6 14h8"/>',
+       soc:'<rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><path d="M16.5 7.5h.01"/>'
+      };
+      const SV=[
+       ['logo','Logo & Brand Identity','A logo that signals quality and scale, plus the system that keeps your brand consistent everywhere.','Logo concepts · Colours · Typography · Brand guidelines'],
+       ['web','Website Development','A fast, mobile-friendly website built to turn visitors into enquiries.','Product & capability pages · Enquiry forms · WhatsApp'],
+       ['seo','SEO & Online Visibility','Rank for the searches your buyers use and get listed where they look.','Keyword research · On-page & local SEO · B2B directories'],
+       ['gbp','Google Business Profile','Show up on Google Maps when buyers search for manufacturers near them.','Setup & verification · Photos · Products · Reviews'],
+       ['ai','ChatGPT Search Visibility','Get recommended when buyers ask ChatGPT, Gemini or Perplexity for suppliers.','Entity setup · Structured data · Citations · AI-ready content'],
+       ['bro','Company Profile & Brochure','A sales-ready document that shows your factory, capabilities, certifications and clients.','Company profile · Product brochure · Print + PDF'],
+       ['card','Business Cards & Letterhead','Every card, quotation, invoice and email looks like it comes from an established company.','Business cards · Letterhead · Quotation & invoice · Email signature'],
+       ['soc','Social Media Kit','A consistent, professional look on LinkedIn, Instagram and Facebook from day one.','Profile & cover designs · Post templates · LinkedIn page']
+      ];
+      const esc=s=>s.replace(/&/g,'&amp;');
+      const svg=(k,s)=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
+      const slist=$('#slist'),orb=$('#orb'),hub=$('#hub'),sol=$('.mfg-sol');
+      slist.innerHTML=SV.map((s,i)=>`<li><button class="mfg-sbtn" type="button" aria-expanded="false"><span class="mfg-n">${String(i+1).padStart(2,'0')}</span><span class="mfg-t">${esc(s[1])}</span><span class="mfg-ar" aria-hidden="true">→</span><span class="mfg-sprog"></span></button><div class="mfg-sdet"><div><p>${esc(s[2])}</p><small>${esc(s[3])}</small></div></div></li>`).join('');
+      SV.forEach((s,i)=>{const a=(-90+i*45)*Math.PI/180,b=document.createElement('button');b.type='button';b.className='mfg-onode';b.setAttribute('aria-label',s[1]);b.style.left=(50+44*Math.cos(a))+'%';b.style.top=(50+44*Math.sin(a))+'%';b.innerHTML=svg(s[0],26);b.onclick=()=>sel(i,true);orb.appendChild(b)});
+      const lis=[...slist.children],nodes=[...orb.querySelectorAll('.mfg-onode')];
+      let si=-1,stm;const DUR=4500;
+      function sel(i,user){i=(i+SV.length)%SV.length;if(i===si&&!user)return;si=i;
+       lis.forEach((l,k)=>{l.classList.toggle('mfg-on',k===i);l.querySelector('.mfg-sbtn').setAttribute('aria-expanded',k===i);const p=l.querySelector('.mfg-sprog');p.style.animation='none';p.offsetWidth;p.style.animation=''});
+       nodes.forEach((n,k)=>n.classList.toggle('mfg-on',k===i));
+       hub.classList.add('mfg-sw');setTimeout(()=>{$('#hubIc').innerHTML=svg(SV[i][0],44);$('#hubN').textContent=String(i+1).padStart(2,'0')+' / 08';$('#hubT').textContent=SV[i][1];hub.classList.remove('mfg-sw')},250);
+       clearTimeout(stm);if(!reduce)stm=setTimeout(()=>sel(si+1),DUR)}
+      lis.forEach((l,i)=>l.querySelector('.mfg-sbtn').onclick=()=>sel(i,true));
+      sol.addEventListener('mouseenter',()=>{sol.classList.add('mfg-paused');clearTimeout(stm)});
+      sol.addEventListener('mouseleave',()=>{sol.classList.remove('mfg-paused');if(!reduce)stm=setTimeout(()=>sel(si+1),1800)});
+      sel(0);
+      
+      // ===== Testimonials slider =====
+      const ts=[...document.querySelectorAll('.mfg-tslide')],td=$('#tdots');let ti=0,ttm;
+      td.innerHTML=ts.map((_,i)=>`<button type="button" aria-label="Testimonial ${i+1}"></button>`).join('');
+      const tds=[...td.children];
+      function tgo(i){ti=(i+ts.length)%ts.length;ts.forEach((s,k)=>s.classList.toggle('mfg-on',k===ti));tds.forEach((d,k)=>d.classList.toggle('mfg-on',k===ti));clearInterval(ttm);if(!reduce)ttm=setInterval(()=>tgo(ti+1),6000)}
+      tds.forEach((d,i)=>d.onclick=()=>tgo(i));$('#tp').onclick=()=>tgo(ti-1);$('#tn').onclick=()=>tgo(ti+1);tgo(0);
+      
+      // ===== How it works: static centre + 3 left / 3 right =====
+      (()=>{
+      const rd=$('#rdWrap'),rows=[...rd.querySelectorAll('.mfg-rd-row')],P=$('#rcP');
+      let timer;
+      function set(n){
+        rows.forEach((r,i)=>{r.classList.toggle('mfg-on',i<=n);r.classList.toggle('mfg-cur',i===n);r.classList.toggle('mfg-done',i<n)});
+        P.style.strokeDashoffset=100-(n+1)/rows.length*100;
+      }
+      function play(){let k=0;(function nx(){set(k);if(++k<rows.length)timer=setTimeout(nx,750)})()}
+      rows.forEach((r,i)=>r.querySelector('.mfg-rd-node').onclick=()=>{clearTimeout(timer);set(i)});
+      if(reduce){set(rows.length-1)}
+      else{const o=new IO(es=>{if(es[0].isIntersecting){o.disconnect();play()}},{threshold:.3});o.observe(rd)}
+      })();
+      
+      // ===== Coverflow portfolio (from reference design) =====
+      const MK='<div class=mfg-mk><b></b><u></u><s><span></span><span></span><span></span><span></span></s></div>';
+      const PF=[
+       ["Package Design","Package Portfolio","linear-gradient(150deg,#14532d,#ca8a04)","<div class=mfg-gl style='transform:rotate(-8deg);color:#fef08a;font-size:40px'>MORINGA<br>IDLY PODI</div>"],
+       ["Logo Design","Logo Portfolio","linear-gradient(150deg,#064e3b,#0f172a)","<div class=mfg-gl style='font-family:Georgia,serif;color:#e5c07b;font-size:70px'>Dha<br><small style='font-size:14px;letter-spacing:6px'>JEWELLERS</small></div>"],
+       ["E-Commerce","E-Commerce Portfolio","linear-gradient(150deg,var(--d1),#7c3aed)",MK],
+       ["Website Design","Website Portfolio","linear-gradient(150deg,#0c4a6e,var(--a3))",MK],
+       ["Brochure Design","Brochure Portfolio","linear-gradient(150deg,#1e293b,#475569)","<div class=mfg-gl style='transform:rotate(-10deg);font-size:80px;opacity:.7'>▤▥</div>"]
+      ];
+      const cv=$('#cv'),dt=$('#dts'),N=PF.length;let cur=2,tm;
+      cv.innerHTML=PF.map(p=>`<div class="mfg-cd" role="group" aria-roledescription="slide" aria-label="${p[1]}" style="background:${p[2]}"><div class="mfg-art" aria-hidden="true"><img src=\"${PH(p[1])}\" alt=\"${p[1]}\" loading=\"lazy\"></div><div class="mfg-ov"></div><div class="mfg-tx"><small>${p[0]}</small><h3>${p[1]}</h3><em>VIEW PROJECT →</em><i aria-hidden="true">→</i></div></div>`).join('');
+      dt.innerHTML=PF.map(p=>`<button type="button" aria-label="Show ${p[1]}"></button>`).join('');
+      const cds=[...cv.children],dts=[...dt.children];
+      function lay(){const cw=Math.min(400,cv.clientWidth*.62),u=cw*.75;
+       cds.forEach((c,i)=>{const d=((i-cur+2)%N+N)%N-2,ad=Math.abs(d),s=[1,.78,.64][ad],x=d===0?0:Math.sign(d)*(u+(ad-1)*cw*.55);
+        c.style.width=cw+'px';c.style.height=Math.min(450,cw*1.12)+'px';
+        c.style.transform=`translateX(calc(-50% + ${x}px)) scale(${s}) rotateY(${-d*8}deg)`;
+        c.style.zIndex=10-ad*3;c.style.opacity=[1,.92,.55][ad];c.classList.toggle('mfg-a',d===0)});
+       dts.forEach((b,i)=>{b.classList.toggle('mfg-a',i===cur);b.setAttribute('aria-current',i===cur)})}
+      function go(i){cur=(i+N)%N;lay();clearInterval(tm);if(!reduce)tm=setInterval(()=>go(cur+1),4500)}
+      cds.forEach((c,i)=>c.onclick=()=>go(i));dts.forEach((b,i)=>b.onclick=()=>go(i));
+      $('#pv').onclick=()=>go(cur-1);$('#nx').onclick=()=>go(cur+1);
+      let tx0=0;cv.addEventListener('touchstart',e=>tx0=e.touches[0].clientX,{passive:true});
+      cv.addEventListener('touchend',e=>{const d=e.changedTouches[0].clientX-tx0;if(Math.abs(d)>40)go(cur+(d<0?1:-1))});
+      cv.addEventListener('mouseenter',()=>clearInterval(tm));cv.addEventListener('mouseleave',()=>go(cur));
+      addEventListener('resize',lay);go(2);
 
-        // header + menu
-        addEventListener('scroll', () => $('#hd').classList.toggle('mfg-sc', scrollY > 20), { passive: true });
-        $('#burger').onclick = () => { const o = $('#menu').classList.toggle('mfg-o'); $('#burger').setAttribute('aria-expanded', o) };
-        document.querySelectorAll('.mfg-menu a').forEach(a => a.addEventListener('click', () => $('#menu').classList.remove('mfg-o')));
-
-        // scroll reveal
-        const io = new IO(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('mfg-in'); io.unobserve(e.target) } }), { threshold: .15 });
-        document.querySelectorAll('.mfg-rv').forEach(el => io.observe(el));
-        document.querySelectorAll('.mfg-plist li').forEach((s, i) => { s.classList.add('mfg-rv'); s.style.transitionDelay = (i * .08) + 's'; io.observe(s) });
-
-        // form
-        $('#enq').addEventListener('submit', e => { e.preventDefault(); $('#ok').classList.add('mfg-show') });
-
-        // ===== Solution: 8 services, orbit + list =====
-        const ICON = {
-            logo: '<path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/>',
-            web: '<rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18M8 21h8"/>',
-            seo: '<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5M8 11l2 2 4-4"/>',
-            gbp: '<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
-            ai: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><path d="M9 11h6M9 14h4"/>',
-            bro: '<path d="M4 4h10l6 6v10H4z"/><path d="M14 4v6h6M8 14h8M8 17h5"/>',
-            card: '<rect x="2" y="6" width="20" height="13" rx="2"/><path d="M6 11h5M6 14h8"/>',
-            soc: '<rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><path d="M16.5 7.5h.01"/>'
-        };
-        const SV = [
-            ['logo', 'Logo & Brand Identity', 'A logo that signals quality and scale, plus the system that keeps your brand consistent everywhere.', 'Logo concepts · Colours · Typography · Brand guidelines'],
-            ['web', 'Website Development', 'A fast, mobile-friendly website built to turn visitors into enquiries.', 'Product & capability pages · Enquiry forms · WhatsApp'],
-            ['seo', 'SEO & Online Visibility', 'Rank for the searches your buyers use and get listed where they look.', 'Keyword research · On-page & local SEO · B2B directories'],
-            ['gbp', 'Google Business Profile', 'Show up on Google Maps when buyers search for manufacturers near them.', 'Setup & verification · Photos · Products · Reviews'],
-            ['ai', 'ChatGPT Search Visibility', 'Get recommended when buyers ask ChatGPT, Gemini or Perplexity for suppliers.', 'Entity setup · Structured data · Citations · AI-ready content'],
-            ['bro', 'Company Profile & Brochure', 'A sales-ready document that shows your factory, capabilities, certifications and clients.', 'Company profile · Product brochure · Print + PDF'],
-            ['card', 'Business Cards & Letterhead', 'Every card, quotation, invoice and email looks like it comes from an established company.', 'Business cards · Letterhead · Quotation & invoice · Email signature'],
-            ['soc', 'Social Media Kit', 'A consistent, professional look on LinkedIn, Instagram and Facebook from day one.', 'Profile & cover designs · Post templates · LinkedIn page']
-        ];
-        const esc = s => s.replace(/&/g, '&amp;');
-        const svg = (k, s) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[k]}</svg>`;
-        const slist = $('#slist'), orb = $('#orb'), hub = $('#hub'), sol = $('.mfg-sol');
-        slist.innerHTML = SV.map((s, i) => `<li><button class="mfg-sbtn" type="button" aria-expanded="false"><span class="mfg-n">${String(i + 1).padStart(2, '0')}</span><span class="mfg-t">${esc(s[1])}</span><span class="mfg-ar" aria-hidden="true">→</span><span class="mfg-sprog"></span></button><div class="mfg-sdet"><div><p>${esc(s[2])}</p><small>${esc(s[3])}</small></div></div></li>`).join('');
-        SV.forEach((s, i) => { const a = (-90 + i * 45) * Math.PI / 180, b = document.createElement('button'); b.type = 'button'; b.className = 'mfg-onode'; b.setAttribute('aria-label', s[1]); b.style.left = (50 + 44 * Math.cos(a)) + '%'; b.style.top = (50 + 44 * Math.sin(a)) + '%'; b.innerHTML = svg(s[0], 26); b.onclick = () => sel(i, true); orb.appendChild(b) });
-        const lis = [...slist.children], nodes = [...orb.querySelectorAll('.mfg-onode')];
-        let si = -1, stm; const DUR = 4500;
-        function sel(i, user) {
-            i = (i + SV.length) % SV.length; if (i === si && !user) return; si = i;
-            lis.forEach((l, k) => { l.classList.toggle('mfg-on', k === i); l.querySelector('.mfg-sbtn').setAttribute('aria-expanded', k === i); const p = l.querySelector('.mfg-sprog'); p.style.animation = 'none'; p.offsetWidth; p.style.animation = '' });
-            nodes.forEach((n, k) => n.classList.toggle('mfg-on', k === i));
-            hub.classList.add('mfg-sw'); setTimeout(() => { $('#hubIc').innerHTML = svg(SV[i][0], 44); $('#hubN').textContent = String(i + 1).padStart(2, '0') + ' / 08'; $('#hubT').textContent = SV[i][1]; hub.classList.remove('mfg-sw') }, 250);
-            clearTimeout(stm); if (!reduce) stm = setTimeout(() => sel(si + 1), DUR)
-        }
-        lis.forEach((l, i) => l.querySelector('.mfg-sbtn').onclick = () => sel(i, true));
-        sol.addEventListener('mouseenter', () => { sol.classList.add('mfg-paused'); clearTimeout(stm) });
-        sol.addEventListener('mouseleave', () => { sol.classList.remove('mfg-paused'); if (!reduce) stm = setTimeout(() => sel(si + 1), 1800) });
-        sel(0);
-
-        // ===== Testimonials slider =====
-        const ts = [...document.querySelectorAll('.mfg-tslide')], td = $('#tdots'); let ti = 0, ttm;
-        td.innerHTML = ts.map((_, i) => `<button type="button" aria-label="Testimonial ${i + 1}"></button>`).join('');
-        const tds = [...td.children];
-        function tgo(i) { ti = (i + ts.length) % ts.length; ts.forEach((s, k) => s.classList.toggle('mfg-on', k === ti)); tds.forEach((d, k) => d.classList.toggle('mfg-on', k === ti)); clearInterval(ttm); if (!reduce) ttm = setInterval(() => tgo(ti + 1), 6000) }
-        tds.forEach((d, i) => d.onclick = () => tgo(i)); $('#tp').onclick = () => tgo(ti - 1); $('#tn').onclick = () => tgo(ti + 1); tgo(0);
-
-        // ===== How it works: static centre + 3 left / 3 right =====
-        (() => {
-            const rd = $('#rdWrap'), rows = [...rd.querySelectorAll('.mfg-rd-row')], P = $('#rcP');
-            let timer;
-            function set(n) {
-                rows.forEach((r, i) => { r.classList.toggle('mfg-on', i <= n); r.classList.toggle('mfg-cur', i === n); r.classList.toggle('mfg-done', i < n) });
-                P.style.strokeDashoffset = 100 - (n + 1) / rows.length * 100;
-            }
-            function play() { let k = 0; (function nx() { set(k); if (++k < rows.length) timer = setTimeout(nx, 750) })() }
-            rows.forEach((r, i) => r.querySelector('.mfg-rd-node').onclick = () => { clearTimeout(timer); set(i) });
-            if (reduce) { set(rows.length - 1) }
-            else { const o = new IO(es => { if (es[0].isIntersecting) { o.disconnect(); play() } }, { threshold: .3 }); o.observe(rd) }
-        })();
-
-        // ===== Coverflow portfolio (from reference design) =====
-        const MK = '<div class=mfg-mk><b></b><u></u><s><span></span><span></span><span></span><span></span></s></div>';
-        const PF = [
-            ["Package Design", "Package Portfolio", "linear-gradient(150deg,#14532d,#ca8a04)", "<div class=mfg-gl style='transform:rotate(-8deg);color:#fef08a;font-size:40px'>MORINGA<br>IDLY PODI</div>"],
-            ["Logo Design", "Logo Portfolio", "linear-gradient(150deg,#064e3b,#0f172a)", "<div class=mfg-gl style='font-family:Georgia,serif;color:#e5c07b;font-size:70px'>Dha<br><small style='font-size:14px;letter-spacing:6px'>JEWELLERS</small></div>"],
-            ["E-Commerce", "E-Commerce Portfolio", "linear-gradient(150deg,var(--d1),#7c3aed)", MK],
-            ["Website Design", "Website Portfolio", "linear-gradient(150deg,#0c4a6e,var(--a3))", MK],
-            ["Brochure Design", "Brochure Portfolio", "linear-gradient(150deg,#1e293b,#475569)", "<div class=mfg-gl style='transform:rotate(-10deg);font-size:80px;opacity:.7'>▤▥</div>"]
-        ];
-        const cv = $('#cv'), dt = $('#dts'), N = PF.length; let cur = 2, tm;
-        cv.innerHTML = PF.map(p => `<div class="mfg-cd" role="group" aria-roledescription="slide" aria-label="${p[1]}" style="background:${p[2]}"><div class="mfg-art" aria-hidden="true"><img src=\"${PH(p[1])}\" alt=\"${p[1]}\" loading=\"lazy\"></div><div class="mfg-ov"></div><div class="mfg-tx"><small>${p[0]}</small><h3>${p[1]}</h3><em>VIEW PROJECT →</em><i aria-hidden="true">→</i></div></div>`).join('');
-        dt.innerHTML = PF.map(p => `<button type="button" aria-label="Show ${p[1]}"></button>`).join('');
-        const cds = [...cv.children], dts = [...dt.children];
-        function lay() {
-            const cw = Math.min(400, cv.clientWidth * .62), u = cw * .75;
-            cds.forEach((c, i) => {
-                const d = ((i - cur + 2) % N + N) % N - 2, ad = Math.abs(d), s = [1, .78, .64][ad], x = d === 0 ? 0 : Math.sign(d) * (u + (ad - 1) * cw * .55);
-                c.style.width = cw + 'px'; c.style.height = Math.min(450, cw * 1.12) + 'px';
-                c.style.transform = `translateX(calc(-50% + ${x}px)) scale(${s}) rotateY(${-d * 8}deg)`;
-                c.style.zIndex = 10 - ad * 3; c.style.opacity = [1, .92, .55][ad]; c.classList.toggle('mfg-a', d === 0)
-            });
-            dts.forEach((b, i) => { b.classList.toggle('mfg-a', i === cur); b.setAttribute('aria-current', i === cur) })
-        }
-        function go(i) { cur = (i + N) % N; lay(); clearInterval(tm); if (!reduce) tm = setInterval(() => go(cur + 1), 4500) }
-        cds.forEach((c, i) => c.onclick = () => go(i)); dts.forEach((b, i) => b.onclick = () => go(i));
-        $('#pv').onclick = () => go(cur - 1); $('#nx').onclick = () => go(cur + 1);
-        let tx0 = 0; cv.addEventListener('touchstart', e => tx0 = e.touches[0].clientX, { passive: true });
-        cv.addEventListener('touchend', e => { const d = e.changedTouches[0].clientX - tx0; if (Math.abs(d) > 40) go(cur + (d < 0 ? 1 : -1)) });
-        cv.addEventListener('mouseenter', () => clearInterval(tm)); cv.addEventListener('mouseleave', () => go(cur));
-        addEventListener('resize', lay); go(2);
-
-        return () => {
-            T.forEach((id) => { window.clearTimeout(id); window.clearInterval(id); });
-            L.forEach(([t, f, o]) => window.removeEventListener(t, f, o));
-            OBS.forEach((o) => o.disconnect());
-        };
+      return () => {
+        T.forEach((id) => { window.clearTimeout(id); window.clearInterval(id); });
+        L.forEach(([t, f, o]) => window.removeEventListener(t, f, o));
+        OBS.forEach((o) => o.disconnect());
+      };
     }, []);
 
     return (
@@ -689,265 +685,269 @@ export default function ManufacturingLandingPage() {
             <SEOHead />
             <PageStyles />
             <div className="pcs-mfg">
-                <header id="hd">
-                    <div className="mfg-wrap"><nav aria-label="Main">
-                        <a className="mfg-logo" href="#top"><span>A</span>[Agency Name]</a>
-                        <ul className="mfg-menu" id="menu">
-                            <li><a href="#problems">Problems</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
-                            <li><a href="#process">Process</a></li>
-                            <li><a href="#pricing">Packages</a></li>
-                            <li><a href="#faq">FAQ</a></li>
-                            <li><a className="mfg-btn mfg-btn-primary" href="#quote">Get Package Details</a></li>
-                        </ul>
-                        <button className="mfg-burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
-                    </nav></div>
-                </header>
+<header id="hd">
+<div className="mfg-wrap"><nav aria-label="Main">
+<a className="mfg-logo" href="#top" aria-label="Priyam Consultancy Services"><img src="/img/footer-logo.png" alt="Priyam Consultancy Services" width="160" height="44" decoding="async" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = "/img/priyam-consultancy-logo.png"; e.currentTarget.style.filter = "brightness(0) invert(1)"; }} /></a>
+<ul className="mfg-menu" id="menu">
+<li><a href="#problems">Problems</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#portfolio">Portfolio</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#pricing">Packages</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a className="mfg-btn mfg-btn-primary" href="#quote">Get Package Details</a></li>
+</ul>
+<button className="mfg-burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+</nav></div>
+</header>
 
-                <div id="top">
-
-
-                    <section className="mfg-hero mfg-dark">
-                        <HeroImageSlider />
-                        <div className="mfg-wrap">
-                            <div className="mfg-rv mfg-l">
-                                <span className="mfg-pill">For Manufacturers &amp; Factories</span>
-                                <h1>Complete Brand Kit + Digital Setup. <em>One Package.</em></h1>
-                                <p>From your logo to your Google ranking — a professional identity and online presence for your factory, delivered by one team with one point of contact.</p>
-                                <div className="mfg-ctas"><a className="mfg-btn mfg-btn-primary" href="#quote">Get Package Details</a><a className="mfg-btn mfg-btn-outline" href="#quote">Book Free Consultation</a></div>
-                                <div className="mfg-stats">
-                                    <div><b>[XX]+</b><span>Manufacturers served</span></div>
-                                    <div><b>[XX] days</b><span>Average delivery</span></div>
-                                    <div><b>8-in-1</b><span>Services, one team</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <div className="mfg-mq" aria-label="Services"><div>
-                        <span>Logo &amp; Brand Identity</span><span>Website Development</span><span>SEO &amp; Online Visibility</span><span>Google Business Profile</span><span>ChatGPT Search Visibility</span><span>Company Profile &amp; Brochure</span><span>Business Cards &amp; Letterhead</span><span>Social Media Kit</span>
-                        <span aria-hidden="true">Logo &amp; Brand Identity</span><span aria-hidden="true">Website Development</span><span aria-hidden="true">SEO &amp; Online Visibility</span><span aria-hidden="true">Google Business Profile</span><span aria-hidden="true">ChatGPT Search Visibility</span><span aria-hidden="true">Company Profile &amp; Brochure</span><span aria-hidden="true">Business Cards &amp; Letterhead</span><span aria-hidden="true">Social Media Kit</span>
-                    </div></div>
+<div id="top">
 
 
-                    <section id="problems" className="mfg-prob">
-                        <div className="mfg-wrap">
-                            <div className="mfg-pvis mfg-rv mfg-l" aria-hidden="true">
-                                <div className="mfg-grid-bg"></div>
-                                <div className="mfg-orbit"></div>
-                                <div className="mfg-factory">
-                                    <span className="mfg-smoke mfg-s1"></span><span className="mfg-smoke mfg-s2"></span><span className="mfg-smoke mfg-s3"></span><span className="mfg-smoke mfg-s4"></span>
-                                    <svg viewBox="0 0 220 170" width="220" height="170">
-                                        <rect x="48" y="10" width="20" height="70" rx="2" fill="#4A5F80" /><rect x="108" y="30" width="20" height="50" rx="2" fill="#4A5F80" />
-                                        <path d="M10 80 L70 50 L70 80 L130 50 L130 80 L190 50 L190 160 L10 160 Z" fill="#2A3B55" />
-                                        <path d="M10 80 L70 50 L70 80 L130 50 L130 80 L190 50" fill="none" stroke="#FF8A4C" strokeWidth="3" strokeLinejoin="round" />
-                                        <g fill="#FFB48A" opacity=".85"><rect x="28" y="100" width="22" height="16" rx="2" /><rect x="62" y="100" width="22" height="16" rx="2" /><rect x="96" y="100" width="22" height="16" rx="2" /><rect x="130" y="100" width="22" height="16" rx="2" /></g>
-                                        <rect x="160" y="112" width="24" height="48" rx="2" fill="#0F1B2D" /><rect x="0" y="158" width="220" height="4" rx="2" fill="#4A5F80" />
-                                    </svg>
-                                </div>
-                                <div className="mfg-pchip mfg-pc1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" /></svg>Compared only on price</div>
-                                <div className="mfg-pchip mfg-pc2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" /></svg>Middlemen take margin</div>
-                                <div className="mfg-pchip mfg-pc3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" /></svg>Weak first impression</div>
-                                <div className="mfg-pchip mfg-pc4"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" /></svg>Lost tenders</div>
-                                <div className="mfg-pchip mfg-pc5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" /></svg>Costly portal leads</div>
-                                <div className="mfg-pchip mfg-pc6"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z" /></svg>Invisible on Google &amp; AI</div>
-                                <span className="mfg-tag">Your factory today</span>
-                            </div>
-                            <div className="mfg-rv mfg-r">
-                                <span className="mfg-eyebrow">The problem</span>
-                                <h2>Why good manufacturers still lose orders</h2>
-                                <p className="mfg-lead">Most factories compete on quality and price, but buyers decide long before they call.</p>
-                                <ul className="mfg-plist">
-                                    <li><span>01</span><div><b>Seen as "just another supplier"</b><p>Without a brand, buyers compare you only on price.</p></div></li>
-                                    <li><span>02</span><div><b>Middlemen take the margin</b><p>Traders own the buyer relationship and the profit.</p></div></li>
-                                    <li><span>03</span><div><b>First impression doesn't match the factory</b><p>An old logo or WhatsApp PDF makes a big unit look small.</p></div></li>
-                                    <li><span>04</span><div><b>Losing tenders and export buyers</b><p>They expect a company profile, website and consistent brand.</p></div></li>
-                                    <li><span>05</span><div><b>Paying for low-quality portal leads</b><p>Shared leads mean you fight on price every time.</p></div></li>
-                                    <li><span>06</span><div><b>Invisible on Google and ChatGPT</b><p>Buyers searching for suppliers find your competitors.</p></div></li>
-                                </ul>
-                                <p className="mfg-bridge"><span>Sound familiar?</span> The fix is a brand and digital presence that sells for you.</p>
-                            </div>
-                        </div>
-                    </section>
+<section className="mfg-hero mfg-dark">
+<HeroImageSlider />
+<div className="mfg-wrap">
+<div className="mfg-rv mfg-l">
+<span className="mfg-pill">For Manufacturers &amp; Factories</span>
+<h1>Complete Brand Kit + Digital Setup. <em>One Package.</em></h1>
+<p>From your logo to your Google ranking — a professional identity and online presence for your factory, delivered by one team with one point of contact.</p>
+<div className="mfg-ctas"><a className="mfg-btn mfg-btn-primary" href="#quote">Get Package Details</a><a className="mfg-btn mfg-btn-outline" href="#quote">Book Free Consultation</a></div>
+<div className="mfg-stats">
+<div><b>[XX]+</b><span>Manufacturers served</span></div>
+<div><b>[XX] days</b><span>Average delivery</span></div>
+<div><b>8-in-1</b><span>Services, one team</span></div>
+</div>
+</div>
+</div>
+</section>
+
+<div className="mfg-mq" aria-label="Services"><div>
+<span>Logo &amp; Brand Identity</span><span>Website Development</span><span>SEO &amp; Online Visibility</span><span>Google Business Profile</span><span>ChatGPT Search Visibility</span><span>Company Profile &amp; Brochure</span><span>Business Cards &amp; Letterhead</span><span>Social Media Kit</span>
+<span aria-hidden="true">Logo &amp; Brand Identity</span><span aria-hidden="true">Website Development</span><span aria-hidden="true">SEO &amp; Online Visibility</span><span aria-hidden="true">Google Business Profile</span><span aria-hidden="true">ChatGPT Search Visibility</span><span aria-hidden="true">Company Profile &amp; Brochure</span><span aria-hidden="true">Business Cards &amp; Letterhead</span><span aria-hidden="true">Social Media Kit</span>
+</div></div>
 
 
-                    <section id="services" className="mfg-sol mfg-dark">
-                        <div className="mfg-wrap">
-                            <div className="mfg-rv mfg-l">
-                                <span className="mfg-eyebrow">The solution</span>
-                                <h2>One package. Complete brand + digital presence.</h2>
-                                <p className="mfg-lead">Eight services, built together by one team, so everything looks and works as one brand.</p>
-                                <ul className="mfg-slist" id="slist"></ul>
-                            </div>
-                            <div className="mfg-rv mfg-z">
-                                <div className="mfg-orb" id="orb">
-                                    <div className="mfg-r2"></div><div className="mfg-r1"></div><div className="mfg-r3"></div>
-                                    <div className="mfg-hub" id="hub" aria-live="polite"><span className="mfg-hi" id="hubIc"></span><small id="hubN">01</small><b id="hubT"></b></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+<section id="problems" className="mfg-prob">
+<div className="mfg-wrap">
+<div className="mfg-pvis mfg-rv mfg-l" aria-hidden="true">
+<div className="mfg-grid-bg"></div>
+<div className="mfg-orbit"></div>
+<div className="mfg-factory">
+<span className="mfg-smoke mfg-s1"></span><span className="mfg-smoke mfg-s2"></span><span className="mfg-smoke mfg-s3"></span><span className="mfg-smoke mfg-s4"></span>
+<svg viewBox="0 0 220 170" width="220" height="170">
+<rect x="48" y="10" width="20" height="70" rx="2" fill="#4A5F80"/><rect x="108" y="30" width="20" height="50" rx="2" fill="#4A5F80"/>
+<path d="M10 80 L70 50 L70 80 L130 50 L130 80 L190 50 L190 160 L10 160 Z" fill="#2A3B55"/>
+<path d="M10 80 L70 50 L70 80 L130 50 L130 80 L190 50" fill="none" stroke="#FF8A4C" strokeWidth="3" strokeLinejoin="round"/>
+<g fill="#FFB48A" opacity=".85"><rect x="28" y="100" width="22" height="16" rx="2"/><rect x="62" y="100" width="22" height="16" rx="2"/><rect x="96" y="100" width="22" height="16" rx="2"/><rect x="130" y="100" width="22" height="16" rx="2"/></g>
+<rect x="160" y="112" width="24" height="48" rx="2" fill="#0F1B2D"/><rect x="0" y="158" width="220" height="4" rx="2" fill="#4A5F80"/>
+</svg>
+</div>
+<div className="mfg-pchip mfg-pc1"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Compared only on price</div>
+<div className="mfg-pchip mfg-pc2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Middlemen take margin</div>
+<div className="mfg-pchip mfg-pc3"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Weak first impression</div>
+<div className="mfg-pchip mfg-pc4"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Lost tenders</div>
+<div className="mfg-pchip mfg-pc5"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Costly portal leads</div>
+<div className="mfg-pchip mfg-pc6"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C2410C" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Invisible on Google &amp; AI</div>
+<span className="mfg-tag">Your factory today</span>
+</div>
+<div className="mfg-rv mfg-r">
+<span className="mfg-eyebrow">The problem</span>
+<h2>Why good manufacturers still lose orders</h2>
+<p className="mfg-lead">Most factories compete on quality and price, but buyers decide long before they call.</p>
+<ul className="mfg-plist">
+<li><span>01</span><div><b>Seen as "just another supplier"</b><p>Without a brand, buyers compare you only on price.</p></div></li>
+<li><span>02</span><div><b>Middlemen take the margin</b><p>Traders own the buyer relationship and the profit.</p></div></li>
+<li><span>03</span><div><b>First impression doesn't match the factory</b><p>An old logo or WhatsApp PDF makes a big unit look small.</p></div></li>
+<li><span>04</span><div><b>Losing tenders and export buyers</b><p>They expect a company profile, website and consistent brand.</p></div></li>
+<li><span>05</span><div><b>Paying for low-quality portal leads</b><p>Shared leads mean you fight on price every time.</p></div></li>
+<li><span>06</span><div><b>Invisible on Google and ChatGPT</b><p>Buyers searching for suppliers find your competitors.</p></div></li>
+</ul>
+<p className="mfg-bridge"><span>Sound familiar?</span> The fix is a brand and digital presence that sells for you.</p>
+</div>
+</div>
+</section>
 
 
-                    <section id="portfolio" className="mfg-pw" aria-label="Portfolio">
-                        <div className="mfg-dots" aria-hidden="true"></div><span className="mfg-pb mfg-pb1" aria-hidden="true"></span><span className="mfg-pb mfg-pb2" aria-hidden="true"></span><span className="mfg-pb mfg-pb3" aria-hidden="true"></span><span className="mfg-ln" aria-hidden="true"></span>
-                        <div className="mfg-bgt" aria-hidden="true">PORTFOLIO</div>
-                        <div className="mfg-lb">Our Creative Work</div>
-                        <h2>Brand kits and websites we've built</h2>
-                        <div className="mfg-cvw">
-                            <button className="mfg-nv" id="pv" style={{ left: '4%' }} aria-label="Previous project">‹</button>
-                            <div className="mfg-cv" id="cv"></div>
-                            <button className="mfg-nv" id="nx" style={{ right: '4%' }} aria-label="Next project">›</button>
-                        </div>
-                        <div className="mfg-dts" id="dts"></div>
-                        <div className="mfg-more"><a className="mfg-btn mfg-btn-dark" href="#quote">Request Full Portfolio</a></div>
-                    </section>
+<section id="services" className="mfg-sol mfg-dark">
+<div className="mfg-wrap">
+<div className="mfg-rv mfg-l">
+<span className="mfg-eyebrow">The solution</span>
+<h2>One package. Complete brand + digital presence.</h2>
+<p className="mfg-lead">Eight services, built together by one team, so everything looks and works as one brand.</p>
+<ul className="mfg-slist" id="slist"></ul>
+</div>
+<div className="mfg-rv mfg-z">
+<div className="mfg-orb" id="orb">
+<div className="mfg-r2"></div><div className="mfg-r1"></div><div className="mfg-r3"></div>
+<div className="mfg-hub" id="hub" aria-live="polite"><span className="mfg-hi" id="hubIc"></span><small id="hubN">01</small><b id="hubT"></b></div>
+</div>
+</div>
+</div>
+</section>
 
 
-                    <section id="process" className="mfg-hw">
-                        <div className="mfg-wrap">
-                            <div className="mfg-rd-head"><h2>How it works<span>(Step-by-step)</span></h2><p className="mfg-lead">Six simple steps from first call to launch.</p></div>
-                            <div className="mfg-rd" id="rdWrap">
-                                <div className="mfg-rd-col mfg-l"><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 1: Discovery call">01</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>Day 1</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z" /></svg></span></div><h3>Discovery call</h3><p>We understand your products, buyers and goals.</p></article></div><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 2: Brand questionnaire">02</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>[Week 1]</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2" /><path d="M9 8h6M9 12h6M9 16h3" /></svg></span></div><h3>Brand questionnaire</h3><p>Factory visit or call to capture what makes you different.</p></article></div><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 3: Logo &amp; identity">03</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>[Week 1–2]</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z" /></svg></span></div><h3>Logo &amp; identity</h3><p>Concepts, revisions and final brand guidelines.</p></article></div></div>
-                                <div className="mfg-rd-center" aria-hidden="true"><div className="mfg-rc-glow"></div><svg className="mfg-rc-prog" viewBox="0 0 100 100"><circle className="mfg-t" cx="50" cy="50" r="46" /><circle className="mfg-p" id="rcP" cx="50" cy="50" r="46" pathLength="100" /></svg><div className="mfg-rc-orbit"><i></i><i></i><i></i></div><div className="mfg-rc-hub" id="rcHub"><span className="mfg-hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 19c0-4 2-6 4-7M14 4c4-1 6 0 6 0s1 2 0 6l-6 6-6-6zM8 16l-3 3M15 9h.01" /></svg></span><small>OUR PROCESS</small><b>Idea to Launch</b></div></div>
-                                <div className="mfg-rd-col mfg-r"><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 4: Print collaterals">04</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>[Week 2–3]</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2" /><rect x="7" y="14" width="10" height="7" /></svg></span></div><h3>Print collaterals</h3><p>Brochure, profile, cards, letterhead and social kit.</p></article></div><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 5: Website &amp; digital">05</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>[Week 3–5]</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" /></svg></span></div><h3>Website &amp; digital</h3><p>Website, Google profile, SEO and ChatGPT visibility setup.</p></article></div><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 6: Launch &amp; handover">06</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>[Week 6]</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 19c0-4 2-6 4-7M14 4c4-1 6 0 6 0s1 2 0 6l-6 6-6-6zM8 16l-3 3M15 9h.01" /></svg></span></div><h3>Launch &amp; handover</h3><p>Go live, hand over every file and login, plus training.</p></article></div></div>
-                            </div>
-                        </div>
-                    </section>
+<section id="portfolio" className="mfg-pw" aria-label="Portfolio">
+<div className="mfg-dots" aria-hidden="true"></div><span className="mfg-pb mfg-pb1" aria-hidden="true"></span><span className="mfg-pb mfg-pb2" aria-hidden="true"></span><span className="mfg-pb mfg-pb3" aria-hidden="true"></span><span className="mfg-ln" aria-hidden="true"></span>
+<div className="mfg-bgt" aria-hidden="true">PORTFOLIO</div>
+<div className="mfg-lb">Our Creative Work</div>
+<h2>Brand kits and websites we've built</h2>
+<div className="mfg-cvw">
+<button className="mfg-nv" id="pv" style={{ left: '4%' }} aria-label="Previous project">‹</button>
+<div className="mfg-cv" id="cv"></div>
+<button className="mfg-nv" id="nx" style={{ right: '4%' }} aria-label="Next project">›</button>
+</div>
+<div className="mfg-dts" id="dts"></div>
+<div className="mfg-more"><a className="mfg-btn mfg-btn-dark" href="#quote">Request Full Portfolio</a></div>
+</section>
 
 
-                    <section id="pricing" className="mfg-pricing">
-                        <div className="mfg-wrap">
-                            <div className="mfg-center mfg-rv"><span className="mfg-eyebrow">Packages</span><h2>Choose the pack that fits your business</h2><p className="mfg-lead">Website, branding and visibility, bundled into three simple packs. Launch offer: 25% off on every pack.</p></div>
-                            <div className="mfg-packs">
-                                <article className="mfg-pack mfg-rv" style={{ transitionDelay: '0.00s' }}>
-                                    <h3>Starter Pack</h3>
-                                    <p className="mfg-pdesc">A professional website for startups and small businesses.</p>
-                                    <div className="mfg-pbox"><div className="mfg-prow"><span className="mfg-off">25% OFF</span><s>₹13,332</s></div><div className="mfg-pnow">₹9,999</div></div>
-                                    <span className="mfg-ribbon">What's Included</span>
-                                    <div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8M12 17v4" /></svg></span><div><h4>Website</h4><ul><li>Up to 5 Pages</li><li>Custom Design</li><li>Mobile Responsive</li><li>WhatsApp Integration</li><li>Google Map Integration</li></ul></div></div>
-                                    <hr />
-                                    <div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z" /><path d="m3 13 9 5 9-5" /></svg></span><div><h4>Branding &amp; Features</h4><ul><li>Logo &amp; Brand Identity</li><li>Basic SEO Setup</li><li>Google Business Profile</li><li>Social Media Kit</li></ul></div></div>
-                                    <a className="mfg-btn mfg-btn-dark" href="#quote">Choose Starter Pack</a>
-                                </article>
-                                <article className="mfg-pack mfg-pop mfg-rv" style={{ transitionDelay: '0.12s' }}>
-                                    <span className="mfg-pbadge">Most Popular</span><h3>Growth Pack</h3>
-                                    <p className="mfg-pdesc">Build a stronger online presence and win more enquiries for growing businesses.</p>
-                                    <div className="mfg-pbox"><div className="mfg-prow"><span className="mfg-off">25% OFF</span><s>₹22,665</s></div><div className="mfg-pnow">₹16,999</div></div>
-                                    <span className="mfg-ribbon">What's Included</span>
-                                    <div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8M12 17v4" /></svg></span><div><h4>Website</h4><ul><li>Up to 15 Pages</li><li>Custom UI Design</li><li>Mobile Responsive</li><li>WhatsApp Integration</li><li>Google Map Integration</li></ul></div></div>
-                                    <hr />
-                                    <div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z" /><path d="m3 13 9 5 9-5" /></svg></span><div><h4>Branding &amp; Features</h4><ul><li>Premium Logo &amp; Brand Identity</li><li>Standard SEO Setup</li><li>Google Business Profile</li><li>Company Profile &amp; Brochure</li><li>Business Cards &amp; Letterhead</li><li>Social Media Kit</li></ul></div></div>
-                                    <a className="mfg-btn mfg-btn-primary" href="#quote">Choose Growth Pack</a>
-                                </article>
-                                <article className="mfg-pack mfg-rv" style={{ transitionDelay: '0.24s' }}>
-                                    <h3>Premium Pack</h3>
-                                    <p className="mfg-pdesc">Present your company with a polished website built for corporate brands.</p>
-                                    <div className="mfg-pbox"><div className="mfg-prow"><span className="mfg-off">25% OFF</span><s>₹35,999</s></div><div className="mfg-pnow">₹26,999</div></div>
-                                    <span className="mfg-ribbon">What's Included</span>
-                                    <div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2" /><path d="M8 21h8M12 17v4" /></svg></span><div><h4>Website</h4><ul><li>Up to 25 Premium Pages</li><li>Premium UI/UX Design</li><li>Mobile Responsive</li><li>WhatsApp Integration</li><li>Google Map Integration</li></ul></div></div>
-                                    <hr />
-                                    <div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z" /><path d="m3 13 9 5 9-5" /></svg></span><div><h4>Branding &amp; Features</h4><ul><li>Complete Brand Identity</li><li>Advanced SEO Setup</li><li>Google Business Profile</li><li>ChatGPT Business Profile</li><li>Company Profile &amp; Brochure</li><li>Business Cards &amp; Letterhead</li><li>Premium Social Media Kit</li><li>Google Analytics &amp; Search Console</li></ul></div></div>
-                                    <a className="mfg-btn mfg-btn-dark" href="#quote">Choose Premium Pack</a>
-                                </article>
-                            </div>
-                            <p className="mfg-pfoot mfg-rv">[One-time project price. GST extra — edit as needed.] Not sure which pack fits? <a href="#quote">Talk to us →</a></p>
-                        </div>
-                    </section>
+<section id="process" className="mfg-hw">
+<div className="mfg-wrap">
+<div className="mfg-rd-head"><h2>How it works<span>(Step-by-step)</span></h2><p className="mfg-lead">Six simple steps from first call to launch.</p></div>
+<div className="mfg-rd" id="rdWrap">
+<div className="mfg-rd-col mfg-l"><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 1: Discovery call">01</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>Day 1</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span></div><h3>Discovery call</h3><p>We understand your products, buyers and goals.</p></article></div><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 2: Brand questionnaire">02</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>[Week 1]</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span></div><h3>Brand questionnaire</h3><p>Factory visit or call to capture what makes you different.</p></article></div><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 3: Logo &amp; identity">03</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>[Week 1–2]</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.5 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/></svg></span></div><h3>Logo &amp; identity</h3><p>Concepts, revisions and final brand guidelines.</p></article></div></div>
+<div className="mfg-rd-center" aria-hidden="true"><div className="mfg-rc-glow"></div><svg className="mfg-rc-prog" viewBox="0 0 100 100"><circle className="mfg-t" cx="50" cy="50" r="46"/><circle className="mfg-p" id="rcP" cx="50" cy="50" r="46" pathLength="100"/></svg><div className="mfg-rc-orbit"><i></i><i></i><i></i></div><div className="mfg-rc-hub" id="rcHub"><span className="mfg-hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M5 19c0-4 2-6 4-7M14 4c4-1 6 0 6 0s1 2 0 6l-6 6-6-6zM8 16l-3 3M15 9h.01"/></svg></span><small>OUR PROCESS</small><b>Idea to Launch</b></div></div>
+<div className="mfg-rd-col mfg-r"><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 4: Print collaterals">04</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>[Week 2–3]</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M7 9V3h10v6M7 17H5a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-2"/><rect x="7" y="14" width="10" height="7"/></svg></span></div><h3>Print collaterals</h3><p>Brochure, profile, cards, letterhead and social kit.</p></article></div><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 5: Website &amp; digital">05</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>[Week 3–5]</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span></div><h3>Website &amp; digital</h3><p>Website, Google profile, SEO and ChatGPT visibility setup.</p></article></div><div className="mfg-rd-row"><button type="button" className="mfg-rd-node" aria-label="Step 6: Launch &amp; handover">06</button><article className="mfg-rd-card"><div className="mfg-rd-top"><small>[Week 6]</small><span className="mfg-rd-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 19c0-4 2-6 4-7M14 4c4-1 6 0 6 0s1 2 0 6l-6 6-6-6zM8 16l-3 3M15 9h.01"/></svg></span></div><h3>Launch &amp; handover</h3><p>Go live, hand over every file and login, plus training.</p></article></div></div>
+</div>
+</div>
+</section>
 
 
-                    <section className="mfg-ind mfg-center">
-                        <div className="mfg-wrap mfg-rv"><span className="mfg-eyebrow">Industries we serve</span><h2>Built for the people who make things</h2></div>
-                        <div className="mfg-irow" style={{ marginTop: '32px' }}><div>
-                            <span>Packaging</span><span>Engineering &amp; Fabrication</span><span>Textiles</span><span>Chemicals</span><span>Food Processing</span><span>Plastics</span><span>Auto Components</span><span>Electrical</span><span>Pharma</span><span>Furniture</span>
-                            <span aria-hidden="true">Packaging</span><span aria-hidden="true">Engineering &amp; Fabrication</span><span aria-hidden="true">Textiles</span><span aria-hidden="true">Chemicals</span><span aria-hidden="true">Food Processing</span><span aria-hidden="true">Plastics</span><span aria-hidden="true">Auto Components</span><span aria-hidden="true">Electrical</span><span aria-hidden="true">Pharma</span><span aria-hidden="true">Furniture</span>
-                        </div></div>
-                        <div className="mfg-irow mfg-rev"><div>
-                            <span>Steel &amp; Metals</span><span>Printing</span><span>Rubber</span><span>Ceramics</span><span>Agro Products</span><span>Paper &amp; Board</span><span>Machinery</span><span>Cosmetics</span><span>Hardware</span><span>Glass</span>
-                            <span aria-hidden="true">Steel &amp; Metals</span><span aria-hidden="true">Printing</span><span aria-hidden="true">Rubber</span><span aria-hidden="true">Ceramics</span><span aria-hidden="true">Agro Products</span><span aria-hidden="true">Paper &amp; Board</span><span aria-hidden="true">Machinery</span><span aria-hidden="true">Cosmetics</span><span aria-hidden="true">Hardware</span><span aria-hidden="true">Glass</span>
-                        </div></div>
-                    </section>
+<section id="pricing" className="mfg-pricing">
+<div className="mfg-wrap">
+<div className="mfg-center mfg-rv"><span className="mfg-eyebrow">Packages</span><h2>Choose the pack that fits your business</h2><p className="mfg-lead">Website, branding and visibility, bundled into three simple packs. Launch offer: 25% off on every pack.</p></div>
+<div className="mfg-packs">
+<article className="mfg-pack mfg-rv" style={{ transitionDelay: '0.00s' }}>
+<h3>Starter Pack</h3>
+<p className="mfg-pdesc">A professional website for startups and small businesses.</p>
+<div className="mfg-pbox"><div className="mfg-prow"><span className="mfg-off">25% OFF</span><s>₹13,332</s></div><div className="mfg-pnow">₹9,999</div></div>
+<span className="mfg-ribbon">What's Included</span>
+<div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><h4>Website</h4><ul><li>Up to 5 Pages</li><li>Custom Design</li><li>Mobile Responsive</li><li>WhatsApp Integration</li><li>Google Map Integration</li></ul></div></div>
+<hr />
+<div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span><div><h4>Branding &amp; Features</h4><ul><li>Logo &amp; Brand Identity</li><li>Basic SEO Setup</li><li>Google Business Profile</li><li>Social Media Kit</li></ul></div></div>
+<a className="mfg-btn mfg-btn-dark" href="#quote">Choose Starter Pack</a>
+</article>
+<article className="mfg-pack mfg-pop mfg-rv" style={{ transitionDelay: '0.12s' }}>
+<span className="mfg-pbadge">Most Popular</span><h3>Growth Pack</h3>
+<p className="mfg-pdesc">Build a stronger online presence and win more enquiries for growing businesses.</p>
+<div className="mfg-pbox"><div className="mfg-prow"><span className="mfg-off">25% OFF</span><s>₹22,665</s></div><div className="mfg-pnow">₹16,999</div></div>
+<span className="mfg-ribbon">What's Included</span>
+<div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><h4>Website</h4><ul><li>Up to 15 Pages</li><li>Custom UI Design</li><li>Mobile Responsive</li><li>WhatsApp Integration</li><li>Google Map Integration</li></ul></div></div>
+<hr />
+<div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span><div><h4>Branding &amp; Features</h4><ul><li>Premium Logo &amp; Brand Identity</li><li>Standard SEO Setup</li><li>Google Business Profile</li><li>Company Profile &amp; Brochure</li><li>Business Cards &amp; Letterhead</li><li>Social Media Kit</li></ul></div></div>
+<a className="mfg-btn mfg-btn-primary" href="#quote">Choose Growth Pack</a>
+</article>
+<article className="mfg-pack mfg-rv" style={{ transitionDelay: '0.24s' }}>
+<h3>Premium Pack</h3>
+<p className="mfg-pdesc">Present your company with a polished website built for corporate brands.</p>
+<div className="mfg-pbox"><div className="mfg-prow"><span className="mfg-off">25% OFF</span><s>₹35,999</s></div><div className="mfg-pnow">₹26,999</div></div>
+<span className="mfg-ribbon">What's Included</span>
+<div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><h4>Website</h4><ul><li>Up to 25 Premium Pages</li><li>Premium UI/UX Design</li><li>Mobile Responsive</li><li>WhatsApp Integration</li><li>Google Map Integration</li></ul></div></div>
+<hr />
+<div className="mfg-grp"><span className="mfg-gic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="m12 3 9 5-9 5-9-5z"/><path d="m3 13 9 5 9-5"/></svg></span><div><h4>Branding &amp; Features</h4><ul><li>Complete Brand Identity</li><li>Advanced SEO Setup</li><li>Google Business Profile</li><li>ChatGPT Business Profile</li><li>Company Profile &amp; Brochure</li><li>Business Cards &amp; Letterhead</li><li>Premium Social Media Kit</li><li>Google Analytics &amp; Search Console</li></ul></div></div>
+<a className="mfg-btn mfg-btn-dark" href="#quote">Choose Premium Pack</a>
+</article>
+</div>
+<p className="mfg-pfoot mfg-rv">[One-time project price. GST extra — edit as needed.] Not sure which pack fits? <a href="#quote">Talk to us →</a></p>
+</div>
+</section>
 
 
-                    <section className="mfg-stories">
-                        <div className="mfg-wrap">
-                            <div className="mfg-rv mfg-l">
-                                <span className="mfg-eyebrow">Client stories</span>
-                                <h2>What factory owners say about us</h2>
-                                <p className="mfg-lead">Real words from manufacturers who rebuilt their brand and online presence with us.</p>
-                                <div className="mfg-rating"><b>[4.9]</b><div><div className="mfg-st" aria-hidden="true">★★★★★</div><small>Average rating from [XX] clients</small></div></div>
-                                <div className="mfg-tnav"><button type="button" id="tp" aria-label="Previous testimonial">←</button><button type="button" id="tn" aria-label="Next testimonial">→</button></div>
-                            </div>
-                            <div className="mfg-tstage mfg-rv mfg-r">
-                                <div className="mfg-tslides" id="tslides">
-                                    <div className="mfg-tslide mfg-on"><div className="mfg-st" aria-hidden="true">★★★★★</div><blockquote>“[Client testimonial — what changed after the new logo, brochure and website. Keep it to 2–3 sentences.]”</blockquote><div className="mfg-who"><span className="mfg-av">A</span><div><b>[Name], Managing Director</b><small>[Company name] · [Industry], [City]</small></div></div></div>
-                                    <div className="mfg-tslide"><div className="mfg-st" aria-hidden="true">★★★★★</div><blockquote>“[Client testimonial — e.g. how Google Business Profile and SEO brought direct enquiries.]”</blockquote><div className="mfg-who"><span className="mfg-av">B</span><div><b>[Name], Founder</b><small>[Company name] · [Industry], [City]</small></div></div></div>
-                                    <div className="mfg-tslide"><div className="mfg-st" aria-hidden="true">★★★★★</div><blockquote>“[Client testimonial — e.g. how the company profile helped win a tender or export buyer.]”</blockquote><div className="mfg-who"><span className="mfg-av">C</span><div><b>[Name], Director, Sales</b><small>[Company name] · [Industry], [City]</small></div></div></div>
-                                    <div className="mfg-tdots" id="tdots"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
+<section className="mfg-ind mfg-center">
+<div className="mfg-wrap mfg-rv"><span className="mfg-eyebrow">Industries we serve</span><h2>Built for the people who make things</h2></div>
+<div className="mfg-irow" style={{ marginTop: '32px' }}><div>
+<span>Packaging</span><span>Engineering &amp; Fabrication</span><span>Textiles</span><span>Chemicals</span><span>Food Processing</span><span>Plastics</span><span>Auto Components</span><span>Electrical</span><span>Pharma</span><span>Furniture</span>
+<span aria-hidden="true">Packaging</span><span aria-hidden="true">Engineering &amp; Fabrication</span><span aria-hidden="true">Textiles</span><span aria-hidden="true">Chemicals</span><span aria-hidden="true">Food Processing</span><span aria-hidden="true">Plastics</span><span aria-hidden="true">Auto Components</span><span aria-hidden="true">Electrical</span><span aria-hidden="true">Pharma</span><span aria-hidden="true">Furniture</span>
+</div></div>
+<div className="mfg-irow mfg-rev"><div>
+<span>Steel &amp; Metals</span><span>Printing</span><span>Rubber</span><span>Ceramics</span><span>Agro Products</span><span>Paper &amp; Board</span><span>Machinery</span><span>Cosmetics</span><span>Hardware</span><span>Glass</span>
+<span aria-hidden="true">Steel &amp; Metals</span><span aria-hidden="true">Printing</span><span aria-hidden="true">Rubber</span><span aria-hidden="true">Ceramics</span><span aria-hidden="true">Agro Products</span><span aria-hidden="true">Paper &amp; Board</span><span aria-hidden="true">Machinery</span><span aria-hidden="true">Cosmetics</span><span aria-hidden="true">Hardware</span><span aria-hidden="true">Glass</span>
+</div></div>
+</section>
 
 
-                    <section id="faq" className="mfg-faq">
-                        <div className="mfg-wrap">
-                            <div className="mfg-rv mfg-l">
-                                <span className="mfg-eyebrow">FAQ</span>
-                                <h2>Questions manufacturers ask us</h2>
-                                <div style={{ marginTop: '28px' }}>
-                                    <details open><summary><span className="mfg-qn">01</span><span className="mfg-qt">How long does the complete package take?</span><span className="mfg-pm" aria-hidden="true">+</span></summary><p className="mfg-ans">Most complete packages are delivered in [X–Y] weeks. Brand identity comes first, then print collaterals, then the website and digital setup.</p></details>
-                                    <details><summary><span className="mfg-qn">02</span><span className="mfg-qt">What is ChatGPT search visibility?</span><span className="mfg-pm" aria-hidden="true">+</span></summary><p className="mfg-ans">Buyers now ask ChatGPT, Gemini and Perplexity for supplier recommendations. We set up your company information, structured data and trusted mentions so these AI tools can find and cite your business.</p></details>
-                                    <details><summary><span className="mfg-qn">03</span><span className="mfg-qt">When will we see results on Google?</span><span className="mfg-pm" aria-hidden="true">+</span></summary><p className="mfg-ans">Your Google Business Profile can start showing within weeks. SEO rankings usually build over 3–6 months, depending on competition in your city and industry.</p></details>
-                                    <details><summary><span className="mfg-qn">04</span><span className="mfg-qt">Do we own all the files and logins?</span><span className="mfg-pm" aria-hidden="true">+</span></summary><p className="mfg-ans">Yes. Logo source files, brochure designs, website, Google profile and every account login are handed over to you at launch. [Edit payment terms here, e.g. 50% advance, 50% on launch.]</p></details>
-                                </div>
-                                <p className="mfg-more">Still have a question? <a href="#quote">Talk to us directly →</a></p>
-                            </div>
-                            <div className="mfg-fimg mfg-rv mfg-r"><img src={PH("FAQ image")} alt="Frequently asked questions" loading="lazy" /></div>
-                        </div>
-                    </section>
+<section className="mfg-stories">
+<div className="mfg-wrap">
+<div className="mfg-rv mfg-l">
+<span className="mfg-eyebrow">Client stories</span>
+<h2>What factory owners say about us</h2>
+<p className="mfg-lead">Real words from manufacturers who rebuilt their brand and online presence with us.</p>
+<div className="mfg-rating"><b>[4.9]</b><div><div className="mfg-st" aria-hidden="true">★★★★★</div><small>Average rating from [XX] clients</small></div></div>
+<div className="mfg-tnav"><button type="button" id="tp" aria-label="Previous testimonial">←</button><button type="button" id="tn" aria-label="Next testimonial">→</button></div>
+</div>
+<div className="mfg-tstage mfg-rv mfg-r">
+<div className="mfg-tslides" id="tslides">
+<div className="mfg-tslide mfg-on"><div className="mfg-st" aria-hidden="true">★★★★★</div><blockquote>“[Client testimonial — what changed after the new logo, brochure and website. Keep it to 2–3 sentences.]”</blockquote><div className="mfg-who"><span className="mfg-av">A</span><div><b>[Name], Managing Director</b><small>[Company name] · [Industry], [City]</small></div></div></div>
+<div className="mfg-tslide"><div className="mfg-st" aria-hidden="true">★★★★★</div><blockquote>“[Client testimonial — e.g. how Google Business Profile and SEO brought direct enquiries.]”</blockquote><div className="mfg-who"><span className="mfg-av">B</span><div><b>[Name], Founder</b><small>[Company name] · [Industry], [City]</small></div></div></div>
+<div className="mfg-tslide"><div className="mfg-st" aria-hidden="true">★★★★★</div><blockquote>“[Client testimonial — e.g. how the company profile helped win a tender or export buyer.]”</blockquote><div className="mfg-who"><span className="mfg-av">C</span><div><b>[Name], Director, Sales</b><small>[Company name] · [Industry], [City]</small></div></div></div>
+<div className="mfg-tdots" id="tdots"></div>
+</div>
+</div>
+</div>
+</section>
 
 
-                    <section id="quote" className="mfg-quote">
-                        <span className="mfg-shape mfg-s1"></span><span className="mfg-shape mfg-s2"></span><span className="mfg-shape mfg-s3"></span>
-                        <div className="mfg-wrap">
-                            <div className="mfg-rv mfg-l">
-                                <span className="mfg-eyebrow">Get started</span>
-                                <h2>Build your manufacturing brand the right way</h2>
-                                <p className="mfg-lead">Tell us about your factory. We'll send package details and a <b style={{ color: '#fff' }}>free brand audit</b> of your current logo, website and Google presence.</p>
-                                <ul><li>✓ Reply within [X] working hours</li><li>✓ No obligation consultation</li><li>✓ You own every file and login</li></ul>
-                                <a className="mfg-wa-btn" href="https://wa.me/[PHONE]"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z" /></svg>Chat on WhatsApp</a>
-                            </div>
-                            <form id="enq" className="mfg-rv mfg-r" aria-label="Package enquiry" noValidate>
-                                <h3>Get the Complete Package details</h3>
-                                <div className="mfg-ok" id="ok" role="status">Thank you! We'll get back to you with package details shortly.</div>
-                                <div className="mfg-fgrid">
-                                    <label>Your name<input name="name" placeholder="Full name" required /></label>
-                                    <label>Company<input name="company" placeholder="Company name" /></label>
-                                    <label>Phone / WhatsApp<input name="phone" type="tel" placeholder="+91" required /></label>
-                                    <label>City<input name="city" placeholder="City" /></label>
-                                </div>
-                                <label>Industry<select name="industry"><option value="">Select your industry</option><option>Packaging</option><option>Engineering &amp; Fabrication</option><option>Textiles</option><option>Chemicals</option><option>Food Processing</option><option>Plastics</option><option>Auto Components</option><option>Other</option></select></label>
-                                <label>Anything specific you need? <span style={{ fontWeight: '400', color: 'var(--muted2)' }}>(optional)</span><input name="note" placeholder="e.g. we already have a logo, need a new website" /></label>
-                                <button className="mfg-btn mfg-btn-dark" type="submit" style={{ width: '100%' }}>Get Package Details + Free Audit</button>
-                                <p className="mfg-note">We respect your privacy. No spam, ever.</p>
-                            </form>
-                        </div>
-                    </section>
-                </div>
+<section id="faq" className="mfg-faq">
+<div className="mfg-wrap">
+<div className="mfg-rv mfg-l">
+<span className="mfg-eyebrow">FAQ</span>
+<h2>Questions manufacturers ask us</h2>
+<div style={{ marginTop: '28px' }}>
+<details open><summary><span className="mfg-qn">01</span><span className="mfg-qt">How long does the complete package take?</span><span className="mfg-pm" aria-hidden="true">+</span></summary><p className="mfg-ans">Most complete packages are delivered in [X–Y] weeks. Brand identity comes first, then print collaterals, then the website and digital setup.</p></details>
+<details><summary><span className="mfg-qn">02</span><span className="mfg-qt">What is ChatGPT search visibility?</span><span className="mfg-pm" aria-hidden="true">+</span></summary><p className="mfg-ans">Buyers now ask ChatGPT, Gemini and Perplexity for supplier recommendations. We set up your company information, structured data and trusted mentions so these AI tools can find and cite your business.</p></details>
+<details><summary><span className="mfg-qn">03</span><span className="mfg-qt">When will we see results on Google?</span><span className="mfg-pm" aria-hidden="true">+</span></summary><p className="mfg-ans">Your Google Business Profile can start showing within weeks. SEO rankings usually build over 3–6 months, depending on competition in your city and industry.</p></details>
+<details><summary><span className="mfg-qn">04</span><span className="mfg-qt">Do we own all the files and logins?</span><span className="mfg-pm" aria-hidden="true">+</span></summary><p className="mfg-ans">Yes. Logo source files, brochure designs, website, Google profile and every account login are handed over to you at launch. [Edit payment terms here, e.g. 50% advance, 50% on launch.]</p></details>
+</div>
+<p className="mfg-more">Still have a question? <a href="#quote">Talk to us directly →</a></p>
+</div>
+<div className="mfg-fimg mfg-rv mfg-r"><img src={PH("FAQ image")} alt="Frequently asked questions" loading="lazy" /></div>
+</div>
+</section>
 
-                <footer>
-                    <div className="mfg-wrap">
-                        <div className="mfg-fcols">
-                            <div><a className="mfg-logo" href="#top" style={{ fontSize: '20px' }}>[Agency Name]</a><p style={{ marginTop: '12px', fontSize: '14px' }}>Brand identity and digital growth for manufacturers.</p></div>
-                            <div><h4>Brand Kit</h4><ul><li><a href="#services">Logo &amp; Brand Identity</a></li><li><a href="#services">Company Profile &amp; Brochure</a></li><li><a href="#services">Business Cards &amp; Letterhead</a></li><li><a href="#services">Social Media Kit</a></li></ul></div>
-                            <div><h4>Digital Setup</h4><ul><li><a href="#services">Website Development</a></li><li><a href="#services">SEO &amp; Online Visibility</a></li><li><a href="#services">Google Business Profile</a></li><li><a href="#services">ChatGPT Search Visibility</a></li></ul></div>
-                            <div><h4>Contact</h4><ul><li>[Phone number]</li><li>[Email address]</li><li>[Office address, City]</li></ul></div>
-                        </div>
-                        <div className="mfg-fbot"><span>© 2026 [Agency Name]. All rights reserved.</span><span>LinkedIn · Instagram · Facebook</span></div>
-                    </div>
-                </footer>
+
+<section id="quote" className="mfg-quote">
+<span className="mfg-shape mfg-s1"></span><span className="mfg-shape mfg-s2"></span><span className="mfg-shape mfg-s3"></span>
+<div className="mfg-wrap">
+<div className="mfg-rv mfg-l">
+<span className="mfg-eyebrow">Get started</span>
+<h2>Build your manufacturing brand the right way</h2>
+<p className="mfg-lead">Tell us about your factory. We'll send package details and a <b style={{ color: '#fff' }}>free brand audit</b> of your current logo, website and Google presence.</p>
+<ul><li>✓ Reply within [X] working hours</li><li>✓ No obligation consultation</li><li>✓ You own every file and login</li></ul>
+<a className="mfg-wa-btn" href="https://wa.me/[PHONE]"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Chat on WhatsApp</a>
+</div>
+<form id="enq" className="mfg-rv mfg-r" aria-label="Package enquiry" noValidate>
+<h3>Get the Complete Package details</h3>
+<div className="mfg-ok" id="ok" role="status">Thank you! We'll get back to you with package details shortly.</div>
+<div className="mfg-fgrid">
+<label>Your name<input name="name" placeholder="Full name" required /></label>
+<label>Company<input name="company" placeholder="Company name" /></label>
+<label>Phone / WhatsApp<input name="phone" type="tel" placeholder="+91" required /></label>
+<label>City<input name="city" placeholder="City" /></label>
+</div>
+<label>Industry<select name="industry"><option value="">Select your industry</option><option>Packaging</option><option>Engineering &amp; Fabrication</option><option>Textiles</option><option>Chemicals</option><option>Food Processing</option><option>Plastics</option><option>Auto Components</option><option>Other</option></select></label>
+<label>Anything specific you need? <span style={{ fontWeight: '400', color: 'var(--muted2)' }}>(optional)</span><input name="note" placeholder="e.g. we already have a logo, need a new website" /></label>
+<button className="mfg-btn mfg-btn-dark" type="submit" style={{ width: '100%' }}>Get Package Details + Free Audit</button>
+<p className="mfg-note">We respect your privacy. No spam, ever.</p>
+</form>
+</div>
+</section>
+</div>
+
+<footer>
+<div className="mfg-wrap">
+<div className="mfg-fcols">
+<div><a className="mfg-logo" href="#top" aria-label="Priyam Consultancy Services"><img src="/img/footer-logo.png" alt="PCS Logo" width="180" height="50" loading="lazy" decoding="async" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = "/img/priyam-consultancy-logo.png"; e.currentTarget.style.filter = "brightness(0) invert(1)"; }} /></a><p style={{ marginTop: '12px', fontSize: '14px' }}>Brand identity and digital growth for manufacturers.</p></div>
+<div><h4>Brand Kit</h4><ul><li><a href="#services">Logo &amp; Brand Identity</a></li><li><a href="#services">Company Profile &amp; Brochure</a></li><li><a href="#services">Business Cards &amp; Letterhead</a></li><li><a href="#services">Social Media Kit</a></li></ul></div>
+<div><h4>Digital Setup</h4><ul><li><a href="#services">Website Development</a></li><li><a href="#services">SEO &amp; Online Visibility</a></li><li><a href="#services">Google Business Profile</a></li><li><a href="#services">ChatGPT Search Visibility</a></li></ul></div>
+<div><h4>Contact</h4><ul><li>[Phone number]</li><li>[Email address]</li><li>[Office address, City]</li></ul></div>
+</div>
+<div className="mfg-fbot"><span>© 2026 [Agency Name]. All rights reserved.</span><span>LinkedIn · Instagram · Facebook</span></div>
+</div>
+</footer>
+
+
+
+
             </div>
         </Layout>
     );
