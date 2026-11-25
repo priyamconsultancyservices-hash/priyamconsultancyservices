@@ -550,21 +550,21 @@ html{scroll-behavior:auto}
   .pcs-mfg .hero-bg-overlay{background:linear-gradient(90deg,rgba(15,27,45,.88),rgba(24,39,62,.85))}
 }
 /* ── Who We Are ── */
-.pcs-mfg{--brand-or:#F08A33}
-.pcs-mfg .mfg-eyb{display:inline-flex;align-items:center;gap:14px;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brand-or);margin-bottom:20px}
-.pcs-mfg .mfg-eyb:before,.pcs-mfg .mfg-eyb:after{content:"";width:28px;height:2px;background:var(--brand-or);opacity:.8}
-.pcs-mfg .mfg-about h2{font-size:clamp(28px,3.6vw,44px);font-weight:700;color:#000}
-.pcs-mfg .mfg-about h2 em{font-style:italic;color:var(--brand-or)}
-.pcs-mfg .mfg-about{background:#fff;position:relative;overflow:hidden}
-.pcs-mfg .mfg-about:before{width:14px;height:14px;left:5%;bottom:28px}
-.pcs-mfg .mfg-about:after{width:10px;height:10px;left:45%;bottom:36px;animation-delay:-3s}
-.pcs-mfg .mfg-about .mfg-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;    max-width: 1350px;}
-.pcs-mfg .mfg-about-p{font-size:16px;line-height:2;color:#1F2937;margin-top:24px}
-.pcs-mfg .mfg-about-img img{width:100%;height:auto;display:block;border-radius:20px;object-fit:contain}
-@media(max-width:900px){
-  .pcs-mfg .mfg-about .mfg-wrap{grid-template-columns:1fr;gap:32px}
-  .pcs-mfg .mfg-about-p{text-align:left}
-}
+// .pcs-mfg{--brand-or:#F08A33}
+// .pcs-mfg .mfg-eyb{display:inline-flex;align-items:center;gap:14px;font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--brand-or);margin-bottom:20px}
+// .pcs-mfg .mfg-eyb:before,.pcs-mfg .mfg-eyb:after{content:"";width:28px;height:2px;background:var(--brand-or);opacity:.8}
+// .pcs-mfg .mfg-about h2{font-size:clamp(28px,3.6vw,44px);font-weight:700;color:#000}
+// .pcs-mfg .mfg-about h2 em{font-style:italic;color:var(--brand-or)}
+// .pcs-mfg .mfg-about{background:#fff;position:relative;overflow:hidden}
+// .pcs-mfg .mfg-about:before{width:14px;height:14px;left:5%;bottom:28px}
+// .pcs-mfg .mfg-about:after{width:10px;height:10px;left:45%;bottom:36px;animation-delay:-3s}
+// .pcs-mfg .mfg-about .mfg-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;    max-width: 1350px;}
+// .pcs-mfg .mfg-about-p{font-size:16px;line-height:2;color:#1F2937;margin-top:24px}
+// .pcs-mfg .mfg-about-img img{width:100%;height:auto;display:block;border-radius:20px;object-fit:contain}
+// @media(max-width:900px){
+//   .pcs-mfg .mfg-about .mfg-wrap{grid-template-columns:1fr;gap:32px}
+//   .pcs-mfg .mfg-about-p{text-align:left}
+// }
 `}</style>
 );
 
@@ -867,7 +867,7 @@ export default function ManufacturingLandingPage() {
                         <span>Logo &amp; Brand Identity</span><span>Website Development</span><span>SEO &amp; Online Visibility</span><span>Google Business Profile</span><span>ChatGPT Search Visibility</span><span>Company Profile &amp; Brochure</span><span>Business Cards &amp; Letterhead</span><span>Social Media Kit</span>
                         <span aria-hidden="true">Logo &amp; Brand Identity</span><span aria-hidden="true">Website Development</span><span aria-hidden="true">SEO &amp; Online Visibility</span><span aria-hidden="true">Google Business Profile</span><span aria-hidden="true">ChatGPT Search Visibility</span><span aria-hidden="true">Company Profile &amp; Brochure</span><span aria-hidden="true">Business Cards &amp; Letterhead</span><span aria-hidden="true">Social Media Kit</span>
                     </div></div>
-
+{/* 
                     <section id="about" className="mfg-about">
     <div className="mfg-wrap">
         <div className="mfg-rv mfg-l">
@@ -882,7 +882,7 @@ We are one of the fastest-growing full-service business solutions companies, del
                  onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = PH("Who we are image"); }} />
         </div>
     </div>
-</section>
+</section> */}
 
 
                     <section id="problems" className="mfg-prob">
