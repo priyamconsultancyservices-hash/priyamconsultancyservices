@@ -264,7 +264,7 @@ function StaticWebsiteDevelopmentGuide() {
         .tseo-eyebrow{ font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#ED8337; font-weight:700; margin-bottom:14px; display:inline-flex; align-items:center; gap:8px; background:#FFF4EE; padding:5px 10px; border-radius:8px;}
         .tseo-hero h1{ font-size:42px; font-weight:700; letter-spacing:-.01em; margin-bottom:18px;}
         .tseo-dek{ font-size:18px; color:#6B7A94; line-height:1.5; margin-bottom:24px;}
-        .tseo-hero-img img{ width:100%;  border-radius:14px; object-fit:cover; display:block;}
+        .tseo-hero-img img{ width:100%;  border-radius:14px; object-fit:cover; display:block;    margin-top: 30px;}
 
         .tseo-content section{ margin-bottom:20px; scroll-margin-top:24px;}
         .tseo-content h2{ font-size:27px; font-weight:700; margin-bottom:16px; scroll-margin-top:24px; letter-spacing:-.005em;}
@@ -390,9 +390,6 @@ function StaticWebsiteDevelopmentGuide() {
             <div className="tseo-hero">
               <span className="tseo-eyebrow">Website Development · Complete Guide</span>
               <h1>What Is Static Website Development? Benefits, Features and Examples</h1>
-              <p className="tseo-dek">
-                The website is usually the first contact point of a customer with your business; therefore, the approach that is used to create the website counts.
-              </p>
               <div className="tseo-hero-img">
                 <a href="/article/what-is-static-website-development">
                   <img src={HERO_IMG} alt="What is static website development" />
@@ -402,7 +399,7 @@ function StaticWebsiteDevelopmentGuide() {
 
             <section id="intro">
               <p>
-                A static website can be a good choice for many startups and small businesses in terms of creating an online presence fast, securely, and at a reasonable cost without the need for a complicated database-based solution. This manual provides information about static website development, including its advantages and disadvantages, as well as the choice of a website development company.
+                The website is usually the first contact point of a customer with your business; therefore, the approach that is used to create the website counts. A static website can be a good choice for many startups and small businesses in terms of creating an online presence fast, securely, and at a reasonable cost without the need for a complicated database-based solution. This manual provides information about static website development, including its advantages and disadvantages, as well as the choice of a website development company.
               </p>
             </section>
 
